@@ -1,0 +1,22 @@
+Source: denim
+Section: misc
+Priority: extra
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://dub.washington.edu:2007/projects/denim/
+
+Package: denim
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: System that helps web site designers on design.
+ DENIM is an outgrowth of the original SILK project,
+ a pen-based sketching tool for designing user interfaces.
+ SILK combines many of the benefits of paper-based sketching
+ with existing electronic prototyping tools. It allows
+ designers to quickly sketch an interface using an electronic
+ pad and stylus. SILK preserves the important properties of
+ pencil and paper: a rough drawing can be produced quickly
+ and the medium is flexible. However, unlike a paper sketch,
+ this electronic sketch is interactive and can easily be
+ annotated and modified using editing gestures.

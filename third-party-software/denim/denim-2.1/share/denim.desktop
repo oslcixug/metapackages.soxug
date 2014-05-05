@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Denim-Diglog
+Comment=System that helps web site designers on design.
+TryExec=denim
+Exec=denim
+Icon=/usr/share/icons/Denim.ico
+Type=Application
+Categories=Development;Math;Science;Education;

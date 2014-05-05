@@ -1,0 +1,8 @@
+data/grammars 	usr/share/deppattern
+data/log 	usr/share/deppattern
+data/parsers	usr/share/deppattern
+data/scripts	usr/share/deppattern
+data/src	usr/share/deppattern
+data/tests	usr/share/deppattern
+data/deppattern	usr/bin
+data/compi 	usr/bin

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Shell script to put together a new version of LOG
+# including user-written tools, gates, and simulators.
+
+
+LOGLIB=/usr/cs10/lib/log
+CC=gcc -I/usr/cs10/include
+
+$LOGLIB/munch 'Log_[a-zA-Z0-9_]*' $LOGLIB/log.a $* >logdir.c
+$CC logdir.c $LOGLIB/log.a $* -lp2c -lX11 -lm -o log

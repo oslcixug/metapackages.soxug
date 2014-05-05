@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DefaultConfigurator (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DefaultConfigurator (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DefaultConfigurator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/ConfigDialog.RelayPanel.html" title="class in net.jxta.impl.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peergroup/DefaultConfigurator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DefaultConfigurator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.peergroup.NullConfigurator">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.peergroup</FONT>
+<BR>
+Class DefaultConfigurator</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html" title="class in net.jxta.impl.peergroup">net.jxta.impl.peergroup.NullConfigurator</A>
+      <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../net/jxta/impl/peergroup/AutomaticConfigurator.html" title="class in net.jxta.impl.peergroup">net.jxta.impl.peergroup.AutomaticConfigurator</A>
+          <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.peergroup.DefaultConfigurator</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup">PlatformConfigurator</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/Configurator.html?is-external=true" title="class or interface in net.jxta.peergroup">Configurator</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>DefaultConfigurator</B><DT>extends <A HREF="../../../../net/jxta/impl/peergroup/AutomaticConfigurator.html" title="class in net.jxta.impl.peergroup">AutomaticConfigurator</A></DL>
+</PRE>
+
+<P>
+This implementation provides the ability to reconfigure a JXTA PlatformConfig
+ via an AWT based dialog. This is the original JXTA configuration mechanism.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.peergroup.NullConfigurator"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.peergroup.<A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html" title="class in net.jxta.impl.peergroup">NullConfigurator</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#advertisement">advertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#configFile">configFile</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#jxtaHome">jxtaHome</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/DefaultConfigurator.html#DefaultConfigurator(java.net.URI)">DefaultConfigurator</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;jxtaHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configures the platform using the specified directory.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol">PlatformConfig</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/DefaultConfigurator.html#getPlatformConfig()">getPlatformConfig</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the associated <A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol"><CODE>PlatformConfig</CODE></A> and
+ potentially performing any required configuration of the parameters 
+ before returning.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/DefaultConfigurator.html#isReconfigure()">isReconfigure</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determine if a forced reconfiguration is set for the next call to
+ <A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#getPlatformConfig()"><CODE>PlatformConfigurator.getPlatformConfig()</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/DefaultConfigurator.html#setReconfigure(boolean)">setReconfigure</A></B>(boolean&nbsp;reconfigure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the reconfiguration status to the specified status.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.peergroup.NullConfigurator"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.peergroup.<A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html" title="class in net.jxta.impl.peergroup">NullConfigurator</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#getConfigParams()">getConfigParams</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#load()">load</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#load(java.net.URI)">load</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#save()">save</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#save(java.net.URI)">save</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#setConfigParams(net.jxta.protocol.ConfigParams)">setConfigParams</A>, <A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#setPlatformConfig(net.jxta.impl.protocol.PlatformConfig)">setPlatformConfig</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DefaultConfigurator(java.net.URI)"><!-- --></A><H3>
+DefaultConfigurator</H3>
+<PRE>
+public <B>DefaultConfigurator</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;jxtaHome)
+                    throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ConfiguratorException.html?is-external=true" title="class or interface in net.jxta.exception">ConfiguratorException</A></PRE>
+<DL>
+<DD>Configures the platform using the specified directory.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>jxtaHome</CODE> - store home URI
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ConfiguratorException.html?is-external=true" title="class or interface in net.jxta.exception">ConfiguratorException</A></CODE> - if a configuration error occurs</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isReconfigure()"><!-- --></A><H3>
+isReconfigure</H3>
+<PRE>
+public boolean <B>isReconfigure</B>()</PRE>
+<DL>
+<DD>Determine if a forced reconfiguration is set for the next call to
+ <A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#getPlatformConfig()"><CODE>PlatformConfigurator.getPlatformConfig()</CODE></A>.
+ <p/>
+ <p/>Kinda hackish in that we don't really do anything if home is not a file.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#isReconfigure()">isReconfigure</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup">PlatformConfigurator</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#isReconfigure()">isReconfigure</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html" title="class in net.jxta.impl.peergroup">NullConfigurator</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Returns <code>true</code> if a forced reconfiguration will occur the
+ next time <A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#getPlatformConfig()"><CODE>PlatformConfigurator.getPlatformConfig()</CODE></A> is called.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setReconfigure(boolean)"><!-- --></A><H3>
+setReconfigure</H3>
+<PRE>
+public void <B>setReconfigure</B>(boolean&nbsp;reconfigure)</PRE>
+<DL>
+<DD>Sets the reconfiguration status to the specified status. If
+ <code>true</code> then reconfiguration will be forced the next time the
+ <A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol"><CODE>PlatformConfig</CODE></A> is retrieved.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#setReconfigure(boolean)">setReconfigure</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup">PlatformConfigurator</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html#setReconfigure(boolean)">setReconfigure</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/NullConfigurator.html" title="class in net.jxta.impl.peergroup">NullConfigurator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reconfigure</CODE> - If <code>true</code> then a forced reconfiguration will
+ occur the next time <A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#getPlatformConfig()"><CODE>PlatformConfigurator.getPlatformConfig()</CODE></A> is called.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPlatformConfig()"><!-- --></A><H3>
+getPlatformConfig</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol">PlatformConfig</A> <B>getPlatformConfig</B>()
+                                 throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ConfiguratorException.html?is-external=true" title="class or interface in net.jxta.exception">ConfiguratorException</A></PRE>
+<DL>
+<DD>Retrieve the associated <A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol"><CODE>PlatformConfig</CODE></A> and
+ potentially performing any required configuration of the parameters 
+ before returning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html#getPlatformConfig()">getPlatformConfig</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup">PlatformConfigurator</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/AutomaticConfigurator.html#getPlatformConfig()">getPlatformConfig</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/AutomaticConfigurator.html" title="class in net.jxta.impl.peergroup">AutomaticConfigurator</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PlatformConfig
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ConfiguratorException.html?is-external=true" title="class or interface in net.jxta.exception">ConfiguratorException</A></CODE> - If configuration error 
+ occurs.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DefaultConfigurator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/ConfigDialog.RelayPanel.html" title="class in net.jxta.impl.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peergroup/DefaultConfigurator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DefaultConfigurator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.peergroup.NullConfigurator">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

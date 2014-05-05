@@ -1,0 +1,12 @@
+aconcorde (0.4.2-2) precise; urgency=low
+
+  * Fix package dependencies
+
+ -- CIXUG Developers <osl@cixug.es>  Fri, 19 Oct 2012 13:38:56 +0200
+
+aconcorde (0.4.2-1) unstable; urgency=low
+
+  * Initial release
+  * Packaged all the class files to a unique jar
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Wed, 07 Oct 2009 14:16:27 +0200

@@ -1,0 +1,16 @@
+{ For AnaLOG users }
+
+include genlog.cnf     { General-purpose stuff }
+
+
+get     time to from stairs vdiff idiff vswitch
+get     vdd gnd iswitch1 iswitch2 capfloat resfloat
+get     pfet7t nfet7t pfet7f nfet7f thermal 
+get     mmeter numbers iscope npn2 pnp2 diode1
+get     physical devtechp devtechn runspec
+get     opamp wramp hwr fwr hres ganglion
+get     ginst* pwl moscap
+
+menu    vdd gnd pfet7t nfet7t mmeter vswitch iswitch1
+
+

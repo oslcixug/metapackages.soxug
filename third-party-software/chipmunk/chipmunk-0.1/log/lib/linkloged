@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Shell script to put together a new version of LOGED
+# including user-written simulators.
+
+
+LOGLIB=/usr/cs10/lib/log
+CC=gcc -I/usr/cs10/include
+
+$LOGLIB/munch 'Log_[0-9]*_proc' $LOGLIB/loged.a $* >logeddir.c
+$CC logeddir.c $LOGLIB/loged.a $* -lp2c -lX11 -lm -o loged

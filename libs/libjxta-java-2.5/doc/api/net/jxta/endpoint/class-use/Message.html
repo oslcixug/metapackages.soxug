@@ -1,0 +1,910 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Uses of Class net.jxta.endpoint.Message (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Class net.jxta.endpoint.Message (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/endpoint//class-useMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Message.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<CENTER>
+<H2>
+<B>Uses of Class<br>net.jxta.endpoint.Message</B></H2>
+</CENTER>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Packages that use <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.endpoint"><B>net.jxta.endpoint</B></A></TD>
+<TD>Provides interfaces and classes used for the addressing, filtering, sending, 
+        and receiving of messages within JXTA.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.pipe"><B>net.jxta.pipe</B></A></TD>
+<TD>Pipes are the core mechanism for exchanging messages between JXTA 
+                                applications or services.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.rendezvous"><B>net.jxta.rendezvous</B></A></TD>
+<TD>The RendezVous Service is responsible for propagating messages within a JXTA
+    PeerGroup.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.socket"><B>net.jxta.socket</B></A></TD>
+<TD>The socket package provides interface ala <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net"><CODE>Socket</CODE></A>
+over JXTA pipes.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.util"><B>net.jxta.util</B></A></TD>
+<TD>A collection of utility classes used by the JXTA implementation and/or
+                                useful to users of the JXTA API.&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.endpoint"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> in <A HREF="../../../../net/jxta/endpoint/package-summary.html">net.jxta.endpoint</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/endpoint/package-summary.html">net.jxta.endpoint</A> that return <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>Message.</B><B><A HREF="../../../../net/jxta/endpoint/Message.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Duplicates the Message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>MessageFilterListener.</B><B><A HREF="../../../../net/jxta/endpoint/MessageFilterListener.html#filterMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">filterMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+              <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddr,
+              <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;dstAddr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the EndpointService for each message for which
+ this filter is registered.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.html#fromBuffer(java.nio.ByteBuffer, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType)">fromBuffer</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</A>&nbsp;buffer,
+           <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+           <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;contentEncoding)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <CODE>Message</CODE> from matching the type
+ specified by the <CODE>type</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.Instantiator.html#fromBuffer(java.nio.ByteBuffer, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType)">fromBuffer</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</A>&nbsp;buffer,
+           <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+           <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;contentEncoding)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an abstract message from a serialization.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.html#fromWire(java.io.InputStream, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType)">fromWire</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;is,
+         <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+         <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;contentEncoding)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <CODE>Message</CODE> from matching the type
+ specified by the <CODE>type</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.Instantiator.html#fromWire(java.io.InputStream, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType)">fromWire</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;is,
+         <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+         <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;contentEncoding)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an abstract message from a serialization.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/endpoint/package-summary.html">net.jxta.endpoint</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>EndpointService.</B><B><A HREF="../../../../net/jxta/endpoint/EndpointService.html#demux(net.jxta.endpoint.Message)">demux</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please convert your code to use the
+ <A HREF="../../../../net/jxta/endpoint/EndpointListener.html#processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)"><CODE>EndpointListener.processIncomingMessage(Message,EndpointAddress,EndpointAddress)</CODE></A>
+ method instead. The addressing method used by demux() was never part of
+ the formal JXTA protocol specification but was a defacto part because
+ demux() depended upon it.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>MessageFilterListener.</B><B><A HREF="../../../../net/jxta/endpoint/MessageFilterListener.html#filterMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">filterMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+              <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddr,
+              <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;dstAddr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the EndpointService for each message for which
+ this filter is registered.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>EndpointListener.</B><B><A HREF="../../../../net/jxta/endpoint/EndpointListener.html#processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">processIncomingMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+                       <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddr,
+                       <A HREF="../../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;dstAddr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the EndpointService for each incoming message
+ which is addressed to this listener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>EndpointService.</B><B><A HREF="../../../../net/jxta/endpoint/EndpointService.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">propagate</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates (broadcasts) a message via all available Message Transports.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>MessagePropagater.</B><B><A HREF="../../../../net/jxta/endpoint/MessagePropagater.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParams,
+          int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a Message via this Message Transport.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>EndpointService.</B><B><A HREF="../../../../net/jxta/endpoint/EndpointService.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+          int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates (broadcasts) a message via all available Message Transports.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>Messenger.</B><B><A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction as if by 
+ invoking <A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><CODE>sendMessage(msg, null, null)</CODE></A></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>AbstractMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/AbstractMessenger.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction as if by 
+ invoking <A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><CODE>sendMessage(msg, null, null)</CODE></A></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>Messenger.</B><B><A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>AbstractMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/AbstractMessenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>Messenger.</B><B><A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+            <A HREF="../../../../net/jxta/endpoint/OutgoingMessageEventListener.html" title="interface in net.jxta.endpoint">OutgoingMessageEventListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ChannelMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/ChannelMessenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+            <A HREF="../../../../net/jxta/endpoint/OutgoingMessageEventListener.html" title="interface in net.jxta.endpoint">OutgoingMessageEventListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>AbstractMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/AbstractMessenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+            <A HREF="../../../../net/jxta/endpoint/OutgoingMessageEventListener.html" title="interface in net.jxta.endpoint">OutgoingMessageEventListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>Messenger.</B><B><A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageB</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple sending: blocks until the message was accepted for sending or the messenger is not <A HREF="../../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A>; whichever occurs
+ first.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ThreadedMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/ThreadedMessenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageB</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple sending: blocks until the message was accepted for sending or the messenger is not <A HREF="../../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A>; whichever occurs
+ first.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>AsyncChannelMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/AsyncChannelMessenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageB</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple sending: blocks until the message was accepted for sending or the messenger is not <A HREF="../../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A>; whichever occurs
+ first.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ThreadedMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/ThreadedMessenger.html#sendMessageBImpl(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageBImpl</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a message blocking as needed until the message is sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>Messenger.</B><B><A HREF="../../../../net/jxta/endpoint/Messenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageN</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ThreadedMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/ThreadedMessenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageN</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>AsyncChannelMessenger.</B><B><A HREF="../../../../net/jxta/endpoint/AsyncChannelMessenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageN</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/endpoint/WireFormatMessage.html" title="interface in net.jxta.endpoint">WireFormatMessage</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.html#toWire(net.jxta.endpoint.Message, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType[])">toWire</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+       <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+       <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>[]&nbsp;preferedEncodings)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/endpoint/WireFormatMessage.html" title="interface in net.jxta.endpoint"><CODE>WireFormatMessage</CODE></A> matching the type
+ specified by the <CODE>type</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/WireFormatMessage.html" title="interface in net.jxta.endpoint">WireFormatMessage</A></CODE></FONT></TD>
+<TD><CODE><B>WireFormatMessageFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/endpoint/WireFormatMessageFactory.Instantiator.html#toWire(net.jxta.endpoint.Message, net.jxta.document.MimeMediaType, net.jxta.document.MimeMediaType[])">toWire</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+       <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+       <A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>[]&nbsp;preferedContentEncoding)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a WireFormatMessage from an abstract message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ListenerAdaptor.</B><B><A HREF="../../../../net/jxta/endpoint/ListenerAdaptor.html#watchMessage(net.jxta.endpoint.OutgoingMessageEventListener, net.jxta.endpoint.Message)">watchMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/OutgoingMessageEventListener.html" title="interface in net.jxta.endpoint">OutgoingMessageEventListener</A>&nbsp;listener,
+             <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the given message and invoke the given listener when the message sending is complete.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Constructors in <A HREF="../../../../net/jxta/endpoint/package-summary.html">net.jxta.endpoint</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/endpoint/OutgoingMessageEvent.html#OutgoingMessageEvent(net.jxta.endpoint.Message)">OutgoingMessageEvent</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an Outgoing Message Event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/endpoint/OutgoingMessageEvent.html#OutgoingMessageEvent(net.jxta.endpoint.Message, java.lang.Throwable)">OutgoingMessageEvent</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;source,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;failure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an Outgoing Message Event.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.pipe"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> in <A HREF="../../../../net/jxta/pipe/package-summary.html">net.jxta.pipe</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/pipe/package-summary.html">net.jxta.pipe</A> that return <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>PipeMsgEvent.</B><B><A HREF="../../../../net/jxta/pipe/PipeMsgEvent.html#getMessage()">getMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the message associated with the event</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>InputPipe.</B><B><A HREF="../../../../net/jxta/pipe/InputPipe.html#poll(int)">poll</A></B>(int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poll for a message from the pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>InputPipe.</B><B><A HREF="../../../../net/jxta/pipe/InputPipe.html#waitForMessage()">waitForMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wait (block) for a message to be received.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/pipe/package-summary.html">net.jxta.pipe</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>OutputPipe.</B><B><A HREF="../../../../net/jxta/pipe/OutputPipe.html#send(net.jxta.endpoint.Message)">send</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a message through the pipe
+
+ <p/><b>WARNING:</b> The message object used when sending a pipe message
+ should not be reused or modified after the <A HREF="../../../../net/jxta/pipe/OutputPipe.html#send(net.jxta.endpoint.Message)"><CODE>OutputPipe.send(Message)</CODE></A> call is
+ made.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Constructors in <A HREF="../../../../net/jxta/pipe/package-summary.html">net.jxta.pipe</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/pipe/PipeMsgEvent.html#PipeMsgEvent(java.lang.Object, net.jxta.endpoint.Message, net.jxta.pipe.PipeID)">PipeMsgEvent</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;source,
+             <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+             <A HREF="../../../../net/jxta/pipe/PipeID.html" title="class in net.jxta.pipe">PipeID</A>&nbsp;pipeID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new event</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.rendezvous"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> in <A HREF="../../../../net/jxta/rendezvous/package-summary.html">net.jxta.rendezvous</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/rendezvous/package-summary.html">net.jxta.rendezvous</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#propagate(java.util.Enumeration, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;? extends <A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&gt;&nbsp;destPeerIds,
+          <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+          int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a message to the specified peers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+          int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a message to the local network and to as many members of
+ the peer group as possible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#propagateInGroup(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagateInGroup</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                 int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a message to as many members of the peer group as possible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#propagateToNeighbors(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagateToNeighbors</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                     int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a message to members of the peer group reachable via the
+ local network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#walk(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+     int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>RendezVousService.</B><B><A HREF="../../../../net/jxta/rendezvous/RendezVousService.html#walk(java.util.Vector, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;? extends <A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&gt;&nbsp;destPeerIDs,
+     <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+     int&nbsp;ttl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p/>Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.socket"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A> declared as <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaServerSocket.</B><B><A HREF="../../../../net/jxta/socket/JxtaServerSocket.html#QUEUE_END_MESSAGE">QUEUE_END_MESSAGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUEUE_END_MESSAGE is used to signal that the queue has been closed.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A> with type parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</A>&lt;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>JxtaServerSocket.</B><B><A HREF="../../../../net/jxta/socket/JxtaServerSocket.html#queue">queue</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A> that return <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaSocket.</B><B><A HREF="../../../../net/jxta/socket/JxtaSocket.html#createConnectMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.credential.Credential, boolean, boolean)">createConnectMessage</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                     <A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                     <A HREF="../../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;credential,
+                     boolean&nbsp;isReliable,
+                     boolean&nbsp;initiator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a connection request/response message</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.util"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> that return <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#createOpenMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">createOpenMessage</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a connection request message</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#getMessage(int)">getMessage</A></B>(int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a message from the queue.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> with parameters of type <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#addBoolean(net.jxta.endpoint.Message, java.lang.String, boolean)">addBoolean</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+           boolean&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#addDouble(net.jxta.endpoint.Message, java.lang.String, double)">addDouble</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          double&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#addInt(net.jxta.endpoint.Message, java.lang.String, int)">addInt</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+       int&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#addLong(net.jxta.endpoint.Message, java.lang.String, long)">addLong</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+        long&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#addString(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">addString</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#getBoolean(net.jxta.endpoint.Message, java.lang.String, boolean)">getBoolean</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+           boolean&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#getDouble(net.jxta.endpoint.Message, java.lang.String, double)">getDouble</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          double&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#getInt(net.jxta.endpoint.Message, java.lang.String, int)">getInt</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+       int&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#getLong(net.jxta.endpoint.Message, java.lang.String, long)">getLong</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+        long&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>MessageUtilities.</B><B><A HREF="../../../../net/jxta/util/MessageUtilities.html#getString(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">getString</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#processIncomingMessage(net.jxta.endpoint.Message)">processIncomingMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the Reliablity library for each incoming data message</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A></B>(<A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a message
+ <p/>
+ <code>Messenger</code></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/endpoint//class-useMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Message.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

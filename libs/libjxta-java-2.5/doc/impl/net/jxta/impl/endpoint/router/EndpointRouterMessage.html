@@ -1,0 +1,742 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+EndpointRouterMessage (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="EndpointRouterMessage (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/EndpointRouterMessage.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouter.ClearPendingQuery.html" title="class in net.jxta.impl.endpoint.router"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/router/RouteCM.html" title="class in net.jxta.impl.endpoint.router"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/router/EndpointRouterMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="EndpointRouterMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.endpoint.router</FONT>
+<BR>
+Class EndpointRouterMessage</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.endpoint.router.EndpointRouterMessage</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>EndpointRouterMessage</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Router Message element. This element is added to every message to carry route 
+ information for the EndpointRouter service.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#DestTag">DestTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#GatewayForwardTag">GatewayForwardTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#GatewayReverseTag">GatewayReverseTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#LastHopTag">LastHopTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#MESSAGE_NAME">MESSAGE_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#MESSAGE_NS">MESSAGE_NS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#Name">Name</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#SrcTag">SrcTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#EndpointRouterMessage(net.jxta.endpoint.Message, boolean)">EndpointRouterMessage</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                      boolean&nbsp;removeMsg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#clearAll()">clearAll</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#display()">display</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getDestAddress()">getDestAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getForwardHops()">getForwardHops</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getLastHop()">getLastHop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getReverseHops()">getReverseHops</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getRouteAdv()">getRouteAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#getSrcAddress()">getSrcAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#isDirty()">isDirty</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#msgExists()">msgExists</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#prependReverseHop(net.jxta.protocol.AccessPointAdvertisement)">prependReverseHop</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;apa)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setDestAddress(net.jxta.endpoint.EndpointAddress)">setDestAddress</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setForwardHops(java.util.Vector)">setForwardHops</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;fhops)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setLastHop(net.jxta.endpoint.EndpointAddress)">setLastHop</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;lhop)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setReverseHops(java.util.Vector)">setReverseHops</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;rhops)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setRouteAdv(net.jxta.protocol.RouteAdvertisement)">setRouteAdv</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A>&nbsp;radv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#setSrcAddress(net.jxta.endpoint.EndpointAddress)">setSrcAddress</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouterMessage.html#updateMessage()">updateMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MESSAGE_NS"><!-- --></A><H3>
+MESSAGE_NS</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>MESSAGE_NS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.MESSAGE_NS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MESSAGE_NAME"><!-- --></A><H3>
+MESSAGE_NAME</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>MESSAGE_NAME</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.MESSAGE_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="Name"><!-- --></A><H3>
+Name</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>Name</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.Name">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SrcTag"><!-- --></A><H3>
+SrcTag</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SrcTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.SrcTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DestTag"><!-- --></A><H3>
+DestTag</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>DestTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.DestTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LastHopTag"><!-- --></A><H3>
+LastHopTag</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>LastHopTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.LastHopTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GatewayForwardTag"><!-- --></A><H3>
+GatewayForwardTag</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>GatewayForwardTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.GatewayForwardTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GatewayReverseTag"><!-- --></A><H3>
+GatewayReverseTag</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>GatewayReverseTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.endpoint.router.EndpointRouterMessage.GatewayReverseTag">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EndpointRouterMessage(net.jxta.endpoint.Message, boolean)"><!-- --></A><H3>
+EndpointRouterMessage</H3>
+<PRE>
+public <B>EndpointRouterMessage</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                             boolean&nbsp;removeMsg)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="msgExists()"><!-- --></A><H3>
+msgExists</H3>
+<PRE>
+public boolean <B>msgExists</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isDirty()"><!-- --></A><H3>
+isDirty</H3>
+<PRE>
+public boolean <B>isDirty</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="updateMessage()"><!-- --></A><H3>
+updateMessage</H3>
+<PRE>
+public void <B>updateMessage</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSrcAddress(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+setSrcAddress</H3>
+<PRE>
+public void <B>setSrcAddress</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSrcAddress()"><!-- --></A><H3>
+getSrcAddress</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A> <B>getSrcAddress</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDestAddress(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+setDestAddress</H3>
+<PRE>
+public void <B>setDestAddress</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDestAddress()"><!-- --></A><H3>
+getDestAddress</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A> <B>getDestAddress</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLastHop(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+setLastHop</H3>
+<PRE>
+public void <B>setLastHop</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;lhop)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLastHop()"><!-- --></A><H3>
+getLastHop</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A> <B>getLastHop</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setForwardHops(java.util.Vector)"><!-- --></A><H3>
+setForwardHops</H3>
+<PRE>
+public void <B>setForwardHops</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;fhops)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getForwardHops()"><!-- --></A><H3>
+getForwardHops</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt; <B>getForwardHops</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="prependReverseHop(net.jxta.protocol.AccessPointAdvertisement)"><!-- --></A><H3>
+prependReverseHop</H3>
+<PRE>
+public void <B>prependReverseHop</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;apa)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setReverseHops(java.util.Vector)"><!-- --></A><H3>
+setReverseHops</H3>
+<PRE>
+public void <B>setReverseHops</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;rhops)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReverseHops()"><!-- --></A><H3>
+getReverseHops</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/AccessPointAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">AccessPointAdvertisement</A>&gt; <B>getReverseHops</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRouteAdv()"><!-- --></A><H3>
+getRouteAdv</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A> <B>getRouteAdv</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRouteAdv(net.jxta.protocol.RouteAdvertisement)"><!-- --></A><H3>
+setRouteAdv</H3>
+<PRE>
+public void <B>setRouteAdv</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A>&nbsp;radv)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="display()"><!-- --></A><H3>
+display</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>display</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearAll()"><!-- --></A><H3>
+clearAll</H3>
+<PRE>
+public void <B>clearAll</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/EndpointRouterMessage.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/router/EndpointRouter.ClearPendingQuery.html" title="class in net.jxta.impl.endpoint.router"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/router/RouteCM.html" title="class in net.jxta.impl.endpoint.router"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/router/EndpointRouterMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="EndpointRouterMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

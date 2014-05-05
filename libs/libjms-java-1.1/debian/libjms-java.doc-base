@@ -1,0 +1,10 @@
+Document: libjms-java
+Title: Program API for JMS v1.1
+Abstract: Javadocs form Java Messaging System v1.1, a messaging
+ standard that allows application components based on the Java 2
+ Platform.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libjms-java/html/index.html
+Files: /usr/share/doc/libjms-java/html/*.html

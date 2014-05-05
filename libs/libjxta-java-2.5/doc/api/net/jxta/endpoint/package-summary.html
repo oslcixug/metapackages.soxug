@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+net.jxta.endpoint (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="net.jxta.endpoint (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/exception/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<H2>
+Package net.jxta.endpoint
+</H2>
+Provides interfaces and classes used for the addressing, filtering, sending, 
+        and receiving of messages within JXTA.
+<P>
+<B>See:</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#package_description"><B>Description</B></A>
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Interface Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/EndpointListener.html" title="interface in net.jxta.endpoint">EndpointListener</A></B></TD>
+<TD>A listener for messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/EndpointService.html" title="interface in net.jxta.endpoint">EndpointService</A></B></TD>
+<TD>The EndpointService provides the API for sending and receiving messages
+ between peers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessageFilterListener.html" title="interface in net.jxta.endpoint">MessageFilterListener</A></B></TD>
+<TD>This interface is used by Message Filters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessagePropagater.html" title="interface in net.jxta.endpoint">MessagePropagater</A></B></TD>
+<TD>A MessagePropagater is a MessageTransport that can send propagated
+ (multicast) messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessageReceiver.html" title="interface in net.jxta.endpoint">MessageReceiver</A></B></TD>
+<TD>A MessageReceiver is a MessageTransport that is capable of receiving messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessageSender.html" title="interface in net.jxta.endpoint">MessageSender</A></B></TD>
+<TD>A MessageSender is a MessageTransport that is able to send messages to
+  remote peers using some protocol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessageTransport.html" title="interface in net.jxta.endpoint">MessageTransport</A></B></TD>
+<TD>A MessageTransport is responsible for sending and/or receiving JXTA
+  messages from an external network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></B></TD>
+<TD>A Messenger is used to send messages to a destination.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessengerEventListener.html" title="interface in net.jxta.endpoint">MessengerEventListener</A></B></TD>
+<TD>A listener for MessengerEvents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/OutgoingMessageEventListener.html" title="interface in net.jxta.endpoint">OutgoingMessageEventListener</A></B></TD>
+<TD>A listener for events concerning the status of outgoing messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/WireFormatMessage.html" title="interface in net.jxta.endpoint">WireFormatMessage</A></B></TD>
+<TD>A wire serialization of an abstract message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/WireFormatMessageFactory.Instantiator.html" title="interface in net.jxta.endpoint">WireFormatMessageFactory.Instantiator</A></B></TD>
+<TD>Interface for instantiators of wire format messages.</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint">AbstractMessenger</A></B></TD>
+<TD>An AbstractMessenger is used to implement messengers (for example, by transport modules).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html" title="class in net.jxta.endpoint">AsyncChannelMessenger</A></B></TD>
+<TD>Extends Channel Messenger behaviour to provide asynchronous message sending
+ via queuing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint">AsyncChannelMessenger.PendingMessage</A></B></TD>
+<TD>The representation of a queued message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/ByteArrayMessageElement.html" title="class in net.jxta.endpoint">ByteArrayMessageElement</A></B></TD>
+<TD>A Message Element using byte arrays for the element data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A></B></TD>
+<TD>A Channel Messenger provides an exclusive interface to the shared messenger.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A></B></TD>
+<TD>Describes a destination to which JXTA messages may be sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/InputStreamMessageElement.html" title="class in net.jxta.endpoint">InputStreamMessageElement</A></B></TD>
+<TD>A Message Element using <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io"><CODE>InputStream</CODE></A> as the source for the
+ element data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/ListenerAdaptor.html" title="class in net.jxta.endpoint">ListenerAdaptor</A></B></TD>
+<TD>The legacy getMessenger asynchronous API never returns any object to the invoker until a messenger could actually be made,
+ allowing the application to supply a listener to be invoked when the operation completes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></B></TD>
+<TD>Messages are abstract containers for protocol messages within JXTA.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/Message.element.html" title="class in net.jxta.endpoint">Message.element</A></B></TD>
+<TD>Holds an element, its namespace and optionally an override signature
+ element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A></B></TD>
+<TD>JXTA Message Elements are used to add data to a JXTA Message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessengerEvent.html" title="class in net.jxta.endpoint">MessengerEvent</A></B></TD>
+<TD>An event which indicates that a messenger has been successfully created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/MessengerState.html" title="class in net.jxta.endpoint">MessengerState</A></B></TD>
+<TD>The complete standard messenger life cycle state machine that all messengers
+ must obey.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/OutgoingMessageEvent.html" title="class in net.jxta.endpoint">OutgoingMessageEvent</A></B></TD>
+<TD>An event which provides notification of the the transmission status of an
+ outgoing message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/StringMessageElement.html" title="class in net.jxta.endpoint">StringMessageElement</A></B></TD>
+<TD>A Message Element using character strings for the element data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/TextDocumentMessageElement.html" title="class in net.jxta.endpoint">TextDocumentMessageElement</A></B></TD>
+<TD>A Message Element using JXTA TextDocument for the element data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/TextMessageElement.html" title="class in net.jxta.endpoint">TextMessageElement</A></B></TD>
+<TD>An extension of MessageElement for managing elements that are composed of
+ character text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/ThreadedMessenger.html" title="class in net.jxta.endpoint">ThreadedMessenger</A></B></TD>
+<TD>This is a messenger meant to be shared by multiple channels and automatically
+ distribute the available bandwidth among the channels.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../net/jxta/endpoint/WireFormatMessageFactory.html" title="class in net.jxta.endpoint">WireFormatMessageFactory</A></B></TD>
+<TD>This class is a class factory for Wire Format Messages.</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+<A NAME="package_description"><!-- --></A><H2>
+Package net.jxta.endpoint Description
+</H2>
+
+<P>
+Provides interfaces and classes used for the addressing, filtering, sending, 
+        and receiving of messages within JXTA.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html" target='_blank'>JXTA Protocols Specification</a></DL>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/exception/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+-*- coding: utf-8 -*-
+
+This package was debianized by:
+
+    Agustin Martin Domingo <agmartin@debian.org> on Fri, 28 Nov 2008 13:08:29 +0100
+
+It was downloaded from:
+
+   http://openoffice.mancomun.org/libreeengalego/Corrector/gl_ES-pack.zip
+
+Upstream Home page:
+
+   http://wiki.mancomun.org/index.php/Corrector_ortogr%C3%A1fico_para_OpenOffice.org
+
+Upstream Author:
+
+    Mar Castro Pereiro (mancomun@mancomun.org) for mancomun
+
+Copyright:
+
+    Copyright (C) 2006-2007 Mancomun.org - Centro de Referencia e Servizos
+                  de Software Libre de Galicia
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License version 2 as
+   published by the Free Software Foundation.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General Public License
+version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+The Debian packaging is:
+
+    Copyright (C) 2008, Agustin Martin Domingo <agmartin@debian.org>
+
+and is licensed under the same GPL as the main package, see above.
+

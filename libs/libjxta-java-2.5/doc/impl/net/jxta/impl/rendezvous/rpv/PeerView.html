@@ -1,0 +1,1064 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PeerView (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PeerView (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerView.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewDestination.html" title="class in net.jxta.impl.rendezvous.rpv"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rpv/PeerView.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerView.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.rendezvous.rpv</FONT>
+<BR>
+Class PeerView</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.rendezvous.rpv.PeerView</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public final class <B>PeerView</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A></DL>
+</PRE>
+
+<P>
+This class models a Rendezvous Peer View (RPV):
+ ordered collection of all other Rendezvous Peers visible to
+ this peer.
+ <p/>
+ Presently this class implements a random "diffusion" algorithm
+ where each Peer periodically selects a randomly selected peer advertisement
+ from its view and sends it over to a randomly selected peer from its view.
+ Over time, this causes every peer to learn about every other peer, resulting
+ in a "converged" peer view.
+ <p/>
+ This diffusion process is bootstrapped by every peer sending their
+ own peer advertisements to some well-known, stable, "seed" peers on
+ startup.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#CACHED_RADV_ELEMENT">CACHED_RADV_ELEMENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional message element that specifies by its presence in a peerview
+ message that the referenced peer is not the provider of the
+ RdvAdvertisement and the advertisement is a "hint" or referral from the
+ responding peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#CACHED_RADV_ELEMENT_NAME">CACHED_RADV_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message element name for PeerView "Cached" Message Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#EDGE_ELEMENT">EDGE_ELEMENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional message element that specifies by its presence in a peerview
+ message that the referenced peer is an edge peer and not a member of the
+ peerview.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#EDGE_ELEMENT_NAME">EDGE_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message element name for PeerView "Edge" Message Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#FAILURE_ELEMENT">FAILURE_ELEMENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optional message element that specifies by its presence in a peerview
+ message that the referenced peer has either failed or is quitting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#FAILURE_ELEMENT_NAME">FAILURE_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message element name for PeerView "Failure" Message Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#MESSAGE_ELEMENT_NAME">MESSAGE_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element name of outgoing messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#MESSAGE_NAMESPACE">MESSAGE_NAMESPACE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Namespace used for rdv message elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#RESPONSE_ELEMENT_NAME">RESPONSE_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element name of responses.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#SERVICE_NAME">SERVICE_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our service name</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#SRCROUTEADV_ELEMENT_NAME">SRCROUTEADV_ELEMENT_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message element name that specifies the route advertisement of the
+ source of the message.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#PeerView(net.jxta.peergroup.PeerGroup, net.jxta.peergroup.PeerGroup, net.jxta.impl.rendezvous.RendezVousServiceImpl, java.lang.String)">PeerView</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+         <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;advertisingGroup,
+         <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceImpl.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceImpl</A>&nbsp;rdvService,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an instance of PeerView for the specified PeerGroup and Service.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#addListener(net.jxta.impl.rendezvous.rpv.PeerViewListener)">addListener</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewListener.html" title="interface in net.jxta.impl.rendezvous.rpv">PeerViewListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a listener for PeerViewEvent</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#addSeed(java.net.URI)">addSeed</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds the specified URI to the list of seeds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#addTask(java.util.TimerTask, long, long)">addTask</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/TimerTask.html?is-external=true" title="class or interface in java.util">TimerTask</A>&nbsp;task,
+        long&nbsp;delay,
+        long&nbsp;interval)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RdvAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RdvAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#createRdvAdvertisement(net.jxta.protocol.PeerAdvertisement, java.lang.String)">createRdvAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PeerAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PeerAdvertisement</A>&nbsp;padv,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getDownPeer()">getDownPeer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the down peer from the local peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getPeerViewElement(net.jxta.id.ID)">getPeerViewElement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;pid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get from the local view, the PeerViewElement for the given PeerID, if one
+ exists.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getPeerViewElement(net.jxta.impl.rendezvous.rpv.PeerViewDestination)">getPeerViewElement</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewDestination.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewDestination</A>&nbsp;wanted)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return from the local view, the PeerViewElement that is equal to the
+ given PeerViewDestination, if one exists or <code>null</code> if it is
+ not present.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getSelf()">getSelf</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the local peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getUpPeer()">getUpPeer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the up peer from the local peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</A>&lt;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#getView()">getView</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a copy of the PeerView for this group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#makeWirePipeAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.peergroup.PeerGroup, java.lang.String)">makeWirePipeAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;destGroup,
+                          <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#notifyFailure(net.jxta.peer.PeerID, boolean)">notifyFailure</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;pid,
+              boolean&nbsp;propagateFailure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoked by anyone in order to inform the PeerView of a failure
+ of one of the member peers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#notifyFailure(net.jxta.impl.rendezvous.rpv.PeerViewElement, boolean)">notifyFailure</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A>&nbsp;pve,
+              boolean&nbsp;propagateFailure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoked when a peerview member peer becomes unreachable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#probeAddress(net.jxta.endpoint.EndpointAddress, net.jxta.protocol.RouteAdvertisement)">probeAddress</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address,
+             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A>&nbsp;hint)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Probe the specified peer immediately.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">processIncomingMessage</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                       <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddr,
+                       <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;dstAddr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the EndpointService for each incoming message
+ which is addressed to this listener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#removeListener(net.jxta.impl.rendezvous.rpv.PeerViewListener)">removeListener</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewListener.html" title="interface in net.jxta.impl.rendezvous.rpv">PeerViewListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a PeerViewEvent Listener previously added with addListener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#removeTask(java.util.TimerTask)">removeTask</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/TimerTask.html?is-external=true" title="class or interface in java.util">TimerTask</A>&nbsp;task)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)">rendezvousEvent</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousEvent.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when an event occurs for the Rendezvous service</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#seed()">seed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send our own advertisement to all of the seed rendezvous.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#start()">start</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SERVICE_NAME"><!-- --></A><H3>
+SERVICE_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SERVICE_NAME</B></PRE>
+<DL>
+<DD>Our service name
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.SERVICE_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MESSAGE_NAMESPACE"><!-- --></A><H3>
+MESSAGE_NAMESPACE</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>MESSAGE_NAMESPACE</B></PRE>
+<DL>
+<DD>Namespace used for rdv message elements.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.MESSAGE_NAMESPACE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MESSAGE_ELEMENT_NAME"><!-- --></A><H3>
+MESSAGE_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>MESSAGE_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Element name of outgoing messages. Note that the element contains a
+ RdvAvertisement and <emphasis>not</emphasis> a Peer Advertisement.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.MESSAGE_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RESPONSE_ELEMENT_NAME"><!-- --></A><H3>
+RESPONSE_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>RESPONSE_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Element name of responses. Note that the element contains a
+ RdvAvertisement and <emphasis>not</emphasis> a Peer Advertisement.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.RESPONSE_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CACHED_RADV_ELEMENT_NAME"><!-- --></A><H3>
+CACHED_RADV_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>CACHED_RADV_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Message element name for PeerView "Cached" Message Element
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.CACHED_RADV_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CACHED_RADV_ELEMENT"><!-- --></A><H3>
+CACHED_RADV_ELEMENT</H3>
+<PRE>
+static final <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A> <B>CACHED_RADV_ELEMENT</B></PRE>
+<DL>
+<DD>Optional message element that specifies by its presence in a peerview
+ message that the referenced peer is not the provider of the
+ RdvAdvertisement and the advertisement is a "hint" or referral from the
+ responding peer.
+ <p/>
+ In practice, when sending its own RdvAdvertisement, a peer does not
+ include this element, but when sending another peer's RdvAdvertisement,
+ this element is included.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="SRCROUTEADV_ELEMENT_NAME"><!-- --></A><H3>
+SRCROUTEADV_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SRCROUTEADV_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Message element name that specifies the route advertisement of the
+ source of the message.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.SRCROUTEADV_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EDGE_ELEMENT_NAME"><!-- --></A><H3>
+EDGE_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>EDGE_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Message element name for PeerView "Edge" Message Element
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.EDGE_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EDGE_ELEMENT"><!-- --></A><H3>
+EDGE_ELEMENT</H3>
+<PRE>
+static final <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A> <B>EDGE_ELEMENT</B></PRE>
+<DL>
+<DD>Optional message element that specifies by its presence in a peerview
+ message that the referenced peer is an edge peer and not a member of the
+ peerview.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="FAILURE_ELEMENT_NAME"><!-- --></A><H3>
+FAILURE_ELEMENT_NAME</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>FAILURE_ELEMENT_NAME</B></PRE>
+<DL>
+<DD>Message element name for PeerView "Failure" Message Element
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rpv.PeerView.FAILURE_ELEMENT_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="FAILURE_ELEMENT"><!-- --></A><H3>
+FAILURE_ELEMENT</H3>
+<PRE>
+static final <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/MessageElement.html?is-external=true" title="class or interface in net.jxta.endpoint">MessageElement</A> <B>FAILURE_ELEMENT</B></PRE>
+<DL>
+<DD>Optional message element that specifies by its presence in a peerview
+ message that the referenced peer has either failed or is quitting. If the
+ "cached" element is also set then the error is being reported by a third
+ party.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PeerView(net.jxta.peergroup.PeerGroup, net.jxta.peergroup.PeerGroup, net.jxta.impl.rendezvous.RendezVousServiceImpl, java.lang.String)"><!-- --></A><H3>
+PeerView</H3>
+<PRE>
+public <B>PeerView</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;advertisingGroup,
+                <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceImpl.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceImpl</A>&nbsp;rdvService,
+                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Get an instance of PeerView for the specified PeerGroup and Service.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - Peer Group in which this Peer View instance operates.<DD><CODE>advertisingGroup</CODE> - Peer Group in which this Peer View instance will
+                         advertise and broadcast its existence.<DD><CODE>rdvService</CODE> - The rdvService we are to use.<DD><CODE>name</CODE> - The identifying name for this Peer View instance.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+processIncomingMessage</H3>
+<PRE>
+public void <B>processIncomingMessage</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddr,
+                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;dstAddr)</PRE>
+<DL>
+<DD>This method is invoked by the EndpointService for each incoming message
+ which is addressed to this listener.
+ <p/>
+ Listener for "PeerView"/&lt;peergroup-unique-id> and propagate pipes.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true#processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)" title="class or interface in net.jxta.endpoint">processIncomingMessage</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - Incoming message<DD><CODE>srcAddr</CODE> - Endpoint Address of the source of the message.<DD><CODE>dstAddr</CODE> - Endpoint Address of the destination of the message.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)"><!-- --></A><H3>
+rendezvousEvent</H3>
+<PRE>
+public void <B>rendezvousEvent</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousEvent.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called when an event occurs for the Rendezvous service
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)" title="class or interface in net.jxta.rendezvous">rendezvousEvent</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - the rendezvous event</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start()"><!-- --></A><H3>
+start</H3>
+<PRE>
+public void <B>start</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+public void <B>stop</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addTask(java.util.TimerTask, long, long)"><!-- --></A><H3>
+addTask</H3>
+<PRE>
+protected void <B>addTask</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/TimerTask.html?is-external=true" title="class or interface in java.util">TimerTask</A>&nbsp;task,
+                       long&nbsp;delay,
+                       long&nbsp;interval)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeTask(java.util.TimerTask)"><!-- --></A><H3>
+removeTask</H3>
+<PRE>
+protected void <B>removeTask</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/TimerTask.html?is-external=true" title="class or interface in java.util">TimerTask</A>&nbsp;task)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addSeed(java.net.URI)"><!-- --></A><H3>
+addSeed</H3>
+<PRE>
+public void <B>addSeed</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seed)</PRE>
+<DL>
+<DD>Adds the specified URI to the list of seeds. Even if useOnlySeeds is in
+ effect, this seed may now be used, as if it was part of the initial
+ configuration.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seed</CODE> - the URI of the seed rendezvous.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="probeAddress(net.jxta.endpoint.EndpointAddress, net.jxta.protocol.RouteAdvertisement)"><!-- --></A><H3>
+probeAddress</H3>
+<PRE>
+public boolean <B>probeAddress</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;address,
+                            <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RouteAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RouteAdvertisement</A>&nbsp;hint)</PRE>
+<DL>
+<DD>Probe the specified peer immediately.
+ <p/>
+ Note: If "useOnlySeeds" is in effect and the peer is not a seed, any response to this probe will be ignored.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="seed()"><!-- --></A><H3>
+seed</H3>
+<PRE>
+public void <B>seed</B>()</PRE>
+<DL>
+<DD>Send our own advertisement to all of the seed rendezvous.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="notifyFailure(net.jxta.peer.PeerID, boolean)"><!-- --></A><H3>
+notifyFailure</H3>
+<PRE>
+public void <B>notifyFailure</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;pid,
+                          boolean&nbsp;propagateFailure)</PRE>
+<DL>
+<DD>Invoked by anyone in order to inform the PeerView of a failure
+ of one of the member peers.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - ID of the peer which failed.<DD><CODE>propagateFailure</CODE> - If <tt>true</tt>then broadcast the failure to
+                         other peers otherwise only update the local peerview.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="notifyFailure(net.jxta.impl.rendezvous.rpv.PeerViewElement, boolean)"><!-- --></A><H3>
+notifyFailure</H3>
+<PRE>
+void <B>notifyFailure</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A>&nbsp;pve,
+                   boolean&nbsp;propagateFailure)</PRE>
+<DL>
+<DD>Invoked when a peerview member peer becomes unreachable.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pve</CODE> - The peer which failed.<DD><CODE>propagateFailure</CODE> - If <code>true</code> then broadcast the failure to
+                         other peers otherwise only update the local peerview.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRdvAdvertisement(net.jxta.protocol.PeerAdvertisement, java.lang.String)"><!-- --></A><H3>
+createRdvAdvertisement</H3>
+<PRE>
+static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/RdvAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">RdvAdvertisement</A> <B>createRdvAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PeerAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PeerAdvertisement</A>&nbsp;padv,
+                                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addListener(net.jxta.impl.rendezvous.rpv.PeerViewListener)"><!-- --></A><H3>
+addListener</H3>
+<PRE>
+public boolean <B>addListener</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewListener.html" title="interface in net.jxta.impl.rendezvous.rpv">PeerViewListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Add a listener for PeerViewEvent
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - An PeerViewListener to process the event.
+<DT><B>Returns:</B><DD>true if successful</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeListener(net.jxta.impl.rendezvous.rpv.PeerViewListener)"><!-- --></A><H3>
+removeListener</H3>
+<PRE>
+public boolean <B>removeListener</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewListener.html" title="interface in net.jxta.impl.rendezvous.rpv">PeerViewListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Removes a PeerViewEvent Listener previously added with addListener.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the PeerViewListener listener remove
+<DT><B>Returns:</B><DD>whether successful or not</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="makeWirePipeAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.peergroup.PeerGroup, java.lang.String)"><!-- --></A><H3>
+makeWirePipeAdvertisement</H3>
+<PRE>
+static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A> <B>makeWirePipeAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;destGroup,
+                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getView()"><!-- --></A><H3>
+getView</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/SortedSet.html?is-external=true" title="class or interface in java.util">SortedSet</A>&lt;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A>&gt; <B>getView</B>()</PRE>
+<DL>
+<DD>Get a copy of the PeerView for this group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A SortedSet which is the current local view of the peerview</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerViewElement(net.jxta.impl.rendezvous.rpv.PeerViewDestination)"><!-- --></A><H3>
+getPeerViewElement</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>getPeerViewElement</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewDestination.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewDestination</A>&nbsp;wanted)</PRE>
+<DL>
+<DD>Return from the local view, the PeerViewElement that is equal to the
+ given PeerViewDestination, if one exists or <code>null</code> if it is
+ not present. Identity is defined by <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewDestination.html#equals(java.lang.Object)"><CODE>PeerViewDestination.equals(java.lang.Object)</CODE></A>
+ which only looks at the destination address. Thus a PeerViewDestination
+ is enough. A full PeerViewElement may be passed as well.  This method
+ does not require external synchronization.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>wanted</CODE> - PeerViewDestination matching the desired one.
+<DT><B>Returns:</B><DD>the matching PeerViewElement or <code>null</code> if it could not
+         be found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerViewElement(net.jxta.id.ID)"><!-- --></A><H3>
+getPeerViewElement</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>getPeerViewElement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;pid)</PRE>
+<DL>
+<DD>Get from the local view, the PeerViewElement for the given PeerID, if one
+ exists. Null otherwise. This method does not require external
+ synchronization.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - the PeerID of the desired element.
+<DT><B>Returns:</B><DD>the matching PeerViewElement null if it could not be found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDownPeer()"><!-- --></A><H3>
+getDownPeer</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>getDownPeer</B>()</PRE>
+<DL>
+<DD>Get the down peer from the local peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the down PeerViewElement or null if there is no such peer.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSelf()"><!-- --></A><H3>
+getSelf</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>getSelf</B>()</PRE>
+<DL>
+<DD>Get the local peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the local PeerViewElement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUpPeer()"><!-- --></A><H3>
+getUpPeer</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>getUpPeer</B>()</PRE>
+<DL>
+<DD>Get the up peer from the local peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the up PeerViewElement or null if there is no such peer.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerView.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerViewDestination.html" title="class in net.jxta.impl.rendezvous.rpv"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rpv/PeerView.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerView.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

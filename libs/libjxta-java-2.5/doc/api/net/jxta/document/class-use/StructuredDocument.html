@@ -1,0 +1,848 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Uses of Interface net.jxta.document.StructuredDocument (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface net.jxta.document.StructuredDocument (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useStructuredDocument.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StructuredDocument.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<CENTER>
+<H2>
+<B>Uses of Interface<br>net.jxta.document.StructuredDocument</B></H2>
+</CENTER>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Packages that use <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.credential"><B>net.jxta.credential</B></A></TD>
+<TD>Credentials provide the basic mechanisms for securly establishing and
+communicating identity within JXTA.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.document"><B>net.jxta.document</B></A></TD>
+<TD>JXTA Documents are containers for both structured and unstructured data.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.protocol"><B>net.jxta.protocol</B></A></TD>
+<TD>Provides inteface objects for Advertisments and protocol messages for the JXTA 
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jcs" target='_blank'>Core</a>
+                                and
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jss" target='_blank'>Standard</a>
+    Protocols.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.socket"><B>net.jxta.socket</B></A></TD>
+<TD>The socket package provides interface ala <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net"><CODE>Socket</CODE></A>
+over JXTA pipes.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.util"><B>net.jxta.util</B></A></TD>
+<TD>A collection of utility classes used by the JXTA implementation and/or
+                                useful to users of the JXTA API.&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.credential"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A> that return <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>Credential.</B><B><A HREF="../../../../net/jxta/credential/Credential.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;asMimeType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write credential into a document.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>AuthenticationCredential.</B><B><A HREF="../../../../net/jxta/credential/AuthenticationCredential.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;as)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write credential into a document. as is a mime media-type
+ specification and provides the form of the document which is being
+ requested.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.document"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Subinterfaces of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document">StructuredTextDocument&lt;T extends TextElement&lt;T&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extends <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to provide accessors appropriate for text
+ based documents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument&lt;X extends XMLElement&lt;X&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common interfaces for all <A HREF="../../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document"><CODE>StructuredTextDocument</CODE></A>
+ which are implemented by XML Documents.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> that return <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyAsDocument(net.jxta.document.Element)">copyAsDocument</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copies the specified element or document into a standalone document of
+ same type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>Element.</B><B><A HREF="../../../../net/jxta/document/Element.html#getRoot()">getRoot</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the root document element of the hierarchy this element belongs to.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html#newInstance(net.jxta.document.MimeMediaType, java.io.InputStream)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimeType,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a structured document from a stream containing an appropriately serialized
+  instance of the same document.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.TextInstantiator.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.TextInstantiator.html#newInstance(net.jxta.document.MimeMediaType, java.io.Reader)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimeType,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a structured document from a Reader containing an appropriately serialized
+  instance of the same document.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html#newInstance(net.jxta.document.MimeMediaType, java.lang.String)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimeType,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new structured document of the type specified by doctype.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html#newInstance(net.jxta.document.MimeMediaType, java.lang.String, java.lang.String)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimeType,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new structured document of the type specified by doctype.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.endpoint.MessageElement)">newStructuredDocument</A></B>(<A HREF="../../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> based upon the
+ content of the provided message element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.io.InputStream)">newStructuredDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.io.Reader)">newStructuredDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;reader)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String)">newStructuredDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentFactory.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String, java.lang.String)">newStructuredDocument</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> with parameters of type <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyChildren(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyChildren</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy children elements of <code>from</code> into the
+ the element <code>intoElement</code> of document <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element, java.lang.Object)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;newName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.protocol"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> that return <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompat()">getCompat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the opaque compatibility statement for this advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompatPriv()">getCompatPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompat()"><CODE>ModuleImplAdvertisement.getCompat()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ResolverQueryMsg.</B><B><A HREF="../../../../net/jxta/protocol/ResolverQueryMsg.html#getCredential()">getCredential</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the credential</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ResolverResponseMsg.</B><B><A HREF="../../../../net/jxta/protocol/ResolverResponseMsg.html#getCredential()">getCredential</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the credential</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleSpecAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PipeAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the description meta-data for the pipe described by this advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleClassAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleClassAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDescPriv()">getDescPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDesc()"><CODE>ModuleImplAdvertisement.getDesc()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleSpecAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#getParam()">getParam</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the param element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParam()">getParam</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the param element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleSpecAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#getParamPriv()">getParamPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#getParam()"><CODE>ModuleSpecAdvertisement.getParam()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParamPriv()">getParamPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParam()"><CODE>ModuleImplAdvertisement.getParam()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#getServiceParam(net.jxta.id.ID)">getServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the parameter element that matches the given key from the
+ service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#getServiceParam(net.jxta.id.ID)">getServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the parameter element that matches the given key from the
+ service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#getServiceParam(net.jxta.id.ID)">getServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the parameter element that matches the given key from the
+  service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#removeServiceParam(net.jxta.id.ID)">removeServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes and returns the parameter element that matches the given key
+ from the service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#removeServiceParam(net.jxta.id.ID)">removeServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes and returns the parameter element that matches the given key
+ from the service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#removeServiceParam(net.jxta.id.ID)">removeServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes and returns the parameter element that matches the given key
+  from the service parameters table.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> that return types with arguments of type <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#getServiceParams()">getServiceParams</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the sets of parameters for all services.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#getServiceParams()">getServiceParams</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the sets of parameters for all services.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</A>&lt;<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&gt;&gt;</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#getServiceParamsEntrySet()">getServiceParamsEntrySet</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This method exposes the internal data structures of the
+  advertisement and will be removed in order to prevent unexpected
+  behaviour.</I></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> with parameters of type <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#addDocumentElements(net.jxta.document.StructuredDocument)">addDocumentElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the advertisement as a document.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ResolverQueryMsg.</B><B><A HREF="../../../../net/jxta/protocol/ResolverQueryMsg.html#setCredential(net.jxta.document.StructuredDocument)">setCredential</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;cred)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set the credential</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ResolverResponseMsg.</B><B><A HREF="../../../../net/jxta/protocol/ResolverResponseMsg.html#setCredential(net.jxta.document.StructuredDocument)">setCredential</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;cred)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set the credential for this response.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.socket"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A> declared as <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaMulticastSocket.</B><B><A HREF="../../../../net/jxta/socket/JxtaMulticastSocket.html#credentialDoc">credentialDoc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/socket/package-summary.html">net.jxta.socket</A> that return <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaMulticastSocket.</B><B><A HREF="../../../../net/jxta/socket/JxtaMulticastSocket.html#getCredDoc(net.jxta.peergroup.PeerGroup)">getCredDoc</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the credential doc from the group object</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.util"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> declared as <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#credentialDoc">credentialDoc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaServerPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaServerPipe.html#myCredentialDoc">myCredentialDoc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> that return <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentUtilities.</B><B><A HREF="../../../../net/jxta/util/DocumentUtilities.html#createParamDocument()">createParamDocument</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#getCredDoc(net.jxta.peergroup.PeerGroup)">getCredDoc</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the cred doc from the group object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#getCredentialDoc()">getCredentialDoc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the remote credential doc</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>JxtaServerPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaServerPipe.html#getCredentialDoc()">getCredentialDoc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the credential doc</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> with parameters of type <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#checkCred(net.jxta.document.StructuredDocument)">checkCred</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;cred)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not implemented yet</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol">ModuleSpecAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#createModuleSpecAdvertisement(java.lang.String, net.jxta.protocol.ModuleClassAdvertisement, net.jxta.document.StructuredDocument)">createModuleSpecAdvertisement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                              <A HREF="../../../../net/jxta/protocol/ModuleClassAdvertisement.html" title="class in net.jxta.protocol">ModuleClassAdvertisement</A>&nbsp;moduleClassAdvertisement,
+                              <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This implementation incompletely initializes the module
+             spec advertisement. Consider creating Module Spec Advertisements without
+             this method.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol">ModuleSpecAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#createModuleSpecAdvertisement(java.lang.String, net.jxta.document.StructuredDocument)">createModuleSpecAdvertisement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                              <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This implementation incompletely initializes the module
+             spec advertisement. Consider creating Module Spec Advertisements without
+             this method.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>JxtaBiDiPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#setCredentialDoc(net.jxta.document.StructuredDocument)">setCredentialDoc</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;doc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the connection credential doc.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>JxtaServerPipe.</B><B><A HREF="../../../../net/jxta/util/JxtaServerPipe.html#setCredentialDoc(net.jxta.document.StructuredDocument)">setCredentialDoc</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;doc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the connection credential doc
+ If no credentials are set, the default group credential will be used</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Constructors in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> with parameters of type <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.endpoint.Messenger, net.jxta.protocol.PipeAdvertisement, net.jxta.document.StructuredDocument, boolean, boolean)">JxtaBiDiPipe</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+             <A HREF="../../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>&nbsp;msgr,
+             <A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipe,
+             <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;credDoc,
+             boolean&nbsp;isReliable,
+             boolean&nbsp;direct)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a bidirectional pipe</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useStructuredDocument.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StructuredDocument.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

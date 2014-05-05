@@ -1,0 +1,12 @@
+
+{ Configuration file for testing LOG }
+
+
+include diglog.cnf
+
+gates   log.gate
+gates   ana.gate
+gates   actel.gate
+
+
+menu    switch led and or nand nor inv

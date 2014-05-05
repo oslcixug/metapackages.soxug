@@ -1,0 +1,1015 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PeerInfoServiceImpl (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PeerInfoServiceImpl (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerInfoServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peer/PeerInfoMessenger.html" title="interface in net.jxta.impl.peer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.PipQueryHandler.html" title="class in net.jxta.impl.peer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peer/PeerInfoServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerInfoServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.peer</FONT>
+<BR>
+Class PeerInfoServiceImpl</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.peer.PeerInfoServiceImpl</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>PeerInfoServiceImpl</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></DL>
+</PRE>
+
+<P>
+Peer Info provides a mechanism to obtain  information about peers.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.PipQueryHandler.html" title="class in net.jxta.impl.peer">PeerInfoServiceImpl.PipQueryHandler</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#peerInfoServices">peerInfoServices</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform">START_AGAIN_PROGRESS</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform">START_AGAIN_STALLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_DISABLED" title="class or interface in net.jxta.platform">START_DISABLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#PeerInfoServiceImpl()">PeerInfoServiceImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#addMonitorListener(net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener)">addMonitorListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                   long&nbsp;reportRate,
+                   boolean&nbsp;includeCumulative,
+                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#addRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener, long, long)">addRemoteMonitorListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                         <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                         long&nbsp;reportRate,
+                         boolean&nbsp;includeCumulative,
+                         <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                         long&nbsp;lease,
+                         long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the specified remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getBestReportRate(long)">getBestReportRate</A></B>(long&nbsp;desiredReportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorReport.html?is-external=true" title="class or interface in net.jxta.meter">MonitorReport</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getCumulativeMonitorReport(net.jxta.meter.MonitorFilter)">getCumulativeMonitorReport</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getCumulativeMonitorReport(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, net.jxta.meter.MonitorListener, long)">getCumulativeMonitorReport</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                           <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                           <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                           long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the specified remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getGroup()">getGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the group to which this service is attached.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getImplAdvertisement()">getImplAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the advertisement for this service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getInterface()">getInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service objects are not manipulated directly to protect usage
+ of the service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getNextQueryId()">getNextQueryId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="../../../../net/jxta/impl/peer/PeerInfoHandler.html" title="interface in net.jxta.impl.peer">PeerInfoHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getPeerInfoHandler(java.lang.String)">getPeerInfoHandler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/PeerMonitorInfo.html?is-external=true" title="class or interface in net.jxta.meter">PeerMonitorInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getPeerMonitorInfo()">getPeerMonitorInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the monitoring capabilities of the Local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getPeerMonitorInfo(net.jxta.peer.PeerID, net.jxta.meter.PeerMonitorInfoListener, long)">getPeerMonitorInfo</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/PeerMonitorInfoListener.html?is-external=true" title="class or interface in net.jxta.meter">PeerMonitorInfoListener</A>&nbsp;peerMonitorInfoListener,
+                   long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the monitoring capabilities of a Remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#getSupportedReportRates()">getSupportedReportRates</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#isLocalMonitoringAvailable()">isLocalMonitoringAvailable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See if Local Monitoring is available on this Peer
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#isLocalMonitoringAvailable(net.jxta.platform.ModuleClassID)">isLocalMonitoringAvailable</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See if Local monitoring is available from a specific ServiceMonitor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#isSupportedReportRate(long)">isSupportedReportRate</A></B>(long&nbsp;reportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#removeMonitorListener(net.jxta.meter.MonitorListener)">removeMonitorListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters corresponding to this MonitorListener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#removeRemoteMonitorListener(net.jxta.meter.MonitorListener, long)">removeRemoteMonitorListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                            long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters to the all remote Peers corresponding to this MonitorListener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#removeRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorListener, long)">removeRemoteMonitorListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                            <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                            long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters to the specified Peer corresponding to this MonitorListener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complete any remaining initialization of the module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop a module.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="peerInfoServices"><!-- --></A><H3>
+peerInfoServices</H3>
+<PRE>
+static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A> <B>peerInfoServices</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PeerInfoServiceImpl()"><!-- --></A><H3>
+PeerInfoServiceImpl</H3>
+<PRE>
+public <B>PeerInfoServiceImpl</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)"><!-- --></A><H3>
+init</H3>
+<PRE>
+public void <B>init</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)
+          throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/PeerGroupException.html?is-external=true" title="class or interface in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Initialize the module, passing it its peer group and advertisement.
+
+ <p/>Note: when subclassing one of the existing PeerGroup implementations
+ (which implement Module), it may not be recommended to overload the init
+ method. See the documentation of the PeerGroup class being subclassed.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)" title="class or interface in net.jxta.platform">init</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - The PeerGroup from which this Module can obtain services.
+  If this module is a Service, this is also the PeerGroup of which this
+  module is a service.<DD><CODE>assignedID</CODE> - Identity of Module within group.
+  modules can use it as a the root of their namespace to create
+  names that are unique within the group but predictable by the
+  same module on another peer. This is normally the ModuleClassID
+  which is also the name under which the module is known by other
+  modules. For a group it is the PeerGroupID itself.
+  The parameters of a service, in the Peer configuration, are indexed
+  by the assignedID of that service, and a Service must publish its
+  run-time parameters in the Peer Advertisement under its assigned ID.<DD><CODE>impl</CODE> - The implementation advertisement for this
+  Module. It is permissible to pass null if no implementation
+  advertisement is available. This may happen if the
+  implementation was selected by explicit class name rather than
+  by following an implementation advertisement. Modules are not
+  required to support that style of loading, but if they do, then
+  their documentation should mention it.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/PeerGroupException.html?is-external=true" title="class or interface in net.jxta.exception">PeerGroupException</A></CODE> - This module failed to initialize.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+public int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</PRE>
+<DL>
+<DD>Complete any remaining initialization of the module. The module should
+ be fully functional after <code>startApp()</code> is completed. That is
+ also the opportunity to supply arbitrary arguments (mostly to
+ applications).
+
+ <p/>If this module is a <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> service, it may be invoked
+ several times depending on its return value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#startApp(java.lang.String[])" title="class or interface in net.jxta.platform">startApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>arg</CODE> - An array of Strings forming the parameters for this
+ Module.
+<DT><B>Returns:</B><DD>int A status indication which may be one of
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform"><CODE>Module.START_OK</CODE></A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_PROGRESS</CODE></A>,
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_STALLED</CODE></A>, which indicates partial or complete
+ success, or any other value (negative values are
+ recommended for future compatibility), which indicates failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+public void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Stop a module. This may be called any time after <code>init()</code>
+  completes and should not assume that <code>startApp()</code> has been
+  called or completed.
+
+  <p/>The Module cannot be forced to comply, but in the future
+  we might be able to deny it access to anything after some timeout.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#stopApp()" title="class or interface in net.jxta.platform">stopApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInterface()"><!-- --></A><H3>
+getInterface</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A> <B>getInterface</B>()</PRE>
+<DL>
+<DD>Service objects are not manipulated directly to protect usage
+ of the service. A Service interface is returned to access the service
+ methods.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getInterface()" title="class or interface in net.jxta.service">getInterface</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Service public interface of the service</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getImplAdvertisement()"><!-- --></A><H3>
+getImplAdvertisement</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A> <B>getImplAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns the advertisement for this service.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getImplAdvertisement()" title="class or interface in net.jxta.service">getImplAdvertisement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Advertisement the advertisement. This is always a 
+ <code>ModuleImplAdvertisement</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerInfoHandler(java.lang.String)"><!-- --></A><H3>
+getPeerInfoHandler</H3>
+<PRE>
+<A HREF="../../../../net/jxta/impl/peer/PeerInfoHandler.html" title="interface in net.jxta.impl.peer">PeerInfoHandler</A> <B>getPeerInfoHandler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNextQueryId()"><!-- --></A><H3>
+getNextQueryId</H3>
+<PRE>
+int <B>getNextQueryId</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getGroup()"><!-- --></A><H3>
+getGroup</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A> <B>getGroup</B>()</PRE>
+<DL>
+<DD>Returns the group to which this service is attached.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PeerGroup the group</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLocalMonitoringAvailable()"><!-- --></A><H3>
+isLocalMonitoringAvailable</H3>
+<PRE>
+public boolean <B>isLocalMonitoringAvailable</B>()</PRE>
+<DL>
+<DD>See if Local Monitoring is available on this Peer
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.  <p>
+ <p/>
+ See the document:
+ <UL>
+ <LI> <I> Building and Configuring JXTA with Monitoring Capabilities </I> </LI>
+ </UL>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#isLocalMonitoringAvailable()" title="class or interface in net.jxta.peer">isLocalMonitoringAvailable</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if local monitoring is available</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLocalMonitoringAvailable(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+isLocalMonitoringAvailable</H3>
+<PRE>
+public boolean <B>isLocalMonitoringAvailable</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</PRE>
+<DL>
+<DD>See if Local monitoring is available from a specific ServiceMonitor.
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.  <p>
+ <p/>
+ See the document:
+ <UL>
+ <LI> <I> Building and Configuring JXTA with Monitoring Capabilities </I> </LI>
+ </UL>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#isLocalMonitoringAvailable(net.jxta.platform.ModuleClassID)" title="class or interface in net.jxta.peer">isLocalMonitoringAvailable</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>moduleClassID</CODE> - The Module classID of the ServiceMonitor.  Note that the ServiceMonitor
+                      moduleClassID is not the same as moduleClassID of the Service
+                      being monitored.
+<DT><B>Returns:</B><DD>true if local monitoring is available for a specific module</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedReportRates()"><!-- --></A><H3>
+getSupportedReportRates</H3>
+<PRE>
+public long[] <B>getSupportedReportRates</B>()</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method returns the locally supported rates (in milliseconds)
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getSupportedReportRates()" title="class or interface in net.jxta.peer">getSupportedReportRates</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>all supported rates</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSupportedReportRate(long)"><!-- --></A><H3>
+isSupportedReportRate</H3>
+<PRE>
+public boolean <B>isSupportedReportRate</B>(long&nbsp;reportRate)</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method validates whether a specific
+ rate (in milliseconds) is locally supported.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#isSupportedReportRate(long)" title="class or interface in net.jxta.peer">isSupportedReportRate</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reportRate</CODE> - the report rate to check
+<DT><B>Returns:</B><DD>true if a report rate is supported</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBestReportRate(long)"><!-- --></A><H3>
+getBestReportRate</H3>
+<PRE>
+public long <B>getBestReportRate</B>(long&nbsp;desiredReportRate)</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method supplies the closest (rounded up)
+ rate (in milliseconds) to the specified rate that is locally supported.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getBestReportRate(long)" title="class or interface in net.jxta.peer">getBestReportRate</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>desiredReportRate</CODE> - the desired rate
+<DT><B>Returns:</B><DD>the desired rate</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerMonitorInfo()"><!-- --></A><H3>
+getPeerMonitorInfo</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/PeerMonitorInfo.html?is-external=true" title="class or interface in net.jxta.meter">PeerMonitorInfo</A> <B>getPeerMonitorInfo</B>()</PRE>
+<DL>
+<DD>Obtain the monitoring capabilities of the Local Peer. <P>
+ The PeerMonitorInfo provides:
+ <UL>
+ <LI> Whether any monitoring is available for this Peer </LI>
+ <LI> The supported rates of asynchronous monitoring </LI>
+ <LI> A list (as ModuleClassIDs) of ServiceMonitors attached to this Peer </LI>
+ </UL>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getPeerMonitorInfo()" title="class or interface in net.jxta.peer">getPeerMonitorInfo</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PeerMonitorInfo</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerMonitorInfo(net.jxta.peer.PeerID, net.jxta.meter.PeerMonitorInfoListener, long)"><!-- --></A><H3>
+getPeerMonitorInfo</H3>
+<PRE>
+public void <B>getPeerMonitorInfo</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                               <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/PeerMonitorInfoListener.html?is-external=true" title="class or interface in net.jxta.meter">PeerMonitorInfoListener</A>&nbsp;peerMonitorInfoListener,
+                               long&nbsp;timeout)
+                        throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Obtain the monitoring capabilities of a Remote Peer. <P>
+ The PeerMonitorInfo provides:
+ <UL>
+ <LI> Whether any monitoring is available for this Peer </LI>
+ <LI> The supported rates of asynchronous monitoring </LI>
+ <LI> A list (as ModuleClassIDs) of ServiceMonitors attached to this Peer </LI>
+ </UL>
+ <p/>
+ Via the PeerMonitorInfoListener, you will be informed of the PeerMonitorInfo or why it was
+ not provided (error, timeout, unavailable, etc)
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getPeerMonitorInfo(net.jxta.peer.PeerID, net.jxta.meter.PeerMonitorInfoListener, long)" title="class or interface in net.jxta.peer">getPeerMonitorInfo</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>peerMonitorInfoListener</CODE> - The Listener to be told about the obtained PeerMonitorInfo<DD><CODE>timeout</CODE> - Generate a timeout event if no answer has been received in this time (in Milliseconds)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCumulativeMonitorReport(net.jxta.meter.MonitorFilter)"><!-- --></A><H3>
+getCumulativeMonitorReport</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorReport.html?is-external=true" title="class or interface in net.jxta.meter">MonitorReport</A> <B>getCumulativeMonitorReport</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter)
+                                         throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the local Peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getCumulativeMonitorReport(net.jxta.meter.MonitorFilter)" title="class or interface in net.jxta.peer">getCumulativeMonitorReport</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired
+<DT><B>Returns:</B><DD>the report
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCumulativeMonitorReport(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+getCumulativeMonitorReport</H3>
+<PRE>
+public void <B>getCumulativeMonitorReport</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                                       <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                                       <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                       long&nbsp;timeout)
+                                throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the specified remote Peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#getCumulativeMonitorReport(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, net.jxta.meter.MonitorListener, long)" title="class or interface in net.jxta.peer">getCumulativeMonitorReport</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)<DD><CODE>timeout</CODE> - The timeout for reporting that the information has not arrived.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addMonitorListener(net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener)"><!-- --></A><H3>
+addMonitorListener</H3>
+<PRE>
+public long <B>addMonitorListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                               long&nbsp;reportRate,
+                               boolean&nbsp;includeCumulative,
+                               <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)
+                        throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the local Peer.  For many applications it is required to obtain metrics from
+ the beginning of time and then augment over time as more data arrives. <P>
+ <p/>
+ There is a problem with the following approach:
+ <OL>
+ <LI>   Call getCumulativeMonitorReport to get the cumulative totals </LI>
+ <LI>   Call addMonitorListener to get periodic changes </LI>
+ <LI>   Add the periodic data to the totals </LI>
+ </OL>
+ <p/>
+ Because of a potential race condition related to metrics that are measured between the two calls it is
+ possible to lose some metrics.  To address this, this method supports this by combining them into a single
+ call that allows you to specify whether you wish the first report delivered to be a cumulative report.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#addMonitorListener(net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener)" title="class or interface in net.jxta.peer">addMonitorListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>reportRate</CODE> - The rate at which you wish metric delta reports<DD><CODE>includeCumulative</CODE> - Should the first report you receive be the cumulative data since the ServiceMonitors were created/reset?<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)
+<DT><B>Returns:</B><DD>report rate
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener, long, long)"><!-- --></A><H3>
+addRemoteMonitorListener</H3>
+<PRE>
+public void <B>addRemoteMonitorListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                                     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorFilter.html?is-external=true" title="class or interface in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                                     long&nbsp;reportRate,
+                                     boolean&nbsp;includeCumulative,
+                                     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                     long&nbsp;lease,
+                                     long&nbsp;timeout)
+                              throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the specified remote Peer.  For many applications it is required to obtain metrics from
+ the beginning of time and then augment over time as more data arrives. <P>
+ <p/>
+ There is a problem with the following approach:
+ <OL>
+ <LI>   Call getCumulativeMonitorReport to get the cumulative totals </LI>
+ <LI>   Call addMonitorListener to get periodic changes </LI>
+ <LI>   Add the periodic data to the totals </LI>
+ </OL>
+ <p/>
+ Because of a potential race condition related to metrics that are measured between the two calls it is
+ possible to lose some metrics.  To address this, this method supports this by combining them into a single
+ call that allows you to specify whether you wish the first report delivered to be a cumulative report.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#addRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener, long, long)" title="class or interface in net.jxta.peer">addRemoteMonitorListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>reportRate</CODE> - The rate at which you wish metric delta reports<DD><CODE>includeCumulative</CODE> - Should the first report you receive be the cumulative data since the ServiceMonitors were created/reset?<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)<DD><CODE>lease</CODE> - the lease<DD><CODE>timeout</CODE> - The timeout for reporting that the information has not arrived.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeMonitorListener(net.jxta.meter.MonitorListener)"><!-- --></A><H3>
+removeMonitorListener</H3>
+<PRE>
+public boolean <B>removeMonitorListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)
+                              throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters corresponding to this MonitorListener
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#removeMonitorListener(net.jxta.meter.MonitorListener)" title="class or interface in net.jxta.peer">removeMonitorListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorListener</CODE> - the monitor listener
+<DT><B>Returns:</B><DD>true if successfully removed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+removeRemoteMonitorListener</H3>
+<PRE>
+public void <B>removeRemoteMonitorListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                                        <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                        long&nbsp;timeout)
+                                 throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters to the specified Peer corresponding to this MonitorListener.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#removeRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorListener, long)" title="class or interface in net.jxta.peer">removeRemoteMonitorListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The Peer that you wish to deregister periodic reporting<DD><CODE>monitorListener</CODE> - The MonitorListener that was originally registered<DD><CODE>timeout</CODE> - The timeout for reporting that the remote listener was acknowledged as deregistered
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeRemoteMonitorListener(net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+removeRemoteMonitorListener</H3>
+<PRE>
+public void <B>removeRemoteMonitorListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorListener.html?is-external=true" title="class or interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                        long&nbsp;timeout)
+                                 throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters to the all remote Peers corresponding to this MonitorListener.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true#removeRemoteMonitorListener(net.jxta.meter.MonitorListener, long)" title="class or interface in net.jxta.peer">removeRemoteMonitorListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerInfoService.html?is-external=true" title="class or interface in net.jxta.peer">PeerInfoService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorListener</CODE> - The MonitorListener that was originally registered<DD><CODE>timeout</CODE> - The timeout for reporting that the remote listener was acknowledged as deregistered
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/MonitorException.html?is-external=true" title="class or interface in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerInfoServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peer/PeerInfoMessenger.html" title="interface in net.jxta.impl.peer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peer/PeerInfoServiceImpl.PipQueryHandler.html" title="class in net.jxta.impl.peer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peer/PeerInfoServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerInfoServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

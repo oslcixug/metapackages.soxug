@@ -1,0 +1,1415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DiscoveryServiceImpl (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DiscoveryServiceImpl (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DiscoveryServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceInterface.html" title="class in net.jxta.impl.discovery"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/discovery/DiscoveryServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DiscoveryServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.discovery</FONT>
+<BR>
+Class DiscoveryServiceImpl</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.discovery.DiscoveryServiceImpl</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A>, <A HREF="../../../../net/jxta/impl/cm/Srdi.SrdiInterface.html" title="interface in net.jxta.impl.cm">Srdi.SrdiInterface</A>, <A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html" title="interface in net.jxta.impl.resolver">InternalQueryHandler</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/QueryHandler.html?is-external=true" title="class or interface in net.jxta.resolver">QueryHandler</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true" title="class or interface in net.jxta.resolver">SrdiHandler</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>DiscoveryServiceImpl</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A>, <A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html" title="interface in net.jxta.impl.resolver">InternalQueryHandler</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true" title="class or interface in net.jxta.resolver">SrdiHandler</A>, <A HREF="../../../../net/jxta/impl/cm/Srdi.SrdiInterface.html" title="interface in net.jxta.impl.cm">Srdi.SrdiInterface</A></DL>
+</PRE>
+
+<P>
+This Discovery Service implementation provides a mechanism to discover
+ Advertisements using the Resolver service and SRDI.
+ <p/>
+ <p/>This implementation uses the standard JXTA Peer Discovery Protocol
+ (PDP).
+ <p/>
+ <p/>The DiscoveryService service also provides a way to obtain information
+ from a specified peer and request other peer advertisements, this method is
+ particularly useful in the case of a portal where new relationships may be
+ established starting from a predetermined peer (perhaps described in address
+ book, or through an invitation).
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery"><CODE>DiscoveryService</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/DiscoveryQueryMsg.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>DiscoveryQueryMsg</CODE></A>, 
+<A HREF="../../../../net/jxta/impl/protocol/DiscoveryQuery.html" title="class in net.jxta.impl.protocol"><CODE>DiscoveryQuery</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/DiscoveryResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>DiscoveryResponseMsg</CODE></A>, 
+<A HREF="../../../../net/jxta/impl/protocol/DiscoveryResponse.html" title="class in net.jxta.impl.protocol"><CODE>DiscoveryResponse</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/ResolverService.html?is-external=true" title="class or interface in net.jxta.resolver"><CODE>ResolverService</CODE></A>, 
+<a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#proto-pdp" target="_blank">JXTA Protocols Specification : Peer Discovery Protocol</a></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/cm/Cm.html" title="class in net.jxta.impl.cm">Cm</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#cm">cm</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cache manager we're going to use to cache jxta advertisements</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#dirname">dirname</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adv types</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.discovery.DiscoveryService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.discovery.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#ADV" title="class or interface in net.jxta.discovery">ADV</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#DEFAULT_EXPIRATION" title="class or interface in net.jxta.discovery">DEFAULT_EXPIRATION</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#DEFAULT_LIFETIME" title="class or interface in net.jxta.discovery">DEFAULT_LIFETIME</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#GROUP" title="class or interface in net.jxta.discovery">GROUP</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#INFINITE_LIFETIME" title="class or interface in net.jxta.discovery">INFINITE_LIFETIME</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#NO_EXPIRATION" title="class or interface in net.jxta.discovery">NO_EXPIRATION</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#PEER" title="class or interface in net.jxta.discovery">PEER</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform">START_AGAIN_PROGRESS</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform">START_AGAIN_STALLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_DISABLED" title="class or interface in net.jxta.platform">START_DISABLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#DiscoveryServiceImpl()">DiscoveryServiceImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#addDiscoveryListener(net.jxta.discovery.DiscoveryListener)">addDiscoveryListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a Discovery listener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#flushAdvertisement(net.jxta.document.Advertisement)">flushAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified Advertisement from the cache of locally stored
+ Advertisements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#flushAdvertisements(java.lang.String, int)">flushAdvertisements</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                    int&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified Advertisement from the cache of locally stored
+ Advertisements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getAdvExpirationTime(net.jxta.document.Advertisement)">getAdvExpirationTime</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  will be cached by peers other than the publisher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getAdvExpirationTime(net.jxta.id.ID, int)">getAdvExpirationTime</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                     int&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  will be cached by peers other than the publisher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getAdvLifeTime(net.jxta.document.Advertisement)">getAdvLifeTime</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  should be kept in local cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getAdvLifeTime(net.jxta.id.ID, int)">getAdvLifeTime</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+               int&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  should be kept in local cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getImplAdvertisement()">getImplAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the advertisement for this service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getInterface()">getInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service objects are not manipulated directly to protect usage
+ of the service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getLocalAdvertisements(int, java.lang.String, java.lang.String)">getLocalAdvertisements</A></B>(int&nbsp;type,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve locally stored Advertisements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int)">getRemoteAdvertisements</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peer,
+                        int&nbsp;type,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+                        int&nbsp;threshold)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discover advertisements from remote peers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int, net.jxta.discovery.DiscoveryListener)">getRemoteAdvertisements</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peer,
+                        int&nbsp;type,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+                        int&nbsp;threshold,
+                        <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Discover advertisements from remote peers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;pg,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#messageSendFailed(net.jxta.peer.PeerID, net.jxta.endpoint.OutgoingMessageEvent)">messageSendFailed</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                  <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/OutgoingMessageEvent.html?is-external=true" title="class or interface in net.jxta.endpoint">OutgoingMessageEvent</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolver calls this method when a failure to send a message to specified 
+ peer occurs</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#processQuery(net.jxta.protocol.ResolverQueryMsg)">processQuery</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverQueryMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process the resolver query, and generate response
+ it is the responsibility of the handler to send the response
+
+ <p/>
+ result = processIncomingQuery(query);
+ if (result !</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#processQuery(net.jxta.protocol.ResolverQueryMsg, net.jxta.endpoint.EndpointAddress)">processQuery</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverQueryMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query,
+             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process the resolver query, and generate response
+ it is the responsibility of the handler to send the response
+
+ <p/>
+ result = processIncommingQuery(query);
+ if (result !</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#processResponse(net.jxta.protocol.ResolverResponseMsg)">processResponse</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when messages are received by the ResolverService
+ it calls back this method to deal with received responses</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#processResponse(net.jxta.protocol.ResolverResponseMsg, net.jxta.endpoint.EndpointAddress)">processResponse</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response,
+                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when messages are received by the ResolverService
+ it calls back this method to deal with received responses</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#processSrdi(net.jxta.protocol.ResolverSrdiMsg)">processSrdi</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverSrdiMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverSrdiMsg</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process the SrdiMessage message, returns true if the message was
+  processed properly</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#publish(net.jxta.document.Advertisement)">publish</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#publish(net.jxta.document.Advertisement, long, long)">publish</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+        long&nbsp;lifetime,
+        long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#pushEntries(boolean)">pushEntries</A></B>(boolean&nbsp;all)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pushe SRDI entries.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#pushSrdi(net.jxta.id.ID, int, boolean)">pushSrdi</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer,
+         int&nbsp;type,
+         boolean&nbsp;all)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;push srdi entries</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#remotePublish(net.jxta.document.Advertisement)">remotePublish</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement via propagation to other peers on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#remotePublish(net.jxta.document.Advertisement, long)">remotePublish</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+              long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement via propagation to other peers on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#remotePublish(java.lang.String, net.jxta.document.Advertisement)">remotePublish</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+              <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement to another peer on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#remotePublish(java.lang.String, net.jxta.document.Advertisement, long)">remotePublish</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+              <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+              long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement to another peer on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#removeDiscoveryListener(net.jxta.discovery.DiscoveryListener)">removeDiscoveryListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a Discovery listener which was previously registered with
+  <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int, net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery"><CODE>getRemoteAdvertisements()</CODE></A>
+  or <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#addDiscoveryListener(net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery"><CODE>addDiscoveryListener()</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)">rendezvousEvent</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousEvent.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when an event occurs for the Rendezvous service</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complete any remaining initialization of the module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceImpl.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop a module.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="dirname"><!-- --></A><H3>
+dirname</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>dirname</B></PRE>
+<DL>
+<DD>adv types
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cm"><!-- --></A><H3>
+cm</H3>
+<PRE>
+protected <A HREF="../../../../net/jxta/impl/cm/Cm.html" title="class in net.jxta.impl.cm">Cm</A> <B>cm</B></PRE>
+<DL>
+<DD>The cache manager we're going to use to cache jxta advertisements
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DiscoveryServiceImpl()"><!-- --></A><H3>
+DiscoveryServiceImpl</H3>
+<PRE>
+public <B>DiscoveryServiceImpl</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getInterface()"><!-- --></A><H3>
+getInterface</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A> <B>getInterface</B>()</PRE>
+<DL>
+<DD>Service objects are not manipulated directly to protect usage
+ of the service. A Service interface is returned to access the service
+ methods.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getInterface()" title="class or interface in net.jxta.service">getInterface</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Service public interface of the service</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getImplAdvertisement()"><!-- --></A><H3>
+getImplAdvertisement</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A> <B>getImplAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns the advertisement for this service.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getImplAdvertisement()" title="class or interface in net.jxta.service">getImplAdvertisement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Advertisement the advertisement. This is always a 
+ <code>ModuleImplAdvertisement</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int)"><!-- --></A><H3>
+getRemoteAdvertisements</H3>
+<PRE>
+public int <B>getRemoteAdvertisements</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peer,
+                                   int&nbsp;type,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+                                   int&nbsp;threshold)</PRE>
+<DL>
+<DD>Discover advertisements from remote peers. This does not normally 
+  provide an exhaustive search. Instead it provides a "best efforts" 
+  search which will provide a selection of advertisements of matching the 
+  search criteria. The selection of advertisements returned may be random 
+  or predictable depending upon the network configuration and no 
+  particular behaviour should be assumed. In general the narrower the
+  query specified the more exhaustive the responses will be. 
+ 
+  <p/>Discovery can be performed in two ways : <ul>
+      <li>With a <tt>null</tt> peerid - The discovery query is
+      propagated on via the Rendezvous Service and via local sub-net
+      utilizing IP multicast.</li>
+      <li>With a provided peerid - The discovery query is forwarded to the
+      specified peer.</li>
+  </ul>
+
+  <p/>The scope of advertisements returned can be narrowed by specifying
+  an <code>attribute</code> and <code>value</code> pair. The <code>attribute</code> is
+  a case-sensitive string matching the name of an Advertisement XML tag
+  who's values will be matched by the <code>value</code>.  Only a limited number
+  of Advertisement XML fields are indexed. <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true#getIndexFields()" title="class or interface in net.jxta.document"><CODE>Advertisement.getIndexFields()</CODE></A> will return the 
+  fields on which you may query for a particular Advertisement type. 
+ 
+  <p/>The <code>value</code> is a case-insensitive string who's value is
+  matched against the values of <code>attribute</code> fields of Advertisements.
+  The <code></code> value may be of several forms :
+  <ul>
+      <li><code>null</code> - Don't care. All advertisements with the matching
+      <code>attribute</code> will be returned.</li>
+      <li>exact value - Only advertisements with an <code>attribute</code>
+      field who's value exactly matches the string <code>value</code> will be
+      returned.</li>
+      <li>wild card - Only advertisements with an <code>attribute</code>
+      field who's value matches the wild card expression <code>value</code> 
+      will be returned. eg. The following expressions all match against
+      "FooBar":
+      <ul>
+          <li><code>foO*</code></li>
+          <li><code>*Bar</code></li>
+          <li><code>*oBA*</code></li>
+      </ul></li>
+  </ul>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int)" title="class or interface in net.jxta.discovery">getRemoteAdvertisements</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peer</CODE> - If provided the query will be forwarded to the specified
+      peer. If <code>null</code> then the query will be propagated through the
+      network to peers with matching Advertisements.<DD><CODE>type</CODE> - Discovery type; <tt>PEER</tt>, <tt>GROUP</tt> or <tt>ADV</tt>.<DD><CODE>attribute</CODE> - indexed element name (see advertisement(s) for a
+       list of indexed fields. A null attribute indicates any advertisement
+       of specified type<DD><CODE>value</CODE> - value of attribute to narrow discovery to. Valid values for
+      this parameter are null (don't care), Exact value, or use of wild
+      card(s) (e.g. if a Advertisement defines <Name>FooBar</name> , a value
+      of "*bar", "foo*", or "*ooB*", will return the Advertisement<DD><CODE>threshold</CODE> - The maximum number of matching advertisements which
+      be returned by each responding peer. A <code>threshold</code> of 0, and 
+      <code>type</code> of <code>PEER</code> has a special behaviour.
+<DT><B>Returns:</B><DD>query ID for this discovery query.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int, net.jxta.discovery.DiscoveryListener)"><!-- --></A><H3>
+getRemoteAdvertisements</H3>
+<PRE>
+public int <B>getRemoteAdvertisements</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peer,
+                                   int&nbsp;type,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+                                   int&nbsp;threshold,
+                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Discover advertisements from remote peers. This does not normally 
+  provide an exhaustive search. Instead it provides a "best efforts" 
+  search which will provide a selection of advertisements of matching the 
+  search criteria. The selection of advertisements returned may be random 
+  or predictable depending upon the network configuration and no 
+  particular behaviour should be assumed. In general the narrower the
+  query specified the more exhaustive the responses will be. 
+ 
+  <p/>Discovery can be performed in two ways : <ul>
+      <li>With a <code>null</code> peerid - The discovery query is
+      propagated on via the Rendezvous Service and via local sub-net
+      utilizing IP multicast.</li>
+      <li>With a provided peerid - The discovery query is forwarded to the
+      specified peer.</li>
+  </ul>
+
+  <p/>The scope of advertisements returned can be narrowed by specifying
+  an <code>attribute</code> and <code>value</code> pair. The <code>attribute</code> is
+  a case-sensitive string matching the name of an Advertisement XML tag
+  who's values will be matched by the <code>value</code>. Only a limited number
+  of Advertisement XML fields are indexed. <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true#getIndexFields()" title="class or interface in net.jxta.document"><CODE>Advertisement.getIndexFields()</CODE></A> will return the 
+  fields on which you may query for a particular Advertisement type. 
+ 
+  <p/>The <code>value</code> is a case-insensitive string who's value is
+  matched against the values of <code>attribute</code> fields of Advertisements.
+  The <code></code> value may be of several forms :
+  <ul>
+      <li><code>null</code> - Don't care. All advertisements with the matching
+      <code>attribute</code> will be returned.</li>
+      <li>exact value - Only advertisements with an <code>attribute</code>
+      field who's value exactly matches the string <code>value</code> will be
+      returned.</li>
+      <li>wild card - Only advertisements with an <code>attribute</code>
+      field who's value matches the wild card expression <code>value</code> 
+      will be returned. eg. The following expressions all match against
+      "FooBar":
+      <ul>
+          <li><code>fOo*</code></li>
+          <li><code>*bAr</code></li>
+          <li><code>*OBa*</code></li>
+      </ul></li>
+  </ul>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int, net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery">getRemoteAdvertisements</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peer</CODE> - If provided the query will be forwarded to the specified
+      peer. If <code>null</code> then the query will be propagated through the
+      network to peers with matching Advertisements.<DD><CODE>type</CODE> - Discovery type; <tt>PEER</tt>, <tt>GROUP</tt> or <tt>ADV</tt>.<DD><CODE>attribute</CODE> - indexed element name (see Advertisement(s) for a
+       list of indexed fields. A null attribute indicates any advertisement
+       of specified type<DD><CODE>value</CODE> - value of attribute to narrow discovery to. Valid values 
+      for this parameter or <code>null</code> (don't care), Exact value, or use
+      of wild card(s) (e.g. if a Advertisement defines <Name>FooBar</name>,
+      a value of "*bar", "foo*", or "*ooB*", will return the Advertisement<DD><CODE>threshold</CODE> - The maximum number of matching advertisements which
+      be returned by each responding peer. A <code>threshold</code> of 0, and 
+      <code>type</code> of <code>PEER</code> has a special behaviour.<DD><CODE>listener</CODE> - The listener which will be called when advertisement
+      which match this query are discovered or <code>null</code> if no 
+      callback is desired.
+<DT><B>Returns:</B><DD>query ID for this discovery query.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocalAdvertisements(int, java.lang.String, java.lang.String)"><!-- --></A><H3>
+getLocalAdvertisements</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&gt; <B>getLocalAdvertisements</B>(int&nbsp;type,
+                                                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                                                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)
+                                                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Retrieve locally stored Advertisements. This is an exhaustive search of
+  the locally cached results. All valid known matching results will be 
+  returned.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getLocalAdvertisements(int, java.lang.String, java.lang.String)" title="class or interface in net.jxta.discovery">getLocalAdvertisements</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - Discovery type; <tt>PEER</tt>, <tt>GROUP</tt> or <tt>ADV</tt>.<DD><CODE>attribute</CODE> - indexed element name (see Advertisement(s) for a
+       list of indexed fields. <code>null</code> indicates any advertisement
+       of specified type<DD><CODE>value</CODE> - value of attribute to narrow discovery to valid
+      values for this parameter are <code>null</code> (don't care), Exact 
+      value, or use of wild card(s) (e.g. if a Advertisement defines 
+      <Name>FooBar</name> , a value of "*bar", "foo*", or "*ooB*", will 
+      return the Advertisement
+<DT><B>Returns:</B><DD>Enumeration of stored advertisements.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - Thrown if an error occurs during retrieval.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)"><!-- --></A><H3>
+init</H3>
+<PRE>
+public void <B>init</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;pg,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)
+          throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/PeerGroupException.html?is-external=true" title="class or interface in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Initialize the module, passing it its peer group and advertisement.
+
+ <p/>Note: when subclassing one of the existing PeerGroup implementations
+ (which implement Module), it may not be recommended to overload the init
+ method. See the documentation of the PeerGroup class being subclassed.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)" title="class or interface in net.jxta.platform">init</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pg</CODE> - The PeerGroup from which this Module can obtain services.
+  If this module is a Service, this is also the PeerGroup of which this
+  module is a service.<DD><CODE>assignedID</CODE> - Identity of Module within group.
+  modules can use it as a the root of their namespace to create
+  names that are unique within the group but predictable by the
+  same module on another peer. This is normally the ModuleClassID
+  which is also the name under which the module is known by other
+  modules. For a group it is the PeerGroupID itself.
+  The parameters of a service, in the Peer configuration, are indexed
+  by the assignedID of that service, and a Service must publish its
+  run-time parameters in the Peer Advertisement under its assigned ID.<DD><CODE>impl</CODE> - The implementation advertisement for this
+  Module. It is permissible to pass null if no implementation
+  advertisement is available. This may happen if the
+  implementation was selected by explicit class name rather than
+  by following an implementation advertisement. Modules are not
+  required to support that style of loading, but if they do, then
+  their documentation should mention it.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/PeerGroupException.html?is-external=true" title="class or interface in net.jxta.exception">PeerGroupException</A></CODE> - This module failed to initialize.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+public int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</PRE>
+<DL>
+<DD>Complete any remaining initialization of the module. The module should
+ be fully functional after <code>startApp()</code> is completed. That is
+ also the opportunity to supply arbitrary arguments (mostly to
+ applications).
+
+ <p/>If this module is a <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> service, it may be invoked
+ several times depending on its return value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#startApp(java.lang.String[])" title="class or interface in net.jxta.platform">startApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>arg</CODE> - An array of Strings forming the parameters for this
+ Module.
+<DT><B>Returns:</B><DD>int A status indication which may be one of
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform"><CODE>Module.START_OK</CODE></A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_PROGRESS</CODE></A>,
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_STALLED</CODE></A>, which indicates partial or complete
+ success, or any other value (negative values are
+ recommended for future compatibility), which indicates failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+public void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Stop a module. This may be called any time after <code>init()</code>
+  completes and should not assume that <code>startApp()</code> has been
+  called or completed.
+
+  <p/>The Module cannot be forced to comply, but in the future
+  we might be able to deny it access to anything after some timeout.
+ <p/>
+ <p/>Detach from the resolver
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#stopApp()" title="class or interface in net.jxta.platform">stopApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="flushAdvertisements(java.lang.String, int)"><!-- --></A><H3>
+flushAdvertisements</H3>
+<PRE>
+public void <B>flushAdvertisements</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;id,
+                                int&nbsp;type)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes the specified Advertisement from the cache of locally stored
+ Advertisements.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#flushAdvertisements(java.lang.String, int)" title="class or interface in net.jxta.discovery">flushAdvertisements</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true#getID()" title="class or interface in net.jxta.document"><CODE>Advertisement.getID()</CODE></A> value of the
+      Advertisement to be removed.<DD><CODE>type</CODE> - Discovery type PEER, GROUP, ADV.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a problem removing the advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="flushAdvertisement(net.jxta.document.Advertisement)"><!-- --></A><H3>
+flushAdvertisement</H3>
+<PRE>
+public void <B>flushAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)
+                        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes the specified Advertisement from the cache of locally stored
+ Advertisements.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#flushAdvertisement(net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">flushAdvertisement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - Advertisement to remove.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a problem removing the advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="publish(net.jxta.document.Advertisement)"><!-- --></A><H3>
+publish</H3>
+<PRE>
+public void <B>publish</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Publish an Advertisement. The Advertisement will expire automatically 
+ on the local peer after <code>DEFAULT_LIFETIME</code> and will expire on
+ other peers after <code>DEFAULT_EXPIRATION</code>.
+
+ <p/>When an Advertisement is published, it is stored, and indexed in the 
+ peer's local cache. The Advertisement indexes are also shared with 
+ Rendezvous peers. Advertisement indexes may not be shared with other
+ peers immediately, but may be updated as part of a periodic process. The
+ Discovery Service currently publishes index updates every 30 seconds.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#publish(net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">publish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - The Advertisement to publish.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - When an error occurs during Advertisement publication.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="publish(net.jxta.document.Advertisement, long, long)"><!-- --></A><H3>
+publish</H3>
+<PRE>
+public void <B>publish</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+                    long&nbsp;lifetime,
+                    long&nbsp;expiration)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Publish an Advertisement. The Advertisement will expire automatically 
+ after the specified time. A peer that discovers this advertisement will 
+ hold it for about <tt>expiration</tt> or <tt>lifetime</tt> milliseconds, 
+ whichever is smaller.
+
+ <p/>When an Advertisement is published, it is stored, and indexed in the 
+ peer's local cache. The Advertisement indexes are also shared with 
+ Rendezvous peers. Advertisement indexes may not be shared with other
+ peers immediately, but may be updated as part of a periodic process. The
+ Discovery Service currently publishes index updates every 30 seconds.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#publish(net.jxta.document.Advertisement, long, long)" title="class or interface in net.jxta.discovery">publish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - The Advertisement to publish.<DD><CODE>lifetime</CODE> - Duration in relative milliseconds that this advertisement will exist.<DD><CODE>expiration</CODE> - Duration in relative milliseconds that this advertisement will be cached by other peers.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - When an error occurs during Advertisement publication.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="remotePublish(net.jxta.document.Advertisement)"><!-- --></A><H3>
+remotePublish</H3>
+<PRE>
+public void <B>remotePublish</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</PRE>
+<DL>
+<DD>Publish an Advertisement via propagation to other peers on the network.
+ This does not result in the advertisement being stored locally. The
+ Advertisement will be published with an expiration time of
+ <tt>DEFAULT_EXPIRATION</tt>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#remotePublish(net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">remotePublish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - Advertisement to publish.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="remotePublish(net.jxta.document.Advertisement, long)"><!-- --></A><H3>
+remotePublish</H3>
+<PRE>
+public void <B>remotePublish</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+                          long&nbsp;expiration)</PRE>
+<DL>
+<DD>Publish an Advertisement via propagation to other peers on the network.
+ This does not result in the advertisement being stored locally.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#remotePublish(net.jxta.document.Advertisement, long)" title="class or interface in net.jxta.discovery">remotePublish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - The Advertisement to publish.<DD><CODE>expiration</CODE> - Duration in relative milliseconds that this 
+      Advertisement will be cached by other peers.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="remotePublish(java.lang.String, net.jxta.document.Advertisement)"><!-- --></A><H3>
+remotePublish</H3>
+<PRE>
+public void <B>remotePublish</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+                          <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</PRE>
+<DL>
+<DD>Publish an Advertisement to another peer on the network.
+ This does not result in the advertisement being stored locally. The
+ Advertisement will be published with an expiration time of
+ <tt>DEFAULT_EXPIRATION</tt>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#remotePublish(java.lang.String, net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">remotePublish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerid</CODE> - The ID of a peer, specifying <tt>null</tt> results in  
+      propagation within the group.<DD><CODE>adv</CODE> - The Advertisement to publish.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processResponse(net.jxta.protocol.ResolverResponseMsg)"><!-- --></A><H3>
+processResponse</H3>
+<PRE>
+public void <B>processResponse</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response)</PRE>
+<DL>
+<DD>Called when messages are received by the ResolverService
+ it calls back this method to deal with received responses
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/QueryHandler.html?is-external=true#processResponse(net.jxta.protocol.ResolverResponseMsg)" title="class or interface in net.jxta.resolver">processResponse</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/QueryHandler.html?is-external=true" title="class or interface in net.jxta.resolver">QueryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>response</CODE> - ResolverQueryMsg response</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processResponse(net.jxta.protocol.ResolverResponseMsg, net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+processResponse</H3>
+<PRE>
+public void <B>processResponse</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response,
+                            <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddress)</PRE>
+<DL>
+<DD>Called when messages are received by the ResolverService
+ it calls back this method to deal with received responses
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html#processResponse(net.jxta.protocol.ResolverResponseMsg, net.jxta.endpoint.EndpointAddress)">processResponse</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html" title="interface in net.jxta.impl.resolver">InternalQueryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>response</CODE> - ResolverQueryMsg response<DD><CODE>srcAddress</CODE> - source address</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processQuery(net.jxta.protocol.ResolverQueryMsg)"><!-- --></A><H3>
+processQuery</H3>
+<PRE>
+public int <B>processQuery</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverQueryMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query)</PRE>
+<DL>
+<DD>Process the resolver query, and generate response
+ it is the responsibility of the handler to send the response
+
+ <p/><pre>
+ result = processIncomingQuery(query);
+ if (result != null) {
+   resolver.sendResponse(query.getSrc(), response);
+   return ResolverService.OK;
+  } else return ResolverService.Repropagate;
+ </pre>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/QueryHandler.html?is-external=true#processQuery(net.jxta.protocol.ResolverQueryMsg)" title="class or interface in net.jxta.resolver">processQuery</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/QueryHandler.html?is-external=true" title="class or interface in net.jxta.resolver">QueryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE> - ResolverQueryMsg query
+<DT><B>Returns:</B><DD>int status, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/ResolverService.html?is-external=true#OK" title="class or interface in net.jxta.resolver"><CODE>OK</CODE></A> 
+ success, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/ResolverService.html?is-external=true#Repropagate" title="class or interface in net.jxta.resolver"><CODE>Repropagate</CODE></A>
+ to indicate a re-propagation is needed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processQuery(net.jxta.protocol.ResolverQueryMsg, net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+processQuery</H3>
+<PRE>
+public int <B>processQuery</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverQueryMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query,
+                        <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;srcAddress)</PRE>
+<DL>
+<DD>Process the resolver query, and generate response
+ it is the responsibility of the handler to send the response
+
+ <p/><pre>
+ result = processIncommingQuery(query);
+ if (result != null) {
+   resolver.sendResponse(query.getSrc(), response);
+   return resolver.OK;
+  } else return resolver.Repropagate;
+ </pre>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html#processQuery(net.jxta.protocol.ResolverQueryMsg, net.jxta.endpoint.EndpointAddress)">processQuery</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/resolver/InternalQueryHandler.html" title="interface in net.jxta.impl.resolver">InternalQueryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE> - ResolverQueryMsg query<DD><CODE>srcAddress</CODE> - source address
+<DT><B>Returns:</B><DD>int status, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/ResolverService.html?is-external=true#OK" title="class or interface in net.jxta.resolver"><CODE>OK</CODE></A> success,
+  <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/ResolverService.html?is-external=true#Repropagate" title="class or interface in net.jxta.resolver"><CODE>Repropagate</CODE></A> to 
+ indicate a re-propagation is needed</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addDiscoveryListener(net.jxta.discovery.DiscoveryListener)"><!-- --></A><H3>
+addDiscoveryListener</H3>
+<PRE>
+public void <B>addDiscoveryListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Register a Discovery listener. The Discovery listener will be called 
+ whenever Advertisement responses are received from remote peers by the
+ Discovery Service.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#addDiscoveryListener(net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery">addDiscoveryListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the DiscoveryListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeDiscoveryListener(net.jxta.discovery.DiscoveryListener)"><!-- --></A><H3>
+removeDiscoveryListener</H3>
+<PRE>
+public boolean <B>removeDiscoveryListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryListener.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Remove a Discovery listener which was previously registered with
+  <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getRemoteAdvertisements(java.lang.String, int, java.lang.String, java.lang.String, int, net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery"><CODE>getRemoteAdvertisements()</CODE></A>
+  or <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#addDiscoveryListener(net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery"><CODE>addDiscoveryListener()</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#removeDiscoveryListener(net.jxta.discovery.DiscoveryListener)" title="class or interface in net.jxta.discovery">removeDiscoveryListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - The listener to be removed.
+<DT><B>Returns:</B><DD>true if the listener was successfully removed, false otherwise</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="remotePublish(java.lang.String, net.jxta.document.Advertisement, long)"><!-- --></A><H3>
+remotePublish</H3>
+<PRE>
+public void <B>remotePublish</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+                          <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv,
+                          long&nbsp;timeout)</PRE>
+<DL>
+<DD>Publish an Advertisement to another peer on the network. This does not 
+ result in the advertisement being stored locally.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#remotePublish(java.lang.String, net.jxta.document.Advertisement, long)" title="class or interface in net.jxta.discovery">remotePublish</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerid</CODE> - id of a peer, specifying null results in a propagate
+      within the group<DD><CODE>adv</CODE> - The Advertisement to publish.<DD><CODE>timeout</CODE> - Duration in relative milliseconds that this 
+      Advertisement will be cached by other peers.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdvExpirationTime(net.jxta.id.ID, int)"><!-- --></A><H3>
+getAdvExpirationTime</H3>
+<PRE>
+public long <B>getAdvExpirationTime</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                                 int&nbsp;type)</PRE>
+<DL>
+<DD>Returns the maximum duration in milliseconds for which this document
+  will be cached by peers other than the publisher. This value is either
+  the stored lifetime or the remaining lifetime of the document, whichever
+  is less.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getAdvExpirationTime(net.jxta.id.ID, int)" title="class or interface in net.jxta.discovery">getAdvExpirationTime</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - Document ID, Peer ID, or PeerGroup ID<DD><CODE>type</CODE> - Discovery type PEER, GROUP, ADV
+<DT><B>Returns:</B><DD>The number of milliseconds that other peers will be told to
+      retain this Advertisement in their local caches. -1 is returned if  
+      the Advertisement is not known or already expired.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdvLifeTime(net.jxta.id.ID, int)"><!-- --></A><H3>
+getAdvLifeTime</H3>
+<PRE>
+public long <B>getAdvLifeTime</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                           int&nbsp;type)</PRE>
+<DL>
+<DD>Returns the maximum duration in milliseconds for which this document
+  should be kept in local cache.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getAdvLifeTime(net.jxta.id.ID, int)" title="class or interface in net.jxta.discovery">getAdvLifeTime</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - Document ID, Peer ID, or PeerGroup ID<DD><CODE>type</CODE> - Discovery type PEER, GROUP, ADV
+<DT><B>Returns:</B><DD>The number of milliseconds this Advertisement will remain in the
+      local cache unless refreshed before that time. -1 is returned if the 
+      Advertisement is not known or already expired.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdvExpirationTime(net.jxta.document.Advertisement)"><!-- --></A><H3>
+getAdvExpirationTime</H3>
+<PRE>
+public long <B>getAdvExpirationTime</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</PRE>
+<DL>
+<DD>Returns the maximum duration in milliseconds for which this document
+  will be cached by peers other than the publisher. This value is either
+  the stored lifetime or the remaining lifetime of the document, whichever
+  is less.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getAdvExpirationTime(net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">getAdvExpirationTime</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - Advertisement
+<DT><B>Returns:</B><DD>The number of milliseconds that other peers will be told to
+      retain this Advertisement in their local caches. -1 is returned if  
+      the Advertisement is not known or already expired.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdvLifeTime(net.jxta.document.Advertisement)"><!-- --></A><H3>
+getAdvLifeTime</H3>
+<PRE>
+public long <B>getAdvLifeTime</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;adv)</PRE>
+<DL>
+<DD>Returns the maximum duration in milliseconds for which this document
+  should be kept in local cache.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true#getAdvLifeTime(net.jxta.document.Advertisement)" title="class or interface in net.jxta.discovery">getAdvLifeTime</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/discovery/DiscoveryService.html?is-external=true" title="class or interface in net.jxta.discovery">DiscoveryService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - Advertisement
+<DT><B>Returns:</B><DD>The number of milliseconds this Advertisement will remain in the
+      local cache unless refreshed before that time. -1 is returned if the 
+      Advertisement is not known or already expired.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processSrdi(net.jxta.protocol.ResolverSrdiMsg)"><!-- --></A><H3>
+processSrdi</H3>
+<PRE>
+public boolean <B>processSrdi</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverSrdiMsg.html?is-external=true" title="class or interface in net.jxta.protocol">ResolverSrdiMsg</A>&nbsp;message)</PRE>
+<DL>
+<DD>Process the SrdiMessage message, returns true if the message was
+  processed properly
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true#processSrdi(net.jxta.protocol.ResolverSrdiMsg)" title="class or interface in net.jxta.resolver">processSrdi</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true" title="class or interface in net.jxta.resolver">SrdiHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - Description of the Parameter
+<DT><B>Returns:</B><DD>true if the message was processed properly</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="messageSendFailed(net.jxta.peer.PeerID, net.jxta.endpoint.OutgoingMessageEvent)"><!-- --></A><H3>
+messageSendFailed</H3>
+<PRE>
+public void <B>messageSendFailed</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                              <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/OutgoingMessageEvent.html?is-external=true" title="class or interface in net.jxta.endpoint">OutgoingMessageEvent</A>&nbsp;e)</PRE>
+<DL>
+<DD>Resolver calls this method when a failure to send a message to specified 
+ peer occurs
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true#messageSendFailed(net.jxta.peer.PeerID, net.jxta.endpoint.OutgoingMessageEvent)" title="class or interface in net.jxta.resolver">messageSendFailed</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/resolver/SrdiHandler.html?is-external=true" title="class or interface in net.jxta.resolver">SrdiHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerid</CODE> - peerid failure occured on</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pushEntries(boolean)"><!-- --></A><H3>
+pushEntries</H3>
+<PRE>
+public void <B>pushEntries</B>(boolean&nbsp;all)</PRE>
+<DL>
+<DD>Pushe SRDI entries.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/cm/Srdi.SrdiInterface.html#pushEntries(boolean)">pushEntries</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/cm/Srdi.SrdiInterface.html" title="interface in net.jxta.impl.cm">Srdi.SrdiInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>all</CODE> - if true then push all entries otherwise just push
+            those which have changed since the last push.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pushSrdi(net.jxta.id.ID, int, boolean)"><!-- --></A><H3>
+pushSrdi</H3>
+<PRE>
+protected void <B>pushSrdi</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer,
+                        int&nbsp;type,
+                        boolean&nbsp;all)</PRE>
+<DL>
+<DD>push srdi entries
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>all</CODE> - if true push all entries, otherwise just deltas<DD><CODE>peer</CODE> - peer id<DD><CODE>type</CODE> - if true sends all entries</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)"><!-- --></A><H3>
+rendezvousEvent</H3>
+<PRE>
+public void <B>rendezvousEvent</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousEvent.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called when an event occurs for the Rendezvous service
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)" title="class or interface in net.jxta.rendezvous">rendezvousEvent</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezvousListener.html?is-external=true" title="class or interface in net.jxta.rendezvous">RendezvousListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - the rendezvous event</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DiscoveryServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/discovery/DiscoveryServiceInterface.html" title="class in net.jxta.impl.discovery"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/discovery/DiscoveryServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DiscoveryServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

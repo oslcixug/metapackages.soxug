@@ -1,0 +1,25 @@
+<!--
+ ! 
+ ! Copyright 2005, Sun Microsystems, Inc.
+ ! Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">
+ ! Apache License, Version 2.0</a>.
+ ! 
+ !-->
+
+<HTML>
+<BODY BGCOLOR="white">
+
+These are distributed leasing interfaces and classes.  A <CODE>Lease</CODE> represents
+an agreement between lease holder and lease grantor over how long the grantor
+will keep a resource available.  The grantor pledges to keep the resource
+available for at least as long as the remaining time of the lease.  The
+holder typically requests a lease for a given time frame, and the grantor
+returns a <CODE>Lease</CODE> object that represents the pledge it is actually
+willing to make (which may be different from the requested time).  The
+grantor may allow the holder to renew the lease, thereby extending the pledge
+to a later time.
+
+@see "<i>Jini(TM) Distributed Leasing Specification</i>"
+
+</BODY>
+</HTML>

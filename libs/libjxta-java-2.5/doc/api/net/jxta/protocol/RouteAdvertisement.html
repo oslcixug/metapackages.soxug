@@ -1,0 +1,1340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RouteAdvertisement (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RouteAdvertisement (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RouteAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/ResolverSrdiMsg.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/RouteQueryMsg.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/RouteAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RouteAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.protocol</FONT>
+<BR>
+Class RouteAdvertisement</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">net.jxta.document.Advertisement</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">net.jxta.document.ExtendableAdvertisement</A>
+          <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.protocol.RouteAdvertisement</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>RouteAdvertisement</B><DT>extends <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A><DT>implements <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DL>
+</PRE>
+
+<P>
+Advertisement used to represent a route to a peer. Routes are represented in
+ a generic manner as a sequence of hops to reach the destination. Each hop
+ represent a potential relay peer in the route:
+ <p/>
+ <pre> Dest
+       hop 1
+       hop 2
+       hop 3
+       ....
+       hop n
+ </pre>
+ <p/>
+ A route can have as many hops as necessary. Hops are implicitly ordered
+ starting from the hop with the shortest route to reach the destination. If a
+ peer cannot reach directly the dest, it should try to reach in descending
+ order one of the listed hops. Some hops may have the same physical distance
+ to the destination. Some hops may define alternative routes.
+ <p/>
+ The destination and hops are defined using a AccessPointAdvertisements.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol"><CODE>PeerAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol"><CODE>AccessPointAdvertisement</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#DEST_PID_TAG">DEST_PID_TAG</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#RouteAdvertisement()">RouteAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#addDestEndpointAddress(net.jxta.endpoint.EndpointAddress)">addDestEndpointAddress</A></B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add the specified endpoint address to destination peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#addDestEndpointAddresses(java.util.List)">addDestEndpointAddresses</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt;&nbsp;addrs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add all of the specified endpoint addresses to destination peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#addDestEndpointAddresses(java.util.Vector)">addDestEndpointAddresses</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;addresses)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <CODE>#addDestEndpointAddresses(List<EndpointAddress>)</CODE> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#cleanupLoop(net.jxta.protocol.RouteAdvertisement, net.jxta.peer.PeerID)">cleanupLoop</A></B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;route,
+            <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;localPeer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove loops from the route advertisement
+ by shortcutting cycle from the route</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#clearDestEndpointAddresses()">clearDestEndpointAddresses</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears all endpoint addresses associated with the destination peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#cloneOnlyPIDs()">cloneOnlyPIDs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makes a copy of a route advertisement
+ that only contains PID not endpoint addresses</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#containsHop(net.jxta.peer.PeerID)">containsHop</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if the route contains the following hop</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#display()">display</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate a string that displays the route
+ information for logging or debugging purpose</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#equals(java.lang.Object)">equals</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;target)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compare if two routes are equals.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getAdvertisementType()">getAdvertisementType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the identifying type of this Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the base type of this advertisement hierarchy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getDest()">getDest</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Because this method unsafely exposes destination AccessPointAdvertisement it will be removed.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getDestEndpointAddresses()">getDestEndpointAddresses</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the endpoint addresses of the destination peer in their
+ preferred order.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getDestPeerID()">getDestPeerID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the route destination Peer ID</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getFirstHop()">getFirstHop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the AccessPointAdvertisement of first hop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getHop(net.jxta.peer.PeerID)">getHop</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return a hop from the list of hops.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getHops()">getHops</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the list of hops</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getID()">getID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an ID which identifies this <code>Advertisement</code> as uniquely as 
+  possible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getLastHop()">getLastHop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the access point for the last hop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#getVectorHops()">getVectorHops</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the list of hops</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#hasALoop()">hasALoop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;check if the route has a loop</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#hashCode()">hashCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#newRoute(net.jxta.peer.PeerID, net.jxta.peer.PeerID, java.util.Vector)">newRoute</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;destPid,
+         <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;firsthop,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;hops)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;construct a new route
+ <p/>
+ <b>WARNING hops may be MODIFIED.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#nextHop(net.jxta.peer.PeerID)">nextHop</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;currentHop)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the hop that follows the specified currentHop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeDestEndpointAddress(net.jxta.endpoint.EndpointAddress)">removeDestEndpointAddress</A></B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove the specified endpoint address to destination peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeDestEndpointAddresses(java.util.Collection)">removeDestEndpointAddresses</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt;&nbsp;addrs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove the specified endpoint addresses from destination peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeDestEndpointAddresses(java.util.Vector)">removeDestEndpointAddresses</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;addresses)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeDestEndpointAddresses(java.util.Collection)"><CODE>removeDestEndpointAddresses(Collection)</CODE></A>.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeHop(net.jxta.peer.PeerID)">removeHop</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a hop from the list of hops.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setDest(net.jxta.protocol.AccessPointAdvertisement)">setDest</A></B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the access point of the destination.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setDestEndpointAddresses(java.util.Vector)">setDestEndpointAddresses</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;ea)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#addDestEndpointAddress(net.jxta.endpoint.EndpointAddress)"><CODE>addDestEndpointAddress(EndpointAddress)</CODE></A> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setDestPeerID(net.jxta.peer.PeerID)">setDestPeerID</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the route destination peer id.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setFirstHop(net.jxta.protocol.AccessPointAdvertisement)">setFirstHop</A></B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the AccessPointAdvertisement for the first hop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setHops(java.util.Vector)">setHops</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;newHops)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the list of hops associated with this route.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#setLastHop(net.jxta.protocol.AccessPointAdvertisement)">setLastHop</A></B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the AccessPointAdvertisement of the last hop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#size()">size</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return the length of the route</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#stichRoute(net.jxta.protocol.RouteAdvertisement, net.jxta.protocol.RouteAdvertisement)">stichRoute</A></B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;newRoute,
+           <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;firstLeg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alter the given newRoute (which does not start from here) by using firstLeg, a known route to whence
+ it starts from.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#stichRoute(net.jxta.protocol.RouteAdvertisement, net.jxta.protocol.RouteAdvertisement, net.jxta.peer.PeerID)">stichRoute</A></B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;newRoute,
+           <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;firstLeg,
+           <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;localPeer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alter the given newRoute (which does not start from here) by using firstLeg, a known route to whence
+ it starts from.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.ExtendableAdvertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleAttribute(net.jxta.document.Attribute)">handleAttribute</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleElement(net.jxta.document.Element)">handleElement</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.Advertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getAdvType()">getAdvType</A>, <A HREF="../../../net/jxta/document/Advertisement.html#getIndexFields()">getIndexFields</A>, <A HREF="../../../net/jxta/document/Advertisement.html#toString()">toString</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DEST_PID_TAG"><!-- --></A><H3>
+DEST_PID_TAG</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>DEST_PID_TAG</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.protocol.RouteAdvertisement.DEST_PID_TAG">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RouteAdvertisement()"><!-- --></A><H3>
+RouteAdvertisement</H3>
+<PRE>
+public <B>RouteAdvertisement</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="newRoute(net.jxta.peer.PeerID, net.jxta.peer.PeerID, java.util.Vector)"><!-- --></A><H3>
+newRoute</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A> <B>newRoute</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;destPid,
+                                          <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;firsthop,
+                                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;hops)</PRE>
+<DL>
+<DD>construct a new route
+ <p/>
+ <b>WARNING hops may be MODIFIED.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>destPid</CODE> - destination<DD><CODE>firsthop</CODE> - first hop node ID<DD><CODE>hops</CODE> - routes
+<DT><B>Returns:</B><DD>the new route</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clone()"><!-- --></A><H3>
+clone</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A> <B>clone</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#clone()">clone</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cloneOnlyPIDs()"><!-- --></A><H3>
+cloneOnlyPIDs</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A> <B>cloneOnlyPIDs</B>()</PRE>
+<DL>
+<DD>makes a copy of a route advertisement
+ that only contains PID not endpoint addresses
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>object clone route advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="equals(java.lang.Object)"><!-- --></A><H3>
+equals</H3>
+<PRE>
+public boolean <B>equals</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;target)</PRE>
+<DL>
+<DD>Compare if two routes are equals. Equals means same destination with the
+ same endpoint addresses and thee same number of hops and the same
+ endpoint addresses for each hop.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>target</CODE> - the route to compare against
+<DT><B>Returns:</B><DD>boolean true if the route is equal to this route otherwise false</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hashCode()"><!-- --></A><H3>
+hashCode</H3>
+<PRE>
+public int <B>hashCode</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAdvertisementType()"><!-- --></A><H3>
+getAdvertisementType</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getAdvertisementType</B>()</PRE>
+<DL>
+<DD>Returns the identifying type of this Advertisement.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the type of advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBaseAdvType()"><!-- --></A><H3>
+getBaseAdvType</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getBaseAdvType</B>()</PRE>
+<DL>
+<DD>Returns the base type of this advertisement hierarchy. Typically, only
+ the most basic advertisement of a type will implement this method and
+ declare it as <code>final</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the base type of advertisements in this hierarchy.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getID()"><!-- --></A><H3>
+getID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>getID</B>()</PRE>
+<DL>
+<DD>Returns an ID which identifies this <code>Advertisement</code> as uniquely as 
+  possible. This ID is typically used as the primary key for indexing of
+  the Advertisement within databases. 
+  <p/>
+  Each advertisement sub-class must choose an appropriate implementation
+  which returns canonical and relatively unique ID values for it's
+  instances. Since this ID is commonly used for indexing, the IDs returned
+  must be as unique as possible to avoid collisions. The value for the ID 
+  returned can either be:
+  <p/>
+  <ul>
+      <li>An ID which is already part of the advertisement definition
+      and is relatively unique between advertisements instances. For
+      example, the Peer Advertisement returns the Peer ID.</li>
+
+      <li>A static CodatID which is generated via some canonical process
+      which will produce the same value each time and different values for
+      different advertisements of the same type.</li>
+
+      <li>ID.nullID for advertisement types which are not readily indexed.
+      </li>
+  </ul>
+  <p/>
+  For Advertisement types which normally return non-ID.nullID values
+  no ID should be returned when asked to generate an ID while the
+  Advertisement is an inconsistent state (example: uninitialized index
+  fields). Instead <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang"><CODE>IllegalStateException</CODE></A> should be
+  thrown.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getID()">getID</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An ID that relatively uniquely identifies this advertisement 
+  or <code>ID.nullID</code> if this advertisement is of a type that is not 
+  normally indexed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDestPeerID()"><!-- --></A><H3>
+getDestPeerID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>getDestPeerID</B>()</PRE>
+<DL>
+<DD>Returns the route destination Peer ID
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>peerID of the destination of the route</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDestPeerID(net.jxta.peer.PeerID)"><!-- --></A><H3>
+setDestPeerID</H3>
+<PRE>
+public void <B>setDestPeerID</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</PRE>
+<DL>
+<DD>Sets the route destination peer id.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - route destination peerID</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDest()"><!-- --></A><H3>
+getDest</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public <A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A> <B>getDest</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Because this method unsafely exposes destination AccessPointAdvertisement it will be removed.</I>
+<P>
+<DD>Returns the destination access point. <b>This does <i>NOT</i> copy
+ the AccessPointAdvertisement</b>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>AccessPointAdvertisement of the destination peer.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDest(net.jxta.protocol.AccessPointAdvertisement)"><!-- --></A><H3>
+setDest</H3>
+<PRE>
+public void <B>setDest</B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</PRE>
+<DL>
+<DD>Sets the access point of the destination. <b>This does <i>NOT</i> copy
+ the AccessPointAdvertisement</b>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ap</CODE> - AccessPointAdvertisement of the destination peer</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addDestEndpointAddresses(java.util.Vector)"><!-- --></A><H3>
+addDestEndpointAddresses</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>addDestEndpointAddresses</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;addresses)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <CODE>#addDestEndpointAddresses(List<EndpointAddress>)</CODE> instead.</I>
+<P>
+<DD>Add a new list of EndpointAddresses to the Route Destination access
+ point
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addresses</CODE> - vector of endpoint addresses to add to the
+                  destination access point. Warning: The vector of endpoint addresses
+                  is specified as a vector of String. Each string representing
+                  one endpoint address.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearDestEndpointAddresses()"><!-- --></A><H3>
+clearDestEndpointAddresses</H3>
+<PRE>
+public void <B>clearDestEndpointAddresses</B>()</PRE>
+<DL>
+<DD>Clears all endpoint addresses associated with the destination peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addDestEndpointAddress(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+addDestEndpointAddress</H3>
+<PRE>
+public void <B>addDestEndpointAddress</B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr)</PRE>
+<DL>
+<DD>Add the specified endpoint address to destination peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - EndpointAddress to add.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addDestEndpointAddresses(java.util.List)"><!-- --></A><H3>
+addDestEndpointAddresses</H3>
+<PRE>
+public void <B>addDestEndpointAddresses</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt;&nbsp;addrs)</PRE>
+<DL>
+<DD>Add all of the specified endpoint addresses to destination peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addrs</CODE> - EndpointAddresses to add.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeDestEndpointAddress(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+removeDestEndpointAddress</H3>
+<PRE>
+public void <B>removeDestEndpointAddress</B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr)</PRE>
+<DL>
+<DD>Remove the specified endpoint address to destination peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - EndpointAddress to add.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeDestEndpointAddresses(java.util.Collection)"><!-- --></A><H3>
+removeDestEndpointAddresses</H3>
+<PRE>
+public void <B>removeDestEndpointAddresses</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt;&nbsp;addrs)</PRE>
+<DL>
+<DD>Remove the specified endpoint addresses from destination peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addrs</CODE> - EndpointAddress to add.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeDestEndpointAddresses(java.util.Vector)"><!-- --></A><H3>
+removeDestEndpointAddresses</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>removeDestEndpointAddresses</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;addresses)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#removeDestEndpointAddresses(java.util.Collection)"><CODE>removeDestEndpointAddresses(Collection)</CODE></A>.</I>
+<P>
+<DD>Remove a list of EndpointAddresses from the Route Destination
+ access point
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addresses</CODE> - vector of endpoint addresses to remove from the
+                  destination access point.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDestEndpointAddresses()"><!-- --></A><H3>
+getDestEndpointAddresses</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&gt; <B>getDestEndpointAddresses</B>()</PRE>
+<DL>
+<DD>Returns the endpoint addresses of the destination peer in their
+ preferred order.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The <code>EndpointAddress</code>es of the destination peer.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDestEndpointAddresses(java.util.Vector)"><!-- --></A><H3>
+setDestEndpointAddresses</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setDestEndpointAddresses</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;ea)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html#addDestEndpointAddress(net.jxta.endpoint.EndpointAddress)"><CODE>addDestEndpointAddress(EndpointAddress)</CODE></A> instead.</I>
+<P>
+<DD>Set the route destination endpoint addresses
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ea</CODE> - vector of endpoint addresses. Warning: The vector is not copied
+           and is used directly.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHops()"><!-- --></A><H3>
+getHops</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt; <B>getHops</B>()</PRE>
+<DL>
+<DD>returns the list of hops
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Enumeration list of hops as AccessPointAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVectorHops()"><!-- --></A><H3>
+getVectorHops</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt; <B>getVectorHops</B>()</PRE>
+<DL>
+<DD>returns the list of hops
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Vector list of hops as AccessPointAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHops(java.util.Vector)"><!-- --></A><H3>
+setHops</H3>
+<PRE>
+public void <B>setHops</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&gt;&nbsp;newHops)</PRE>
+<DL>
+<DD>Sets the list of hops associated with this route.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newHops</CODE> - AccessPointAdvertisements which form the hops. The
+                Vector is <b>NOT</b> copied.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="containsHop(net.jxta.peer.PeerID)"><!-- --></A><H3>
+containsHop</H3>
+<PRE>
+public boolean <B>containsHop</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</PRE>
+<DL>
+<DD>Check if the route contains the following hop
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - peer id of the hop
+<DT><B>Returns:</B><DD>boolean true or false if the hop is found in the route</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFirstHop()"><!-- --></A><H3>
+getFirstHop</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A> <B>getFirstHop</B>()</PRE>
+<DL>
+<DD>Returns the AccessPointAdvertisement of first hop. <b>The
+ AccessPointAdvertisement is <i>not</i> cloned.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>AccessPointAdvertisement of first hop.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFirstHop(net.jxta.protocol.AccessPointAdvertisement)"><!-- --></A><H3>
+setFirstHop</H3>
+<PRE>
+public void <B>setFirstHop</B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</PRE>
+<DL>
+<DD>Sets the AccessPointAdvertisement for the first hop. <b>The
+ AccessPointAdvertisement is <i>not</i> cloned.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ap</CODE> - AccessPointAdvertisement of the first hop.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLastHop()"><!-- --></A><H3>
+getLastHop</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A> <B>getLastHop</B>()</PRE>
+<DL>
+<DD>Returns the access point for the last hop. <b>The
+ AccessPointAdvertisement is <i>not</i> cloned.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>AccessPointAdvertisement last hop.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setLastHop(net.jxta.protocol.AccessPointAdvertisement)"><!-- --></A><H3>
+setLastHop</H3>
+<PRE>
+public void <B>setLastHop</B>(<A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A>&nbsp;ap)</PRE>
+<DL>
+<DD>Sets the AccessPointAdvertisement of the last hop. <b>The
+ AccessPointAdvertisement is <i>not</i> cloned.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ap</CODE> - AccessPointAdvertisement of the last hop.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hasALoop()"><!-- --></A><H3>
+hasALoop</H3>
+<PRE>
+public boolean <B>hasALoop</B>()</PRE>
+<DL>
+<DD>check if the route has a loop
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean true or false if the route has a loop</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="size()"><!-- --></A><H3>
+size</H3>
+<PRE>
+public int <B>size</B>()</PRE>
+<DL>
+<DD>return the length of the route
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>int size of the route</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="nextHop(net.jxta.peer.PeerID)"><!-- --></A><H3>
+nextHop</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A> <B>nextHop</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;currentHop)</PRE>
+<DL>
+<DD>Return the hop that follows the specified currentHop. <b>The
+ AccessPointAdvertisement is <i>not</i> cloned.</b>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>currentHop</CODE> - PeerID of the current hop
+<DT><B>Returns:</B><DD>ap AccessPointAdvertisement of the next Hop</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="display()"><!-- --></A><H3>
+display</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>display</B>()</PRE>
+<DL>
+<DD>Generate a string that displays the route
+ information for logging or debugging purpose
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String return a string containing the route info</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeHop(net.jxta.peer.PeerID)"><!-- --></A><H3>
+removeHop</H3>
+<PRE>
+public boolean <B>removeHop</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</PRE>
+<DL>
+<DD>Remove a hop from the list of hops.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - peer id of the hop
+<DT><B>Returns:</B><DD>boolean true or false if the hop is found in the route</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHop(net.jxta.peer.PeerID)"><!-- --></A><H3>
+getHop</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A> <B>getHop</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;pid)</PRE>
+<DL>
+<DD>Return a hop from the list of hops.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pid</CODE> - peer id of the hop
+<DT><B>Returns:</B><DD>AccessPointAdvertisement of the corresponding hop</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stichRoute(net.jxta.protocol.RouteAdvertisement, net.jxta.protocol.RouteAdvertisement)"><!-- --></A><H3>
+stichRoute</H3>
+<PRE>
+public static boolean <B>stichRoute</B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;newRoute,
+                                 <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;firstLeg)</PRE>
+<DL>
+<DD>Alter the given newRoute (which does not start from here) by using firstLeg, a known route to whence
+ it starts from. So that the complete route goes from here to the end-destination via firstLeg.
+ public static boolean stichRoute(RouteAdvertisement newRoute,
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newRoute</CODE> - the new route<DD><CODE>firstLeg</CODE> - the first route
+<DT><B>Returns:</B><DD>true if successful</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stichRoute(net.jxta.protocol.RouteAdvertisement, net.jxta.protocol.RouteAdvertisement, net.jxta.peer.PeerID)"><!-- --></A><H3>
+stichRoute</H3>
+<PRE>
+public static boolean <B>stichRoute</B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;newRoute,
+                                 <A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;firstLeg,
+                                 <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;localPeer)</PRE>
+<DL>
+<DD>Alter the given newRoute (which does not start from here) by using firstLeg, a known route to whence
+ it starts from. So that the complete route goes from here to the end-destination via firstLeg
+ also shortcut the route by removing the local peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newRoute</CODE> - the new route<DD><CODE>firstLeg</CODE> - first hop<DD><CODE>localPeer</CODE> - local PeerID
+<DT><B>Returns:</B><DD>true if successful</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cleanupLoop(net.jxta.protocol.RouteAdvertisement, net.jxta.peer.PeerID)"><!-- --></A><H3>
+cleanupLoop</H3>
+<PRE>
+public static void <B>cleanupLoop</B>(<A HREF="../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A>&nbsp;route,
+                               <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;localPeer)</PRE>
+<DL>
+<DD>Remove loops from the route advertisement
+ by shortcutting cycle from the route
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>route</CODE> - the route advertisement<DD><CODE>localPeer</CODE> - local PeerID</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RouteAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/ResolverSrdiMsg.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/RouteQueryMsg.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/RouteAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RouteAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

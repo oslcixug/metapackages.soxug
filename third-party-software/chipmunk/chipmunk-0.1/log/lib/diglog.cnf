@@ -1,0 +1,11 @@
+{ For Digital LOG users }
+
+include genlog.cnf     { General-purpose stuff }
+
+get     time to from vdd gnd cross2 sw2
+get     and or nand nor inv
+get     clock switch pulse led keypad 7seg
+get     inst* digh
+
+menu    switch led and or nand nor inv
+

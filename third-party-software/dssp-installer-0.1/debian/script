@@ -1,0 +1,8 @@
+echo -n "Downloading Dssp from the original website... "
+curl "http://swift.cmbi.kun.nl/gv/dssp/HTML/dsspcmbi" > dssp 2>/dev/null;
+if [ $!=="1" ]; then
+      echo "Done";
+else
+	echo "Failed!";
+	exit 1
+fi

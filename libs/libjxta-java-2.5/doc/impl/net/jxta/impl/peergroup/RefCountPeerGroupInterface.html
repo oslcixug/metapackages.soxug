@@ -1,0 +1,657 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RefCountPeerGroupInterface (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RefCountPeerGroupInterface (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RefCountPeerGroupInterface.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/ShadowPeerGroup.html" title="class in net.jxta.impl.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peergroup/RefCountPeerGroupInterface.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RefCountPeerGroupInterface.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.peergroup.PeerGroupInterface">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.peergroup</FONT>
+<BR>
+Class RefCountPeerGroupInterface</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">net.jxta.impl.peergroup.PeerGroupInterface</A>
+      <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.peergroup.RefCountPeerGroupInterface</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE> class <B>RefCountPeerGroupInterface</B><DT>extends <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></DL>
+</PRE>
+
+<P>
+RefCountPeerGroupInterface is a PeerGroupInterface object that
+ also serves as a peergroup very-strong reference. When the last
+ such goes away, the peergroup terminates itself despite the existence
+ of aeternal strong references from the various service's threads
+ that would prevent it from ever being finalized.
+ The alternative: to give only weak references to threads seems impractical.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_net.jxta.peergroup.PeerGroup"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface net.jxta.peergroup.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.GlobalRegistry.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup.GlobalRegistry</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.peergroup.PeerGroupInterface"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.peergroup.<A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#groupImpl">groupImpl</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.peergroup.PeerGroup"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.peergroup.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#accessClassID" title="class or interface in net.jxta.peergroup">accessClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#allPurposePeerGroupSpecID" title="class or interface in net.jxta.peergroup">allPurposePeerGroupSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#applicationClassID" title="class or interface in net.jxta.peergroup">applicationClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#Both" title="class or interface in net.jxta.peergroup">Both</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#DEFAULT_EXPIRATION" title="class or interface in net.jxta.peergroup">DEFAULT_EXPIRATION</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#DEFAULT_LIFETIME" title="class or interface in net.jxta.peergroup">DEFAULT_LIFETIME</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#discoveryClassID" title="class or interface in net.jxta.peergroup">discoveryClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#endpointClassID" title="class or interface in net.jxta.peergroup">endpointClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#FromParent" title="class or interface in net.jxta.peergroup">FromParent</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#globalRegistry" title="class or interface in net.jxta.peergroup">globalRegistry</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#Here" title="class or interface in net.jxta.peergroup">Here</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#httpProtoClassID" title="class or interface in net.jxta.peergroup">httpProtoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#membershipClassID" title="class or interface in net.jxta.peergroup">membershipClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#peerGroupClassID" title="class or interface in net.jxta.peergroup">peerGroupClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#peerinfoClassID" title="class or interface in net.jxta.peergroup">peerinfoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#pipeClassID" title="class or interface in net.jxta.peergroup">pipeClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#proxyClassID" title="class or interface in net.jxta.peergroup">proxyClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refAccessSpecID" title="class or interface in net.jxta.peergroup">refAccessSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refDiscoverySpecID" title="class or interface in net.jxta.peergroup">refDiscoverySpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refEndpointSpecID" title="class or interface in net.jxta.peergroup">refEndpointSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refHttpProtoSpecID" title="class or interface in net.jxta.peergroup">refHttpProtoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refMembershipSpecID" title="class or interface in net.jxta.peergroup">refMembershipSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refNetPeerGroupSpecID" title="class or interface in net.jxta.peergroup">refNetPeerGroupSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refPeerinfoSpecID" title="class or interface in net.jxta.peergroup">refPeerinfoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refPipeSpecID" title="class or interface in net.jxta.peergroup">refPipeSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refPlatformSpecID" title="class or interface in net.jxta.peergroup">refPlatformSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refProxySpecID" title="class or interface in net.jxta.peergroup">refProxySpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refRelayProtoSpecID" title="class or interface in net.jxta.peergroup">refRelayProtoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refRendezvousSpecID" title="class or interface in net.jxta.peergroup">refRendezvousSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refResolverSpecID" title="class or interface in net.jxta.peergroup">refResolverSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refRouterProtoSpecID" title="class or interface in net.jxta.peergroup">refRouterProtoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refShellSpecID" title="class or interface in net.jxta.peergroup">refShellSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refTcpProtoSpecID" title="class or interface in net.jxta.peergroup">refTcpProtoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#refTlsProtoSpecID" title="class or interface in net.jxta.peergroup">refTlsProtoSpecID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#relayProtoClassID" title="class or interface in net.jxta.peergroup">relayProtoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#rendezvousClassID" title="class or interface in net.jxta.peergroup">rendezvousClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#resolverClassID" title="class or interface in net.jxta.peergroup">resolverClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#routerProtoClassID" title="class or interface in net.jxta.peergroup">routerProtoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#tcpProtoClassID" title="class or interface in net.jxta.peergroup">tcpProtoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#tlsProtoClassID" title="class or interface in net.jxta.peergroup">tlsProtoClassID</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#WK_ID_PREFIX" title="class or interface in net.jxta.peergroup">WK_ID_PREFIX</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform">START_AGAIN_PROGRESS</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform">START_AGAIN_STALLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_DISABLED" title="class or interface in net.jxta.platform">START_DISABLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#RefCountPeerGroupInterface(net.jxta.impl.peergroup.GenericPeerGroup)">RefCountPeerGroupInterface</A></B>(<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup">GenericPeerGroup</A>&nbsp;theRealThing)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an interface object that front-ends a given
+ PeerGroup object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#RefCountPeerGroupInterface(net.jxta.impl.peergroup.GenericPeerGroup, java.util.Map)">RefCountPeerGroupInterface</A></B>(<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup">GenericPeerGroup</A>&nbsp;theRealThing,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;roleMap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#getInterface()">getInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service objects are not manipulated directly to protect usage
+ of the service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#getRoleMap(net.jxta.id.ID)">getRoleMap</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the map of the assigned IDs currently associated with the given
+ ModuleClassID by this PeerGroup object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#getWeakInterface()">getWeakInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a weak interface object that represents this
+ group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#lookupService(net.jxta.id.ID)">lookupService</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup for a service by name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#lookupService(net.jxta.id.ID, int)">lookupService</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name,
+              int&nbsp;roleIndex)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup for a service by class ID and index in a map.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complete any remaining initialization of the module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop a module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/peergroup/RefCountPeerGroupInterface.html#unref()">unref</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Can only be called once.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.peergroup.PeerGroupInterface"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.peergroup.<A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#compatible(net.jxta.document.Element)">compatible</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#equals(java.lang.Object)">equals</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getAccessService()">getAccessService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getAllPurposePeerGroupImplAdvertisement()">getAllPurposePeerGroupImplAdvertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getConfigAdvertisement()">getConfigAdvertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getDiscoveryService()">getDiscoveryService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getEndpointService()">getEndpointService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getHomeThreadGroup()">getHomeThreadGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getImplAdvertisement()">getImplAdvertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getLoader()">getLoader</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getMembershipService()">getMembershipService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getParentGroup()">getParentGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerAdvertisement()">getPeerAdvertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerGroupAdvertisement()">getPeerGroupAdvertisement</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerGroupID()">getPeerGroupID</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerGroupName()">getPeerGroupName</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerID()">getPeerID</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerInfoService()">getPeerInfoService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPeerName()">getPeerName</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getPipeService()">getPipeService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getRendezVousService()">getRendezVousService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getResolverService()">getResolverService</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getStoreHome()">getStoreHome</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#isRendezvous()">isRendezvous</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#loadModule(net.jxta.id.ID, net.jxta.document.Advertisement)">loadModule</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#loadModule(net.jxta.id.ID, net.jxta.platform.ModuleSpecID, int)">loadModule</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#newGroup(net.jxta.document.Advertisement)">newGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#newGroup(net.jxta.peergroup.PeerGroupID)">newGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#newGroup(net.jxta.peergroup.PeerGroupID, net.jxta.document.Advertisement, java.lang.String, java.lang.String)">newGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#publishGroup(java.lang.String, java.lang.String)">publishGroup</A>, <A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#toString()">toString</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RefCountPeerGroupInterface(net.jxta.impl.peergroup.GenericPeerGroup)"><!-- --></A><H3>
+RefCountPeerGroupInterface</H3>
+<PRE>
+<B>RefCountPeerGroupInterface</B>(<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup">GenericPeerGroup</A>&nbsp;theRealThing)</PRE>
+<DL>
+<DD>Constructs an interface object that front-ends a given
+ PeerGroup object.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>theRealThing</CODE> - the peer group</DL>
+</DL>
+<HR>
+
+<A NAME="RefCountPeerGroupInterface(net.jxta.impl.peergroup.GenericPeerGroup, java.util.Map)"><!-- --></A><H3>
+RefCountPeerGroupInterface</H3>
+<PRE>
+<B>RefCountPeerGroupInterface</B>(<A HREF="../../../../net/jxta/impl/peergroup/GenericPeerGroup.html" title="class in net.jxta.impl.peergroup">GenericPeerGroup</A>&nbsp;theRealThing,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;roleMap)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+public int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;arg)</PRE>
+<DL>
+<DD>Complete any remaining initialization of the module. The module should
+ be fully functional after <code>startApp()</code> is completed. That is
+ also the opportunity to supply arbitrary arguments (mostly to
+ applications).
+
+ <p/>If this module is a <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> service, it may be invoked
+ several times depending on its return value.
+ <p/>
+ This is here for class hierarchy reasons. It is normaly ignored. By
+ definition, the interface object protects the real object's start/stop
+ methods from being called.
+ <p/>
+ Normally it is ignored. By definition, the interface object
+ protects the real object's start/stop methods from being called.
+ <p/>
+ However we have to make an exception for groups: even the creator
+ of a group does not have access to the real object. So the interface
+ has to forward startApp to the group, which is responsible for
+ ensuring that it is executed only once (if needed).
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#startApp(java.lang.String[])" title="class or interface in net.jxta.platform">startApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#startApp(java.lang.String[])">startApp</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>arg</CODE> - A table of strings arguments.
+<DT><B>Returns:</B><DD>int status indication.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+public void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Stop a module. This may be called any time after <code>init()</code>
+  completes and should not assume that <code>startApp()</code> has been
+  called or completed.
+
+  <p/>The Module cannot be forced to comply, but in the future
+  we might be able to deny it access to anything after some timeout.
+ <p/>
+ This is here for class hierarchy reasons. It is normaly ignored. By
+ definition, the interface object protects the real object's start/stop
+ methods from being called.
+ <p/>
+ This is here for temporary class hierarchy reasons.
+ it is normally ignored. By definition, the interface object
+ protects the real object's start/stop methods from being called
+ <p/>
+ In that case we have to make an exception. Most applications
+ currently assume that they do not share the group object and that they do
+ refer to the real object directly. They call stopApp to signify their
+ intention of no-longer using the group. Now that groups are shared,
+ we convert stopApp() to unref() for compatibility.
+ We could also just do nothing and let the interface be GC'd but
+ calling unref() makes the group go away immediately if not shared,
+ which is what applications that call stopApp expect.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#stopApp()" title="class or interface in net.jxta.platform">stopApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#stopApp()">stopApp</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInterface()"><!-- --></A><H3>
+getInterface</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A> <B>getInterface</B>()</PRE>
+<DL>
+<DD>Service objects are not manipulated directly to protect usage
+ of the service. A Service interface is returned to access the service
+ methods.
+ <p/>
+ Since THIS is already such an object, it could return itself.
+ However, we want the group to know about the number of interfaces
+ objects floating around, so, we'll have the group make a new one.
+ That way, applications which want to use unref() on interfaces can
+ avoid sharing interface objects by using getInterface() as a sort of
+ clone with the additional ref-counting semantics.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getInterface()" title="class or interface in net.jxta.service">getInterface</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getInterface()">getInterface</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Service An interface object that implements
+         this service and nothing more.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWeakInterface()"><!-- --></A><H3>
+getWeakInterface</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A> <B>getWeakInterface</B>()</PRE>
+<DL>
+<DD>Returns a weak interface object that represents this
+ group.
+ <p/>
+ A weak interface object has no life-cycle privileges over
+ the group that it represents and therefore its users have
+ no accountability. A weak interface object is safe to
+ give away but holds no promise of sustained validity.
+ <p/>
+ Whatever code gave away a weak interface object retains
+ the power of terminating the group object from which it
+ was obtained, thereby making the weak interface
+ object invalid.
+ <p/>
+ A weak interface object is immutable; its unref and stopApp
+ methods do nothing. Its validity is exactly that of the
+ group or interface object from which it was obtained.
+ <p/>
+ A weak interface object can be obtained from an interface
+ object, or from a real group object, or from a weak interface
+ object. In the later case, the object returned may be
+ the original weak interface object since such objects
+ are immutable.
+ <p/>
+ Whatever code obtains a weak interface object from a group object
+ or regular interface object, remains entirely liable for invoking unref
+ on the initial object before discarding it. Giving away a weak interface
+ object is not equivalent to transferring ownership of the original.
+ <p/>
+ Returns a weak interface object that refers to this interface
+ object rather than to the group directly. The reason for that
+ is that we want the owner of this interface object to be able
+ to invalidate all weak interface objects made out of this interface
+ object, without them keeping a reference to the group object, and
+ without necessarily having to terminate the group.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#getWeakInterface()" title="class or interface in net.jxta.peergroup">getWeakInterface</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getWeakInterface()">getWeakInterface</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PeerGroup A weak interface object that implements
+         this group and nothing more.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unref()"><!-- --></A><H3>
+unref</H3>
+<PRE>
+public void <B>unref</B>()</PRE>
+<DL>
+<DD>Can only be called once. After that the reference is no-longer usuable.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#unref()" title="class or interface in net.jxta.peergroup">unref</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#unref()">unref</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="lookupService(net.jxta.id.ID)"><!-- --></A><H3>
+lookupService</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A> <B>lookupService</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name)
+                      throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ServiceNotFoundException.html?is-external=true" title="class or interface in net.jxta.exception">ServiceNotFoundException</A></PRE>
+<DL>
+<DD>Lookup for a service by name.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#lookupService(net.jxta.id.ID)" title="class or interface in net.jxta.peergroup">lookupService</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#lookupService(net.jxta.id.ID)">lookupService</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - the service identifier.
+<DT><B>Returns:</B><DD>Service, the Service registered by that name
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ServiceNotFoundException.html?is-external=true" title="class or interface in net.jxta.exception">ServiceNotFoundException</A></CODE> - could not find the service requested</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="lookupService(net.jxta.id.ID, int)"><!-- --></A><H3>
+lookupService</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A> <B>lookupService</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name,
+                             int&nbsp;roleIndex)
+                      throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ServiceNotFoundException.html?is-external=true" title="class or interface in net.jxta.exception">ServiceNotFoundException</A></PRE>
+<DL>
+<DD>Lookup for a service by class ID and index in a map.
+ <p/>
+ More than one service in a group may be of a given ModuleClass.
+ However each of them has a unique assigned ID which serves as the
+ index in the map of services. In most cases, there is only one
+ service of each given Module Class, and the ID of that Module Class
+ is the assigned ID. Otherwise, the group may have a list of existing
+ assigned ID per base class. This routine may be used to retrieve
+ services of the given Module Class and index in that list.
+ In the absence of a mapping, index 0 is still valid and
+ corresponds to the service which assigned ID is exactly the
+ given ID.
+ Group objects with a map are normally wrappers tailored
+ specially by the loader of a module (often the group itself) in order
+ to provide a map appropriate for that module. Modules that do not use
+ more than one service of a given base class normally never need to call
+ this method; lookupService(ID) is equivalent to lookupService(ID, 0)
+ and will transparently remap index 0 to whatever the group's
+ structure defines as the default for the invoking service.
+ <p/>
+ Note: traditionally, the given ID is expected to be a base Module
+ Class ID, and the assigned ID of a Module is a Class ID of the
+ same base class with a role suffix to make it unique. If the given
+ ID already contains a role suffix, there may exist an entry for
+ it in the map anyway, if not (which is the expected use pattern),
+ then only index 0 exists and the given ID is used whole and
+ untranslated.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#lookupService(net.jxta.id.ID, int)" title="class or interface in net.jxta.peergroup">lookupService</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#lookupService(net.jxta.id.ID, int)">lookupService</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - the service identifier<DD><CODE>roleIndex</CODE> - the index in the list of assigned IDs that match
+                  that identifier.
+<DT><B>Returns:</B><DD>Service, the corresponding Service
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ServiceNotFoundException.html?is-external=true" title="class or interface in net.jxta.exception">ServiceNotFoundException</A></CODE> - Could not find the service requested.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoleMap(net.jxta.id.ID)"><!-- --></A><H3>
+getRoleMap</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A> <B>getRoleMap</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;name)</PRE>
+<DL>
+<DD>Returns the map of the assigned IDs currently associated with the given
+ ModuleClassID by this PeerGroup object. The IDs are returned in the order
+ of their index in the map. So the first ID returned will be identical to
+ what would be returned by the lookup method for the given ID and index 0.
+ If there is no explicit such map, this method will return a singleton
+ containing the given ID as this is the default mapping.  There is no
+ guarantee that any of the returned IDs correspond to an actually
+ registered service. This method only maps IDs.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true#getRoleMap(net.jxta.id.ID)" title="class or interface in net.jxta.peergroup">getRoleMap</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html#getRoleMap(net.jxta.id.ID)">getRoleMap</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/peergroup/PeerGroupInterface.html" title="class in net.jxta.impl.peergroup">PeerGroupInterface</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The ModuleClassID for which the map is desired.
+<DT><B>Returns:</B><DD>Iterator An iterator on a collection of the IDs to which the given ID maps.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RefCountPeerGroupInterface.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/PlatformConfigurator.html" title="interface in net.jxta.impl.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/peergroup/ShadowPeerGroup.html" title="class in net.jxta.impl.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/peergroup/RefCountPeerGroupInterface.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RefCountPeerGroupInterface.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.peergroup.PeerGroupInterface">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

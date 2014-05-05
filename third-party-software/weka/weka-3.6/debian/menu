@@ -1,0 +1,2 @@
+?package(weka):needs="X11" section="Applications/Programming"\
+  title="weka" command="/usr/bin/weka"

@@ -1,0 +1,768 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PeerGroupAdvertisement (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PeerGroupAdvertisement (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerGroupAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/PeerInfoQueryMessage.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/PeerGroupAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerGroupAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.protocol</FONT>
+<BR>
+Class PeerGroupAdvertisement</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">net.jxta.document.Advertisement</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">net.jxta.document.ExtendableAdvertisement</A>
+          <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.protocol.PeerGroupAdvertisement</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>PeerGroupAdvertisement</B><DT>extends <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A><DT>implements <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DL>
+</PRE>
+
+<P>
+Describes a peer group and references additional information required for
+  instantiating it. The PeerGroup method newGroup performs the task of
+  instantiating a PeerGroup given its advertisement (provided the required
+  subsequent documents can actually be found). This advertisement is indexed
+  on "Name", "GID", and "Desc"
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform"><CODE>ModuleSpecID</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol"><CODE>ModuleImplAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#PeerGroupAdvertisement()">PeerGroupAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new Peer Group Advertisement.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html" title="class in net.jxta.protocol">PeerGroupAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getAdvertisementType()">getAdvertisementType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the identifying type of this Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the base type of this advertisement hierarchy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getDescription()">getDescription</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getID()">getID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a unique ID for indexing purposes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getModuleSpecID()">getModuleSpecID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the id of the group spec that this uses.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the group or <tt>null</tt> if no name has been
+  assigned.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getPeerGroupID()">getPeerGroupID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the id of the group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getServiceParam(net.jxta.id.ID)">getServiceParam</A></B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the parameter element that matches the given key from the
+  service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#getServiceParams()">getServiceParams</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the sets of parameters for all services.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#putServiceParam(net.jxta.id.ID, net.jxta.document.Element)">putServiceParam</A></B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                <A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts a service parameter in the service parameters table under the given
+  key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#removeServiceParam(net.jxta.id.ID)">removeServiceParam</A></B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes and returns the parameter element that matches the given key
+  from the service parameters table.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setDescription(java.lang.String)">setDescription</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setModuleSpecID(net.jxta.platform.ModuleSpecID)">setModuleSpecID</A></B>(<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A>&nbsp;sid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the id of the group spec that this peer group uses.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setName(java.lang.String)">setName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the name of the group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setPeerGroupID(net.jxta.peergroup.PeerGroupID)">setPeerGroupID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;gid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the id of the group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html#setServiceParams(java.util.Hashtable)">setServiceParams</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,? extends <A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&gt;&nbsp;params)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the sets of parameters for all services.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.ExtendableAdvertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleAttribute(net.jxta.document.Attribute)">handleAttribute</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleElement(net.jxta.document.Element)">handleElement</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.Advertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getAdvType()">getAdvType</A>, <A HREF="../../../net/jxta/document/Advertisement.html#getIndexFields()">getIndexFields</A>, <A HREF="../../../net/jxta/document/Advertisement.html#toString()">toString</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PeerGroupAdvertisement()"><!-- --></A><H3>
+PeerGroupAdvertisement</H3>
+<PRE>
+public <B>PeerGroupAdvertisement</B>()</PRE>
+<DL>
+<DD>Construct a new Peer Group Advertisement.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAdvertisementType()"><!-- --></A><H3>
+getAdvertisementType</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getAdvertisementType</B>()</PRE>
+<DL>
+<DD>Returns the identifying type of this Advertisement.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the type of advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBaseAdvType()"><!-- --></A><H3>
+getBaseAdvType</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getBaseAdvType</B>()</PRE>
+<DL>
+<DD>Returns the base type of this advertisement hierarchy. Typically, only
+ the most basic advertisement of a type will implement this method and
+ declare it as <code>final</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the base type of advertisements in this hierarchy.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clone()"><!-- --></A><H3>
+clone</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html" title="class in net.jxta.protocol">PeerGroupAdvertisement</A> <B>clone</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#clone()">clone</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An object of class PeerGroupAdvertisement that is a
+      deep-enough copy of this one.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getName</B>()</PRE>
+<DL>
+<DD>Returns the name of the group or <tt>null</tt> if no name has been
+  assigned.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String name of the group.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setName(java.lang.String)"><!-- --></A><H3>
+setName</H3>
+<PRE>
+public void <B>setName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>sets the name of the group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - name of the group.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getModuleSpecID()"><!-- --></A><H3>
+getModuleSpecID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A> <B>getModuleSpecID</B>()</PRE>
+<DL>
+<DD>Returns the id of the group spec that this uses.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ID the spec id</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setModuleSpecID(net.jxta.platform.ModuleSpecID)"><!-- --></A><H3>
+setModuleSpecID</H3>
+<PRE>
+public void <B>setModuleSpecID</B>(<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A>&nbsp;sid)</PRE>
+<DL>
+<DD>Sets the id of the group spec that this peer group uses.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sid</CODE> - The id of the spec</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerGroupID()"><!-- --></A><H3>
+getPeerGroupID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>getPeerGroupID</B>()</PRE>
+<DL>
+<DD>Returns the id of the group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ID the group id</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPeerGroupID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+setPeerGroupID</H3>
+<PRE>
+public void <B>setPeerGroupID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;gid)</PRE>
+<DL>
+<DD>Sets the id of the group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>gid</CODE> - The id of this group.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getID()"><!-- --></A><H3>
+getID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>getID</B>()</PRE>
+<DL>
+<DD>Returns a unique ID for indexing purposes. We use the id of the group as
+  a plain ID.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getID()">getID</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ID a unique id for that advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDescription()"><!-- --></A><H3>
+getDescription</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDescription</B>()</PRE>
+<DL>
+<DD>returns the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDescription(java.lang.String)"><!-- --></A><H3>
+setDescription</H3>
+<PRE>
+public void <B>setDescription</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</PRE>
+<DL>
+<DD>sets the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDesc()"><!-- --></A><H3>
+getDesc</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getDesc</B>()</PRE>
+<DL>
+<DD>returns the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDesc(net.jxta.document.Element)"><!-- --></A><H3>
+setDesc</H3>
+<PRE>
+public void <B>setDesc</B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</PRE>
+<DL>
+<DD>sets the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>desc</CODE> - the description<DT><B>Since:</B></DT>
+  <DD>JXTA 1.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setServiceParams(java.util.Hashtable)"><!-- --></A><H3>
+setServiceParams</H3>
+<PRE>
+public void <B>setServiceParams</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,? extends <A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&gt;&nbsp;params)</PRE>
+<DL>
+<DD>sets the sets of parameters for all services. This method first makes a
+  deep copy, in order to protect the active information from uncontrolled
+  sharing. This quite an expensive operation. If only a few of the
+  parameters need to be added, it is wise to use putServiceParam()
+  instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>params</CODE> - The whole set of parameters.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceParams()"><!-- --></A><H3>
+getServiceParams</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&gt; <B>getServiceParams</B>()</PRE>
+<DL>
+<DD>Returns the sets of parameters for all services. 
+
+  <p/>This method returns a deep copy, in order to protect the real
+  information from uncontrolled sharing while keeping it shared as long as
+  it is safe. This quite an expensive operation. If only a few parameters
+  need to be accessed, it is wise to use getServiceParam() instead.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>all of the parameters.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putServiceParam(net.jxta.id.ID, net.jxta.document.Element)"><!-- --></A><H3>
+putServiceParam</H3>
+<PRE>
+public void <B>putServiceParam</B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                            <A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</PRE>
+<DL>
+<DD>Puts a service parameter in the service parameters table under the given
+  key. The key is of a subclass of ID; usually a ModuleClassID. This
+  method makes a deep copy of the given element into an independent
+  document.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The key.<DD><CODE>param</CODE> - The parameter, as an element. What is stored is a copy as a
+      standalone StructuredDocument which type is the element's name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceParam(net.jxta.id.ID)"><!-- --></A><H3>
+getServiceParam</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getServiceParam</B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</PRE>
+<DL>
+<DD>Returns the parameter element that matches the given key from the
+  service parameters table. The key is of a subclass of ID; usually a
+  ModuleClassID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The key.
+<DT><B>Returns:</B><DD>StructuredDocument The matching parameter document or null if
+      none matched. The document type id "Param".</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeServiceParam(net.jxta.id.ID)"><!-- --></A><H3>
+removeServiceParam</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>removeServiceParam</B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</PRE>
+<DL>
+<DD>Removes and returns the parameter element that matches the given key
+  from the service parameters table. The key is of a subclass of ID;
+  usually a ModuleClassID.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The key.
+<DT><B>Returns:</B><DD>Element the removed parameter element or null if not found.
+      This is actually a StructureDocument of type "Param".</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerGroupAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/PeerInfoQueryMessage.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/PeerGroupAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerGroupAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+	configure)
+		update-alternatives \
+			--install /lib/plymouth/themes/default.plymouth default.plymouth \
+				/lib/plymouth/themes/xug-logo/xug-logo.plymouth 150
+		
+		if which update-initramfs >/dev/null 2>&1
+		then
+			update-initramfs -u
+		fi
+		;;
+esac
+
+#DEBHELPER#

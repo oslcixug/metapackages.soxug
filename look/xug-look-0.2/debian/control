@@ -1,0 +1,43 @@
+Source: xug-look
+Section: x11
+Priority: optional
+XS-Python-Version: all
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 5.0.51~), cdbs, python-dev (>= 2.4), python-central (>= 0.5),
+Build-Depends-Indep: python-distutils-extra, libxml-parser-perl
+Standards-Version: 3.9.3
+
+Package: xug-look
+Architecture: all
+Section: metapackages
+Depends: xug-wallpapers, faenza-icon-theme, plymouth-theme-xug,
+         ${misc:Depends}
+Conflicts: xug-artwork, xug-look (<= 0.12)
+Replaces: xug-artwork, xug-look (<= 0.12)
+Description: Ubuntu.xug look and feel
+ The Ubuntu.xug theme.
+ .
+ This package depends upon the constituent parts of the Ubuntu.xug theme,
+ whilst also providing the theme descriptor to the GNOME desktop, and the
+ distributor logo.
+
+Package: xug-wallpapers
+Architecture: all
+Section: x11
+Depends: ${misc:Depends}
+Description: Ubuntu.xug - Wallpapers
+ The Ubuntu.xug theme.
+ .
+ This package contains the USC Wallpapers.
+
+Package: plymouth-theme-xug
+Architecture: all
+Section: x11
+Depends: ${misc:Depends}, plymouth, plymouth-label
+Provides: plymouth-theme
+Conflicts: xug-plymouth-theme
+Replaces: xug-plymouth-theme
+Description: Ubuntu.xug Plymouth theme
+ .
+ This package contains the Ubuntu.xug Plymouth boot splash theme
+

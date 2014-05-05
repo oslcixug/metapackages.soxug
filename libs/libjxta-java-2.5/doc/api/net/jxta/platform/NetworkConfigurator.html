@@ -1,0 +1,3392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+NetworkConfigurator (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="NetworkConfigurator (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetworkConfigurator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkManager.html" title="class in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/NetworkConfigurator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetworkConfigurator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.platform</FONT>
+<BR>
+Class NetworkConfigurator</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.platform.NetworkConfigurator</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>NetworkConfigurator</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+NetworkConfigurator provides a simple programmatic interface for JXTA configuration.
+ <p/>
+ By default, it defines an edge configuration with TCP in auto mode w/port
+ range 9701-9799, multicast enabled on group "224.0.1.85", and port 1234,
+ HTTP transport with only outgoing enabled.
+ <p/>
+ By default a new PeerID is always generated. This can be overridden via
+ <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPeerID(net.jxta.peer.PeerID)"><CODE>setPeerID(net.jxta.peer.PeerID)</CODE></A> method or loading a PlatformConfig via
+ <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#load()"><CODE>load()</CODE></A>.
+ <p/>
+ A facility is provided to initialize a configuration by loading from an
+ existing configuration. This provides limited platform configuration lifecycle
+ management as well as configuration change management.
+ <p/>
+ Also by default, this class sets the default platform configurator to
+ <CODE>net.jxta.impl.peergroup.NullConfigurator</CODE>. <code>NullConfigurator<code>
+ is a no operation configurator intended to prevent any other configurators from
+ being invoked, including the AWT ConfigDialog.
+ <p/>
+ NetworkConfigurator makes use of classes from the <code>net.jxta.impl.*</code>
+ packages. Applications are very strongly encouraged to avoid importing these
+ classes as their interfaces may change without notice in future JXTA releases.
+ The NetworkConfigurator API abstracts the configuration implementation details
+ and will provide continuity and stability i.e. the NetworkConfigurator API
+ won't change and it will automatically accommodate changes to service
+ configuration.
+ <p/>
+ <em> Configuration example :</em>
+ <pre>
+     NetworkConfigurator config = new NetworkConfigurator();
+     if (!config.exists()) {
+         // Create a new configuration with a new name, principal, and pass
+         config.setName("New Name");
+         config.setPrincipal("username");
+         config.setPassword("password");
+         try {
+             //persist it
+             config.save();
+         } catch (IOException io) {
+             // deal with the io error
+         }
+      } else {
+        // Load the pre-existing configuration
+        File pc = new File(config.getHome(), "PlatformConfig");
+        try {
+            config.load(pc.toURI());
+            // make changes if so desired
+             ..
+             ..
+            // store the PlatformConfig under the default home
+            config.save();
+        } catch (CertificateException ce) {
+            // In case the root cert is invalid, this creates a new one
+            try {
+                  //principal
+                  config.setPrincipal("principal");
+                  //password to encrypt private key with
+                  config.setPassword("password");
+                  config.save();
+              } catch (Exception e) {
+                  e.printStackTrace();
+              }
+        }
+ <p/>
+ </pre>
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>JXTA JSE 2.4</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#ADHOC_NODE">ADHOC_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default AD-HOC configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#cert">cert</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Public Certificate chain</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#description">description</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default PlatformConfig Peer Description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#EDGE_NODE">EDGE_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Edge configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#HTTP_CLIENT">HTTP_CLIENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP transport client Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#HTTP_SERVER">HTTP_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP transport server Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;HTTPAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#httpConfig">httpConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP Config Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#httpEnabled">httpEnabled</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default HTTP transport state</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PeerGroupConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#infraPeerGroupConfig">infraPeerGroupConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Infrastructure Peer Group Configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#IP_MULTICAST">IP_MULTICAST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP multicast transport Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#keyStoreLocation">keyStoreLocation</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Freestanding keystore location</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#mode">mode</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#name">name</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default peer name</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#password">password</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password value used to generate root Certificate and to protect the
+ Certificate's PrivateKey.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#peerid">peerid</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default PeerID</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#principal">principal</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Principal value used to generate root certificate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#PROXY_NODE">PROXY_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Proxy configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#PROXY_SERVER">PROXY_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proxy Server Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#proxyConfig">proxyConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proxy Service Document</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PSEConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#pseConf">pseConf</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Security Environment Config Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RDV_AD_HOC">RDV_AD_HOC</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RendezVousService Ad-Hoc mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RDV_CLIENT">RDV_CLIENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RendezVousService Client</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RDV_NODE">RDV_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Rendezvous configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RDV_RELAY_PROXY_NODE">RDV_RELAY_PROXY_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Rendezvous/Relay/Proxy configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RDV_SERVER">RDV_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RendezVousService Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;RdvConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#rdvConfig">rdvConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rendezvous Config Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#rdvSeedingURI">rdvSeedingURI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Rendezvous Seeding URI</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RELAY_CLIENT">RELAY_CLIENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relay client Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RELAY_NODE">RELAY_NODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Relay configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RELAY_OFF">RELAY_OFF</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relay off Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#RELAY_SERVER">RELAY_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relay Server Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;RelayConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#relayConfig">relayConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relay Config Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#relaySeedingURI">relaySeedingURI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Relay Seeding URI</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#subjectPkey">subjectPkey</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject private key</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#TCP_CLIENT">TCP_CLIENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCP transport client Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#TCP_SERVER">TCP_SERVER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCP transport Server Mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;TCPAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#tcpConfig">tcpConfig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCP Config Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#tcpEnabled">tcpEnabled</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default TCP transport state</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#NetworkConfigurator()">NetworkConfigurator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates the default NetworkConfigurator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#NetworkConfigurator(int, java.net.URI)">NetworkConfigurator</A></B>(int&nbsp;mode,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a NetworkConfigurator with the default configuration of the
+ specified mode.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addRdvSeedingURI(java.lang.String)">addRdvSeedingURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;seedURIStr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the new RendezvousService seeding URI as a string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addRdvSeedingURI(java.net.URI)">addRdvSeedingURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets Rendezvous Seeding URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvous.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addRelaySeedingURI(java.lang.String)">addRelaySeedingURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;seedURIStr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the new RelayService seeding URI as a string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addRelaySeedingURI(java.net.URI)">addRelaySeedingURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the RelayService Seeding URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relays.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addSeedRelay(java.net.URI)">addSeedRelay</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds RelayService peer seed address
+ <p/>A RelayService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#addSeedRendezvous(java.net.URI)">addSeedRendezvous</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds Rendezvous peer seed, physical endpoint address
+ <p/>A RendezVousService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRelaySeedingURIs()">clearRelaySeedingURIs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the List of RelayService seeding URIs</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRelaySeeds()">clearRelaySeeds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the List of RelayService seeds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRendezvousSeedingURIs()">clearRendezvousSeedingURIs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the list of RendezVousService seeding URIs</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRendezvousSeeds()">clearRendezvousSeeds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the list of RendezVousService seeds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRendezvousSeedURIs()">clearRendezvousSeedURIs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>The name of this method is inconsistent with it's function! 
+ It clears the <strong>seeding</strong> URIs and not the seed URIs. Use
+ <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRendezvousSeedingURIs()"><CODE>clearRendezvousSeedingURIs()</CODE></A> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;HTTPAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createHttpAdv()">createHttpAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an HTTP transport advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PeerGroupConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createInfraConfigAdv()">createInfraConfigAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createProxyAdv()">createProxyAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a ProxyService configuration advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PSEConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createPSEAdv(java.lang.String, java.lang.String)">createPSEAdv</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;principal,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PSEConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createPSEAdv(java.security.cert.X509Certificate)">createPSEAdv</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;PSEConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createPSEAdv(java.security.cert.X509Certificate[])">createPSEAdv</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]&nbsp;certificateChain)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;RdvConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createRdvConfigAdv()">createRdvConfigAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a RendezVousService configuration advertisement with default values (EDGE)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;RelayConfigAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createRelayConfigAdv()">createRelayConfigAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a RelayService configuration advertisement with default values (EDGE)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;TCPAdv</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#createTcpAdv()">createTcpAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an TCP transport advertisement with the platform default values.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#exists()">exists</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if a PlatformConfig file exist under store home</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getCertificate()">getCertificate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the public Certificate for this configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getCertificateChain()">getCertificateChain</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the public Certificate chain for this configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getHome()">getHome</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current directory for configuration and cache persistent 
+ store.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getInfrastructureDescriptionStr()">getInfrastructureDescriptionStr</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the infrastructure PeerGroup description meta-data</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getInfrastructureIDStr()">getInfrastructureIDStr</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the ID which will be used for new net peer group instances.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getInfrastructureName()">getInfrastructureName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the infrastructure PeerGroup name meta-data</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getKeyStoreLocation()">getKeyStoreLocation</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the freestanding keystore location</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getMode()">getMode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current configuration mode
+ <p/>The default mode is EDGE, unless modified at construction time or through
+ Method <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMode(int)"><CODE>setMode(int)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getMulticastSize()">getMulticastSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the IP group multicast packet size</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the node name</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getParmDoc(boolean, net.jxta.document.Advertisement)">getParmDoc</A></B>(boolean&nbsp;enabled,
+           <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a XMLDocument representation of an Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPassword()">getPassword</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the password used to sign the private key of the root certificate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPeerID()">getPeerID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the PeerID</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPlatformConfig()">getPlatformConfig</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a PlatformConfig which represents a platform configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrincipal()">getPrincipal</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Principal for the peer root certificate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrivateKey()">getPrivateKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Subject private key</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getRdvACLURI()">getRdvACLURI</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets Rendezvous Access Control URI if set
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvousACL.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getRelayACLURI()">getRelayACLURI</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets Relay Access Control URI if set
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relayACL.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getStoreHome()">getStoreHome</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the location which will serve as the parent for all stored items
+ used by JXTA.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#load()">load</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Load a configuration from the specified store home uri
+ <p/>
+ e.g. file:/export/dist/EdgeConfig.xml, e.g. http://configserver.net/configservice?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#load(java.net.URI)">load</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;uri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads a configuration from a specified uri
+ <p/>
+ e.g. file:/export/dist/EdgeConfig.xml, e.g. http://configserver.net/configservice?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newAdHocConfiguration(java.net.URI)">newAdHocConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default AD-HOC configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newEdgeConfiguration(java.net.URI)">newEdgeConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Edge configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newProxyConfiguration(java.net.URI)">newProxyConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Proxy configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newRdvConfiguration(java.net.URI)">newRdvConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Rendezvous configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newRdvRelayConfiguration(java.net.URI)">newRdvRelayConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Rendezvous configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newRdvRelayProxyConfiguration(java.net.URI)">newRdvRelayProxyConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Rendezvous, Relay, Proxy configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#newRelayConfiguration(java.net.URI)">newRelayConfiguration</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkConfigurator instance with default Relay configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#save()">save</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Persists a PlatformConfig advertisement under getStoreHome()+"/PlaformConfig"
+ <p/>
+ Home may be overridden by a call to setHome()</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setCertificate(java.security.cert.X509Certificate)">setCertificate</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the public Certificate for this configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setCertificateChain(java.security.cert.X509Certificate[])">setCertificateChain</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]&nbsp;certificateChain)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the public Certificate chain for this configuration.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setDescription(java.lang.String)">setDescription</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets PlaformConfig Peer Description element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHome(java.io.File)">setHome</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;home)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the current directory for configuration and cache persistent store
+ <p/>(default is $CWD/.jxta)
+ <p/>
+ Simple example :
+ 
+  <code>
+   //Create an application home
+   File appHome = new File(System.getProperty("JXTA_HOME", ".cache"));
+   //Create an instance home under the application home
+   File instanceHome = new File(appHome, instanceName);
+   jxtaConfig.setHome(instanceHome);
+   </code>
+ </TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpEnabled(boolean)">setHttpEnabled</A></B>(boolean&nbsp;enabled)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles HTTP transport state</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpIncoming(boolean)">setHttpIncoming</A></B>(boolean&nbsp;incoming)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles the HTTP transport server (incoming) mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpInterfaceAddress(java.lang.String)">setHttpInterfaceAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the HTTP interface Address to bind the HTTP transport to
+ <p/>e.g. "192.168.1.1"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpOutgoing(boolean)">setHttpOutgoing</A></B>(boolean&nbsp;outgoing)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles the HTTP transport client (outgoing) mode</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpPort(int)">setHttpPort</A></B>(int&nbsp;port)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the HTTP listening port (default 9901)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHttpPublicAddress(java.lang.String, boolean)">setHttpPublicAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address,
+                     boolean&nbsp;exclusive)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the HTTP JXTA Public Address
+ e.g. "192.168.1.1:9700"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setInfrastructureDesc(net.jxta.document.XMLElement)">setInfrastructureDesc</A></B>(<A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the infrastructure PeerGroup description meta-data</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setInfrastructureDescriptionStr(java.lang.String)">setInfrastructureDescriptionStr</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the infrastructure PeerGroup description meta-data</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setInfrastructureID(net.jxta.id.ID)">setInfrastructureID</A></B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the ID which will be used for new net peer group instances.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setInfrastructureID(java.lang.String)">setInfrastructureID</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;idStr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the ID which will be used for new net peer group instances.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setInfrastructureName(java.lang.String)">setInfrastructureName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the infrastructure PeerGroup name meta-data</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setKeyStoreLocation(java.net.URI)">setKeyStoreLocation</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;keyStoreLocation)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets freestanding keystore location</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMode(int)">setMode</A></B>(int&nbsp;mode)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the current node configuration mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMulticastAddress(java.lang.String)">setMulticastAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mcastAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the IP group multicast address (default 224.0.1.85)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMulticastPort(int)">setMulticastPort</A></B>(int&nbsp;port)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the IP group multicast port (default 1234)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMulticastSize(int)">setMulticastSize</A></B>(int&nbsp;size)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the IP group multicast packet size</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setName(java.lang.String)">setName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the node name</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPassword(java.lang.String)">setPassword</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the password used to sign the private key of the root certificate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPeerID(net.jxta.peer.PeerID)">setPeerID</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the PeerID (by default, a new PeerID is generated).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPeerId(java.lang.String)">setPeerId</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerIdStr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the PeerID for this Configuration</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrincipal(java.lang.String)">setPrincipal</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;principal)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Principal for the peer root certificate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrivateKey(java.security.PrivateKey)">setPrivateKey</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;subjectPkey)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Subject private key</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRdvACLURI(java.net.URI)">setRdvACLURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;aclURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets Rendezvous Access Control URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvousACL.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRelayACLURI(java.net.URI)">setRelayACLURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;aclURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets Relay Access Control URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relayACL.cgi?</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRelayMaxClients(int)">setRelayMaxClients</A></B>(int&nbsp;relayMaxClients)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the RelayService maximum number of simultaneous relay clients</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRelaySeedingURIs(java.util.Set)">setRelaySeedingURIs</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedURIs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the relaySeeds represented as Strings
+ <p/>A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to relay peers</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRelaySeedURIs(java.util.List)">setRelaySeedURIs</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seeds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the List relaySeeds represented as Strings
+ <p/>A RelayService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRendezvousMaxClients(int)">setRendezvousMaxClients</A></B>(int&nbsp;rdvMaxClients)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the RendezVousService maximum number of simultaneous rendezvous clients</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRendezvousSeedingURIs(java.util.List)">setRendezvousSeedingURIs</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedingURIs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the List of RendezVousService seeding URIs represented as Strings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRendezvousSeeds(java.util.Set)">setRendezvousSeeds</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seeds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the List of RendezVousService seeds represented as Strings
+ <p/>A RendezvousService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setRendezvousSeedURIs(java.util.List)">setRendezvousSeedURIs</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedingURIs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>The name of this method is inconsistent with it's function! 
+ It sets the <strong>seeding</strong> URIs and not the seed URIs. Use
+ <CODE>#setRendezvousSeedingURIs()</CODE> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setStoreHome(java.net.URI)">setStoreHome</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;newHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the location which will serve as the parent for all stored items
+ used by JXTA.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpEnabled(boolean)">setTcpEnabled</A></B>(boolean&nbsp;enabled)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles TCP transport state</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpEndPort(int)">setTcpEndPort</A></B>(int&nbsp;end)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the highest port on which the TCP Transport will listen if
+ configured to do so.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpIncoming(boolean)">setTcpIncoming</A></B>(boolean&nbsp;incoming)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles TCP transport server (incoming) mode (default is on)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpInterfaceAddress(java.lang.String)">setTcpInterfaceAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the TCP transport interface address
+ <p/>e.g. "192.168.1.1"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpOutgoing(boolean)">setTcpOutgoing</A></B>(boolean&nbsp;outgoing)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles TCP transport client (outgoing) mode (default is true)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpPort(int)">setTcpPort</A></B>(int&nbsp;port)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the TCP transport listening port (default 9701)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpPublicAddress(java.lang.String, boolean)">setTcpPublicAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address,
+                    boolean&nbsp;exclusive)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the node public address
+ <p/>e.g. "192.168.1.1:9701"
+ <p/>This address is the physical address defined in a node's
+ AccessPointAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setTcpStartPort(int)">setTcpStartPort</A></B>(int&nbsp;start)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the lowest port on which the TCP Transport will listen if configured
+ to do so.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setUseMulticast(boolean)">setUseMulticast</A></B>(boolean&nbsp;multicastOn)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles whether to use IP group multicast (default is true)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setUseOnlyRelaySeeds(boolean)">setUseOnlyRelaySeeds</A></B>(boolean&nbsp;useOnlyRelaySeeds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether to restrict RelayService leases to those defined in
+ the seed list</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setUseOnlyRendezvousSeeds(boolean)">setUseOnlyRendezvousSeeds</A></B>(boolean&nbsp;useOnlyRendezvouSeeds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether to restrict RendezvousService leases to those defined in
+ the seed list</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RELAY_OFF"><!-- --></A><H3>
+RELAY_OFF</H3>
+<PRE>
+public static final int <B>RELAY_OFF</B></PRE>
+<DL>
+<DD>Relay off Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RELAY_OFF">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RELAY_CLIENT"><!-- --></A><H3>
+RELAY_CLIENT</H3>
+<PRE>
+public static final int <B>RELAY_CLIENT</B></PRE>
+<DL>
+<DD>Relay client Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RELAY_CLIENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RELAY_SERVER"><!-- --></A><H3>
+RELAY_SERVER</H3>
+<PRE>
+public static final int <B>RELAY_SERVER</B></PRE>
+<DL>
+<DD>Relay Server Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RELAY_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROXY_SERVER"><!-- --></A><H3>
+PROXY_SERVER</H3>
+<PRE>
+public static final int <B>PROXY_SERVER</B></PRE>
+<DL>
+<DD>Proxy Server Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.PROXY_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TCP_CLIENT"><!-- --></A><H3>
+TCP_CLIENT</H3>
+<PRE>
+public static final int <B>TCP_CLIENT</B></PRE>
+<DL>
+<DD>TCP transport client Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.TCP_CLIENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TCP_SERVER"><!-- --></A><H3>
+TCP_SERVER</H3>
+<PRE>
+public static final int <B>TCP_SERVER</B></PRE>
+<DL>
+<DD>TCP transport Server Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.TCP_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="HTTP_CLIENT"><!-- --></A><H3>
+HTTP_CLIENT</H3>
+<PRE>
+public static final int <B>HTTP_CLIENT</B></PRE>
+<DL>
+<DD>HTTP transport client Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.HTTP_CLIENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="HTTP_SERVER"><!-- --></A><H3>
+HTTP_SERVER</H3>
+<PRE>
+public static final int <B>HTTP_SERVER</B></PRE>
+<DL>
+<DD>HTTP transport server Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.HTTP_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IP_MULTICAST"><!-- --></A><H3>
+IP_MULTICAST</H3>
+<PRE>
+public static final int <B>IP_MULTICAST</B></PRE>
+<DL>
+<DD>IP multicast transport Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.IP_MULTICAST">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_SERVER"><!-- --></A><H3>
+RDV_SERVER</H3>
+<PRE>
+public static final int <B>RDV_SERVER</B></PRE>
+<DL>
+<DD>RendezVousService Mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RDV_SERVER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_CLIENT"><!-- --></A><H3>
+RDV_CLIENT</H3>
+<PRE>
+public static final int <B>RDV_CLIENT</B></PRE>
+<DL>
+<DD>RendezVousService Client
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RDV_CLIENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_AD_HOC"><!-- --></A><H3>
+RDV_AD_HOC</H3>
+<PRE>
+public static final int <B>RDV_AD_HOC</B></PRE>
+<DL>
+<DD>RendezVousService Ad-Hoc mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RDV_AD_HOC">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ADHOC_NODE"><!-- --></A><H3>
+ADHOC_NODE</H3>
+<PRE>
+public static final int <B>ADHOC_NODE</B></PRE>
+<DL>
+<DD>Default AD-HOC configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.ADHOC_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EDGE_NODE"><!-- --></A><H3>
+EDGE_NODE</H3>
+<PRE>
+public static final int <B>EDGE_NODE</B></PRE>
+<DL>
+<DD>Default Edge configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.EDGE_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_NODE"><!-- --></A><H3>
+RDV_NODE</H3>
+<PRE>
+public static final int <B>RDV_NODE</B></PRE>
+<DL>
+<DD>Default Rendezvous configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RDV_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RELAY_NODE"><!-- --></A><H3>
+RELAY_NODE</H3>
+<PRE>
+public static final int <B>RELAY_NODE</B></PRE>
+<DL>
+<DD>Default Relay configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RELAY_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PROXY_NODE"><!-- --></A><H3>
+PROXY_NODE</H3>
+<PRE>
+public static final int <B>PROXY_NODE</B></PRE>
+<DL>
+<DD>Default Proxy configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.PROXY_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_RELAY_PROXY_NODE"><!-- --></A><H3>
+RDV_RELAY_PROXY_NODE</H3>
+<PRE>
+public static final int <B>RDV_RELAY_PROXY_NODE</B></PRE>
+<DL>
+<DD>Default Rendezvous/Relay/Proxy configuration
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.NetworkConfigurator.RDV_RELAY_PROXY_NODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="mode"><!-- --></A><H3>
+mode</H3>
+<PRE>
+protected transient int <B>mode</B></PRE>
+<DL>
+<DD>Default mode
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="description"><!-- --></A><H3>
+description</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>description</B></PRE>
+<DL>
+<DD>Default PlatformConfig Peer Description
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="name"><!-- --></A><H3>
+name</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>name</B></PRE>
+<DL>
+<DD>Default peer name
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="password"><!-- --></A><H3>
+password</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>password</B></PRE>
+<DL>
+<DD>Password value used to generate root Certificate and to protect the
+ Certificate's PrivateKey.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="peerid"><!-- --></A><H3>
+peerid</H3>
+<PRE>
+protected transient <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>peerid</B></PRE>
+<DL>
+<DD>Default PeerID
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="principal"><!-- --></A><H3>
+principal</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>principal</B></PRE>
+<DL>
+<DD>Principal value used to generate root certificate
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cert"><!-- --></A><H3>
+cert</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[] <B>cert</B></PRE>
+<DL>
+<DD>Public Certificate chain
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="subjectPkey"><!-- --></A><H3>
+subjectPkey</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A> <B>subjectPkey</B></PRE>
+<DL>
+<DD>Subject private key
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="keyStoreLocation"><!-- --></A><H3>
+keyStoreLocation</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>keyStoreLocation</B></PRE>
+<DL>
+<DD>Freestanding keystore location
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="proxyConfig"><!-- --></A><H3>
+proxyConfig</H3>
+<PRE>
+protected transient <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A> <B>proxyConfig</B></PRE>
+<DL>
+<DD>Proxy Service Document
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pseConf"><!-- --></A><H3>
+pseConf</H3>
+<PRE>
+protected transient PSEConfigAdv <B>pseConf</B></PRE>
+<DL>
+<DD>Personal Security Environment Config Advertisement
+<P>
+<DL>
+<DT><B>See Also:</B><DD><CODE>net.jxta.impl.membership.pse.PSEConfig</CODE></DL>
+</DL>
+<HR>
+
+<A NAME="rdvConfig"><!-- --></A><H3>
+rdvConfig</H3>
+<PRE>
+protected transient RdvConfigAdv <B>rdvConfig</B></PRE>
+<DL>
+<DD>Rendezvous Config Advertisement
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="rdvSeedingURI"><!-- --></A><H3>
+rdvSeedingURI</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>rdvSeedingURI</B></PRE>
+<DL>
+<DD>Default Rendezvous Seeding URI
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="relayConfig"><!-- --></A><H3>
+relayConfig</H3>
+<PRE>
+protected transient RelayConfigAdv <B>relayConfig</B></PRE>
+<DL>
+<DD>Relay Config Advertisement
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="relaySeedingURI"><!-- --></A><H3>
+relaySeedingURI</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>relaySeedingURI</B></PRE>
+<DL>
+<DD>Default Relay Seeding URI
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="tcpConfig"><!-- --></A><H3>
+tcpConfig</H3>
+<PRE>
+protected transient TCPAdv <B>tcpConfig</B></PRE>
+<DL>
+<DD>TCP Config Advertisement
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="tcpEnabled"><!-- --></A><H3>
+tcpEnabled</H3>
+<PRE>
+protected transient boolean <B>tcpEnabled</B></PRE>
+<DL>
+<DD>Default TCP transport state
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="httpConfig"><!-- --></A><H3>
+httpConfig</H3>
+<PRE>
+protected transient HTTPAdv <B>httpConfig</B></PRE>
+<DL>
+<DD>HTTP Config Advertisement
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="httpEnabled"><!-- --></A><H3>
+httpEnabled</H3>
+<PRE>
+protected transient boolean <B>httpEnabled</B></PRE>
+<DL>
+<DD>Default HTTP transport state
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="infraPeerGroupConfig"><!-- --></A><H3>
+infraPeerGroupConfig</H3>
+<PRE>
+protected transient PeerGroupConfigAdv <B>infraPeerGroupConfig</B></PRE>
+<DL>
+<DD>Infrastructure Peer Group Configuration
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="NetworkConfigurator()"><!-- --></A><H3>
+NetworkConfigurator</H3>
+<PRE>
+public <B>NetworkConfigurator</B>()</PRE>
+<DL>
+<DD>Creates the default NetworkConfigurator. The configuration is stored  with a default configuration mode of EDGE_NODE
+<P>
+</DL>
+<HR>
+
+<A NAME="NetworkConfigurator(int, java.net.URI)"><!-- --></A><H3>
+NetworkConfigurator</H3>
+<PRE>
+public <B>NetworkConfigurator</B>(int&nbsp;mode,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates a NetworkConfigurator with the default configuration of the
+ specified mode. <p/>Valid modes include ADHOC_NODE, EDGE_NODE, RDV_NODE
+ PROXY_NODE, RELAY_NODE, RDV_RELAY_PROXY_NODE, or any combination of
+ specific configuration.<p/> e.g. RDV_NODE | HTTP_CLIENT
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - the new configuration mode<DD><CODE>storeHome</CODE> - the URI to persistent store<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMode(int)"><CODE>setMode(int)</CODE></A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="newAdHocConfiguration(java.net.URI)"><!-- --></A><H3>
+newAdHocConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newAdHocConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default AD-HOC configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default AD-HOC configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newEdgeConfiguration(java.net.URI)"><!-- --></A><H3>
+newEdgeConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newEdgeConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Edge configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default AD-HOC configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newRdvConfiguration(java.net.URI)"><!-- --></A><H3>
+newRdvConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newRdvConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Rendezvous configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default Rendezvous configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newRelayConfiguration(java.net.URI)"><!-- --></A><H3>
+newRelayConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newRelayConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Relay configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default Relay configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newRdvRelayConfiguration(java.net.URI)"><!-- --></A><H3>
+newRdvRelayConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newRdvRelayConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Rendezvous configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default Rendezvous configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newProxyConfiguration(java.net.URI)"><!-- --></A><H3>
+newProxyConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newProxyConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Proxy configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with defaultProxy configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newRdvRelayProxyConfiguration(java.net.URI)"><!-- --></A><H3>
+newRdvRelayProxyConfiguration</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>newRdvRelayProxyConfiguration</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</PRE>
+<DL>
+<DD>Creates NetworkConfigurator instance with default Rendezvous, Relay, Proxy configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>storeHome</CODE> - the URI to persistent store
+<DT><B>Returns:</B><DD>NetworkConfigurator instance with default Rendezvous, Relay, Proxy configuration</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDescription(java.lang.String)"><!-- --></A><H3>
+setDescription</H3>
+<PRE>
+public void <B>setDescription</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</PRE>
+<DL>
+<DD>Sets PlaformConfig Peer Description element
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - the peer description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHome(java.io.File)"><!-- --></A><H3>
+setHome</H3>
+<PRE>
+public void <B>setHome</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;home)</PRE>
+<DL>
+<DD>Set the current directory for configuration and cache persistent store
+ <p/>(default is $CWD/.jxta)
+ <p/>
+ <dt>Simple example :</dt>
+ <pre>
+  <code>
+   //Create an application home
+   File appHome = new File(System.getProperty("JXTA_HOME", ".cache"));
+   //Create an instance home under the application home
+   File instanceHome = new File(appHome, instanceName);
+   jxtaConfig.setHome(instanceHome);
+   </code>
+ </pre>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>home</CODE> - the new home value<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getHome()"><CODE>getHome()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHome()"><!-- --></A><H3>
+getHome</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A> <B>getHome</B>()</PRE>
+<DL>
+<DD>Returns the current directory for configuration and cache persistent 
+ store. This is the same location as returned by <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getStoreHome()"><CODE>getStoreHome()</CODE></A>
+ which is more general than this method.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Returns the current home directory<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setHome(java.io.File)"><CODE>setHome(java.io.File)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStoreHome()"><!-- --></A><H3>
+getStoreHome</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getStoreHome</B>()</PRE>
+<DL>
+<DD>Returns the location which will serve as the parent for all stored items
+ used by JXTA.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The location which will serve as the parent for all stored
+         items used by JXTA.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html#getStoreHome()"><CODE>PeerGroup.getStoreHome()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setStoreHome(java.net.URI)"><!-- --></A><H3>
+setStoreHome</H3>
+<PRE>
+public void <B>setStoreHome</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;newHome)</PRE>
+<DL>
+<DD>Sets the location which will serve as the parent for all stored items
+ used by JXTA.
+<P>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html#getStoreHome()"><CODE>PeerGroup.getStoreHome()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpEnabled(boolean)"><!-- --></A><H3>
+setHttpEnabled</H3>
+<PRE>
+public void <B>setHttpEnabled</B>(boolean&nbsp;enabled)</PRE>
+<DL>
+<DD>Toggles HTTP transport state
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enabled</CODE> - if true, enables HTTP transport</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpIncoming(boolean)"><!-- --></A><H3>
+setHttpIncoming</H3>
+<PRE>
+public void <B>setHttpIncoming</B>(boolean&nbsp;incoming)</PRE>
+<DL>
+<DD>Toggles the HTTP transport server (incoming) mode
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>incoming</CODE> - toggles HTTP transport server mode</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpOutgoing(boolean)"><!-- --></A><H3>
+setHttpOutgoing</H3>
+<PRE>
+public void <B>setHttpOutgoing</B>(boolean&nbsp;outgoing)</PRE>
+<DL>
+<DD>Toggles the HTTP transport client (outgoing) mode
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>outgoing</CODE> - toggles HTTP transport client mode</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpPort(int)"><!-- --></A><H3>
+setHttpPort</H3>
+<PRE>
+public void <B>setHttpPort</B>(int&nbsp;port)</PRE>
+<DL>
+<DD>Sets the HTTP listening port (default 9901)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>port</CODE> - the new HTTP port value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpInterfaceAddress(java.lang.String)"><!-- --></A><H3>
+setHttpInterfaceAddress</H3>
+<PRE>
+public void <B>setHttpInterfaceAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address)</PRE>
+<DL>
+<DD>Sets the HTTP interface Address to bind the HTTP transport to
+ <p/>e.g. "192.168.1.1"
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - the new address value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setHttpPublicAddress(java.lang.String, boolean)"><!-- --></A><H3>
+setHttpPublicAddress</H3>
+<PRE>
+public void <B>setHttpPublicAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address,
+                                 boolean&nbsp;exclusive)</PRE>
+<DL>
+<DD>Sets the HTTP JXTA Public Address
+ e.g. "192.168.1.1:9700"
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - the HTTP transport public address<DD><CODE>exclusive</CODE> - determines whether an address is advertised exclusively</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureID(net.jxta.id.ID)"><!-- --></A><H3>
+setInfrastructureID</H3>
+<PRE>
+public void <B>setInfrastructureID</B>(<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id)</PRE>
+<DL>
+<DD>Sets the ID which will be used for new net peer group instances.
+ <p/>
+ <p/>By Setting an alternate infrastructure PeerGroup ID (aka NetPeerGroup),
+ it prevents heterogeneous infrastructure PeerGroups from intersecting.
+ <p/>This is highly recommended practice for application deployment
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - the new infrastructure PeerGroupID as a string<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroupFactory.html#setNetPGID(net.jxta.peergroup.PeerGroupID)"><CODE>PeerGroupFactory.setNetPGID(net.jxta.peergroup.PeerGroupID)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureID(java.lang.String)"><!-- --></A><H3>
+setInfrastructureID</H3>
+<PRE>
+public void <B>setInfrastructureID</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;idStr)</PRE>
+<DL>
+<DD>Sets the ID which will be used for new net peer group instances.
+ <p/>
+ <p/>By Setting an alternate infrastructure PeerGroup ID (aka NetPeerGroup),
+ it prevents heterogeneous infrastructure PeerGroups from intersecting.
+ <p/>This is highly recommended practice for application deployment
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>idStr</CODE> - the new infrastructure PeerGroupID as a string<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroupFactory.html#setNetPGID(net.jxta.peergroup.PeerGroupID)"><CODE>PeerGroupFactory.setNetPGID(net.jxta.peergroup.PeerGroupID)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInfrastructureIDStr()"><!-- --></A><H3>
+getInfrastructureIDStr</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInfrastructureIDStr</B>()</PRE>
+<DL>
+<DD>Gets the ID which will be used for new net peer group instances.
+ <p/>
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the infrastructure PeerGroupID as a string</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureName(java.lang.String)"><!-- --></A><H3>
+setInfrastructureName</H3>
+<PRE>
+public void <B>setInfrastructureName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Sets the infrastructure PeerGroup name meta-data
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - the Infrastructure PeerGroup name<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroupFactory.html#setNetPGName(java.lang.String)"><CODE>PeerGroupFactory.setNetPGName(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInfrastructureName()"><!-- --></A><H3>
+getInfrastructureName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInfrastructureName</B>()</PRE>
+<DL>
+<DD>Gets the infrastructure PeerGroup name meta-data
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the Infrastructure PeerGroup name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureDescriptionStr(java.lang.String)"><!-- --></A><H3>
+setInfrastructureDescriptionStr</H3>
+<PRE>
+public void <B>setInfrastructureDescriptionStr</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</PRE>
+<DL>
+<DD>Sets the infrastructure PeerGroup description meta-data
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - the infrastructure PeerGroup description<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroupFactory.html#setNetPGDesc(java.lang.String)"><CODE>PeerGroupFactory.setNetPGDesc(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInfrastructureDescriptionStr()"><!-- --></A><H3>
+getInfrastructureDescriptionStr</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInfrastructureDescriptionStr</B>()</PRE>
+<DL>
+<DD>Returns the infrastructure PeerGroup description meta-data
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the infrastructure PeerGroup description meta-data</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureDesc(net.jxta.document.XMLElement)"><!-- --></A><H3>
+setInfrastructureDesc</H3>
+<PRE>
+public void <B>setInfrastructureDesc</B>(<A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;description)</PRE>
+<DL>
+<DD>Sets the infrastructure PeerGroup description meta-data
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - the infrastructure PeerGroup description<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroupFactory.html#setNetPGDesc(java.lang.String)"><CODE>PeerGroupFactory.setNetPGDesc(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMode(int)"><!-- --></A><H3>
+setMode</H3>
+<PRE>
+public void <B>setMode</B>(int&nbsp;mode)</PRE>
+<DL>
+<DD>Sets the current node configuration mode.
+ <p/>The default mode is EDGE, unless modified at construction time.
+ A node configuration mode defined a preset configuration
+ parameters based on a operating mode. i.e. an EDGE mode, enable
+ client/server side tcp, multicast, client side http, RelayService
+ client mode.
+ <p/> Valid modes include EDGE, RDV_SERVER,
+ RELAY_OFF, RELAY_CLIENT, RELAY_SERVER, PROXY_SERVER, or any combination
+ of which.<p/> e.g. RDV_SERVER + RELAY_SERVER
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - the new configuration mode<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getMode()"><CODE>getMode()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMode()"><!-- --></A><H3>
+getMode</H3>
+<PRE>
+public int <B>getMode</B>()</PRE>
+<DL>
+<DD>Returns the current configuration mode
+ <p/>The default mode is EDGE, unless modified at construction time or through
+ Method <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMode(int)"><CODE>setMode(int)</CODE></A>.  A node configuration mode defined a preset configuration
+ parameters based on a operating mode. i.e. an EDGE mode, enable
+ client/server side tcp, multicast, client side http, RelayService
+ client mode.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>mode  the current mode value<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMode(int)"><CODE>setMode(int)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMulticastSize(int)"><!-- --></A><H3>
+setMulticastSize</H3>
+<PRE>
+public void <B>setMulticastSize</B>(int&nbsp;size)</PRE>
+<DL>
+<DD>Sets the IP group multicast packet size
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>size</CODE> - the new multicast packet</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMulticastSize()"><!-- --></A><H3>
+getMulticastSize</H3>
+<PRE>
+public int <B>getMulticastSize</B>()</PRE>
+<DL>
+<DD>Gets the IP group multicast packet size
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the multicast packet</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMulticastAddress(java.lang.String)"><!-- --></A><H3>
+setMulticastAddress</H3>
+<PRE>
+public void <B>setMulticastAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mcastAddress)</PRE>
+<DL>
+<DD>Sets the IP group multicast address (default 224.0.1.85)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mcastAddress</CODE> - the new multicast group address<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMulticastPort(int)"><CODE>setMulticastPort(int)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMulticastPort(int)"><!-- --></A><H3>
+setMulticastPort</H3>
+<PRE>
+public void <B>setMulticastPort</B>(int&nbsp;port)</PRE>
+<DL>
+<DD>Sets the IP group multicast port (default 1234)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>port</CODE> - the new IP group multicast port<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setMulticastAddress(java.lang.String)"><CODE>setMulticastAddress(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setName(java.lang.String)"><!-- --></A><H3>
+setName</H3>
+<PRE>
+public void <B>setName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Sets the node name
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - node name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getName</B>()</PRE>
+<DL>
+<DD>Gets the node name
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>node name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPrincipal(java.lang.String)"><!-- --></A><H3>
+setPrincipal</H3>
+<PRE>
+public void <B>setPrincipal</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;principal)</PRE>
+<DL>
+<DD>Sets the Principal for the peer root certificate
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>principal</CODE> - the new principal value<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPassword(java.lang.String)"><CODE>setPassword(java.lang.String)</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrincipal()"><CODE>getPrincipal()</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrincipal(java.lang.String)"><CODE>setPrincipal(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPrincipal()"><!-- --></A><H3>
+getPrincipal</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPrincipal</B>()</PRE>
+<DL>
+<DD>Gets the Principal for the peer root certificate
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>principal  if a principal is set, null otherwise<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPassword(java.lang.String)"><CODE>setPassword(java.lang.String)</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrincipal()"><CODE>getPrincipal()</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrincipal(java.lang.String)"><CODE>setPrincipal(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCertificate(java.security.cert.X509Certificate)"><!-- --></A><H3>
+setCertificate</H3>
+<PRE>
+public void <B>setCertificate</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</PRE>
+<DL>
+<DD>Sets the public Certificate for this configuration.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - the new cert value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCertificate()"><!-- --></A><H3>
+getCertificate</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A> <B>getCertificate</B>()</PRE>
+<DL>
+<DD>Returns the public Certificate for this configuration.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>X509Certificate</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCertificateChain(java.security.cert.X509Certificate[])"><!-- --></A><H3>
+setCertificateChain</H3>
+<PRE>
+public void <B>setCertificateChain</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]&nbsp;certificateChain)</PRE>
+<DL>
+<DD>Sets the public Certificate chain for this configuration.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>certificateChain</CODE> - the new Certificate chain value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCertificateChain()"><!-- --></A><H3>
+getCertificateChain</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[] <B>getCertificateChain</B>()</PRE>
+<DL>
+<DD>Gets the public Certificate chain for this configuration.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>X509Certificate chain</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPrivateKey(java.security.PrivateKey)"><!-- --></A><H3>
+setPrivateKey</H3>
+<PRE>
+public void <B>setPrivateKey</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;subjectPkey)</PRE>
+<DL>
+<DD>Sets the Subject private key
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>subjectPkey</CODE> - the subject private key</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPrivateKey()"><!-- --></A><H3>
+getPrivateKey</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A> <B>getPrivateKey</B>()</PRE>
+<DL>
+<DD>Gets the Subject private key
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the subject private key</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKeyStoreLocation(java.net.URI)"><!-- --></A><H3>
+setKeyStoreLocation</H3>
+<PRE>
+public void <B>setKeyStoreLocation</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;keyStoreLocation)</PRE>
+<DL>
+<DD>Sets freestanding keystore location
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>keyStoreLocation</CODE> - the absolute location of the freestanding keystore</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyStoreLocation()"><!-- --></A><H3>
+getKeyStoreLocation</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getKeyStoreLocation</B>()</PRE>
+<DL>
+<DD>Gets the freestanding keystore location
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the location of the freestanding keystore</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPassword(java.lang.String)"><!-- --></A><H3>
+setPassword</H3>
+<PRE>
+public void <B>setPassword</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</PRE>
+<DL>
+<DD>Sets the password used to sign the private key of the root certificate
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>password</CODE> - the new password value<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPassword(java.lang.String)"><CODE>setPassword(java.lang.String)</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrincipal()"><CODE>getPrincipal()</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrincipal(java.lang.String)"><CODE>setPrincipal(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPassword()"><!-- --></A><H3>
+getPassword</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPassword</B>()</PRE>
+<DL>
+<DD>Gets the password used to sign the private key of the root certificate
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>password  if a password is set, null otherwise<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPassword(java.lang.String)"><CODE>setPassword(java.lang.String)</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#getPrincipal()"><CODE>getPrincipal()</CODE></A>, 
+<A HREF="../../../net/jxta/platform/NetworkConfigurator.html#setPrincipal(java.lang.String)"><CODE>setPrincipal(java.lang.String)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPeerID(net.jxta.peer.PeerID)"><!-- --></A><H3>
+setPeerID</H3>
+<PRE>
+public void <B>setPeerID</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid)</PRE>
+<DL>
+<DD>Sets the PeerID (by default, a new PeerID is generated).
+ <p/>Note: Persist the PeerID generated, or use load()
+ to avoid overridding a node's PeerID between restarts.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerid</CODE> - the new <code>net.jxta.peer.PeerID</code></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerID()"><!-- --></A><H3>
+getPeerID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>getPeerID</B>()</PRE>
+<DL>
+<DD>Gets the PeerID
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>peerid  the <code>net.jxta.peer.PeerID</code> value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRdvSeedingURI(java.net.URI)"><!-- --></A><H3>
+addRdvSeedingURI</H3>
+<PRE>
+public void <B>addRdvSeedingURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</PRE>
+<DL>
+<DD>Sets Rendezvous Seeding URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvous.cgi?3
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURI</CODE> - Rendezvous service seeding URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRdvACLURI(java.net.URI)"><!-- --></A><H3>
+setRdvACLURI</H3>
+<PRE>
+public void <B>setRdvACLURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;aclURI)</PRE>
+<DL>
+<DD>Sets Rendezvous Access Control URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvousACL.cgi?3
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>aclURI</CODE> - Rendezvous Access Control URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRdvACLURI()"><!-- --></A><H3>
+getRdvACLURI</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getRdvACLURI</B>()</PRE>
+<DL>
+<DD>Gets Rendezvous Access Control URI if set
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/rendezvousACL.cgi?3
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>aclURI Rendezvous Access Control URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRelayACLURI(java.net.URI)"><!-- --></A><H3>
+setRelayACLURI</H3>
+<PRE>
+public void <B>setRelayACLURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;aclURI)</PRE>
+<DL>
+<DD>Sets Relay Access Control URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relayACL.cgi?3
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>aclURI</CODE> - Relay Access Control URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRelayACLURI()"><!-- --></A><H3>
+getRelayACLURI</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getRelayACLURI</B>()</PRE>
+<DL>
+<DD>Gets Relay Access Control URI if set
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relayACL.cgi?3
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>aclURI Relay Access Control URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRelayMaxClients(int)"><!-- --></A><H3>
+setRelayMaxClients</H3>
+<PRE>
+public void <B>setRelayMaxClients</B>(int&nbsp;relayMaxClients)</PRE>
+<DL>
+<DD>Sets the RelayService maximum number of simultaneous relay clients
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>relayMaxClients</CODE> - the new relayMaxClients value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRelaySeedingURI(java.net.URI)"><!-- --></A><H3>
+addRelaySeedingURI</H3>
+<PRE>
+public void <B>addRelaySeedingURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</PRE>
+<DL>
+<DD>Sets the RelayService Seeding URI
+ <p/>e.g. http://rdv.jxtahosts.net/cgi-bin/relays.cgi?3
+ <p/>A seeding URI (when read) is expected to provide a list of
+ physical endpoint addresse(s) to relay peers
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURI</CODE> - RelayService seeding URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRendezvousMaxClients(int)"><!-- --></A><H3>
+setRendezvousMaxClients</H3>
+<PRE>
+public void <B>setRendezvousMaxClients</B>(int&nbsp;rdvMaxClients)</PRE>
+<DL>
+<DD>Sets the RendezVousService maximum number of simultaneous rendezvous clients
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rdvMaxClients</CODE> - the new rendezvousMaxClients value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpEnabled(boolean)"><!-- --></A><H3>
+setTcpEnabled</H3>
+<PRE>
+public void <B>setTcpEnabled</B>(boolean&nbsp;enabled)</PRE>
+<DL>
+<DD>Toggles TCP transport state
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enabled</CODE> - if true, enables TCP transport</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpPort(int)"><!-- --></A><H3>
+setTcpPort</H3>
+<PRE>
+public void <B>setTcpPort</B>(int&nbsp;port)</PRE>
+<DL>
+<DD>Sets the TCP transport listening port (default 9701)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>port</CODE> - the new tcpPort value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpStartPort(int)"><!-- --></A><H3>
+setTcpStartPort</H3>
+<PRE>
+public void <B>setTcpStartPort</B>(int&nbsp;start)</PRE>
+<DL>
+<DD>Sets the lowest port on which the TCP Transport will listen if configured
+ to do so. Valid values are <code>-1</code>, <code>0</code> and
+ <code>1-65535</code>. The <code>-1</code> value is used to signify that
+ the port range feature should be disabled. The <code>0</code> specifies
+ that the Socket API dynamic port allocation should be used. For values
+ <code>1-65535</code> the value must be equal to or less than the value
+ used for end port.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>start</CODE> - the lowest port on which to listen.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpEndPort(int)"><!-- --></A><H3>
+setTcpEndPort</H3>
+<PRE>
+public void <B>setTcpEndPort</B>(int&nbsp;end)</PRE>
+<DL>
+<DD>Returns the highest port on which the TCP Transport will listen if
+ configured to do so. Valid values are <code>-1</code>, <code>0</code> and
+ <code>1-65535</code>. The <code>-1</code> value is used to signify that
+ the port range feature should be disabled. The <code>0</code> specifies
+ that the Socket API dynamic port allocation should be used. For values
+ <code>1-65535</code> the value must be equal to or greater than the value
+ used for start port.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>end</CODE> - the new TCP end port</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpIncoming(boolean)"><!-- --></A><H3>
+setTcpIncoming</H3>
+<PRE>
+public void <B>setTcpIncoming</B>(boolean&nbsp;incoming)</PRE>
+<DL>
+<DD>Toggles TCP transport server (incoming) mode (default is on)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>incoming</CODE> - the new TCP server mode</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpOutgoing(boolean)"><!-- --></A><H3>
+setTcpOutgoing</H3>
+<PRE>
+public void <B>setTcpOutgoing</B>(boolean&nbsp;outgoing)</PRE>
+<DL>
+<DD>Toggles TCP transport client (outgoing) mode (default is true)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>outgoing</CODE> - the new tcpOutgoing value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpInterfaceAddress(java.lang.String)"><!-- --></A><H3>
+setTcpInterfaceAddress</H3>
+<PRE>
+public void <B>setTcpInterfaceAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address)</PRE>
+<DL>
+<DD>Sets the TCP transport interface address
+ <p/>e.g. "192.168.1.1"
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - the TCP transport interface address</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTcpPublicAddress(java.lang.String, boolean)"><!-- --></A><H3>
+setTcpPublicAddress</H3>
+<PRE>
+public void <B>setTcpPublicAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;address,
+                                boolean&nbsp;exclusive)</PRE>
+<DL>
+<DD>Sets the node public address
+ <p/>e.g. "192.168.1.1:9701"
+ <p/>This address is the physical address defined in a node's
+ AccessPointAdvertisement.  This often required for NAT'd/FW nodes
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - the TCP transport public address<DD><CODE>exclusive</CODE> - public address advertised exclusively</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUseMulticast(boolean)"><!-- --></A><H3>
+setUseMulticast</H3>
+<PRE>
+public void <B>setUseMulticast</B>(boolean&nbsp;multicastOn)</PRE>
+<DL>
+<DD>Toggles whether to use IP group multicast (default is true)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>multicastOn</CODE> - the new useMulticast value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUseOnlyRelaySeeds(boolean)"><!-- --></A><H3>
+setUseOnlyRelaySeeds</H3>
+<PRE>
+public void <B>setUseOnlyRelaySeeds</B>(boolean&nbsp;useOnlyRelaySeeds)</PRE>
+<DL>
+<DD>Determines whether to restrict RelayService leases to those defined in
+ the seed list
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>useOnlyRelaySeeds</CODE> - restrict RelayService lease to seed list</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUseOnlyRendezvousSeeds(boolean)"><!-- --></A><H3>
+setUseOnlyRendezvousSeeds</H3>
+<PRE>
+public void <B>setUseOnlyRendezvousSeeds</B>(boolean&nbsp;useOnlyRendezvouSeeds)</PRE>
+<DL>
+<DD>Determines whether to restrict RendezvousService leases to those defined in
+ the seed list
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>useOnlyRendezvouSeeds</CODE> - restrict RendezvousService lease to seed list</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addSeedRelay(java.net.URI)"><!-- --></A><H3>
+addSeedRelay</H3>
+<PRE>
+public void <B>addSeedRelay</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</PRE>
+<DL>
+<DD>Adds RelayService peer seed address
+ <p/>A RelayService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURI</CODE> - the relay seed URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addSeedRendezvous(java.net.URI)"><!-- --></A><H3>
+addSeedRendezvous</H3>
+<PRE>
+public void <B>addSeedRendezvous</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;seedURI)</PRE>
+<DL>
+<DD>Adds Rendezvous peer seed, physical endpoint address
+ <p/>A RendezVousService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURI</CODE> - the rendezvous seed URI</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="exists()"><!-- --></A><H3>
+exists</H3>
+<PRE>
+public boolean <B>exists</B>()</PRE>
+<DL>
+<DD>Returns true if a PlatformConfig file exist under store home
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if a PlatformConfig file exist under store home</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPeerId(java.lang.String)"><!-- --></A><H3>
+setPeerId</H3>
+<PRE>
+public void <B>setPeerId</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerIdStr)</PRE>
+<DL>
+<DD>Sets the PeerID for this Configuration
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerIdStr</CODE> - the new PeerID as a string</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRdvSeedingURI(java.lang.String)"><!-- --></A><H3>
+addRdvSeedingURI</H3>
+<PRE>
+public void <B>addRdvSeedingURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;seedURIStr)</PRE>
+<DL>
+<DD>Sets the new RendezvousService seeding URI as a string.
+ <p/>A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to rendezvous peers
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURIStr</CODE> - the new rendezvous seed URI as a string</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRelaySeedingURI(java.lang.String)"><!-- --></A><H3>
+addRelaySeedingURI</H3>
+<PRE>
+public void <B>addRelaySeedingURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;seedURIStr)</PRE>
+<DL>
+<DD>Sets the new RelayService seeding URI as a string.
+ <p/>A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to relay peers
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURIStr</CODE> - the new RelayService seed URI as a string</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRelaySeedURIs(java.util.List)"><!-- --></A><H3>
+setRelaySeedURIs</H3>
+<PRE>
+public void <B>setRelaySeedURIs</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seeds)</PRE>
+<DL>
+<DD>Sets the List relaySeeds represented as Strings
+ <p/>A RelayService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seeds</CODE> - the Set RelayService seed URIs as a string</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRelaySeedingURIs(java.util.Set)"><!-- --></A><H3>
+setRelaySeedingURIs</H3>
+<PRE>
+public void <B>setRelaySeedingURIs</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedURIs)</PRE>
+<DL>
+<DD>Sets the relaySeeds represented as Strings
+ <p/>A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to relay peers
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURIs</CODE> - the List relaySeeds represented as Strings</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearRelaySeeds()"><!-- --></A><H3>
+clearRelaySeeds</H3>
+<PRE>
+public void <B>clearRelaySeeds</B>()</PRE>
+<DL>
+<DD>Clears the List of RelayService seeds
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearRelaySeedingURIs()"><!-- --></A><H3>
+clearRelaySeedingURIs</H3>
+<PRE>
+public void <B>clearRelaySeedingURIs</B>()</PRE>
+<DL>
+<DD>Clears the List of RelayService seeding URIs
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRendezvousSeeds(java.util.Set)"><!-- --></A><H3>
+setRendezvousSeeds</H3>
+<PRE>
+public void <B>setRendezvousSeeds</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seeds)</PRE>
+<DL>
+<DD>Sets the List of RendezVousService seeds represented as Strings
+ <p/>A RendezvousService seed is defined as a physical endpoint address
+ <p/>e.g. http://192.168.1.1:9700, or tcp://192.168.1.1:9701
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seeds</CODE> - the Set of rendezvousSeeds represented as Strings</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRendezvousSeedURIs(java.util.List)"><!-- --></A><H3>
+setRendezvousSeedURIs</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setRendezvousSeedURIs</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedingURIs)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>The name of this method is inconsistent with it's function! 
+ It sets the <strong>seeding</strong> URIs and not the seed URIs. Use
+ <CODE>#setRendezvousSeedingURIs()</CODE> instead.</I>
+<P>
+<DD>Sets the List of RendezVousService seeding URIs represented as Strings.
+ A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to rendezvous peers.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURIs</CODE> - the List rendezvousSeeds represented as Strings</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRendezvousSeedingURIs(java.util.List)"><!-- --></A><H3>
+setRendezvousSeedingURIs</H3>
+<PRE>
+public void <B>setRendezvousSeedingURIs</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;seedingURIs)</PRE>
+<DL>
+<DD>Sets the List of RendezVousService seeding URIs represented as Strings.
+ A seeding URI (when read) is expected to provide a list of
+ physical endpoint address to rendezvous peers.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seedURIs</CODE> - the List rendezvousSeeds represented as Strings.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearRendezvousSeeds()"><!-- --></A><H3>
+clearRendezvousSeeds</H3>
+<PRE>
+public void <B>clearRendezvousSeeds</B>()</PRE>
+<DL>
+<DD>Clears the list of RendezVousService seeds
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearRendezvousSeedURIs()"><!-- --></A><H3>
+clearRendezvousSeedURIs</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>clearRendezvousSeedURIs</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>The name of this method is inconsistent with it's function! 
+ It clears the <strong>seeding</strong> URIs and not the seed URIs. Use
+ <A HREF="../../../net/jxta/platform/NetworkConfigurator.html#clearRendezvousSeedingURIs()"><CODE>clearRendezvousSeedingURIs()</CODE></A> instead.</I>
+<P>
+<DD>Clears the list of RendezVousService seeding URIs
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearRendezvousSeedingURIs()"><!-- --></A><H3>
+clearRendezvousSeedingURIs</H3>
+<PRE>
+public void <B>clearRendezvousSeedingURIs</B>()</PRE>
+<DL>
+<DD>Clears the list of RendezVousService seeding URIs
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="load()"><!-- --></A><H3>
+load</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A> <B>load</B>()
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A>,
+                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/cert/CertificateException.html?is-external=true" title="class or interface in javax.security.cert">CertificateException</A></PRE>
+<DL>
+<DD>Load a configuration from the specified store home uri
+ <p/>
+ e.g. file:/export/dist/EdgeConfig.xml, e.g. http://configserver.net/configservice?Edge
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The loaded configuration.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an i/o error occurs
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/cert/CertificateException.html?is-external=true" title="class or interface in javax.security.cert">CertificateException</A></CODE> - if the MembershipService is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="load(java.net.URI)"><!-- --></A><H3>
+load</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A> <B>load</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;uri)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A>,
+                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/cert/CertificateException.html?is-external=true" title="class or interface in javax.security.cert">CertificateException</A></PRE>
+<DL>
+<DD>Loads a configuration from a specified uri
+ <p/>
+ e.g. file:/export/dist/EdgeConfig.xml, e.g. http://configserver.net/configservice?Edge
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>uri</CODE> - the URI to PlatformConfig
+<DT><B>Returns:</B><DD>The loaded configuration.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an i/o error occurs
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/cert/CertificateException.html?is-external=true" title="class or interface in javax.security.cert">CertificateException</A></CODE> - if the MemebershipService is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="save()"><!-- --></A><H3>
+save</H3>
+<PRE>
+public void <B>save</B>()
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Persists a PlatformConfig advertisement under getStoreHome()+"/PlaformConfig"
+ <p/>
+ Home may be overridden by a call to setHome()
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a failure saving the PlatformConfig.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/NetworkConfigurator.html#load()"><CODE>load()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParmDoc(boolean, net.jxta.document.Advertisement)"><!-- --></A><H3>
+getParmDoc</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument</A> <B>getParmDoc</B>(boolean&nbsp;enabled,
+                                 <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</PRE>
+<DL>
+<DD>Returns a XMLDocument representation of an Advertisement
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enabled</CODE> - whether the param doc is enabled, adds a "isOff"
+                element if disabled<DD><CODE>adv</CODE> - the Advertisement to retrieve the param doc from
+<DT><B>Returns:</B><DD>the parmDoc value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createHttpAdv()"><!-- --></A><H3>
+createHttpAdv</H3>
+<PRE>
+protected HTTPAdv <B>createHttpAdv</B>()</PRE>
+<DL>
+<DD>Creates an HTTP transport advertisement
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>an HTTP transport advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPSEAdv(java.lang.String, java.lang.String)"><!-- --></A><H3>
+createPSEAdv</H3>
+<PRE>
+protected PSEConfigAdv <B>createPSEAdv</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;principal,
+                                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;password)</PRE>
+<DL>
+<DD>Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key. If this seed information is present the PSE
+ Membership Service will require an initial authentication to unlock the
+ encrypted private key before creating the PSE keystore. The newly created
+ PSE keystore will be "seeded" with the certificate chain and the private key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>principal</CODE> - principal<DD><CODE>password</CODE> - the password used to sign the private key of the root certificate
+<DT><B>Returns:</B><DD>PSEConfigAdv an PSE config advertisement<DT><B>See Also:</B><DD><CODE>net.jxta.impl.protocol.PSEConfigAdv</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPSEAdv(java.security.cert.X509Certificate)"><!-- --></A><H3>
+createPSEAdv</H3>
+<PRE>
+protected PSEConfigAdv <B>createPSEAdv</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</PRE>
+<DL>
+<DD>Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key. If this seed information is present the PSE
+ Membership Service will require an initial authentication to unlock the
+ encrypted private key before creating the PSE keystore. The newly created
+ PSE keystore will be "seeded" with the certificate chain and the private key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - X509Certificate
+<DT><B>Returns:</B><DD>PSEConfigAdv an PSE config advertisement<DT><B>See Also:</B><DD><CODE>net.jxta.impl.protocol.PSEConfigAdv</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPSEAdv(java.security.cert.X509Certificate[])"><!-- --></A><H3>
+createPSEAdv</H3>
+<PRE>
+protected PSEConfigAdv <B>createPSEAdv</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]&nbsp;certificateChain)</PRE>
+<DL>
+<DD>Creates Personal Security Environment Config Advertisement
+ <p/>The configuration advertisement can include an optional seed certificate
+ chain and encrypted private key. If this seed information is present the PSE
+ Membership Service will require an initial authentication to unlock the
+ encrypted private key before creating the PSE keystore. The newly created
+ PSE keystore will be "seeded" with the certificate chain and the private key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>certificateChain</CODE> - X509Certificate[]
+<DT><B>Returns:</B><DD>PSEConfigAdv an PSE config advertisement<DT><B>See Also:</B><DD><CODE>net.jxta.impl.protocol.PSEConfigAdv</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createProxyAdv()"><!-- --></A><H3>
+createProxyAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument</A> <B>createProxyAdv</B>()</PRE>
+<DL>
+<DD>Creates a ProxyService configuration advertisement
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ProxyService configuration advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRdvConfigAdv()"><!-- --></A><H3>
+createRdvConfigAdv</H3>
+<PRE>
+protected RdvConfigAdv <B>createRdvConfigAdv</B>()</PRE>
+<DL>
+<DD>Creates a RendezVousService configuration advertisement with default values (EDGE)
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a RdvConfigAdv</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRelayConfigAdv()"><!-- --></A><H3>
+createRelayConfigAdv</H3>
+<PRE>
+protected RelayConfigAdv <B>createRelayConfigAdv</B>()</PRE>
+<DL>
+<DD>Creates a RelayService configuration advertisement with default values (EDGE)
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a RelayConfigAdv</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createTcpAdv()"><!-- --></A><H3>
+createTcpAdv</H3>
+<PRE>
+protected TCPAdv <B>createTcpAdv</B>()</PRE>
+<DL>
+<DD>Creates an TCP transport advertisement with the platform default values.
+ multicast on, 224.0.1.85:1234, with a max packet size of 16K
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a TCP transport advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createInfraConfigAdv()"><!-- --></A><H3>
+createInfraConfigAdv</H3>
+<PRE>
+protected PeerGroupConfigAdv <B>createInfraConfigAdv</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPlatformConfig()"><!-- --></A><H3>
+getPlatformConfig</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A> <B>getPlatformConfig</B>()</PRE>
+<DL>
+<DD>Returns a PlatformConfig which represents a platform configuration.
+ <p/>Fine tuning is achieved through accessing each configured advertisement
+ and achieved through accessing each configured advertisement and modifying
+ each object directly.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the PeerPlatformConfig Advertisement</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetworkConfigurator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkManager.html" title="class in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/NetworkConfigurator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetworkConfigurator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

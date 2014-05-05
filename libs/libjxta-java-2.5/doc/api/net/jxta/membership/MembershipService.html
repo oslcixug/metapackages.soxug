@@ -1,0 +1,640 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MembershipService (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MembershipService (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MembershipService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/membership/InteractiveAuthenticator.html" title="interface in net.jxta.membership"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/membership/MembershipService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MembershipService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.membership</FONT>
+<BR>
+Interface MembershipService</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A>, <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>MembershipService</B><DT>extends <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></DL>
+</PRE>
+
+<P>
+Allows a peer to establish an identity within a peer group. Identities are 
+  used by services and applications to determine the capabilities available to 
+  peers. A peer have any number of identities at one time. Once an identity 
+  has been established a Credential object is available which allows the peer 
+  to prove that it rightfully has that identity.
+
+  <p/>The sequence for associating an identity with a peer within a peer
+  group is as follows:
+
+ <p/><table>
+  <tr><td valign="top"><b>Apply</b></td>
+ <td>An application or service provides the membership service with an
+ initial credential which may be used by the membership service to determine
+  the method of authentication to be used for establishing the identity.
+ If the membership service implementations allows authentication using the
+ requested mechanism then an <A HREF="../../../net/jxta/membership/Authenticator.html" title="interface in net.jxta.membership"><CODE>Authenticator</CODE></A> object is returned.
+ </td></tr>
+
+  <tr><td valign="top"><b>Join</b></td>
+ <td>The application or service completes the authenticator. This may involve
+ presenting a user interface, completing challenges, etc. How the
+ authenticator is completed depends on the type of membership service and
+ authenticator in use.
+
+ <p/>Once completed, the authenticator is returned to the membership service.
+ If the authenticator has been correctly completed, a new credential for the
+ new identity will be available to the peer from the membership service.
+ </td></tr>
+
+  <tr><td valign="top"><b>Resign</b></td>
+ <td>Whenever the application or service no longer wishes to no longer use the
+ identities it has claimed, it may resign from the peergroup. This will cause
+ any identity credentials held by the membership service to  discarded.
+ </td></tr>
+  </table>
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential"><CODE>Credential</CODE></A>, 
+<A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential"><CODE>AuthenticationCredential</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#ADD_CREDENTIAL_PROPERTY">ADD_CREDENTIAL_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property name for credential addition bound property.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#DEFAULT_CREDENTIAL_PROPERTY">DEFAULT_CREDENTIAL_PROPERTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property name for the default credential bound property.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS">START_AGAIN_PROGRESS</A>, <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED">START_AGAIN_STALLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_DISABLED">START_DISABLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_OK">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#addPropertyChangeListener(java.beans.PropertyChangeListener)">addPropertyChangeListener</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a listener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">addPropertyChangeListener</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;propertyName,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a listener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/membership/Authenticator.html" title="interface in net.jxta.membership">Authenticator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#apply(net.jxta.credential.AuthenticationCredential)">apply</A></B>(<A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential">AuthenticationCredential</A>&nbsp;application)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Request the necessary credentials to join the group with which this
+ service is associated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential">AuthenticationCredential</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#getAuthCredentials()">getAuthCredentials</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This interface is being removed in favour of individual
+ Credentials providing their AuthenticationCredential as appropriate.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#getCurrentCredentials()">getCurrentCredentials</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current credentials for this peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#getDefaultCredential()">getDefaultCredential</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the default credential for this peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#join(net.jxta.membership.Authenticator)">join</A></B>(<A HREF="../../../net/jxta/membership/Authenticator.html" title="interface in net.jxta.membership">Authenticator</A>&nbsp;authenticated)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join the group by virtue of the completed authentication provided.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#makeCredential(net.jxta.document.Element)">makeCredential</A></B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a fragment of a StructuredDocument, reconstruct a Credential object
+ from that fragment.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a listener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)">removePropertyChangeListener</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;propertyName,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a listener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/membership/MembershipService.html#resign()">resign</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resign all credentials which were previously gained through prior
+ <A HREF="../../../net/jxta/membership/MembershipService.html#join(net.jxta.membership.Authenticator)"><CODE>join()</CODE></A> operations.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.service.Service"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.service.<A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/service/Service.html#getImplAdvertisement()">getImplAdvertisement</A>, <A HREF="../../../net/jxta/service/Service.html#getInterface()">getInterface</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A>, <A HREF="../../../net/jxta/platform/Module.html#startApp(java.lang.String[])">startApp</A>, <A HREF="../../../net/jxta/platform/Module.html#stopApp()">stopApp</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DEFAULT_CREDENTIAL_PROPERTY"><!-- --></A><H3>
+DEFAULT_CREDENTIAL_PROPERTY</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>DEFAULT_CREDENTIAL_PROPERTY</B></PRE>
+<DL>
+<DD>Property name for the default credential bound property.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.membership.MembershipService.DEFAULT_CREDENTIAL_PROPERTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ADD_CREDENTIAL_PROPERTY"><!-- --></A><H3>
+ADD_CREDENTIAL_PROPERTY</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>ADD_CREDENTIAL_PROPERTY</B></PRE>
+<DL>
+<DD>Property name for credential addition bound property.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.membership.MembershipService.ADD_CREDENTIAL_PROPERTY">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="apply(net.jxta.credential.AuthenticationCredential)"><!-- --></A><H3>
+apply</H3>
+<PRE>
+<A HREF="../../../net/jxta/membership/Authenticator.html" title="interface in net.jxta.membership">Authenticator</A> <B>apply</B>(<A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential">AuthenticationCredential</A>&nbsp;application)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A>,
+                           <A HREF="../../../net/jxta/exception/ProtocolNotSupportedException.html" title="class in net.jxta.exception">ProtocolNotSupportedException</A></PRE>
+<DL>
+<DD>Request the necessary credentials to join the group with which this
+ service is associated.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>application</CODE> - The authentication Credential associated with this
+ membership application. See
+ <A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential"><CODE>AuthenticationCredential</CODE></A>
+ for more information.
+<DT><B>Returns:</B><DD>An Authenticator for the membership service.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.
+<DD><CODE><A HREF="../../../net/jxta/exception/ProtocolNotSupportedException.html" title="class in net.jxta.exception">ProtocolNotSupportedException</A></CODE> - if the authentication method requested
+       in the application is not supported by this service.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="join(net.jxta.membership.Authenticator)"><!-- --></A><H3>
+join</H3>
+<PRE>
+<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>join</B>(<A HREF="../../../net/jxta/membership/Authenticator.html" title="interface in net.jxta.membership">Authenticator</A>&nbsp;authenticated)
+                throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Join the group by virtue of the completed authentication provided.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>authenticated</CODE> - the completed authentication.
+<DT><B>Returns:</B><DD>Credential the credential for this completed authentication.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resign()"><!-- --></A><H3>
+resign</H3>
+<PRE>
+void <B>resign</B>()
+            throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Resign all credentials which were previously gained through prior
+ <A HREF="../../../net/jxta/membership/MembershipService.html#join(net.jxta.membership.Authenticator)"><CODE>join()</CODE></A> operations.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDefaultCredential()"><!-- --></A><H3>
+getDefaultCredential</H3>
+<PRE>
+<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>getDefaultCredential</B>()
+                                throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Returns the default credential for this peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current default Credential or <code>null</code> if there is no
+  current default.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCurrentCredentials()"><!-- --></A><H3>
+getCurrentCredentials</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&gt; <B>getCurrentCredentials</B>()
+                                              throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Returns the current credentials for this peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Enumeration of the Credentials currently associated with this
+ peer for this peergroup.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAuthCredentials()"><!-- --></A><H3>
+getAuthCredentials</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../net/jxta/credential/AuthenticationCredential.html" title="class in net.jxta.credential">AuthenticationCredential</A>&gt; <B>getAuthCredentials</B>()
+                                                         throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>This interface is being removed in favour of individual
+ Credentials providing their AuthenticationCredential as appropriate.</I>
+<P>
+<DD>Returns the authentication credentials which were used to establish the 
+ current identities.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Enumeration of the AuthenticationCredentials which were used to
+ establish the current identities.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="makeCredential(net.jxta.document.Element)"><!-- --></A><H3>
+makeCredential</H3>
+<PRE>
+<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>makeCredential</B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)
+                          throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A>,
+                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></PRE>
+<DL>
+<DD>Given a fragment of a StructuredDocument, reconstruct a Credential object
+ from that fragment.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>element</CODE> - The StructuredDocument fragment to use for building the
+ credential.
+<DT><B>Returns:</B><DD>Credential The created credential
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown in the event of errors.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></CODE> - Thrown in the event of errors.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addPropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+addPropertyChangeListener</H3>
+<PRE>
+void <B>addPropertyChangeListener</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Add a listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the listener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)"><!-- --></A><H3>
+addPropertyChangeListener</H3>
+<PRE>
+void <B>addPropertyChangeListener</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;propertyName,
+                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Add a listener. Available properties from all Membership Services are : 
+      
+      <p/><ul>
+          <li><code>defaultCredential</code></li>
+          <li><code>addCredential</code></li>
+      </ul>
+
+  <p/>Membership Services may offer additional properties.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>propertyName</CODE> - The property to watch<DD><CODE>listener</CODE> - The listener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removePropertyChangeListener(java.beans.PropertyChangeListener)"><!-- --></A><H3>
+removePropertyChangeListener</H3>
+<PRE>
+void <B>removePropertyChangeListener</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Remove a listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - the listener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)"><!-- --></A><H3>
+removePropertyChangeListener</H3>
+<PRE>
+void <B>removePropertyChangeListener</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;propertyName,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Remove a listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>propertyName</CODE> - the property which was watched<DD><CODE>listener</CODE> - the listener</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MembershipService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/membership/InteractiveAuthenticator.html" title="interface in net.jxta.membership"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/membership/MembershipService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MembershipService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

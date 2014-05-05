@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+net.jxta.impl.protocol (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="net.jxta.impl.protocol (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/proxy/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/protocol/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<H2>
+Package net.jxta.impl.protocol
+</H2>
+Provides implementation objects for Advertisments and protocol messages for 
+    the JXTA 
+                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jcs" target='_blank'>Core</a>
+                and
+                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jss" target='_blank'>Standard</a>
+    Protocols.
+<P>
+<B>See:</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#package_description"><B>Description</B></A>
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/AccessPointAdv.html" title="class in net.jxta.impl.protocol">AccessPointAdv</A></B></TD>
+<TD>Associates a set of EndpointAddresses with a PeerID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/AccessPointAdv.Instantiator.html" title="class in net.jxta.impl.protocol">AccessPointAdv.Instantiator</A></B></TD>
+<TD>Instantiator for AdvertisementFactory</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/Certificate.html" title="class in net.jxta.impl.protocol">Certificate</A></B></TD>
+<TD>A lightweight container for X.509 Certificates</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/CertificateSigningRequest.html" title="class in net.jxta.impl.protocol">CertificateSigningRequest</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>The types exported from this implementation are subject to
+  change.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/DiscoveryConfigAdv.html" title="class in net.jxta.impl.protocol">DiscoveryConfigAdv</A></B></TD>
+<TD>Contains parameters for configuration of the Reference Implemenation
+ Rendezvous Service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/DiscoveryConfigAdv.Instantiator.html" title="class in net.jxta.impl.protocol">DiscoveryConfigAdv.Instantiator</A></B></TD>
+<TD>Instantiator for DiscoveryConfigAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/DiscoveryQuery.html" title="class in net.jxta.impl.protocol">DiscoveryQuery</A></B></TD>
+<TD>Implements the Discovery Query Message according to the schema defined by the
+ standard JXTA Peer Discovery Protocol (PDP).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/DiscoveryResponse.html" title="class in net.jxta.impl.protocol">DiscoveryResponse</A></B></TD>
+<TD>DiscoveryResponse.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/GroupConfig.html" title="class in net.jxta.impl.protocol">GroupConfig</A></B></TD>
+<TD>Configuration container for any Peer Group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/GroupConfig.Instantiator.html" title="class in net.jxta.impl.protocol">GroupConfig.Instantiator</A></B></TD>
+<TD>Instantiator for GroupConfig</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/HTTPAdv.html" title="class in net.jxta.impl.protocol">HTTPAdv</A></B></TD>
+<TD>Configuration parameters for HttpServelet Message Transport.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/HTTPAdv.Instantiator.html" title="class in net.jxta.impl.protocol">HTTPAdv.Instantiator</A></B></TD>
+<TD>Our instantiator.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/LeaseRequestMsg.html" title="class in net.jxta.impl.protocol">LeaseRequestMsg</A></B></TD>
+<TD>A Leasing Protocol Request Message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/LeaseResponseMsg.html" title="class in net.jxta.impl.protocol">LeaseResponseMsg</A></B></TD>
+<TD>A Leasing Protocol Response Message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/LimitedRangeRdvMsg.html" title="class in net.jxta.impl.protocol">LimitedRangeRdvMsg</A></B></TD>
+<TD>The LimitedRangeRdv walk header message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleClassAdv.html" title="class in net.jxta.impl.protocol">ModuleClassAdv</A></B></TD>
+<TD>Provides XML serialization support for ModuleClassAdvertisement matching the
+ schema defined by the JXTA Core Specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleClassAdv.Instantiator.html" title="class in net.jxta.impl.protocol">ModuleClassAdv.Instantiator</A></B></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleImplAdv.html" title="class in net.jxta.impl.protocol">ModuleImplAdv</A></B></TD>
+<TD>Provides XML serialization support for ModuleImplAdvertisement matching the
+ schema defined by the JXTA Core Specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleImplAdv.Instantiator.html" title="class in net.jxta.impl.protocol">ModuleImplAdv.Instantiator</A></B></TD>
+<TD>Create new instances of ModuleImplAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleSpecAdv.html" title="class in net.jxta.impl.protocol">ModuleSpecAdv</A></B></TD>
+<TD>Provides XML serialization support for ModuleSpecAdvertisement matching the
+ schema defined by the JXTA Core Specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ModuleSpecAdv.Instantiator.html" title="class in net.jxta.impl.protocol">ModuleSpecAdv.Instantiator</A></B></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerAdv.html" title="class in net.jxta.impl.protocol">PeerAdv</A></B></TD>
+<TD>Implementation of <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PeerAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PeerAdvertisement</CODE></A> matching the standard JXTA
+ Protocol Specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerAdv.Instantiator.html" title="class in net.jxta.impl.protocol">PeerAdv.Instantiator</A></B></TD>
+<TD>Creates instances of PeerAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerGroupAdv.html" title="class in net.jxta.impl.protocol">PeerGroupAdv</A></B></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerGroupAdv.Instantiator.html" title="class in net.jxta.impl.protocol">PeerGroupAdv.Instantiator</A></B></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerGroupConfigAdv.html" title="class in net.jxta.impl.protocol">PeerGroupConfigAdv</A></B></TD>
+<TD>Defines Peer Group Runtime Configuration parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerGroupConfigAdv.Instantiator.html" title="class in net.jxta.impl.protocol">PeerGroupConfigAdv.Instantiator</A></B></TD>
+<TD>Instantiator for PeerGroupConfigAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerInfoQueryMsg.html" title="class in net.jxta.impl.protocol">PeerInfoQueryMsg</A></B></TD>
+<TD>This class implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PeerInfoQueryMessage.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PeerInfoQueryMessage</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PeerInfoResponseMsg.html" title="class in net.jxta.impl.protocol">PeerInfoResponseMsg</A></B></TD>
+<TD>This class implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PeerInfoResponseMessage.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PeerInfoResponseMessage</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PipeAdv.html" title="class in net.jxta.impl.protocol">PipeAdv</A></B></TD>
+<TD>This class implements the Pipe Advertisement according to the schema used by
+ the standard Pipe Binding Protocol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PipeAdv.Instantiator.html" title="class in net.jxta.impl.protocol">PipeAdv.Instantiator</A></B></TD>
+<TD>AvertisementFactory instantiator for our type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PipeResolverMsg.html" title="class in net.jxta.impl.protocol">PipeResolverMsg</A></B></TD>
+<TD>This class implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeResolverMessage.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PipeResolverMessage</CODE></A> by
+ providing <A HREF="../../../../net/jxta/impl/protocol/PipeResolverMsg.html#initialize(net.jxta.document.Element)"><CODE>PipeResolverMsg.initialize(Element)</CODE></A> and <A HREF="../../../../net/jxta/impl/protocol/PipeResolverMsg.html#getDocument(net.jxta.document.MimeMediaType)"><CODE>PipeResolverMsg.getDocument(MimeMediaType)</CODE></A>
+ implementations.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol">PlatformConfig</A></B></TD>
+<TD>Configuration container for the World Peer Group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PlatformConfig.Instantiator.html" title="class in net.jxta.impl.protocol">PlatformConfig.Instantiator</A></B></TD>
+<TD>Instantiator for PlatformConfig</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PSEConfigAdv.html" title="class in net.jxta.impl.protocol">PSEConfigAdv</A></B></TD>
+<TD>Contains parameters for configuration of the PSE Membership Service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/PSEConfigAdv.Instantiator.html" title="class in net.jxta.impl.protocol">PSEConfigAdv.Instantiator</A></B></TD>
+<TD>Instantiator for PSEConfigAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RdvAdv.html" title="class in net.jxta.impl.protocol">RdvAdv</A></B></TD>
+<TD>This class implements the RdvAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RdvAdv.Instantiator.html" title="class in net.jxta.impl.protocol">RdvAdv.Instantiator</A></B></TD>
+<TD>Instantiator for our advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RdvConfigAdv.html" title="class in net.jxta.impl.protocol">RdvConfigAdv</A></B></TD>
+<TD>Contains parameters for configuration of the Reference Implementation
+ Rendezvous Service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RdvConfigAdv.Instantiator.html" title="class in net.jxta.impl.protocol">RdvConfigAdv.Instantiator</A></B></TD>
+<TD>Instantiator for RdvConfigAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RelayConfigAdv.html" title="class in net.jxta.impl.protocol">RelayConfigAdv</A></B></TD>
+<TD>Contains parameters for configuration of the Reference Implemenation
+ Relay Service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RelayConfigAdv.Instantiator.html" title="class in net.jxta.impl.protocol">RelayConfigAdv.Instantiator</A></B></TD>
+<TD>Instantiator for RelayConfigAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ResolverQuery.html" title="class in net.jxta.impl.protocol">ResolverQuery</A></B></TD>
+<TD>Implements the Resolver Query Message according to the
+ schema defined by the core JXTA Peer Resolver Protocol (PRP).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ResolverResponse.html" title="class in net.jxta.impl.protocol">ResolverResponse</A></B></TD>
+<TD>ResolverResponse provides an implementation for 
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ResolverResponseMsg.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ResolverResponseMsg</CODE></A> using the standard JXTA
+ Peer Resolver Protocol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/ResolverSrdiMsgImpl.html" title="class in net.jxta.impl.protocol">ResolverSrdiMsgImpl</A></B></TD>
+<TD>ResolverQuery provides the binding for the message to query other nodes</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RouteAdv.html" title="class in net.jxta.impl.protocol">RouteAdv</A></B></TD>
+<TD>This class implements the basic Route advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RouteAdv.Instantiator.html" title="class in net.jxta.impl.protocol">RouteAdv.Instantiator</A></B></TD>
+<TD>Instantiator for our advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RouteQuery.html" title="class in net.jxta.impl.protocol">RouteQuery</A></B></TD>
+<TD>RouteQuery message used by the Endpoint Routing protocol to
+ query for route</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RouteResponse.html" title="class in net.jxta.impl.protocol">RouteResponse</A></B></TD>
+<TD>Used by the Endpoint Routing protocol in response to Route Query Messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/SignedAdv.html" title="class in net.jxta.impl.protocol">SignedAdv</A></B></TD>
+<TD>A container for signed Advertisements</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/SignedAdv.Instantiator.html" title="class in net.jxta.impl.protocol">SignedAdv.Instantiator</A></B></TD>
+<TD>Instantiator for SignedAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/SrdiMessageImpl.html" title="class in net.jxta.impl.protocol">SrdiMessageImpl</A></B></TD>
+<TD>SrdiMessageImpl provides the SRDI message binding</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/TCPAdv.html" title="class in net.jxta.impl.protocol">TCPAdv</A></B></TD>
+<TD>Provides configuration parameters for the JXTA TCP Message Transport.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/TCPAdv.Instantiator.html" title="class in net.jxta.impl.protocol">TCPAdv.Instantiator</A></B></TD>
+<TD>Our instantiator</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Enum Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/LimitedRangeRdvMsg.WalkDirection.html" title="enum in net.jxta.impl.protocol">LimitedRangeRdvMsg.WalkDirection</A></B></TD>
+<TD>Enumeration of possible walk directions.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/protocol/RdvConfigAdv.RendezVousConfiguration.html" title="enum in net.jxta.impl.protocol">RdvConfigAdv.RendezVousConfiguration</A></B></TD>
+<TD>Possible Rendezvous configurations.</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+<A NAME="package_description"><!-- --></A><H2>
+Package net.jxta.impl.protocol Description
+</H2>
+
+<P>
+Provides implementation objects for Advertisments and protocol messages for 
+    the JXTA 
+                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jcs" target='_blank'>Core</a>
+                and
+                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jss" target='_blank'>Standard</a>
+    Protocols. These classes are responsible for serializing and deserializing
+    messages and advertisements.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document"><CODE>Advertisement</CODE></A>, 
+<a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#overview-advertisements" target='_blank'>JXTA Protocols Specification - Overview : Advertisements</a>, 
+<a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#core-advert" target='_blank'>JXTA Protocols Specification - Advertisements</a></DL>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/proxy/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/protocol/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

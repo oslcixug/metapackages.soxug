@@ -1,0 +1,44 @@
+
+{ For all LOG users }
+{ This file is intended to be included by another, e.g., diglog.cnf }
+
+
+{ LOG and DigLOG, Copyright (C) 1985, 1990 by David Gillespie }
+{ AnaLOG, Copyright (C) 1985, 1990 by John Lazzaro }
+
+{ For further details, see the notices in log.c and COPYING in the }
+{ source directory for LOG. }
+
+
+gates   log.gate
+gates + ana.gate
+gates + actel.gate
+
+help    log.doc
+news    lognews.text
+
+{autowindow: new mode for small screens}
+{autowindow on}
+
+{signals --> max number of TO/FROM labeled nodes in your design}
+{uncomment next line if you are doing *large* schematics -- default is 500}
+{signals 5000}
+
+include groups.cnf
+include models.cnf
+include mos.cnf
+include lplot.cnf
+include logntk.cnf
+include logspc.cnf
+
+
+{ Handy keys to adjust the background gray intensity }
+macro  %  color 0  60  60  60
+macro  ^  color 0  70  70  70
+macro  &  color 0  80  80  80
+macro  *  color 0 100 100 100
+macro  (  color 0 120 120 120
+macro  )  color 0 140 140 140
+macro  _  color 0 160 160 160
+
+

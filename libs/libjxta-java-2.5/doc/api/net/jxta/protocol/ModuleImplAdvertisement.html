@@ -1,0 +1,879 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ModuleImplAdvertisement (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ModuleImplAdvertisement (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ModuleImplAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/ModuleClassAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/ModuleImplAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ModuleImplAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.protocol</FONT>
+<BR>
+Class ModuleImplAdvertisement</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">net.jxta.document.Advertisement</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">net.jxta.document.ExtendableAdvertisement</A>
+          <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.protocol.ModuleImplAdvertisement</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>ModuleImplAdvertisement</B><DT>extends <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A><DT>implements <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</A></DL>
+</PRE>
+
+<P>
+A ModuleImplAdvertisement describes one of any number of published
+ implementations for a given specification.
+ <p/>
+ Module specifications are referenced by their ModuleSpecID. Given a
+ ModuleSpecID, a ModuleImplAdvertisement may be searched by means of JXTA
+ Discovery, filtered according to the compatibility statement it contains,
+ and if compatible, loaded and initialized. The <code>loadModule()</code> method of
+ PeerGroup performs this task automatically, given a ModuleSpecID.
+ <p/>
+ One significant example of Modules referenced and loaded in that manner are
+ the services and protocols that constitute a StdPeerGroup in the Java
+ reference implementation.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id"><CODE>ID</CODE></A>, 
+<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform"><CODE>ModuleSpecID</CODE></A>, 
+<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>, 
+<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document"><CODE>Element</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol"><CODE>ModuleSpecAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#ModuleImplAdvertisement()">ModuleImplAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clone this ModuleImplAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getAdvertisementType()">getAdvertisementType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the identifying type of this Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the base type of this advertisement hierarchy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCode()">getCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the code; a reference to or representation of the executable code
+ advertised by this advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompat()">getCompat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the opaque compatibility statement for this advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompatPriv()">getCompatPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompat()"><CODE>getCompat()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDesc()">getDesc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDescPriv()">getDescPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDesc()"><CODE>getDesc()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDescription()">getDescription</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getID()">getID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the unique ID of that advertisement for indexing purposes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getModuleSpecID()">getModuleSpecID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the id of the spec that this implements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParam()">getParam</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the param element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParamPriv()">getParamPriv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParam()"><CODE>getParam()</CODE></A> that does not clone the elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getProvider()">getProvider</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the provider</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getUri()">getUri</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the uri; that is a reference to or representation of a package 
+ from which the executable code referenced by the getCode method may be 
+ loaded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setCode(java.lang.String)">setCode</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the reference for the executable code described by this 
+ advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setCompat(net.jxta.document.Element)">setCompat</A></B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;compat)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the module impl. compatibility statement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setDescription(java.lang.String)">setDescription</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setModuleSpecID(net.jxta.platform.ModuleSpecID)">setModuleSpecID</A></B>(<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A>&nbsp;msid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the id of the spec that is implemented</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setParam(net.jxta.document.Element)">setParam</A></B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the module param</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setProvider(java.lang.String)">setProvider</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;provider)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the provider</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#setUri(java.lang.String)">setUri</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;uri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the uri</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.ExtendableAdvertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleAttribute(net.jxta.document.Attribute)">handleAttribute</A>, <A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#handleElement(net.jxta.document.Element)">handleElement</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.Advertisement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.document.<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getAdvType()">getAdvType</A>, <A HREF="../../../net/jxta/document/Advertisement.html#getIndexFields()">getIndexFields</A>, <A HREF="../../../net/jxta/document/Advertisement.html#toString()">toString</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ModuleImplAdvertisement()"><!-- --></A><H3>
+ModuleImplAdvertisement</H3>
+<PRE>
+public <B>ModuleImplAdvertisement</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAdvertisementType()"><!-- --></A><H3>
+getAdvertisementType</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getAdvertisementType</B>()</PRE>
+<DL>
+<DD>Returns the identifying type of this Advertisement.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the type of advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBaseAdvType()"><!-- --></A><H3>
+getBaseAdvType</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getBaseAdvType</B>()</PRE>
+<DL>
+<DD>Returns the base type of this advertisement hierarchy. Typically, only
+ the most basic advertisement of a type will implement this method and
+ declare it as <code>final</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html#getBaseAdvType()">getBaseAdvType</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the base type of advertisements in this hierarchy.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clone()"><!-- --></A><H3>
+clone</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A> <B>clone</B>()</PRE>
+<DL>
+<DD>Clone this ModuleImplAdvertisement
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#clone()">clone</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getID()"><!-- --></A><H3>
+getID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>getID</B>()</PRE>
+<DL>
+<DD>Returns the unique ID of that advertisement for indexing purposes.
+ In that case we do not have any particular one to offer. Let the indexer
+ hash the document.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/Advertisement.html#getID()">getID</A></CODE> in class <CODE><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ID the unique id</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getModuleSpecID()"><!-- --></A><H3>
+getModuleSpecID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A> <B>getModuleSpecID</B>()</PRE>
+<DL>
+<DD>Returns the id of the spec that this implements.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ID the spec id</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setModuleSpecID(net.jxta.platform.ModuleSpecID)"><!-- --></A><H3>
+setModuleSpecID</H3>
+<PRE>
+public void <B>setModuleSpecID</B>(<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A>&nbsp;msid)</PRE>
+<DL>
+<DD>Sets the id of the spec that is implemented
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - The id of the spec</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDescription()"><!-- --></A><H3>
+getDescription</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDescription</B>()</PRE>
+<DL>
+<DD>returns the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDescription(java.lang.String)"><!-- --></A><H3>
+setDescription</H3>
+<PRE>
+public void <B>setDescription</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</PRE>
+<DL>
+<DD>sets the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>description</CODE> - the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDesc()"><!-- --></A><H3>
+getDesc</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getDesc</B>()</PRE>
+<DL>
+<DD>returns the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDescPriv()"><!-- --></A><H3>
+getDescPriv</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getDescPriv</B>()</PRE>
+<DL>
+<DD>Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getDesc()"><CODE>getDesc()</CODE></A> that does not clone the elements.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDesc(net.jxta.document.Element)"><!-- --></A><H3>
+setDesc</H3>
+<PRE>
+public void <B>setDesc</B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</PRE>
+<DL>
+<DD>sets the description
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>desc</CODE> - the description</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCompat()"><!-- --></A><H3>
+getCompat</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getCompat</B>()</PRE>
+<DL>
+<DD>Returns the opaque compatibility statement for this advertisement. Each
+ JXTA implementation has the ability to recognize and evaluate it's own
+ compatibility statements (even though it may not be able to evaluate the
+ compatibility statements of other implementations).
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The compatibility statement as a StructuredDocument of 
+ unspecified content.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCompatPriv()"><!-- --></A><H3>
+getCompatPriv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getCompatPriv</B>()</PRE>
+<DL>
+<DD>Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getCompat()"><CODE>getCompat()</CODE></A> that does not clone the elements.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The compatibility statement as a StructuredDocument of 
+ unspecified content.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCompat(net.jxta.document.Element)"><!-- --></A><H3>
+setCompat</H3>
+<PRE>
+public void <B>setCompat</B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;compat)</PRE>
+<DL>
+<DD>Sets the module impl. compatibility statement.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>compat</CODE> - Element of an unspecified content.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCode()"><!-- --></A><H3>
+getCode</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCode</B>()</PRE>
+<DL>
+<DD>returns the code; a reference to or representation of the executable code
+ advertised by this advertisement.
+ <p/>
+ The appropriate interpretation of the code value is dependant upon the 
+ compatibility statement. Any compatible consumer of this advertisement   
+ will be able to correctly interpret code value. The standard group 
+ implementations of the JXSE reference implementation expect it to be a 
+ reference to a jar file.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A reference to the executable code described by this 
+ advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCode(java.lang.String)"><!-- --></A><H3>
+setCode</H3>
+<PRE>
+public void <B>setCode</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code)</PRE>
+<DL>
+<DD>Sets the reference for the executable code described by this 
+ advertisement.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>code</CODE> - A reference to the executable code described by this 
+ advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUri()"><!-- --></A><H3>
+getUri</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getUri</B>()</PRE>
+<DL>
+<DD>returns the uri; that is a reference to or representation of a package 
+ from which the executable code referenced by the getCode method may be 
+ loaded.
+ <p/>
+ The appropriate interpretation of the URI value is dependant upon the 
+ compatibility statement. Any compatible consumer of this advertisement   
+ will be able to correctly interpret the URI value. The standard group 
+ implementations of the JXSE reference implementation expect it to be a 
+ reference to a jar file.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Location URI for the code described by this advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUri(java.lang.String)"><!-- --></A><H3>
+setUri</H3>
+<PRE>
+public void <B>setUri</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;uri)</PRE>
+<DL>
+<DD>Sets the uri
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>uri</CODE> - Location URI for the code described by this advertisement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProvider()"><!-- --></A><H3>
+getProvider</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getProvider</B>()</PRE>
+<DL>
+<DD>returns the provider
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String the provider</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setProvider(java.lang.String)"><!-- --></A><H3>
+setProvider</H3>
+<PRE>
+public void <B>setProvider</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;provider)</PRE>
+<DL>
+<DD>sets the provider
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>provider</CODE> - the provider</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParam()"><!-- --></A><H3>
+getParam</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getParam</B>()</PRE>
+<DL>
+<DD>returns the param element.
+
+ The interpretation of the param element is entirely up to the code
+ that this advertises. One valid use of it is to enable the code to
+ be configured so that multiple specs or multiple implementations of
+ one spec may use the same code.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A standalone structured document of unspecified content.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParamPriv()"><!-- --></A><H3>
+getParamPriv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getParamPriv</B>()</PRE>
+<DL>
+<DD>Privileged version of <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html#getParam()"><CODE>getParam()</CODE></A> that does not clone the elements.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A standalone structured document of unspecified content.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setParam(net.jxta.document.Element)"><!-- --></A><H3>
+setParam</H3>
+<PRE>
+public void <B>setParam</B>(<A HREF="../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</PRE>
+<DL>
+<DD>Sets the module param
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>param</CODE> - Element of an unspecified content.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ModuleImplAdvertisement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/ModuleClassAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/ModuleImplAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ModuleImplAdvertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

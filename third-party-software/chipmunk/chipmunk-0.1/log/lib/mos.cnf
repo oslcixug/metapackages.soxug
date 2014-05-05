@@ -1,0 +1,269 @@
+
+{Parameters for the new MOS models developed by Michael Godfrey}
+
+{Physical Constants}
+
+{Temperature}
+32: Physical T 298
+
+{Boltzmann's constant}
+32: Physical k  1.380658e-23
+
+{Charge on an electron}
+32: Physical q  1.60217733e-19
+
+{permittivity of vacuum f/m}
+32: Physical e_v 8.854187817e-12
+
+{permittivity of Si f/m}
+32: Physical e_s 1.035939974589e-010
+
+{permittivity of SiO2 f/m}
+32: Physical e_ox 3.453133248630e-011
+
+{silicon-oxide interface charge}
+32: Physical phi_ms -0.3
+
+
+{parameters for N model}
+
+{MOSIS Process Name: See MOSIS file scn12-hp-specs.inf}
+32: DevTechN Process SCN12
+
+{photolithography scaling factor -- identical for P and N}
+{Value for 1.2um process: appropriate for HP SCN12}
+32: DevTechN lambda 0.6e-6
+
+{oxide thickness}
+32: DevTechN Tox 200e-10
+
+{potential at neutral edge of depletion region}
+32: DevTechN psi 0.6
+
+{bulk doping concentration}
+32: DevTechN Na 3.1060e+16
+
+{carrier mobility}
+32: DevTechN mu0 686.6
+
+{Ldrawn-Leff}
+32: DevTechN deltaL 0.33e-6
+
+{Wdrawn-Weff}
+32: DevTechN deltaW 0.49e-6
+
+{drain-dependence Na factor}
+32: DevTechN del_NaS 0
+
+{Early effect slope parameter}
+32: DevTechN Early_s 0.16
+
+{Early effect intercept parameter}
+32: DevTechN L_0 0.1e-6
+
+{Run Specific Parameters}
+
+{The specific fab run name}
+32: RunSpecN Fabrun N52V
+
+{fixed oxide charge}
+32: RunSpecN Qss 0.00061
+
+{Na multiplicative delta}
+32: RunSpecN del_Na0 1
+
+{mu multiplicative delta}
+32: RunSpecN del_mu 1
+
+{AC Parameters}
+
+{N+ active (source/drain area) Capacitance F/um^2                       }
+{MOSIS CAPCITANCE TABLE Area (substrate) -- N+DIFF or SPICE CMOSN CJ    }
+32: DevTechN aCactive 262e-18
+
+{Well-to-bulk Capacitance F/um^2                                        }
+{Since the n-channel transistor is in the substrate, this parameter     }
+{is meaningless. We choose an insignificantly small value (not zero) to }
+{prevent numerical problems in the simulation engine                    } 
+32: DevTechN aCwell 1e-18
+
+{Overlap capacitance between gate and source F/um }
+{SPICE CGDO or CGSO * 10-6}
+32: DevTechN linCgs 3.9687e-16
+
+{Gate capacitance -- used for AC parasitics only F/um^2}
+{The nonlinear C(V) function is upper-bounded by Cox,                   }
+{and close to CGBO in subthreshold, which we use below.                 }
+{Replace with COX for conservative delay estimates for digital designs. }
+32: DevTechN aCgw 3.8241e-16
+
+
+{Parameters for P model}
+
+{oxide thickness}
+32: DevTechP Tox 200e-10
+
+{potential at neutral edge of depletion region}
+32: DevTechP psi 0.6
+
+{bulk doping concentration}
+32: DevTechP Na 2.692e16
+
+{carrier mobility}
+32: DevTechP mu0 205.0
+
+{Wdrawn-Weff}
+32: DevTechP deltaW  0.04e-6
+
+{Ldrawn-Leff}
+32: DevTechP deltaL 0.41e-6
+
+{drain-dependence Na factor}
+32: DevTechP del_NaS 0
+
+{Early effect slope parameter}
+32: DevTechP Early_s 0.16
+
+{Early effect intercept parameter}
+32: DevTechP L_0 0.1e-6
+
+{Run Specific Parameters}
+
+{fixed oxide charge}
+32: RunSpecP Qss 0.000126
+
+{oxide thickness}
+32: RunSpecP del_Na0 1
+
+{oxide thickness}
+32: RunSpecP del_mu 1
+
+{AC Parameters}
+
+{P+ active (source/drain area) Capacitance F/um^2}
+{MOSIS CAPCITANCE TABLE Area (substrate) -- P+DIFF or SPICE CMOSP CJ      }
+32: DevTechP aCactive 470e-18
+
+{Well-to-bulk Capacitance F/um^2}
+{Since the p-channel transistor is in the well, this parameter has        }
+{meaning. This parameter is not specified by MOSIS, nor is it in the HP   }
+{specs, so we have to make a guess.					  }
+{Here, we use half the P+DIFF capacitance as a (very loose) upper bound   }
+32: DevTechP aCwell 272e-18
+
+{Overlap capacitance between gate and source F/um }
+{SPICE CGDO or CGSO * 10-6}
+32: DevTechP linCgs 4.7888e-17
+
+{Gate capacitance -- used for AC parasitics only F/um^2}
+{The nonlinear C(V) function is upper-bounded by Cox,                     }
+{and close to CGBO in subthreshold, which we use below.                   }
+{This gives conservative delay estimates, for digital purposes.           }
+32: DevTechP aCgw 3.5683e-16
+
+
+{Individual Transistor Models}
+
+{Gate width of transistor, lambda}
+32: Nfet7F Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Nfet7F Ldrawn 4
+
+{Area of source region, m^2}
+32: Nfet7F SArea 36e-6
+
+{Area of drain region, m^2}
+32: Nfet7F DArea 36e-6
+
+{Area of well region, m^2}
+32: Nfet7F WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Nfet7F NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Nfet7F MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Nfet7F QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Nfet7T Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Nfet7T Ldrawn 4
+
+{Area of source region, m^2}
+32: Nfet7T SArea 36e-6
+
+{Area of drain region, m^2}
+32: Nfet7T DArea 36e-6
+
+{Area of well region, m^2}
+32: Nfet7T WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Nfet7T NaOffset 1.0
+
+{offset in Mu0 mobility, multiplicative unitless}
+32: Nfet7T MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Nfet7T QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Pfet7F Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Pfet7F Ldrawn 4
+
+{Area of source region, m^2}
+32: Pfet7F SArea 36e-6
+
+{Area of drain region, m^2}
+32: Pfet7F DArea 36e-6
+
+{Area of well region, m^2}
+32: Pfet7F WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Pfet7F NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Pfet7F MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Pfet7F QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Pfet7T Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Pfet7T Ldrawn 4
+
+{Area of source region, m^2}
+32: Pfet7T SArea 36e-6
+
+{Area of drain region, m^2}
+32: Pfet7T DArea 36e-6
+
+{Area of well region, m^2}
+32: Pfet7T WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Pfet7T NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Pfet7T MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Pfet7T QssOffset 0.0
+
+
+
+
+
+
+
+

@@ -1,0 +1,749 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PeerInfoService (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PeerInfoService (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerInfoService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/peer/PeerInfoListener.html" title="interface in net.jxta.peer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/peer/PeerInfoService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerInfoService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.peer</FONT>
+<BR>
+Interface PeerInfoService</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A>, <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>PeerInfoService</B><DT>extends <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></DL>
+</PRE>
+
+<P>
+The PeerInfoService is a generic API for getting information about
+ the local Peer as well as remote Peers. <P>
+ <p/>
+ The most important type of information about a Peer may be gotten through
+ the Monitoring Service that may be accessed via the PeerInfoService.  The
+ Monitoring Service provides an open mechanism for reporting any type of
+ Metrics gathered on a Peer by a ServiceMonitor.  Attached Service Monitors
+ are identified by their ModuleClassID.  A ServiceMonitor may monitor anything
+ (ie it is not restricted to JXTA Services).  <p>
+ <p/>
+ There are several methods for accessing the capabilities and metrics
+ from ServiceMonitors
+ attached to the Peer (either locally or from remote peers). <p>
+ <p/>
+ Cumulative MonitorReports containing metrics since the Monitoring began
+ (or was reset) on a local/remote Peer may be obtained.  Alternatively, you may
+ register listeners get periodic MonitorReports (at a specified rate) of
+ metrics (since the previous report).  The amount of information obtained (either
+ cumulatively or periodically) is determined by a MonitorFilter whi
+ <p/>
+ The PeerInfoService utilizes the ResolverService to send queries and receive
+ responses (PeerInfoQueryMessage / PeerInfoResponseMessage).  These contain
+ requests and responses that are specific to the type of info being requested.
+ Depending upon the type of information requested, a peer may provide multiple
+ varying responses over time (as is the case for periodic remote peer Monitoring). <P>
+ <p/>
+ At the time of writing this documentation Service Monitoring is the only type
+ of Peer Information available though the implementation and underlying protocol
+ can support other types of information. <P>
+ <p/>
+ See the document:
+ <UL>
+ <LI> <I> JXTA Metering and Monitoring Project </I> </LI>
+ <LI> <I> The JXTA Metering and Monitoring Project Architecture </I> </LI>
+ <LI> <I> Building and Configuring JXTA with Monitoring Capabilities </I> </LI>
+ <LI> <I> JXTA Monitor: GUI Rendering of Metered Peer Info </I> </LI>
+ </UL>
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>JXTA 1.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter"><CODE>MonitorFilter</CODE></A>, 
+<A HREF="../../../net/jxta/meter/MonitorReport.html" title="class in net.jxta.meter"><CODE>MonitorReport</CODE></A>, 
+<A HREF="../../../net/jxta/meter/ServiceMonitor.html" title="interface in net.jxta.meter"><CODE>ServiceMonitor</CODE></A>, 
+<A HREF="../../../net/jxta/meter/PeerMonitorInfo.html" title="class in net.jxta.meter"><CODE>PeerMonitorInfo</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/PeerInfoQueryMessage.html" title="class in net.jxta.protocol"><CODE>PeerInfoQueryMessage</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/PeerInfoResponseMessage.html" title="class in net.jxta.protocol"><CODE>PeerInfoResponseMessage</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS">START_AGAIN_PROGRESS</A>, <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED">START_AGAIN_STALLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_DISABLED">START_DISABLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_OK">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#addMonitorListener(net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener)">addMonitorListener</A></B>(<A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                   long&nbsp;reportRate,
+                   boolean&nbsp;includeCumulative,
+                   <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#addRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener, long, long)">addRemoteMonitorListener</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                         <A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                         long&nbsp;reportRate,
+                         boolean&nbsp;includeCumulative,
+                         <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                         long&nbsp;lease,
+                         long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the specified remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getBestReportRate(long)">getBestReportRate</A></B>(long&nbsp;desiredReportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/MonitorReport.html" title="class in net.jxta.meter">MonitorReport</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getCumulativeMonitorReport(net.jxta.meter.MonitorFilter)">getCumulativeMonitorReport</A></B>(<A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getCumulativeMonitorReport(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, net.jxta.meter.MonitorListener, long)">getCumulativeMonitorReport</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                           <A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                           <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                           long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the specified remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/PeerMonitorInfo.html" title="class in net.jxta.meter">PeerMonitorInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getPeerMonitorInfo()">getPeerMonitorInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the monitoring capabilities of the Local Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getPeerMonitorInfo(net.jxta.peer.PeerID, net.jxta.meter.PeerMonitorInfoListener, long)">getPeerMonitorInfo</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                   <A HREF="../../../net/jxta/meter/PeerMonitorInfoListener.html" title="interface in net.jxta.meter">PeerMonitorInfoListener</A>&nbsp;peerMonitorInfoListener,
+                   long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the monitoring capabilities of a Remote Peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#getSupportedReportRates()">getSupportedReportRates</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#isLocalMonitoringAvailable()">isLocalMonitoringAvailable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See if Local Monitoring is available on this Peer
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#isLocalMonitoringAvailable(net.jxta.platform.ModuleClassID)">isLocalMonitoringAvailable</A></B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See if Local monitoring is available from a specific ServiceMonitor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#isSupportedReportRate(long)">isSupportedReportRate</A></B>(long&nbsp;reportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#removeMonitorListener(net.jxta.meter.MonitorListener)">removeMonitorListener</A></B>(<A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters corresponding to this MonitorListener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#removeRemoteMonitorListener(net.jxta.meter.MonitorListener, long)">removeRemoteMonitorListener</A></B>(<A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                            long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters to the all remote Peers corresponding to this MonitorListener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peer/PeerInfoService.html#removeRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorListener, long)">removeRemoteMonitorListener</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                            <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                            long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the periodic reporting for all registered filters to the specified Peer corresponding to this MonitorListener.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.service.Service"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.service.<A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/service/Service.html#getImplAdvertisement()">getImplAdvertisement</A>, <A HREF="../../../net/jxta/service/Service.html#getInterface()">getInterface</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A>, <A HREF="../../../net/jxta/platform/Module.html#startApp(java.lang.String[])">startApp</A>, <A HREF="../../../net/jxta/platform/Module.html#stopApp()">stopApp</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isLocalMonitoringAvailable()"><!-- --></A><H3>
+isLocalMonitoringAvailable</H3>
+<PRE>
+boolean <B>isLocalMonitoringAvailable</B>()</PRE>
+<DL>
+<DD>See if Local Monitoring is available on this Peer
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.  <p>
+ <p/>
+ See the document:
+ <UL>
+ <LI> <I> Building and Configuring JXTA with Monitoring Capabilities </I> </LI>
+ </UL>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if local monitoring is available</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isLocalMonitoringAvailable(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+isLocalMonitoringAvailable</H3>
+<PRE>
+boolean <B>isLocalMonitoringAvailable</B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</PRE>
+<DL>
+<DD>See if Local monitoring is available from a specific ServiceMonitor.
+ Local monitoring is only available if you are using a version of
+ of jxta.jar that was build with metering activated.  <p>
+ <p/>
+ See the document:
+ <UL>
+ <LI> <I> Building and Configuring JXTA with Monitoring Capabilities </I> </LI>
+ </UL>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>moduleClassID</CODE> - The Module classID of the ServiceMonitor.  Note that the ServiceMonitor
+                      moduleClassID is not the same as moduleClassID of the Service
+                      being monitored.
+<DT><B>Returns:</B><DD>true if local monitoring is available for a specific module</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSupportedReportRates()"><!-- --></A><H3>
+getSupportedReportRates</H3>
+<PRE>
+long[] <B>getSupportedReportRates</B>()</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method returns the locally supported rates (in milliseconds)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>all supported rates</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSupportedReportRate(long)"><!-- --></A><H3>
+isSupportedReportRate</H3>
+<PRE>
+boolean <B>isSupportedReportRate</B>(long&nbsp;reportRate)</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method validates whether a specific
+ rate (in milliseconds) is locally supported.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reportRate</CODE> - the report rate to check
+<DT><B>Returns:</B><DD>true if a report rate is supported</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBestReportRate(long)"><!-- --></A><H3>
+getBestReportRate</H3>
+<PRE>
+long <B>getBestReportRate</B>(long&nbsp;desiredReportRate)</PRE>
+<DL>
+<DD>Asynchronous reporting of Monitored data may be obtained only at rates supported by
+ the MonitorManager on the peer.  This method supplies the closest (rounded up)
+ rate (in milliseconds) to the specified rate that is locally supported.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>desiredReportRate</CODE> - the desired rate
+<DT><B>Returns:</B><DD>the desired rate</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerMonitorInfo()"><!-- --></A><H3>
+getPeerMonitorInfo</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/PeerMonitorInfo.html" title="class in net.jxta.meter">PeerMonitorInfo</A> <B>getPeerMonitorInfo</B>()</PRE>
+<DL>
+<DD>Obtain the monitoring capabilities of the Local Peer. <P>
+ The PeerMonitorInfo provides:
+ <UL>
+ <LI> Whether any monitoring is available for this Peer </LI>
+ <LI> The supported rates of asynchronous monitoring </LI>
+ <LI> A list (as ModuleClassIDs) of ServiceMonitors attached to this Peer </LI>
+ </UL>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PeerMonitorInfo</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerMonitorInfo(net.jxta.peer.PeerID, net.jxta.meter.PeerMonitorInfoListener, long)"><!-- --></A><H3>
+getPeerMonitorInfo</H3>
+<PRE>
+void <B>getPeerMonitorInfo</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                        <A HREF="../../../net/jxta/meter/PeerMonitorInfoListener.html" title="interface in net.jxta.meter">PeerMonitorInfoListener</A>&nbsp;peerMonitorInfoListener,
+                        long&nbsp;timeout)
+                        throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Obtain the monitoring capabilities of a Remote Peer. <P>
+ The PeerMonitorInfo provides:
+ <UL>
+ <LI> Whether any monitoring is available for this Peer </LI>
+ <LI> The supported rates of asynchronous monitoring </LI>
+ <LI> A list (as ModuleClassIDs) of ServiceMonitors attached to this Peer </LI>
+ </UL>
+ <p/>
+ Via the PeerMonitorInfoListener, you will be informed of the PeerMonitorInfo or why it was
+ not provided (error, timeout, unavailable, etc)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>peerMonitorInfoListener</CODE> - The Listener to be told about the obtained PeerMonitorInfo<DD><CODE>timeout</CODE> - Generate a timeout event if no answer has been received in this time (in Milliseconds)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCumulativeMonitorReport(net.jxta.meter.MonitorFilter)"><!-- --></A><H3>
+getCumulativeMonitorReport</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/MonitorReport.html" title="class in net.jxta.meter">MonitorReport</A> <B>getCumulativeMonitorReport</B>(<A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter)
+                                         throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the local Peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired
+<DT><B>Returns:</B><DD>the report
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCumulativeMonitorReport(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+getCumulativeMonitorReport</H3>
+<PRE>
+void <B>getCumulativeMonitorReport</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                                <A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                                <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                long&nbsp;timeout)
+                                throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get a MonitorReport of total accumulated metrics from the ServiceMonitors (specified in the
+ MonitorFilter) since they were created/reset for the specified remote Peer.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)<DD><CODE>timeout</CODE> - The timeout for reporting that the information has not arrived.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addMonitorListener(net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener)"><!-- --></A><H3>
+addMonitorListener</H3>
+<PRE>
+long <B>addMonitorListener</B>(<A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                        long&nbsp;reportRate,
+                        boolean&nbsp;includeCumulative,
+                        <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)
+                        throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the local Peer.  For many applications it is required to obtain metrics from
+ the beginning of time and then augment over time as more data arrives. <P>
+ <p/>
+ There is a problem with the following approach:
+ <OL>
+ <LI>   Call getCumulativeMonitorReport to get the cumulative totals </LI>
+ <LI>   Call addMonitorListener to get periodic changes </LI>
+ <LI>   Add the periodic data to the totals </LI>
+ </OL>
+ <p/>
+ Because of a potential race condition related to metrics that are measured between the two calls it is
+ possible to lose some metrics.  To address this, this method supports this by combining them into a single
+ call that allows you to specify whether you wish the first report delivered to be a cumulative report.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>reportRate</CODE> - The rate at which you wish metric delta reports<DD><CODE>includeCumulative</CODE> - Should the first report you receive be the cumulative data since the ServiceMonitors were created/reset?<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)
+<DT><B>Returns:</B><DD>report rate
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorFilter, long, boolean, net.jxta.meter.MonitorListener, long, long)"><!-- --></A><H3>
+addRemoteMonitorListener</H3>
+<PRE>
+void <B>addRemoteMonitorListener</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                              <A HREF="../../../net/jxta/meter/MonitorFilter.html" title="class in net.jxta.meter">MonitorFilter</A>&nbsp;monitorFilter,
+                              long&nbsp;reportRate,
+                              boolean&nbsp;includeCumulative,
+                              <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                              long&nbsp;lease,
+                              long&nbsp;timeout)
+                              throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Get MonitorReports at a specified rates of metrics accrued over time from the ServiceMonitors
+ (specified in the MonitorFilter) about the specified remote Peer.  For many applications it is required to obtain metrics from
+ the beginning of time and then augment over time as more data arrives. <P>
+ <p/>
+ There is a problem with the following approach:
+ <OL>
+ <LI>   Call getCumulativeMonitorReport to get the cumulative totals </LI>
+ <LI>   Call addMonitorListener to get periodic changes </LI>
+ <LI>   Add the periodic data to the totals </LI>
+ </OL>
+ <p/>
+ Because of a potential race condition related to metrics that are measured between the two calls it is
+ possible to lose some metrics.  To address this, this method supports this by combining them into a single
+ call that allows you to specify whether you wish the first report delivered to be a cumulative report.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The PeerID of the Peer you wish information about<DD><CODE>monitorFilter</CODE> - The MonitorFilter containing the specific ServiceMonitors and types of Service Metrics desired<DD><CODE>reportRate</CODE> - The rate at which you wish metric delta reports<DD><CODE>includeCumulative</CODE> - Should the first report you receive be the cumulative data since the ServiceMonitors were created/reset?<DD><CODE>monitorListener</CODE> - The Listener to obtain the report when it arrives (or timed out)<DD><CODE>timeout</CODE> - The timeout for reporting that the information has not arrived.<DD><CODE>lease</CODE> - the lease
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeMonitorListener(net.jxta.meter.MonitorListener)"><!-- --></A><H3>
+removeMonitorListener</H3>
+<PRE>
+boolean <B>removeMonitorListener</B>(<A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener)
+                              throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters corresponding to this MonitorListener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorListener</CODE> - the monitor listener
+<DT><B>Returns:</B><DD>true if successfully removed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeRemoteMonitorListener(net.jxta.peer.PeerID, net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+removeRemoteMonitorListener</H3>
+<PRE>
+void <B>removeRemoteMonitorListener</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID,
+                                 <A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                 long&nbsp;timeout)
+                                 throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters to the specified Peer corresponding to this MonitorListener.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - The Peer that you wish to deregister periodic reporting<DD><CODE>monitorListener</CODE> - The MonitorListener that was originally registered<DD><CODE>timeout</CODE> - The timeout for reporting that the remote listener was acknowledged as deregistered
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeRemoteMonitorListener(net.jxta.meter.MonitorListener, long)"><!-- --></A><H3>
+removeRemoteMonitorListener</H3>
+<PRE>
+void <B>removeRemoteMonitorListener</B>(<A HREF="../../../net/jxta/meter/MonitorListener.html" title="interface in net.jxta.meter">MonitorListener</A>&nbsp;monitorListener,
+                                 long&nbsp;timeout)
+                                 throws <A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></PRE>
+<DL>
+<DD>Stop the periodic reporting for all registered filters to the all remote Peers corresponding to this MonitorListener.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>monitorListener</CODE> - The MonitorListener that was originally registered<DD><CODE>timeout</CODE> - The timeout for reporting that the remote listener was acknowledged as deregistered
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorException.html" title="class in net.jxta.meter">MonitorException</A></CODE> - if a monitor error occurs</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PeerInfoService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/peer/PeerInfoListener.html" title="interface in net.jxta.peer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/peer/PeerInfoService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PeerInfoService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Simula3MS
+Comment=Java simulator of basic monocicle, multicicle and segmented architecture
+TryExec=simula3ms
+Exec=simula3ms
+Type=Application
+Categories=Development;Math;Science;Education;

@@ -1,0 +1,17 @@
+Package: hunspell-gl-es-volga
+Version: 2.3-1
+Architecture: all
+Maintainer: CIXUG Developers <osl@cixug.es>
+Installed-Size: 31
+Depends: dictionaries-common (>= 1.1)
+Suggests: hunspell, libreoffice-core | openoffice.org-hunspell | openoffice.org-core (>= 2.0.2), iceape-browser | iceweasel | icedove
+Conflicts: firefox (<< 2.0.0.3-2), hunspell-gl, iceape-browser (<< 1.1.1-2), icedove (<< 2.0.0.0-4), iceweasel (<< 2.0.0.3-2), libxul0d (= 1.8.0.11-3), mozilla-browser (<< 1.8+1.1.1-2), myspell-gl-es, openoffice.org (<= 1.0.3-2), openoffice.org-core (<< 2.1~m190-1), openoffice.org-spellcheck-gl, thunderbird (<< 2.0.0.1+0dfsg-0)
+Replaces: hunspell-gl, hunspell-gl-es, myspell-gl-es, openoffice.org-spellcheck-gl
+Provides: hunspell-dictionary, hunspell-dictionary-gl, hunspell-gl, hunspell-gl-es, myspell-gl-es, openoffice.org-spellcheck-gl
+Section: text
+Priority: optional
+Homepage: http://wiki.mancomun.org/index.php/Corrector_ortogr%C3%A1fico_para_OpenOffice.org
+Description: Galician dictionary for hunspell
+ This is the Galician dictionary for hunspell spellchecker
+ which is currently used within OpenOffice.org and the mozilla
+ variants. It uses the official RAG standard.

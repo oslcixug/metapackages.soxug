@@ -1,0 +1,848 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AsyncChannelMessenger (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AsyncChannelMessenger (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AsyncChannelMessenger.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/AsyncChannelMessenger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AsyncChannelMessenger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.endpoint.ChannelMessenger">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.endpoint</FONT>
+<BR>
+Class AsyncChannelMessenger</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util">net.jxta.util.AbstractSimpleSelectable</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint">net.jxta.endpoint.AbstractMessenger</A>
+          <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">net.jxta.endpoint.ChannelMessenger</A>
+              <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.endpoint.AsyncChannelMessenger</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>, <A HREF="../../../net/jxta/util/SimpleSelectable.html" title="interface in net.jxta.util">SimpleSelectable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>AsyncChannelMessenger</B><DT>extends <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A></DL>
+</PRE>
+
+<P>
+Extends Channel Messenger behaviour to provide asynchronous message sending
+ via queuing.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint">AsyncChannelMessenger.PendingMessage</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The representation of a queued message.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_net.jxta.util.SimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface net.jxta.util.<A HREF="../../../net/jxta/util/SimpleSelectable.html" title="interface in net.jxta.util">SimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util">SimpleSelectable.IdentityReference</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.endpoint.ChannelMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#InsertedServicePrefix">InsertedServicePrefix</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#origService">origService</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#origServiceParam">origServiceParam</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.endpoint.AbstractMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint">AbstractMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#DEFAULT_MTU">DEFAULT_MTU</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#dstAddress">dstAddress</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.util.AbstractSimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.util.<A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util">AbstractSimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#identityReference">identityReference</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.endpoint.Messenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/Messenger.html#ANYSTATE">ANYSTATE</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#BREAKING">BREAKING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#BROKEN">BROKEN</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#CLOSED">CLOSED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#CLOSING">CLOSING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#CONNECTED">CONNECTED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#DISCONNECTED">DISCONNECTED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#DISCONNECTING">DISCONNECTING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#IDLE">IDLE</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RECONCLOSING">RECONCLOSING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RECONNECTING">RECONNECTING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RECONSATURATED">RECONSATURATED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RESOLCLOSING">RESOLCLOSING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RESOLPENDING">RESOLPENDING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RESOLSATURATED">RESOLSATURATED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RESOLVED">RESOLVED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#RESOLVING">RESOLVING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#SATURATED">SATURATED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#SENDING">SENDING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#SENDINGSATURATED">SENDINGSATURATED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#TERMINAL">TERMINAL</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#UNRESOLVABLE">UNRESOLVABLE</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#UNRESOLVED">UNRESOLVED</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#UNRESOLVING">UNRESOLVING</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE">USABLE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#AsyncChannelMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String, int, boolean)">AsyncChannelMessenger</A></B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;baseAddress,
+                      <A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;redirection,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;origService,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;origServiceParam,
+                      int&nbsp;queueSize,
+                      boolean&nbsp;connected)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new AsyncChannelMessenger.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close this messenger after processing any pending messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#connectImpl()">connectImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We invoke this method to be placed on the list of channels that are
+ waiting for resolution.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#down()">down</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The implementation invokes this method when it becomes broken.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#getChannelMessenger(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">getChannelMessenger</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;redirection,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If applicable, returns another messenger that will send messages to the same destination address than this one, but with
+ the specified default service and serviceParam, possibly rewriting addresses to ensure delivery through the specified
+ redirection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#getState()">getState</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint">AsyncChannelMessenger.PendingMessage</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#peek()">peek</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here, we behave like a queue to the shared messenger.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#poll()">poll</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One message done.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#resolPendingImpl()">resolPendingImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is invoked to inform the implementation that this channel is now in
+ the resolPending or resolSaturated state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#resolve()">resolve</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Force the messenger to start resolving if it is not resolved yet.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageB</A></B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple sending: blocks until the message was accepted for sending or the messenger is not <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A>; whichever occurs
+ first.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageN</A></B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a message to the destination specified at construction.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#size()">size</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of elements in this collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#startImpl()">startImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We invoke this method to be placed on the list of channels that have
+ message to send.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html#up()">up</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The implementation will invoke this method when it becomes resolved,
+ after connectImpl was invoked.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.endpoint.ChannelMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#effectiveParam(java.lang.String, java.lang.String)">effectiveParam</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#effectiveService(java.lang.String)">effectiveService</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)">sendMessage</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#setMessageWatcher(net.jxta.endpoint.ListenerAdaptor)">setMessageWatcher</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.endpoint.AbstractMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint">AbstractMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#flush()">flush</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#getDestinationAddress()">getDestinationAddress</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#getDestinationAddressObject()">getDestinationAddressObject</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#getMTU()">getMTU</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#isClosed()">isClosed</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#isIdle()">isIdle</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#isSynchronous()">isSynchronous</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#itemChanged(net.jxta.util.SimpleSelectable)">itemChanged</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessage</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#setStateLock(java.lang.Object)">setStateLock</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#toString()">toString</A>, <A HREF="../../../net/jxta/endpoint/AbstractMessenger.html#waitState(int, long)">waitState</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.AbstractSimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.util.<A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util">AbstractSimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#getIdentityReference()">getIdentityReference</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#haveListeners()">haveListeners</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#notifyChange()">notifyChange</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#register(net.jxta.util.SimpleSelector)">register</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#registerListener(net.jxta.util.SimpleSelectable)">registerListener</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#unregister(net.jxta.util.SimpleSelector)">unregister</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#unregisterListener(net.jxta.util.SimpleSelectable)">unregisterListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.endpoint.Messenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.endpoint.<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/endpoint/Messenger.html#flush()">flush</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#getDestinationAddress()">getDestinationAddress</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#getDestinationAddressObject()">getDestinationAddressObject</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#getLogicalDestinationAddress()">getLogicalDestinationAddress</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#getMTU()">getMTU</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#isClosed()">isClosed</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#isIdle()">isIdle</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#isSynchronous()">isSynchronous</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessage</A>, <A HREF="../../../net/jxta/endpoint/Messenger.html#waitState(int, long)">waitState</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.SimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.util.<A HREF="../../../net/jxta/util/SimpleSelectable.html" title="interface in net.jxta.util">SimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/SimpleSelectable.html#getIdentityReference()">getIdentityReference</A>, <A HREF="../../../net/jxta/util/SimpleSelectable.html#itemChanged(net.jxta.util.SimpleSelectable)">itemChanged</A>, <A HREF="../../../net/jxta/util/SimpleSelectable.html#register(net.jxta.util.SimpleSelector)">register</A>, <A HREF="../../../net/jxta/util/SimpleSelectable.html#unregister(net.jxta.util.SimpleSelector)">unregister</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AsyncChannelMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String, int, boolean)"><!-- --></A><H3>
+AsyncChannelMessenger</H3>
+<PRE>
+public <B>AsyncChannelMessenger</B>(<A HREF="../../../net/jxta/endpoint/EndpointAddress.html" title="class in net.jxta.endpoint">EndpointAddress</A>&nbsp;baseAddress,
+                             <A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;redirection,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;origService,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;origServiceParam,
+                             int&nbsp;queueSize,
+                             boolean&nbsp;connected)</PRE>
+<DL>
+<DD>Create a new AsyncChannelMessenger.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>baseAddress</CODE> - The network address messages go to; regardless of
+                         service, param, or group.<DD><CODE>redirection</CODE> - Group to which the messages must be redirected. This
+                         is used to implement the automatic group segregation which has become a
+                         de-facto standard. If not null, the unique portion of the specified
+                         groupID is prepended with <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#InsertedServicePrefix"><CODE>ChannelMessenger.InsertedServicePrefix</CODE></A> and inserted in
+                         every message's destination address in place of the the original service
+                         name, which gets shifted into the beginning of the service parameter. The
+                         opposite is done on arrival to restore the original destination address
+                         before the message is delivered to the listener in the the specified
+                         group. Messages that already bear a group redirection are not affected.<DD><CODE>origService</CODE> - The default destination service for messages sent
+                         without specifying a different service.<DD><CODE>origServiceParam</CODE> - The default destination service parameter for
+                         messages sent without specifying a different service parameter.<DD><CODE>queueSize</CODE> - the queue size that channels should have.<DD><CODE>connected</CODE> - true if the channel is created in the connected state.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public final void <B>close</B>()</PRE>
+<DL>
+<DD>Close this messenger after processing any pending messages. This method 
+ is not blocking. Upon return, the messenger will be in one of the non 
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A> states, which means that no message may be sent through 
+ it. Any other effect of this method, such as an underlying connection 
+ being closed, or all pending messages being processed, may be deferred
+ indefinitely.  When the messenger has completely processed the closure 
+ request, it will be in one of the <A HREF="../../../net/jxta/endpoint/Messenger.html#TERMINAL"><CODE>Messenger.TERMINAL</CODE></A> states (which are 
+ also <A HREF="../../../net/jxta/endpoint/Messenger.html#IDLE"><CODE>Messenger.IDLE</CODE></A> states). Therefore, if one is interested in the 
+ outcome of the closure, one may wait for the messenger to be in a 
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#TERMINAL"><CODE>Messenger.TERMINAL</CODE></A> or <A HREF="../../../net/jxta/endpoint/Messenger.html#IDLE"><CODE>Messenger.IDLE</CODE></A> state, and check which it is. 
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#CLOSED"><CODE>Messenger.CLOSED</CODE></A> denotes success (all outstanding messages have been 
+ sent), as opposed to <A HREF="../../../net/jxta/endpoint/Messenger.html#UNRESOLVABLE"><CODE>Messenger.UNRESOLVABLE</CODE></A> or <A HREF="../../../net/jxta/endpoint/Messenger.html#BROKEN"><CODE>Messenger.BROKEN</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><!-- --></A><H3>
+sendMessageN</H3>
+<PRE>
+public final boolean <B>sendMessageN</B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)</PRE>
+<DL>
+<DD>Sends a message to the destination specified at construction. If a service name and service param are specified, they will
+ replace those specified at construction for the purpose of sending this message only.
+ <p/>
+ This method is identical to <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><CODE>Messenger.sendMessage(Message,String,String)</CODE></A>, except that it does not throw an exception. The invoker
+ has to retrieve a detailed status from the message if needed.
+ <p/>
+ Error Handling:  <ul>
+ <li>A return result of <code>false</code> indicates that the message was not accepted to be sent. This may be due to
+ local resource limits being reached or to the messenger being in a state that is not <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A> or to the message
+ being invalid. The exact cause of the failure can be retrieved from the message by using
+ <A HREF="../../../net/jxta/endpoint/Message.html#getMessageProperty(java.lang.Object)"><CODE><code>Message.getMessageProperty(Messenger.class)</code></CODE></A>.  If appropriate,
+ another attempt at sending the message, may be made after waiting for the congestion to clear (for example by using
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#waitState(int, long)"><CODE>Messenger.waitState(int,long)</CODE></A>).</li>
+ <p/>
+ <li>A return result of <code>true</code> indicates that the message was accepted for sending. <b>It does not imply that
+ the message will be sent or that the destination will receive the message.</b> There will be no indication by this method
+ of any errors in sending the message. If this messenger subsequently reaches an <A HREF="../../../net/jxta/endpoint/Messenger.html#IDLE"><CODE>Messenger.IDLE</CODE></A> state that is either <A HREF="../../../net/jxta/endpoint/Messenger.html#CLOSED"><CODE>Messenger.CLOSED</CODE></A> or a <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A> state, then it may be inferred that all outstanding messages have been processed without this
+ messenger detecting an error.</li>
+ <p/>
+ <li>The invoker may have confirmation of completion (successful or not) by observing the message's properties. When the
+ message has been fully processed, <A HREF="../../../net/jxta/endpoint/Message.html#getMessageProperty(java.lang.Object)"><CODE><code>Message.getMessageProperty(Messenger.class)</code></CODE></A>
+ will return an object of class <A HREF="../../../net/jxta/endpoint/OutgoingMessageEvent.html" title="class in net.jxta.endpoint"><CODE>OutgoingMessageEvent</CODE></A>. Changes in a message's set of properties may be tracked by
+ selecting the message.</li>
+ </ul>
+ <p/>
+ <p/><b>WARNING:</b> The Message object should not be reused or modified until completely processed. Concurrent modification
+ of a message while a messenger is sending the message will produce incorrect and unpredictable results.  If completion is
+ not monitored, the message should <b>never</b> be reused. If necessary, a clone of the message may be provided to
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><CODE>Messenger.sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)</CODE></A>:
+ <p/>
+ <p/><code><pre>
+     messenger.sendMessageN( (Message) myMessage.clone(), theService, theParam );
+ </pre></code>
+ <p/>
+ There is no guarantee that a message successfully sent will actually be received.<p/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - The message to send.<DD><CODE>rService</CODE> - Optionally replaces the service in the destination
+                     address. If <code>null</code> then the destination address's default
+                     service will be used.  If the empty string ("") is used then
+                     no service is included in the destination address.<DD><CODE>rServiceParam</CODE> - Optionally replaces the service param in the
+                     destination address. If <code>null</code> then the destination address's
+                     default service parameter will be used. If the empty string ("") is used
+                     then no service param is included in the destination address.
+<DT><B>Returns:</B><DD>boolean <code>true</code> if the message has been accepted for sending, otherwise <code>false</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><!-- --></A><H3>
+sendMessageB</H3>
+<PRE>
+public final void <B>sendMessageB</B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg,
+                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rService,
+                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rServiceParam)
+                        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Simple sending: blocks until the message was accepted for sending or the messenger is not <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A>; whichever occurs
+ first.  If a service name and service param are specified, they will replace those specified at construction for the
+ purpose of sending this message only.<p/>
+ <p/>
+ Error Handling:
+ <p/>
+ <ul>
+ <li>An <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io"><CODE>IOException</CODE></A> means that this message is invalid or that this messenger is now in one of the non <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A> states and may no longer send new messages, and means that the message was not sent. The exact state of the
+ messenger may be obtained from the <A HREF="../../../net/jxta/endpoint/Messenger.html#getState()"><CODE>Messenger.getState()</CODE></A> method. If no exception is thrown, the message is accepted for
+ sending and may or may not be fully processed.</li>
+ <p/>
+ <li>The invoker may have confirmation of completion by observing the message's properties. When the message has been
+ fully processed, <A HREF="../../../net/jxta/endpoint/Message.html#getMessageProperty(java.lang.Object)"><CODE>Message#getMessageProperty(Messenger.class)</CODE></A> will return an
+ object of class <A HREF="../../../net/jxta/endpoint/OutgoingMessageEvent.html" title="class in net.jxta.endpoint"><CODE>OutgoingMessageEvent</CODE></A>. Changes in a message's set of properties may be tracked by selecting the
+ message. If an exception was thrown, the message's properties will not be modified
+ <p/>
+ <li>There is no guarantee that the process of sending the message will not fail after that method returned. If this messenger
+ subsequently reaches an <A HREF="../../../net/jxta/endpoint/Messenger.html#IDLE"><CODE>Messenger.IDLE</CODE></A> state that is either <A HREF="../../../net/jxta/endpoint/Messenger.html#CLOSED"><CODE>Messenger.CLOSED</CODE></A> or a <A HREF="../../../net/jxta/endpoint/Messenger.html#USABLE"><CODE>Messenger.USABLE</CODE></A> state, then it may be inferred
+ that all outstanding messages have been processed without this messenger detecting an error.</li>
+ </ul>
+ <p/>
+ <p/><b>WARNING:</b> The Message object should not be reused or modified until completely processed. Concurrent modification
+ of a message while a messenger is sending the message will produce incorrect and unpredictable results.  If completion is
+ not monitored, the message should <b>never</b> be reused. If necessary, a clone of the message may be provided to
+ <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><CODE>Messenger.sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)</CODE></A>:
+ <p/>
+ <p/><code><pre>
+     messenger.sendMessageB( (Message) myMessage.clone(), theService, theParam );
+ </pre></code>
+ <p/>
+ There is no guarantee that a message successfully sent will actually be received.<p/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - the message<DD><CODE>rService</CODE> - Optionally replaces the service in the destination
+                     address. If <code>null</code> then the destination address's default
+                     service will be used.  If the empty string ("") is used then
+                     no service is included in the destination address.<DD><CODE>rServiceParam</CODE> - Optionally replaces the service param in the
+                     destination address. If <code>null</code> then the destination address's
+                     default service parameter will be used. If the empty string ("") is used
+                     then no service param is included in the destination address.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - Thrown if the message cannot be sent.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resolve()"><!-- --></A><H3>
+resolve</H3>
+<PRE>
+public final void <B>resolve</B>()</PRE>
+<DL>
+<DD>Force the messenger to start resolving if it is not resolved yet. Any 
+ attempt at sending a message has the same effect, but the message may 
+ fail as a result, depending upon the method used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getState()"><!-- --></A><H3>
+getState</H3>
+<PRE>
+public final int <B>getState</B>()</PRE>
+<DL>
+<DD>Returns the current state.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>one of the legal discrete state values.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getChannelMessenger(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+getChannelMessenger</H3>
+<PRE>
+public final <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>getChannelMessenger</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;redirection,
+                                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</PRE>
+<DL>
+<DD>If applicable, returns another messenger that will send messages to the same destination address than this one, but with
+ the specified default service and serviceParam, possibly rewriting addresses to ensure delivery through the specified
+ redirection. This is not generally useful to applications and most messengers will return null. This method is needed
+ by the EndpointService when interacting with Messengers provided by Transport modules. If you are not implementing a
+ Transport module, then you can ignore this method.
+ <p/>
+ <b>Important:</b> The channel so obtained is not configured to support the <A HREF="../../../net/jxta/endpoint/Messenger.html#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)"><CODE>Messenger.sendMessage(Message,String,String,
+OutgoingMessageEventListener)</CODE></A> legacy method. If use of this method is desired, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#setMessageWatcher(net.jxta.endpoint.ListenerAdaptor)"><CODE>ChannelMessenger.setMessageWatcher(net.jxta.endpoint.ListenerAdaptor)</CODE></A>
+ must be used first.
+ <p/>
+ By default a channel refuses to make a channel.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/endpoint/Messenger.html#getChannelMessenger(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">getChannelMessenger</A></CODE> in interface <CODE><A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html#getChannelMessenger(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">getChannelMessenger</A></CODE> in class <CODE><A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>redirection</CODE> - The requested redirection. The resulting channel messenger will use this to force
+                     delivery of the message only in the specified group (or possibly descendents, but not parents). If null the local
+                     group is assumed. This redirection is applied only to messages that are sent to a service name and service param that
+                     do not imply a group redirection.<DD><CODE>service</CODE> - The service to which the resulting channel will send messages, when they are not sent to a
+                     specified service.<DD><CODE>serviceParam</CODE> - The service parameter that the resulting channel will use to send messages, when no parameter is
+                     specified.
+<DT><B>Returns:</B><DD>a channelMessenger as specified.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/endpoint/MessageSender.html#getMessenger(net.jxta.endpoint.EndpointAddress, java.lang.Object)"><CODE>MessageSender.getMessenger(EndpointAddress,Object)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="up()"><!-- --></A><H3>
+up</H3>
+<PRE>
+protected void <B>up</B>()</PRE>
+<DL>
+<DD>The implementation will invoke this method when it becomes resolved,
+ after connectImpl was invoked.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="down()"><!-- --></A><H3>
+down</H3>
+<PRE>
+protected void <B>down</B>()</PRE>
+<DL>
+<DD>The implementation invokes this method when it becomes broken.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="peek()"><!-- --></A><H3>
+peek</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint">AsyncChannelMessenger.PendingMessage</A> <B>peek</B>()</PRE>
+<DL>
+<DD>Here, we behave like a queue to the shared messenger. When we report
+ being empty, though, we're automatically removed from the active queues
+ list. We'll go back there the next time we have something to send by
+ calling startImpl.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>pending message</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="size()"><!-- --></A><H3>
+size</H3>
+<PRE>
+protected int <B>size</B>()</PRE>
+<DL>
+<DD>Returns the number of elements in this collection.  If this collection
+ contains more than <tt>Integer.MAX_VALUE</tt> elements, returns
+ <tt>Integer.MAX_VALUE</tt>.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the number of elements in this collection</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="poll()"><!-- --></A><H3>
+poll</H3>
+<PRE>
+protected boolean <B>poll</B>()</PRE>
+<DL>
+<DD>One message done. Update the saturated/etc state accordingly.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if there are more messages after the one we removed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startImpl()"><!-- --></A><H3>
+startImpl</H3>
+<PRE>
+protected abstract void <B>startImpl</B>()</PRE>
+<DL>
+<DD>We invoke this method to be placed on the list of channels that have
+ message to send.
+ <p/>
+ NOTE that it is the shared messenger responsibility to synchronize so
+ that we cannot be added to the active list just before we get removed
+ due to reporting an empty queue in parallel. So, if we report an empty
+ queue and have a new message to send before the shared messenger removes
+ us form the active list, startImpl will block until the removal is done.
+ Then we'll be added back.
+ <p/>
+ If it cannot be done, it means that the shared messenger is no longer
+ usable. It may call down() in sequence. Out of defensiveness, it should
+ do so without holding its lock.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connectImpl()"><!-- --></A><H3>
+connectImpl</H3>
+<PRE>
+protected abstract void <B>connectImpl</B>()</PRE>
+<DL>
+<DD>We invoke this method to be placed on the list of channels that are
+ waiting for resolution.
+ <p/>
+ If it cannot be done, it means that the shared messenger is no longer
+ usable. It may call down() in sequence. Out of defensiveness, it should
+ do so without holding its lock. If the messenger is already resolved it
+ may call up() in sequence. Same wisdom applies. It is a good idea to
+ create channels in the resolved state if the shared messenger is already
+ resolved. That avoids this extra contortion.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resolPendingImpl()"><!-- --></A><H3>
+resolPendingImpl</H3>
+<PRE>
+protected abstract void <B>resolPendingImpl</B>()</PRE>
+<DL>
+<DD>This is invoked to inform the implementation that this channel is now in
+ the resolPending or resolSaturated state. This is specific to this type
+ of channels. The shared messenger must make sure that this channel
+ remains strongly referenced, even though it is not resolved, because
+ there are messages in it. It is valid for an application to let go of a
+ channel after sending a message, even if the channel is not yet
+ resolved. The message will go if/when the channel resolves. This method
+ may be invoked redundantly and even once the channel is no longer among
+ the one awaiting resolution. The implementation must be careful to
+ ignore such calls.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AsyncChannelMessenger.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.PendingMessage.html" title="class in net.jxta.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/AsyncChannelMessenger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AsyncChannelMessenger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.endpoint.ChannelMessenger">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

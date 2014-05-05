@@ -1,0 +1,26 @@
+Source: xug-meta
+Section: metapackages
+Priority: optional
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 7.0.8), germinate (>= 1.18)
+
+Package: xug-desktop
+Architecture: any
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: The XUG desktop system
+ This package depends on all of the packages in the xug desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.
+
+Package: xug-software-base
+Architecture: any
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: The XUG desktop system
+ This package depends on all of the packages in the xug desktop system
+ .
+ It is also used to help ensure proper upgrades, so it is recommended that
+ it not be removed.

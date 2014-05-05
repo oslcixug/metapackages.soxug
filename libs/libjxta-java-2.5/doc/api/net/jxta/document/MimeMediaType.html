@@ -1,0 +1,841 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MimeMediaType (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MimeMediaType (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MimeMediaType.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/FileDocument.html" title="class in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/MimeMediaType.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MimeMediaType.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.document</FONT>
+<BR>
+Class MimeMediaType</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.document.MimeMediaType</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>MimeMediaType</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</A></DL>
+</PRE>
+
+<P>
+MIME Media Types are used to describe the format of data streams. MIME
+ Media Types are defined by
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.
+ This class manages parsing of Mime Media Types from strings and piecemeal
+ construction of Mime Media Type descriptors.
+ <p/>
+ <p/>Note : This implementation does not include support for the character
+ encoding techniques described by :
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document"><CODE>Document</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredDocumentFactory.html" title="class in net.jxta.document"><CODE>StructuredDocumentFactory</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document"><CODE>StructuredTextDocument</CODE></A>, 
+<A HREF="../../../serialized-form.html#net.jxta.document.MimeMediaType">Serialized Form</A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#AOS">AOS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for arbitrary unparsed binary data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#APPLICATION_XML_DEFAULTENCODING">APPLICATION_XML_DEFAULTENCODING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for XML encoded using the default character
+ encoding for this JVM.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#TEXT_DEFAULTENCODING">TEXT_DEFAULTENCODING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for text encoded using the default character
+ encoding for this JVM.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#TEXTUTF8">TEXTUTF8</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for plain text encoded as UTF-8 characters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#XML_DEFAULTENCODING">XML_DEFAULTENCODING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for XML encoded using the default character
+ encoding for this JVM.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#XMLUTF8">XMLUTF8</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Mime Media Type for XML encoded as UTF-8 characters.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#MimeMediaType(net.jxta.document.MimeMediaType, java.lang.String, boolean)">MimeMediaType</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;params,
+              boolean&nbsp;replace)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new type/subtype MimeMediaType with the specified parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#MimeMediaType(java.lang.String)">MimeMediaType</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mimetype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new MimeMediaType</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#MimeMediaType(java.lang.String, java.lang.String)">MimeMediaType</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;subtype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new type/subtype MimeMediaType</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#MimeMediaType(java.lang.String, java.lang.String, java.lang.String)">MimeMediaType</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;subtype,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;parameters)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new type/subtype MimeMediaType</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#equals(java.lang.Object)">equals</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#equalsIngoringParams(java.lang.Object)">equalsIngoringParams</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Similar to <A HREF="../../../net/jxta/document/MimeMediaType.html#equals(java.lang.Object)"><CODE>equals(Object)</CODE></A>, but ignores any parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#getBaseMimeMediaType()">getBaseMimeMediaType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the "base" MIME media type of this type. ie. with no parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#getMimeMediaType()">getMimeMediaType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the "base" MIME media type of this type. ie. with no parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#getParameter(java.lang.String)">getParameter</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of the first occurance of the specified parameter from the
+ parameter list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#getSubtype()">getSubtype</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the Subtype of the mime-type</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#getType()">getType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get type of the mime-type</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#hashCode()">hashCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#intern()">intern</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a canonical representation for the MimeMediaType object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#isExperimentalSubtype()">isExperimentalSubtype</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if the mime-type is for debugging.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#isExperimentalType()">isExperimentalType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if the mime-type is for provisional.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/MimeMediaType.html#valueOf(java.lang.String)">valueOf</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mimetype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a MimeMediaType with a value represented by the specified String.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AOS"><!-- --></A><H3>
+AOS</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>AOS</B></PRE>
+<DL>
+<DD>Common Mime Media Type for arbitrary unparsed binary data.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="TEXT_DEFAULTENCODING"><!-- --></A><H3>
+TEXT_DEFAULTENCODING</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>TEXT_DEFAULTENCODING</B></PRE>
+<DL>
+<DD>Common Mime Media Type for text encoded using the default character
+ encoding for this JVM. The default character encoding is specified by
+ the JDK System property "<code>file.encoding</code>".
+ <p/>
+ <p/>The default encoding varies with host platform and locale. This
+ media type <b>must not</b> be used for <b>any</b> documents which
+ will be  exchanged with other peers (as they may be using different
+ default character encodings).
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="TEXTUTF8"><!-- --></A><H3>
+TEXTUTF8</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>TEXTUTF8</B></PRE>
+<DL>
+<DD>Common Mime Media Type for plain text encoded as UTF-8 characters. This
+ type is used by JXTA for all strings.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="XML_DEFAULTENCODING"><!-- --></A><H3>
+XML_DEFAULTENCODING</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>XML_DEFAULTENCODING</B></PRE>
+<DL>
+<DD>Common Mime Media Type for XML encoded using the default character
+ encoding for this JVM. The default character encoding is specified by
+ the JDK System property "<code>file.encoding</code>".
+ <p/>
+ <p/>The default encoding varies with host platform and locale. This
+ media type <b>must not</b> be used for <b>any</b> documents which
+ will be  exchanged with other peers (as they may be using different
+ default character encodings).
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="APPLICATION_XML_DEFAULTENCODING"><!-- --></A><H3>
+APPLICATION_XML_DEFAULTENCODING</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>APPLICATION_XML_DEFAULTENCODING</B></PRE>
+<DL>
+<DD>Common Mime Media Type for XML encoded using the default character
+ encoding for this JVM. The default character encoding is specified by
+ the JDK System property "<code>file.encoding</code>".
+ <p/>
+ <p/>The default encoding varies with host platform and locale. This
+ media type <b>must not</b> be used for <b>any</b> documents which
+ will be  exchanged with other peers (as they may be using different
+ default character encodings).
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="XMLUTF8"><!-- --></A><H3>
+XMLUTF8</H3>
+<PRE>
+public static final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>XMLUTF8</B></PRE>
+<DL>
+<DD>Common Mime Media Type for XML encoded as UTF-8 characters. This type is
+ used by JXTA for all protocol messages and metadata.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MimeMediaType(java.lang.String)"><!-- --></A><H3>
+MimeMediaType</H3>
+<PRE>
+public <B>MimeMediaType</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mimetype)</PRE>
+<DL>
+<DD>Creates a new MimeMediaType
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - string representing a mime-type</DL>
+</DL>
+<HR>
+
+<A NAME="MimeMediaType(java.lang.String, java.lang.String)"><!-- --></A><H3>
+MimeMediaType</H3>
+<PRE>
+public <B>MimeMediaType</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;subtype)</PRE>
+<DL>
+<DD>Creates a new type/subtype MimeMediaType
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - string representing a mime type<DD><CODE>subtype</CODE> - string representing a mime subtype</DL>
+</DL>
+<HR>
+
+<A NAME="MimeMediaType(java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+MimeMediaType</H3>
+<PRE>
+public <B>MimeMediaType</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;subtype,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;parameters)</PRE>
+<DL>
+<DD>Creates a new type/subtype MimeMediaType
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - string representing a mime type<DD><CODE>subtype</CODE> - string representing a mime subtype<DD><CODE>parameters</CODE> - parameters to the mime-type constructor</DL>
+</DL>
+<HR>
+
+<A NAME="MimeMediaType(net.jxta.document.MimeMediaType, java.lang.String, boolean)"><!-- --></A><H3>
+MimeMediaType</H3>
+<PRE>
+public <B>MimeMediaType</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;params,
+                     boolean&nbsp;replace)</PRE>
+<DL>
+<DD>Creates a new type/subtype MimeMediaType with the specified parameters.
+ The parameters are copied from the source mime type and additional params
+ are added. If replace is true, then the provided params will overwrite
+ the params from the source mime type.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - the source mime type<DD><CODE>params</CODE> - parameters to the mime-type constructor<DD><CODE>replace</CODE> - parameters if true then provided params should replace
+                existing params else they are accumulated.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="equals(java.lang.Object)"><!-- --></A><H3>
+equals</H3>
+<PRE>
+public boolean <B>equals</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="equalsIngoringParams(java.lang.Object)"><!-- --></A><H3>
+equalsIngoringParams</H3>
+<PRE>
+public boolean <B>equalsIngoringParams</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
+<DL>
+<DD>Similar to <A HREF="../../../net/jxta/document/MimeMediaType.html#equals(java.lang.Object)"><CODE>equals(Object)</CODE></A>, but ignores any parameters. Compares
+ only the type and sub-type.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>obj</CODE> - the object to compare
+<DT><B>Returns:</B><DD>true if equal</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hashCode()"><!-- --></A><H3>
+hashCode</H3>
+<PRE>
+public int <B>hashCode</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBaseMimeMediaType()"><!-- --></A><H3>
+getBaseMimeMediaType</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>getBaseMimeMediaType</B>()</PRE>
+<DL>
+<DD>Returns the "base" MIME media type of this type. ie. with no parameters.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The "base" MIME media type of this MimeMediaType.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMimeMediaType()"><!-- --></A><H3>
+getMimeMediaType</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getMimeMediaType</B>()</PRE>
+<DL>
+<DD>Returns the "base" MIME media type of this type. ie. with no parameters.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The "base" MIME media type of this type. ie. with no parameters.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getType()"><!-- --></A><H3>
+getType</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getType</B>()</PRE>
+<DL>
+<DD>Get type of the mime-type
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>type of the mime-type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isExperimentalType()"><!-- --></A><H3>
+isExperimentalType</H3>
+<PRE>
+public boolean <B>isExperimentalType</B>()</PRE>
+<DL>
+<DD>Check if the mime-type is for provisional. See Section 2.1 of
+ <a href=http://www.ietf.org/rfc/rfc2048.txt">IETF RFC 2048 <i>MIME : Registration Procedures</i></a>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean  true if it is a provisional type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSubtype()"><!-- --></A><H3>
+getSubtype</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getSubtype</B>()</PRE>
+<DL>
+<DD>Get the Subtype of the mime-type
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>subtype of the mime-type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isExperimentalSubtype()"><!-- --></A><H3>
+isExperimentalSubtype</H3>
+<PRE>
+public boolean <B>isExperimentalSubtype</B>()</PRE>
+<DL>
+<DD>Check if the mime-type is for debugging. This method will be
+ removed
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean  true if it is a debugging type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParameter(java.lang.String)"><!-- --></A><H3>
+getParameter</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getParameter</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;param)</PRE>
+<DL>
+<DD>Get the value of the first occurance of the specified parameter from the
+ parameter list.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>param</CODE> - the parameter to retrieve.
+<DT><B>Returns:</B><DD>the value of the specifid parameter or null if the parameter was
+         not found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="valueOf(java.lang.String)"><!-- --></A><H3>
+valueOf</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>valueOf</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mimetype)</PRE>
+<DL>
+<DD>Returns a MimeMediaType with a value represented by the specified String.
+ <p/>
+ <b>This method may produce better results than using the constructor
+ the same parameter set in that</b>:
+ <p/>
+ <code>
+ new MimeMediaType( string ) != new MimeMediaType( string )
+ </code>
+ <p/>
+ while for common types:
+ <p/>
+ <code>
+ MimeMediaType.valueOf( string ) == MimeMediaType.valueOf( string )
+ </code>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="intern()"><!-- --></A><H3>
+intern</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>intern</B>()</PRE>
+<DL>
+<DD>Returns a canonical representation for the MimeMediaType object.
+ <p/>
+ <p/>A pool of MimeMediaType, is maintained privately by the class.
+ <p/>
+ <p/>When the intern method is invoked, if the pool already contains a
+ MimeMediaType equal to this MimeMediaType object as determined by the
+ equals(Object) method, then the MimeMediaType from the pool is returned.
+ Otherwise, this MimeMediaType object is added to the pool and a reference
+ to this MimeMediaType object is returned.
+ <p/>
+ <p/>It follows that for any two MimeMediaType <tt>s</tt> and <tt>t</tt>,
+ <tt>s.intern() == t.intern()</tt> is true if and only if <tt>s.equals(t)</tt>
+ is true.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a MimeMediaType that has the same value as this type, but is
+         guaranteed to be from a pool of unique types.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MimeMediaType.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/FileDocument.html" title="class in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/MimeMediaType.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MimeMediaType.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

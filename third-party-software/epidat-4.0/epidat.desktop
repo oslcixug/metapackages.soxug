@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Epidat
+Comment=Statistic and epidemiologic data analysis
+Keywords=Java;Chemistry;Epidemiologic;Statistic
+Exec=epidat
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=Epidat
+Categories=Java;Chemistry;
+StartupNotify=true
+Actions=NewWindow;

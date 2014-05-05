@@ -1,0 +1,17 @@
+denim (2.1-1ubuntu2) karmic; urgency=low
+
+  * Fixed bug at initialization script
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Thu, 20 Aug 2009 13:19:06 +0200
+
+denim (2.1-1ubuntu1) karmic; urgency=low
+
+  * Added icon to menu application list
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Wed, 19 Aug 2009 13:55:13 +0200
+
+denim (2.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Tue, 18 Aug 2009 11:26:14 +0200

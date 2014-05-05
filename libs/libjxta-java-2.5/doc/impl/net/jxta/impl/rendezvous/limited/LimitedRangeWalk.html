@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+LimitedRangeWalk (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="LimitedRangeWalk (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/LimitedRangeWalk.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeGreeter.html" title="class in net.jxta.impl.rendezvous.limited"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalker.html" title="class in net.jxta.impl.rendezvous.limited"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LimitedRangeWalk.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.rendezvous.limited</FONT>
+<BR>
+Class LimitedRangeWalk</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">net.jxta.impl.rendezvous.RdvWalk</A>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.rendezvous.limited.LimitedRangeWalk</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>LimitedRangeWalk</B><DT>extends <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></DL>
+</PRE>
+
+<P>
+This class is the Limited Walk Policy.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalker.html" title="class in net.jxta.impl.rendezvous.limited"><CODE>LimitedRangeWalker</CODE></A>, 
+<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeGreeter.html" title="class in net.jxta.impl.rendezvous.limited"><CODE>LimitedRangeGreeter</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#ELEMENTNAME">ELEMENTNAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the message element in which we will store our information.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#SERVICENAME">SERVICENAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The prefix we will use for service name we use for messaging.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.rendezvous.RdvWalk"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#group">group</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#listener">listener</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#srcServiceName">srcServiceName</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#srcServiceParam">srcServiceParam</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#LimitedRangeWalk(net.jxta.peergroup.PeerGroup, net.jxta.endpoint.EndpointListener, java.lang.String, java.lang.String, net.jxta.impl.rendezvous.rpv.PeerView)">LimitedRangeWalk</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A>&nbsp;listener,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;srcServiceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;srcServiceParam,
+                 <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A>&nbsp;rpv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard constructor</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeGreeter.html" title="class in net.jxta.impl.rendezvous.limited">LimitedRangeGreeter</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getGreeter()">getGreeter</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get/Create a greeter to be used with this walk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getPeerView()">getPeerView</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the Rendezvous peer PeerView used by this walk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="../../../../../net/jxta/impl/protocol/LimitedRangeRdvMsg.html" title="class in net.jxta.impl.protocol">LimitedRangeRdvMsg</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getRdvMessage(net.jxta.endpoint.Message)">getRdvMessage</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the parsed LimitedRangeRdvMsg from the provided message or
+ <code>null</code> if the message did not contain an appropriate element or
+ the element couldn't be parsed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalker.html" title="class in net.jxta.impl.rendezvous.limited">LimitedRangeWalker</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getWalker()">getWalker</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get/Create a walker to be used with this walk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getWalkServiceName()">getWalkServiceName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the Service Name used by listener of this walk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#getWalkServiceParam()">getWalkServiceParam</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the Service Param used by listener of this walk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html#stop()">stop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop the walk.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.rendezvous.RdvWalk"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getListener()">getListener</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getPeerGroup()">getPeerGroup</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getServiceName()">getServiceName</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getServiceParam()">getServiceParam</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SERVICENAME"><!-- --></A><H3>
+SERVICENAME</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SERVICENAME</B></PRE>
+<DL>
+<DD>The prefix we will use for service name we use for messaging.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.limited.LimitedRangeWalk.SERVICENAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ELEMENTNAME"><!-- --></A><H3>
+ELEMENTNAME</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>ELEMENTNAME</B></PRE>
+<DL>
+<DD>The name of the message element in which we will store our information.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.limited.LimitedRangeWalk.ELEMENTNAME">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="LimitedRangeWalk(net.jxta.peergroup.PeerGroup, net.jxta.endpoint.EndpointListener, java.lang.String, java.lang.String, net.jxta.impl.rendezvous.rpv.PeerView)"><!-- --></A><H3>
+LimitedRangeWalk</H3>
+<PRE>
+public <B>LimitedRangeWalk</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                        <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A>&nbsp;listener,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;srcServiceName,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;srcServiceParam,
+                        <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A>&nbsp;rpv)</PRE>
+<DL>
+<DD>Standard constructor
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - Peergroup in which this walk is running.<DD><CODE>listener</CODE> - Intended recipient of messages received as part of this walk.<DD><CODE>srcServiceName</CODE> - Service name used by the client of this walk.<DD><CODE>srcServiceParam</CODE> - Optional service parameter used by the client of this walk.<DD><CODE>rpv</CODE> - the rendezvous peer PeerView to be used by this walk.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getRdvMessage(net.jxta.endpoint.Message)"><!-- --></A><H3>
+getRdvMessage</H3>
+<PRE>
+static <A HREF="../../../../../net/jxta/impl/protocol/LimitedRangeRdvMsg.html" title="class in net.jxta.impl.protocol">LimitedRangeRdvMsg</A> <B>getRdvMessage</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg)</PRE>
+<DL>
+<DD>Returns the parsed LimitedRangeRdvMsg from the provided message or
+ <code>null</code> if the message did not contain an appropriate element or
+ the element couldn't be parsed.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - the Message which must contain the LimitedRangeRdvMsg.
+<DT><B>Returns:</B><DD>The LimitedRangeRdvMsg from the message or <code>null</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerView()"><!-- --></A><H3>
+getPeerView</H3>
+<PRE>
+<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A> <B>getPeerView</B>()</PRE>
+<DL>
+<DD>Return the Rendezvous peer PeerView used by this walk.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The rendezvous peer PeerView used by this walk.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWalkServiceName()"><!-- --></A><H3>
+getWalkServiceName</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getWalkServiceName</B>()</PRE>
+<DL>
+<DD>Return the Service Name used by listener of this walk.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the Service Name used by listener of this walk.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWalkServiceParam()"><!-- --></A><H3>
+getWalkServiceParam</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getWalkServiceParam</B>()</PRE>
+<DL>
+<DD>Return the Service Param used by listener of this walk.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the Service Param used by listener of this walk.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWalker()"><!-- --></A><H3>
+getWalker</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalker.html" title="class in net.jxta.impl.rendezvous.limited">LimitedRangeWalker</A> <B>getWalker</B>()</PRE>
+<DL>
+<DD>Get/Create a walker to be used with this walk.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getWalker()">getWalker</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A walker to be used with this walk. <code>null</code> is returned if
+         no greeter is available or the walk has been stopped.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getGreeter()"><!-- --></A><H3>
+getGreeter</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeGreeter.html" title="class in net.jxta.impl.rendezvous.limited">LimitedRangeGreeter</A> <B>getGreeter</B>()</PRE>
+<DL>
+<DD>Get/Create a greeter to be used with this walk.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#getGreeter()">getGreeter</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A greeter to be used with this walk. <code>null</code> is returned if
+         no greeter is available or the walk has been stopped.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stop()"><!-- --></A><H3>
+stop</H3>
+<PRE>
+public void <B>stop</B>()</PRE>
+<DL>
+<DD>Stop the walk.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html#stop()">stop</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RdvWalk.html" title="class in net.jxta.impl.rendezvous">RdvWalk</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/LimitedRangeWalk.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeGreeter.html" title="class in net.jxta.impl.rendezvous.limited"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/limited/LimitedRangeWalker.html" title="class in net.jxta.impl.rendezvous.limited"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/limited/LimitedRangeWalk.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LimitedRangeWalk.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

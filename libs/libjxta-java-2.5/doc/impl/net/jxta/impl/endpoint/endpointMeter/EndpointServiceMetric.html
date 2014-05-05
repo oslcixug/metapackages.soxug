@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+EndpointServiceMetric (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="EndpointServiceMetric (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/EndpointServiceMetric.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitor.html" title="class in net.jxta.impl.endpoint.endpointMeter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="EndpointServiceMetric.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.endpoint.endpointMeter</FONT>
+<BR>
+Class EndpointServiceMetric</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.endpoint.endpointMeter.EndpointServiceMetric</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>EndpointServiceMetric</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A></DL>
+</PRE>
+
+<P>
+Basic Service Metric EndpointService Monitoring
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#EndpointServiceMetric()">EndpointServiceMetric</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#EndpointServiceMetric(net.jxta.platform.ModuleClassID)">EndpointServiceMetric</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#addInboundMetric(net.jxta.impl.endpoint.endpointMeter.InboundMetric)">addInboundMetric</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A>&nbsp;inboundMetric)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#addOutboundMetric(net.jxta.impl.endpoint.endpointMeter.OutboundMetric)">addOutboundMetric</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A>&nbsp;outboundMetric)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#addPropagationMetric(net.jxta.impl.endpoint.endpointMeter.PropagationMetric)">addPropagationMetric</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A>&nbsp;propagationMetric)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#deepCopy(net.jxta.impl.endpoint.endpointMeter.EndpointServiceMonitorFilter)">deepCopy</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitorFilter.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMonitorFilter</A>&nbsp;endpointServiceMonitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make a deep copy of this metric only including the portions designated in the Filter
+ The resulting metric is Safe to modify without danger to the underlying Monitor Metrics</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#diffMetrics(net.jxta.meter.ServiceMetric)">diffMetrics</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtractively Remove Metrics from this Metric</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getEndpointMetric()">getEndpointMetric</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getInboundMetric(java.lang.String, java.lang.String)">getInboundMetric</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getInboundMetrics()">getInboundMetrics</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getModuleClassID()">getModuleClassID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getModuleClassID</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getOutboundMetric(net.jxta.endpoint.EndpointAddress)">getOutboundMetric</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;endpointAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getOutboundMetrics()">getOutboundMetrics</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getPropagationMetric(java.lang.String, java.lang.String)">getPropagationMetric</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#getPropagationMetrics()">getPropagationMetrics</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#init(net.jxta.platform.ModuleClassID)">init</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;init</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#mergeMetrics(net.jxta.meter.ServiceMetric)">mergeMetrics</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additively Merge Metrics from this Metric</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#mergeMetrics(net.jxta.meter.ServiceMetric, boolean, boolean, boolean, boolean)">mergeMetrics</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne,
+             boolean&nbsp;includeEndpointMetrics,
+             boolean&nbsp;includeInboundMetrics,
+             boolean&nbsp;includeOutboundEndpointMetrics,
+             boolean&nbsp;includePropagationMetrics)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#setEndpointMetric(net.jxta.impl.endpoint.endpointMeter.EndpointMetric)">setEndpointMetric</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointMetric</A>&nbsp;endpointMetric)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html#shallowCopy(net.jxta.impl.endpoint.endpointMeter.EndpointServiceMonitorFilter)">shallowCopy</A></B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitorFilter.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMonitorFilter</A>&nbsp;endpointServiceMonitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make a shallow copy of this metric only including the portions designated in the Filter
+  Note: since this is a shallow copy it is dangerous to modify the submetrics</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EndpointServiceMetric()"><!-- --></A><H3>
+EndpointServiceMetric</H3>
+<PRE>
+public <B>EndpointServiceMetric</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="EndpointServiceMetric(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+EndpointServiceMetric</H3>
+<PRE>
+public <B>EndpointServiceMetric</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="init(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+init</H3>
+<PRE>
+public void <B>init</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;moduleClassID)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#init(net.jxta.platform.ModuleClassID)" title="class or interface in net.jxta.meter">net.jxta.meter.ServiceMetric</A></CODE></B></DD>
+<DD>init
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#init(net.jxta.platform.ModuleClassID)" title="class or interface in net.jxta.meter">init</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getModuleClassID()"><!-- --></A><H3>
+getModuleClassID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A> <B>getModuleClassID</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#getModuleClassID()" title="class or interface in net.jxta.meter">net.jxta.meter.ServiceMetric</A></CODE></B></DD>
+<DD>getModuleClassID
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#getModuleClassID()" title="class or interface in net.jxta.meter">getModuleClassID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ModuleClassID</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addInboundMetric(net.jxta.impl.endpoint.endpointMeter.InboundMetric)"><!-- --></A><H3>
+addInboundMetric</H3>
+<PRE>
+void <B>addInboundMetric</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A>&nbsp;inboundMetric)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInboundMetrics()"><!-- --></A><H3>
+getInboundMetrics</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A>&gt; <B>getInboundMetrics</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInboundMetric(java.lang.String, java.lang.String)"><!-- --></A><H3>
+getInboundMetric</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/InboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">InboundMetric</A> <B>getInboundMetric</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPropagationMetrics()"><!-- --></A><H3>
+getPropagationMetrics</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A>&gt; <B>getPropagationMetrics</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPropagationMetric(java.lang.String, java.lang.String)"><!-- --></A><H3>
+getPropagationMetric</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A> <B>getPropagationMetric</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addPropagationMetric(net.jxta.impl.endpoint.endpointMeter.PropagationMetric)"><!-- --></A><H3>
+addPropagationMetric</H3>
+<PRE>
+void <B>addPropagationMetric</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/PropagationMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">PropagationMetric</A>&nbsp;propagationMetric)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addOutboundMetric(net.jxta.impl.endpoint.endpointMeter.OutboundMetric)"><!-- --></A><H3>
+addOutboundMetric</H3>
+<PRE>
+void <B>addOutboundMetric</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A>&nbsp;outboundMetric)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutboundMetrics()"><!-- --></A><H3>
+getOutboundMetrics</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A>&gt; <B>getOutboundMetrics</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutboundMetric(net.jxta.endpoint.EndpointAddress)"><!-- --></A><H3>
+getOutboundMetric</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/OutboundMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">OutboundMetric</A> <B>getOutboundMetric</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;endpointAddress)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEndpointMetric()"><!-- --></A><H3>
+getEndpointMetric</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointMetric</A> <B>getEndpointMetric</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setEndpointMetric(net.jxta.impl.endpoint.endpointMeter.EndpointMetric)"><!-- --></A><H3>
+setEndpointMetric</H3>
+<PRE>
+void <B>setEndpointMetric</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointMetric</A>&nbsp;endpointMetric)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="serializeTo(net.jxta.document.Element)"><!-- --></A><H3>
+serializeTo</H3>
+<PRE>
+public void <B>serializeTo</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)
+                 throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true#serializeTo(net.jxta.document.Element)" title="class or interface in net.jxta.util.documentSerializable">serializeTo</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initializeFrom(net.jxta.document.Element)"><!-- --></A><H3>
+initializeFrom</H3>
+<PRE>
+public void <B>initializeFrom</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)
+                    throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true#initializeFrom(net.jxta.document.Element)" title="class or interface in net.jxta.util.documentSerializable">initializeFrom</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mergeMetrics(net.jxta.meter.ServiceMetric)"><!-- --></A><H3>
+mergeMetrics</H3>
+<PRE>
+public void <B>mergeMetrics</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#mergeMetrics(net.jxta.meter.ServiceMetric)" title="class or interface in net.jxta.meter">net.jxta.meter.ServiceMetric</A></CODE></B></DD>
+<DD>Additively Merge Metrics from this Metric
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#mergeMetrics(net.jxta.meter.ServiceMetric)" title="class or interface in net.jxta.meter">mergeMetrics</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>otherOne</CODE> - The metric being merged into this metric</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deepCopy(net.jxta.impl.endpoint.endpointMeter.EndpointServiceMonitorFilter)"><!-- --></A><H3>
+deepCopy</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMetric</A> <B>deepCopy</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitorFilter.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMonitorFilter</A>&nbsp;endpointServiceMonitorFilter)</PRE>
+<DL>
+<DD>Make a deep copy of this metric only including the portions designated in the Filter
+ The resulting metric is Safe to modify without danger to the underlying Monitor Metrics
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>endpointServiceMonitorFilter</CODE> - Filter designates constituant parts to be included
+<DT><B>Returns:</B><DD>a copy of this metric with references to the designated parts</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mergeMetrics(net.jxta.meter.ServiceMetric, boolean, boolean, boolean, boolean)"><!-- --></A><H3>
+mergeMetrics</H3>
+<PRE>
+public void <B>mergeMetrics</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne,
+                         boolean&nbsp;includeEndpointMetrics,
+                         boolean&nbsp;includeInboundMetrics,
+                         boolean&nbsp;includeOutboundEndpointMetrics,
+                         boolean&nbsp;includePropagationMetrics)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="shallowCopy(net.jxta.impl.endpoint.endpointMeter.EndpointServiceMonitorFilter)"><!-- --></A><H3>
+shallowCopy</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMetric</A> <B>shallowCopy</B>(<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitorFilter.html" title="class in net.jxta.impl.endpoint.endpointMeter">EndpointServiceMonitorFilter</A>&nbsp;endpointServiceMonitorFilter)</PRE>
+<DL>
+<DD>Make a shallow copy of this metric only including the portions designated in the Filter
+ <P> Note: since this is a shallow copy it is dangerous to modify the submetrics
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>endpointServiceMonitorFilter</CODE> - Filter designates constituant parts to be included
+<DT><B>Returns:</B><DD>a copy of this metric with references to the designated parts</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="diffMetrics(net.jxta.meter.ServiceMetric)"><!-- --></A><H3>
+diffMetrics</H3>
+<PRE>
+public void <B>diffMetrics</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A>&nbsp;otherOne)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#diffMetrics(net.jxta.meter.ServiceMetric)" title="class or interface in net.jxta.meter">net.jxta.meter.ServiceMetric</A></CODE></B></DD>
+<DD>Subtractively Remove Metrics from this Metric
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true#diffMetrics(net.jxta.meter.ServiceMetric)" title="class or interface in net.jxta.meter">diffMetrics</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/meter/ServiceMetric.html?is-external=true" title="class or interface in net.jxta.meter">ServiceMetric</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>otherOne</CODE> - The metric being removed into this metric</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clone()"><!-- --></A><H3>
+clone</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>clone</B>()
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/CloneNotSupportedException.html?is-external=true" title="class or interface in java.lang">CloneNotSupportedException</A></PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/CloneNotSupportedException.html?is-external=true" title="class or interface in java.lang">CloneNotSupportedException</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/EndpointServiceMetric.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointMetric.html" title="class in net.jxta.impl.endpoint.endpointMeter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/endpointMeter/EndpointServiceMonitor.html" title="class in net.jxta.impl.endpoint.endpointMeter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/endpointMeter/EndpointServiceMetric.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="EndpointServiceMetric.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

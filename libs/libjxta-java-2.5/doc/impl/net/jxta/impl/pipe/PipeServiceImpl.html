@@ -1,0 +1,787 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PipeServiceImpl (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PipeServiceImpl (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PipeServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/PipeServiceInterface.html" title="class in net.jxta.impl.pipe"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/pipe/PipeServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PipeServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.pipe</FONT>
+<BR>
+Class PipeServiceImpl</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.pipe.PipeServiceImpl</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe">PipeResolver.Listener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>PipeServiceImpl</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A>, <A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe">PipeResolver.Listener</A></DL>
+</PRE>
+
+<P>
+A JXTA <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe"><CODE>PipeService</CODE></A> implementation which implements the
+ standard JXTA Pipe Resolver Protocol (PRP).
+ <p/>
+ This class provides implementation for Unicast, unicast secure and
+ (indirectly) propagate pipes.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe"><CODE>PipeService</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/InputPipe.html?is-external=true" title="class or interface in net.jxta.pipe"><CODE>InputPipe</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipe.html?is-external=true" title="class or interface in net.jxta.pipe"><CODE>OutputPipe</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint"><CODE>Message</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PipeAdvertisement</CODE></A>, 
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeResolverMessage.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>PipeResolverMessage</CODE></A>, 
+<a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#proto-pbp" target="_blank">JXTA Protocols Specification : Pipe Binding Protocol</a></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#VERIFYINTERVAL">VERIFYINTERVAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the interval at which we verify that a pipe is still resolved at a
+ remote peer.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.pipe.PipeService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.pipe.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#PropagateType" title="class or interface in net.jxta.pipe">PropagateType</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#UnicastSecureType" title="class or interface in net.jxta.pipe">UnicastSecureType</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#UnicastType" title="class or interface in net.jxta.pipe">UnicastType</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform">START_AGAIN_PROGRESS</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform">START_AGAIN_STALLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_DISABLED" title="class or interface in net.jxta.platform">START_DISABLED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#PipeServiceImpl()">PipeServiceImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Constructor (don't delete)</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/InputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createInputPipe(net.jxta.protocol.PipeAdvertisement)">createInputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an InputPipe from a pipe Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/InputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createInputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.PipeMsgListener)">createInputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv,
+                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeMsgListener.html?is-external=true" title="class or interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an InputPipe from a pipe Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createOutputPipe(net.jxta.protocol.PipeAdvertisement, long)">createOutputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempt to create an OutputPipe using the specified Pipe Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createOutputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.OutputPipeListener)">createOutputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempt to create an OutputPipe using the specified Pipe Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, long)">createOutputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;resolvablePeers,
+                 long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempt to create an OutputPipe using the specified Pipe Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, net.jxta.pipe.OutputPipeListener)">createOutputPipe</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;resolvablePeers,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempt to create an OutputPipe using the specified Pipe Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#getImplAdvertisement()">getImplAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the advertisement for this service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#getInterface()">getInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service objects are not manipulated directly to protect usage
+ of the service.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#pipeNAKEvent(net.jxta.impl.pipe.PipeResolver.Event)">pipeNAKEvent</A></B>(<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Event.html" title="class in net.jxta.impl.pipe">PipeResolver.Event</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A NAK Event was received for this pipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#pipeResolveEvent(net.jxta.impl.pipe.PipeResolver.Event)">pipeResolveEvent</A></B>(<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Event.html" title="class in net.jxta.impl.pipe">PipeResolver.Event</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pipe Resolve event</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#removeOutputPipeListener(net.jxta.id.ID, net.jxta.pipe.OutputPipeListener)">removeOutputPipeListener</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;pipeID,
+                         <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove an OutputPipeListener previously registered with
+  <code>createOuputputPipe</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#removeOutputPipeListener(java.lang.String, net.jxta.pipe.OutputPipeListener)">removeOutputPipeListener</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;pipeID,
+                         <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove an OutputPipeListener previously registered with
+  <code>createOuputputPipe</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complete any remaining initialization of the module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/pipe/PipeServiceImpl.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop a module.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="VERIFYINTERVAL"><!-- --></A><H3>
+VERIFYINTERVAL</H3>
+<PRE>
+static final long <B>VERIFYINTERVAL</B></PRE>
+<DL>
+<DD>the interval at which we verify that a pipe is still resolved at a
+ remote peer.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.pipe.PipeServiceImpl.VERIFYINTERVAL">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PipeServiceImpl()"><!-- --></A><H3>
+PipeServiceImpl</H3>
+<PRE>
+public <B>PipeServiceImpl</B>()</PRE>
+<DL>
+<DD>Default Constructor (don't delete)
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getInterface()"><!-- --></A><H3>
+getInterface</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A> <B>getInterface</B>()</PRE>
+<DL>
+<DD>Service objects are not manipulated directly to protect usage
+ of the service. A Service interface is returned to access the service
+ methods.
+ <p/>
+ We create only a single interface object and return it over and over
+ again.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getInterface()" title="class or interface in net.jxta.service">getInterface</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Service public interface of the service</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getImplAdvertisement()"><!-- --></A><H3>
+getImplAdvertisement</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>getImplAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns the advertisement for this service.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true#getImplAdvertisement()" title="class or interface in net.jxta.service">getImplAdvertisement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/service/Service.html?is-external=true" title="class or interface in net.jxta.service">Service</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Advertisement the advertisement. This is always a 
+ <code>ModuleImplAdvertisement</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)"><!-- --></A><H3>
+init</H3>
+<PRE>
+public void <B>init</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;assignedID,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Advertisement.html?is-external=true" title="class or interface in net.jxta.document">Advertisement</A>&nbsp;impl)</PRE>
+<DL>
+<DD>Initialize the module, passing it its peer group and advertisement.
+
+ <p/>Note: when subclassing one of the existing PeerGroup implementations
+ (which implement Module), it may not be recommended to overload the init
+ method. See the documentation of the PeerGroup class being subclassed.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)" title="class or interface in net.jxta.platform">init</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - The PeerGroup from which this Module can obtain services.
+  If this module is a Service, this is also the PeerGroup of which this
+  module is a service.<DD><CODE>assignedID</CODE> - Identity of Module within group.
+  modules can use it as a the root of their namespace to create
+  names that are unique within the group but predictable by the
+  same module on another peer. This is normally the ModuleClassID
+  which is also the name under which the module is known by other
+  modules. For a group it is the PeerGroupID itself.
+  The parameters of a service, in the Peer configuration, are indexed
+  by the assignedID of that service, and a Service must publish its
+  run-time parameters in the Peer Advertisement under its assigned ID.<DD><CODE>impl</CODE> - The implementation advertisement for this
+  Module. It is permissible to pass null if no implementation
+  advertisement is available. This may happen if the
+  implementation was selected by explicit class name rather than
+  by following an implementation advertisement. Modules are not
+  required to support that style of loading, but if they do, then
+  their documentation should mention it.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+public int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</PRE>
+<DL>
+<DD>Complete any remaining initialization of the module. The module should
+ be fully functional after <code>startApp()</code> is completed. That is
+ also the opportunity to supply arbitrary arguments (mostly to
+ applications).
+
+ <p/>If this module is a <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> service, it may be invoked
+ several times depending on its return value.
+ <p/>
+ Currently this service does not expect arguments.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#startApp(java.lang.String[])" title="class or interface in net.jxta.platform">startApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>args</CODE> - An array of Strings forming the parameters for this
+ Module.
+<DT><B>Returns:</B><DD>int A status indication which may be one of
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_OK" title="class or interface in net.jxta.platform"><CODE>Module.START_OK</CODE></A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_PROGRESS" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_PROGRESS</CODE></A>,
+ <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#START_AGAIN_STALLED" title="class or interface in net.jxta.platform"><CODE>Module.START_AGAIN_STALLED</CODE></A>, which indicates partial or complete
+ success, or any other value (negative values are
+ recommended for future compatibility), which indicates failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+public void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Stop a module. This may be called any time after <code>init()</code>
+  completes and should not assume that <code>startApp()</code> has been
+  called or completed.
+
+  <p/>The Module cannot be forced to comply, but in the future
+  we might be able to deny it access to anything after some timeout.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true#stopApp()" title="class or interface in net.jxta.platform">stopApp</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform">Module</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createInputPipe(net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+createInputPipe</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/InputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">InputPipe</A> <B>createInputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv)
+                          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create an InputPipe from a pipe Advertisement
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createInputPipe(net.jxta.protocol.PipeAdvertisement)" title="class or interface in net.jxta.pipe">createInputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - The advertisement of the Pipe.
+<DT><B>Returns:</B><DD>The InputPipe created.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - error creating input pipe</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createInputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+createInputPipe</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/InputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">InputPipe</A> <B>createInputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv,
+                                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeMsgListener.html?is-external=true" title="class or interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;listener)
+                          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create an InputPipe from a pipe Advertisement
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createInputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.PipeMsgListener)" title="class or interface in net.jxta.pipe">createInputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - is the advertisement of the Pipe.<DD><CODE>listener</CODE> - PipeMsgListener to receive msgs.
+<DT><B>Returns:</B><DD>InputPipe The InputPipe created.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - Error creating input pipe</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createOutputPipe(net.jxta.protocol.PipeAdvertisement, long)"><!-- --></A><H3>
+createOutputPipe</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipe</A> <B>createOutputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                   long&nbsp;timeout)
+                            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Attempt to create an OutputPipe using the specified Pipe Advertisement.
+ The pipe will be be resolved within the provided timeout.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createOutputPipe(net.jxta.protocol.PipeAdvertisement, long)" title="class or interface in net.jxta.pipe">createOutputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeAdv</CODE> - The advertisement of the pipe being resolved.<DD><CODE>timeout</CODE> - Time duration in milliseconds to wait for a successful
+ pipe resolution. <tt>0</tt> will wait indefinitely.
+<DT><B>Returns:</B><DD>OutputPipe the successfully resolved OutputPipe.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If the pipe cannot be created or failed to resolve
+ within the specified time.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, long)"><!-- --></A><H3>
+createOutputPipe</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipe.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipe</A> <B>createOutputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;adv,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;resolvablePeers,
+                                   long&nbsp;timeout)
+                            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Attempt to create an OutputPipe using the specified Pipe Advertisement.
+ The pipe will be be resolved to one of the peers in the set of peer ids
+ provided within the provided timeout.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, long)" title="class or interface in net.jxta.pipe">createOutputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adv</CODE> - The advertisement of the pipe being resolved.<DD><CODE>resolvablePeers</CODE> - The peers on which the pipe may be resolved.
+ <strong>If the Set is empty then the pipe may be resolved to any 
+ destination peer.</strong><DD><CODE>timeout</CODE> - Time duration in milliseconds to wait for a successful
+ pipe resolution. <tt>0</tt> will wait indefinitely.
+<DT><B>Returns:</B><DD>The successfully resolved OutputPipe.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If the pipe cannot be created or failed to resolve
+ within the specified time.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createOutputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.OutputPipeListener)"><!-- --></A><H3>
+createOutputPipe</H3>
+<PRE>
+public void <B>createOutputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Attempt to create an OutputPipe using the specified Pipe Advertisement.
+ The pipe may be resolved to any destination peer. When the pipe is
+ resolved the listener will be called.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createOutputPipe(net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.OutputPipeListener)" title="class or interface in net.jxta.pipe">createOutputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeAdv</CODE> - The advertisement of the pipe being resolved.<DD><CODE>listener</CODE> - The listener to be called when the pipe is resolved.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If the pipe cannot be created.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, net.jxta.pipe.OutputPipeListener)"><!-- --></A><H3>
+createOutputPipe</H3>
+<PRE>
+public void <B>createOutputPipe</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;resolvablePeers,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Attempt to create an OutputPipe using the specified Pipe Advertisement.
+ When the pipe is resolved to one of the peers in the set of peer ids
+ provided the listener will be called.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#createOutputPipe(net.jxta.protocol.PipeAdvertisement, java.util.Set, net.jxta.pipe.OutputPipeListener)" title="class or interface in net.jxta.pipe">createOutputPipe</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeAdv</CODE> - The advertisement of the pipe being resolved.<DD><CODE>resolvablePeers</CODE> - The set of peers on which the pipe may be resolved.
+ <strong>If the Set is empty then the pipe may be resolved to any 
+ destination peer.</strong><DD><CODE>listener</CODE> - the listener to be called when the pipe is resolved.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If the pipe cannot be created.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeOutputPipeListener(java.lang.String, net.jxta.pipe.OutputPipeListener)"><!-- --></A><H3>
+removeOutputPipeListener</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A> <B>removeOutputPipeListener</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;pipeID,
+                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Remove an OutputPipeListener previously registered with
+  <code>createOuputputPipe</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#removeOutputPipeListener(java.lang.String, net.jxta.pipe.OutputPipeListener)" title="class or interface in net.jxta.pipe">removeOutputPipeListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeID</CODE> - The pipe who's listener is to be removed.<DD><CODE>listener</CODE> - The listener to remove.
+<DT><B>Returns:</B><DD>The listener which was removed or null if the key did not have a mapping.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeOutputPipeListener(net.jxta.id.ID, net.jxta.pipe.OutputPipeListener)"><!-- --></A><H3>
+removeOutputPipeListener</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A> <B>removeOutputPipeListener</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;pipeID,
+                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/OutputPipeListener.html?is-external=true" title="class or interface in net.jxta.pipe">OutputPipeListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Remove an OutputPipeListener previously registered with
+  <code>createOuputputPipe</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true#removeOutputPipeListener(net.jxta.id.ID, net.jxta.pipe.OutputPipeListener)" title="class or interface in net.jxta.pipe">removeOutputPipeListener</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeService.html?is-external=true" title="class or interface in net.jxta.pipe">PipeService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeID</CODE> - The pipe who's listener is to be removed.<DD><CODE>listener</CODE> - The listener to remove.
+<DT><B>Returns:</B><DD>The listener which was removed or null if the key did not have a mapping.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pipeResolveEvent(net.jxta.impl.pipe.PipeResolver.Event)"><!-- --></A><H3>
+pipeResolveEvent</H3>
+<PRE>
+public boolean <B>pipeResolveEvent</B>(<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Event.html" title="class in net.jxta.impl.pipe">PipeResolver.Event</A>&nbsp;event)</PRE>
+<DL>
+<DD>Pipe Resolve event
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html#pipeResolveEvent(net.jxta.impl.pipe.PipeResolver.Event)">pipeResolveEvent</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe">PipeResolver.Listener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - event the PipeResolver Event
+<DT><B>Returns:</B><DD>true if the event was handled otherwise false</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pipeNAKEvent(net.jxta.impl.pipe.PipeResolver.Event)"><!-- --></A><H3>
+pipeNAKEvent</H3>
+<PRE>
+public boolean <B>pipeNAKEvent</B>(<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Event.html" title="class in net.jxta.impl.pipe">PipeResolver.Event</A>&nbsp;event)</PRE>
+<DL>
+<DD>A NAK Event was received for this pipe
+ <p/>
+ We don't do anything with NAKs (yet)
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html#pipeNAKEvent(net.jxta.impl.pipe.PipeResolver.Event)">pipeNAKEvent</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe">PipeResolver.Listener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - event the PipeResolver Event
+<DT><B>Returns:</B><DD>true if the event was handled otherwise false</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PipeServiceImpl.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/PipeResolver.Listener.html" title="interface in net.jxta.impl.pipe"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/pipe/PipeServiceInterface.html" title="class in net.jxta.impl.pipe"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/pipe/PipeServiceImpl.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PipeServiceImpl.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

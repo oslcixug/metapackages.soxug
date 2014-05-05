@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=aConCorde
+Comment=Multi-lingual concordance tool
+Comment[es_ES]=Herramienta de concordancia multi-lenguaje
+Comment[es_ES]=Ferramenta de concordancia multi-linguaxe
+Exec=aconcorde
+Categories=GNOME;Application;Education

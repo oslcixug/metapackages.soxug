@@ -1,0 +1,662 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+SrdiMessage (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="SrdiMessage (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SrdiMessage.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/SignedAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/SrdiMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SrdiMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.protocol</FONT>
+<BR>
+Class SrdiMessage</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.protocol.SrdiMessage</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>SrdiMessage</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+A generic message that can be used by services to push shared resources to
+ other peers on the network.
+ <p/>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entries object, which describes each entry described by this message</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#PERSISTONLY">PERSISTONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERSIST Scope is persist only. i.e.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#REPLICATE">REPLICATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPLICATE Scope is persist and replicate. i.e.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#SrdiMessage()">SrdiMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#addEntry(net.jxta.protocol.SrdiMessage.Entry)">addEntry</A></B>(<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&nbsp;entry)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#addEntry(java.lang.String, java.lang.String, long)">addEntry</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+         long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an index entry</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#decrementTTL()">decrementTTL</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decrements TTL</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getDocument(net.jxta.document.MimeMediaType)">getDocument</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;asMimeType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write advertisement into a document. asMimeType is a mime media-type
+ specification and provides the form of the document which is being
+ requested.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getEntries()">getEntries</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the entries of this SrdiMessage</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getMessageType()">getMessageType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All messages have a type (in xml this is !</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getPeerID()">getPeerID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the source peerid</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getPrimaryKey()">getPrimaryKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the primary key</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getScope()">getScope</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current scope of this message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#getTTL()">getTTL</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>ttl is a misnomer, it is meant to be defined as scope. use #getScope() instead</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#setEntries(java.util.Collection)">setEntries</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&gt;&nbsp;newEntries)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the Entries for this SrdiMessage.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#setPeerID(net.jxta.peer.PeerID)">setPeerID</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the source peerid</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#setPrimaryKey(java.lang.String)">setPrimaryKey</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;pkey)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the primary key</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#setScope(int)">setScope</A></B>(int&nbsp;scope)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the current scope of this message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/protocol/SrdiMessage.html#setTTL(int)">setTTL</A></B>(int&nbsp;newTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>ttl is a misnomer, it is meant to be defined as scope. use #setScope() instead</I></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PERSISTONLY"><!-- --></A><H3>
+PERSISTONLY</H3>
+<PRE>
+public static final int <B>PERSISTONLY</B></PRE>
+<DL>
+<DD>PERSIST Scope is persist only. i.e. A node receiving such message is expected to only persist
+ the indexes contained within.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.protocol.SrdiMessage.PERSISTONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REPLICATE"><!-- --></A><H3>
+REPLICATE</H3>
+<PRE>
+public static final int <B>REPLICATE</B></PRE>
+<DL>
+<DD>REPLICATE Scope is persist and replicate. i.e. A node receiving such message is expected
+ to pnly persist the indexes contained within.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.protocol.SrdiMessage.REPLICATE">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SrdiMessage()"><!-- --></A><H3>
+SrdiMessage</H3>
+<PRE>
+public <B>SrdiMessage</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getDocument(net.jxta.document.MimeMediaType)"><!-- --></A><H3>
+getDocument</H3>
+<PRE>
+public abstract <A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A> <B>getDocument</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;asMimeType)</PRE>
+<DL>
+<DD>Write advertisement into a document. asMimeType is a mime media-type
+ specification and provides the form of the document which is being
+ requested. Two standard document forms are defined. 'text/text' encodes
+ the document in a form nice for printing out and 'text/xml' which
+ provides an XML format.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>asMimeType</CODE> - mime-type requested representation for the returned
+                   document
+<DT><B>Returns:</B><DD>Document document representing the advertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerID()"><!-- --></A><H3>
+getPeerID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>getPeerID</B>()</PRE>
+<DL>
+<DD>returns the source peerid
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PeerID</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPrimaryKey()"><!-- --></A><H3>
+getPrimaryKey</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getPrimaryKey</B>()</PRE>
+<DL>
+<DD>get the primary key
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>primaryKey</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTTL()"><!-- --></A><H3>
+getTTL</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public int <B>getTTL</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>ttl is a misnomer, it is meant to be defined as scope. use #getScope() instead</I>
+<P>
+<DD>Returns the current TTL value.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current TTL value.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTTL(int)"><!-- --></A><H3>
+setTTL</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setTTL</B>(int&nbsp;newTTL)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>ttl is a misnomer, it is meant to be defined as scope. use #setScope() instead</I>
+<P>
+<DD>sets the ttl
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newTTL</CODE> - The new TTL value.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getScope()"><!-- --></A><H3>
+getScope</H3>
+<PRE>
+public int <B>getScope</B>()</PRE>
+<DL>
+<DD>Returns the current scope of this message.
+ <p/>
+ Scope is either 0 (persist only), or 1 (persist and replicate)
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current scope value.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setScope(int)"><!-- --></A><H3>
+setScope</H3>
+<PRE>
+public void <B>setScope</B>(int&nbsp;scope)</PRE>
+<DL>
+<DD>Sets the current scope of this message.
+ <p/>
+ Scope is either 0 (persist only), or 1 (persist and replicate)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scope</CODE> - The new TTL value.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/protocol/SrdiMessage.html#PERSISTONLY"><CODE>PERSISTONLY</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/SrdiMessage.html#REPLICATE"><CODE>REPLICATE</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="decrementTTL()"><!-- --></A><H3>
+decrementTTL</H3>
+<PRE>
+public void <B>decrementTTL</B>()</PRE>
+<DL>
+<DD>Decrements TTL
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEntries()"><!-- --></A><H3>
+getEntries</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&gt; <B>getEntries</B>()</PRE>
+<DL>
+<DD>Returns the entries of this SrdiMessage
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the entries of this SrdiMessage</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addEntry(java.lang.String, java.lang.String, long)"><!-- --></A><H3>
+addEntry</H3>
+<PRE>
+public void <B>addEntry</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value,
+                     long&nbsp;expiration)</PRE>
+<DL>
+<DD>Adds an index entry
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - key<DD><CODE>value</CODE> - the value<DD><CODE>expiration</CODE> - expiration in millisconds</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addEntry(net.jxta.protocol.SrdiMessage.Entry)"><!-- --></A><H3>
+addEntry</H3>
+<PRE>
+public void <B>addEntry</B>(<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&nbsp;entry)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setEntries(java.util.Collection)"><!-- --></A><H3>
+setEntries</H3>
+<PRE>
+public void <B>setEntries</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</A>&lt;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol">SrdiMessage.Entry</A>&gt;&nbsp;newEntries)</PRE>
+<DL>
+<DD>Set the Entries for this SrdiMessage.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newEntries</CODE> - The entries to be included in this message.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPeerID(net.jxta.peer.PeerID)"><!-- --></A><H3>
+setPeerID</H3>
+<PRE>
+public void <B>setPeerID</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid)</PRE>
+<DL>
+<DD>Set the source peerid
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerid</CODE> - the source PeerID</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPrimaryKey(java.lang.String)"><!-- --></A><H3>
+setPrimaryKey</H3>
+<PRE>
+public void <B>setPrimaryKey</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;pkey)</PRE>
+<DL>
+<DD>Set the primary key
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pkey</CODE> - the primary key</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMessageType()"><!-- --></A><H3>
+getMessageType</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getMessageType</B>()</PRE>
+<DL>
+<DD>All messages have a type (in xml this is !doctype) which identifies the
+ message, if no expiration is defined Default expiration infinite for
+ entries. This is the amount of time which an entry will live in cache.
+ After this time, the entry is garbage collected, it also worthy to note
+ that it is up to the peer caching these entries to honor the lifetime of
+ the entry, and peer may choose to garbage collect entries based on
+ quotas, relationship with other peers, etc. *
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String "jxta:GenSRDI"</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SrdiMessage.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/protocol/SignedAdvertisement.html" title="class in net.jxta.protocol"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/protocol/SrdiMessage.Entry.html" title="class in net.jxta.protocol"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/protocol/SrdiMessage.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SrdiMessage.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,136 @@
+#!/bin/bash
+
+#shopt -s extglob
+
+
+###################################################################
+# Script para facilitar o uso dos parser gerados polo compilador compi-beta.
+#   - - A variábel DEPPATTERN_DIR estabelece o PATH dos programas.
+#   - - Cada tagger ten as súas propias variáveis e configuraçoes.
+#
+# Grupo de Gramática do español 2008
+###################################################################
+
+############################
+# Config
+############################
+
+DEPPATTERN_DIR="/usr/share/deppattern"
+PROGS=$DEPPATTERN_DIR"/scripts"
+DIRPARSER=$DEPPATTERN_DIR"/parsers"
+
+
+############################
+# Config de Freeling
+############################
+
+export FREELINGSHARE="/usr/share/FreeLing"
+FREELING="/usr/bin/analyzer"
+FREELING_OPTS="--noloc --noquant --nodate"
+
+
+############################
+# Config de Treetagger
+############################
+
+TREETAGGER="/usr/bin/tree-tagger"
+
+############################
+# Functions
+############################
+
+help()
+{
+  echo "Syntax: deppattern  <type_of_output> <tagger> <language> <file> [parser] [grammar]
+      
+      type_of_output
+		-a (dependency analysis)
+		-fa (full dependency analysis)
+		-c (correct tagged text)
+      tagger	[ freeling, treetagger ]
+      language	[ gl, es, en, pt, fr ]
+      file	path of the file input 
+      parser	path of the parser, or name of the parser generated from grammar
+      grammar	path of the file grammar
+         
+"
+  exit
+}
+
+
+# Parámetros obrigatorios
+[ $# -lt 4 ] && help
+FLAG=$1
+TAGGER=$2
+LANG=$3
+FILE=$4
+
+# Parámetros opcionais
+GRAMMAR=""
+PARSER="user_parser" #por defeito
+[ "$5" != "" ] && PARSER=$5
+[ "$6" != "" ] && GRAMMAR=$6 
+
+
+# Comprobacións
+if [ "$TAGGER" != "freeling" ] &&  [ "$TAGGER" != "treetagger" ]; then
+  help;
+  echo "help" ;
+fi
+
+if [ "$FLAG" != "-a" ] &&  [ "$FLAG" != "-c" ] && [ "$FLAG" != "-fa" ] ; then
+  help;
+  echo "help" ;
+fi
+
+case $LANG in
+  es) ;;
+  en) ;;
+  gl) ;;
+  pt) ;;
+  fr) ;;
+  *) help
+esac
+
+#echo "$FLAG $TAGGER - $LANG - $FILE - $GRAMMAR - $PARSER"
+
+##Lançar o Compi se houver gramática
+if [ "$GRAMMAR" != "" ]; then
+        ruby compi-beta.rb $GRAMMAR $PARSER ;
+        NAMEPARSER="./$PARSER"
+
+#Lançar o parser especificado no caso de nao haver gramatica
+elif [ "$GRAMMAR" == "" ] && [ "$PARSER" != "user_parser" ]; then
+      NAMEPARSER="./$PARSER"
+      NAMEPARSER=`echo $NAMEPARSER | sed "s/.perl$//"`
+# Lançar o parser por defeito
+else
+     NAMEPARSER="$DIRPARSER/parserDefault-$LANG"
+     NAMEPARSER=`echo $NAMEPARSER | sed "s/.perl$//"`
+fi
+
+
+#echo "$TAGGER - $LANG - $FILE - $GRAMMAR - $NAMEPARSER"
+# Opcoes
+if [ "$TAGGER" == "freeling" ]; then
+  CMD="$FREELING $FREELING_OPTS -f $FREELINGSHARE/config/$LANG.cfg" ;
+  FILTER="$PROGS/AdapterFreeling-${LANG}.perl"
+else
+  CMD="$TREETAGGER-$LANG" ;
+  FILTER="$PROGS/AdapterTreetagger-${LANG}.perl"
+fi
+
+#echo $NAMEPARSER
+
+
+#NAMEFILE=`basename $FILE`;
+
+ZIP=`echo $FILE |awk '($0 ~ /(gz$|zip$)/) {print "zip"}'`
+
+
+if [ "$ZIP" == "zip" ] ; then
+ zcat $FILE | $CMD | $FILTER | $NAMEPARSER.perl $FLAG ;
+ 
+else 
+  cat $FILE | $CMD | $FILTER | $NAMEPARSER.perl $FLAG ;
+fi

@@ -1,0 +1,10 @@
+build-essential
+elyxer
+gfortran
+gfortran-doc
+gfortran-multilib
+lyx
+octave
+pspp
+qtoctave
+rkward

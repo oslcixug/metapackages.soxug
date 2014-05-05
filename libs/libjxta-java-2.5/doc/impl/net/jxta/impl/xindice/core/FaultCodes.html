@@ -1,0 +1,1495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+FaultCodes (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="FaultCodes (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/FaultCodes.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/xindice/core/FaultCodes.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="FaultCodes.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.xindice.core</FONT>
+<BR>
+Class FaultCodes</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.xindice.core.FaultCodes</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>FaultCodes</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+FaultCodes defines the Xindice specific fault codes and associated error
+ messages.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL">COL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_CANNOT_CREATE">COL_CANNOT_CREATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_CANNOT_DROP">COL_CANNOT_DROP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_CANNOT_RETRIEVE">COL_CANNOT_RETRIEVE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_CANNOT_STORE">COL_CANNOT_STORE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_COLLECTION_CLOSED">COL_COLLECTION_CLOSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_COLLECTION_NOT_FOUND">COL_COLLECTION_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_COLLECTION_READ_ONLY">COL_COLLECTION_READ_ONLY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_DOCUMENT_MALFORMED">COL_DOCUMENT_MALFORMED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_DOCUMENT_NOT_FOUND">COL_DOCUMENT_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_DUPLICATE_COLLECTION">COL_DUPLICATE_COLLECTION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_NO_FILER">COL_NO_FILER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_NO_INDEXMANAGER">COL_NO_INDEXMANAGER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#COL_NULL_RESULT">COL_NULL_RESULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#DBE">DBE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#DBE_CANNOT_CREATE">DBE_CANNOT_CREATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#DBE_CANNOT_DROP">DBE_CANNOT_DROP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#DBE_NO_PARENT">DBE_NO_PARENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#GEN">GEN</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#GEN_CRITICAL_ERROR">GEN_CRITICAL_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#GEN_FATAL_ERROR">GEN_FATAL_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#GEN_GENERAL_ERROR">GEN_GENERAL_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#GEN_UNKNOWN">GEN_UNKNOWN</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX">IDX</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_CANNOT_CREATE">IDX_CANNOT_CREATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_CORRUPTED">IDX_CORRUPTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_DUPLICATE_INDEX">IDX_DUPLICATE_INDEX</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_INDEX_NOT_FOUND">IDX_INDEX_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_MATCHES_NOT_FOUND">IDX_MATCHES_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_NOT_SUPPORTED">IDX_NOT_SUPPORTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_STYLE_NOT_FOUND">IDX_STYLE_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#IDX_VALUE_NOT_FOUND">IDX_VALUE_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#JAVA">JAVA</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#JAVA_RUNTIME_ERROR">JAVA_RUNTIME_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ">OBJ</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_CANNOT_CREATE">OBJ_CANNOT_CREATE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_CLASS_FORMAT_ERROR">OBJ_CLASS_FORMAT_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_DUPLICATE_OBJECT">OBJ_DUPLICATE_OBJECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_INVALID_CONTEXT">OBJ_INVALID_CONTEXT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_INVALID_RESULT">OBJ_INVALID_RESULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_METHOD_NOT_FOUND">OBJ_METHOD_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_NULL_RESULT">OBJ_NULL_RESULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_OBJECT_NOT_FOUND">OBJ_OBJECT_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#OBJ_RUNTIME_EXCEPTION">OBJ_RUNTIME_EXCEPTION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY">QRY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY_COMPILATION_ERROR">QRY_COMPILATION_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY_NOT_SUPPORTED">QRY_NOT_SUPPORTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY_NULL_RESULT">QRY_NULL_RESULT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY_PROCESSING_ERROR">QRY_PROCESSING_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#QRY_STYLE_NOT_FOUND">QRY_STYLE_NOT_FOUND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#SEC">SEC</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#SEC_INVALID_ACCESS">SEC_INVALID_ACCESS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#SEC_INVALID_CREDENTIALS">SEC_INVALID_CREDENTIALS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#SEC_INVALID_GROUP">SEC_INVALID_GROUP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#SEC_INVALID_USER">SEC_INVALID_USER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#TRX">TRX</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#TRX_DOC_LOCKED">TRX_DOC_LOCKED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#TRX_NO_CONTEXT">TRX_NO_CONTEXT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#TRX_NOT_ACTIVE">TRX_NOT_ACTIVE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#TRX_NOT_SUPPORTED">TRX_NOT_SUPPORTED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#URI">URI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#URI_EMPTY">URI_EMPTY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#URI_NULL">URI_NULL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#URI_PARSE_ERROR">URI_PARSE_ERROR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#getFaultCode(java.lang.Exception)">getFaultCode</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFaultCode examines the provided exception to determine
+ the fault code that is associated with it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#getFaultCodeSeries(java.lang.Exception)">getFaultCodeSeries</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFaultCodeSeries examines the provided exception to
+ determine the fault code series that is associated with it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#getFaultCodeType(java.lang.Exception)">getFaultCodeType</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFaultCodeType examines the provided exception to determine
+ the general fault code that is associated with it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#getFaultMessage(java.lang.Exception)">getFaultMessage</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFaultMessage examines the provided exception to determine
+ the fault message that is associated with it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/xindice/core/FaultCodes.html#getMessage(int)">getMessage</A></B>(int&nbsp;code)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getMessage returns a textual form for the specified fault code.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="GEN"><!-- --></A><H3>
+GEN</H3>
+<PRE>
+public static final int <B>GEN</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.GEN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ"><!-- --></A><H3>
+OBJ</H3>
+<PRE>
+public static final int <B>OBJ</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL"><!-- --></A><H3>
+COL</H3>
+<PRE>
+public static final int <B>COL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX"><!-- --></A><H3>
+IDX</H3>
+<PRE>
+public static final int <B>IDX</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRX"><!-- --></A><H3>
+TRX</H3>
+<PRE>
+public static final int <B>TRX</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.TRX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DBE"><!-- --></A><H3>
+DBE</H3>
+<PRE>
+public static final int <B>DBE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.DBE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY"><!-- --></A><H3>
+QRY</H3>
+<PRE>
+public static final int <B>QRY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEC"><!-- --></A><H3>
+SEC</H3>
+<PRE>
+public static final int <B>SEC</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.SEC">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="URI"><!-- --></A><H3>
+URI</H3>
+<PRE>
+public static final int <B>URI</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.URI">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="JAVA"><!-- --></A><H3>
+JAVA</H3>
+<PRE>
+public static final int <B>JAVA</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.JAVA">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GEN_UNKNOWN"><!-- --></A><H3>
+GEN_UNKNOWN</H3>
+<PRE>
+public static final int <B>GEN_UNKNOWN</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.GEN_UNKNOWN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GEN_GENERAL_ERROR"><!-- --></A><H3>
+GEN_GENERAL_ERROR</H3>
+<PRE>
+public static final int <B>GEN_GENERAL_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.GEN_GENERAL_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GEN_CRITICAL_ERROR"><!-- --></A><H3>
+GEN_CRITICAL_ERROR</H3>
+<PRE>
+public static final int <B>GEN_CRITICAL_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.GEN_CRITICAL_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GEN_FATAL_ERROR"><!-- --></A><H3>
+GEN_FATAL_ERROR</H3>
+<PRE>
+public static final int <B>GEN_FATAL_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.GEN_FATAL_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_OBJECT_NOT_FOUND"><!-- --></A><H3>
+OBJ_OBJECT_NOT_FOUND</H3>
+<PRE>
+public static final int <B>OBJ_OBJECT_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_OBJECT_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_METHOD_NOT_FOUND"><!-- --></A><H3>
+OBJ_METHOD_NOT_FOUND</H3>
+<PRE>
+public static final int <B>OBJ_METHOD_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_METHOD_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_NULL_RESULT"><!-- --></A><H3>
+OBJ_NULL_RESULT</H3>
+<PRE>
+public static final int <B>OBJ_NULL_RESULT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_NULL_RESULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_INVALID_RESULT"><!-- --></A><H3>
+OBJ_INVALID_RESULT</H3>
+<PRE>
+public static final int <B>OBJ_INVALID_RESULT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_INVALID_RESULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_DUPLICATE_OBJECT"><!-- --></A><H3>
+OBJ_DUPLICATE_OBJECT</H3>
+<PRE>
+public static final int <B>OBJ_DUPLICATE_OBJECT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_DUPLICATE_OBJECT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_RUNTIME_EXCEPTION"><!-- --></A><H3>
+OBJ_RUNTIME_EXCEPTION</H3>
+<PRE>
+public static final int <B>OBJ_RUNTIME_EXCEPTION</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_RUNTIME_EXCEPTION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_CLASS_FORMAT_ERROR"><!-- --></A><H3>
+OBJ_CLASS_FORMAT_ERROR</H3>
+<PRE>
+public static final int <B>OBJ_CLASS_FORMAT_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_CLASS_FORMAT_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_INVALID_CONTEXT"><!-- --></A><H3>
+OBJ_INVALID_CONTEXT</H3>
+<PRE>
+public static final int <B>OBJ_INVALID_CONTEXT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_INVALID_CONTEXT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OBJ_CANNOT_CREATE"><!-- --></A><H3>
+OBJ_CANNOT_CREATE</H3>
+<PRE>
+public static final int <B>OBJ_CANNOT_CREATE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.OBJ_CANNOT_CREATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_COLLECTION_NOT_FOUND"><!-- --></A><H3>
+COL_COLLECTION_NOT_FOUND</H3>
+<PRE>
+public static final int <B>COL_COLLECTION_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_COLLECTION_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_DOCUMENT_NOT_FOUND"><!-- --></A><H3>
+COL_DOCUMENT_NOT_FOUND</H3>
+<PRE>
+public static final int <B>COL_DOCUMENT_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_DOCUMENT_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_DUPLICATE_COLLECTION"><!-- --></A><H3>
+COL_DUPLICATE_COLLECTION</H3>
+<PRE>
+public static final int <B>COL_DUPLICATE_COLLECTION</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_DUPLICATE_COLLECTION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_NULL_RESULT"><!-- --></A><H3>
+COL_NULL_RESULT</H3>
+<PRE>
+public static final int <B>COL_NULL_RESULT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_NULL_RESULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_NO_FILER"><!-- --></A><H3>
+COL_NO_FILER</H3>
+<PRE>
+public static final int <B>COL_NO_FILER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_NO_FILER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_NO_INDEXMANAGER"><!-- --></A><H3>
+COL_NO_INDEXMANAGER</H3>
+<PRE>
+public static final int <B>COL_NO_INDEXMANAGER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_NO_INDEXMANAGER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_DOCUMENT_MALFORMED"><!-- --></A><H3>
+COL_DOCUMENT_MALFORMED</H3>
+<PRE>
+public static final int <B>COL_DOCUMENT_MALFORMED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_DOCUMENT_MALFORMED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_CANNOT_STORE"><!-- --></A><H3>
+COL_CANNOT_STORE</H3>
+<PRE>
+public static final int <B>COL_CANNOT_STORE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_CANNOT_STORE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_CANNOT_RETRIEVE"><!-- --></A><H3>
+COL_CANNOT_RETRIEVE</H3>
+<PRE>
+public static final int <B>COL_CANNOT_RETRIEVE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_CANNOT_RETRIEVE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_COLLECTION_READ_ONLY"><!-- --></A><H3>
+COL_COLLECTION_READ_ONLY</H3>
+<PRE>
+public static final int <B>COL_COLLECTION_READ_ONLY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_COLLECTION_READ_ONLY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_COLLECTION_CLOSED"><!-- --></A><H3>
+COL_COLLECTION_CLOSED</H3>
+<PRE>
+public static final int <B>COL_COLLECTION_CLOSED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_COLLECTION_CLOSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_CANNOT_CREATE"><!-- --></A><H3>
+COL_CANNOT_CREATE</H3>
+<PRE>
+public static final int <B>COL_CANNOT_CREATE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_CANNOT_CREATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COL_CANNOT_DROP"><!-- --></A><H3>
+COL_CANNOT_DROP</H3>
+<PRE>
+public static final int <B>COL_CANNOT_DROP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.COL_CANNOT_DROP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_VALUE_NOT_FOUND"><!-- --></A><H3>
+IDX_VALUE_NOT_FOUND</H3>
+<PRE>
+public static final int <B>IDX_VALUE_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_VALUE_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_INDEX_NOT_FOUND"><!-- --></A><H3>
+IDX_INDEX_NOT_FOUND</H3>
+<PRE>
+public static final int <B>IDX_INDEX_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_INDEX_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_MATCHES_NOT_FOUND"><!-- --></A><H3>
+IDX_MATCHES_NOT_FOUND</H3>
+<PRE>
+public static final int <B>IDX_MATCHES_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_MATCHES_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_DUPLICATE_INDEX"><!-- --></A><H3>
+IDX_DUPLICATE_INDEX</H3>
+<PRE>
+public static final int <B>IDX_DUPLICATE_INDEX</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_DUPLICATE_INDEX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_NOT_SUPPORTED"><!-- --></A><H3>
+IDX_NOT_SUPPORTED</H3>
+<PRE>
+public static final int <B>IDX_NOT_SUPPORTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_NOT_SUPPORTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_STYLE_NOT_FOUND"><!-- --></A><H3>
+IDX_STYLE_NOT_FOUND</H3>
+<PRE>
+public static final int <B>IDX_STYLE_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_STYLE_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_CORRUPTED"><!-- --></A><H3>
+IDX_CORRUPTED</H3>
+<PRE>
+public static final int <B>IDX_CORRUPTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_CORRUPTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IDX_CANNOT_CREATE"><!-- --></A><H3>
+IDX_CANNOT_CREATE</H3>
+<PRE>
+public static final int <B>IDX_CANNOT_CREATE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.IDX_CANNOT_CREATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRX_DOC_LOCKED"><!-- --></A><H3>
+TRX_DOC_LOCKED</H3>
+<PRE>
+public static final int <B>TRX_DOC_LOCKED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.TRX_DOC_LOCKED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRX_NO_CONTEXT"><!-- --></A><H3>
+TRX_NO_CONTEXT</H3>
+<PRE>
+public static final int <B>TRX_NO_CONTEXT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.TRX_NO_CONTEXT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRX_NOT_ACTIVE"><!-- --></A><H3>
+TRX_NOT_ACTIVE</H3>
+<PRE>
+public static final int <B>TRX_NOT_ACTIVE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.TRX_NOT_ACTIVE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRX_NOT_SUPPORTED"><!-- --></A><H3>
+TRX_NOT_SUPPORTED</H3>
+<PRE>
+public static final int <B>TRX_NOT_SUPPORTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.TRX_NOT_SUPPORTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DBE_NO_PARENT"><!-- --></A><H3>
+DBE_NO_PARENT</H3>
+<PRE>
+public static final int <B>DBE_NO_PARENT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.DBE_NO_PARENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DBE_CANNOT_DROP"><!-- --></A><H3>
+DBE_CANNOT_DROP</H3>
+<PRE>
+public static final int <B>DBE_CANNOT_DROP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.DBE_CANNOT_DROP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DBE_CANNOT_CREATE"><!-- --></A><H3>
+DBE_CANNOT_CREATE</H3>
+<PRE>
+public static final int <B>DBE_CANNOT_CREATE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.DBE_CANNOT_CREATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY_NULL_RESULT"><!-- --></A><H3>
+QRY_NULL_RESULT</H3>
+<PRE>
+public static final int <B>QRY_NULL_RESULT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY_NULL_RESULT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY_COMPILATION_ERROR"><!-- --></A><H3>
+QRY_COMPILATION_ERROR</H3>
+<PRE>
+public static final int <B>QRY_COMPILATION_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY_COMPILATION_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY_PROCESSING_ERROR"><!-- --></A><H3>
+QRY_PROCESSING_ERROR</H3>
+<PRE>
+public static final int <B>QRY_PROCESSING_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY_PROCESSING_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY_NOT_SUPPORTED"><!-- --></A><H3>
+QRY_NOT_SUPPORTED</H3>
+<PRE>
+public static final int <B>QRY_NOT_SUPPORTED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY_NOT_SUPPORTED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRY_STYLE_NOT_FOUND"><!-- --></A><H3>
+QRY_STYLE_NOT_FOUND</H3>
+<PRE>
+public static final int <B>QRY_STYLE_NOT_FOUND</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.QRY_STYLE_NOT_FOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEC_INVALID_USER"><!-- --></A><H3>
+SEC_INVALID_USER</H3>
+<PRE>
+public static final int <B>SEC_INVALID_USER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.SEC_INVALID_USER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEC_INVALID_GROUP"><!-- --></A><H3>
+SEC_INVALID_GROUP</H3>
+<PRE>
+public static final int <B>SEC_INVALID_GROUP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.SEC_INVALID_GROUP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEC_INVALID_ACCESS"><!-- --></A><H3>
+SEC_INVALID_ACCESS</H3>
+<PRE>
+public static final int <B>SEC_INVALID_ACCESS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.SEC_INVALID_ACCESS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEC_INVALID_CREDENTIALS"><!-- --></A><H3>
+SEC_INVALID_CREDENTIALS</H3>
+<PRE>
+public static final int <B>SEC_INVALID_CREDENTIALS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.SEC_INVALID_CREDENTIALS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="URI_EMPTY"><!-- --></A><H3>
+URI_EMPTY</H3>
+<PRE>
+public static final int <B>URI_EMPTY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.URI_EMPTY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="URI_NULL"><!-- --></A><H3>
+URI_NULL</H3>
+<PRE>
+public static final int <B>URI_NULL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.URI_NULL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="URI_PARSE_ERROR"><!-- --></A><H3>
+URI_PARSE_ERROR</H3>
+<PRE>
+public static final int <B>URI_PARSE_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.URI_PARSE_ERROR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="JAVA_RUNTIME_ERROR"><!-- --></A><H3>
+JAVA_RUNTIME_ERROR</H3>
+<PRE>
+public static final int <B>JAVA_RUNTIME_ERROR</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.xindice.core.FaultCodes.JAVA_RUNTIME_ERROR">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getMessage(int)"><!-- --></A><H3>
+getMessage</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getMessage</B>(int&nbsp;code)</PRE>
+<DL>
+<DD>getMessage returns a textual form for the specified fault code.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>code</CODE> - The Fault Code
+<DT><B>Returns:</B><DD>It's textual form</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFaultCodeType(java.lang.Exception)"><!-- --></A><H3>
+getFaultCodeType</H3>
+<PRE>
+public static int <B>getFaultCodeType</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
+<DL>
+<DD>getFaultCodeType examines the provided exception to determine
+ the general fault code that is associated with it.  General
+ fault codes are reduced from actual fault codes to be one of
+ the GEN_ prefixed fault code values.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>e</CODE> - The Exception to examine
+<DT><B>Returns:</B><DD>The General Fault Code</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFaultCodeSeries(java.lang.Exception)"><!-- --></A><H3>
+getFaultCodeSeries</H3>
+<PRE>
+public static int <B>getFaultCodeSeries</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
+<DL>
+<DD>getFaultCodeSeries examines the provided exception to
+ determine the fault code series that is associated with it.
+ Series are reduced from actual fault codes to be one of
+ the fault code prefixes (ex: COL, DB, SEC).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>e</CODE> - The Exception to examine
+<DT><B>Returns:</B><DD>The Fault Code Series</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFaultCode(java.lang.Exception)"><!-- --></A><H3>
+getFaultCode</H3>
+<PRE>
+public static int <B>getFaultCode</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
+<DL>
+<DD>getFaultCode examines the provided exception to determine
+ the fault code that is associated with it.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>e</CODE> - The Exception to examine
+<DT><B>Returns:</B><DD>The Fault Code</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFaultMessage(java.lang.Exception)"><!-- --></A><H3>
+getFaultMessage</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getFaultMessage</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
+<DL>
+<DD>getFaultMessage examines the provided exception to determine
+ the fault message that is associated with it.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>e</CODE> - The Exception to examine
+<DT><B>Returns:</B><DD>The Fault Message</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/FaultCodes.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/xindice/core/FaultCodes.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="FaultCodes.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

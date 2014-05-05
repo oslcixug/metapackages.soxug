@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+net.jxta.impl.util (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="net.jxta.impl.util (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/resolver/resolverMeter/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/cm/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<H2>
+Package net.jxta.impl.util
+</H2>
+A collection of utility classes used by the JXTA implementation.
+<P>
+<B>See:</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="#package_description"><B>Description</B></A>
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Interface Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/CacheEntry.html" title="interface in net.jxta.impl.util">CacheEntry</A></B></TD>
+<TD>Part of a pre jdk1.4 replacement for LinkedHashMap which is basically a
+ cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/CacheEntryListener.html" title="interface in net.jxta.impl.util">CacheEntryListener</A></B></TD>
+<TD>Part of a pre jdk1.4 replacement for LinkedHashMap which is basically a
+ cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ModuleManager.ModuleManagerLoader.html" title="interface in net.jxta.impl.util">ModuleManager.ModuleManagerLoader</A></B></TD>
+<TD>ModuleManagerLoader interface.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></B></TD>
+<TD>A descriptor for a resource consumser.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/SeedingManager.html" title="interface in net.jxta.impl.util">SeedingManager</A></B></TD>
+<TD>Manages the location of seed peers.</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ACLSeedingManager.html" title="class in net.jxta.impl.util">ACLSeedingManager</A></B></TD>
+<TD>Provides support for the optional access control list which determines which
+ peers may be used.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html" title="class in net.jxta.impl.util">AdvCooker</A></B></TD>
+<TD>Advertisements and ID's "cooked" according to recipes lifted
+ from J-C and Frog.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/Base64.html" title="class in net.jxta.impl.util">Base64</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>Planned for removal.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/BASE64InputStream.html" title="class in net.jxta.impl.util">BASE64InputStream</A></B></TD>
+<TD>An <code>InputStream</code> implementation which decodes BASE64 encoded
+  data from a text <code>Reader</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/BASE64OutputStream.html" title="class in net.jxta.impl.util">BASE64OutputStream</A></B></TD>
+<TD>An OutputStream implementation which encodes the written bytes into BASE64
+ encoded character data and writes the output to an associated text Writer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/Cache.html" title="class in net.jxta.impl.util">Cache</A></B></TD>
+<TD>A Cache which is similar to <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util"><CODE>LinkedHashMap</CODE></A>
+
+ <p/>LinkedList cannot be used efficiently because it
+ cannot remove an element efficiently from the middle.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ConsumerBiasedQueue.html" title="class in net.jxta.impl.util">ConsumerBiasedQueue</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>Please convert all code to use the java.util.concurrent BlockingQueue instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/Dlink.html" title="class in net.jxta.impl.util">Dlink</A></B></TD>
+<TD>A dlinkable base class.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/Dlist.html" title="class in net.jxta.impl.util">Dlist</A></B></TD>
+<TD>A cheap doubly linked list.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/DynamicEnumeration.html" title="class in net.jxta.impl.util">DynamicEnumeration</A></B></TD>
+<TD>A dynamic <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util"><CODE>Enumeration</CODE></A> which allows items to added to the
+  enumeration while it is in use.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/EndpointServiceStatsFilter.html" title="class in net.jxta.impl.util">EndpointServiceStatsFilter</A></B></TD>
+<TD>Instances of this clas can be registered with an EndpointService
+ to gather statistics about what kind of messages pass through it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/GenerateID.html" title="class in net.jxta.impl.util">GenerateID</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>This would be much better as a JXTA shell command.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/JxtaHash.html" title="class in net.jxta.impl.util">JxtaHash</A></B></TD>
+<TD>A message digest wrapper to provide hashing using java.security.MesssageDigest</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/LRUCache.html" title="class in net.jxta.impl.util">LRUCache&lt;K,V&gt;</A></B></TD>
+<TD>This class implements a Generic LRU Cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ModuleManager.html" title="class in net.jxta.impl.util">ModuleManager</A></B></TD>
+<TD>Module Manager.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ProducerBiasedQueue.html" title="class in net.jxta.impl.util">ProducerBiasedQueue</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>Please convert all code to use the java.util.concurrent BlockingQueue instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/RdvAdvSeedingManager.html" title="class in net.jxta.impl.util">RdvAdvSeedingManager</A></B></TD>
+<TD>Adds the ability to discover RdvAdvs via Discovery.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html" title="class in net.jxta.impl.util">ResourceDispatcher</A></B></TD>
+<TD>This class does not in itself allocate anything; it just does accounting.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/SequenceIterator.html" title="class in net.jxta.impl.util">SequenceIterator</A></B></TD>
+<TD>This class lets you combine a number of iterators.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/TimerThreadNamer.html" title="class in net.jxta.impl.util">TimerThreadNamer</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>Beginning with JSE 5.0 you may now name a Timer directly.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/TimeUtils.html" title="class in net.jxta.impl.util">TimeUtils</A></B></TD>
+<TD>Utilities for manipulating absolute and relative times and for accelerating
+ and decelerating time for testing purposes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/UnbiasedQueue.html" title="class in net.jxta.impl.util">UnbiasedQueue</A></B></TD>
+<TD><B>Deprecated.</B>&nbsp;<I>Please convert all code to use the java.util.concurrent BlockingQueue instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/UnbiasedQueue.SynchronizedQueue.html" title="class in net.jxta.impl.util">UnbiasedQueue.SynchronizedQueue</A></B></TD>
+<TD>An inner class for wrapping arbitrary queues with synchronization.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../net/jxta/impl/util/URISeedingManager.html" title="class in net.jxta.impl.util">URISeedingManager</A></B></TD>
+<TD>A seeding manager that supports both explicit seed peers and loading of
+  seeds from seeding resources.</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>
+<A NAME="package_description"><!-- --></A><H2>
+Package net.jxta.impl.util Description
+</H2>
+
+<P>
+A collection of utility classes used by the JXTA implementation. These
+                                utilities are not exposed in the public JXTA API because they are either
+                                specific to the implementation or not specifically related to JXTA.
+<P>
+
+<P>
+<DL>
+</DL>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-use.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/resolver/resolverMeter/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/cm/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,941 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Uses of Class net.jxta.document.Advertisement (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Class net.jxta.document.Advertisement (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Advertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<CENTER>
+<H2>
+<B>Uses of Class<br>net.jxta.document.Advertisement</B></H2>
+</CENTER>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Packages that use <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.discovery"><B>net.jxta.discovery</B></A></TD>
+<TD>The JXTA Discovery Service provides an asynchronous mechanism for 
+    discovering Peer Advertisements, Group Advertisements, and other general 
+    JXTA Advertisements (pipes, services, etc.).&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.document"><B>net.jxta.document</B></A></TD>
+<TD>JXTA Documents are containers for both structured and unstructured data.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.peergroup"><B>net.jxta.peergroup</B></A></TD>
+<TD>Peer groups are formed as a collection of peers that have agreed upon a 
+    common set of services.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.platform"><B>net.jxta.platform</B></A></TD>
+<TD>Classes for defining code modules within JXTA.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.protocol"><B>net.jxta.protocol</B></A></TD>
+<TD>Provides inteface objects for Advertisments and protocol messages for the JXTA 
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jcs" target='_blank'>Core</a>
+                                and
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jss" target='_blank'>Standard</a>
+    Protocols.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.service"><B>net.jxta.service</B></A></TD>
+<TD>Every service is defined by a 
+    <A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol"><CODE>ModuleImplAdvertisement</CODE></A>.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.util"><B>net.jxta.util</B></A></TD>
+<TD>A collection of utility classes used by the JXTA implementation and/or
+                                useful to users of the JXTA API.&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.discovery"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/discovery/package-summary.html">net.jxta.discovery</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/discovery/package-summary.html">net.jxta.discovery</A> that return types with arguments of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#getLocalAdvertisements(int, java.lang.String, java.lang.String)">getLocalAdvertisements</A></B>(int&nbsp;type,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;attribute,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve locally stored Advertisements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryEvent.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryEvent.html#getSearchResults()">getSearchResults</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an array of advertisements contained in the DiscoveryResponse
+ for this event.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/discovery/package-summary.html">net.jxta.discovery</A> with parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#flushAdvertisement(net.jxta.document.Advertisement)">flushAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the specified Advertisement from the cache of locally stored
+ Advertisements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#getAdvExpirationTime(net.jxta.document.Advertisement)">getAdvExpirationTime</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  will be cached by peers other than the publisher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#getAdvLifeTime(net.jxta.document.Advertisement)">getAdvLifeTime</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum duration in milliseconds for which this document
+  should be kept in local cache.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#publish(net.jxta.document.Advertisement)">publish</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#publish(net.jxta.document.Advertisement, long, long)">publish</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+        long&nbsp;lifetime,
+        long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#remotePublish(net.jxta.document.Advertisement)">remotePublish</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement via propagation to other peers on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#remotePublish(net.jxta.document.Advertisement, long)">remotePublish</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+              long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement via propagation to other peers on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#remotePublish(java.lang.String, net.jxta.document.Advertisement)">remotePublish</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+              <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement to another peer on the network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryService.</B><B><A HREF="../../../../net/jxta/discovery/DiscoveryService.html#remotePublish(java.lang.String, net.jxta.document.Advertisement, long)">remotePublish</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;peerid,
+              <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+              long&nbsp;expiration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publish an Advertisement to another peer on the network.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.document"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Subclasses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/ExtendableAdvertisement.html" title="class in net.jxta.document">ExtendableAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extendable advertisements provide features for allowing inheritance of
+ advertisement types.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> that return <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>Advertisement.</B><B><A HREF="../../../../net/jxta/document/Advertisement.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.MimeMediaType, java.io.InputStream)">newAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>AdvertisementFactory.newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, is );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.MimeMediaType, java.io.Reader)">newAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>AdvertisementFactory.newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, reader );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(java.lang.String)">newAdvertisement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;advertisementType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new instance of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>advertisementType</code> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.TextElement)">newAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/TextElement.html" title="interface in net.jxta.document">TextElement</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Advertisements must be encoded in XML. This is a legacy
+ static constructor. You should convert your code to use the 
+ <A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>XMLElement</CODE></A>
+ version.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)">newAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reconstructs an instance of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>root</code> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.Instantiator.html#newInstance()">newInstance</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <CODE>advertisementType</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.Instantiator.html#newInstance(net.jxta.document.Element)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <CODE>advertisementType</CODE> parameter.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.peergroup"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/peergroup/package-summary.html">net.jxta.peergroup</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/peergroup/package-summary.html">net.jxta.peergroup</A> with parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>LightWeightPeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/LightWeightPeerGroup.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;implAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/PeerGroup.html#loadModule(net.jxta.id.ID, net.jxta.document.Advertisement)">loadModule</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+           <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;impl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Load a Module from a ModuleImplAdv.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></CODE></FONT></TD>
+<TD><CODE><B>LightWeightPeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/LightWeightPeerGroup.html#loadModule(net.jxta.id.ID, net.jxta.document.Advertisement)">loadModule</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+           <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;impl)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Load a Module from a ModuleImplAdv.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/PeerGroup.html#newGroup(net.jxta.document.Advertisement)">newGroup</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;pgAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiate a peer group from the provided advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B>LightWeightPeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/LightWeightPeerGroup.html#newGroup(net.jxta.document.Advertisement)">newGroup</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;pgAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiate a peer group from the provided advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B>PeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/PeerGroup.html#newGroup(net.jxta.peergroup.PeerGroupID, net.jxta.document.Advertisement, java.lang.String, java.lang.String)">newGroup</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;gid,
+         <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;impl,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiates a peer group from its elementary pieces
+ and publishes the corresponding PeerGroupAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B>LightWeightPeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/LightWeightPeerGroup.html#newGroup(net.jxta.peergroup.PeerGroupID, net.jxta.document.Advertisement, java.lang.String, java.lang.String)">newGroup</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;gid,
+         <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;impl,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiates a peer group from its elementary pieces
+ and publishes the corresponding PeerGroupAdvertisement.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.platform"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/platform/package-summary.html">net.jxta.platform</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/platform/package-summary.html">net.jxta.platform</A> with parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B>NetworkConfigurator.</B><B><A HREF="../../../../net/jxta/platform/NetworkConfigurator.html#getParmDoc(boolean, net.jxta.document.Advertisement)">getParmDoc</A></B>(boolean&nbsp;enabled,
+           <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a XMLDocument representation of an Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>Module.</B><B><A HREF="../../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;implAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.protocol"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Subclasses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/AccessPointAdvertisement.html" title="class in net.jxta.protocol">AccessPointAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides a simple association of a <code>PeerID</code> to an ordered list of
+ <code>EndpointAddress</code> entries.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A container for collections of configuration parameters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/ModuleClassAdvertisement.html" title="class in net.jxta.protocol">ModuleClassAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formally documents the existence of a module class (identified by the
+ <A HREF="../../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform"><CODE>ModuleClassID</CODE></A> and may provide additional
+ descriptive metadata about the Module Class.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A ModuleImplAdvertisement describes one of any number of published
+ implementations for a given specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html" title="class in net.jxta.protocol">ModuleSpecAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the references that describe a module specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generated when instantiating a group on a peer and contains all the
+ parameters that services need to publish.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html" title="class in net.jxta.protocol">PeerGroupAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Describes a peer group and references additional information required for
+  instantiating it.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Describes a JXTA Pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/RdvAdvertisement.html" title="class in net.jxta.protocol">RdvAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This class defines a Rendezvous Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/RouteAdvertisement.html" title="class in net.jxta.protocol">RouteAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advertisement used to represent a route to a peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/SignedAdvertisement.html" title="class in net.jxta.protocol">SignedAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A container for signed Advertisements</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/protocol/TransportAdvertisement.html" title="class in net.jxta.protocol">TransportAdvertisement</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This abstract class defines a Transport advertisement.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> declared as <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>SignedAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/SignedAdvertisement.html#adv">adv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Fields in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> with type parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryResponseMsg.</B><B><A HREF="../../../../net/jxta/protocol/DiscoveryResponseMsg.html#advertisements">advertisements</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The advertisement responses deserialized.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> that return <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>SignedAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/SignedAdvertisement.html#getAdvertisement()">getAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#getSvcConfigAdvertisement(net.jxta.id.ID)">getSvcConfigAdvertisement</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets an advertisement from the service parameters table under the given
+ key.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> that return types with arguments of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B>DiscoveryResponseMsg.</B><B><A HREF="../../../../net/jxta/protocol/DiscoveryResponseMsg.html#getAdvertisements()">getAdvertisements</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the responses to the query as advertisements.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> with parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>SignedAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/SignedAdvertisement.html#setAdvertisement(net.jxta.document.Advertisement)">setAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Advertisement to be signed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#setSvcConfigAdvertisement(net.jxta.id.ID, net.jxta.document.Advertisement)">setSvcConfigAdvertisement</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                          <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts an advertisement into the service parameters table under the given
+ key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#setSvcConfigAdvertisement(net.jxta.id.ID, net.jxta.document.Advertisement, boolean)">setSvcConfigAdvertisement</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                          <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+                          boolean&nbsp;enabled)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts an advertisement into the service parameters table under the given
+ key.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.service"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/service/package-summary.html">net.jxta.service</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/service/package-summary.html">net.jxta.service</A> that return <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>Service.</B><B><A HREF="../../../../net/jxta/service/Service.html#getImplAdvertisement()">getImplAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the advertisement for this service.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.util"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> that return <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#bytesToAdvertisement(byte[])">bytesToAdvertisement</A></B>(byte[]&nbsp;buf)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This method should not be used because it interprets the
+             input using the local default encoding which is not predictable and
+             may (will) differ from JVM to JVM.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#newAdvertisementFromXml(byte[])">newAdvertisementFromXml</A></B>(byte[]&nbsp;xmlTextAsBytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This method should not be used because it produces a result
+             who's encoding is not predictable and may (will) differ from JVM to JVM.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#newAdvertisementFromXml(java.lang.String)">newAdvertisementFromXml</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;xmlText)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This method should not be used because it interprets the
+             input using the local default encoding which is not precidcatable and
+             may (will) differ from JVM to JVM.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#readAdvertisementFromFile(java.io.File)">readAdvertisementFromFile</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Read a JXTA Advertisement from a File</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#readAdvertisementFromFile(java.lang.String)">readAdvertisementFromFile</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;fileName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Read a JXTA Advertisement from a File</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> with parameters of type <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#advertisementToBytes(net.jxta.document.Advertisement)">advertisementToBytes</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;advertisement)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>This method should not be used because it produces a result
+             who's encoding is not predictable and may (will) differ from JVM to JVM.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#advertisementToPlainText(net.jxta.document.Advertisement)">advertisementToPlainText</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;advertisement)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Save a JXTA Advertisement to a Plain Text String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#advertisementToText(net.jxta.document.Advertisement, java.lang.String)">advertisementToText</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;advertisement,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;mimeType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Save a JXTA Advertisement to a String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#advertisementToXmlText(net.jxta.document.Advertisement)">advertisementToXmlText</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;advertisement)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Equivalent to Advertisement.toString()</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#saveAdvertisementToFile(net.jxta.document.Advertisement, java.io.File)">saveAdvertisementToFile</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Save a JXTA Advertisement as an XML Document to a File</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#saveAdvertisementToFile(net.jxta.document.Advertisement, java.lang.String)">saveAdvertisementToFile</A></B>(<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;adv,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;fileName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Save a JXTA Advertisement as an XML Document to a File</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useAdvertisement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Advertisement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

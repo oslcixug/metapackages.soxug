@@ -1,0 +1,3 @@
+bin/aconcorde usr/bin
+lib/ usr/share/java/
+aconcorde.desktop usr/share/applications

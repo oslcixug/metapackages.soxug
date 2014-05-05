@@ -1,0 +1,17 @@
+Epidat 4.0 es una aplicación multiplataforma,su funcionamiento ha sido probado en numerosos 
+sistemas operativos: Windows, MAC OS, Linux, Solaris… y en múltiples versiones de estos sistemas. 
+Para ejecutar Epidat 4.0 sólo es necesario tener correctamente instalado y configurada la aplicación 
+Java 6, o superior, en una de sus últimas actualizaciones. 
+
+Con la aplicación Java correctamente instalada sólo es necesario descomprimir la aplicación y ejecutar 
+uno de los archivos: Epidat.jar o Epidat.bat de su interior indistintamente, puede crear accesos directos
+en el escritorio, se adjuntan los iconos necesarios. Si no consigue ejecutar la aplicación consulte:
+
+-Como se ejecutan los archivos “jar” en su sistema operativo.En algunas versiones de Linux usted deberá crear un enlace a 
+la aplicación indicando la ruta al directorio de la aplicación y el comando de ejecución “java –jar Epidat.jar”.
+  
+-La versión de java que tiene instalada. Si no es la última versión actualice Java en su ordenador.
+
+Para información sobre licencias consulte el archivo Readme.txt de la carpeta bin.
+
+Para descargar Java consulte http://www.java.com/es/download/.       

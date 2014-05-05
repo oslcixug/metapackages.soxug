@@ -1,0 +1,18 @@
+
+{ List of standard pens, for LPLOT }
+
+lplot: pencolor black  1    { Name of each of the standard pens }
+lplot: pencolor red    2
+lplot: pencolor green  3
+lplot: pencolor purple 4
+lplot: pencolor blue   5
+lplot: pencolor yellow 6
+lplot: pencolor none   0
+
+color pen1 white            { Colors to use for on-screen plots }
+color pen2 red
+color pen3 green
+color pen4 orange
+color pen5 cyan
+color pen6 yellow
+

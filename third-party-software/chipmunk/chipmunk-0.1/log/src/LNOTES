@@ -1,0 +1,94 @@
+
+Known LOG bugs.  "*" = supposedly fixed, not yet tested.
+
+
+   logsimh appears to be causing bus errors, just before the instance
+   would have become active.  Name was "P".
+
+------------------------------------------------------------------------
+
+   Fix default homedir to use $HOME/log rather than "~/log", and/or
+   add support for ~ prefixes in tryfindfile.
+
+------------------------------------------------------------------------
+
+   Look for na_alloc calls in logsimh and elsewhere, fix to use new/dispose.
+
+------------------------------------------------------------------------
+
+   Eliminate all uses of the small characters in the old LOG font:
+      Gates containing text in their pictures.
+      The shift-D command.
+
+------------------------------------------------------------------------
+
+   Selecting Delete or Box from menus, cursor does not change right away!
+
+------------------------------------------------------------------------
+
+   Various file names still refer to Chipmunk-specific things like /SPOOL,
+   and .text extensions are sometimes added by default.
+
+------------------------------------------------------------------------
+
+   The mylib window doesn't refresh when the newcrt window is active.
+
+------------------------------------------------------------------------
+
+   Resizing the mylib screen during startup causes a core dump!
+ * Also, using TWM's Zoom Full command causes problems.
+
+------------------------------------------------------------------------
+
+   When LOG first starts up, hitting "d" immediately puts "DEL" in
+   the mode area but does not enter true delete mode until next click.
+
+------------------------------------------------------------------------
+
+   Catalog screen can't resize.
+
+------------------------------------------------------------------------
+
+   The four-phase CLOCK doesn't generate the right waveform.
+
+------------------------------------------------------------------------
+
+   When I saved using an absolute path, no LFO file was created.
+
+------------------------------------------------------------------------
+
+   Newcrt drawing is slow.
+
+------------------------------------------------------------------------
+
+   LIBR screen refreshes after each selection.
+
+------------------------------------------------------------------------
+
+   Go through and check out every p2c warning message!
+
+
+========================================================================
+
+   In Unix, the timestep memory limit of the Scope screen should be
+   optional.
+
+------------------------------------------------------------------------
+
+   Can't throw gates off the sides of the window.
+
+========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

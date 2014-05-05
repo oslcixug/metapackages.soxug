@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DOMXMLDocument (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DOMXMLDocument (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DOMXMLDocument.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/document/DOMXMLDocument.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DOMXMLDocument.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.document</FONT>
+<BR>
+Class DOMXMLDocument</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">net.jxta.impl.document.DOMXMLElement</A>
+      <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.document.DOMXMLDocument</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Document.html?is-external=true" title="class or interface in net.jxta.document">Document</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/DocumentStreamIO.html?is-external=true" title="class or interface in net.jxta.document">DocumentStreamIO</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredTextDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredTextDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocument.html?is-external=true" title="class or interface in net.jxta.document">TextDocument</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocumentReaderIO.html?is-external=true" title="class or interface in net.jxta.document">TextDocumentReaderIO</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true" title="class or interface in net.jxta.document">XMLElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>DOMXMLDocument</B><DT>extends <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</DL>
+</PRE>
+
+<P>
+This class is an implementation of the StructuredDocument interface using
+ DOM
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><a href="http://www.w3.org/DOM/">W3C Document Object Model (DOM)</a>, 
+<a href="http://www.w3.org/TR/DOM-Level-2-Core/java-binding.html">DOM Java Language Binding</a>, 
+<a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407">Document Object Model (DOM) Level 3 Load and Save Specification</a>, 
+<a href="http://java.sun.com/xml/jaxp/index.html">Java API for XML Processing (JAXP)</a>, 
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/org/w3c/dom/package-summary.html?is-external=true"><CODE>org.w3c.dom</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocumentFactory.TextInstantiator.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocumentFactory.TextInstantiator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#INSTANTIATOR">INSTANTIATOR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.document.DOMXMLElement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.document.<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#domNode">domNode</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#root">root</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#createElement(java.lang.Object)">createElement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new element without value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#createElement(java.lang.Object, java.lang.Object)">createElement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;val)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new element with value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#createElement(java.lang.String)">createElement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new element without value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#createElement(java.lang.String, java.lang.String)">createElement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new element with value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#getAssocNode()">getAssocNode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the DOM Node associated with this StructuredDocument element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#getFileExtension()">getFileExtension</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the file extension type used by this <code>Document</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/MimeMediaType.html?is-external=true" title="class or interface in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#getMimeType()">getMimeType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the MIME Media type of this <code>Document</code> per
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#getReader()">getReader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the sequence of characters which represents the content of the
+ <code>TextDocument</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#getStream()">getStream</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the stream of bytes which represents the content of this
+ <code>Document</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#sendToStream(java.io.OutputStream)">sendToStream</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send the contents of this <code>Document</code> to the specified stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#sendToWriter(java.io.Writer)">sendToWriter</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</A>&nbsp;writer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send the contents of this <code>TextDocument</code> to the specified
+ Writer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/DOMXMLDocument.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.document.DOMXMLElement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.document.<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#addAttribute(net.jxta.document.Attribute)">addAttribute</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#addAttribute(java.lang.String, java.lang.String)">addAttribute</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#appendChild(net.jxta.impl.document.DOMXMLElement)">appendChild</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#equals(java.lang.Object)">equals</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getAttribute(java.lang.String)">getAttribute</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getAttributes()">getAttributes</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getChildren()">getChildren</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getChildren(java.lang.Object)">getChildren</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getChildren(java.lang.String)">getChildren</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getKey()">getKey</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getName()">getName</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getParent()">getParent</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getRoot()">getRoot</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getTextValue()">getTextValue</A>, <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getValue()">getValue</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.XMLElement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.document.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true" title="class or interface in net.jxta.document">XMLElement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true#getRoot()" title="class or interface in net.jxta.document">getRoot</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.Attributable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.document.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#addAttribute(net.jxta.document.Attribute)" title="class or interface in net.jxta.document">addAttribute</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#addAttribute(java.lang.String, java.lang.String)" title="class or interface in net.jxta.document">addAttribute</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#getAttribute(java.lang.String)" title="class or interface in net.jxta.document">getAttribute</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#getAttributes()" title="class or interface in net.jxta.document">getAttributes</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.TextElement"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.document.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getChildren(java.lang.String)" title="class or interface in net.jxta.document">getChildren</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getKey()" title="class or interface in net.jxta.document">getKey</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getName()" title="class or interface in net.jxta.document">getName</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getTextValue()" title="class or interface in net.jxta.document">getTextValue</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getValue()" title="class or interface in net.jxta.document">getValue</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.Element"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.document.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#appendChild(E)" title="class or interface in net.jxta.document">appendChild</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getChildren()" title="class or interface in net.jxta.document">getChildren</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getChildren(java.lang.Object)" title="class or interface in net.jxta.document">getChildren</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getParent()" title="class or interface in net.jxta.document">getParent</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="INSTANTIATOR"><!-- --></A><H3>
+INSTANTIATOR</H3>
+<PRE>
+public static final <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocumentFactory.TextInstantiator.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocumentFactory.TextInstantiator</A> <B>INSTANTIATOR</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMimeType()"><!-- --></A><H3>
+getMimeType</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/MimeMediaType.html?is-external=true" title="class or interface in net.jxta.document">MimeMediaType</A> <B>getMimeType</B>()</PRE>
+<DL>
+<DD>Returns the MIME Media type of this <code>Document</code> per
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.
+
+ <p/>JXTA does not currently support the '<code>Multipart</code>' or
+ '<code>Message</code>' media types.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Document.html?is-external=true#getMimeType()" title="class or interface in net.jxta.document">getMimeType</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Document.html?is-external=true" title="class or interface in net.jxta.document">Document</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The MIME Media Type for this <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFileExtension()"><!-- --></A><H3>
+getFileExtension</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getFileExtension</B>()</PRE>
+<DL>
+<DD>Returns the file extension type used by this <code>Document</code>. This
+ value is usually chosen based upon the MIME Media Type.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Document.html?is-external=true#getFileExtension()" title="class or interface in net.jxta.document">getFileExtension</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Document.html?is-external=true" title="class or interface in net.jxta.document">Document</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An appropriate file extension for this <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStream()"><!-- --></A><H3>
+getStream</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A> <B>getStream</B>()
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the stream of bytes which represents the content of this
+ <code>Document</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/DocumentStreamIO.html?is-external=true#getStream()" title="class or interface in net.jxta.document">getStream</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/DocumentStreamIO.html?is-external=true" title="class or interface in net.jxta.document">DocumentStreamIO</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io"><CODE>InputStream</CODE></A> containing the bytes
+ of this <code>Document</code>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors while writing the <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendToStream(java.io.OutputStream)"><!-- --></A><H3>
+sendToStream</H3>
+<PRE>
+public void <B>sendToStream</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;stream)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Send the contents of this <code>Document</code> to the specified stream.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/DocumentStreamIO.html?is-external=true#sendToStream(java.io.OutputStream)" title="class or interface in net.jxta.document">sendToStream</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/DocumentStreamIO.html?is-external=true" title="class or interface in net.jxta.document">DocumentStreamIO</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>stream</CODE> - The OutputStream to which the <code>Document</code> will
+  be written.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors while writing the <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReader()"><!-- --></A><H3>
+getReader</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A> <B>getReader</B>()</PRE>
+<DL>
+<DD>Returns the sequence of characters which represents the content of the
+ <code>TextDocument</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocumentReaderIO.html?is-external=true#getReader()" title="class or interface in net.jxta.document">getReader</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocumentReaderIO.html?is-external=true" title="class or interface in net.jxta.document">TextDocumentReaderIO</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io"><CODE>Reader</CODE></A> containing the characters of the
+ <code>TextDocument</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendToWriter(java.io.Writer)"><!-- --></A><H3>
+sendToWriter</H3>
+<PRE>
+public void <B>sendToWriter</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</A>&nbsp;writer)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Send the contents of this <code>TextDocument</code> to the specified
+ Writer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocumentReaderIO.html?is-external=true#sendToWriter(java.io.Writer)" title="class or interface in net.jxta.document">sendToWriter</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextDocumentReaderIO.html?is-external=true" title="class or interface in net.jxta.document">TextDocumentReaderIO</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>writer</CODE> - The <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io"><CODE>Writer</CODE></A> to which the characters of the
+ <code>TextDocument</code> will be written.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If an I/O error occurs.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createElement(java.lang.Object)"><!-- --></A><H3>
+createElement</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A> <B>createElement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</PRE>
+<DL>
+<DD>Create a new element without value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true#createElement(java.lang.Object)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The key of the element to be created.
+<DT><B>Returns:</B><DD>The new element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createElement(java.lang.Object, java.lang.Object)"><!-- --></A><H3>
+createElement</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A> <B>createElement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;val)</PRE>
+<DL>
+<DD>Create a new element with value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true#createElement(java.lang.Object, java.lang.Object)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The name of the element to be created.<DD><CODE>val</CODE> - The value of the element to be created or
+ <code>null</code> if no value is desired.
+<DT><B>Returns:</B><DD>The new element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createElement(java.lang.String)"><!-- --></A><H3>
+createElement</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A> <B>createElement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Create a new element without value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredTextDocument.html?is-external=true#createElement(java.lang.String)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredTextDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredTextDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true#createElement(java.lang.String)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the element to be created.
+<DT><B>Returns:</B><DD>The new element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createElement(java.lang.String, java.lang.String)"><!-- --></A><H3>
+createElement</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A> <B>createElement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
+<DL>
+<DD>Create a new element with value.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredTextDocument.html?is-external=true#createElement(java.lang.String, java.lang.String)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredTextDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredTextDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true#createElement(java.lang.String, java.lang.String)" title="class or interface in net.jxta.document">createElement</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A>&lt;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the element to be created.<DD><CODE>value</CODE> - The value of the element to be created.
+<DT><B>Returns:</B><DD>The new element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAssocNode()"><!-- --></A><H3>
+getAssocNode</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/org/w3c/dom/Node.html?is-external=true" title="class or interface in org.w3c.dom">Node</A> <B>getAssocNode</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getAssocNode()">DOMXMLElement</A></CODE></B></DD>
+<DD>Returns the DOM Node associated with this StructuredDocument element.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html#getAssocNode()">getAssocNode</A></CODE> in class <CODE><A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document">DOMXMLElement</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Node    The DOM Node associated with this StructuredDocument element.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DOMXMLDocument.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/document/DOMXMLElement.html" title="class in net.jxta.impl.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/document/DOMXMLDocument.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DOMXMLDocument.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

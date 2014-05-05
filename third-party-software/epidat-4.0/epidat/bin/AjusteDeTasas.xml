@@ -1,0 +1,25 @@
+<plugin>
+	<clase>ajusteTasas.interfaz.PluginAjusteDeTasas</clase>
+	<nombre>ajusteDeTasas</nombre>
+	<version>1.0</version>
+	<indice>4</indice>
+	<puntosEntrada>
+		
+		<puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Ajuste de tasas</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Método directo
+			</etiqueta>
+			<accion>ajusteTasas.interfaz.AccionAjusteTasasDirecto</accion>
+		</puntoEntrada>
+		
+		<puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Ajuste de tasas</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Método indirecto
+			</etiqueta>
+			<accion>ajusteTasas.interfaz.AccionAjusteTasasIndirecto</accion>
+		</puntoEntrada>	
+		
+	</puntosEntrada>
+</plugin>

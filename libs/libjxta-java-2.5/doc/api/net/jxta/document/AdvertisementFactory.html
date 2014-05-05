@@ -1,0 +1,600 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AdvertisementFactory (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AdvertisementFactory (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AdvertisementFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/AdvertisementFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AdvertisementFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.document</FONT>
+<BR>
+Class AdvertisementFactory</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">net.jxta.util.ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.document.AdvertisementFactory</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>AdvertisementFactory</B><DT>extends <A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</DL>
+</PRE>
+
+<P>
+A Factory class for constructing Advertisements. This class abstracts the
+ the implementations used to represent and create advertisements.
+
+ <p/>Advertisements are core objects that are used to advertise a Peer, a
+ PeerGroup, a Service, a Pipe, etc. The Advertisement class provides a 
+ platform independent representation of core objects that can be exchanged
+ between different implementations (Java, C).
+
+ <p/>The AdvertisementFactory extends the ClassFactory to register the various
+ types of advertisements into an internal table. The factory is called with
+ the Advertisement type requested to create the corresponding advertisement
+ type.
+
+ <p/>The set of Advertisements types supported is loaded from the JXTA
+ classpath via the service provider interface.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>, 
+<A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document"><CODE>Document</CODE></A>, 
+<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document"><CODE>MimeMediaType</CODE></A>, 
+<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol"><CODE>PeerAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/PeerGroupAdvertisement.html" title="class in net.jxta.protocol"><CODE>PeerGroupAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol"><CODE>PipeAdvertisement</CODE></A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface for instantiators of Advertisements</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#getAssocTable()">getAssocTable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to get the mapping of keys to constructors.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#getClassForKey()">getClassForKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to ensure that all keys used with the
+  mapping are of the correct type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#getClassOfInstantiators()">getClassOfInstantiators</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to ensure that all of the instance classes
+  which register with this factory have the correct base class</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.MimeMediaType, java.io.InputStream)">newAdvertisement</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, is );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.MimeMediaType, java.io.Reader)">newAdvertisement</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, reader );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(java.lang.String)">newAdvertisement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;advertisementType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>advertisementType</code> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.TextElement)">newAdvertisement</A></B>(<A HREF="../../../net/jxta/document/TextElement.html" title="interface in net.jxta.document">TextElement</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Advertisements must be encoded in XML. This is a legacy
+ static constructor. You should convert your code to use the 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>XMLElement</CODE></A>
+ version.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)">newAdvertisement</A></B>(<A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reconstructs an instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>root</code> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#registerAdvertisementInstance(java.lang.String, net.jxta.document.AdvertisementFactory.Instantiator)">registerAdvertisementInstance</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rootType,
+                              <A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&nbsp;instantiator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register an instantiator for and advertisement type to allow instances
+  of that type to be created.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/AdvertisementFactory.html#registerAssoc(java.lang.String)">registerAssoc</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;className)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a class with the factory from its class name.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.ClassFactory"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.util.<A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getAvailableKeys()">getAvailableKeys</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#getEntrySet()">getEntrySet</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#getInstantiator(K)">getInstantiator</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerAssoc(K, I)">registerAssoc</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromFile(java.net.URI)">registerFromFile</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromResources(java.lang.String, java.lang.String)">registerFromResources</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromString(java.lang.String)">registerFromString</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerProviders(java.lang.String)">registerProviders</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAssocTable()"><!-- --></A><H3>
+getAssocTable</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt; <B>getAssocTable</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to get the mapping of keys to constructors.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getAssocTable()">getAssocTable</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the map containing the mappings.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getClassOfInstantiators()"><!-- --></A><H3>
+getClassOfInstantiators</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt; <B>getClassOfInstantiators</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to ensure that all of the instance classes
+  which register with this factory have the correct base class
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getClassOfInstantiators()">getClassOfInstantiators</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Class object of the "Factory" type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getClassForKey()"><!-- --></A><H3>
+getClassForKey</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt; <B>getClassForKey</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to ensure that all keys used with the
+  mapping are of the correct type.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getClassForKey()">getClassForKey</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Class object of the key type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerAssoc(java.lang.String)"><!-- --></A><H3>
+registerAssoc</H3>
+<PRE>
+protected boolean <B>registerAssoc</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;className)</PRE>
+<DL>
+<DD>Register a class with the factory from its class name. Since class name
+  doesn't tell us much, we just load the class and hope that something
+  happens as a result of the class loading. This class is often overridden
+  in class factories to interogate the instance class before registering
+  the instance class.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#registerAssoc(java.lang.String)">registerAssoc</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>,<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>className</CODE> - The class name which will be registered.
+<DT><B>Returns:</B><DD>boolean true if the class was registered otherwise false.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerAdvertisementInstance(java.lang.String, net.jxta.document.AdvertisementFactory.Instantiator)"><!-- --></A><H3>
+registerAdvertisementInstance</H3>
+<PRE>
+public static boolean <B>registerAdvertisementInstance</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;rootType,
+                                                    <A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document">AdvertisementFactory.Instantiator</A>&nbsp;instantiator)</PRE>
+<DL>
+<DD>Register an instantiator for and advertisement type to allow instances
+  of that type to be created.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rootType</CODE> - the identifying value for this advertisement instance
+   type.<DD><CODE>instantiator</CODE> - the instantiator to use in constructing objects
+   of this rootType.
+<DT><B>Returns:</B><DD>boolean  true if the rootType type is registered. If there is
+   already a constructor for this type then false will be returned.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAdvertisement(java.lang.String)"><!-- --></A><H3>
+newAdvertisement</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> <B>newAdvertisement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;advertisementType)</PRE>
+<DL>
+<DD>Constructs a new instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>advertisementType</code> parameter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>advertisementType</CODE> - Specifies the type of advertisement to create.
+<DT><B>Returns:</B><DD>The instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</A></CODE> - if there is no matching advertisement type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAdvertisement(net.jxta.document.MimeMediaType, java.io.InputStream)"><!-- --></A><H3>
+newAdvertisement</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public static <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> <B>newAdvertisement</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)
+                                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, is );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I>
+<P>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> from the provided
+ <code>InputStream</code>. The content type of the stream is declared via
+ the <code>mimetype</code> parameter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type of the stream being read.<DD><CODE>stream</CODE> - input stream used to read data to construct the advertisement
+<DT><B>Returns:</B><DD>The instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - error reading message from input stream
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</A></CODE> - if there is no matching advertisement type
+ for the type of document read in.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAdvertisement(net.jxta.document.MimeMediaType, java.io.Reader)"><!-- --></A><H3>
+newAdvertisement</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public static <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> <B>newAdvertisement</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;source)
+                                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Please convert your code to construct an <code>XMLDocument</code>
+ using <code>StructuredDocumentFactory</code> and then call 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>newAdvertisement(XMLElement)</CODE></A>. For example :
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, reader );
+ </pre>
+ <b>or frequently:</b>
+ <p/><pre>
+   XMLDocument xml = (XMLDocument) StructuredDocumentFactory.newStructuredDocument( msgElement );
+ </pre>
+ <b>followed by:</b>
+ <p/><pre>
+   Advertisement adv = AdvertisementFactory.newAdvertisement(xml);
+ </pre></I>
+<P>
+<DD>Reconstructs an instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> from the provided
+ <code>Reader</code>. The content type of the reader is declared via the
+ <code>mimetype</code> parameter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type of the stream being read.<DD><CODE>source</CODE> - used to read data to construct the advertisement.
+<DT><B>Returns:</B><DD>The instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - error reading message from input stream
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</A></CODE> - if there is no matching advertisement type
+ for the type of document read in.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - if the specified mime type is not
+  associated with a text oriented document type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAdvertisement(net.jxta.document.TextElement)"><!-- --></A><H3>
+newAdvertisement</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public static <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> <B>newAdvertisement</B>(<A HREF="../../../net/jxta/document/TextElement.html" title="interface in net.jxta.document">TextElement</A>&nbsp;root)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Advertisements must be encoded in XML. This is a legacy
+ static constructor. You should convert your code to use the 
+ <A HREF="../../../net/jxta/document/AdvertisementFactory.html#newAdvertisement(net.jxta.document.XMLElement)"><CODE>XMLElement</CODE></A>
+ version.</I>
+<P>
+<DD>Reconstructs an instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>root</code> parameter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>root</CODE> - Specifies a portion of a StructuredDocument which will be
+ converted into an Advertisement.
+<DT><B>Returns:</B><DD>The instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</A></CODE> - if there is no advertisement type
+ matching the type of the root node.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAdvertisement(net.jxta.document.XMLElement)"><!-- --></A><H3>
+newAdvertisement</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A> <B>newAdvertisement</B>(<A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;root)</PRE>
+<DL>
+<DD>Reconstructs an instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <code>root</code> parameter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>root</CODE> - Specifies a portion of an XMLElement which will be
+ converted into an Advertisement.
+<DT><B>Returns:</B><DD>The instance of <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/NoSuchElementException.html?is-external=true" title="class or interface in java.util">NoSuchElementException</A></CODE> - if there is no advertisement type
+ matching the type of the root node.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AdvertisementFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/AdvertisementFactory.Instantiator.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/AdvertisementFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AdvertisementFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

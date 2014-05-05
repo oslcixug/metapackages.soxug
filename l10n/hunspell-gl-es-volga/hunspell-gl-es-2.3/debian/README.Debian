@@ -1,0 +1,43 @@
+hunspell-gl-es for Debian
+-------------------------
+
+This package contains a Galician dictionary for Hunspell spellchecker.
+It has been created and distributed by Miguel Soll and built to match
+official orthographic conventions as of September 2006.
+
+About mancomun:
+There has been at least three orthographic conventions for Galician:
+ILG (official), reintegrationist and minimos. ILG used orthographic
+conventions more similar to Spanish; reintegrationists were
+weighed towards Portuguese. Minimos tried to reach a middle
+consensus point.
+
+After the 2003 changes official convention is known as RAG and
+incorporated a good number of elements from the minimos convention.
+However they are not the same.
+
+This dictionary is build to follow official RAG (Real Academia Galega)
+orthographic conventions of 12 July 2003 and September 2006.
+
+About the Galician normative:
+
+http://gl.wikipedia.org/wiki/Normativa_oficial_do_galego
+http://gl.wikipedia.org/wiki/Normas_Ortogr%C3%A1ficas_e_Morfol%C3%B3xicas_do_Idioma_Galego
+http://www.realacademiagalega.org/PlainRAG/catalog/publications/files/normas_galego05.pdf
+
+Info on spellchecking for other (unofficial) conventions can be found at
+
+http://ispell-gl.sf.net
+
+Former Debian packages igalician-minimos, aspell-gl-minimos and myspell-gl-es
+are available from Debian repositories and conform to the minimos convention.
+
+Sources were repackaged from original gl_ES-pack.zip to match what Debian uses.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>, Mon,  1 Dec 2008 17:47:21 +0100
+
+Local Variables:
+coding: utf-8
+ispell-local-dictionary: "american"
+End:
+ LocalWords:  Galician Debian hunspell

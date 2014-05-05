@@ -1,0 +1,14 @@
+Source: xug-default-settings
+Section: x11
+Priority: optional
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
+
+Package: xug-default-settings
+Architecture: all
+Depends: ${misc:Depends},
+         libglib2.0-bin,
+         xug-look
+Description: default settings for the Ubuntu.xug desktop
+ This package contains the default settings used by the Ubuntu.xug.

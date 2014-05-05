@@ -1,0 +1,1760 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RendezvousMetric (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RendezvousMetric (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RendezvousMetric.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMeter.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousServiceMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RendezvousMetric.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.rendezvous.rendezvousMeter</FONT>
+<BR>
+Class RendezvousMetric</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>RendezvousMetric</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></DL>
+</PRE>
+
+<P>
+The Metric corresponding to the state and aggregate information of a Rendezvous Service
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#EDGE">EDGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#RENDEZVOUS">RENDEZVOUS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#STOPPED">STOPPED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#RendezvousMetric()">RendezvousMetric</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#RendezvousMetric(net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric)">RendezvousMetric</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter">RendezvousMetric</A>&nbsp;prototype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getEdgeStartTime()">getEdgeStartTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the time that it began operating as an Edge</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumEdgeTransitions()">getNumEdgeTransitions</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of times the peer has become an edge</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedPropagating()">getNumFailedPropagating</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed during propagation</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedPropagatingToNeighbors()">getNumFailedPropagatingToNeighbors</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed when propagated to neighbors</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedPropagatingToPeers()">getNumFailedPropagatingToPeers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed when propagated to peers</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedRepropagating()">getNumFailedRepropagating</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed during repropagation</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedWalks()">getNumFailedWalks</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed attempting walk</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumFailedWalkToPeers()">getNumFailedWalkToPeers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages failed in an attempt to walk to a set of peers</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPeersPropagatedTo()">getNumPeersPropagatedTo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of peers that outbound messages were propagated to</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPeersWalkedTo()">getNumPeersWalkedTo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of peers that outbound messages were walked to</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPropagated()">getNumPropagated</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages propagated</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPropagatedInGroup()">getNumPropagatedInGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages propagated in group</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPropagatedToNeighbors()">getNumPropagatedToNeighbors</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages propagated to neighbors</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumPropagatedToPeers()">getNumPropagatedToPeers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages propagated to peers</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedDead()">getNumReceivedDead</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of TTL Dead messages received</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedDuplicate()">getNumReceivedDuplicate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of duplicate messages received</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedInvalid()">getNumReceivedInvalid</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of invalid messages received</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedLoopback()">getNumReceivedLoopback</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of messages received that originated at peer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedProcessedLocally()">getNumReceivedProcessedLocally</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of messages received that were sent to local listeners</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumReceivedRepropagatedInGroup()">getNumReceivedRepropagatedInGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of messages received that were repropagated to the group</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumRendezvousTransitions()">getNumRendezvousTransitions</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of times the peer has become an rendezvous</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumRepropagated()">getNumRepropagated</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages repropagated</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumWalkedToPeers()">getNumWalkedToPeers</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages walked to a set of peers</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getNumWalks()">getNumWalks</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of outbound messages walked</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getRendezvousStartTime()">getRendezvousStartTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the time that it began operating as an Rendezvous</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getState()">getState</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the current state (edge, rendezvous or stopped)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsEdge()">getTimeAsEdge</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the duration of current transition to an edge
+ <BR><BR>
+ <B>Note:</B> This assumes the clocks are in sync with the reporting peer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsEdge(long)">getTimeAsEdge</A></B>(long&nbsp;adjustmentTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the duration of time became an edge until the specified time</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsRendezvous()">getTimeAsRendezvous</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the duration of current transition to a rendezvous
+ <BR><BR>
+ <B>Note:</B> This assumes the clocks are in sync with the reporting peer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsRendezvous(long)">getTimeAsRendezvous</A></B>(long&nbsp;adjustmentTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the duration of time became an rendezvous until the specified time</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalEdgeTime()">getTotalEdgeTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the total time it began operating as an Edge.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalEdgeTime(long)">getTotalEdgeTime</A></B>(long&nbsp;adjustmentTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the total time it began operating as an Edge.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalReceived()">getTotalReceived</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The total number of inbound messages to the rendezvous service</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalReceivedUndelivered()">getTotalReceivedUndelivered</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The total number of inbound messages to the rendezvous service that could not be delivered</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalRendezvousTime()">getTotalRendezvousTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the total time it began operating as an Rendezvous.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalRendezvousTime(long)">getTotalRendezvousTime</A></B>(long&nbsp;adjustmentTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the total time it began operating as an Rendezvous.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTransitionTime()">getTransitionTime</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the time that it entered the current state</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#invalidMessageReceived()">invalidMessageReceived</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#isEdge()">isEdge</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is this Rendezvous currently operating as an Edge</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#isRendezvous()">isRendezvous</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is this Rendezvous currently operating as an Rendezvous</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#mergeMetrics(net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric)">mergeMetrics</A></B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter">RendezvousMetric</A>&nbsp;otherRendezvousMetric)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#propagateToGroup()">propagateToGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#propagateToNeighbors()">propagateToNeighbors</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#propagateToNeighborsFailed()">propagateToNeighborsFailed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#propagateToPeers(int)">propagateToPeers</A></B>(int&nbsp;numPeers)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#receivedDeadMessage()">receivedDeadMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#receivedDuplicateMessage()">receivedDuplicateMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#receivedLoopbackMessage()">receivedLoopbackMessage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#receivedMessageProcessedLocally()">receivedMessageProcessedLocally</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#receivedMessageRepropagatedInGroup()">receivedMessageRepropagatedInGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#startEdge(long)">startEdge</A></B>(long&nbsp;transitionTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#startRendezvous(long)">startRendezvous</A></B>(long&nbsp;transitionTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#stopEdge(long, long)">stopEdge</A></B>(long&nbsp;transitionTime,
+         long&nbsp;timeAsEdge)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#stopRendezvous(long, long)">stopRendezvous</A></B>(long&nbsp;transitionTime,
+               long&nbsp;timeAsRendezvous)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#walk()">walk</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#walkFailed()">walkFailed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#walkToPeers(int)">walkToPeers</A></B>(int&nbsp;numPeers)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#walkToPeersFailed()">walkToPeersFailed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EDGE"><!-- --></A><H3>
+EDGE</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>EDGE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric.EDGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RENDEZVOUS"><!-- --></A><H3>
+RENDEZVOUS</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>RENDEZVOUS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric.RENDEZVOUS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="STOPPED"><!-- --></A><H3>
+STOPPED</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>STOPPED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric.STOPPED">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RendezvousMetric()"><!-- --></A><H3>
+RendezvousMetric</H3>
+<PRE>
+public <B>RendezvousMetric</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="RendezvousMetric(net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric)"><!-- --></A><H3>
+RendezvousMetric</H3>
+<PRE>
+public <B>RendezvousMetric</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter">RendezvousMetric</A>&nbsp;prototype)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getState()"><!-- --></A><H3>
+getState</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getState</B>()</PRE>
+<DL>
+<DD>Get the current state (edge, rendezvous or stopped)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>RendezvousMetric.EDGE, RendezvousMetric.RENDEZVOUS or RendezvousMetric.STOPPED</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTransitionTime()"><!-- --></A><H3>
+getTransitionTime</H3>
+<PRE>
+public long <B>getTransitionTime</B>()</PRE>
+<DL>
+<DD>Get the time that it entered the current state
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>transition time in ms since January 1, 1970, 00:00:00 GMT</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEdge()"><!-- --></A><H3>
+isEdge</H3>
+<PRE>
+public boolean <B>isEdge</B>()</PRE>
+<DL>
+<DD>Is this Rendezvous currently operating as an Edge
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isRendezvous()"><!-- --></A><H3>
+isRendezvous</H3>
+<PRE>
+public boolean <B>isRendezvous</B>()</PRE>
+<DL>
+<DD>Is this Rendezvous currently operating as an Rendezvous
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEdgeStartTime()"><!-- --></A><H3>
+getEdgeStartTime</H3>
+<PRE>
+public long <B>getEdgeStartTime</B>()</PRE>
+<DL>
+<DD>Get the time that it began operating as an Edge
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time or 0 if it is not currently an Edge</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalEdgeTime()"><!-- --></A><H3>
+getTotalEdgeTime</H3>
+<PRE>
+public long <B>getTotalEdgeTime</B>()</PRE>
+<DL>
+<DD>Get the total time it began operating as an Edge.
+ <BR><BR>
+ <B>Note:</B> This does not include the current time as edge (if it is currently an edge)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time in ms (see note above)<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalEdgeTime(long)"><CODE>getTotalEdgeTime(long)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalEdgeTime(long)"><!-- --></A><H3>
+getTotalEdgeTime</H3>
+<PRE>
+public long <B>getTotalEdgeTime</B>(long&nbsp;adjustmentTime)</PRE>
+<DL>
+<DD>Get the total time it began operating as an Edge.  If it is currently operating as
+ an edge, then the total time is adjusted to include the time since the transition time
+ to an edge until the provided time
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adjustmentTime</CODE> - The time of this metric will be adjusted to
+<DT><B>Returns:</B><DD>time in ms (see note above)<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalEdgeTime()"><CODE>getTotalEdgeTime()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumEdgeTransitions()"><!-- --></A><H3>
+getNumEdgeTransitions</H3>
+<PRE>
+public int <B>getNumEdgeTransitions</B>()</PRE>
+<DL>
+<DD>The number of times the peer has become an edge
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRendezvousStartTime()"><!-- --></A><H3>
+getRendezvousStartTime</H3>
+<PRE>
+public long <B>getRendezvousStartTime</B>()</PRE>
+<DL>
+<DD>Get the time that it began operating as an Rendezvous
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time or 0 if it is not currently an Rendezvous</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalRendezvousTime()"><!-- --></A><H3>
+getTotalRendezvousTime</H3>
+<PRE>
+public long <B>getTotalRendezvousTime</B>()</PRE>
+<DL>
+<DD>Get the total time it began operating as an Rendezvous.
+ <BR><BR>
+ <B>Note:</B> This does not include the current time as rendezvous (if it is currently an rendezvous)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time in ms (see note above)<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalRendezvousTime(long)"><CODE>getTotalRendezvousTime(long)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalRendezvousTime(long)"><!-- --></A><H3>
+getTotalRendezvousTime</H3>
+<PRE>
+public long <B>getTotalRendezvousTime</B>(long&nbsp;adjustmentTime)</PRE>
+<DL>
+<DD>Get the total time it began operating as an Rendezvous.  If it is currently operating as
+ a rendezvous, then the total time is adjusted to include the time since the transition time
+ to an rendezvous until the provided time
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adjustmentTime</CODE> - The time of this metric will be adjusted to
+<DT><B>Returns:</B><DD>time in ms (see note above)<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTotalRendezvousTime()"><CODE>getTotalRendezvousTime()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumRendezvousTransitions()"><!-- --></A><H3>
+getNumRendezvousTransitions</H3>
+<PRE>
+public long <B>getNumRendezvousTransitions</B>()</PRE>
+<DL>
+<DD>The number of times the peer has become an rendezvous
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedProcessedLocally()"><!-- --></A><H3>
+getNumReceivedProcessedLocally</H3>
+<PRE>
+public int <B>getNumReceivedProcessedLocally</B>()</PRE>
+<DL>
+<DD>The number of messages received that were sent to local listeners
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedRepropagatedInGroup()"><!-- --></A><H3>
+getNumReceivedRepropagatedInGroup</H3>
+<PRE>
+public int <B>getNumReceivedRepropagatedInGroup</B>()</PRE>
+<DL>
+<DD>The number of messages received that were repropagated to the group
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedInvalid()"><!-- --></A><H3>
+getNumReceivedInvalid</H3>
+<PRE>
+public int <B>getNumReceivedInvalid</B>()</PRE>
+<DL>
+<DD>The number of invalid messages received
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedDead()"><!-- --></A><H3>
+getNumReceivedDead</H3>
+<PRE>
+public int <B>getNumReceivedDead</B>()</PRE>
+<DL>
+<DD>The number of TTL Dead messages received
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedLoopback()"><!-- --></A><H3>
+getNumReceivedLoopback</H3>
+<PRE>
+public int <B>getNumReceivedLoopback</B>()</PRE>
+<DL>
+<DD>The number of messages received that originated at peer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumReceivedDuplicate()"><!-- --></A><H3>
+getNumReceivedDuplicate</H3>
+<PRE>
+public int <B>getNumReceivedDuplicate</B>()</PRE>
+<DL>
+<DD>The number of duplicate messages received
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalReceivedUndelivered()"><!-- --></A><H3>
+getTotalReceivedUndelivered</H3>
+<PRE>
+public int <B>getTotalReceivedUndelivered</B>()</PRE>
+<DL>
+<DD>The total number of inbound messages to the rendezvous service that could not be delivered
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTotalReceived()"><!-- --></A><H3>
+getTotalReceived</H3>
+<PRE>
+public int <B>getTotalReceived</B>()</PRE>
+<DL>
+<DD>The total number of inbound messages to the rendezvous service
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPropagated()"><!-- --></A><H3>
+getNumPropagated</H3>
+<PRE>
+public int <B>getNumPropagated</B>()</PRE>
+<DL>
+<DD>The number of outbound messages propagated
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedPropagating()"><!-- --></A><H3>
+getNumFailedPropagating</H3>
+<PRE>
+public int <B>getNumFailedPropagating</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed during propagation
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumRepropagated()"><!-- --></A><H3>
+getNumRepropagated</H3>
+<PRE>
+public int <B>getNumRepropagated</B>()</PRE>
+<DL>
+<DD>The number of outbound messages repropagated
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedRepropagating()"><!-- --></A><H3>
+getNumFailedRepropagating</H3>
+<PRE>
+public int <B>getNumFailedRepropagating</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed during repropagation
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPropagatedToPeers()"><!-- --></A><H3>
+getNumPropagatedToPeers</H3>
+<PRE>
+public int <B>getNumPropagatedToPeers</B>()</PRE>
+<DL>
+<DD>The number of outbound messages propagated to peers
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedPropagatingToPeers()"><!-- --></A><H3>
+getNumFailedPropagatingToPeers</H3>
+<PRE>
+public int <B>getNumFailedPropagatingToPeers</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed when propagated to peers
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPeersPropagatedTo()"><!-- --></A><H3>
+getNumPeersPropagatedTo</H3>
+<PRE>
+public int <B>getNumPeersPropagatedTo</B>()</PRE>
+<DL>
+<DD>The number of peers that outbound messages were propagated to
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPropagatedInGroup()"><!-- --></A><H3>
+getNumPropagatedInGroup</H3>
+<PRE>
+public int <B>getNumPropagatedInGroup</B>()</PRE>
+<DL>
+<DD>The number of outbound messages propagated in group
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPropagatedToNeighbors()"><!-- --></A><H3>
+getNumPropagatedToNeighbors</H3>
+<PRE>
+public int <B>getNumPropagatedToNeighbors</B>()</PRE>
+<DL>
+<DD>The number of outbound messages propagated to neighbors
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedPropagatingToNeighbors()"><!-- --></A><H3>
+getNumFailedPropagatingToNeighbors</H3>
+<PRE>
+public int <B>getNumFailedPropagatingToNeighbors</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed when propagated to neighbors
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumWalks()"><!-- --></A><H3>
+getNumWalks</H3>
+<PRE>
+public int <B>getNumWalks</B>()</PRE>
+<DL>
+<DD>The number of outbound messages walked
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedWalks()"><!-- --></A><H3>
+getNumFailedWalks</H3>
+<PRE>
+public int <B>getNumFailedWalks</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed attempting walk
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumWalkedToPeers()"><!-- --></A><H3>
+getNumWalkedToPeers</H3>
+<PRE>
+public int <B>getNumWalkedToPeers</B>()</PRE>
+<DL>
+<DD>The number of outbound messages walked to a set of peers
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumFailedWalkToPeers()"><!-- --></A><H3>
+getNumFailedWalkToPeers</H3>
+<PRE>
+public int <B>getNumFailedWalkToPeers</B>()</PRE>
+<DL>
+<DD>The number of outbound messages failed in an attempt to walk to a set of peers
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNumPeersWalkedTo()"><!-- --></A><H3>
+getNumPeersWalkedTo</H3>
+<PRE>
+public int <B>getNumPeersWalkedTo</B>()</PRE>
+<DL>
+<DD>The number of peers that outbound messages were walked to
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimeAsEdge()"><!-- --></A><H3>
+getTimeAsEdge</H3>
+<PRE>
+public long <B>getTimeAsEdge</B>()</PRE>
+<DL>
+<DD>Get the duration of current transition to an edge
+ <BR><BR>
+ <B>Note:</B> This assumes the clocks are in sync with the reporting peer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time in ms (see note above) or 0 if not edge<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsEdge(long)"><CODE>getTimeAsEdge(long)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimeAsEdge(long)"><!-- --></A><H3>
+getTimeAsEdge</H3>
+<PRE>
+public long <B>getTimeAsEdge</B>(long&nbsp;adjustmentTime)</PRE>
+<DL>
+<DD>Get the duration of time became an edge until the specified time
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adjustmentTime</CODE> - The time of this metric will be computed until
+<DT><B>Returns:</B><DD>time in ms (see note above) or 0 if not connected<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsEdge()"><CODE>getTimeAsEdge()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimeAsRendezvous()"><!-- --></A><H3>
+getTimeAsRendezvous</H3>
+<PRE>
+public long <B>getTimeAsRendezvous</B>()</PRE>
+<DL>
+<DD>Get the duration of current transition to a rendezvous
+ <BR><BR>
+ <B>Note:</B> This assumes the clocks are in sync with the reporting peer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>time in ms (see note above) or 0 if not edge<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsRendezvous(long)"><CODE>getTimeAsRendezvous(long)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTimeAsRendezvous(long)"><!-- --></A><H3>
+getTimeAsRendezvous</H3>
+<PRE>
+public long <B>getTimeAsRendezvous</B>(long&nbsp;adjustmentTime)</PRE>
+<DL>
+<DD>Get the duration of time became an rendezvous until the specified time
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>adjustmentTime</CODE> - The time of this metric will be computed until
+<DT><B>Returns:</B><DD>time in ms (see note above) or 0 if not connected<DT><B>See Also:</B><DD><A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html#getTimeAsRendezvous()"><CODE>getTimeAsRendezvous()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startEdge(long)"><!-- --></A><H3>
+startEdge</H3>
+<PRE>
+void <B>startEdge</B>(long&nbsp;transitionTime)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopEdge(long, long)"><!-- --></A><H3>
+stopEdge</H3>
+<PRE>
+void <B>stopEdge</B>(long&nbsp;transitionTime,
+              long&nbsp;timeAsEdge)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startRendezvous(long)"><!-- --></A><H3>
+startRendezvous</H3>
+<PRE>
+void <B>startRendezvous</B>(long&nbsp;transitionTime)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopRendezvous(long, long)"><!-- --></A><H3>
+stopRendezvous</H3>
+<PRE>
+void <B>stopRendezvous</B>(long&nbsp;transitionTime,
+                    long&nbsp;timeAsRendezvous)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="invalidMessageReceived()"><!-- --></A><H3>
+invalidMessageReceived</H3>
+<PRE>
+void <B>invalidMessageReceived</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="receivedMessageProcessedLocally()"><!-- --></A><H3>
+receivedMessageProcessedLocally</H3>
+<PRE>
+void <B>receivedMessageProcessedLocally</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="receivedMessageRepropagatedInGroup()"><!-- --></A><H3>
+receivedMessageRepropagatedInGroup</H3>
+<PRE>
+void <B>receivedMessageRepropagatedInGroup</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="receivedDeadMessage()"><!-- --></A><H3>
+receivedDeadMessage</H3>
+<PRE>
+void <B>receivedDeadMessage</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="receivedLoopbackMessage()"><!-- --></A><H3>
+receivedLoopbackMessage</H3>
+<PRE>
+void <B>receivedLoopbackMessage</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="receivedDuplicateMessage()"><!-- --></A><H3>
+receivedDuplicateMessage</H3>
+<PRE>
+void <B>receivedDuplicateMessage</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagateToPeers(int)"><!-- --></A><H3>
+propagateToPeers</H3>
+<PRE>
+void <B>propagateToPeers</B>(int&nbsp;numPeers)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagateToNeighbors()"><!-- --></A><H3>
+propagateToNeighbors</H3>
+<PRE>
+void <B>propagateToNeighbors</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagateToNeighborsFailed()"><!-- --></A><H3>
+propagateToNeighborsFailed</H3>
+<PRE>
+void <B>propagateToNeighborsFailed</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagateToGroup()"><!-- --></A><H3>
+propagateToGroup</H3>
+<PRE>
+void <B>propagateToGroup</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walk()"><!-- --></A><H3>
+walk</H3>
+<PRE>
+void <B>walk</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walkFailed()"><!-- --></A><H3>
+walkFailed</H3>
+<PRE>
+void <B>walkFailed</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walkToPeers(int)"><!-- --></A><H3>
+walkToPeers</H3>
+<PRE>
+void <B>walkToPeers</B>(int&nbsp;numPeers)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walkToPeersFailed()"><!-- --></A><H3>
+walkToPeersFailed</H3>
+<PRE>
+void <B>walkToPeersFailed</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mergeMetrics(net.jxta.impl.rendezvous.rendezvousMeter.RendezvousMetric)"><!-- --></A><H3>
+mergeMetrics</H3>
+<PRE>
+public void <B>mergeMetrics</B>(<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter">RendezvousMetric</A>&nbsp;otherRendezvousMetric)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="serializeTo(net.jxta.document.Element)"><!-- --></A><H3>
+serializeTo</H3>
+<PRE>
+public void <B>serializeTo</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)
+                 throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true#serializeTo(net.jxta.document.Element)" title="class or interface in net.jxta.util.documentSerializable">serializeTo</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initializeFrom(net.jxta.document.Element)"><!-- --></A><H3>
+initializeFrom</H3>
+<PRE>
+public void <B>initializeFrom</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;element)
+                    throws <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true#initializeFrom(net.jxta.document.Element)" title="class or interface in net.jxta.util.documentSerializable">initializeFrom</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializable.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/documentSerializable/DocumentSerializationException.html?is-external=true" title="class or interface in net.jxta.util.documentSerializable">DocumentSerializationException</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RendezvousMetric.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMeter.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rendezvousMeter/RendezvousServiceMetric.html" title="class in net.jxta.impl.rendezvous.rendezvousMeter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rendezvousMeter/RendezvousMetric.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RendezvousMetric.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

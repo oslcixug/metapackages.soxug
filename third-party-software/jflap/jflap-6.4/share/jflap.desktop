@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=JFlap
+Comment=
+TryExec=jflap
+Exec=jflap
+Icon=/usr/share/icons/jflap.png
+Type=Application
+Categories=Development;Math;Science;Education;

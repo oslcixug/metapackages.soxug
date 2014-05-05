@@ -1,0 +1,3 @@
+Python's setup.py installation infrastructure, along with CDBS, was chosen as
+it provides a simple framework on which to base the build/install process of a
+simple package.

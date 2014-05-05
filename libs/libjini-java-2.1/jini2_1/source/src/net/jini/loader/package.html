@@ -1,0 +1,43 @@
+<!--
+ ! 
+ ! Copyright 2005, Sun Microsystems, Inc.
+ ! Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">
+ ! Apache License, Version 2.0</a>.
+ ! 
+ !-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+
+</head>
+<body bgcolor="white">
+
+Provides interfaces and utility classes related to dynamic class
+loading with {@link java.rmi.server.RMIClassLoader}.  Some of these
+APIs depend on support that is not required of all
+<code>RMIClassLoader</code> providers.
+
+<p>The {@link net.jini.loader.ClassAnnotation} interface may be
+implemented by a {@link java.lang.ClassLoader} to customize the
+behavior of {@link java.rmi.server.RMIClassLoader#getClassAnnotation
+RMIClassLoader.getClassAnnotation} for classes defined by an instance
+of such a class loader (if <code>ClassAnnotation</code> is supported
+by the current <code>RMIClassLoader</code> provider).
+
+<p>{@link net.jini.loader.DownloadPermission} can be used to restrict
+the {@link java.security.CodeSource} values (codebase URLs and
+signers) with which downloaded classes can be defined using
+<code>RMIClassLoader</code> (if <code>DownloadPermission</code> is
+supported by the current <code>RMIClassLoader</code> provider).
+
+<p>{@link net.jini.loader.ClassLoading} provides static methods for
+loading classes using <code>RMIClassLoader</code> with optional
+verification that the codebase URLs used to load classes provide
+content integrity.
+
+@since 2.0
+@version 2.0
+
+</body>
+</html>

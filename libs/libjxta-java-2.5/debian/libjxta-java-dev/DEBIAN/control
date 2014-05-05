@@ -1,0 +1,12 @@
+Package: libjxta-java-dev
+Source: libjxta-java
+Version: 2.5-1
+Architecture: amd64
+Maintainer: Francisco Diéguez Souto <fran.dieguez@mabishu.com>
+Installed-Size: 36
+Depends: libjxta-javaBROKEN (= 2.5-1)
+Section: libdevel
+Priority: extra
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Chipmunk
+Comment=Chipmunk es un simulador de circuitos digitales y analógicos.
+TryExec=chipmunk
+Exec=chipmunk
+Icon=chipmunk
+Type=Application
+Categories=Development;Math;Science;Education;

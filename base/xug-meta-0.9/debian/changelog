@@ -1,0 +1,11 @@
+xug-meta (0.9-1) precise; urgency=low
+
+  * Include meld as software dependency
+
+ -- CIXUG Developers <osl@cixug.es>  Wed, 07 Nov 2012 15:44:23 +0100
+
+xug-meta (0.9) natty; urgency=low
+
+  * Initial release
+
+ -- CIXUG Developers <osl@cixug.es>  Mon, 22 Aug 2011 10:58:13 +0200

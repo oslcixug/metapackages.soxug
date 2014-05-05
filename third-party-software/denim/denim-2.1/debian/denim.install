@@ -1,0 +1,4 @@
+bin/* usr/bin
+share/*.jar usr/share/denim
+icons/*.png usr/share/icons
+share/*.desktop usr/share/applications

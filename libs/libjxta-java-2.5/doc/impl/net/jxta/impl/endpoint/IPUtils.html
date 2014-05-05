@@ -1,0 +1,727 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+IPUtils (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="IPUtils (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IPUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/endpoint/EndpointUtils.html" title="class in net.jxta.impl.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/endpoint/JxtaMessageMessageElement.html" title="class in net.jxta.impl.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/endpoint/IPUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IPUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.endpoint</FONT>
+<BR>
+Class IPUtils</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.endpoint.IPUtils</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>IPUtils</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Utility methods for use by IP based transports.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#ANYADDRESS">ANYADDRESS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constant which works as the IP "Any Address" value</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#ANYADDRESSV4">ANYADDRESSV4</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#ANYADDRESSV6">ANYADDRESSV6</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#IPV4ANYADDRESS">IPV4ANYADDRESS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#IPV4LOOPBACK">IPV4LOOPBACK</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#IPV6ANYADDRESS">IPV6ANYADDRESS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#IPV6LOOPBACK">IPV6LOOPBACK</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#LOOPBACK">LOOPBACK</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constant which works as the IP "Local Loopback" value;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#LOOPBACKV4">LOOPBACKV4</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#LOOPBACKV6">LOOPBACKV6</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#random">random</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#rangesize">rangesize</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size of port groups we will probe.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#connectToFrom(java.net.InetAddress, int, java.net.InetAddress, int, int)">connectToFrom</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;inetAddress,
+              int&nbsp;port,
+              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;usingInterface,
+              int&nbsp;localPort,
+              int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a client socket using the configured socketFactory or
+ connectToFromNoFactory if none is available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#connectToFromNoFactory(java.net.InetAddress, int, java.net.InetAddress, int, int)">connectToFromNoFactory</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;inetAddress,
+                       int&nbsp;port,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;usingInterface,
+                       int&nbsp;localPort,
+                       int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a client socket with the JDK1.4 method connect().</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#getAllLocalAddresses()">getAllLocalAddresses</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide an iterator which returns all of the local InetAddresses for this
+ host.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#getHostAddress(java.net.InetAddress)">getHostAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;anAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Normalized version of <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true#getHostAddress()" title="class or interface in java.net"><CODE>InetAddress.getHostAddress()</CODE></A> that
+ handles IPv6 addresss formatting using the style of IETF RFC 2732 and
+ also handles removal of IPv6 scoping identifiers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/net/ServerSocketFactory.html?is-external=true" title="class or interface in javax.net">ServerSocketFactory</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#getServerSocketFactory()">getServerSocketFactory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the ServerSocketFactory to create server sockets, or
+ null if new SeverSocket() is being used.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/impl/endpoint/SocketFactory.html" title="interface in net.jxta.impl.endpoint">SocketFactory</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#getSocketFactory()">getSocketFactory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the socketFactory used by connectToFrom() to create sockets, or
+ null if connectToFromNoFactory() is being used.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#openServerSocketInRange(int, int, int, java.net.InetAddress)">openServerSocketInRange</A></B>(int&nbsp;start,
+                        int&nbsp;end,
+                        int&nbsp;backlog,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;bindAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open a ServerSocket in the specified range.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#parseSocketAddress(java.lang.String)">parseSocketAddress</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;anAddress)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parses a String containing a SokectAddress formatted as either:
+  <p/>
+  
+     &lt;host> ":" &lt;port>
+
+     "[" &lt;numeric_host> "]:" &lt;port>
+  
+  <p/></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#setServerSocketFactory(javax.net.ServerSocketFactory)">setServerSocketFactory</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/net/ServerSocketFactory.html?is-external=true" title="class or interface in javax.net">ServerSocketFactory</A>&nbsp;sf)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makes connectToFrom create sockets with this factory.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/endpoint/IPUtils.html#setSocketFactory(net.jxta.impl.endpoint.SocketFactory)">setSocketFactory</A></B>(<A HREF="../../../../net/jxta/impl/endpoint/SocketFactory.html" title="interface in net.jxta.impl.endpoint">SocketFactory</A>&nbsp;sf)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makes connectToFrom create sockets with this factory.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="random"><!-- --></A><H3>
+random</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</A> <B>random</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="IPV4ANYADDRESS"><!-- --></A><H3>
+IPV4ANYADDRESS</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>IPV4ANYADDRESS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.endpoint.IPUtils.IPV4ANYADDRESS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IPV6ANYADDRESS"><!-- --></A><H3>
+IPV6ANYADDRESS</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>IPV6ANYADDRESS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.endpoint.IPUtils.IPV6ANYADDRESS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IPV4LOOPBACK"><!-- --></A><H3>
+IPV4LOOPBACK</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>IPV4LOOPBACK</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.endpoint.IPUtils.IPV4LOOPBACK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IPV6LOOPBACK"><!-- --></A><H3>
+IPV6LOOPBACK</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>IPV6LOOPBACK</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.endpoint.IPUtils.IPV6LOOPBACK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ANYADDRESS"><!-- --></A><H3>
+ANYADDRESS</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>ANYADDRESS</B></PRE>
+<DL>
+<DD>Constant which works as the IP "Any Address" value
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ANYADDRESSV4"><!-- --></A><H3>
+ANYADDRESSV4</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>ANYADDRESSV4</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ANYADDRESSV6"><!-- --></A><H3>
+ANYADDRESSV6</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>ANYADDRESSV6</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="LOOPBACK"><!-- --></A><H3>
+LOOPBACK</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>LOOPBACK</B></PRE>
+<DL>
+<DD>Constant which works as the IP "Local Loopback" value;
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="LOOPBACKV4"><!-- --></A><H3>
+LOOPBACKV4</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>LOOPBACKV4</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="LOOPBACKV6"><!-- --></A><H3>
+LOOPBACKV6</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A> <B>LOOPBACKV6</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="rangesize"><!-- --></A><H3>
+rangesize</H3>
+<PRE>
+static final int <B>rangesize</B></PRE>
+<DL>
+<DD>Size of port groups we will probe.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.endpoint.IPUtils.rangesize">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAllLocalAddresses()"><!-- --></A><H3>
+getAllLocalAddresses</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&gt; <B>getAllLocalAddresses</B>()</PRE>
+<DL>
+<DD>Provide an iterator which returns all of the local InetAddresses for this
+ host.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>iterator of InetAddress which is all of the InetAddress for all
+         local interfaces.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getHostAddress(java.net.InetAddress)"><!-- --></A><H3>
+getHostAddress</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getHostAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;anAddress)</PRE>
+<DL>
+<DD>Normalized version of <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true#getHostAddress()" title="class or interface in java.net"><CODE>InetAddress.getHostAddress()</CODE></A> that
+ handles IPv6 addresss formatting using the style of IETF RFC 2732 and
+ also handles removal of IPv6 scoping identifiers.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>anAddress</CODE> - The address to format as a <tt>String</tt>.
+<DT><B>Returns:</B><DD>The addresss formatted as a String.<DT><B>See Also:</B><DD><a href="http://www.ietf.org/rfc/rfc2732.txt" target="_blank">IETF RFC 2732 <i>MIME : IPv6 Literal Addresses in URL's</i></a></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseSocketAddress(java.lang.String)"><!-- --></A><H3>
+parseSocketAddress</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</A> <B>parseSocketAddress</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;anAddress)</PRE>
+<DL>
+<DD>Parses a String containing a SokectAddress formatted as either:
+  <p/>
+  <pre>
+     &lt;host> ":" &lt;port>
+
+     "[" &lt;numeric_host> "]:" &lt;port>
+  </pre>
+  <p/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>anAddress</CODE> - The address string to be parsed.
+<DT><B>Returns:</B><DD>The parsed address.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connectToFrom(java.net.InetAddress, int, java.net.InetAddress, int, int)"><!-- --></A><H3>
+connectToFrom</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A> <B>connectToFrom</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;inetAddress,
+                                   int&nbsp;port,
+                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;usingInterface,
+                                   int&nbsp;localPort,
+                                   int&nbsp;timeout)
+                            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a client socket using the configured socketFactory or
+ connectToFromNoFactory if none is available.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>inetAddress</CODE> - Destination address<DD><CODE>port</CODE> - Destination port<DD><CODE>usingInterface</CODE> - Interface to use<DD><CODE>localPort</CODE> - local port<DD><CODE>timeout</CODE> - timeout in millis
+<DT><B>Returns:</B><DD>a client socket with the JDK1.4 method connect().
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connectToFromNoFactory(java.net.InetAddress, int, java.net.InetAddress, int, int)"><!-- --></A><H3>
+connectToFromNoFactory</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A> <B>connectToFromNoFactory</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;inetAddress,
+                                            int&nbsp;port,
+                                            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;usingInterface,
+                                            int&nbsp;localPort,
+                                            int&nbsp;timeout)
+                                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a client socket with the JDK1.4 method connect().
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>inetAddress</CODE> - Destination address<DD><CODE>port</CODE> - Destination port<DD><CODE>usingInterface</CODE> - Interface to use<DD><CODE>localPort</CODE> - local port<DD><CODE>timeout</CODE> - timeout in millis
+<DT><B>Returns:</B><DD>a client socket with the JDK1.4 method connect().
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSocketFactory(net.jxta.impl.endpoint.SocketFactory)"><!-- --></A><H3>
+setSocketFactory</H3>
+<PRE>
+public static void <B>setSocketFactory</B>(<A HREF="../../../../net/jxta/impl/endpoint/SocketFactory.html" title="interface in net.jxta.impl.endpoint">SocketFactory</A>&nbsp;sf)</PRE>
+<DL>
+<DD>makes connectToFrom create sockets with this factory.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sf</CODE> - is the socket factory to use or null if you want the
+           default behaviour provided by connectToFromNoFactory().</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSocketFactory()"><!-- --></A><H3>
+getSocketFactory</H3>
+<PRE>
+public static <A HREF="../../../../net/jxta/impl/endpoint/SocketFactory.html" title="interface in net.jxta.impl.endpoint">SocketFactory</A> <B>getSocketFactory</B>()</PRE>
+<DL>
+<DD>returns the socketFactory used by connectToFrom() to create sockets, or
+ null if connectToFromNoFactory() is being used.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the socket factory used by connectToFrom() or null if
+         the connectToFromNoFactory() method is used to create Sockets.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setServerSocketFactory(javax.net.ServerSocketFactory)"><!-- --></A><H3>
+setServerSocketFactory</H3>
+<PRE>
+public static void <B>setServerSocketFactory</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/net/ServerSocketFactory.html?is-external=true" title="class or interface in javax.net">ServerSocketFactory</A>&nbsp;sf)</PRE>
+<DL>
+<DD>makes connectToFrom create sockets with this factory.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sf</CODE> - is the socket factory to use or null if you want the
+           default behaviour provided by new SeverSocket().</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServerSocketFactory()"><!-- --></A><H3>
+getServerSocketFactory</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/net/ServerSocketFactory.html?is-external=true" title="class or interface in javax.net">ServerSocketFactory</A> <B>getServerSocketFactory</B>()</PRE>
+<DL>
+<DD>returns the ServerSocketFactory to create server sockets, or
+ null if new SeverSocket() is being used.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the socket factory used or null if
+         the new SeverSocket() method is used to create ServerSockets.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="openServerSocketInRange(int, int, int, java.net.InetAddress)"><!-- --></A><H3>
+openServerSocketInRange</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A> <B>openServerSocketInRange</B>(int&nbsp;start,
+                                                   int&nbsp;end,
+                                                   int&nbsp;backlog,
+                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</A>&nbsp;bindAddress)
+                                            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Open a ServerSocket in the specified range.
+
+ <p/>
+ The method used is done so that the entire range is examined if
+ needed while ensuring that the process eventually terminates if no port
+ is available.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>start</CODE> - The lowest numbered port to try.<DD><CODE>end</CODE> - The highest numbered port to try.<DD><CODE>backlog</CODE> - the allowed backlog of unaccepted connections.<DD><CODE>bindAddress</CODE> - the InetAddress to which to bind.
+<DT><B>Returns:</B><DD>a ServerSocket in the specified range.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - when the socket cannot be opened. (Lame, but that's what ServerSocket says).</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IPUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/endpoint/EndpointUtils.html" title="class in net.jxta.impl.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/endpoint/JxtaMessageMessageElement.html" title="class in net.jxta.impl.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/endpoint/IPUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IPUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

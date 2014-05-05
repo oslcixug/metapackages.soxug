@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TextSTAT
+Comment=Multi-lingual concordance tool
+Comment[es_ES]=Herramienta de concordancia multi-lenguaje
+Comment[es_ES]=Ferramenta de concordancia multi-linguaxe
+Exec=textstat
+Categories=GNOME;Application;Education

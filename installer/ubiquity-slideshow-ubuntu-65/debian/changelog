@@ -1,0 +1,11 @@
+ubiquity-slideshow-os-xug (65-1) UNRELEASED; urgency=low
+
+  * Update all the slides
+
+ -- CIXUG Developers <osl@cixug.es>  Wed, 14 Nov 2012 15:49:39 +0100
+
+ubiquity-slideshow-os-xug (65-0) quantal; urgency=low
+
+  * Initial release
+
+ -- CIXUG Developers <osl@cixug.es>  Sat, 20 Oct 2012 13:56:58 -0400

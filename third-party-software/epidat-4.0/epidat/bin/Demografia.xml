@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : plugin.xml
+    Created on : 13 de mayo de 2008, 9:40
+    Author     : BalideaCP
+    Description:
+        Plantilla de creación de descriptores de despliegue para los plugins de 
+        Epidat 4.0. Actualice los textos entre etiquetas para que reflejen su contenido:
+            1.- Etiqueta clase: Contendrá ruta a la clase que extiende la clase PluginEstandar.
+            2.- Etiqueta accion: Contendrá ruta a la clase que implementa la interfaz Accion.
+            3.- Etiqueta menu: La ruta de menus y submenus, ya existentes o a crear, donde ubicaremos
+                nuestro menu.
+            4.- Etiqueta etiqueta: El texto del botón o menú que se creará.     
+-->
+<plugin>
+	<clase>demografia.interfaz.DemografiaPlugin</clase>
+	<nombre>Demografía</nombre>
+	<version>2.0</version>
+        <indice>5</indice>
+	<puntosEntrada>		
+		<puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Pirámides e indicadores</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Pirámides de población</etiqueta>
+			<accion>demografia.interfaz.PiramidesAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Pirámides e indicadores</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Indicadores de estructura</etiqueta>
+			<accion>demografia.interfaz.IndicadoresEstructuraAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Pirámides e indicadores</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Indicadores de fecundidad</etiqueta>
+			<accion>demografia.interfaz.IndicadoresFecundidadAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Tablas de mortalidad</etiqueta>
+			<accion>demografia.interfaz.TablasMortalidadAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Expectativas de salud</etiqueta>
+			<accion>demografia.interfaz.ExpectativasSaludAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Años potenciales de vida perdidos/APVP y tasa bruta</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Una causa y varias poblaciones</etiqueta>
+			<accion>demografia.interfaz.APVPYTasaBrutaUnaCausaAccionPlugin</accion>
+        </puntoEntrada>
+
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Años potenciales de vida perdidos/APVP y tasa bruta</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Varias causas y una población</etiqueta>
+			<accion>demografia.interfaz.APVPYTasaBrutaVariasCausasAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Años potenciales de vida perdidos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Tasa de APVP ajustada</etiqueta>
+			<accion>demografia.interfaz.TasaAPVPAjustadaAccionPlugin</accion>
+        </puntoEntrada>
+
+
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Descomposición del cambio en la EV</etiqueta>
+			<accion>demografia.interfaz.DescomposicionCambioEVAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Años de esperanza de vida perdidos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Un período</etiqueta>
+			<accion>demografia.interfaz.AnosVidaPerdidosUnPeriodoAccionPlugin</accion>
+        </puntoEntrada>
+        <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Demografía/Años de esperanza de vida perdidos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Comparación de dos períodos</etiqueta>
+			<accion>demografia.interfaz.AnosVidaPerdidosComparacionPeriodosAccionPlugin</accion>
+        </puntoEntrada>
+    </puntosEntrada>
+</plugin>

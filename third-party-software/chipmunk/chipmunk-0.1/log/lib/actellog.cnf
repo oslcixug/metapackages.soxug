@@ -1,0 +1,20 @@
+{ Typical LOG.CNF file for using the Actel gate library }
+
+include genlog.cnf    { General stuff }
+gates + actel.gate
+
+{ Load lots of useful gates }
+load time to from vdd gnd cross2 sw2
+load clock switch pulse led keypad 7seg
+load inst* digh
+
+load a_*
+
+{ Load a random sampling of handy gates into the menu }
+menu led switch vdd gnd a_inv a_and2 a_or2 a_nand2 a_nor2
+menu to from a_clock a_df1 a_jkfpc a_fa1a a_mx2
+
+glow on     { Enable famous "glowing wires" mode by default }
+gates + actel/cnt4bl
+load  cnt4bl
+

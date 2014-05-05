@@ -1,0 +1,110 @@
+Source: xug-software-meta
+Section: metapackage
+Priority: optional
+Maintainer: CIXUG Developers <osl@cixug.es>
+Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 7.0.8), germinate (>= 1.18)
+
+Package: xug-software-cccomunicacion
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Comunication Science
+ This package installs all the needed software on the
+ Faculty of Comunications Science of all the Universities of Galicia
+
+Package: xug-software-matematicas
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Maths Science
+ This package installs all the needed software on the
+ Faculty of Maths Science of all the Universities of Galicia
+
+Package: xug-software-informatica
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Computer Science
+ This package installs all the needed software on the
+ Faculty of Computer Science of all the Universities of Galicia
+
+Package: xug-software-filoloxia
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Computer Science
+ This package installs all the needed software on the
+ Faculty of Philoloy Science of all the Universities of Galicia
+
+Package: xug-software-fisica
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Physics Science
+ This package installs all the needed software on the
+ Faculty of Physics Science of all the Universities of Galicia
+
+Package: xug-software-educacion
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Education Science
+ This package installs all the needed software on the
+ Faculty of Education Science of all the Universities of Galicia
+
+Package: xug-software-quimica
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Chemistry Science
+ This package installs all the needed software on the
+ Faculty of Chemistry Science of all the Universities of Galicia
+
+Package: xug-software-arquitectura
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Architecture Science
+ This package installs all the needed software on the
+ Faculty of Architecture Science of all the Universities of Galicia
+
+Package: xug-software-telecomunicacions
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Telecomunications Science
+ This package installs all the needed software on the
+ Faculty of Telecomunications Science of all the Universities of Galicia
+
+Package: xug-software-aulasformacion
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Formational labs
+ This package installs all the needed software on the
+ Formational labs of all the Universities of Galicia
+
+Package: xug-software-bioestatistica
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Biostatistic studies
+ This package installs all the needed software on the
+ Biostatistics studies
+
+Package: xug-software-bioinformatica
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage with apps and tools for Biological studies
+ This package installs all the needed software on the
+ Biostatistics studies
+
+Package: xug-software-usc-rai
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: Metapackage that contains tools for RAI network of USC
+ This package installs all the needed software on the
+ RAI network of University of Santiago de Compostela

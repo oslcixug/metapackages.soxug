@@ -1,0 +1,414 @@
+
+{ Descriptions of various LOG library gates }
+
+
+{ Group 0 }
+librstr ARROW1    Vertical arrow (for decoration)
+librstr ARROW2    Diagonal arrow (for decoration)
+librstr CIRC      Circle (for decoration)
+librstr CIRC1     Small circle (for decoration)
+librstr CIRC2     Large circle (for decoration)
+librstr CROSS2    Crossing wires
+librstr CROSS3    Large crossing wires
+librstr CROSS4    Four crossing wires
+librstr CROSS5    Extra-large crossing wires
+librstr CRUNCH    Double to single spaced wire cruncher
+librstr CRUNCH2   Double to single spaced wire cruncher
+librstr FROM      Connection to a named signal
+librstr GINST1    General purpose instance gate (16 pins)
+librstr GINST2    General purpose instance gate (20 pins)
+librstr GINST3    General purpose instance gate (24 pins)
+librstr GINST4    General purpose instance gate (36 pins)
+librstr GINST5    General purpose instance gate (42 pins)
+librstr GND       Connection to "Gnd"
+librstr JUMPER    Diagonal jumper wire (for decoration)
+librstr JUMPER2   Horizontal jumper wire (curved)
+librstr JUMPER3   Horizontal jumper wire (straight)
+librstr JUMPER4   Horizontal jumper wire (straight, right dot only)
+librstr JUMPER5   Horizontal jumper wire (straight, left dot only)
+librstr JUMPER6   Horizontal jumper wire (curved, no dots)
+librstr SW2       Toggle switch (single pole, double throw)
+librstr SW4       Toggle switch (double pole, double throw)
+librstr TIME      Simulation time/performance monitor
+librstr TO        Connection to a named signal
+librstr VDD       Connection to "Vdd"
+
+
+{ Group 1 }
+librstr +5V       Connection to "Vdd"
+librstr +5V2      Connection to "Vdd" (rotated 180 degrees)
+librstr +5V3      Connection to "Vdd" (rotated ccw)
+librstr +5V4      Connection to "Vdd" (rotated cw)
+librstr 7SEG      Hexadecimal display
+librstr 10COUNT   Generic 4-bit BCD counter
+librstr 16COUNT   Generic 4-bit binary counter
+librstr AND       Generic AND gate
+librstr AND3      Generic 3-input AND gate
+librstr AND4      Generic 4-input AND gate
+librstr AND8      Generic 8-input AND gate
+librstr ANDX      Generic AND gate shown as OR with bubbles
+librstr ANDX3     Generic 3-input AND gate shown as OR with bubbles
+librstr ANDX4     Generic 4-input AND gate shown as OR with bubbles
+librstr ASCDISP   ASCII display, 64x16 characters
+librstr ASCKBD    ASCII keyboard, 8-bit outputs with strobe
+librstr BREAK     Digital "breakpoint" gate
+librstr CLOCK     Digital clock generator (use CNFG to configure)
+librstr COMPL     Complementary-output buffer
+librstr COMPL2    Complementary-output buffer (miniature)
+librstr DIGH      Digital hierarchy control panel
+librstr DNEG      Generic D flip-flop, negative trigger
+librstr DPOS      Generic D flip-flop, positive trigger
+librstr EDGE      Digital edge detector
+librstr FORCEDRV  (special gate for use with digital hierarchy)
+librstr GDNEG     Generic D flip-flop, negative trigger with enable
+librstr GDPOS     Generic D flip-flop, positive trigger with enable
+librstr INST0     Digital-only instance gate (8 pins)
+librstr INST1     Digital-only instance gate (16 pins)
+librstr INST2     Digital-only instance gate (20 pins)
+librstr INST3     Digital-only instance gate (24 pins)
+librstr INST4     Digital-only instance gate (36 pins)
+librstr INST5     Digital-only instance gate (42 pins)
+librstr INV       Generic inverter
+librstr INV4      Generic quad inverters
+librstr INV4A     Generic quad inverters (small)
+librstr INVX      Generic inverter, bubble on input
+librstr JKNEG     Generic JK flip-flop, negative trigger
+librstr JKPOS     Generic JK flip-flop, positive trigger
+librstr KEYPAD    Digital hexadecimal keypad, 4-bit output with strobe
+librstr LATCH     Generic transparent latch, complementary outputs
+librstr LED       Digital LED, connective border
+librstr LED2      Digital LED, displays logical OR of border
+librstr LED3      Digital LED, no border, connection in center
+librstr NAND      Generic NAND gate
+librstr NAND3     Generic 3-input NAND gate
+librstr NAND4     Generic 4-input NAND gate
+librstr NAND8     Generic 8-input NAND gate
+librstr NANDX     Generic NAND gate shown as OR with bubbles
+librstr NANDX3    Generic 3-input NAND gate shown as OR with bubbles
+librstr NANDX4    Generic 4-input NAND gate shown as OR with bubbles
+librstr NOR       Generic NOR gate
+librstr NOR3      Generic 3-input NOR gate
+librstr NOR4      Generic 4-input NOR gate
+librstr NOR8      Generic 8-input NOR gate
+librstr NORX      Generic NOR gate shown as AND with bubbles
+librstr NORX3     Generic 3-input NOR gate shown as AND with bubbles
+librstr NORX4     Generic 4-input NOR gate shown as AND with bubbles
+librstr OR        Generic OR gate
+librstr OR3       Generic 3-input OR gate
+librstr OR4       Generic 4-input OR gate
+librstr OR8       Generic 8-input OR gate
+librstr ORX       Generic OR gate shown as AND with bubbles
+librstr ORX3      Generic 3-input OR gate shown as AND with bubbles
+librstr ORX4      Generic 4-input OR gate shown as AND with bubbles
+librstr PULSE     Digital pulse-generative switch
+librstr SCOPE     Tiny digital scope
+librstr SHIFT     Generic 4-bit shift register, serial & parallel in/out
+librstr SRAM8K    Digital RAM (or ROM) gate
+librstr SWCOMPL   Digital switch with complementary outputs
+librstr SWITCH    Digital switch
+librstr SWITCH2   Digital switch (miniature)
+librstr TIE       Digital tie to Vdd through pull-up resistor
+librstr TIEGND    Digital tie to Gnd through pull-down resistor
+librstr TNEG      Generic toggle flip-flop, negative trigger
+librstr TPOS      Generic toggle flip-flop, positive trigger
+librstr XNOR      Generic exclusive OR gate
+librstr XOR       Generic exclusive NOR gate
+
+
+{ Group 2 }
+librstr 7400      TTL NAND gate
+librstr 7401      TTL NAND gate, open-collector output
+librstr 7402      TTL NOR gate
+librstr 7404      TTL inverter
+librstr 7406      TTL inverter, open-collector output
+librstr 7407      TTL non-inverting buffer, open-collector output
+librstr 7408      TTL AND gate
+librstr 7409      TTL AND gate, open-collector output
+librstr 7410      TTL 3-input NAND gate
+librstr 7411      TTL 3-input AND gate
+librstr 7412      TTL 3-input NAND gate, open-collector output
+librstr 7415      TTL 3-input AND gate, open-collector output
+librstr 7420      TTL 4-input NAND gate
+librstr 7421      TTL 4-input AND gate
+librstr 7422      TTL 4-input NAND gate, open-collector output
+librstr 7425      TTL 4-input NOR gate with strobe
+librstr 7427      TTL 3-input NOR gate
+librstr 7430      TTL 8-input NAND gate
+librstr 7432      TTL OR gate
+librstr 7433      TTL NOR gate, open-collector output
+librstr 7442      TTL 4-to-10 decoder
+librstr 7450      TTL AND-OR-INVERT gate (2x2 inputs)
+librstr 7454      TTL AND-OR-INVERT gate (4x2 inputs)
+librstr 7470      TTL JK flip-flop, positive trigger with preset/clear
+librstr 7473      TTL JK flip-flop, negative trigger with clear
+librstr 7474      TTL D flip-flop, positive trigger with preset/clear
+librstr 7475      TTL transparent latch, positive enable, compl. outputs
+librstr 7476      TTL JK flip-flop, negative trigger with preset/clear
+librstr 7477      TTL transparent latch, positive enable, single output
+librstr 7482      TTL 2-bit full adder
+librstr 7483      TTL 4-bit full adder
+librstr 7485      TTL 4-bit magnitude comparator
+librstr 7486      TTL exclusive OR gate
+librstr 7487      TTL 4-bit 1/0/true/invert element
+librstr 7490      TTL BCD counter (independent LSB) with clear, set-to-9
+librstr 7492      TTL twelve-counter (independent LSB) with clear
+librstr 7493      TTL 4-bit binary counter (independent LSB) with clear
+librstr 7497      TTL 6-bit rate multiplier
+librstr 7498      TTL 4-of-8 data selector/register
+librstr 74120     TTL clock synchronizer
+librstr 74125     TTL tristate buffer, inverted control
+librstr 74126     TTL tristate buffer, positive control
+librstr 74133     TTL 13-input NAND gate
+librstr 74134     TTL 12-input NAND gate, tri-state output
+librstr 74136     TTL exclusive OR gate, open-collector output
+librstr 74138     TTL 3-to-8 decoder
+librstr 74139     TTL 2-to-4 decoder
+librstr 74147     TTL 10-input priority encoder
+librstr 74148     TTL 8-input priority encoder
+librstr 74150     TTL 1-of-16 data selector
+librstr 74150A    (obsolete)
+librstr 74150B    (obsolete)
+librstr 74153     TTL 1-of-4 data selector
+librstr 74154     TTL 4-to-16 decoder
+librstr 74154A    (obsolete)
+librstr 74154B    (obsolete)
+librstr 74155     TTL 2-to-4 decoder (with pos & neg enables)
+librstr 74155A    TTL 2-to-4 decoder (with two neg enables)
+librstr 74157     TTL 4-of-8 data selector, positive outputs
+librstr 74158     TTL 4-of-8 data selector, inverting outputs
+librstr 74160     TTL synchronous BCD counter with async clear
+librstr 74161     TTL synchronous 4-bit binary counter with async clear
+librstr 74162     TTL synchronous BCD counter with sync clear
+librstr 74163     TTL synchronous 4-bit binary counter with sync clear
+librstr 74168     TTL synchronous BCD up/down counter with single clock
+librstr 74169     TTL synchronous 4-bit binary up/down counter
+librstr 74174     TTL 6-bit register with positive clock, async clear
+librstr 74175     TTL 4-bit register with complementary outputs
+librstr 74175A    TTL 4-bit register with positive-only outputs
+librstr 74192     TTL synchronous BCD up/down counter with dual clocks
+librstr 74193     TTL synchronous 4-bit binary up/down counter, dual clocks
+librstr 74244     TTL 8-bit tristate buffer, in 2 groups of 4
+librstr 74245     TTL 8-bit tristate buffer, bidirectional
+librstr 74373     TTL 8-bit transparent latch, tristate outputs
+librstr 74374     TTL 8-bit register, tristate outputs
+
+
+{ Group 3 }
+{ The following were developed for Carver Mead's neural analog VLSI course }
+librstr CAPFLOAT  Analog linear capacitor
+librstr DIODE1    Analog diode
+librstr FWR       Analog VLSI full-wave rectifier
+librstr GANGLION  Analog VLSI ganglion circuit
+librstr HRES      Analog VLSI horizontal resistor (old-style)
+librstr HWR       Analog VLSI half-wave rectifier
+librstr IDIFF     Analog current source (DC or AC)
+librstr INDFLOAT  (obsolete)
+librstr ISCOPE    Analog current meter/scope interface
+librstr ISWITCH1  Analog current source (switch-operated)
+librstr ISWITCH2  Analog current sink (switch-operated)
+librstr MMETER    Analog voltage/current meter
+librstr MOSCAP    Analog VLSI non-linear capacitor
+librstr NFET4     Analog VLSI N-channel FET (old-style)
+librstr NFET5     Analog VLSI N-channel FET (new model)
+librstr NPN1      Analog NPN bipolar transistor
+librstr NUMBERS   Analog scoreboard/control icon
+librstr OPAMP     Analog VLSI transconductance amplifier
+librstr PFET4     Analog VLSI P-channel FET (old-style)
+librstr PFET5     Analog VLSI P-channel FET (new model)
+librstr PFET6     Analog VLSI P-channel FET (new model, floating well)
+librstr PNP1      Analog PNP bipolar transistor
+librstr RESFLOAT  Analog linear resistor
+librstr STAIRS    Analog stairstep function generator
+librstr VDIFF     Analog voltage source (DC or AC)
+librstr VSWITCH   Analog voltage source (switch-operated)
+librstr WRAMP     Analog VLSI wide-range transconductance amplifier
+librstr NSPC1     Analog VLSI P-channel FET (4-terminal, logspc-friendly)
+librstr PSPC1     Analog VLSI P-channel FET (4-terminal, logspc-friendly)
+librstr PWL       Analog piecewise-linear I-V model 
+librstr RTD       Analog resonant-tunneling diode
+
+{ Group 5 }
+librstr V_AND     Digital VLSI AND gate (capacitive inputs)
+librstr V_AND3    Digital VLSI 3-input AND gate (capacitive inputs)
+librstr V_BUF     Digital VLSI buffer (silent capacitive input)
+librstr V_CSRL    Digital VLSI memory element
+librstr V_CSRL0   Digital VLSI memory element (long control pin)
+librstr V_CSRL2   Digital VLSI 2-bit memory element
+librstr V_CSRL4   Digital VLSI 4-bit memory element
+librstr V_CSRLN   Digital VLSI memory element (negative control)
+librstr V_INV     Digital VLSI inverter (capacitive input)
+librstr V_NAND    Digital VLSI NAND gate (capacitive inputs)
+librstr V_NAND3   Digital VLSI 3-input NAND gate (capacitive inputs)
+librstr V_NFET    Digital VLSI N-channel transistor
+librstr V_NFETD   Digital VLSI N-channel transistor, directional
+librstr V_NFETD2  Digital VLSI N-channel transistor, directional/flippable
+librstr V_NFETX   Digital VLSI N-channel transistor, simple
+librstr V_NFETX2  Digital VLSI N-channel transistor, simple/flippable
+librstr V_NFETZ   Digital VLSI N-channel transistor (alternate picture)
+librstr V_NOR     Digital VLSI NOR gate (capacitive inputs)
+librstr V_NOR3    Digital VLSI 3-input NOR gate (capacitive inputs)
+librstr V_OR      Digital VLSI OR gate (capacitive inputs)
+librstr V_OR3     Digital VLSI 3-input OR gate (capacitive inputs)
+librstr V_PFET    Digital VLSI P-channel transistor
+librstr V_PFETD   Digital VLSI P-channel transistor, directional
+librstr V_PFETD2  Digital VLSI P-channel transistor, directional/flippable
+librstr V_PFETX   Digital VLSI P-channel transistor, simple
+librstr V_PFETX2  Digital VLSI P-channel transistor, simple/flippable
+librstr V_PFETZ   Digital VLSI P-channel transistor (alternate picture)
+librstr V_TRANS   Digital VLSI transmission gate, positive enable
+librstr V_TRANSN  Digital VLSI transmission gate, negative enable
+
+
+{ Group 6 }
+librstr A_AND2    ACTEL 2-input AND gate
+librstr A_AND2A   ACTEL 2-input AND gate (one input inverted)
+librstr A_AND2B   ACTEL 2-input AND gate (both inputs inverted)
+librstr A_AND3    ACTEL 3-input AND gate
+librstr A_AND3A   ACTEL 3-input AND gate (one input inverted)
+librstr A_AND3B   ACTEL 3-input AND gate (two inputs inverted)
+librstr A_AND3C   ACTEL 3-input AND gate (three inputs inverted)
+librstr A_AND4    ACTEL 4-input AND gate
+librstr A_AND4A   ACTEL 4-input AND gate (one input inverted)
+librstr A_AND4B   ACTEL 4-input AND gate (two inputs inverted)
+librstr A_AND4C   ACTEL 4-input AND gate (three inputs inverted)
+librstr A_AND4D   ACTEL 4-input AND gate (four inputs inverted)
+librstr A_AO1     ACTEL "(x AND y) OR z" gate
+librstr A_AO1A    ACTEL "(x AND NOT y) OR z" gate
+librstr A_AO1B    ACTEL "(x AND y) OR NOT z" gate
+librstr A_AO1C    ACTEL "(x AND NOT y) OR NOT z" gate
+librstr A_AO2     ACTEL "(x AND y) OR z OR w" gate
+librstr A_AO2A    ACTEL "(x AND NOT y) OR z OR w" gate
+librstr A_AOI1A   ACTEL "(x AND NOT y) NOR z" gate
+librstr A_AOI1B   ACTEL "(x AND y) NOR NOT z" gate
+librstr A_AOI2A   ACTEL "(x AND NOT y) NOR z NOR w" gate
+librstr A_AOI2B   ACTEL "(x AND NOT y) NOR z NOR NOT w" gate
+librstr A_AX1     ACTEL "(x AND NOT y) XOR z" gate
+librstr A_AX1A    ACTEL "(x NAND NOT y) XOR z" gate
+librstr A_AX1B    ACTEL "(NOT x AND NOT y) XOR z" gate
+librstr A_BIBUF   ACTEL bidirectional pad buffer
+librstr A_BUF     ACTEL non-inverting buffer gate
+librstr A_BUFA    ACTEL non-inverting buffer gate with bubbles
+librstr A_CLKBUF  ACTEL clock pad buffer
+librstr A_CLOCK   Connection to "CLK" signal
+librstr A_DF1     ACTEL D flip-flop, positive trigger
+librstr A_DF1A    ACTEL D flip-flop, positive trigger, inverted output
+librstr A_DF1B    ACTEL D flip-flop, negative trigger
+librstr A_DF1C    ACTEL D flip-flop, negative trigger, inverted output
+librstr A_DFC1    ACTEL D flip-flop, pos trigger, pos clear
+librstr A_DFC1A   ACTEL D flip-flop, neg trigger, pos clear
+librstr A_DFC1B   ACTEL D flip-flop, pos trigger, neg clear
+librstr A_DFC1C   ACTEL D flip-flop, pos trigger, pos clear, inv output
+librstr A_DFC1D   ACTEL D flip-flop, neg trigger, neg clear
+librstr A_DFC1E   ACTEL D flip-flop, pos trigger, neg clear, inv output
+librstr A_DFC1F   ACTEL D flip-flop, neg trigger, pos clear, inv output
+librstr A_DFC1G   ACTEL D flip-flop, neg trigger, neg clear, inv output
+librstr A_DFE     ACTEL D flip-flop, pos trigger, pos enable
+librstr A_DFEA    ACTEL D flip-flop, neg trigger, pos enable
+librstr A_DFEB    ACTEL D flip-flop, pos trigger, pos enable, preset/clear
+librstr A_DFEC    ACTEL D flip-flop, neg trigger, pos enable, preset/clear
+librstr A_DFED    ACTEL D flip-flop, pos trigger, neg enable
+librstr A_DFM     ACTEL D flip-flop, pos trigger, multiplexed
+librstr A_DFMA    ACTEL D flip-flop, neg trigger, multiplexed
+librstr A_DFMB    ACTEL D flip-flop, pos trigger, neg clear, multiplexed
+librstr A_DFP1    ACTEL D flip-flop, pos trigger, pos clear
+librstr A_DFP1A   ACTEL D flip-flop, neg trigger, pos clear
+librstr A_DFP1B   ACTEL D flip-flop, pos trigger, neg clear
+librstr A_DFP1C   ACTEL D flip-flop, pos trigger, pos clear, inv output
+librstr A_DFP1D   ACTEL D flip-flop, neg trigger, neg clear
+librstr A_DFP1E   ACTEL D flip-flop, pos trigger, neg clear, inv output
+librstr A_DFP1F   ACTEL D flip-flop, neg trigger, pos clear, inv output
+librstr A_DFP1G   ACTEL D flip-flop, neg trigger, neg clear, inv output
+librstr A_DFPC    ACTEL D flip-flop, pos trigger, preset/clear
+librstr A_DFPCA   ACTEL D flip-flop, neg trigger, preset/clear
+librstr A_DL1     ACTEL transparent latch, pos enable
+librstr A_DL1A    ACTEL transparent latch, pos enable, inv output
+librstr A_DL1B    ACTEL transparent latch, neg enable
+librstr A_DL1C    ACTEL transparent latch, neg enable, inv output
+librstr A_DLC     ACTEL transparent latch, pos enable, neg clear
+librstr A_DLCA    ACTEL transparent latch, neg enable, neg clear
+librstr A_DLE     ACTEL transparent latch, two positive enables
+librstr A_DLEA    ACTEL transparent latch, one pos, one neg enable
+librstr A_DLEB    ACTEL transparent latch, one pos, one neg enable
+librstr A_DLEC    ACTEL transparent latch, two negative enables
+librstr A_DLM     ACTEL transparent latch, pos enable, multiplexed
+librstr A_DLMA    ACTEL transparent latch, neg enable, multiplexed
+librstr A_FA1A    ACTEL full adder, two inputs inverted, inv carry
+librstr A_FA1B    ACTEL full adder, one input inverted, inv carry
+librstr A_HA1     ACTEL half adder
+librstr A_HA1A    ACTEL half adder, one input inverted
+librstr A_HA1B    ACTEL half adder, sum and carry inverted
+librstr A_HA1C    ACTEL half adder, carry inverted
+librstr A_INBUF   ACTEL input pad buffer
+librstr A_INV     ACTEL inverter
+librstr A_INVA    ACTEL inverter, bubble on input
+librstr A_JKF     ACTEL JK flip-flop, K inverted,
+librstr A_JKFPC   ACTEL JK flip-flop, K inverted, preset/clear
+librstr A_MAJ3    ACTEL majority-of-3 gate
+librstr A_MX2     ACTEL 2-to-1 multiplexer
+librstr A_MX2A    ACTEL 2-to-1 multiplexer, "0" input inverted
+librstr A_MX2B    ACTEL 2-to-1 multiplexer, "1" input inverted
+librstr A_MX2C    ACTEL 2-to-1 multiplexer, output inverted
+librstr A_MX4     ACTEL 4-to-1 multiplexer
+librstr A_MXT     ACTEL multiplexer tree (generalized 4-to-1 mux)
+librstr A_NAND2   ACTEL 2-input NAND gate
+librstr A_NAND2A  ACTEL 2-input NAND gate (one input inverted)
+librstr A_NAND2B  ACTEL 2-input NAND gate (both inputs inverted)
+librstr A_NAND3   ACTEL 3-input NAND gate
+librstr A_NAND3A  ACTEL 3-input NAND gate (one input inverted)
+librstr A_NAND3B  ACTEL 3-input NAND gate (two inputs inverted)
+librstr A_NAND3C  ACTEL 3-input NAND gate (three inputs inverted)
+librstr A_NAND4   ACTEL 4-input NAND gate
+librstr A_NAND4A  ACTEL 4-input NAND gate (one input inverted)
+librstr A_NAND4B  ACTEL 4-input NAND gate (two inputs inverted)
+librstr A_NAND4C  ACTEL 4-input NAND gate (three inputs inverted)
+librstr A_NAND4D  ACTEL 4-input NAND gate (four inputs inverted)
+librstr A_NOR2    ACTEL 2-input NOR gate
+librstr A_NOR2A   ACTEL 2-input NOR gate (one input inverted)
+librstr A_NOR2B   ACTEL 2-input NOR gate (both inputs inverted)
+librstr A_NOR3    ACTEL 3-input NOR gate
+librstr A_NOR3A   ACTEL 3-input NOR gate (one input inverted)
+librstr A_NOR3B   ACTEL 3-input NOR gate (two inputs inverted)
+librstr A_NOR3C   ACTEL 3-input NOR gate (three inputs inverted)
+librstr A_NOR4    ACTEL 4-input NOR gate
+librstr A_NOR4A   ACTEL 4-input NOR gate (one input inverted)
+librstr A_NOR4B   ACTEL 4-input NOR gate (two inputs inverted)
+librstr A_NOR4C   ACTEL 4-input NOR gate (three inputs inverted)
+librstr A_NOR4D   ACTEL 4-input NOR gate (four inputs inverted)
+librstr A_OA1     ACTEL "(x OR y) AND z" gate
+librstr A_OA1A    ACTEL "(x OR NOT y) AND z" gate
+librstr A_OA1B    ACTEL "(x OR y) AND NOT z" gate
+librstr A_OA1C    ACTEL "(x OR NOT y) AND NOT z" gate
+librstr A_OA2     ACTEL "(x OR y) AND (z OR w)" gate
+librstr A_OA2A    ACTEL "(x OR NOT y) AND (z OR w)" gate
+librstr A_OA3     ACTEL "(x OR y) AND z AND w" gate
+librstr A_OA3A    ACTEL "(x OR y) AND z AND NOT w" gate
+librstr A_OA3B    ACTEL "(x OR NOT y) AND z AND NOT w" gate
+librstr A_OR2     ACTEL 2-input OR gate
+librstr A_OR2A    ACTEL 2-input OR gate (one input inverted)
+librstr A_OR2B    ACTEL 2-input OR gate (both inputs inverted)
+librstr A_OR3     ACTEL 3-input OR gate
+librstr A_OR3A    ACTEL 3-input OR gate (one input inverted)
+librstr A_OR3B    ACTEL 3-input OR gate (two inputs inverted)
+librstr A_OR3C    ACTEL 3-input OR gate (three inputs inverted)
+librstr A_OR4     ACTEL 4-input OR gate
+librstr A_OR4A    ACTEL 4-input OR gate (one input inverted)
+librstr A_OR4B    ACTEL 4-input OR gate (two inputs inverted)
+librstr A_OR4C    ACTEL 4-input OR gate (three inputs inverted)
+librstr A_OR4D    ACTEL 4-input OR gate (four inputs inverted)
+librstr A_OUTBUF  ACTEL output pad buffer
+librstr A_TFC     ACTEL toggle flip-flop, pos trigger, neg clear
+librstr A_TRIBUF  ACTEL tristate output pad buffer
+librstr A_XA1     ACTEL "(x XOR y) AND z" gate
+librstr A_XA1A    ACTEL "(x XOR NOT y) AND z" gate
+librstr A_XNOR    ACTEL exclusive NOR gate
+librstr A_XO1     ACTEL "(x XOR y) OR z" gate
+librstr A_XO1A    ACTEL "(x XOR NOT y) OR z" gate
+librstr A_XOR     ACTEL exclusive OR gate
+
+
+{ Group 8 }
+librstr DTOA      (obsolete)
+librstr OLDGND    (obsolete)
+librstr OLDTIME   (obsolete)
+
+

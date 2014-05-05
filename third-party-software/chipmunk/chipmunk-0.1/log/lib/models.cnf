@@ -1,0 +1,374 @@
+
+32: System Vdd 5
+32: System Vstep .1
+32: System Highest 7
+32: System Lowest  -2
+32: System Dtmax 1e-4
+32: System Timerelax 1e-20
+32: System Timemin 1e-40
+32: System Tol 0.000001
+32: System Eqn_Epsilon 1e-40
+32: System Vardone_Epsilon 1e-9
+32: System Timefactor 2
+32: System Timeincrease 2
+32: System Iterfirstmax 30
+32: System Srange 2
+32: System Small 0.1
+32: System Nodecap 10e-15
+
+
+32: Moscap NonLinear
+32: Moscap Lincap    600e-15
+32: Moscap NonLincap 600e-15
+32: Moscap Vtn       0.9
+32: Moscap Vtp       0.9
+32: Moscap kt/qn     4e-2
+
+32: Ganglion CapVinGnd  4e-12
+32: Ganglion CapVinVout 1e-12
+32: Ganglion Threshold  1.785
+32: Ganglion OutRes     20e6
+32: Ganglion CapVLeak   5e-16
+32: Ganglion Steepness  50
+32: Ganglion I0         5e-16
+32: Ganglion Vt         0.9
+32: Ganglion kt/qn      0.04
+32: Ganglion Early      50
+32: Ganglion CbVin      10e-15
+32: Ganglion CbVout     10e-15
+32: Ganglion CbVleak    10e-15
+
+
+32: Hres Voffset   0
+32: Hres Ipos      1
+32: Hres Ineg      1
+32: Hres IKt/Qn    0.04
+32: Hres I0        5e-16
+32: Hres Vt        0.9
+32: Hres Early     50
+32: Hres kt/qn     .04
+32: Hres CapVlow   5e-16
+32: Hres CapVhigh  5e-16
+32: Hres CapVdiff  5e-16
+32: Hres CgbVin    10e-15
+32: Hres CgbVout   10e-15
+32: Hres CdbVlow   10e-15
+32: Hres CgbVhigh  10e-15
+
+
+32: Fwr Voffset   0
+32: Fwr Ipos      1
+32: Fwr Ineg      1
+32: Fwr IKt/Qn    0.04
+32: Fwr I0        5e-16
+32: Fwr Vt        0.9
+32: Fwr Early     50
+32: Fwr kt/qn     .04
+32: Fwr CapVset   5e-16
+32: Fwr CapVout   5e-16
+32: Fwr CapVdiff  5e-16
+32: Fwr CgbVplus  10e-15
+32: Fwr CgbVminus 10e-15
+32: Fwr CdbVout   10e-15
+32: Fwr CgbVset   10e-15
+
+32: Hwr Voffset   0
+32: Hwr Ipos      1
+32: Hwr IKt/Qn    0.04
+32: Hwr I0        5e-16
+32: Hwr Vt        0.9
+32: Hwr Early     50
+32: Hwr kt/qn     .04
+32: Hwr CapVset   5e-16
+32: Hwr CapVout   5e-16
+32: Hwr CapVdiff  5e-16
+32: Hwr CgbVplus  10e-15
+32: Hwr CgbVminus 10e-15
+32: Hwr CdbVout   10e-15
+32: Hwr CgbVset   10e-15
+
+32: OpAmp Voffset   0
+32: OpAmp Ipos      1
+32: OpAmp Ineg      1
+32: OpAmp IKt/Qn    0.04
+32: OpAmp I0        5e-16
+32: OpAmp Vt        0.9
+32: OpAmp Early     50
+32: OpAmp kt/qn     .04
+32: OpAmp CapVset   5e-16
+32: OpAmp CapVout   5e-16
+32: OpAmp CapVdiff  5e-16
+32: OpAmp CgbVplus  10e-15
+32: OpAmp CgbVminus 10e-15
+32: OpAmp CdbVout   10e-15
+32: OpAmp CgbVset   10e-15
+
+32: WrAmp Voffset   0
+32: WrAmp Ipos      1
+32: WrAmp Ineg      1
+32: WrAmp IKt/Qn    0.04
+32: WrAmp I0        5e-16
+32: WrAmp Vt        0.9
+32: WrAmp Early     50
+32: WrAmp kt/qn     .04
+32: WrAmp CapVset   5e-16
+32: WrAmp CapVout   5e-16
+32: WrAmp CapVdiff  5e-16
+32: WrAmp CgbVplus  10e-15
+32: WrAmp CgbVminus 10e-15
+32: WrAmp CdbVout   10e-15
+32: WrAmp CgbVset   10e-15
+
+32: Pfet4 Cgd  5e-16
+32: Pfet4 Cgs  5e-16
+32: Pfet4 Cgb  10e-15
+32: Pfet4 Cdb  10e-15
+32: Pfet4 Csb  10e-15
+32: Pfet4 W/L 1
+32: Pfet4 Vt .9
+32: Pfet4 I0 1.66e-16
+32: Pfet4 Fitfactor 3.33
+32: Pfet4 Kt/qn 0.04
+32: Pfet4 Early 50
+
+32: Nfet4 Cgd 5e-16
+32: Nfet4 Cgs 5e-16
+32: Nfet4 Cgb 10e-15
+32: Nfet4 Cdb 10e-15
+32: Nfet4 Csb 10e-15
+32: Nfet4 W/L 1
+32: Nfet4 Vt .9
+32: Nfet4 I0 5e-16
+32: Nfet4 Fitfactor 3.33
+32: Nfet4 Kt/qn 0.04
+32: Nfet4 Early 50
+
+32: Nfet5 Cgd 5e-16
+32: Nfet5 Cgs 5e-16
+32: Nfet5 Cgb 1e-14
+32: Nfet5 Cdb 1e-14
+32: Nfet5 Csb 1e-14
+32: Nfet5 W/L 1
+32: Nfet5 Vt .852
+32: Nfet5 Beta 53e-6
+32: Nfet5 Kappa 0.676
+32: Nfet5 Kt/q 0.025
+32: Nfet5 Early 50
+
+
+32: Pfet5 Cgd 5e-16
+32: Pfet5 Cgs 5e-16
+32: Pfet5 Cgb 1e-14
+32: Pfet5 Cdb 1e-14
+32: Pfet5 Csb 1e-14
+32: Pfet5 W/L 1
+32: Pfet5 Vt .852
+32: Pfet5 Beta 21e-6
+32: Pfet5 Kappa 0.676
+32: Pfet5 Kt/q 0.025
+32: Pfet5 Early 50
+
+32: Pfet6 Cgd 5e-16
+32: Pfet6 Cgs 5e-16
+32: Pfet6 Cgb 1e-14
+32: Pfet6 Cdb 1e-14
+32: Pfet6 Csb 1e-14
+32: Pfet6 Cwb 1e-14
+32: Pfet6 W/L 1
+32: Pfet6 Vt .852
+32: Pfet6 Beta 21e-6
+32: Pfet6 Kappa 0.676
+32: Pfet6 Kt/q 0.025
+32: Pfet6 Early 50
+
+32: Nspc1 Cgd 5e-16
+32: Nspc1 Cgs 5e-16
+32: Nspc1 Cgb 1e-14
+32: Nspc1 Cdb 1e-14
+32: Nspc1 Csb 1e-14
+32: Nspc1 Cb  1e-14
+32: Nspc1 W   4
+32: Nspc1 L   4
+32: Nspc1 Vt .852
+32: Nspc1 Beta 49e-6
+32: Nspc1 Kappa 0.676
+32: Nspc1 Kt/q 0.025
+32: Nspc1 Early 50
+
+32: Pspc1 Cgd 5e-16
+32: Pspc1 Cgs 5e-16
+32: Pspc1 Cgb 1e-14
+32: Pspc1 Cdb 1e-14
+32: Pspc1 Csb 1e-14
+32: Pspc1 Cb  1e-14
+32: Pspc1 W 4
+32: Pspc1 L 4
+32: Pspc1 Vt .852
+32: Pspc1 Beta 27e-6
+32: Pspc1 Kappa 0.676
+32: Pspc1 Kt/q 0.025
+32: Pspc1 Early 50
+
+32: Npn1 Cbe 5e-17
+32: Npn1 Cbc 5e-17
+32: Npn1 CeSub 1e-15
+32: Npn1 Cbubd 1e-15
+32: Npn1 CcSub 1e-15
+32: Npn1 Betaf 100
+32: Npn1 Betar 1
+32: Npn1 Is 1e-15
+32: Npn1 Kt/q 0.025
+32: Npn1 Vcrow 0.8
+
+32: Pnp1 Cbe 5e-17
+32: Pnp1 Cbc 5e-17
+32: Pnp1 CeSub 1e-15
+32: Pnp1 Cbubd 1e-15
+32: Pnp1 CcSub 1e-15
+32: Pnp1 Betaf 100
+32: Pnp1 Betar 1
+32: Pnp1 Is 1e-15
+32: Pnp1 Kt/q 0.025
+32: Pnp1 Vcrow 0.8
+
+32: Npn2 Cbe 5e-17
+32: Npn2 Cbc 5e-17  
+32: Npn2 CeSub 1e-15 
+32: Npn2 Cbubd 1e-15 
+32: Npn2 CcSub 1e-15 
+32: Npn2 Betaf 100   
+32: Npn2 Betar 0.26  
+32: Npn2 Is 1.28e-16
+32: Npn2 Kt/q 0.025
+32: Npn2 Vcrow 0.8
+32: Npn2 Va 20.0
+
+32: Pnp2 Cbe 5e-17
+32: Pnp2 Cbc 5e-17
+32: Pnp2 CeSub 1e-15    
+32: Pnp2 Cbubd 1e-15    
+32: Pnp2 CcSub 1e-15    
+32: Pnp2 Betaf 100      
+32: Pnp2 Betar 0.4
+32: Pnp2 Is 1.0e-14
+32: Pnp2 Kt/q 0.025
+32: Pnp2 Vcrow 0.8
+32: Pnp2 Va 6.0 
+
+32: Diode1 Is 1e-15
+32: Diode1 Kt/qn 0.025
+32: Diode1 Vcrow 0.8
+
+32: Resfloat  Res 1000
+
+32: Capfloat  Cap 300e-15
+
+32: Iswitch1  Crowbar 0.1
+32: Iswitch1  Type Bistable
+32: Iswitch1  Bistable  IInit 0
+32: Iswitch1  Bistable  Ipulse 10e-9
+32: Iswitch1  Bistable  Rise  300e-6
+32: Iswitch1  Bistable  Fall  300e-6
+32: Iswitch1  Bistable  State off
+32: Iswitch1  Monostable IInit 0
+32: Iswitch1  Monostable Ipulse 10e-9
+32: Iswitch1  Monostable Rise 300e-6
+32: Iswitch1  Monostable Fall 300e-6
+32: Iswitch1  Monostable Width 600e-6
+
+32: Iswitch2  Crowbar 0.1
+32: Iswitch2  Type Bistable
+32: Iswitch2  Bistable  IInit 0
+32: Iswitch2  Bistable  Ipulse 10e-9
+32: Iswitch2  Bistable  Rise  300e-6
+32: Iswitch2  Bistable  Fall  300e-6
+32: Iswitch2  Bistable  State off
+32: Iswitch2  Monostable IInit 0
+32: Iswitch2  Monostable Ipulse 10e-9
+32: Iswitch2  Monostable Rise 300e-6
+32: Iswitch2  Monostable Fall 300e-6
+32: Iswitch2  Monostable Width 600e-6
+
+32: Numbers Message Welcome To anaLOG
+
+32: Iscope Vnull ~
+32: Iscope INull Not On a Pin
+32: Iscope Prec 3
+
+32: Idiff Freeze Off
+32: Idiff Crowbar 0.1
+32: Idiff Type DC
+32: Idiff DC 1e-9
+32: Idiff Sine Offset 5e-9
+32: Idiff Sine Amp 1e-9
+32: Idiff Sine Freq 1000
+32: Idiff Sine Phase 0
+32: Idiff Sine Delay 0
+32: Idiff Pulse IInit 0
+32: Idiff Pulse IPulse 100e-9
+32: Idiff Pulse Delay 600e-6
+32: Idiff Pulse Rise  300e-6
+32: Idiff Pulse Fall  300e-6
+32: Idiff Pulse Width 600e-6
+32: Idiff Pulse Period 2000e-6
+32: Idiff Pulse Rdelay 0
+
+32: Vswitch  Res 50
+32: Vswitch  Type Bistable
+32: Vswitch  Bistable  VInit 0
+32: Vswitch  Bistable  Vpulse 5
+32: Vswitch  Bistable  Rise  300e-6
+32: Vswitch  Bistable  Fall  300e-6
+32: Vswitch  Bistable  State Off
+32: Vswitch  Monostable VInit 0
+32: Vswitch  Monostable Vpulse 5
+32: Vswitch  Monostable Rise 300e-6
+32: Vswitch  Monostable Fall 300e-6
+32: Vswitch  Monostable Width 600e-6
+
+32: Mmeter Vnull ~
+32: Mmeter INull Not On A Pin
+32: Mmeter Prec 3
+
+32: Vdiff Freeze Off
+32: Vdiff Res 50
+32: Vdiff Type DC
+32: Vdiff DC 0
+32: Vdiff Sine Offset 2.5
+32: Vdiff Sine Amp 1
+32: Vdiff Sine Freq 1000
+32: Vdiff Sine Phase 0
+32: Vdiff Sine Delay 0
+32: Vdiff Pulse Vinit 0
+32: Vdiff Pulse VPulse 5
+32: Vdiff Pulse Delay 600e-6
+32: Vdiff Pulse Rise  300e-6
+32: Vdiff Pulse Fall  300e-6
+32: Vdiff Pulse Width 600e-6
+32: Vdiff Pulse Period 2000e-6
+32: Vdiff Pulse Rdelay 0
+
+32: Stairs Freeze Off
+32: Stairs Res 50
+32: Stairs Type Stairs
+32: Stairs Stairstep Vstart 0
+32: Stairs Stairstep Vend 5
+32: Stairs Stairstep Numsteps 5
+32: Stairs Stairstep Steptime 600e-6
+32: Stairs Stairstep Tran 300e-6
+32: Stairs Stairstep Rdelay 0
+
+32: PWL DataFile internal
+32: PWL Radius 1.0
+ 
+32: RTD Sharpness 100
+32: RTD NDRSV 0.1
+32: RTD NDREV 0.2
+32: RTD VllyC 0.0002
+32: RTD TailC 1e-6
+32: RTD TailV 0.1
+32: RTD Mode 0
+32: RTD eOnsRes 100
+32: RTD aOnsC 1e-5
+32: RTD aOnsV 0.1
+

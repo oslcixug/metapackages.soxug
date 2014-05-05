@@ -1,0 +1,2 @@
+?package(jflap):needs="X11" section="Applications/Programming"\
+  title="jflap" command="/usr/bin/jflap"

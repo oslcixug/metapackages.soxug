@@ -1,0 +1,20 @@
+Source: libjxta-java
+Priority: extra
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Section: java
+Homepage: https://jxta.dev.java.net/
+
+Package: libjxta-java
+Architecture: all
+Depends: ${misc:Depends}, default-jre
+Description: a library which enables you to easily create P2P applications
+ JXTA technology is a set of open protocols that allow any connected
+ device on the network ranging from cell phones and wireless PDAs to PCs
+ and servers to communicate and collaborate in a P2P manner.
+ .
+ JXTA peers create a virtual network where any peer can interact with
+ other peers and resources directly even when some of the peers and
+ resources are behind firewalls and NATs or are on different network
+ transports.

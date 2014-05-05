@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : plugin.xml
+    Created on : 13 de mayo de 2008, 9:40
+    Author     : BalideaCP
+    Description:
+        Plantilla de creación de descriptores de despliegue para los plugins de 
+        Epidat 4.0. Actualice los textos entre etiquetas para que reflejen su contenido:
+            1.- Etiqueta clase: Contendrá ruta a la clase que extiende la clase PluginEstandar.
+            2.- Etiqueta accion: Contendrá ruta a la clase que implementa la interfaz Accion.
+            3.- Etiqueta menu: La ruta de menus y submenus, ya existentes o a crear, donde ubicaremos
+                nuestro menu.
+            4.- Etiqueta etiqueta: El texto del botón o menú que se creará.     
+-->
+<plugin>
+	<clase>analisisDescriptivo.interfaz.AnalisisDescriptivoPlugin</clase>
+	<nombre>Plugin</nombre>
+	<version>1.0</version>
+  <indice>0</indice>
+	<puntosEntrada>		
+		<puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Tablas de frecuencias</etiqueta>
+			<accion>analisisDescriptivo.interfaz.TablasFrecuenciaAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Tablas de contingencia</etiqueta>
+			<accion>analisisDescriptivo.interfaz.TablasContingenciaAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Estadísticos descriptivos</etiqueta>
+			<accion>analisisDescriptivo.interfaz.EstadisticosDescriptivosAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Correlación</etiqueta>
+			<accion>analisisDescriptivo.interfaz.CorrelacionAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Barras</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosBarrasAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Sectores</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosSectoresAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Líneas</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosLineasAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Dispersión</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosDispersionAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Histograma</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosHistogramaAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Diagrama de cajas</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosDiagramaCajasAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Análisis descriptivo/Gráficos</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Intervalos de confianza</etiqueta>
+			<accion>analisisDescriptivo.interfaz.GraficosIntervalosConfianzaAccionPlugin</accion>
+                </puntoEntrada>
+        </puntosEntrada>	       
+</plugin>

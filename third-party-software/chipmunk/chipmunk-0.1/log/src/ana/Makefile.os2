@@ -1,0 +1,89 @@
+
+#  "LOG", the circuit editing and simulation system, Version 5.64
+#  "DigLOG", the digital simulator for LOG.
+#  Copyright (C) 1985, 1990, 1993 David Gillespie.
+#  Author's address: daveg@synaptics
+
+#  "AnaLOG", the analog simulator for LOG,  Version 5.64.
+#  Copyright (C) 1985, 1990, 1993 John Lazzaro.
+#  Author's address: lazzaro@cs.berkeley.edu;
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (any version).
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+
+# Makefile for analog's "ana" directory.  Version 5.64..
+
+##
+## OS Makefile changes made by Michael Godfrey, godfrey@isl.stanford.edu
+##
+##
+## Comment blocks in this Makefile point to possible changes that need
+## to be made for different OS installations. Its a good idea to look it
+## over first before starting your compilation
+
+
+
+LOCINC = ../../../psys/include
+XINCLUDEDIR = .
+
+##
+##  (1) Choosing your compiler
+##  ---------------------------
+##
+## The original OS/2 port was done with the icc compiler; while we expect
+## only changes for the differences in compiler flags, it might be possible
+## source or Makefile changes will be needed as well. Please let us know of
+## any such changes if you are using a different compiler, so we can update
+## the release.
+
+CHIPMUNKCC = icc
+
+CC = $(CHIPMUNKCC) 
+
+##
+## (3) Adding appropriate flags
+## -----------------------------
+##
+## The CFLAGS below should be correct for compilation with the icc compiler.
+## Note the function of these two special flags:
+##
+##  -Ti   for symbolic debug
+##  -O+   for optimizer
+##
+
+OBJ = obj
+
+CFLAGS =   -I$(LOCINC) -I$(XINCLUDEDIR)
+
+ANAOBJ = globals.$(OBJ) nsolver.$(OBJ) main.$(OBJ) inter.$(OBJ) $(GATESOBJ)
+GATESOBJ = numbers.$(OBJ) mmeter.$(OBJ) iscope.$(OBJ) \
+	   vdiff.$(OBJ) vswitch.$(OBJ) idiff.$(OBJ) iswitch1.$(OBJ) iswitch2.$(OBJ) stairs.$(OBJ) \
+	   resfloat.$(OBJ) capfloat.$(OBJ) nfet4.$(OBJ) pfet4.$(OBJ) \
+	   nfet5.$(OBJ) pfet5.$(OBJ) pfet6.$(OBJ) pspc1.$(OBJ) nspc1.$(OBJ)\
+	   tc.$(OBJ) moscap.$(OBJ) ganglion.$(OBJ) hres.$(OBJ) \
+	   npn1.$(OBJ) pnp1.$(OBJ) npn2.$(OBJ) pnp2.$(OBJ) diode1.$(OBJ) pwl.$(OBJ) rtd.$(OBJ)
+
+# Note:  The above list is also present in ../Makefile.
+
+
+
+all: grab $(ANAOBJ)
+
+
+grab: logdef.h
+
+logdef.h: ../logdef.h
+	cp ../logdef.h .
+
+

@@ -1,0 +1,18 @@
+
+{ Library group names }
+
+
+group 0     "General gates"
+group 1     "Digital gates"
+group 2     "Digital TTL gates"
+group 4     "AnaLOG gates"
+group 5     "Digital VLSI gates"
+group 6     "Digital ACTEL gates"
+group 8     "Obsolete gates"
+
+group 0     {so old versions of LOG don't get confused}
+
+
+include librstr.cnf
+
+

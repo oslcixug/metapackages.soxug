@@ -1,0 +1,2 @@
+?package(chipmunk):needs="X11" section="Applications/Science/Electronics"\
+  title="chipmunk" command="/usr/bin/analog"

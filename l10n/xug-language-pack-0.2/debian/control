@@ -1,0 +1,14 @@
+Source: xug-language-pack-meta
+Section: translations
+Priority: optional
+Maintainer: CIXUG Developers <osl@cixug.es>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 7.0.8), germinate (>= 1.18)
+
+Package: xug-language-pack
+Architecture: all
+Depends: ${misc:Depends}, ${germinate:Depends}
+Recommends: ${germinate:Recommends}
+Description: CIXUG language metapackage
+ This package contains the a bunch of language translations for
+ Galician language.

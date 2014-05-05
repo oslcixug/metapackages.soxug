@@ -1,0 +1,21 @@
+Source: libjms-java
+Priority: extra
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Section: java
+Homepage: http://java.sun.com/products/jms/
+
+Package: libjms-java
+Section: libs
+Architecture: all
+Depends: ${misc:Depends}, default-jre
+Description: Messaging library for Java 2 Platform
+ The Java Message Service (JMS) defines the standard for
+ reliable Enterprise Messaging. Enterprise messaging,
+ often also referred to as Messaging Oriented Middleware
+ (MOM), is universally recognized as an essential tool
+ for building enterprise applications. By combining Java
+ technology with enterprise messaging, the JMS API
+ provides a powerful tool for solving enterprise
+ computing problems.

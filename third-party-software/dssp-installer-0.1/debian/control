@@ -1,0 +1,17 @@
+Source: dssp-installer
+Section: text
+Priority: optional
+Maintainer: Francisco Diéguez Souto <fran.dieguez@mabishu.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://www.usc.es/osl
+
+Package: dssp-installer
+Architecture: all
+Depends: libc6
+Description: Installer for DSSP application
+ The DSSP program was designed by Wolfgang Kabsch and Chris Sander
+ to standardize secondary structure assignment. DSSP is a database
+ of secondary structure assignments (and much more) for all protein
+ entries in the Protein Data Bank (PDB). DSSP is also the program
+ that calculates DSSP entries from PDB entries. 

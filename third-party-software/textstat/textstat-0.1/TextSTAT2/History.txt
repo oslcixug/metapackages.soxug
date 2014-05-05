@@ -1,0 +1,171 @@
+***********************************************
+***                                         ***
+***   TextSTAT - Simples Text Analyse Tool  ***
+***   (c) Matthias Hüning 2001-2009         ***
+***                                         ***
+***   Änderungsprotokoll / History          ***
+***                                         ***
+***********************************************
+
+*** Version 2.8e: 20.09.2009 ***
+- Der Web-Crawler ist überarbeitet worden: er arbeitet nicht mehr mit einer Positivliste 'guter' Dateieindungen, sondern mit einer Negativliste 'schlechter' Dateiendungen (wie .pdf oder .jpg). Zudem versucht er jetzt die Kodierung einer HTML-Datei aus dem Netz anhand des entsprechenden META-Tags zu bestimmen. Falls das schiefgeht, nimmt er die Kodierung, die in TextSTAT festgelegt wurde.
+- neue Oberflächensprache hinzugefügt: Polnisch; Dank an Erik-Jan Kuipers <erik.kuipers@uj.edu.pl>!
+
+*** Version 2.8d: 20.04.2009 ***
+- neue Oberflächensprache hinzugefügt: Finnisch (Suomi); Dank an Lasse Ehrnrooth <lasse.ehrnrooth@helsinki.fi>
+
+*** Version 2.8c: 26.09.2008 ***
+- 'UTF-16' als Kodierung hinzugefügt (auf dringenden Wunsch eines Benutzers)
+- neue Oberflächensprache hinzugefügt: Galizisch; Dank an Gonçalo Cordeiro <gzcordeiro@gmail.com>
+- Export nach .csv oder .txt kodiert die Resultate jetzt standard als UTF-8 (die Kodierungseinstellung des Programms wird beim Export nicht mehr berücksichtigt)
+
+*** Version 2.8b: 23.09.2008 ***
+- Sieht so aus, als wäre der fatale Bug unter Linux jetzt identifiziert und behoben. Auch unter Linux können (wieder) Files geöffnet und hinzugefügt werden (Bug im Zusammenspiel von 'locale' und 'tkFileDialog'; letztlich hing auch die nicht-funktionierende Backspace-Taste mit den locale-Settings zusammen; daher konnte der Workaround (MyEntry-Klasse) wieder aus dem Programm genommen werden
+
+*** Version 2.8a: 05.09.2008 ***
+- Bug behoben: beim Importieren von Texten führte ein Unicode-Konvertierungsfehler dazu, dass die Datei überhaupt nicht geladen wurde. Jetzt werden nicht-konvertierbare Zeichen ersetzt (durch das Unicode-Ersetzungszeichen)
+
+*** Version 2.8: 21.08.2008 ***
+- Windows: MS-Word 2007-Files können jetzt direkt in ein Korpus eingefügt werden (wenn Word 2007 auf dem Rechner installiert ist)
+- Störender Bug beim Hinzufügen von Dateien unter Windows behoben (Pfadname wurde unter bestimmten Bedingungen falsch interpretiert)
+- Backspace-Bug behoben: die Backspace-Taste funktioniert in Eingabefeldern jetzt (wieder) wie gewohnt
+
+*** Version 2.7a: 10.06.2008 ***
+- Französisch als Oberflächensprache hinzugefügt; Dank an Robert Caron <robert.caron@wanadoo.fr>
+
+*** Version 2.7: 03.01.2007 ***
+- Bug-Fixes; insbesondere für MACs - zwei kleinere Patches von Stian Haklev (shaklev@gemail.com) eingearbeitet
+- 'Recent Files' hinzugefügt (Patch von Stian Haklev)
+
+*** Version 2.6a: 20.11.2005 ***
+- Portugiesisch als Oberflächensprache hinzugefügt; Dank an Hugo Sunayama <hugocogeae@yahoo.com.br>
+- kleinere Bug-Fixes und Ergängzungen (u.a. zu den 'encodings')
+
+*** Version 2.6: 10.10.2005 ***
+- Filter für neues OpenOffice-Format hinzugefügt (Open Document: .odt)
+- Wenn Großschreibung hier ignoriert wird, dann sollte sie auch bei den Konkordanzen ignoriert werden... Ist jetzt Default.
+- Web-Spider akzeptiert jetzt auch '.cfm'-Files.
+- andere kleine Bug-Fixes
+
+*** Version 2.5: 20.09.2004 ***
+- Dies sollte jetzt mal wieder eine stabile Version sein, die die nächsten Wochen und Monate nicht mehr geändert wird.
+- 'Korpus löschen' funktionierte nicht mehr. Repariert.
+- Nachfrage eingebaut (Korpus speichern?), wenn geändertes Korpus für anderes/neues Korpus geschlossen werden soll; auch beim Beenden des Programms gibt es diese Nachfrage nur noch, wenn das Korpus geändert wurde
+- viele kleinere Änderungen
+
+*** Version 2.4a: 16.09.2004 ***
+- Bug beim Import von MS Word-Dokumenten, wenn mehrer Dokumente gleichzeitig zu einem Korpus hinzugeladen wurden gab es Probleme. Behoben (hoffentlich).
+- Alphabetisch sortieren (mit Unicode und Locale) scheint jetzt (endlich) zu funktionieren; dafür ist allerdings ein häßlicher Workaround nötig... (in Korpus.py)
+- Horizontales Scrollen in Dateiliste jetzt möglich...
+- ... und einige andere 'Schönheitsfehler' behoben
+- Und wieder: Danke Nikos Kouremenos!! (er hat den Bug gefunden und viele kleinere Verbesserungsvorschläge gemacht)
+
+*** Version 2.4: 06.09.2004 ***
+- OpenOffice-Files können jetzt direkt in in Korpus eingelesen werden (Dateiendung '.sxw'); Dank an Nikos Kouremenos für die Anregung und für das Testen unter Linux!  
+- Unter Windows können jetzt auch Word-Files direkt in ein Korpus eingelesen werden (vorausgesetzt die Python-Win32Extensions sowie MS Word sind installiert und der Dateiname hat die Endung '.doc' oder '.rtf' ...)
+- Beim Anlegen eines neuen Korpus wird jetzt ein Hinweis ausgegeben, doch bitte auf die richtige Dateikodierung zu achten
+- Regulären Ausdruck zur Ermittlung der Wörter in einem Text geändert: In einem "Wort" darf jetzt auch ein Apostroph stehen ("don't" etc. zählen also jetzt als Wort). Dank an Clint Howarth für Hinweis und RE!
+- Im Korpus sind die db-keys jetzt in utf-8
+
+*** Version 2.3a: 16.08.2004 ***
+- Bugfix: durch eine Änderung im Sprachressourcen-File gab es beim Export (.txt oder .doc) einen Unicode-Fehler -- behoben. (Hinweis von Stefan Kreslin, Australien. Danke!)
+- Das Programm merkt sich jetzt die Einstellung der Filekodierung 
+
+*** Version 2.3: 12.08.2004 ***
+- Neuer Dialog: TextDialog. Zeigt 'History.txt' und 'License.txt' an (Menu > ?)
+- Kleine Layout-Änderungen an den Dialogen (News, Web, Query); Titel hinzugefügt; Anzahl auswählen jetzt mit 'Spinbox'
+- Aktiver Tab wird jetzt auch farblich hervorgehoben (Änderung in TabPage.py)
+- Dialog beim Beenden des Programms: 'Cancel'-Möglichkeit hinzugefügt
+- Bug: Fehler beim Öffnen von Dateien mit nicht-Latin-1-Zeichen im Dateinamen. Behoben (zumindest teilweise - unter Linux scheint das immer noch problematisch zu sein). (Hinweis von Nikos Kouremenos, Griechenland. Danke!)
+
+*** Version 2.2a: 18.06.2004 ***
+- ernster, wenn auch kleiner Bug: in den Sprachoptionen fehlte eine Übersetzung; daher konnte die Sprache nicht auf Englisch oder Niederländisch umgestellt werden. Behoben. (Dank an Terry Pakcik, Malaysia, für den Hinweis.)
+- Dateiname des aktiven Korpus wird jetzt in der Titelzeile des Fensters angezeigt
+
+*** Version 2.2: 13.06.2004 ***
+- Query Editor (Suchanfragen-Editor) hinzugefügt, der das Erstellen von 'Regular Expressions' erleichtern soll
+- Optionen auf Konkordanz-Tab jetzt rechts zusammengefasst
+- Textfelder ('Entry') zur Eingabe von Kontextgröße bzw. Frequenz durch 'Spinbox' ersetzt
+- Neuer Menüpunkt: 'Hilfe' bzw. '?', hier auch Link zur Seite über 'Regular Expressions' auf python.org eingefügt
+- Bug in 'Konkordanzen > Aktualisieren': Fehler, wenn kein Suchbegriff da war; wird jetzt abgefangen
+- kleinere Schönheitsfehler beseitigt
+
+*** Version 2.1a: 30.05.2004 ***
+- Default-Endungen für Dateinamen (.crp und für Export: .csv und .txt)
+- Kopieren in Zwischenablage: Fehler behoben wenn (im Zitat) kein Text ausgewählt ist (gibt jetzt eine Warnung)
+
+*** Version 2.1: 27.05.2004 ***
+- schwerer Fehler beim Abspeichern von Optionen behoben (Unicode-Pfadnamen wurden vom ConfigParser nicht richtig abgespeichert, daher liessen sich Korpora u.U. nicht abspeichern); Lösung: ConfigParser durch ein einfaches 'Dictionary' ersetzt, das mittels cPickle gespeichert und eingelesen wird (Hinweis von Michael Sauer - Danke!)
+
+*** Version 2.0a: 08.02.2004 ***
+- Änderung der Listendarstellung (verwendet jetzt MultiListbox)
+- viele kleine Bugfixes
+
+*** Version 2.0: 30.12.2003 ***
+- komplette Überarbeitung des Programms
+- Redesign der Oberfläche, Verzicht auf externe Module (vor allem PMW): TextSTAT läuft jetzt ohne weitere Zusatzmodule mit der Standard Python-Distribution; Einfügen einer Toolbar
+- viel bessere und systematischere Trennung von GUI-Code und Korpus-Code
+- Sprachen: leider keine französische Version mehr, dafür jetzt aber eine niederländische
+- TextSTAT wird jetzt (auch) als Sourcecode zur Verfügung gestellt
+- Lizenz in License.txt
+
+***********************************************
+
+*** Version 1.52: 01.05.2003 ***
+- neue, effizientere Funktion zum Einlesen und Splitten eingebaut (s. Python-Cookbook S. 129) 
+- 'Ordner öffnen' entfernt jetzt automatisch HTML-Codes aus Dateien (*.html oder *.htm).
+
+*** Version 1.51: 01.12.2002 ***
+- Fehler behoben (beim Suchen nach 'ganzen Wörtern' wurden das erste und das letzte Wort eines Textes nicht berücksichtigt) 
+
+*** Version 1.5: 07.10.2002 ***
+- neue Möglichkeit: einen ganzen Ordner zu einem Korpus hinzuzufügen 
+- kleinere 'Schönheitsreparaturen' 
+
+*** Version 1.4: 20.02.2002 ***
+- Option 'Resultate speichern' hinzugefügt (Kodierung orientiert sich dabei an der Option 'Datei-Kodierung') 
+- Option 'Resultate > MS Word' hinzugefügt: wenn Word auf dem System vorhanden ist, wird das Programm gestartet, und der Inhalt der Tab-Blätter wird in ein leeres Dokument bernommen 
+- Option 'Resultate > MS Excel' hinzugefügt: wenn Excel auf dem System vorhanden ist, wird das Programm gestartet, und die Wortformen und Frequenzangaben werden in ein leeres Dokument übernommen 
+- In der Worformen-Frequenzliste kann der anzuzeigende Frequenzbereich jetzt eingegrenzt werden 
+
+*** Version 1.3: 11.01.2002 ***
+- das Programm arbeitet jetzt (intern) mit Unicode, dadurch können auch Texte in anderen Kodierungen werden als Latin-1 verarbeitet werden; die jeweilige File-Kodierung muss aber beim Einlesen angegeben (s. neuen Menüpunkt 'Optionen > Datei-Kodierung'). Auch das Korpus-Tool konvertiert jetzt alles nach Unicode. 
+- Sprache des Programms kann jetzt geändert werden (Optionen > Sprache ändern) 
+- Neue Option im Korpus Tool: Suchbereich des Spiders kann jetzt verändert werden (Server oder Subdirectory) 
+- Erste Version einer Doku für erstellt (= dieser Text) 
+
+*** Version 1.2: 08.12.2001 ***
+- Korpus wird nicht mehr nach jedem Hinzufügen einer Datei neu analysiert (dauerte zu lange) 
+- 'Korpus Tool' hinzugefügt (Web-Spider, News-Grabber -> Korpus) 
+- 'Statistik' entfernt (weil nichtssagend...) 
+- 'Progress Bar' hinzugefügt 
+- String-Modul durch String-Methoden ersetzt 
+
+*** Version 1.1: 14.08.2001 ***
+- Sortierfunktionen geändert: verwenden jetzt locale.strcoll() und sortieren nach den Regeln der jeweiligen Sprache (des Betriebssystems) 
+- im Zitatfenster kann jetzt die jeweilige Datei mit Doppelklick geöffnet werden 
+- es können mehrere HTML-Files gleichzeitig hinzugefügt werden 
+- Korpus wird jetzt nicht mehr als Dictionary sondern als Liste verwaltet (wegen der Reihenfolge usw.). Dadurch sind allerdings gespeicherte Korpora der vorherigen Version nicht mehr verwendbar... :-( 
+- Einige Optionen werden bei 'Beenden' gespeichert 
+
+*** Version 1.0: 26.07.2001 ***
+- erste 'öffentliche Version' 
+- Lesen von HTML-Seiten jetzt auch von Festplatte 
+- Entfernen von HTML-Codes nochmal verbessert 
+- Standardschrift für Interface umgestellt auf Verdana 
+- Menüeintrag mit Link zur Homepage eingefügt 
+
+*** Version 0.9: 24.07.2001 ***
+- besseres Verfahren zum Entfernen von HTML-Code aus Webseiten 
+- es können jetzt beliebig viele Korpora gespeichert werden (statt nur einem) 
+
+*** Version 0.8: 20.07.2001 ***
+- es können Webseiten hinzugefügt werden 
+- das aktuelle Korpus kann gespeichert werden 
+
+*** Erste experimentelle Version: September 2000 ***
+
+
+***********************************************
+
+

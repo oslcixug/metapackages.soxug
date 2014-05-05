@@ -1,0 +1,1361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+JxtaServerSocket (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="JxtaServerSocket (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaServerSocket.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaMulticastSocket.html" title="class in net.jxta.socket"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaSocket.html" title="class in net.jxta.socket"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/socket/JxtaServerSocket.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaServerSocket.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.socket</FONT>
+<BR>
+Class JxtaServerSocket</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">java.net.ServerSocket</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.socket.JxtaServerSocket</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>JxtaServerSocket</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A><DT>implements <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></DL>
+</PRE>
+
+<P>
+JxtaServerSocket is a bi-directional Pipe that behaves very much like
+ ServerSocket.  It creates an inputpipe and listens for pipe connection
+ requests. JxtaServerSocket also defines it own protocol. Requests arrive as
+ a JXTA Message with the following elements:
+ <p/>
+ &lt;Cred> Credentials which can be used to determine trust &lt;/Cred>
+ <p/>
+ &lt;reqPipe> requestor's pipe advertisement &lt;/reqPipe>
+ <p/>
+ &lt;remPipe> Remote pipe advertisement &lt;/remPipe>
+ <p/>
+ &lt;reqPeer> Remote peer advertisement  &lt;/reqPeer>
+ <p/>
+ &lt;stream> determine whether the connection is reliable, or not &lt;/stream>
+ <p/>
+ &lt;close> close request &lt;/close>
+ <p/>
+ &lt;data> Data &lt;/data>
+ <p/>
+ JxtaServerSocket then creates a new private pipe, listens for messages on that pipe,
+ resolves the requestor's pipe, and sends a &lt;remPipe> private pipe created &lt;/remotePipe>
+ advertisement back, where the remote side is resolved.
+ <p/>
+ The <code>accept()</code> backlog defaults to 50 requests.
+ <p/>
+ The timeout default to 60 seconds, i.e. blocking.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#backlog">backlog</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of connect requests we will allow to become backlogged.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#bound">bound</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#closeAckValue">closeAckValue</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#closed">closed</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#closeReqValue">closeReqValue</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#closeTag">closeTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#credTag">credTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#dataTag">dataTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#group">group</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The PeerGroup</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#localCredential">localCredential</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The credential we will present to connect requests.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#MSG_ELEMENT_NAMESPACE">MSG_ELEMENT_NAMESPACE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#pipeAdv">pipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The pipe advertisement we are serving.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</A>&lt;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#queue">queue</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#QUEUE_END_MESSAGE">QUEUE_END_MESSAGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QUEUE_END_MESSAGE is used to signal that the queue has been closed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#remPeerTag">remPeerTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#remPipeTag">remPipeTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#reqPipeTag">reqPipeTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#serverPipe">serverPipe</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The input pipe on which we listen for connect requests.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#streamTag">streamTag</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#timeout">timeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The timeout for accept operations.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket()">JxtaServerSocket</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Constructor
+ <p/>
+ A call to <code>bind()</code> is needed to finish initializing this object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">JxtaServerSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs and binds a JxtaServerSocket to the specified pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)">JxtaServerSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 int&nbsp;backlog)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for the JxtaServerSocket object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, int)">JxtaServerSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 int&nbsp;backlog,
+                 int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for the JxtaServerSocket object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, int, net.jxta.credential.CredentialValidator)">JxtaServerSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                 int&nbsp;backlog,
+                 int&nbsp;timeout,
+                 <A HREF="../../../net/jxta/credential/CredentialValidator.html" title="interface in net.jxta.credential">CredentialValidator</A>&nbsp;credValidator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for the JxtaServerSocket object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(java.net.SocketAddress)">JxtaServerSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(java.net.SocketAddress, int)">JxtaServerSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                 int&nbsp;backlog)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#JxtaServerSocket(java.net.SocketAddress, int, int)">JxtaServerSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                 int&nbsp;backlog,
+                 int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#accept()">accept</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#bind(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">bind</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Binds the <code>JxtaServerSocket</code> to a specific pipe advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#bind(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)">bind</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeadv,
+     int&nbsp;backlog)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Binds the <code>JxtaServerSocket</code> to a specific pipe advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#bind(java.net.SocketAddress)">bind</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;endpoint)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Used to bind a  JxtaServerSocket created with the no-arg constructor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#bind(java.net.SocketAddress, int)">bind</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;endpoint,
+     int&nbsp;backlog)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Used to bind a  JxtaServerSocket created with the no-arg constructor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/socket/JxtaSocket.html" title="class in net.jxta.socket">JxtaSocket</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#createEphemeralSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement, net.jxta.credential.Credential, net.jxta.credential.Credential, boolean)">createEphemeralSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                      <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                      <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;remoteEphemeralPipeAdv,
+                      <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;remotePeerAdv,
+                      <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential,
+                      <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;credential,
+                      boolean&nbsp;isReliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct the emphemeral socket result from accept.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Closes the JxtaServerPipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#getGroup()">getGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the group associated with this JxtaServerSocket object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#getLocalSocketAddress()">getLocalSocketAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#getPipeAdv()">getPipeAdv</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the PipeAdvertisement associated with this JxtaServerSocket object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#getSoTimeout()">getSoTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#isBound()">isBound</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#isClosed()">isClosed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called for each pipe message event that occurs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#setCredential(net.jxta.credential.Credential)">setCredential</A></B>(<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the credential to be used by this socket connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#setSoTimeout(int)">setSoTimeout</A></B>(int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaServerSocket.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ This output is suitable for debugging but should not be parsed.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.net.ServerSocket"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.net.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getChannel()" title="class or interface in java.net">getChannel</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getInetAddress()" title="class or interface in java.net">getInetAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getLocalPort()" title="class or interface in java.net">getLocalPort</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getReceiveBufferSize()" title="class or interface in java.net">getReceiveBufferSize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getReuseAddress()" title="class or interface in java.net">getReuseAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#implAccept(java.net.Socket)" title="class or interface in java.net">implAccept</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#setPerformancePreferences(int, int, int)" title="class or interface in java.net">setPerformancePreferences</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#setReceiveBufferSize(int)" title="class or interface in java.net">setReceiveBufferSize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#setReuseAddress(boolean)" title="class or interface in java.net">setReuseAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#setSocketFactory(java.net.SocketImplFactory)" title="class or interface in java.net">setSocketFactory</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MSG_ELEMENT_NAMESPACE"><!-- --></A><H3>
+MSG_ELEMENT_NAMESPACE</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>MSG_ELEMENT_NAMESPACE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.MSG_ELEMENT_NAMESPACE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="credTag"><!-- --></A><H3>
+credTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>credTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.credTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="reqPipeTag"><!-- --></A><H3>
+reqPipeTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>reqPipeTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.reqPipeTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="remPeerTag"><!-- --></A><H3>
+remPeerTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>remPeerTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.remPeerTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="remPipeTag"><!-- --></A><H3>
+remPipeTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>remPipeTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.remPipeTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="dataTag"><!-- --></A><H3>
+dataTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>dataTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.dataTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="closeTag"><!-- --></A><H3>
+closeTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>closeTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.closeTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="closeReqValue"><!-- --></A><H3>
+closeReqValue</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>closeReqValue</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.closeReqValue">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="closeAckValue"><!-- --></A><H3>
+closeAckValue</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>closeAckValue</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.closeAckValue">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="streamTag"><!-- --></A><H3>
+streamTag</H3>
+<PRE>
+protected static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>streamTag</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.socket.JxtaServerSocket.streamTag">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QUEUE_END_MESSAGE"><!-- --></A><H3>
+QUEUE_END_MESSAGE</H3>
+<PRE>
+protected static final <A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> <B>QUEUE_END_MESSAGE</B></PRE>
+<DL>
+<DD>QUEUE_END_MESSAGE is used to signal that the queue has been closed.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="group"><!-- --></A><H3>
+group</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>group</B></PRE>
+<DL>
+<DD>The PeerGroup
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeAdv"><!-- --></A><H3>
+pipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>pipeAdv</B></PRE>
+<DL>
+<DD>The pipe advertisement we are serving.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="serverPipe"><!-- --></A><H3>
+serverPipe</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A> <B>serverPipe</B></PRE>
+<DL>
+<DD>The input pipe on which we listen for connect requests.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="localCredential"><!-- --></A><H3>
+localCredential</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>localCredential</B></PRE>
+<DL>
+<DD>The credential we will present to connect requests.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="backlog"><!-- --></A><H3>
+backlog</H3>
+<PRE>
+protected int <B>backlog</B></PRE>
+<DL>
+<DD>The number of connect requests we will allow to become backlogged.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="timeout"><!-- --></A><H3>
+timeout</H3>
+<PRE>
+protected long <B>timeout</B></PRE>
+<DL>
+<DD>The timeout for accept operations.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="queue"><!-- --></A><H3>
+queue</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</A>&lt;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&gt; <B>queue</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="bound"><!-- --></A><H3>
+bound</H3>
+<PRE>
+protected volatile boolean <B>bound</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="closed"><!-- --></A><H3>
+closed</H3>
+<PRE>
+protected volatile boolean <B>closed</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="JxtaServerSocket()"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Default Constructor
+ <p/>
+ A call to <code>bind()</code> is needed to finish initializing this object.
+<P>
+<DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(java.net.SocketAddress)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - an instance of JxtaSocketAddress
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/socket/JxtaSocketAddress.html" title="class in net.jxta.socket"><CODE>JxtaSocketAddress</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs and binds a JxtaServerSocket to the specified pipe.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeAdv</CODE> - PipeAdvertisement on which pipe requests are accepted
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(java.net.SocketAddress, int)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                        int&nbsp;backlog)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - an instance of JxtaSocketAddress<DD><CODE>backlog</CODE> - the size of the backlog queue
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/socket/JxtaSocketAddress.html" title="class in net.jxta.socket"><CODE>JxtaSocketAddress</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                        int&nbsp;backlog)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructor for the JxtaServerSocket object
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeAdv</CODE> - PipeAdvertisement on which pipe requests are accepted<DD><CODE>backlog</CODE> - the maximum length of the queue.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(java.net.SocketAddress, int, int)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                        int&nbsp;backlog,
+                        int&nbsp;timeout)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs and binds a JxtaServerSocket using a JxtaSocketAddress as
+ the address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - an instance of JxtaSocketAddress<DD><CODE>backlog</CODE> - the size of the backlog queue<DD><CODE>timeout</CODE> - connection timeout in milliseconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/socket/JxtaSocketAddress.html" title="class in net.jxta.socket"><CODE>JxtaSocketAddress</CODE></A></DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, int)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                        int&nbsp;backlog,
+                        int&nbsp;timeout)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructor for the JxtaServerSocket object.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeAdv</CODE> - PipeAdvertisement on which pipe requests are accepted<DD><CODE>backlog</CODE> - the maximum length of the queue.<DD><CODE>timeout</CODE> - the specified timeout, in milliseconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaServerSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, int, net.jxta.credential.CredentialValidator)"><!-- --></A><H3>
+JxtaServerSocket</H3>
+<PRE>
+public <B>JxtaServerSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                        int&nbsp;backlog,
+                        int&nbsp;timeout,
+                        <A HREF="../../../net/jxta/credential/CredentialValidator.html" title="interface in net.jxta.credential">CredentialValidator</A>&nbsp;credValidator)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructor for the JxtaServerSocket object.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeAdv</CODE> - PipeAdvertisement on which pipe requests are accepted<DD><CODE>backlog</CODE> - the maximum length of the queue.<DD><CODE>timeout</CODE> - the specified timeout, in milliseconds<DD><CODE>credValidator</CODE> - the CredentialValidator
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>
+ <p/>
+ Closes the JxtaServerPipe.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="accept()"><!-- --></A><H3>
+accept</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A> <B>accept</B>()
+              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#accept()" title="class or interface in java.net">accept</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="bind(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+bind</H3>
+<PRE>
+public void <B>bind</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Binds the <code>JxtaServerSocket</code> to a specific pipe advertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeAdv</CODE> - PipeAdvertisement on which pipe requests are accepted
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="bind(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+bind</H3>
+<PRE>
+public void <B>bind</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeadv,
+                 int&nbsp;backlog)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Binds the <code>JxtaServerSocket</code> to a specific pipe advertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - JXTA PeerGroup<DD><CODE>pipeadv</CODE> - PipeAdvertisement on which pipe requests are accepted<DD><CODE>backlog</CODE> - the maximum length of the queue.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="bind(java.net.SocketAddress)"><!-- --></A><H3>
+bind</H3>
+<PRE>
+public void <B>bind</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;endpoint)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ Used to bind a  JxtaServerSocket created with the no-arg constructor.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#bind(java.net.SocketAddress)" title="class or interface in java.net">bind</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="bind(java.net.SocketAddress, int)"><!-- --></A><H3>
+bind</H3>
+<PRE>
+public void <B>bind</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;endpoint,
+                 int&nbsp;backlog)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ Used to bind a  JxtaServerSocket created with the no-arg constructor.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#bind(java.net.SocketAddress, int)" title="class or interface in java.net">bind</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public void <B>close</B>()
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#close()" title="class or interface in java.net">close</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocalSocketAddress()"><!-- --></A><H3>
+getLocalSocketAddress</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A> <B>getLocalSocketAddress</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getLocalSocketAddress()" title="class or interface in java.net">getLocalSocketAddress</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the server socket's JxtaSocketAddress<DT><B>See Also:</B><DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getLocalSocketAddress()" title="class or interface in java.net"><CODE>ServerSocket.getLocalSocketAddress()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSoTimeout()"><!-- --></A><H3>
+getSoTimeout</H3>
+<PRE>
+public int <B>getSoTimeout</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#getSoTimeout()" title="class or interface in java.net">getSoTimeout</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSoTimeout(int)"><!-- --></A><H3>
+setSoTimeout</H3>
+<PRE>
+public void <B>setSoTimeout</B>(int&nbsp;timeout)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#setSoTimeout(int)" title="class or interface in java.net">setSoTimeout</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBound()"><!-- --></A><H3>
+isBound</H3>
+<PRE>
+public boolean <B>isBound</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#isBound()" title="class or interface in java.net">isBound</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isClosed()"><!-- --></A><H3>
+isClosed</H3>
+<PRE>
+public boolean <B>isClosed</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#isClosed()" title="class or interface in java.net">isClosed</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getGroup()"><!-- --></A><H3>
+getGroup</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>getGroup</B>()</PRE>
+<DL>
+<DD>Gets the group associated with this JxtaServerSocket object
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The group value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPipeAdv()"><!-- --></A><H3>
+getPipeAdv</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>getPipeAdv</B>()</PRE>
+<DL>
+<DD>Gets the PipeAdvertisement associated with this JxtaServerSocket object
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The pipeAdv value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)"><!-- --></A><H3>
+pipeMsgEvent</H3>
+<PRE>
+public void <B>pipeMsgEvent</B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called for each pipe message event that occurs.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - The event being received.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createEphemeralSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement, net.jxta.credential.Credential, net.jxta.credential.Credential, boolean)"><!-- --></A><H3>
+createEphemeralSocket</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/socket/JxtaSocket.html" title="class in net.jxta.socket">JxtaSocket</A> <B>createEphemeralSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;remoteEphemeralPipeAdv,
+                                           <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;remotePeerAdv,
+                                           <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential,
+                                           <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;credential,
+                                           boolean&nbsp;isReliable)
+                                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Construct the emphemeral socket result from accept. This method exists
+ primarily so that sub-classes can substitute a different JxtaSocket
+ sub-class.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - The peer group for the socket.<DD><CODE>pipeAdv</CODE> - The public pipe advertisement.<DD><CODE>remoteEphemeralPipeAdv</CODE> - The pipe advertisement of the remote peer's
+                            ephemeral pipe.<DD><CODE>remotePeerAdv</CODE> - The peer advertisement of the remote peer.<DD><CODE>localCredential</CODE> - Our credential.<DD><CODE>credential</CODE> - The credential of the remote peer.<DD><CODE>isReliable</CODE> - if true, uses the reliability library in non-direct mode
+<DT><B>Returns:</B><DD>The new JxtaSocket instance.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCredential(net.jxta.credential.Credential)"><!-- --></A><H3>
+setCredential</H3>
+<PRE>
+public void <B>setCredential</B>(<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential)</PRE>
+<DL>
+<DD>Sets the credential to be used by this socket connection. If no
+ credentials are set, the default group credential will be used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>localCredential</CODE> - The credential to be used for connection responses
+                     or <tt>null</tt> if the default credential is to be used.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+ <p/>
+ This output is suitable for debugging but should not be parsed. All
+ of the information is available through other means.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true#toString()" title="class or interface in java.net">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/ServerSocket.html?is-external=true" title="class or interface in java.net">ServerSocket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaServerSocket.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaMulticastSocket.html" title="class in net.jxta.socket"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaSocket.html" title="class in net.jxta.socket"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/socket/JxtaServerSocket.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaServerSocket.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

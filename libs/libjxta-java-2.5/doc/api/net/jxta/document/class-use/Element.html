@@ -1,0 +1,1176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Uses of Interface net.jxta.document.Element (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface net.jxta.document.Element (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Element.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<CENTER>
+<H2>
+<B>Uses of Interface<br>net.jxta.document.Element</B></H2>
+</CENTER>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Packages that use <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.access"><B>net.jxta.access</B></A></TD>
+<TD>The Access Service provides a framework for using the identities created
+    with the Membership Service to control whether specific operations are
+    permitted.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.credential"><B>net.jxta.credential</B></A></TD>
+<TD>Credentials provide the basic mechanisms for securly establishing and
+communicating identity within JXTA.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.document"><B>net.jxta.document</B></A></TD>
+<TD>JXTA Documents are containers for both structured and unstructured data.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.membership"><B>net.jxta.membership</B></A></TD>
+<TD>The Membership Service allows a peer to establish an identity within a peer
+    group.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.meter"><B>net.jxta.meter</B></A></TD>
+<TD>Provides logging and monitoring facilities for debugging and auditing of
+                                messaging and service invocation within JXTA.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.peergroup"><B>net.jxta.peergroup</B></A></TD>
+<TD>Peer groups are formed as a collection of peers that have agreed upon a 
+    common set of services.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.protocol"><B>net.jxta.protocol</B></A></TD>
+<TD>Provides inteface objects for Advertisments and protocol messages for the JXTA 
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jcs" target='_blank'>Core</a>
+                                and
+                                <a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#gloss-jss" target='_blank'>Standard</a>
+    Protocols.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.util"><B>net.jxta.util</B></A></TD>
+<TD>A collection of utility classes used by the JXTA implementation and/or
+                                useful to users of the JXTA API.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#net.jxta.util.documentSerializable"><B>net.jxta.util.documentSerializable</B></A></TD>
+<TD>&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.access"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/access/package-summary.html">net.jxta.access</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/access/package-summary.html">net.jxta.access</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/credential/PrivilegedOperation.html" title="interface in net.jxta.credential">PrivilegedOperation</A></CODE></FONT></TD>
+<TD><CODE><B>AccessService.</B><B><A HREF="../../../../net/jxta/access/AccessService.html#newPrivilegedOperation(net.jxta.document.Element)">newPrivilegedOperation</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read a privileged operation from a portion of a structured document.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.credential"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A> that return <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>AuthenticationCredential.</B><B><A HREF="../../../../net/jxta/credential/AuthenticationCredential.html#getIdentityInfo()">getIdentityInfo</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the StructuredDocument Element containing the identity information which was
+ originally provided when this AuthenticationCredential was created.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>AuthenticationCredential.</B><B><A HREF="../../../../net/jxta/credential/AuthenticationCredential.html#initialize(net.jxta.document.Element)">initialize</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intialize from a portion of a structured document.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Constructors in <A HREF="../../../../net/jxta/credential/package-summary.html">net.jxta.credential</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/credential/AuthenticationCredential.html#AuthenticationCredential(net.jxta.peergroup.PeerGroup, net.jxta.document.Element)">AuthenticationCredential</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;peergroup,
+                         <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates new AuthenticationCredential</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/credential/AuthenticationCredential.html#AuthenticationCredential(net.jxta.peergroup.PeerGroup, java.lang.String, net.jxta.document.Element)">AuthenticationCredential</A></B>(<A HREF="../../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;peergroup,
+                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;method,
+                         <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;indentityInfo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates new AuthenticationCredential</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.document"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Classes in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> with type parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element&lt;E extends Element&lt;E&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An element represents a portion of a <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument&lt;E extends Element&lt;E&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An extension of <A HREF="../../../../net/jxta/document/Document.html" title="interface in net.jxta.document"><CODE>Document</CODE></A> which allows the content of a document to be
+ specified by a hierarchy of elements.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Subinterfaces of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument&lt;E extends Element&lt;E&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An extension of <A HREF="../../../../net/jxta/document/Document.html" title="interface in net.jxta.document"><CODE>Document</CODE></A> which allows the content of a document to be
+ specified by a hierarchy of elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document">StructuredTextDocument&lt;T extends TextElement&lt;T&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extends <A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to provide accessors appropriate for text
+ based documents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/TextElement.html" title="interface in net.jxta.document">TextElement&lt;T extends TextElement&lt;T&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extends <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document"><CODE>Element</CODE></A> to provide <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><CODE>String</CODE></A> oriented
+ accessors for instances of <A HREF="../../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document"><CODE>StructuredTextDocument</CODE></A></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/XMLDocument.html" title="interface in net.jxta.document">XMLDocument&lt;X extends XMLElement&lt;X&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common interfaces for all <A HREF="../../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document"><CODE>StructuredTextDocument</CODE></A>
+ which are implemented by XML Documents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement&lt;X extends XMLElement&lt;X&gt;&gt;</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common definition of XML Elements.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> that return <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element, java.lang.Object)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;newName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/document/package-summary.html">net.jxta.document</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyAsDocument(net.jxta.document.Element)">copyAsDocument</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copies the specified element or document into a standalone document of
+ same type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyChildren(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyChildren</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy children elements of <code>from</code> into the
+ the element <code>intoElement</code> of document <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyChildren(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyChildren</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy children elements of <code>from</code> into the
+ the element <code>intoElement</code> of document <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element, java.lang.Object)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;newName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>StructuredDocumentUtils.</B><B><A HREF="../../../../net/jxta/document/StructuredDocumentUtils.html#copyElements(net.jxta.document.StructuredDocument, net.jxta.document.Element, net.jxta.document.Element, java.lang.Object)">copyElements</A></B>(<A HREF="../../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;intoDoc,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;intoElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;from,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;newName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recursively copy elements beginnging with <code>from</code> into the
+  document identified by <code>intoDoc</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ExtendableAdvertisement.</B><B><A HREF="../../../../net/jxta/document/ExtendableAdvertisement.html#handleElement(net.jxta.document.Element)">handleElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;elem)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process an individual element from the document during parse.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementFactory.Instantiator.</B><B><A HREF="../../../../net/jxta/document/AdvertisementFactory.Instantiator.html#newInstance(net.jxta.document.Element)">newInstance</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A> matching the type
+ specified by the <CODE>advertisementType</CODE> parameter.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.membership"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/membership/package-summary.html">net.jxta.membership</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/membership/package-summary.html">net.jxta.membership</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B>MembershipService.</B><B><A HREF="../../../../net/jxta/membership/MembershipService.html#makeCredential(net.jxta.document.Element)">makeCredential</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a fragment of a StructuredDocument, reconstruct a Credential object
+ from that fragment.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.meter"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/meter/package-summary.html">net.jxta.meter</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/meter/package-summary.html">net.jxta.meter</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MonitorFilter.</B><B><A HREF="../../../../net/jxta/meter/MonitorFilter.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MonitorReport.</B><B><A HREF="../../../../net/jxta/meter/MonitorReport.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerMonitorInfo.</B><B><A HREF="../../../../net/jxta/meter/PeerMonitorInfo.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MonitorFilter.</B><B><A HREF="../../../../net/jxta/meter/MonitorFilter.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>MonitorReport.</B><B><A HREF="../../../../net/jxta/meter/MonitorReport.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerMonitorInfo.</B><B><A HREF="../../../../net/jxta/meter/PeerMonitorInfo.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.peergroup"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/peergroup/package-summary.html">net.jxta.peergroup</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/peergroup/package-summary.html">net.jxta.peergroup</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>PeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/PeerGroup.html#compatible(net.jxta.document.Element)">compatible</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;compat)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if the provided compatibility statement is compatible with this group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>LightWeightPeerGroup.</B><B><A HREF="../../../../net/jxta/peergroup/LightWeightPeerGroup.html#compatible(net.jxta.document.Element)">compatible</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;compat)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if the provided compatibility statement is compatible with this group.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.protocol"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> that return <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>PeerInfoQueryMessage.</B><B><A HREF="../../../../net/jxta/protocol/PeerInfoQueryMessage.html#getRequest()">getRequest</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the request</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>PeerInfoResponseMessage.</B><B><A HREF="../../../../net/jxta/protocol/PeerInfoResponseMessage.html#getResponse()">getResponse</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns the response</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#handleElement(net.jxta.document.Element)">handleElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;raw)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process an individual element from the document during parse.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#putServiceParam(net.jxta.id.ID, net.jxta.document.Element)">putServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts a service parameter in the service parameters table under the given
+ key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ConfigParams.</B><B><A HREF="../../../../net/jxta/protocol/ConfigParams.html#putServiceParam(net.jxta.id.ID, net.jxta.document.Element)">putServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts a service parameter in the service parameters table
+ under the given key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#putServiceParam(net.jxta.id.ID, net.jxta.document.Element)">putServiceParam</A></B>(<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;key,
+                <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts a service parameter in the service parameters table under the given
+  key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#setCompat(net.jxta.document.Element)">setCompat</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;compat)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the module impl. compatibility statement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleSpecAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PipeAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the description meta-data for the pipe described by this advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleClassAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleClassAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#setDesc(net.jxta.document.Element)">setDesc</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the description</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleSpecAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleSpecAdvertisement.html#setParam(net.jxta.document.Element)">setParam</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the param element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>ModuleImplAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/ModuleImplAdvertisement.html#setParam(net.jxta.document.Element)">setParam</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the module param</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerInfoQueryMessage.</B><B><A HREF="../../../../net/jxta/protocol/PeerInfoQueryMessage.html#setRequest(net.jxta.document.Element)">setRequest</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the request</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerInfoResponseMessage.</B><B><A HREF="../../../../net/jxta/protocol/PeerInfoResponseMessage.html#setResponse(net.jxta.document.Element)">setResponse</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the request</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Method parameters in <A HREF="../../../../net/jxta/protocol/package-summary.html">net.jxta.protocol</A> with type arguments of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html#setServiceParams(java.util.Hashtable)">setServiceParams</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,? extends <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&gt;&nbsp;params)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the sets of parameters for all services.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>PeerGroupAdvertisement.</B><B><A HREF="../../../../net/jxta/protocol/PeerGroupAdvertisement.html#setServiceParams(java.util.Hashtable)">setServiceParams</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Hashtable.html?is-external=true" title="class or interface in java.util">Hashtable</A>&lt;<A HREF="../../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>,? extends <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&gt;&nbsp;params)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets the sets of parameters for all services.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.util"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> that return <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentUtilities.</B><B><A HREF="../../../../net/jxta/util/DocumentUtilities.html#getChild(net.jxta.document.Element, java.lang.Object)">getChild</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/package-summary.html">net.jxta.util</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>PipeUtilities.</B><B><A HREF="../../../../net/jxta/util/PipeUtilities.html#createPipeAdvertisement(net.jxta.document.Element)">createPipeAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#createPipeAdvertisement(net.jxta.document.Element)">createPipeAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Create a Pipe Advertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentUtilities.</B><B><A HREF="../../../../net/jxta/util/DocumentUtilities.html#getChild(net.jxta.document.Element, java.lang.Object)">getChild</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root,
+         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#getPeerAdvertisement(net.jxta.document.Element)">getPeerAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>These utilities are too specialized for general use.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B>AdvertisementUtilities.</B><B><A HREF="../../../../net/jxta/util/AdvertisementUtilities.html#getPipeAdvertisement(net.jxta.document.Element)">getPipeAdvertisement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;root)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>These utilities are too specialized for general use.</I></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="net.jxta.util.documentSerializable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A> in <A HREF="../../../../net/jxta/util/documentSerializable/package-summary.html">net.jxta.util.documentSerializable</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/documentSerializable/package-summary.html">net.jxta.util.documentSerializable</A> that return <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#createChildElement(net.jxta.document.Element, java.lang.String)">createChildElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a child element of the specified tagName
+  
+  This is done by serializing and then deserializing the object (ie not very efficient)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getChildElement(net.jxta.document.Element, java.lang.String)">getChildElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a child element of the specified tagName
+  
+  This is done by serializing and then deserializing the object (ie not very efficient)</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../net/jxta/util/documentSerializable/package-summary.html">net.jxta.util.documentSerializable</A> with parameters of type <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addBoolean(net.jxta.document.Element, java.lang.String, boolean)">addBoolean</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+           boolean&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value (converted to a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addDocumentSerializable(net.jxta.document.Element, java.lang.String, net.jxta.util.documentSerializable.DocumentSerializable)">addDocumentSerializable</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+                        <A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html" title="interface in net.jxta.util.documentSerializable">DocumentSerializable</A>&nbsp;documentSerializable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value (converted to a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addDouble(net.jxta.document.Element, java.lang.String, double)">addDouble</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          double&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value (converted to a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addInt(net.jxta.document.Element, java.lang.String, int)">addInt</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+       int&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value (converted to a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addLong(net.jxta.document.Element, java.lang.String, long)">addLong</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+        long&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value (converted to a String)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#addString(net.jxta.document.Element, java.lang.String, java.lang.String)">addString</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add an Element with the specified tagname and value</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#copyChildren(net.jxta.document.Element, net.jxta.document.Element)">copyChildren</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;toElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;fromElement)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deeply copy an element into another element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#copyChildren(net.jxta.document.Element, net.jxta.document.Element)">copyChildren</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;toElement,
+             <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;fromElement)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deeply copy an element into another element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#createChildElement(net.jxta.document.Element, java.lang.String)">createChildElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a child element of the specified tagName
+  
+  This is done by serializing and then deserializing the object (ie not very efficient)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getBoolean(net.jxta.document.Element)">getBoolean</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  the value of an element converted from a String ("true" or "false")</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getBoolean(net.jxta.document.Element, java.lang.String, boolean)">getBoolean</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+           boolean&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of a Child Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getChildElement(net.jxta.document.Element, java.lang.String)">getChildElement</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a child element of the specified tagName
+  
+  This is done by serializing and then deserializing the object (ie not very efficient)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html" title="interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getDocumentSerializable(net.jxta.document.Element, java.lang.Class)">getDocumentSerializable</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&nbsp;clazz)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an object from its Document Serialized components</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html" title="interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getDocumentSerializable(net.jxta.document.Element, net.jxta.util.documentSerializable.DocumentSerializable)">getDocumentSerializable</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                        <A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html" title="interface in net.jxta.util.documentSerializable">DocumentSerializable</A>&nbsp;documentSerializable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize an object from its Document Serialized components</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html" title="interface in net.jxta.util.documentSerializable">DocumentSerializable</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getDocumentSerializable(net.jxta.document.Element, java.lang.String, java.lang.Class)">getDocumentSerializable</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&nbsp;clazz)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an object from its Document Serialized components</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getDouble(net.jxta.document.Element)">getDouble</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  the value of an element converted from a String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getDouble(net.jxta.document.Element, java.lang.String, double)">getDouble</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          double&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of a Child Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getInt(net.jxta.document.Element)">getInt</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  the value of an element converted from a String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getInt(net.jxta.document.Element, java.lang.String, int)">getInt</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+       int&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of a Child Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getLong(net.jxta.document.Element)">getLong</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  the value of an element converted from a String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getLong(net.jxta.document.Element, java.lang.String, long)">getLong</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+        long&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of a Child Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getString(net.jxta.document.Element)">getString</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  the value of an element as a String</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializableUtilities.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializableUtilities.html#getString(net.jxta.document.Element, java.lang.String, java.lang.String)">getString</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tagName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;defaultValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value of a Child Element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializable.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html#initializeFrom(net.jxta.document.Element)">initializeFrom</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>DocumentSerializable.</B><B><A HREF="../../../../net/jxta/util/documentSerializable/DocumentSerializable.html#serializeTo(net.jxta.document.Element)">serializeTo</A></B>(<A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document">Element</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../net/jxta/document/Element.html" title="interface in net.jxta.document"><FONT CLASS="NavBarFont1"><B>Class</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Use</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/document//class-useElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Element.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

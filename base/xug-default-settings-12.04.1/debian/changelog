@@ -1,0 +1,29 @@
+xug-default-settings (12.04-5) precise; urgency=low
+
+  * Change default wallpapers
+
+ -- CIXUG Developers <osl@cixug.es>  Thu, 08 Nov 2012 10:42:57 +0100
+
+xug-default-settings (12.04-4) precise; urgency=low
+
+  * Improved gsettings override rules
+
+ -- CIXUG Developers <osl@cixug.es>  Mon, 22 Oct 2012 15:31:29 +0200
+
+xug-default-settings (12.04-3) precise; urgency=low
+
+  * Added missed xug-look dependency to xug-default-settings
+
+ -- CIXUG Developers <osl@cixug.es>  Sat, 20 Oct 2012 01:44:01 +0200
+
+xug-default-settings (12.04-2) precise; urgency=low
+
+  * Improvements in unity-greeter gsettings rules
+
+ -- CIXUG Developers <osl@cixug.es>  Fri, 19 Oct 2012 19:06:49 +0200
+
+xug-default-settings (12.04-1) precise; urgency=low
+
+  * Initial release
+
+ -- CIXUG Developers <osl@cixug.es>  Thu, 04 Oct 2012 07:44:18 +1000

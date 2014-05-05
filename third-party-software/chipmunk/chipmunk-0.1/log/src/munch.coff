@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# create an initialization table from a list of .o files
+# for use with COFF-format systems. Tested on Apple AUX machines only
+# contributed by Michael Godfrey, Stanford
+# rename this file to be "munch" to enable it
+
+pattern=$1
+shift
+
+nm $* > munch.temp
+
+echo '#include <p2c/p2c.h>'
+echo '#include "logstuff.h"'
+echo ''
+echo '/* Do not modify this file.  It is created automatically by "munch". */'
+echo ''
+  echo '/* Output for COFF format */'
+  sed -n -e 's/^\('$pattern'\).*$/extern Void \1();/p' munch.temp | sort
+
+echo ''
+echo 'struct ext_proc ext_proc_table[] = {'
+  cat munch.temp | sed -n -e 's/^\('$pattern'\).*$/  "\1", \1,/p' | sort
+
+echo '  NULL, NULL'
+echo '};'
+echo ''
+
+
+

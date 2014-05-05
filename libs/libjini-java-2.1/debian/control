@@ -1,0 +1,23 @@
+Source: libjini-java
+Section: java
+Priority: extra
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Homepage: https://starterkit.dev.java.net/downloads/jini/2.1/index.html
+
+Package: libjini-java
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre
+Description: Service oriented architecture that defines a programming model
+ Jini technology is a service oriented architecture that defines a
+ programming model which both exploits and extends Java technology
+ to enable the construction of secure, distributed systems consisting
+ of federations of well-behaved network services and clients. Jini
+ technology can be used to build adaptive network systems that are
+ scalable, evolvable and flexible as typically required in dynamic
+ computing environments.
+ .
+ Jini is designed to help developers deal with The Eight Fallacies
+ of Distributed Computing. Jini offers a number of powerful capabilities
+ such as service discovery and mobile code.

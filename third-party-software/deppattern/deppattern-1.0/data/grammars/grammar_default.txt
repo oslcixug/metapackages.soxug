@@ -1,0 +1,112 @@
+#Quantificadores 
+AdjnL: ADV<lemma:$Quant> ADJ|ADV 
+Recursivity: 1 
+Agreement: 
+Inherit: 
+Add: 
+%
+#Reflexivo 
+SpecL: P<token:[Ss]e> VERB 
+% 
+SpecR: VERB P<token:[Ss]e>  
+%
+#Adverbio 
+AdjnL: [VERB] ADV VERB
+%
+AdjnL: ADV VERB 
+Recursivity: 1
+%
+AdjnR: VERB ADV
+Recursivity: 1  
+%
+
+#Auxiliar e passivas
+SpecL: VERB<type:S> VERB<mode:P>
+Inherit: tense, person, number
+Add: voice:passive
+%
+SpecL: VERB<type:A> VERB<mode:P>
+Inherit: tense, mode, person, number
+Add: type:perfect
+%
+#Perífrases
+SpecL: VERB VERB<mode:N>
+Recursivity: 1
+Inherit: mode, person, tense, number
+%
+CprepL: VERB PRP<lemma:$PrepLocs>|CONJ<lemma:que&type:S> VERB<mode:N>
+Recursivity: 1
+Inherit: mode, person, tense, number
+%
+#modificadores
+AdjnL: ADJ|CARD NOUN
+Recursivity: 1
+Agr: number, gender
+%
+AdjnR: NOUN ADJ|CARD
+Recursivity: 1
+Agr: number, gender
+%
+AdjnR: NOUN NOUN
+Recursivity: 1
+%
+#determinantes
+SpecL: DT NOUN
+Recursivity: 1
+Agr: number, gender
+%
+#complementos PRP
+CprepR: [NOUN] [PRP<lemma:$Partitive>] NOUN PRP<lemma:$Partitive> NOUN
+%
+CprepR: NOUN|P PRP NOUN|P
+Recursivity: 2
+%
+#relativo 
+## bloco: N P<que> V N?
+SubjL: [NOUN|P] P<type:R> VERB [NOUN|P]?
+NEXT
+DobjR: [NOUN|P] [P<type:R>] VERB NOUN|P
+NEXT
+SubjL<Relative>: NOUN|P [P<type:R>] VERB [NOUN|P]?
+Agr: number, person
+%
+## bloco: N P<que> N V
+DobjL: [NOUN|P] P<type:R> [NOUN] VERB
+NEXT
+SubjL: [NOUN|P] [P<type:R>] NOUN VERB
+Agr: number, person
+NEXT
+DobjL<Relative>: NOUN|P [P<type:R>] [NOUN] VERB
+%
+#Nome-Verbo (em participio)
+DobjL: NOUN|P VERB<mode:P>
+%
+#atributos
+## bloco: N V A PRP? N?
+AdjnR<Attribute>: NOUN|P [VERB] ADJ [PRP]? [NOUN|P]?
+Agr:gender,number
+NEXT
+CprepR: [NOUN|P] [VERB] ADJ PRP NOUN|P
+NEXT
+AdjnR: [NOUN|P] VERB ADJ [PRP]? [NOUN|P]?
+NEXT
+SubjL: NOUN|P VERB [ADJ] [PRP]? [NOUN|P]?
+Agr: number, person
+%
+#Objecto directo
+DobjR: VERB NOUN|P|DT
+%
+#Complento preposicional de verbos
+CprepR: VERB PRP NOUN|P|VERB<mode:N>|DT
+%
+#Sujeito
+SubjL: NOUN|P|DT VERB
+Agr: number, person
+%
+#completivas
+##bloco: V CONJ<que> V
+SpecL: [VERB] CONJ<type:S> VERB<mode:[^PNG]>
+NEXT
+DobjR: VERB [CONJ<type:S>] VERB<mode:[^PNG]>
+%
+

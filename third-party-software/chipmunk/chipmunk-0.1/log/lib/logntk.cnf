@@ -1,0 +1,58 @@
+
+{ Default configuration for LOGNTK, the LOG-to-NTK file converter }
+{ To be included by LOG.CNF }
+
+tool logntk logntk "LOG-to-NTK converter"
+
+command logntk     logntk  logntk:  identify
+
+logntk: trans  nfet   n            {name, type, [strength]}
+logntk: trans  pfet   p
+logntk: trans  dnfet  d  1
+
+logntk: trans  nfet4  n            {AnaLOG symbols}
+logntk: trans  pfet4  p
+
+logntk: trans  nfet5  n            {AnaLOG symbols}
+logntk: trans  pfet5  p
+
+logntk: trans  pfet6  p
+
+logntk: trans  nfet7t  n            {AnaLOG symbols}
+logntk: trans  pfet7t  p
+
+logntk: trans  nfet7f  n            {AnaLOG symbols}
+logntk: trans  pfet7f  p
+
+logntk: trans  nspc1  n            {AnaLOG symbols}
+logntk: trans  pspc1  p
+
+logntk: trans  v_nfet  n           {Digital LOG symbols}
+logntk: trans  v_pfet  p
+logntk: trans  v_nfetd n
+logntk: trans  v_pfetd p
+logntk: trans  v_nfetx n
+logntk: trans  v_pfetx p
+
+logntk: size      1                {default node size}
+logntk: strength  2                {default transistor strength}
+
+logntk: global   Gnd Vdd           {automatically generated ports}
+
+logntk: orphan   circ*             {gate(s) for generating "orphan" nodes}
+
+logntk: lib ntk                    {place to find library .ntk files}
+
+  {do not add cells with capacitors to this library }
+
+{logntk: cell tcamp opamp}           {gate name, [cell name], [NTK file name] }
+
+logntk: ignore   arrow1 arrow2 crunch* cross*
+logntk: ignore   to from vdd gnd time numbers digh
+
+{logntk: digital switch switch      {Built-in switches convert to Vdd or Gnd}
+
+logntk: primitive a_* *             {other ACTEL gates}
+logntk: primitive a_tribuf tribuff  {a_tribuff is too long for LOG!}
+
+

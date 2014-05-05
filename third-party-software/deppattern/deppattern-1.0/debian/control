@@ -1,0 +1,23 @@
+Source: deppattern
+Section: text
+Priority: optional
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+
+Package: deppattern
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, freeling, treetagger
+Description: Package linguistic package providing a grammar compiler, PoS taggers, and dependency based parsers
+ DepPattern toolkit is a linguistic package providing a grammar 
+ compiler, PoS taggers, and dependency based parsers for several
+ languages. It's provided with an user guide ( pdf).
+ .
+ The compiler, named 'Compi', was implemented in Ruby. It generates
+ parsers in PERL from DepPattern grammars. To write formal grammars 
+ using the formalism ”DepPattern”, please, look up the tutorial ( pdf).
+ .
+ In addition, DepPattern is provided with parsers for 5 languages: English, 
+ Spanish, Galician, French, and Portuguese. The parsers were implemented in
+ PERL and are stored in the directory “parsers”.
+  

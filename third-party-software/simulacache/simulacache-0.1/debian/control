@@ -1,0 +1,14 @@
+Source: simulacache
+Section: misc
+Priority: extra
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://code.google.com/p/simulacache/
+
+Package: simulacache
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre
+Description: Computing system simulator, explores swapping between processor and memory
+ Simulador para un sistema de computo, para ver el
+ intercambio de informacion entre procesador cache y ram.

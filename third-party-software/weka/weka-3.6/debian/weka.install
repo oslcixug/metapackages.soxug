@@ -1,0 +1,3 @@
+bin/* usr/bin
+lib/* usr/share/java/weka
+share/*.desktop usr/share/applications

@@ -1,0 +1,63 @@
+desc "Setup environment"
+task :setup do
+  
+  # Seteamos o repo local onde o desenvolvedor vai probar os paquetes en local
+  # Pra ilo ten que incluir "deb file:///var/www/repo DIST_CODENAME main"
+  # no seu /etc/apt/sources.list
+  REPO_PATH="/path/to/your/local/repo"
+
+  
+  # Dirección ó repositorio externo
+  EXT_REPO_PATH="external.ssh.server:path/"
+
+  # Codename da distribución
+  DIST_CODENAME="precise"
+  
+  # Directorio onde están os paquetes da distribucion
+  PACK_SRC_DIRECTORY="."
+  
+end
+
+
+desc "Move packets to local repository"
+task :move_debs_to_repository => [:setup] do
+  system("find #{PACK_SRC_DIRECTORY} |grep \"\\.deb$\" |awk '{print \"reprepro --ignore=forbiddenchar -b #{REPO_PATH}  includedeb #{DIST_CODENAME} \"$1}'|sh")
+end
+
+desc "Move sources to repository"
+task :move_dscs_to_repository => [:setup] do
+  system("find #{PACK_SRC_DIRECTORY} |grep \"\\.dsc$\" |awk '{print \"reprepro -b #{REPO_PATH} includedsc #{DIST_CODENAME} \"$1}'|sh")
+end
+
+desc "Clean the local repository"
+task :clean_local_repo => [:setup] do
+  system("rm -r #{REPO_PATH}/db")
+  system("rm -r #{REPO_PATH}/pool")
+  system("rm -r #{REPO_PATH}/dists")
+end
+
+task :gen_local_repo => [:setup, :move_debs_to_repository, :move_dscs_to_repository] do
+  puts "Repositorio local creado!"
+end
+
+desc "Upload files to public repository (production environment)"
+task :upload_to_server => [:setup] do
+  puts "Comprobaches o pacote dende o repositorio local, funciona ?"
+  #response = StringIO.new.gets
+  #if response.scan("[y|Y|yes|s|S|si]") then		
+	retorno = system("rsync -avr #{REPO_PATH}/* #{EXT_REPO_PATH}")
+  #end
+  puts (retorno) ? "Repositorio Actualizado!" : "Houbo un problema ao actualizar o repo"
+end
+
+desc "Generate debfiles onto packets directory directory"
+task :debianize => [:setup] do
+	puts "non implementado!"
+end
+
+desc "Copy initializaton files to repo"
+task :initialize_repo => [:setup] do
+  system("sudo mkdir #{REPO_PATH}/")
+  system("sudo cp -r conf #{REPO_PATH}/")
+  system("sudo chmod a+w #{REPO_PATH}/")
+end

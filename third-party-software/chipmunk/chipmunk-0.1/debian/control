@@ -1,0 +1,15 @@
+Source: chipmunk
+Section: electronics
+Priority: extra
+Maintainer: Oficina de Software Libre <osl@unknown>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://www.dcc.uchile.cl/~lmateu/CC41C/chipmunk.html
+
+Package: chipmunk
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Chipmunk es un simulador de circuitos digitales y analógicos.
+ Chipmunk is a digital and analogic circuit simulatior. The circuits are
+ added by a IU whit drag&drop paradigm and the output of the simulation
+ is showed coloring the conections.

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : plugin.xml
+    Created on : 13 de mayo de 2008, 9:40
+    Author     : BalideaCP
+    Description:
+        Plantilla de creación de descriptores de despliegue para los plugins de 
+        Epidat 4.0. Actualice los textos entre etiquetas para que reflejen su contenido:
+            1.- Etiqueta clase: Contendrá ruta a la clase que extiende la clase PluginEstandar.
+            2.- Etiqueta accion: Contendrá ruta a la clase que implementa la interfaz Accion.
+            3.- Etiqueta menu: La ruta de menus y submenus, ya existentes o a crear, donde ubicaremos
+                nuestro menu.
+            4.- Etiqueta etiqueta: El texto del botón o menú que se creará.     
+-->
+<plugin>
+	<clase>muestreoSeleccionYEstimacion.interfaz.MuestreoSeleccionYEstimacionPlugin</clase>
+	<nombre>Muestreo 2</nombre>
+	<version>1.0</version>
+        <indice>2</indice>
+	<puntosEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo simple aleatorio</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoSimpleAleatorioAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo sistemático</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoSistematicoAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo aleatorio estratificado</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoAleatorioEstratificadoAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo por conglomerados monoetápico</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoConglomeradosMonoAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo por conglomerados bietápico</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoConglomeradosBiAccionPlugin</accion>
+                </puntoEntrada> 
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo por conglomerados monoetápico estratificado</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoConglMonoEstratAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo/Selección de muestras</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Muestreo por conglomerados bietápico estratificado</etiqueta>
+			<accion>seleccionMuestras.interfaz.MuestreoConglBiEstratAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Asignación de sujetos a tratamientos</etiqueta>
+			<accion>seleccionMuestras.interfaz.AsignacionSujetosTratamientosAccionPlugin</accion>
+                </puntoEntrada>
+                <puntoEntrada tipo="itemMenu">
+			<menu>Módulos/Muestreo</menu>
+			<icono>editor.jpg</icono>
+			<etiqueta>Estimación con muestras complejas</etiqueta>
+			<accion>emuco.interfaz.EmucoAccionPlugin</accion>
+                </puntoEntrada>
+        </puntosEntrada>        	      
+</plugin>

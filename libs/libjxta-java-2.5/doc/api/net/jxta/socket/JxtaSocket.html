@@ -1,0 +1,2560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+JxtaSocket (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="JxtaSocket (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaSocket.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaServerSocket.html" title="class in net.jxta.socket"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaSocketAddress.html" title="class in net.jxta.socket"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/socket/JxtaSocket.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaSocket.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.socket</FONT>
+<BR>
+Class JxtaSocket</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">java.net.Socket</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.socket.JxtaSocket</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A>, <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>JxtaSocket</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A><DT>implements <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>, <A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A></DL>
+</PRE>
+
+<P>
+JxtaSocket is a sub-class of java.net.socket, and should be used like a java.net.Socket.
+ Key differences to keep in mind are the following :
+ </p>
+ - JxtaSocket does not implement Nagle's algorithm, therefore at end of a data frame a flush must invoked to enure all
+ buffered data is packaged and transmitted.
+ - JxtaSocket does not implement keep-alive, therefore it is possible the underlaying messengers to be closed due to
+ lack of inactivity, which manifests in a short latency, while the messenger are recreated. This limitation should cease
+ to exist as soon the inactivity logic is removed.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#bound">bound</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then we believer our end of the connection is open.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#closed">closed</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then this socket has been closed and can no longer be used.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#closeLock">closeLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lock for closing states.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connected">connected</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then we believe the remote peer currently has this socket open.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe">OutputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connectOutpipe">connectOutpipe</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used to negotiate connection parameters</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#group">group</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The PeerGroup</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable">isReliable</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then the socket is a stream socket otherwise it is a datagram socket.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#localCredential">localCredential</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our credential that we provide to the remote peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#localEphemeralPipeAdv">localEphemeralPipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pipe Advertisement of local ephemeral pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#localEphemeralPipeIn">localEphemeralPipeIn</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The input pipe for our ephemeral pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#maxRetryTimeout">maxRetryTimeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maximum retry timeout allowed</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;net.jxta.socket.JxtaSocketInputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#nonReliableInputStream">nonReliableInputStream</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The unreliable input stream we use for receiving data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>false</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;net.jxta.socket.JxtaSocketOutputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#nonReliableOutputStream">nonReliableOutputStream</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The unreliable output stream we use for sending data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>false</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;Outgoing</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#outgoing">outgoing</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used for sending all messages by the reliable output and input streams.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#pipeAdv">pipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pipe Advertisement of the well known pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#pipeResolveLock">pipeResolveLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lock for output pipe resolution.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/PipeService.html" title="interface in net.jxta.pipe">PipeService</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#pipeSvc">pipeSvc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#remoteCredential">remoteCredential</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credential of the remote peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#remoteEphemeralPipeAdv">remoteEphemeralPipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pipe Advertisement of it's ephemeral pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#remoteEphemeralPipeMsgr">remoteEphemeralPipeMsgr</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Messenger we use to</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#remotePeerID">remotePeerID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The peer id of the peer we are connecting to or <code>null</code> if we are
+ willing to connect to any peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#retryTimeout">retryTimeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retry timeout in millisecods</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;ReliableInputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#ris">ris</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reliable input stream we use for receiving data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>true</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;ReliableOutputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#ros">ros</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reliable output stream we use for sending data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>true</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#socketConnectLock">socketConnectLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lock for ephemeral pipe connect states.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#timeout">timeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeout for connect and close</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#windowSize">windowSize</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retry window size</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket()">JxtaSocket</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This constructor does not establish a connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int)">JxtaSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+           <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+           int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to any peer listening on pipeAdv
+ this attempts establish a connection to specified
+ pipe within a context of <code>group</code> and within the timeout specified in milliseconds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, boolean)">JxtaSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+           <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+           int&nbsp;timeout,
+           boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to any peer listening on pipeAdv
+ this attempts establish a connection to specified
+ pipe within a context of <code>group</code> and within the timeout specified in milliseconds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">JxtaSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to any node listening on pipeAdv</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)">JxtaSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+           int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to any peer listening on pipeAdv this attempts
+ establish a connection to specified pipe within the context of the
+ specified group within timeout specified in milliseconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement, net.jxta.credential.Credential, net.jxta.credential.Credential, boolean)">JxtaSocket</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+           <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;remoteEphemeralPipeAdv,
+           <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;remotePeerAdv,
+           <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential,
+           <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;remoteCredential,
+           boolean&nbsp;isReliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This constructor is used by JxtaServer socket for creating JxtaSocket
+ instances in response to incoming connections.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(java.net.SocketAddress)">JxtaSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket connected to the give JxtaSocketAddress.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(java.net.SocketAddress, int)">JxtaSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+           int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to the given JxtaSocketAddress, within the timeout
+ specified in milliseconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#JxtaSocket(java.net.SocketAddress, int, boolean)">JxtaSocket</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+           int&nbsp;timeout,
+           boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a JxtaSocket to the given JxtaSocketAddress, within the timeout
+ specified in milliseconds.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#bind(java.net.SocketAddress)">bind</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Unsupported operation, an IOException will be thrown.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ We hard-close both the input and output streams.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#closeFromRemote()">closeFromRemote</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is called when closure is initiated on the remote side.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+        int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a JxtaServerSocket on a specific peer within a timeout specified in milliseconds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a JxtaServerSocket on any peer within the default timeout of 60 seconds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+        int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a JxtaServerSocket on any peer within a timeout specified in milliseconds</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connect(java.net.SocketAddress)">connect</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ The default connect timeout of 60 seconds is used If SocketAddress is not an instance of JxtaSocketAddress, an
+ IOException will be thrown.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#connect(java.net.SocketAddress, int)">connect</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+        int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ If SocketAddress is not an instance of JxtaSocketAddress, an IOException will be thrown.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#create(boolean)">create</A></B>(boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Unreliable mode is being removed. Use JxtaBiDiPipe instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#createConnectMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.credential.Credential, boolean, boolean)">createConnectMessage</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                     <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                     <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;credential,
+                     boolean&nbsp;isReliable,
+                     boolean&nbsp;initiator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a connection request/response message</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getCredentialDoc()">getCredentialDoc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the remote credential doc</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getDefaultCredential(net.jxta.peergroup.PeerGroup)">getDefaultCredential</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obtain the cred doc from the group object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getInputStream()">getInputStream</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getKeepAlive()">getKeepAlive</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getLocalSocketAddress()">getLocalSocketAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getMaxRetryTimeout()">getMaxRetryTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>The reliability layer manages it's own maximum. This value is not useful.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getOutputStream()">getOutputStream</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getOutputStreamBufferSize()">getOutputStreamBufferSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use the standard <A HREF="../../../net/jxta/socket/JxtaSocket.html#getSendBufferSize()"><CODE>getSendBufferSize()</CODE></A> method instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getReceiveBufferSize()">getReceiveBufferSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getRemoteSocketAddress()">getRemoteSocketAddress</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getRetryTimeout()">getRetryTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Retry Timeout of the reliability layer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getSendBufferSize()">getSendBufferSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getSoTimeout()">getSoTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getTrafficClass()">getTrafficClass</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#getWindowSize()">getWindowSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When in reliable mode, gets the Reliable library window size</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isBound()">isBound</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isClosed()">isClosed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the closed state of the JxtaSocket.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isConnected()">isConnected</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isInputShutdown()">isInputShutdown</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#isOutputShutdown()">isOutputShutdown</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#lightweightOutputPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)">lightweightOutputPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                      <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                      <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peerAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A lightweight output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to use the pipe service
+ to resolve the pipe we have all we need to construct a messenger.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;Outgoing</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#makeOutgoing(net.jxta.endpoint.Messenger, long)">makeOutgoing</A></B>(<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>&nbsp;msgr,
+             long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an appropriate Outgoing Adaptor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#newEphemeralPipeAdv(net.jxta.protocol.PipeAdvertisement)">newEphemeralPipeAdv</A></B>(<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a pipe advertisement for an ephemeral pipe (w/random pipe ID) from an existing pipe advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#outputPipeEvent(net.jxta.pipe.OutputPipeEvent)">outputPipeEvent</A></B>(<A HREF="../../../net/jxta/pipe/OutputPipeEvent.html" title="class in net.jxta.pipe">OutputPipeEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when a input pipe has been located for a previously registered
+ pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called for each pipe message event that occurs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#sendUrgentData(int)">sendUrgentData</A></B>(int&nbsp;data)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setCredential(net.jxta.credential.Credential)">setCredential</A></B>(<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets our credential to be used by this socket connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setKeepAlive(boolean)">setKeepAlive</A></B>(boolean&nbsp;state)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setMaxRetryTimeout(int)">setMaxRetryTimeout</A></B>(int&nbsp;maxRetryTimeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>The reliability layer manages it's own maximum. This value is not useful.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setOOBInline(boolean)">setOOBInline</A></B>(boolean&nbsp;state)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setOutputStreamBufferSize(int)">setOutputStreamBufferSize</A></B>(int&nbsp;size)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use the standard <A HREF="../../../net/jxta/socket/JxtaSocket.html#setSendBufferSize(int)"><CODE>setSendBufferSize(int)</CODE></A> method instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setRetryTimeout(int)">setRetryTimeout</A></B>(int&nbsp;retryTimeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Retry Timeout of the underlying reliability layer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setSendBufferSize(int)">setSendBufferSize</A></B>(int&nbsp;size)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setSoTimeout(int)">setSoTimeout</A></B>(int&nbsp;soTimeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setTrafficClass(int)">setTrafficClass</A></B>(int&nbsp;tc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#setWindowSize(int)">setWindowSize</A></B>(int&nbsp;windowSize)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When in reliable mode, sets the Reliable library window size</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#shutdownInput()">shutdownInput</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#shutdownOutput()">shutdownOutput</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ This output is suitable for debugging but should not be parsed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#unbind()">unbind</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closes the input pipe which we use to receive messages and the messenger
+ used for sending messages.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/socket/JxtaSocket.html#write(byte[], int, int)">write</A></B>(byte[]&nbsp;buf,
+      int&nbsp;offset,
+      int&nbsp;length)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs on behalf of JxtaSocketOutputStream.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.net.Socket"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.net.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getChannel()" title="class or interface in java.net">getChannel</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getInetAddress()" title="class or interface in java.net">getInetAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getLocalAddress()" title="class or interface in java.net">getLocalAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getLocalPort()" title="class or interface in java.net">getLocalPort</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getOOBInline()" title="class or interface in java.net">getOOBInline</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getPort()" title="class or interface in java.net">getPort</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getReuseAddress()" title="class or interface in java.net">getReuseAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getSoLinger()" title="class or interface in java.net">getSoLinger</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getTcpNoDelay()" title="class or interface in java.net">getTcpNoDelay</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setPerformancePreferences(int, int, int)" title="class or interface in java.net">setPerformancePreferences</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setReceiveBufferSize(int)" title="class or interface in java.net">setReceiveBufferSize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setReuseAddress(boolean)" title="class or interface in java.net">setReuseAddress</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setSocketImplFactory(java.net.SocketImplFactory)" title="class or interface in java.net">setSocketImplFactory</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setSoLinger(boolean, int)" title="class or interface in java.net">setSoLinger</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setTcpNoDelay(boolean)" title="class or interface in java.net">setTcpNoDelay</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="group"><!-- --></A><H3>
+group</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>group</B></PRE>
+<DL>
+<DD>The PeerGroup
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeAdv"><!-- --></A><H3>
+pipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>pipeAdv</B></PRE>
+<DL>
+<DD>Pipe Advertisement of the well known pipe.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="localEphemeralPipeAdv"><!-- --></A><H3>
+localEphemeralPipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>localEphemeralPipeAdv</B></PRE>
+<DL>
+<DD>Pipe Advertisement of local ephemeral pipe.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="localEphemeralPipeIn"><!-- --></A><H3>
+localEphemeralPipeIn</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A> <B>localEphemeralPipeIn</B></PRE>
+<DL>
+<DD>The input pipe for our ephemeral pipe. We will receive all messages on this pipe.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="remoteEphemeralPipeAdv"><!-- --></A><H3>
+remoteEphemeralPipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>remoteEphemeralPipeAdv</B></PRE>
+<DL>
+<DD>Pipe Advertisement of it's ephemeral pipe.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="remoteEphemeralPipeMsgr"><!-- --></A><H3>
+remoteEphemeralPipeMsgr</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>remoteEphemeralPipeMsgr</B></PRE>
+<DL>
+<DD>The Messenger we use to
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeSvc"><!-- --></A><H3>
+pipeSvc</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/PipeService.html" title="interface in net.jxta.pipe">PipeService</A> <B>pipeSvc</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="remotePeerID"><!-- --></A><H3>
+remotePeerID</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>remotePeerID</B></PRE>
+<DL>
+<DD>The peer id of the peer we are connecting to or <code>null</code> if we are
+ willing to connect to any peer.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="connectOutpipe"><!-- --></A><H3>
+connectOutpipe</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe">OutputPipe</A> <B>connectOutpipe</B></PRE>
+<DL>
+<DD>Used to negotiate connection parameters
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="timeout"><!-- --></A><H3>
+timeout</H3>
+<PRE>
+protected long <B>timeout</B></PRE>
+<DL>
+<DD>timeout for connect and close
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="retryTimeout"><!-- --></A><H3>
+retryTimeout</H3>
+<PRE>
+protected int <B>retryTimeout</B></PRE>
+<DL>
+<DD>retry timeout in millisecods
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="maxRetryTimeout"><!-- --></A><H3>
+maxRetryTimeout</H3>
+<PRE>
+protected int <B>maxRetryTimeout</B></PRE>
+<DL>
+<DD>maximum retry timeout allowed
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="windowSize"><!-- --></A><H3>
+windowSize</H3>
+<PRE>
+protected int <B>windowSize</B></PRE>
+<DL>
+<DD>retry window size
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeResolveLock"><!-- --></A><H3>
+pipeResolveLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>pipeResolveLock</B></PRE>
+<DL>
+<DD>Lock for output pipe resolution.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="socketConnectLock"><!-- --></A><H3>
+socketConnectLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>socketConnectLock</B></PRE>
+<DL>
+<DD>Lock for ephemeral pipe connect states.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="closeLock"><!-- --></A><H3>
+closeLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>closeLock</B></PRE>
+<DL>
+<DD>Lock for closing states.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="closed"><!-- --></A><H3>
+closed</H3>
+<PRE>
+protected volatile boolean <B>closed</B></PRE>
+<DL>
+<DD>If <code>true</code> then this socket has been closed and can no longer be used.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="bound"><!-- --></A><H3>
+bound</H3>
+<PRE>
+protected boolean <B>bound</B></PRE>
+<DL>
+<DD>If <code>true</code> then we believer our end of the connection is open.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="connected"><!-- --></A><H3>
+connected</H3>
+<PRE>
+protected boolean <B>connected</B></PRE>
+<DL>
+<DD>If <code>true</code> then we believe the remote peer currently has this socket open.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="remoteCredential"><!-- --></A><H3>
+remoteCredential</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>remoteCredential</B></PRE>
+<DL>
+<DD>Credential of the remote peer.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="localCredential"><!-- --></A><H3>
+localCredential</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>localCredential</B></PRE>
+<DL>
+<DD>Our credential that we provide to the remote peer.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="isReliable"><!-- --></A><H3>
+isReliable</H3>
+<PRE>
+protected boolean <B>isReliable</B></PRE>
+<DL>
+<DD>If <code>true</code> then the socket is a stream socket otherwise it is a datagram socket.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="outgoing"><!-- --></A><H3>
+outgoing</H3>
+<PRE>
+protected Outgoing <B>outgoing</B></PRE>
+<DL>
+<DD>Used for sending all messages by the reliable output and input streams.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ris"><!-- --></A><H3>
+ris</H3>
+<PRE>
+protected ReliableInputStream <B>ris</B></PRE>
+<DL>
+<DD>The reliable input stream we use for receiving data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>true</code>.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ros"><!-- --></A><H3>
+ros</H3>
+<PRE>
+protected ReliableOutputStream <B>ros</B></PRE>
+<DL>
+<DD>The reliable output stream we use for sending data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>true</code>.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="nonReliableInputStream"><!-- --></A><H3>
+nonReliableInputStream</H3>
+<PRE>
+protected net.jxta.socket.JxtaSocketInputStream <B>nonReliableInputStream</B></PRE>
+<DL>
+<DD>The unreliable input stream we use for receiving data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>false</code>.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="nonReliableOutputStream"><!-- --></A><H3>
+nonReliableOutputStream</H3>
+<PRE>
+protected net.jxta.socket.JxtaSocketOutputStream <B>nonReliableOutputStream</B></PRE>
+<DL>
+<DD>The unreliable output stream we use for sending data if 
+  <A HREF="../../../net/jxta/socket/JxtaSocket.html#isReliable"><CODE>isReliable</CODE></A> is <code>false</code>.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="JxtaSocket()"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>()</PRE>
+<DL>
+<DD>This constructor does not establish a connection. Use this constructor
+ when altering the default parameters, and options of the socket.
+ <p/>
+ By default connections are reliable, and the default timeout is 60
+ seconds. To alter a connection a call to create(false) changes the
+ connection to an unreliable one.
+<P>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement, net.jxta.credential.Credential, net.jxta.credential.Credential, boolean)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+protected <B>JxtaSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                     <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                     <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;remoteEphemeralPipeAdv,
+                     <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;remotePeerAdv,
+                     <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential,
+                     <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;remoteCredential,
+                     boolean&nbsp;isReliable)
+              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>This constructor is used by JxtaServer socket for creating JxtaSocket
+ instances in response to incoming connections.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - The original PipeAdvertisement<DD><CODE>localCredential</CODE> - Our credential.<DD><CODE>remoteEphemeralPipeAdv</CODE> - the phemeral pipe advertisement<DD><CODE>remotePeerAdv</CODE> - remote peer advertisement<DD><CODE>remoteCredential</CODE> - The remote peer's credential.<DD><CODE>isReliable</CODE> - <code>true</code> for reliable stream connection or
+                            <code>false</code> for unreliable stream connection.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(java.net.SocketAddress)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket connected to the give JxtaSocketAddress.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - JxtaSocketAddress to connect to
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to any node listening on pipeAdv
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - PipeAdvertisement
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(java.net.SocketAddress, int)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                  int&nbsp;timeout)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to the given JxtaSocketAddress, within the timeout
+ specified in milliseconds.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - JxtaSocket address to connect to<DD><CODE>timeout</CODE> - The number of milliseconds within which the socket must
+                be successfully created. An exception will be thrown if the socket
+                cannot be created in the allotted time. A timeout value of <code>0</code>
+                (zero) specifies an infinite timeout.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For failures in creating the socket.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketTimeoutException.html?is-external=true" title="class or interface in java.net">SocketTimeoutException</A></CODE> - If the socket cannot be created before
+                                the timeout occurs.</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                  int&nbsp;timeout)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to any peer listening on pipeAdv this attempts
+ establish a connection to specified pipe within the context of the
+ specified group within timeout specified in milliseconds.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - The number of milliseconds within which the socket must
+                be successfully created. An exception will be thrown if the socket
+                cannot be created in the allotted time. A timeout value of <code>0</code>
+                (zero) specifies an infinite timeout.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketTimeoutException.html?is-external=true" title="class or interface in java.net">SocketTimeoutException</A></CODE> - If the socket cannot be created before
+                                the timeout occurs.</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                  <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                  int&nbsp;timeout)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to any peer listening on pipeAdv
+ this attempts establish a connection to specified
+ pipe within a context of <code>group</code> and within the timeout specified in milliseconds
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>peerid</CODE> - node to connect to<DD><CODE>pipeAdv</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - The number of milliseconds within which the socket must
+                be successfully created. An exception will be thrown if the socket
+                cannot be created in the allotted time. A timeout value of <code>0</code>
+                (zero) specifies an infinite timeout.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For failures in creating the socket.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketTimeoutException.html?is-external=true" title="class or interface in java.net">SocketTimeoutException</A></CODE> - If the socket cannot be created before
+                                the timeout occurs.</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(java.net.SocketAddress, int, boolean)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                  int&nbsp;timeout,
+                  boolean&nbsp;reliable)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to the given JxtaSocketAddress, within the timeout
+ specified in milliseconds. The JxtaSocket can be reliable (stream) or
+ not (datagram). If you want to use a SocketAddress in the constructor,
+ this is the preferred method. Either that, or use JxtaSocket(), followed
+ by create(boolean) to turn on reliability, followed by
+ connect(SocketAddress, int) or connect(SocketAddress) to make the
+ connection.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>address</CODE> - JxtaSocket address to connect to<DD><CODE>timeout</CODE> - The number of milliseconds within which the socket must
+                 be successfully created. An exception will be thrown if the socket
+                 cannot be created in the allotted time. A timeout value of <code>0</code>
+                 (zero) specifies an infinite timeout.<DD><CODE>reliable</CODE> - <code>true</code> for reliable stream connection or
+                 <code>false</code> for unreliable stream connection.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For failures in creating the socket.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketTimeoutException.html?is-external=true" title="class or interface in java.net">SocketTimeoutException</A></CODE> - If the socket cannot be created before
+                                the timeout occurs.</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaSocket(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, boolean)"><!-- --></A><H3>
+JxtaSocket</H3>
+<PRE>
+public <B>JxtaSocket</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                  <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                  int&nbsp;timeout,
+                  boolean&nbsp;reliable)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a JxtaSocket to any peer listening on pipeAdv
+ this attempts establish a connection to specified
+ pipe within a context of <code>group</code> and within the timeout specified in milliseconds
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>peerid</CODE> - node to connect to<DD><CODE>pipeAdv</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - The number of milliseconds within which the socket must
+                 be successfully created. An exception will be thrown if the socket
+                 cannot be created in the allotted time. A timeout value of <code>0</code>
+                 (zero) specifies an infinite timeout.<DD><CODE>reliable</CODE> - <code>true</code> for reliable stream connection or
+                 <code>false</code> for unreliable stream connection.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For failures in creating the socket.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketTimeoutException.html?is-external=true" title="class or interface in java.net">SocketTimeoutException</A></CODE> - If the socket cannot be created before
+                                the timeout occurs.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="create(boolean)"><!-- --></A><H3>
+create</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>create</B>(boolean&nbsp;reliable)
+            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Unreliable mode is being removed. Use JxtaBiDiPipe instead.</I>
+<P>
+<DD>Creates either a stream or a datagram socket.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reliable</CODE> - <code>true</code> for reliable stream connection or <code>false</code> for unreliable stream connection.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs while creating the socket.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="bind(java.net.SocketAddress)"><!-- --></A><H3>
+bind</H3>
+<PRE>
+public void <B>bind</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ Unsupported operation, an IOException will be thrown.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#bind(java.net.SocketAddress)" title="class or interface in java.net">bind</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - Thrown in all cases as this operation is not supported.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(java.net.SocketAddress)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ The default connect timeout of 60 seconds is used If SocketAddress is not an instance of JxtaSocketAddress, an
+ IOException will be thrown.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#connect(java.net.SocketAddress)" title="class or interface in java.net">connect</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(java.net.SocketAddress, int)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A>&nbsp;address,
+                    int&nbsp;timeout)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ If SocketAddress is not an instance of JxtaSocketAddress, an IOException will be thrown.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#connect(java.net.SocketAddress, int)" title="class or interface in java.net">connect</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a JxtaServerSocket on any peer within the default timeout of 60 seconds
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - PipeAdvertisement
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                    int&nbsp;timeout)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a JxtaServerSocket on any peer within a timeout specified in milliseconds
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - in milliseconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                    int&nbsp;timeout)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a JxtaServerSocket on a specific peer within a timeout specified in milliseconds
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>peerid</CODE> - peer to connect to<DD><CODE>pipeAdv</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - timeout in milliseconds
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDefaultCredential(net.jxta.peergroup.PeerGroup)"><!-- --></A><H3>
+getDefaultCredential</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>getDefaultCredential</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</PRE>
+<DL>
+<DD>obtain the cred doc from the group object
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - the group context
+<DT><B>Returns:</B><DD>The <code>Credential</code> value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCredentialDoc()"><!-- --></A><H3>
+getCredentialDoc</H3>
+<PRE>
+public <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>getCredentialDoc</B>()</PRE>
+<DL>
+<DD>get the remote credential doc
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Credential StructuredDocument</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCredential(net.jxta.credential.Credential)"><!-- --></A><H3>
+setCredential</H3>
+<PRE>
+public void <B>setCredential</B>(<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;localCredential)</PRE>
+<DL>
+<DD>Sets our credential to be used by this socket connection. If no
+ credentials are set, the default group credential will be used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>localCredential</CODE> - The credential to be used for connection responses
+                     or <tt>null</tt> if the default credential is to be used.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createConnectMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.credential.Credential, boolean, boolean)"><!-- --></A><H3>
+createConnectMessage</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> <B>createConnectMessage</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                       <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                       <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A>&nbsp;credential,
+                                       boolean&nbsp;isReliable,
+                                       boolean&nbsp;initiator)
+                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a connection request/response message
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - The group in which the socket is being used.<DD><CODE>pipeAdv</CODE> - Advertisement for our ephemeral pipe.<DD><CODE>credential</CODE> - Our credential or null if default credential is to
+                   be used.<DD><CODE>isReliable</CODE> - The socket is to be reliable (stream).<DD><CODE>initiator</CODE> - indicates initiator
+<DT><B>Returns:</B><DD>The message.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newEphemeralPipeAdv(net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+newEphemeralPipeAdv</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>newEphemeralPipeAdv</B>(<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv)</PRE>
+<DL>
+<DD>Create a pipe advertisement for an ephemeral pipe (w/random pipe ID) from an existing pipe advertisement.
+ The specified pipe adveritsement is only used for the name and type
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipeAdv</CODE> - to get the basename and type from
+<DT><B>Returns:</B><DD>A new pipe advertisement for an ephemeral pipe.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBound()"><!-- --></A><H3>
+isBound</H3>
+<PRE>
+public boolean <B>isBound</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#isBound()" title="class or interface in java.net">isBound</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConnected()"><!-- --></A><H3>
+isConnected</H3>
+<PRE>
+public boolean <B>isConnected</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#isConnected()" title="class or interface in java.net">isConnected</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="makeOutgoing(net.jxta.endpoint.Messenger, long)"><!-- --></A><H3>
+makeOutgoing</H3>
+<PRE>
+protected Outgoing <B>makeOutgoing</B>(<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>&nbsp;msgr,
+                                long&nbsp;timeout)</PRE>
+<DL>
+<DD>Create an appropriate Outgoing Adaptor. This method exists primarily
+  so that sub-classes can substitute a different Outgoing sub-class.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msgr</CODE> - The messenger to be wrapped.<DD><CODE>timeout</CODE> - The timeout value;
+<DT><B>Returns:</B><DD>Outgoing The messenger wrapped in an appropriate adaptor.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutputStreamBufferSize()"><!-- --></A><H3>
+getOutputStreamBufferSize</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public int <B>getOutputStreamBufferSize</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use the standard <A HREF="../../../net/jxta/socket/JxtaSocket.html#getSendBufferSize()"><CODE>getSendBufferSize()</CODE></A> method instead.</I>
+<P>
+<DD>Returns the internal output stream buffer size
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the internal buffer size.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOutputStreamBufferSize(int)"><!-- --></A><H3>
+setOutputStreamBufferSize</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setOutputStreamBufferSize</B>(int&nbsp;size)
+                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use the standard <A HREF="../../../net/jxta/socket/JxtaSocket.html#setSendBufferSize(int)"><CODE>setSendBufferSize(int)</CODE></A> method instead.</I>
+<P>
+<DD>Sets the internal output stream buffer size.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>size</CODE> - The internal buffer size.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInputStream()"><!-- --></A><H3>
+getInputStream</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A> <B>getInputStream</B>()
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getInputStream()" title="class or interface in java.net">getInputStream</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutputStream()"><!-- --></A><H3>
+getOutputStream</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A> <B>getOutputStream</B>()
+                             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getOutputStream()" title="class or interface in java.net">getOutputStream</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public void <B>close</B>()
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+ <p/>
+ We hard-close both the input and output streams. Nothing can be
+ written or read to the socket after this method. Any queued incoming
+ data is discarded. Any additional incoming messages will be ACKed but
+ their content will be discarded. We will attempt to send any data which
+ has already been written to the OutputStream.
+ <p/>
+ Once the output queue is empty we will send a close message to tell
+ the remote side that no more data is coming.
+ <p/>
+ This is the only method in this class which is <code>synchronized</code>.
+ All others use internal synchronization.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#close()" title="class or interface in java.net">close</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="closeFromRemote()"><!-- --></A><H3>
+closeFromRemote</H3>
+<PRE>
+protected void <B>closeFromRemote</B>()
+                        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>This is called when closure is initiated on the remote side. By
+ convention we receive the close message only after we have ACKed the last
+ data segment.
+ <p/>
+ We soft-close the InputStream which allows us to read data already
+ received.
+ <p/>
+ We hard-close our output stream and discard all queued, unACKed data
+ as the remote side doesn't want to receive it (the remote side has
+ already unbound themselves, they just want our close ACK in order to clean
+ up.)
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unbind()"><!-- --></A><H3>
+unbind</H3>
+<PRE>
+protected void <B>unbind</B>()</PRE>
+<DL>
+<DD>Closes the input pipe which we use to receive messages and the messenger
+ used for sending messages.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)"><!-- --></A><H3>
+pipeMsgEvent</H3>
+<PRE>
+public void <B>pipeMsgEvent</B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called for each pipe message event that occurs.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - The event being received.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="outputPipeEvent(net.jxta.pipe.OutputPipeEvent)"><!-- --></A><H3>
+outputPipeEvent</H3>
+<PRE>
+public void <B>outputPipeEvent</B>(<A HREF="../../../net/jxta/pipe/OutputPipeEvent.html" title="class in net.jxta.pipe">OutputPipeEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called when a input pipe has been located for a previously registered
+ pipe. The event contains an <A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe"><CODE>OutputPipe</CODE></A> which can
+ be used to communicate with the remote peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/pipe/OutputPipeListener.html#outputPipeEvent(net.jxta.pipe.OutputPipeEvent)">outputPipeEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - the event</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="lightweightOutputPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)"><!-- --></A><H3>
+lightweightOutputPipe</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>lightweightOutputPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                                 <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peerAdv)</PRE>
+<DL>
+<DD>A lightweight output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to use the pipe service
+ to resolve the pipe we have all we need to construct a messenger.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - Remote Pipe Advertisement<DD><CODE>peerAdv</CODE> - Remote Peer Advertisement
+<DT><B>Returns:</B><DD>Messenger</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSoTimeout()"><!-- --></A><H3>
+getSoTimeout</H3>
+<PRE>
+public int <B>getSoTimeout</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getSoTimeout()" title="class or interface in java.net">getSoTimeout</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSoTimeout(int)"><!-- --></A><H3>
+setSoTimeout</H3>
+<PRE>
+public void <B>setSoTimeout</B>(int&nbsp;soTimeout)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setSoTimeout(int)" title="class or interface in java.net">setSoTimeout</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMaxRetryTimeout()"><!-- --></A><H3>
+getMaxRetryTimeout</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public int <B>getMaxRetryTimeout</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>The reliability layer manages it's own maximum. This value is not useful.</I>
+<P>
+<DD>Gets the Maximum Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The maximum retry Timeout value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMaxRetryTimeout(int)"><!-- --></A><H3>
+setMaxRetryTimeout</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setMaxRetryTimeout</B>(int&nbsp;maxRetryTimeout)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>The reliability layer manages it's own maximum. This value is not useful.</I>
+<P>
+<DD>Gets the Maximum Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>maxRetryTimeout</CODE> - The new maximum retry timeout value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if maxRetryTimeout exceeds jxta platform maximum retry timeout</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRetryTimeout()"><!-- --></A><H3>
+getRetryTimeout</H3>
+<PRE>
+public int <B>getRetryTimeout</B>()</PRE>
+<DL>
+<DD>Gets the Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The retry Timeout value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRetryTimeout(int)"><!-- --></A><H3>
+setRetryTimeout</H3>
+<PRE>
+public void <B>setRetryTimeout</B>(int&nbsp;retryTimeout)
+                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>Sets the Retry Timeout of the underlying reliability layer.
+ In reliable mode it is possible for this call to block
+ trying to obtain a lock on reliable input stream
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>retryTimeout</CODE> - The new retry timeout value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWindowSize()"><!-- --></A><H3>
+getWindowSize</H3>
+<PRE>
+public int <B>getWindowSize</B>()</PRE>
+<DL>
+<DD>When in reliable mode, gets the Reliable library window size
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The windowSize value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setWindowSize(int)"><!-- --></A><H3>
+setWindowSize</H3>
+<PRE>
+public void <B>setWindowSize</B>(int&nbsp;windowSize)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>When in reliable mode, sets the Reliable library window size
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>windowSize</CODE> - The new window size value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isClosed()"><!-- --></A><H3>
+isClosed</H3>
+<PRE>
+public boolean <B>isClosed</B>()</PRE>
+<DL>
+<DD>Returns the closed state of the JxtaSocket.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#isClosed()" title="class or interface in java.net">isClosed</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the socket has been closed</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="write(byte[], int, int)"><!-- --></A><H3>
+write</H3>
+<PRE>
+protected void <B>write</B>(byte[]&nbsp;buf,
+                     int&nbsp;offset,
+                     int&nbsp;length)
+              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Performs on behalf of JxtaSocketOutputStream.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>buf</CODE> - the data.<DD><CODE>offset</CODE> - the start offset in the data.<DD><CODE>length</CODE> - the number of bytes to write.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs<DT><B>See Also:</B><DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true#write(int)" title="class or interface in java.io"><CODE>OutputStream.write(int)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSendBufferSize()"><!-- --></A><H3>
+getSendBufferSize</H3>
+<PRE>
+public int <B>getSendBufferSize</B>()
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getSendBufferSize()" title="class or interface in java.net">getSendBufferSize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSendBufferSize(int)"><!-- --></A><H3>
+setSendBufferSize</H3>
+<PRE>
+public void <B>setSendBufferSize</B>(int&nbsp;size)
+                       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setSendBufferSize(int)" title="class or interface in java.net">setSendBufferSize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getReceiveBufferSize()"><!-- --></A><H3>
+getReceiveBufferSize</H3>
+<PRE>
+public int <B>getReceiveBufferSize</B>()
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getReceiveBufferSize()" title="class or interface in java.net">getReceiveBufferSize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeepAlive()"><!-- --></A><H3>
+getKeepAlive</H3>
+<PRE>
+public boolean <B>getKeepAlive</B>()
+                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getKeepAlive()" title="class or interface in java.net">getKeepAlive</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrafficClass()"><!-- --></A><H3>
+getTrafficClass</H3>
+<PRE>
+public int <B>getTrafficClass</B>()
+                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getTrafficClass()" title="class or interface in java.net">getTrafficClass</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTrafficClass(int)"><!-- --></A><H3>
+setTrafficClass</H3>
+<PRE>
+public void <B>setTrafficClass</B>(int&nbsp;tc)
+                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setTrafficClass(int)" title="class or interface in java.net">setTrafficClass</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isInputShutdown()"><!-- --></A><H3>
+isInputShutdown</H3>
+<PRE>
+public boolean <B>isInputShutdown</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#isInputShutdown()" title="class or interface in java.net">isInputShutdown</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isOutputShutdown()"><!-- --></A><H3>
+isOutputShutdown</H3>
+<PRE>
+public boolean <B>isOutputShutdown</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#isOutputShutdown()" title="class or interface in java.net">isOutputShutdown</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendUrgentData(int)"><!-- --></A><H3>
+sendUrgentData</H3>
+<PRE>
+public void <B>sendUrgentData</B>(int&nbsp;data)
+                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#sendUrgentData(int)" title="class or interface in java.net">sendUrgentData</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setOOBInline(boolean)"><!-- --></A><H3>
+setOOBInline</H3>
+<PRE>
+public void <B>setOOBInline</B>(boolean&nbsp;state)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setOOBInline(boolean)" title="class or interface in java.net">setOOBInline</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKeepAlive(boolean)"><!-- --></A><H3>
+setKeepAlive</H3>
+<PRE>
+public void <B>setKeepAlive</B>(boolean&nbsp;state)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#setKeepAlive(boolean)" title="class or interface in java.net">setKeepAlive</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketException.html?is-external=true" title="class or interface in java.net">SocketException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="shutdownInput()"><!-- --></A><H3>
+shutdownInput</H3>
+<PRE>
+public void <B>shutdownInput</B>()
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#shutdownInput()" title="class or interface in java.net">shutdownInput</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="shutdownOutput()"><!-- --></A><H3>
+shutdownOutput</H3>
+<PRE>
+public void <B>shutdownOutput</B>()
+                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#shutdownOutput()" title="class or interface in java.net">shutdownOutput</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLocalSocketAddress()"><!-- --></A><H3>
+getLocalSocketAddress</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A> <B>getLocalSocketAddress</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getLocalSocketAddress()" title="class or interface in java.net">getLocalSocketAddress</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRemoteSocketAddress()"><!-- --></A><H3>
+getRemoteSocketAddress</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/SocketAddress.html?is-external=true" title="class or interface in java.net">SocketAddress</A> <B>getRemoteSocketAddress</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#getRemoteSocketAddress()" title="class or interface in java.net">getRemoteSocketAddress</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+ <p/>
+ This output is suitable for debugging but should not be parsed. All
+ of the information is available through other means.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true#toString()" title="class or interface in java.net">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/Socket.html?is-external=true" title="class or interface in java.net">Socket</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaSocket.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaServerSocket.html" title="class in net.jxta.socket"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/socket/JxtaSocketAddress.html" title="class in net.jxta.socket"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/socket/JxtaSocket.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaSocket.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

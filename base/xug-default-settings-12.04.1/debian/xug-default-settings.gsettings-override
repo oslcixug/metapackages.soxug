@@ -1,0 +1,33 @@
+[org.gnome.Empathy.notifications]
+notifications-focus=true
+
+[org.gnome.login-screen]
+logo='/lib/plymouth/ubuntu_logo.png'
+fallback-logo='/usr/share/pixmaps/ubuntu_logo_fallback.svg'
+
+[org.gnome.desktop.interface]
+gtk-theme="Ambiance"
+icon-theme="Faenza-Darker"
+cursor-theme="DMZ-White"
+font-name="Ubuntu 9"
+monospace-font-name="Ubuntu Mono 10"
+document-font-name='Sans 9'
+
+[org.gnome.desktop.wm.preferences]
+button-layout='close,minimize,maximize:'
+mouse-button-modifier='<Alt>'
+titlebar-font='Ubuntu Bold 10'
+
+[org.gnome.desktop.screensaver]
+lock-enabled=false
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png'
+
+[com.canonical.unity-greeter]
+draw-user-backgrounds=false
+background='/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-logos.png'
+logo=''
+
+[com.canonical.unity.launcher]
+favorites = ['application://ubiquity-gtkui.desktop', 'application://nautilus-home.desktop', 'application://firefox.desktop', 'application://libreoffice-writer.desktop', 'application://libreoffice-calc.desktop', 'application://libreoffice-impress.desktop', 'application://gnome-control-center.desktop', 'application://yelp.desktop', 'unity://running-apps', 'unity://expo-icon', 'unity://devices']

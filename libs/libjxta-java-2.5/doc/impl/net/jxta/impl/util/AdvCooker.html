@@ -1,0 +1,643 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AdvCooker (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AdvCooker (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AdvCooker.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ACLSeedingManager.html" title="class in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/Base64.html" title="class in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/AdvCooker.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AdvCooker.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.util</FONT>
+<BR>
+Class AdvCooker</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.util.AdvCooker</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>AdvCooker</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Advertisements and ID's "cooked" according to recipes lifted
+ from J-C and Frog. Static methods meant for convenience in developing
+ experimental propagation modules (pipe or rendezvous services,
+ rendezvous managers) but maybe generally useful.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>vasha</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#AdvCooker()">AdvCooker</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildCompat()">buildCompat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compat's (compatibility statements) serve to narrow the search
+  for a ModuleImplAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildCompat(java.lang.String, java.lang.String)">buildCompat</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;efmt,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;bind)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this form for customized compatibility statements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleClassAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleClassAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleClassAdvertisement(net.jxta.platform.ModuleClassID, java.lang.String, java.lang.String)">buildModuleClassAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;mcid,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceDescription)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The module class advertisement is to simply advertise the
+ existence of a module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleImplAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, net.jxta.document.Element)">buildModuleImplAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;compat)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A ModuleImplAdvertisement represents one of any number of
+ published implementations of a given specification.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleImplAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, net.jxta.document.Element, java.lang.String, java.lang.String, java.lang.String)">buildModuleImplAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;compat,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;provider,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;uri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this form to fully populate a ModuleImplAdvertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String)">buildModuleSpecAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ModuleSpecAdvertisement has two purposes, to publish
+ the uri of its formal specs for developers and to publish the
+ means of remote access to the module's services if that
+ is appropriate.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">buildModuleSpecAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;creator,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;version,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;specURI)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this form for production provided remote access is not required.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, net.jxta.protocol.PipeAdvertisement, net.jxta.platform.ModuleSpecID, net.jxta.platform.ModuleSpecID, net.jxta.document.StructuredDocument)">buildModuleSpecAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;creator,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;version,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;specURI,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;proxySpecID,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;authorizationSpecID,
+                             <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocument</A>&nbsp;param)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this form for a fully populated advert.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildPeerGroupImplAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map, java.util.Map)">buildPeerGroupImplAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parent,
+                                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newApps)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildPeerGroupImplAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map, java.util.Map, java.util.Map)">buildPeerGroupImplAdvertisement</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parent,
+                                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newApps,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newProtos)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#buildPeerGroupImplAdvertisement(net.jxta.impl.peergroup.StdPeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map)">buildPeerGroupImplAdvertisement</A></B>(<A HREF="../../../../net/jxta/impl/peergroup/StdPeerGroup.html" title="class in net.jxta.impl.peergroup">StdPeerGroup</A>&nbsp;parent,
+                                <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modifies a copy of the parent's implementation
+ advertisement to reflect the addition or replacement of
+ services.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#typeCheckKeys(java.util.Map)">typeCheckKeys</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;moduleTable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Module table keys must be ModuleClassID's.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/AdvCooker.html#typeCheckValues(java.util.Map)">typeCheckValues</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;moduleTable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Module table vaules must be ModuleImplAdvertisements here.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AdvCooker()"><!-- --></A><H3>
+AdvCooker</H3>
+<PRE>
+public <B>AdvCooker</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="buildModuleClassAdvertisement(net.jxta.platform.ModuleClassID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+buildModuleClassAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleClassAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleClassAdvertisement</A> <B>buildModuleClassAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;mcid,
+                                                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                                                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceDescription)</PRE>
+<DL>
+<DD>The module class advertisement is to simply advertise the
+ existence of a module.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mcid</CODE> - -- the module class id<DD><CODE>serviceName</CODE> - -- something like "JXTAMOD:JXTA-WIRE-MyNewThing"<DD><CODE>serviceDescription</CODE> - -- something like "JXTA-WIRE MyNewThing Module"
+<DT><B>Returns:</B><DD>an appropriate ModuleClassAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+buildModuleSpecAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A> <B>buildModuleSpecAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription)</PRE>
+<DL>
+<DD>The ModuleSpecAdvertisement has two purposes, to publish
+ the uri of its formal specs for developers and to publish the
+ means of remote access to the module's services if that
+ is appropriate. (See <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleSpecAdvertisement</CODE></A> )
+ Use this form for a minimal advertisement, suitable
+ for development.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - -- the module spec id, "urn:jxta:uuid-[the big hex string]"<DD><CODE>moduleSpecName</CODE> - -- something like "JXTASPEC:JXTA-WIRE-MyNewThing-SPEC"<DD><CODE>moduleSpecDescription</CODE> - -- something like "JXTA-WIRE MyNewThing Specification"
+<DT><B>Returns:</B><DD>-- a boilerplate suitable for development.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+buildModuleSpecAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A> <B>buildModuleSpecAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;creator,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;version,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;specURI)</PRE>
+<DL>
+<DD>Use this form for production provided remote access is not required.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - -- the module spec id, "urn:jxta:uuid-[the big hex string]"<DD><CODE>moduleSpecName</CODE> - -- something like "JXTASPEC:JXTA-WIRE-MyNewThing-SPEC"<DD><CODE>moduleSpecDescription</CODE> - -- something like "JXTA-WIRE MyNewThing Specification"<DD><CODE>creator</CODE> - -- something like "jxta.org"<DD><CODE>version</CODE> - -- something like "Version 1.0"<DD><CODE>specURI</CODE> - -- where to locate the formal specs, e.g. "http://www.jxta.org/MyNewThing"
+<DT><B>Returns:</B><DD>-- a fully populated advert suitable if remote access is not required.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildModuleSpecAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, net.jxta.protocol.PipeAdvertisement, net.jxta.platform.ModuleSpecID, net.jxta.platform.ModuleSpecID, net.jxta.document.StructuredDocument)"><!-- --></A><H3>
+buildModuleSpecAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleSpecAdvertisement</A> <B>buildModuleSpecAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecName,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;moduleSpecDescription,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;creator,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;version,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;specURI,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/PipeAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;proxySpecID,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;authorizationSpecID,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true" title="class or interface in net.jxta.document">StructuredDocument</A>&nbsp;param)</PRE>
+<DL>
+<DD>Use this form for a fully populated advert.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - -- the module spec id, "urn:jxta:uuid-[the big hex string]"<DD><CODE>moduleSpecName</CODE> - -- something like "JXTASPEC:JXTA-WIRE-MyNewThing-SPEC"<DD><CODE>moduleSpecDescription</CODE> - -- something like "JXTA-WIRE MyNewThing Specification"<DD><CODE>creator</CODE> - -- something like "jxta.org"<DD><CODE>version</CODE> - -- something like "Version 2.0"<DD><CODE>specURI</CODE> - -- where to locate the formal specs, e.g. "http://www.jxta.org/MyNewThing"<DD><CODE>pipeAdv</CODE> - -- to make the module useable remotely (see <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleSpecAdvertisement</CODE></A>)<DD><CODE>proxySpecID</CODE> - -- sometimes required for remote use (see <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleSpecAdvertisement</CODE></A>)<DD><CODE>authorizationSpecID</CODE> - -- sometimes required for remote use (see <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleSpecAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleSpecAdvertisement</CODE></A>)<DD><CODE>param</CODE> - -- anything else
+<DT><B>Returns:</B><DD>-- a fully populated advert specifying remote access to module services.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildCompat()"><!-- --></A><H3>
+buildCompat</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A> <B>buildCompat</B>()</PRE>
+<DL>
+<DD>Compat's (compatibility statements) serve to narrow the search
+  for a ModuleImplAdvertisement. Basically you want something
+  compatible with your group's implementation. Use this form for
+  compatibilty with the current StdPeerGroup.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>-- boilerplate compat for StdPeerGroup</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildCompat(java.lang.String, java.lang.String)"><!-- --></A><H3>
+buildCompat</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLDocument.html?is-external=true" title="class or interface in net.jxta.document">XMLDocument</A> <B>buildCompat</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;efmt,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;bind)</PRE>
+<DL>
+<DD>Use this form for customized compatibility statements.
+ Alternatively a group's compat is accessible via
+ group.getCompat()
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>efmt</CODE> - -- something like "JDK1.4"<DD><CODE>bind</CODE> - -- something like "V1.0 Ref Impl"
+<DT><B>Returns:</B><DD>-- custom compatibility tag</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildModuleImplAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, net.jxta.document.Element)"><!-- --></A><H3>
+buildModuleImplAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>buildModuleImplAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;compat)</PRE>
+<DL>
+<DD>A ModuleImplAdvertisement represents one of any number of
+ published implementations of a given specification. Use this form
+ with for a development boilerplate. Use buildCompat() for a compat
+ boilerplate.
+ (See <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleImplAdvertisement</CODE></A>.)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - -- the module spec id<DD><CODE>code</CODE> - -- the module's fully qualified classname, "net.jxta.impl.wire.MyNewThing"<DD><CODE>compat</CODE> - -- a compatibility statement. Use buildCompat() for a boilerplate.
+<DT><B>Returns:</B><DD>-- a development boilerplate with custom compatibility.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildModuleImplAdvertisement(net.jxta.platform.ModuleSpecID, java.lang.String, net.jxta.document.Element, java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+buildModuleImplAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>buildModuleImplAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;msid,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;code,
+                                                                   <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&nbsp;compat,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;description,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;provider,
+                                                                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;uri)</PRE>
+<DL>
+<DD>Use this form to fully populate a ModuleImplAdvertisement.
+ A ModuleImplAdvertisement has an optional field, "param" which is
+ neglected here. If needed it should be set with advert's setParam method.
+ (See <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol"><CODE>ModuleImplAdvertisement</CODE></A>.)
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msid</CODE> - -- the module spec id<DD><CODE>code</CODE> - -- the module's fully qualified classname, "net.jxta.impl.wire.MyNewThing"<DD><CODE>compat</CODE> - -- a compatibility statement<DD><CODE>description</CODE> - -- something like "MyNewThing Module, J2SE Implementation"<DD><CODE>provider</CODE> - -- something like "jxta.org"<DD><CODE>uri</CODE> - -- currently ornamental, eventually where to find binaries.
+<DT><B>Returns:</B><DD>-- a custom advert, fully populated except for "param" field.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildPeerGroupImplAdvertisement(net.jxta.impl.peergroup.StdPeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map)"><!-- --></A><H3>
+buildPeerGroupImplAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>buildPeerGroupImplAdvertisement</B>(<A HREF="../../../../net/jxta/impl/peergroup/StdPeerGroup.html" title="class in net.jxta.impl.peergroup">StdPeerGroup</A>&nbsp;parent,
+                                                                      <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices)
+                                                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></PRE>
+<DL>
+<DD>Modifies a copy of the parent's implementation
+ advertisement to reflect the addition or replacement of
+ services.  The newServices Hashtable must have ModuleClassID
+ keys and ModuleImplAdvertisement values. I've deferred adding
+ applications or protocols for the moment --vasha@jxta.org Dec 3 2001.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - -- a running instance of the new group's parent<DD><CODE>newGroupModuleSpecID</CODE> - -- since new or replacement services are involved<DD><CODE>newDescription</CODE> - -- the new group's reason to be<DD><CODE>newServices</CODE> - -- advert's for the new services
+<DT><B>Returns:</B><DD>-- advert for the new peergroup which the StdPeerGroup module will implement.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - -- for a bad key or value type
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></CODE> - --- if the parent can't produce a copy of its own impl advert</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildPeerGroupImplAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map, java.util.Map)"><!-- --></A><H3>
+buildPeerGroupImplAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>buildPeerGroupImplAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parent,
+                                                                      <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newApps)
+                                                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildPeerGroupImplAdvertisement(net.jxta.peergroup.PeerGroup, net.jxta.platform.ModuleSpecID, java.lang.String, java.util.Map, java.util.Map, java.util.Map)"><!-- --></A><H3>
+buildPeerGroupImplAdvertisement</H3>
+<PRE>
+public static <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/protocol/ModuleImplAdvertisement.html?is-external=true" title="class or interface in net.jxta.protocol">ModuleImplAdvertisement</A> <B>buildPeerGroupImplAdvertisement</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parent,
+                                                                      <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A>&nbsp;newGroupModuleSpecID,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;newDescription,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newServices,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newApps,
+                                                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;newProtos)
+                                                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="typeCheckValues(java.util.Map)"><!-- --></A><H3>
+typeCheckValues</H3>
+<PRE>
+public static void <B>typeCheckValues</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;moduleTable)</PRE>
+<DL>
+<DD>Module table vaules must be ModuleImplAdvertisements here.
+ Though StdPeerGroup allows for values of type ModuleSpecID,
+ the context in which they seem to apply is not our context of adding
+ or replacing modules, so I've prohibited them. --vasha@jxta.org dec 3 2001.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>moduleTable</CODE> - -- a Hashtable of services, applications or protocols.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - -- for an invalid key or value type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="typeCheckKeys(java.util.Map)"><!-- --></A><H3>
+typeCheckKeys</H3>
+<PRE>
+public static void <B>typeCheckKeys</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&nbsp;moduleTable)</PRE>
+<DL>
+<DD>Module table keys must be ModuleClassID's.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>moduleTable</CODE> - -- a Hashtable of services, applications or protocols.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - -- for an invalid key or value type</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/AdvCooker.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ACLSeedingManager.html" title="class in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/Base64.html" title="class in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/AdvCooker.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AdvCooker.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

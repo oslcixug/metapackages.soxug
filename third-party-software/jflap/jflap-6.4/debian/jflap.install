@@ -1,0 +1,3 @@
+bin/* usr/bin
+lib/* usr/share/jflap
+share/*.desktop usr/share/applications

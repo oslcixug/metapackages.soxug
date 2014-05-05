@@ -1,0 +1,10 @@
+Document: libjxta-java
+Title: Programmer AOI for JXTA V2.5
+Author: 
+Abstract: JXTA™ technology to create peer-to-peer 
+ (P2P) applications based on Java technology
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libjxta-java/html/api/index.html
+Files: /usr/share/doc/libjxta-java/html/api/*.html

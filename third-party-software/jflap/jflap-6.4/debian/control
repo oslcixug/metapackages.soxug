@@ -1,0 +1,17 @@
+Source: jflap
+Section: dev
+Priority: optional
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Homepage: http://www.jflap.org/
+
+Package: jflap
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre | sun-java6-jre | java2-runtime
+Description: Software for automata design and Turing machines
+ JFLAP is software for experimenting with formal 
+ languages topics including nondeterministic finite
+ automata, nondeterministic pushdown automata, multi-tape
+ Turing machines, several types of grammars, parsing,
+ and L-systems

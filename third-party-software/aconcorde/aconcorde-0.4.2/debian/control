@@ -1,0 +1,12 @@
+Source: aconcorde
+Section: unknown
+Priority: extra
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+
+Package: aconcorde
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre
+Description: Aconcorde application
+ Aconcorde linguistic application

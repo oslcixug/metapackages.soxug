@@ -1,0 +1,11 @@
+chipmunk (0.1-1ubuntu2) karmic; urgency=low
+
+  * Added icon on application menu list
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Wed, 19 Aug 2009 13:44:08 +0200
+
+chipmunk (0.1-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Tue, 18 Aug 2009 11:11:40 +0200

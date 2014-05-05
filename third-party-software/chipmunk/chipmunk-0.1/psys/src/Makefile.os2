@@ -1,0 +1,170 @@
+
+# "PSYS", p-system emulation libraries for the Caltech tools,
+#
+#   Copyright (C) 1983, 1990, 1993 California Institute of Technology.
+#   Authors: Dave Gillespie, Rick Koshi, Glenn Gribble, Adam Greenblatt
+#   Maintainers: John Lazzaro and Dave Gillespie
+#   Maintainers's address: lazzaro@cs.berkeley.edu;
+#                          EECS/571 Evans Hall/UCB/Berkeley CA 94720
+#                          daveg@synaptics.com;
+#                          Send questions, bug fixes, to these addresses.
+#
+#
+#This program is free software; you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation (Version 1, 1989).
+#
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with this program; see the file COPYING.  If not, write to
+#the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. */
+
+# Makefile for Chipmunk CAD Pascal emulation libraries.  Version 1.59
+
+##
+## OS Makefile changes made by Michael Godfrey, godfrey@isl.stanford.edu
+##
+##
+## Comment blocks in this Makefile point to possible changes that need
+## to be made for different OS installations. Its a good idea to look it
+## over first before starting your compilation
+
+## if your OS/2 doesn't have these common Unix commands installed, you'l
+## need to change these definitions.
+
+CD = cd
+CP = copy
+CPR = xcopy
+RM = rm
+RMF = rm -f
+
+# replace these two definitions with absolute paths for your system
+
+LIBDIR = E:\lib
+BINDIR = ..\..\bin
+
+# 
+
+
+LIB = ..\libp2c.a.lib
+
+LOCINC = ..\include
+XINCLUDEDIR = e:\x11\include
+
+##
+##  (1) Choosing your compiler
+##  ---------------------------
+##
+## The original OS/2 port was done with the icc compiler; while we expect
+## only changes for the differences in compiler flags, it might be possible
+## source or Makefile changes will be needed as well. Please let us know of
+## any such changes if you are using a different compiler, so we can update
+## the release.
+
+OBJ = obj
+
+CHIPMUNKCC = icc
+
+OBJS = sysdevs.$(OBJ) \
+       rnd.$(OBJ) \
+      markrelease.$(OBJ) \
+      misc.$(OBJ) \
+      newci.$(OBJ) \
+      mamplot.$(OBJ) \
+      plot.$(OBJ) \
+      filepack.$(OBJ) \
+      fs.$(OBJ) \
+      iodecl.$(OBJ) \
+      loader.$(OBJ) \
+      lunix_pas.$(OBJ) \
+      newtablet.$(OBJ) \
+      general_1.$(OBJ) \
+      general_2.$(OBJ) \
+      general_3.$(OBJ) \
+      hpib_2.$(OBJ) \
+      mylib.$(OBJ) \
+      newkbd.$(OBJ) \
+      newasmlib.$(OBJ) \
+      newcrt.$(OBJ) \
+      math.$(OBJ) \
+      regex.$(OBJ) \
+      numex.$(OBJ) \
+      p2clib.$(OBJ) \
+      loc.p2clib.$(OBJ)
+
+LOBJS = +sysdevs.$(OBJ) \
+       +rnd.$(OBJ) \
+      +markrelease.$(OBJ) \
+      +misc.$(OBJ) \
+      +newci.$(OBJ) \
+      +mamplot.$(OBJ) \
+      +plot.$(OBJ) \
+      +filepack.$(OBJ) \
+      +fs.$(OBJ) \
+      +iodecl.$(OBJ) \
+      +loader.$(OBJ) \
+      +lunix_pas.$(OBJ) \
+      +newtablet.$(OBJ) \
+      +general_1.$(OBJ) \
+      +general_2.$(OBJ) \
+      +general_3.$(OBJ) \
+      +hpib_2.$(OBJ) \
+      +mylib.$(OBJ) \
+      +newkbd.$(OBJ) \
+      +newasmlib.$(OBJ) \
+      +newcrt.$(OBJ) \
+      +math.$(OBJ) \
+      +regex.$(OBJ) \
+      +numex.$(OBJ) \
+      +p2clib.$(OBJ) \
+      +loc.p2clib.$(OBJ)
+
+
+CC = $(CHIPMUNKCC)
+
+CD = cd
+
+
+##
+## (3) Adding appropriate flags
+## -----------------------------
+##
+## The CFLAGS below should be correct for compilation with the icc compiler.
+## Note the function of these two special flags:
+##
+##  -Ti   for symbolic debug
+##  -O+   for optimizer
+##
+
+CFLAGS = -O+ -Wpro- -Ti -Sa -Ms -Ss -Gm -DOS2 -I$(LOCINC) -I$(XINCLUDEDIR) -DCHIPLIB="\"$(LIBDIR)\"" -q -Se
+
+P2CFLAGS = -DLOCAL_INIT=_local_p2c_init
+
+
+all: setup libp2c.a
+
+setup:
+	-mkdir $(LIBDIR)
+
+install: setup all
+	$(CP) libp2c.a.lib $(LIB)
+	$(CP) texstuff.ps $(LIBDIR)
+	$(CP) untilstuff.ps $(LIBDIR)
+	$(CP) plot.font $(LIBDIR)
+	-mkdir $(BINDIR)
+
+libp2c.a: $(OBJS)
+	-$(RM) libp2c.a.lib
+	ilib /q /NOI /NOE libp2c.a.lib +e:\tcpip\lib\Xlib_Globals.obj +e:\tcpip\lib\Xext_Globals.obj $(LOBJS),,
+
+
+p2clib.$(OBJ): p2clib.c
+	$(CC) -c $(CFLAGS) $(P2CFLAGS) p2clib.c
+
+clean:
+	-$(RM) -f *.$(OBJ) libp2c.a.lib ../libp2c.a.lib
+ 

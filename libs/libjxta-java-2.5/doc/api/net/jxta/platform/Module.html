@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Module (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Module (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Module.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/JxtaLoader.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/Module.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Module.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.platform</FONT>
+<BR>
+Interface Module</H2>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../net/jxta/access/AccessService.html" title="interface in net.jxta.access">AccessService</A>, <A HREF="../../../net/jxta/platform/Application.html" title="interface in net.jxta.platform">Application</A>, <A HREF="../../../net/jxta/discovery/DiscoveryService.html" title="interface in net.jxta.discovery">DiscoveryService</A>, <A HREF="../../../net/jxta/endpoint/EndpointService.html" title="interface in net.jxta.endpoint">EndpointService</A>, <A HREF="../../../net/jxta/membership/MembershipService.html" title="interface in net.jxta.membership">MembershipService</A>, <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>, <A HREF="../../../net/jxta/peer/PeerInfoService.html" title="interface in net.jxta.peer">PeerInfoService</A>, <A HREF="../../../net/jxta/pipe/PipeService.html" title="interface in net.jxta.pipe">PipeService</A>, <A HREF="../../../net/jxta/rendezvous/RendezVousService.html" title="interface in net.jxta.rendezvous">RendezVousService</A>, <A HREF="../../../net/jxta/resolver/ResolverService.html" title="interface in net.jxta.resolver">ResolverService</A>, <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A>, <A HREF="../../../net/jxta/meter/ServiceMonitor.html" title="interface in net.jxta.meter">ServiceMonitor</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../net/jxta/peergroup/LightWeightPeerGroup.html" title="class in net.jxta.peergroup">LightWeightPeerGroup</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>Module</B></DL>
+</PRE>
+
+<P>
+Defines the interface for modules loaded by PeerGroups. Message transports,
+ services and applications need to implement this interface if they are
+ to be loaded and started by a PeerGroup. Service and Application extend
+ Module, PeerGroup implements Service and ShellApp implements Application, as
+ a result both implement Module.
+
+ <p/>Jxta Modules are given their initialization parameters via the init()
+ method rather than a non-default constructor.
+
+ <p/>Modules are passed the peer group within which they are created.
+ From the peergroup object, Modules can access all the peer group
+ services. The PeerGroup within which a PeerGroup runs is known as its
+ parent.
+
+ <p/>The initial root peer group is known as the World Peer Group and is
+ implemented by an object of class Platform, a subclass of PeerGroup.
+ The "parent" PeerGroup of the World Peer Group is null.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol"><CODE>ModuleImplAdvertisement</CODE></A>, 
+<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform"><CODE>ModuleClassID</CODE></A>, 
+<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A>, 
+<A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document"><CODE>Advertisement</CODE></A>, 
+<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id"><CODE>ID</CODE></A>, 
+<A HREF="../../../net/jxta/platform/Application.html" title="interface in net.jxta.platform"><CODE>Application</CODE></A>, 
+<A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service"><CODE>Service</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS">START_AGAIN_PROGRESS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to be used mostly by co-dependent services when started as
+ a set (such as <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> services) so that their
+ <code>startApp()</code> method may be invoked multiple times.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED">START_AGAIN_STALLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to be used mostly by co-dependent services when started as
+ a set (such as <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> services) so that their startApp
+ method may be invoked multiple times.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#START_DISABLED">START_DISABLED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This return result is used to indicate that the module refuses to start
+ because it has been configured to be disabled or otherwise cannot run
+ (missing hardware, missing system resources, etc.)</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#START_OK">START_OK</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>startApp()</code> completed successfully.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+     <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+     <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;implAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize the module, passing it its peer group and advertisement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complete any remaining initialization of the module.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/Module.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stop a module.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="START_OK"><!-- --></A><H3>
+START_OK</H3>
+<PRE>
+static final int <B>START_OK</B></PRE>
+<DL>
+<DD><code>startApp()</code> completed successfully. This module claims to now
+ be fully functional and no further invocation of startApp is required.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.Module.START_OK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="START_AGAIN_PROGRESS"><!-- --></A><H3>
+START_AGAIN_PROGRESS</H3>
+<PRE>
+static final int <B>START_AGAIN_PROGRESS</B></PRE>
+<DL>
+<DD>This is to be used mostly by co-dependent services when started as
+ a set (such as <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> services) so that their
+ <code>startApp()</code> method may be invoked multiple times.
+
+ <p/>This value indicates that startApp must be retried later in order for
+ this module to become fully functional. However, some progress in
+ functionality was accomplished.
+
+ <p/>This is a strong indication that some other modules may be able
+ to advance or complete their initialization if their
+ <code>startApp()</code> method is invoked again.
+
+ <p/>The distinction between START_AGAIN_STALLED and START_AGAIN_PROGRESS
+ is only a hint. Each module makes an arbitrary judgment in this
+ respect. It is up to the invoker of startApp to ensure that the
+ starting of a set of modules eventually succeeds or fails.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.Module.START_AGAIN_PROGRESS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="START_AGAIN_STALLED"><!-- --></A><H3>
+START_AGAIN_STALLED</H3>
+<PRE>
+static final int <B>START_AGAIN_STALLED</B></PRE>
+<DL>
+<DD>This is to be used mostly by co-dependent services when started as
+ a set (such as <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> services) so that their startApp
+ method may be invoked multiple times.
+
+ <p/>This value indicates that startApp must be retried later in order for
+ this module to become fully functional. However, some progress in
+ functionality was accomplished.
+
+ <p/>If all modules in a set return this value, it is a strong indication
+ that the modules co-dependency is such that it prevents them
+ collectively from starting.
+
+ <p/>The distinction between START_AGAIN_STALLED and START_AGAIN_PROGRESS
+ is only a hint. Each module makes an arbitrary judgment in this
+ respect. It is up to the invoker of startApp to ensure that the
+ starting of a set of modules eventually succeeds or fails.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.Module.START_AGAIN_STALLED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="START_DISABLED"><!-- --></A><H3>
+START_DISABLED</H3>
+<PRE>
+static final int <B>START_DISABLED</B></PRE>
+<DL>
+<DD>This return result is used to indicate that the module refuses to start
+ because it has been configured to be disabled or otherwise cannot run
+ (missing hardware, missing system resources, etc.) The module will not be
+ functional and should be discarded but the failure to load may be ignored 
+ by the loader at it's discretion.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.platform.Module.START_DISABLED">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)"><!-- --></A><H3>
+init</H3>
+<PRE>
+void <B>init</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+          <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;assignedID,
+          <A HREF="../../../net/jxta/document/Advertisement.html" title="class in net.jxta.document">Advertisement</A>&nbsp;implAdv)
+          throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Initialize the module, passing it its peer group and advertisement.
+
+ <p/>Note: when subclassing one of the existing PeerGroup implementations
+ (which implement Module), it may not be recommended to overload the init
+ method. See the documentation of the PeerGroup class being subclassed.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - The PeerGroup from which this Module can obtain services.
+  If this module is a Service, this is also the PeerGroup of which this
+  module is a service.<DD><CODE>assignedID</CODE> - Identity of Module within group.
+  modules can use it as a the root of their namespace to create
+  names that are unique within the group but predictable by the
+  same module on another peer. This is normally the ModuleClassID
+  which is also the name under which the module is known by other
+  modules. For a group it is the PeerGroupID itself.
+  The parameters of a service, in the Peer configuration, are indexed
+  by the assignedID of that service, and a Service must publish its
+  run-time parameters in the Peer Advertisement under its assigned ID.<DD><CODE>implAdv</CODE> - The implementation advertisement for this
+  Module. It is permissible to pass null if no implementation
+  advertisement is available. This may happen if the
+  implementation was selected by explicit class name rather than
+  by following an implementation advertisement. Modules are not
+  required to support that style of loading, but if they do, then
+  their documentation should mention it.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - This module failed to initialize.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;args)</PRE>
+<DL>
+<DD>Complete any remaining initialization of the module. The module should
+ be fully functional after <code>startApp()</code> is completed. That is
+ also the opportunity to supply arbitrary arguments (mostly to
+ applications).
+
+ <p/>If this module is a <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A> service, it may be invoked
+ several times depending on its return value.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>args</CODE> - An array of Strings forming the parameters for this
+ Module.
+<DT><B>Returns:</B><DD>int A status indication which may be one of
+ <A HREF="../../../net/jxta/platform/Module.html#START_OK"><CODE>START_OK</CODE></A>, <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS"><CODE>START_AGAIN_PROGRESS</CODE></A>,
+ <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED"><CODE>START_AGAIN_STALLED</CODE></A>, which indicates partial or complete
+ success, or any other value (negative values are
+ recommended for future compatibility), which indicates failure.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Stop a module. This may be called any time after <code>init()</code>
+  completes and should not assume that <code>startApp()</code> has been
+  called or completed.
+
+  <p/>The Module cannot be forced to comply, but in the future
+  we might be able to deny it access to anything after some timeout.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Module.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/JxtaLoader.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/Module.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Module.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,717 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ResourceDispatcher.ClientAccount (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ResourceDispatcher.ClientAccount (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResourceDispatcher.ClientAccount.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html" title="class in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/SeedingManager.html" title="interface in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/ResourceDispatcher.ClientAccount.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResourceDispatcher.ClientAccount.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.util</FONT>
+<BR>
+Class ResourceDispatcher.ClientAccount</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../net/jxta/impl/util/Dlink.html" title="class in net.jxta.impl.util">net.jxta.impl.util.Dlink</A>
+      <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.util.ResourceDispatcher.ClientAccount</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></DD>
+</DL>
+<DL>
+<DT><B>Enclosing class:</B><DD><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html" title="class in net.jxta.impl.util">ResourceDispatcher</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE> class <B>ResourceDispatcher.ClientAccount</B><DT>extends <A HREF="../../../../net/jxta/impl/util/Dlink.html" title="class in net.jxta.impl.util">Dlink</A><DT>implements <A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#ResourceDispatcher.ClientAccount(long, long, long, java.lang.Object)">ResourceDispatcher.ClientAccount</A></B>(long&nbsp;fromReservedItems,
+                                 long&nbsp;fromExtraItems,
+                                 long&nbsp;extraLimit,
+                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;userObject)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a client account with this resource manager.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#beEligible()">beEligible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Put that account in the queue of accounts eligible to
+ receive a resource when one becomes available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tear down this account.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <p/>Will close the account.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#getNbReserved()">getNbReserved</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of reserved items that can still be obtained by
+ this account.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#getUserObject()">getUserObject</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#inNeed(boolean)">inNeed</A></B>(boolean&nbsp;needs)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call this with true as soon as this account needs a new item.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#isEligible()">isEligible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#isIdle()">isIdle</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tells if this account is idle (that is, none of the resources
+ that it controls are currently in use).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#notEligible()">notEligible</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove that account from the queue of accounts eligible to
+ receive a resource when one becomes available.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#obtainItem()">obtainItem</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try and grant a new item to this account.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#obtainQuantity(long)">obtainQuantity</A></B>(long&nbsp;quantity)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try and grant a certain quantity.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#releaseItem()">releaseItem</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will release an item and return the most eligible account to
+ re-use this item for.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#releaseQuantity(long)">releaseQuantity</A></B>(long&nbsp;quantity)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will release a number of items at once rather than
+ once.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#setUserObject(java.lang.Object)">setUserObject</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the userObject associated with that account.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <p/>Returns some human-readable status and identity information useful for debugging.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.util.Dlink"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.util.<A HREF="../../../../net/jxta/impl/util/Dlink.html" title="class in net.jxta.impl.util">Dlink</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../net/jxta/impl/util/Dlink.html#isLinked()">isLinked</A>, <A HREF="../../../../net/jxta/impl/util/Dlink.html#linkNewNext(net.jxta.impl.util.Dlink)">linkNewNext</A>, <A HREF="../../../../net/jxta/impl/util/Dlink.html#linkNewPrev(net.jxta.impl.util.Dlink)">linkNewPrev</A>, <A HREF="../../../../net/jxta/impl/util/Dlink.html#next()">next</A>, <A HREF="../../../../net/jxta/impl/util/Dlink.html#prev()">prev</A>, <A HREF="../../../../net/jxta/impl/util/Dlink.html#unlink()">unlink</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ResourceDispatcher.ClientAccount(long, long, long, java.lang.Object)"><!-- --></A><H3>
+ResourceDispatcher.ClientAccount</H3>
+<PRE>
+<B>ResourceDispatcher.ClientAccount</B>(long&nbsp;fromReservedItems,
+                                 long&nbsp;fromExtraItems,
+                                 long&nbsp;extraLimit,
+                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;userObject)</PRE>
+<DL>
+<DD>Creates a client account with this resource manager.
+ Not for external use.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>fromReservedItems</CODE> - <DD><CODE>fromExtraItems</CODE> - <DD><CODE>extraLimit</CODE> - <DD><CODE>userObject</CODE> - </DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public void <B>close</B>()</PRE>
+<DL>
+<DD>Tear down this account.
+ Releases all reserved resources.
+
+ <p/>To accelerate return of resources to the global pool, one
+ may call close() explicitly. Otherwise it is called by
+ <code>finalize</code>.
+
+ <p/>Calling close() or letting the account be GC'ed while some of the
+ resources have not been returned is an error, may create a leak and
+ may display a warning message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#close()">close</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>
+
+  <p/>Will close the account. (close is idempotent).
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isIdle()"><!-- --></A><H3>
+isIdle</H3>
+<PRE>
+public boolean <B>isIdle</B>()</PRE>
+<DL>
+<DD>Tells if this account is idle (that is, none of the resources
+ that it controls are currently in use). This means it can be closed
+ safely.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#isIdle()">isIdle</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEligible()"><!-- --></A><H3>
+isEligible</H3>
+<PRE>
+public boolean <B>isEligible</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="beEligible()"><!-- --></A><H3>
+beEligible</H3>
+<PRE>
+public void <B>beEligible</B>()</PRE>
+<DL>
+<DD>Put that account in the queue of accounts eligible to
+ receive a resource when one becomes available.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="notEligible()"><!-- --></A><H3>
+notEligible</H3>
+<PRE>
+public void <B>notEligible</B>()</PRE>
+<DL>
+<DD>Remove that account from the queue of accounts eligible to
+ receive a resource when one becomes available.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="obtainQuantity(long)"><!-- --></A><H3>
+obtainQuantity</H3>
+<PRE>
+public boolean <B>obtainQuantity</B>(long&nbsp;quantity)</PRE>
+<DL>
+<DD>Try and grant a certain quantity.
+
+ <p/>It is useful to manage the allocation of variable sized aggregates
+ when what matters is the cummulated quantity rather than an item
+ count. Quantity could be a number of bytes needed to store
+ something for example. The advantage of using this method rather
+ than obtainItem repeatedly is that it is obvisouly faster if
+ quantity is more than one or two, and also that it is atomic;
+ the entire quantity is either granted or denied.
+ Using this routine is by definition incompatible with the round-robin
+ mode, which could only re-assign quantities of 1.
+
+ <p/>It is legal to use this routine along with round-robin mode if the
+ same dispatcher is used to manage quantities of 1 in this manner,
+ but an account that has failed to obtain its desired quantity is
+ not queued for later re-assignment. And items released with
+ releaseQuantity() are not re-assigned, so overall it is
+ probably best to not mix the two.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#obtainQuantity(long)">obtainQuantity</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>quantity</CODE> - The number of units wanted. The unit is arbitrary
+ It is only meaningfull to the code that uses this dispatcher.
+<DT><B>Returns:</B><DD>boolean whether the requested quantity is authorized.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="obtainItem()"><!-- --></A><H3>
+obtainItem</H3>
+<PRE>
+public boolean <B>obtainItem</B>()</PRE>
+<DL>
+<DD>Try and grant a new item to this account. If it cannot be done,
+ the account may be eligible for the next available extra item.
+ The account is automatically set to be in need, as if inNeed(true)
+ has been invoked.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#obtainItem()">obtainItem</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>boolean true if an item was granted, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="releaseQuantity(long)"><!-- --></A><H3>
+releaseQuantity</H3>
+<PRE>
+public void <B>releaseQuantity</B>(long&nbsp;quantity)</PRE>
+<DL>
+<DD>This will release a number of items at once rather than
+ once. To be used in conjunctino with obtainItems(). See that
+ method.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#releaseQuantity(long)">releaseQuantity</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>quantity</CODE> - the number of items to be released.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="releaseItem()"><!-- --></A><H3>
+releaseItem</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A> <B>releaseItem</B>()</PRE>
+<DL>
+<DD>This will release an item and return the most eligible account to
+ re-use this item for. The account that is returned has been granted
+ the item and thus the invoker is expected to do with this account
+ whatever an invoker of obtainItem() would do in case of success.
+ If the items that are managed are threads, the invoker is
+ likely to be one these threads and it should therefore process
+ the returned account as it did the one for which it was calling
+ releaseItem, however be very carefull not to process the new account
+ in the context of the old one; that would rapidly lead to stack
+ overflow. In other words, be carefull of not making a construct
+ equivalent to:
+
+ <p/><pre>
+ process() {
+   doStuff();
+   myAccount.releaseItem().getUserObject().process();
+ }
+ </pre>
+
+ That won't work. Instead do:
+
+ <p/><pre>
+ work() {
+  while (myAccount != null) {
+   myAccount.getUserObject().doStuff();
+   myAccount = myAccount.releaseItem();
+  }
+ }
+ </pre>
+
+ <p/>Or similar; always go back to base stack level.
+ It is mandatory to handle accounts returned by <code>releaseItem()</code>.
+ If handling leads to releaseItem, then it has to be done in a
+ forever loop. That is typical if the items are threads.
+ That is normally not happening if the items are only memory.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#releaseItem()">releaseItem</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>ResourceAccount the account to which the released item
+ has been re-assigned. null if the released item was not re-assigned.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="inNeed(boolean)"><!-- --></A><H3>
+inNeed</H3>
+<PRE>
+public void <B>inNeed</B>(boolean&nbsp;needs)</PRE>
+<DL>
+<DD>Call this with true as soon as this account needs a new item.
+ Call this with false as soon as this account has all that it needs.
+ For proper operation, this must be done.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#inNeed(boolean)">inNeed</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>needs</CODE> - Whether the account needs a new item or not.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUserObject()"><!-- --></A><H3>
+getUserObject</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>getUserObject</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#getUserObject()">getUserObject</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Object The userObject that was supplied when creating the
+ account.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUserObject(java.lang.Object)"><!-- --></A><H3>
+setUserObject</H3>
+<PRE>
+public void <B>setUserObject</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
+<DL>
+<DD>Set the userObject associated with that account.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#setUserObject(java.lang.Object)">setUserObject</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNbReserved()"><!-- --></A><H3>
+getNbReserved</H3>
+<PRE>
+public long <B>getNbReserved</B>()</PRE>
+<DL>
+<DD>Returns the number of reserved items that can still be obtained by
+ this account.
+
+ <p/>If that number is negative or zero, it means that all reserved
+ items are currently in use. Still more items might still be obtained
+ from the extra items pool.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html#getNbReserved()">getNbReserved</A></CODE> in interface <CODE><A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long The number of reserved items.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+
+  <p/>Returns some human-readable status and identity information useful for debugging.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResourceDispatcher.ClientAccount.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html" title="class in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/SeedingManager.html" title="interface in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/ResourceDispatcher.ClientAccount.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResourceDispatcher.ClientAccount.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

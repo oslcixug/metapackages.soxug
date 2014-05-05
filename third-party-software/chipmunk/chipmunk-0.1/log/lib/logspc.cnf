@@ -1,0 +1,80 @@
+
+{ Default configuration for LOGSPC, the LOG-to-SPC file converter }
+{ To be included by LOG.CNF }
+
+tool logspc logspc "LOG-to-SPC converter"
+
+command logspc     logspc  logspc:  identify
+
+logspc: trans  nfet   n            {name, type, [strength]}
+logspc: trans  pfet   p
+logspc: trans  dnfet  d  1
+
+logspc: trans  nfet4  n            {AnaLOG symbols}
+logspc: trans  pfet4  p
+
+logspc: trans  nfet5  n            {AnaLOG symbols}
+logspc: trans  pfet5  p
+
+logspc: trans  pfet6  z		   {AnaLOG symbols}
+
+logspc: trans  nfet7t  i            {AnaLOG symbols}
+logspc: trans  pfet7t  j
+
+logspc: trans  nfet7f  k            {AnaLOG symbols}
+logspc: trans  pfet7f  l
+
+logspc: trans  nspc1  x            {AnaLOG symbols}
+logspc: trans  pspc1  y
+
+
+logspc: trans  resfloat  r	   {AnaLOG symbols}
+logspc: trans  capfloat  c
+logspc: trans  npn1      a
+logspc: trans  pnp1	 b
+logspc: trans  npn2      a
+logspc: trans  pnp2	 b
+logspc: trans  diode1	 e
+logspc: trans  vdiff     v
+logspc: trans  idiff	 h
+
+logspc: trans  v_nfet  n           {Digital LOG symbols}
+logspc: trans  v_pfet  p
+logspc: trans  v_nfetd n
+logspc: trans  v_pfetd p
+logspc: trans  v_nfetx n
+logspc: trans  v_pfetx p
+
+logspc: size      1                {default node size}
+logspc: strength  2                {default transistor strength}
+
+logspc: lambda    1.0              {for FET7 series, lambda in units of micron}
+
+logspc: chlen 1.0		   {for FET4/FET5/FET6 series, channel length}
+				   {in microns}
+
+logspc: global   Gnd Vdd           {automatically generated ports}
+
+logspc: orphan   circ*             {gate(s) for generating "orphan" nodes}
+
+{logspc: lib /usr/ug/lib/chiplib/log/spc}  {place to find library .spc files}
+
+{logspc: cell tcamp opamp}           {gate name, [cell name], [SPC file name] }
+
+logspc: ignore   arrow1 arrow2 crunch* cross*
+logspc: ignore   to from vdd gnd time numbers digh
+
+{logspc: digital switch switch      {Built-in switches convert to Vdd or Gnd}
+
+logspc: primitive a_* *             {other ACTEL gates}
+logspc: primitive a_tribuf tribuff  {a_tribuff is too long for LOG!}
+
+{ comment out these lines to use logspc to produce output suitable       }
+{ for the Tanner Inc tool lvs -- change first to point to this directory }
+
+{logspc: lib /usr/chipmunk/log/lib/}  
+{logspc: pre}
+{logspc: post ledit_models}
+
+
+

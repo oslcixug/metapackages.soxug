@@ -1,0 +1,18 @@
+dssp-installer (0.1-2ubuntu1) UNRELEASED; urgency=low
+
+  * Redistribution
+
+ -- CIXUG Developers <osl@cixug.es>  Fri, 19 Oct 2012 00:25:52 +0200
+
+dssp-installer (0.1-2) karmic; urgency=low
+
+  * Added bin file
+  * Dropped postinstallation script
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Mon, 16 Nov 2009 08:52:43 +0100
+
+dssp-installer (0.1-1) jaunty; urgency=low
+
+  * Initial release
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Wed, 04 Nov 2009 12:36:35 +0100

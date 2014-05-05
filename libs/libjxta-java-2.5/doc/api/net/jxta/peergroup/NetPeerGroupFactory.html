@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+NetPeerGroupFactory (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="NetPeerGroupFactory (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetPeerGroupFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/peergroup/LightWeightPeerGroup.html" title="class in net.jxta.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/peergroup/NetPeerGroupFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetPeerGroupFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.peergroup</FONT>
+<BR>
+Class NetPeerGroupFactory</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.peergroup.NetPeerGroupFactory</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>NetPeerGroupFactory</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+A factory for instantiating a Network Peer Group instances. The Network Peer
+ Group is the base peer group for applications and services within the JXTA
+ network. Most applications and services will instantiate their own peer
+ groups using the Network Peer Group as a base.
+ <p/>
+ A non-default configuration of <em>The Network Peer Group</em> may be
+ set-up by the administrator in charge of the network domain inside which the
+ peer is starting. <em>The Network Peer Group</em> may be discovered via the
+ JXTA Discovery protocol. Many such groups may be configured by an
+ administrator.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>JXTA JSE 2.4</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A>, 
+<A HREF="../../../net/jxta/peergroup/WorldPeerGroupFactory.html" title="class in net.jxta.peergroup"><CODE>WorldPeerGroupFactory</CODE></A></DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory()">NetPeerGroupFactory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiates the Net Peer Group using the ConfigParams found in the
+ directory specified by the <code>JXTA_HOME</code> system property or the
+ "<code>.jxta/</code>" directory if <code>JXTA_HOME</code> is not defined.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.protocol.ConfigParams, java.net.URI)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a Net Peer Group and the World Peer Group using the
+ configuration specified by the provided ConfigParams and using the
+ specified storeHome location for persistence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.protocol.ConfigParams, java.net.URI, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome,
+                    <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                    <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.peergroup.PeerGroup)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a Net Peer Group using the specified parent peer group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.protocol.ConfigParams, net.jxta.protocol.ModuleImplAdvertisement)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                    <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                    <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A>&nbsp;moduleImplAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a Net Peer Group instance using the specified parent peer
+ group (normally the World Peer Group).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.protocol.ConfigParams, java.net.URI)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                    <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a Net Peer Group and the World Peer Group using the
+ configuration specified by the provided ConfigParams and using the
+ specified storeHome location for persistence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                    <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                    <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement, net.jxta.protocol.ModuleImplAdvertisement)">NetPeerGroupFactory</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                    <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                    <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc,
+                    <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A>&nbsp;moduleImplAdv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#getInterface()">getInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a strong (reference counted) interface object for the Net Peer
+ Group instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/peergroup/NetPeerGroupFactory.html#getWeakInterface()">getWeakInterface</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a weak (non-reference counted) interface object for the Net Peer Group.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="NetPeerGroupFactory()"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+public <B>NetPeerGroupFactory</B>()
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Instantiates the Net Peer Group using the ConfigParams found in the
+ directory specified by the <code>JXTA_HOME</code> system property or the
+ "<code>.jxta/</code>" directory if <code>JXTA_HOME</code> is not defined.
+ <p/>
+ This constructor is provided primarily for backwards compatibility.
+ Though not deprecated this method should be considered as sample code
+ only and the other constructors should be used whenever possible.
+<P>
+<DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.peergroup.PeerGroup)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Constructs a Net Peer Group using the specified parent peer group. This
+ is the preferred constructor for constructing a Net Peer Group using the
+ default configuration. The resulting Net Peer Group instance will use
+ the default ID, Name and Description.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>parentGroup</CODE> - The Peer Group which will be the parent of the newly
+ created net peer group. This should normally be the World Peer Group.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.protocol.ConfigParams, java.net.URI)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Constructs a Net Peer Group and the World Peer Group using the
+ configuration specified by the provided ConfigParams and using the
+ specified storeHome location for persistence. The resulting Net Peer
+ Group instance will use the default ID, Name and Description.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>config</CODE> - The configuration to use for the newly created World Peer
+ Group and Net Peer Groups.<DD><CODE>storeHome</CODE> - The optional location that the World Peer Group, the
+ Net Peer Group and its' services should use for storing persistent and
+ transient information. May be <code>null</code> if the World Peer Group is
+ not provided a persistent store (though this not currently supported).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.protocol.ConfigParams, java.net.URI)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                           <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Constructs a Net Peer Group and the World Peer Group using the
+ configuration specified by the provided ConfigParams and using the
+ specified storeHome location for persistence. The resulting Net Peer
+ Group instance will use the group information provided in the
+ <p/>
+ This constructor is provided in anticipation of other improvements
+ to the peer group instantiation process. Currently it has some
+ unreasonable limitations which keep it from being very useful. In a
+ future release it will be improved.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>config</CODE> - The configuration to use for the newly created World Peer
+ Group and Net Peer Groups.<DD><CODE>storeHome</CODE> - The optional location that the World Peer Group, the
+ Net Peer Group and its' services should use for storing persistent and
+ transient information. May be <code>null</code> if the World Peer Group is
+ not provided a persistent store (though this not currently supported).<DD><CODE>parentGroup</CODE> - the parent peer group
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.protocol.ConfigParams, java.net.URI, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;storeHome,
+                                      <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                      <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I>
+<P>
+<DD>Constructs a Net Peer Group and the World Peer Group using the
+ configuration specified by the provided ConfigParams and using the
+ specified storeHome location for persistence.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>config</CODE> - The configuration to use for the newly created World Peer
+ Group and Net Peer Groups.<DD><CODE>storeHome</CODE> - The optional location that the World Peer Group, the
+ Net Peer Group and its' services should use for storing persistent and
+ transient information. May be <code>null</code> if the World Peer Group is
+ not provided a persistent store (though this not currently supported).<DD><CODE>id</CODE> - The PeerGroupID which will be used for the new Net Peer Group
+ instance.<DD><CODE>name</CODE> - The name which will be used for the new Net Peer Group
+ instance.<DD><CODE>desc</CODE> - The description which will be used for the new Net Peer Group
+ instance. You can construct an <code>XMLDocument</code> from a <code>String</code>
+ via :
+ <p/><pre>
+     XMLDocument asDoc = StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, "desc", asString );
+ </pre>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                                      <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                      <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I>
+<P>
+<DD>Constructs a Net Peer Group instance using the specified parent peer
+ group (normally the World Peer Group). This is the preferred constructor
+ for constructing a private Net Peer Group.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>parentGroup</CODE> - The Peer Group which will be the parent of the
+ newly created net peer group. This should normally be the World Peer
+ Group.<DD><CODE>id</CODE> - The PeerGroupID which will be used for the new Net Peer Group
+ instance.<DD><CODE>name</CODE> - The name which will be used for the new Net Peer Group
+ instance.<DD><CODE>desc</CODE> - The description which will be used for the new Net Peer Group
+ instance. You can construct an <code>XMLDocument</code> from a <code>String</code>
+ via :
+ <p/><pre>
+     XMLDocument asDoc = StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, "desc", asString );
+ </pre>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, java.lang.String, net.jxta.document.XMLElement, net.jxta.protocol.ModuleImplAdvertisement)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                                      <A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A>&nbsp;id,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                      <A HREF="../../../net/jxta/document/XMLElement.html" title="interface in net.jxta.document">XMLElement</A>&nbsp;desc,
+                                      <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A>&nbsp;moduleImplAdv)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>With the addition of support for <code>PeerGroupConfigAdv</code>
+ this constructor is being deprecated as the precedence of settings is
+ ambiguous.</I>
+<P>
+<DD>Constructs a Net Peer Group instance using the specified parent peer
+ group (normally the World Peer Group). This is the preferred constructor
+ for constructing a private Net Peer Group with a specific implementation.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>parentGroup</CODE> - The Peer Group which will be the parent of the newly
+ created net peer group. This should normally be the World Peer<DD><CODE>id</CODE> - The PeerGroupID which will be used for the new Net Peer Group
+ instance.<DD><CODE>name</CODE> - The name which will be used for the new Net Peer Group
+ instance.<DD><CODE>desc</CODE> - The description which will be used for the new Net Peer Group
+ instance. You can construct an <code>XMLDocument</code> from a <code>String</code>
+ via :
+ <p/><pre>
+     XMLDocument asDoc = StructuredDocumentFactory.newStructuredDocument( MimeMediaType.XMLUTF8, "desc", asString );
+ </pre><DD><CODE>moduleImplAdv</CODE> - The Module Impl Advertisement for the new Net Peer
+ Group instance.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+<HR>
+
+<A NAME="NetPeerGroupFactory(net.jxta.peergroup.PeerGroup, net.jxta.protocol.ConfigParams, net.jxta.protocol.ModuleImplAdvertisement)"><!-- --></A><H3>
+NetPeerGroupFactory</H3>
+<PRE>
+public <B>NetPeerGroupFactory</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;parentGroup,
+                           <A HREF="../../../net/jxta/protocol/ConfigParams.html" title="class in net.jxta.protocol">ConfigParams</A>&nbsp;config,
+                           <A HREF="../../../net/jxta/protocol/ModuleImplAdvertisement.html" title="class in net.jxta.protocol">ModuleImplAdvertisement</A>&nbsp;moduleImplAdv)
+                    throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></PRE>
+<DL>
+<DD>Constructs a Net Peer Group instance using the specified parent peer
+ group (normally the World Peer Group). This is the preferred constructor
+ for constructing a Net Peer Group with a specific implementation.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>parentGroup</CODE> - The Peer Group which will be the parent of the
+ newly created net peer group. This should normally be the World Peer
+ Group.<DD><CODE>config</CODE> - The configuration parameters for the newly created Net Peer
+ Group instance.<DD><CODE>moduleImplAdv</CODE> - The Module Impl Advertisement for the new Net Peer
+ Group instance.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - Thrown for problems constructing the Net Peer
+ Group.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getInterface()"><!-- --></A><H3>
+getInterface</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>getInterface</B>()</PRE>
+<DL>
+<DD>Returns a strong (reference counted) interface object for the Net Peer
+ Group instance. This reference should be explicitly unreferenced when it
+ is no longer needed.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A strong (reference counted) interface object for the Net Peer Group.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html#unref()"><CODE>PeerGroup.unref()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWeakInterface()"><!-- --></A><H3>
+getWeakInterface</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>getWeakInterface</B>()</PRE>
+<DL>
+<DD>Returns a weak (non-reference counted) interface object for the Net Peer Group.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A weak (non-reference counted) interface object for the Net Peer Group.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html#getWeakInterface()"><CODE>PeerGroup.getWeakInterface()</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetPeerGroupFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/peergroup/LightWeightPeerGroup.html" title="class in net.jxta.peergroup"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/peergroup/NetPeerGroupFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetPeerGroupFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

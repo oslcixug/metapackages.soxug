@@ -1,0 +1,12 @@
+Source: xug-keyring
+Section: misc
+Priority: optional
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.9.1
+
+Package: xug-keyring
+Architecture: all
+Recommends: gnupg (>= 1.0.6-4)
+Description: GnuPG keys of XUG Debian/Ubuntu Packages
+ This package contains keyrings of GnuPG keys of CIXUG.

@@ -1,0 +1,1134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+LiteXMLElement (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="LiteXMLElement (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/LiteXMLElement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/document/LiteXMLElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LiteXMLElement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.document</FONT>
+<BR>
+Class LiteXMLElement</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.document.LiteXMLElement</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true" title="class or interface in net.jxta.document">XMLElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>LiteXMLElement</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true" title="class or interface in net.jxta.document">XMLElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</DL>
+</PRE>
+
+<P>
+An element of a <CODE>StructuredDocument</CODE>. <CODE>StructuredDocument</CODE>s
+ are made up of hierarchies of elements. LiteXMLElement is part of an implementation
+ while makes use of XML-style document conventions, but without the overhead of a
+ full parser.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defines a range of characters, probably within a string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A tagRange is a collection of char ranges useful for describing XML
+ structures.</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#doc">doc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The document associated with this Element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#loc">loc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The portion of the source XML associated with this node</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#paranoidConsistencyChecking">paranoidConsistencyChecking</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true then every operation which modifies the state of the document will
+ perform a consistency check.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#parent">parent</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identifies the element which is the parent of this element.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#LiteXMLElement(net.jxta.impl.document.LiteXMLDocument, net.jxta.impl.document.LiteXMLElement.tagRange)">LiteXMLElement</A></B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A>&nbsp;doc,
+               <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A>&nbsp;loc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates new LiteXMLElement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#LiteXMLElement(net.jxta.impl.document.LiteXMLDocument, java.lang.String, java.lang.String)">LiteXMLElement</A></B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A>&nbsp;doc,
+               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;val)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates new LiteElement</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#addAttribute(net.jxta.document.Attribute)">addAttribute</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A>&nbsp;newAttrib)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an attribute with the given name and value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#addAttribute(java.lang.String, java.lang.String)">addAttribute</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an attribute with the given name and value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#addChildTags(net.jxta.impl.document.LiteXMLElement.charRange, net.jxta.impl.document.LiteXMLElement)">addChildTags</A></B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;scanRange,
+             <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&nbsp;addTo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parse a charRange and add any tags found as content as children of a
+ specified element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#adjustLocations(int, int)">adjustLocations</A></B>(int&nbsp;beginningAt,
+                int&nbsp;by)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this element and all its children adjust the location of its ranges
+ by the amount specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#appendChild(net.jxta.impl.document.LiteXMLElement)">appendChild</A></B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a child element to this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#checkConsistency()">checkConsistency</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#decodeEscaped(java.lang.StringBuilder)">decodeEscaped</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;target)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a StringBuilder find all occurrences of escaped characters which
+ must be decoded and convert them back to their non-escaped equivalents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#encodeEscaped(java.lang.StringBuilder)">encodeEscaped</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;target)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a StringBuilder find all occurrences of characters which must be
+ escaped and convert them to their escaped equivalents.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#equals(java.lang.Object)">equals</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getAttribute(java.lang.String)">getAttribute</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a single attribute which matches the name provided.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getAttributeLoc(java.lang.String, net.jxta.impl.document.LiteXMLElement.charRange)">getAttributeLoc</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;inRange)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the tagRange of the next attribute contained in the range
+ provided.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getAttributes()">getAttributes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an enumerations of the attributes associated with this object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getChildren()">getChildren</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an enumeration of the immediate children of this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getChildren(java.lang.Object)">getChildren</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an enumeration of the immediate children of this element whose
+ name match the specified string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getChildren(java.lang.String)">getChildren</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an enumeration of the immediate children of this element whose
+ name match the specified string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getDocument()">getDocument</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The document we are a part of.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getKey()">getKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the name associated with an element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the name associated with an element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getParent()">getParent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the parent element of this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getRoot()">getRoot</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the root document element of the hierarchy this element belongs to.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getTagRanges(java.lang.StringBuilder, java.lang.String, net.jxta.impl.document.LiteXMLElement.charRange)">getTagRanges</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;source,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+             <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;range)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a source string, an optional tag and a range with in the source
+ find either the tag specified or the next tag.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getTextValue()">getTextValue</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value (if any) associated with an element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getTextValue(boolean, boolean)">getTextValue</A></B>(boolean&nbsp;getEncoded,
+             boolean&nbsp;trim)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value (if any) associated with an element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#getValue()">getValue</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the value (if any) associated with an element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#printNice(java.io.Writer, int, boolean)">printNice</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</A>&nbsp;into,
+          int&nbsp;indent,
+          boolean&nbsp;recurse)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write the contents of this element and optionally its children.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ <p/>A toString implementation for debugging purposes.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="paranoidConsistencyChecking"><!-- --></A><H3>
+paranoidConsistencyChecking</H3>
+<PRE>
+protected static final transient boolean <B>paranoidConsistencyChecking</B></PRE>
+<DL>
+<DD>If true then every operation which modifies the state of the document will
+ perform a consistency check. This is a deadly performance killer but
+ helps a lot in isolating bugs.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#net.jxta.impl.document.LiteXMLElement.paranoidConsistencyChecking">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="doc"><!-- --></A><H3>
+doc</H3>
+<PRE>
+protected final transient <A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A> <B>doc</B></PRE>
+<DL>
+<DD>The document associated with this Element.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="parent"><!-- --></A><H3>
+parent</H3>
+<PRE>
+protected transient <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A> <B>parent</B></PRE>
+<DL>
+<DD>Identifies the element which is the parent of this element. If <code>
+ this.parent == this</code> then this element is the root of the document.
+ If <code>null == parent</code> then this element has not yet been
+ inserted into the document.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="loc"><!-- --></A><H3>
+loc</H3>
+<PRE>
+protected transient <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A> <B>loc</B></PRE>
+<DL>
+<DD>The portion of the source XML associated with this node
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="LiteXMLElement(net.jxta.impl.document.LiteXMLDocument, net.jxta.impl.document.LiteXMLElement.tagRange)"><!-- --></A><H3>
+LiteXMLElement</H3>
+<PRE>
+protected <B>LiteXMLElement</B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A>&nbsp;doc,
+                         <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A>&nbsp;loc)</PRE>
+<DL>
+<DD>Creates new LiteXMLElement
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>loc</CODE> - The location of the element within the document.<DD><CODE>doc</CODE> - The <A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document"><CODE>LiteXMLDocument</CODE></A> which is the root of the document.</DL>
+</DL>
+<HR>
+
+<A NAME="LiteXMLElement(net.jxta.impl.document.LiteXMLDocument, java.lang.String, java.lang.String)"><!-- --></A><H3>
+LiteXMLElement</H3>
+<PRE>
+public <B>LiteXMLElement</B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A>&nbsp;doc,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;val)</PRE>
+<DL>
+<DD>Creates new LiteElement
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>doc</CODE> - The <A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document"><CODE>LiteXMLDocument</CODE></A> which is the root of the document.<DD><CODE>name</CODE> - The name of the element being created.<DD><CODE>val</CODE> - The value of the element being created or null if there is no
+             content to the element.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="equals(java.lang.Object)"><!-- --></A><H3>
+equals</H3>
+<PRE>
+public boolean <B>equals</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;element)</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+ <p/>
+ <p/>A toString implementation for debugging purposes.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRoot()"><!-- --></A><H3>
+getRoot</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A> <B>getRoot</B>()</PRE>
+<DL>
+<DD>Get the root document element of the hierarchy this element belongs to.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getRoot()" title="class or interface in net.jxta.document">getRoot</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getRoot()" title="class or interface in net.jxta.document">getRoot</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true#getRoot()" title="class or interface in net.jxta.document">getRoot</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/XMLElement.html?is-external=true" title="class or interface in net.jxta.document">XMLElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The root document element of this element's hierarchy.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParent()"><!-- --></A><H3>
+getParent</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A> <B>getParent</B>()</PRE>
+<DL>
+<DD>Get the parent element of this element. If this Element has not been
+ inserted into the Document then <code>null</code> is returned. If this
+ element is the root element of the Document then it returns itself. ie.,
+ <code>this == this.getParent()</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getParent()" title="class or interface in net.jxta.document">getParent</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The parent of this element. If the element has no parent
+ then null will be returned. If the element is the root Element of the
+ hierarchy then it will return itself.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getChildren()"><!-- --></A><H3>
+getChildren</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt; <B>getChildren</B>()</PRE>
+<DL>
+<DD>Returns an enumeration of the immediate children of this element.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getChildren()" title="class or interface in net.jxta.document">getChildren</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Enumeration containing all of the children of this element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getName</B>()</PRE>
+<DL>
+<DD>Get the name associated with an element.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getName()" title="class or interface in net.jxta.document">getName</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A string containing the name of this element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKey()"><!-- --></A><H3>
+getKey</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getKey</B>()</PRE>
+<DL>
+<DD>Get the name associated with an element.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getKey()" title="class or interface in net.jxta.document">getKey</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getKey()" title="class or interface in net.jxta.document">getKey</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A string containing the key of this element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getValue()"><!-- --></A><H3>
+getValue</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getValue</B>()</PRE>
+<DL>
+<DD>Get the value (if any) associated with an element.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getValue()" title="class or interface in net.jxta.document">getValue</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getValue()" title="class or interface in net.jxta.document">getValue</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A string containing the value of this element, if any, otherwise null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="appendChild(net.jxta.impl.document.LiteXMLElement)"><!-- --></A><H3>
+appendChild</H3>
+<PRE>
+public void <B>appendChild</B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&nbsp;element)</PRE>
+<DL>
+<DD>Add a child element to this element. The child element must be from the
+  document as the element it is to be added to. Elements are created using
+  either <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true#createElement(java.lang.Object)" title="class or interface in net.jxta.document"><CODE>StructuredDocument.createElement(Object)</CODE></A> or
+  <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/StructuredDocument.html?is-external=true#createElement(java.lang.Object, java.lang.Object)" title="class or interface in net.jxta.document"><CODE>StructuredDocument.createElement(Object, Object)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#appendChild(E)" title="class or interface in net.jxta.document">appendChild</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>element</CODE> - The element to be added as a child.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getChildren(java.lang.Object)"><!-- --></A><H3>
+getChildren</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt; <B>getChildren</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</PRE>
+<DL>
+<DD>Returns an enumeration of the immediate children of this element whose
+ name match the specified string.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true#getChildren(java.lang.Object)" title="class or interface in net.jxta.document">getChildren</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Element.html?is-external=true" title="class or interface in net.jxta.document">Element</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The key which will be matched against.
+<DT><B>Returns:</B><DD>enumeration containing all of the children of this element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getChildren(java.lang.String)"><!-- --></A><H3>
+getChildren</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt; <B>getChildren</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Returns an enumeration of the immediate children of this element whose
+ name match the specified string.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getChildren(java.lang.String)" title="class or interface in net.jxta.document">getChildren</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name which will be matched against.
+<DT><B>Returns:</B><DD>An enumeration containing all of the children of this element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTextValue()"><!-- --></A><H3>
+getTextValue</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getTextValue</B>()</PRE>
+<DL>
+<DD>Get the value (if any) associated with an element.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true#getTextValue()" title="class or interface in net.jxta.document">getTextValue</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/TextElement.html?is-external=true" title="class or interface in net.jxta.document">TextElement</A>&lt;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A string containing the value of this element, if any, otherwise null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTextValue(boolean, boolean)"><!-- --></A><H3>
+getTextValue</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getTextValue</B>(boolean&nbsp;getEncoded,
+                              boolean&nbsp;trim)</PRE>
+<DL>
+<DD>Get the value (if any) associated with an element.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>getEncoded</CODE> - if true then the contents will be encoded such that
+                   the contents will not be interpreted as XML. see
+                   <a href="http://www.w3.org/TR/REC-xml#syntax">W3C XML 1.0 Specification</a>
+                   ie. < -> &lt; & -> &amp;<DD><CODE>trim</CODE> - if true trims prefix and suffix white space
+<DT><B>Returns:</B><DD>A string containing the value of this element, if any, otherwise null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="printNice(java.io.Writer, int, boolean)"><!-- --></A><H3>
+printNice</H3>
+<PRE>
+protected void <B>printNice</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</A>&nbsp;into,
+                         int&nbsp;indent,
+                         boolean&nbsp;recurse)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Write the contents of this element and optionally its children. The
+ writing is done to a provided <code>java.io.Writer</code>. The writing
+ can optionally be indented.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>into</CODE> - The java.io.Writer that the output will be sent to.<DD><CODE>indent</CODE> - the number of tabs which will be inserted before each
+                line.<DD><CODE>recurse</CODE> - if true then also print the children of this element.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTagRanges(java.lang.StringBuilder, java.lang.String, net.jxta.impl.document.LiteXMLElement.charRange)"><!-- --></A><H3>
+getTagRanges</H3>
+<PRE>
+protected <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A> <B>getTagRanges</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;source,
+                                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+                                               <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;range)</PRE>
+<DL>
+<DD>Given a source string, an optional tag and a range with in the source
+ find either the tag specified or the next tag.
+ <p/>
+ The search consists of 4 phases :
+ 0.  If no tag was specified, determine if a tag can be found and
+ learn its name.
+ 1.  Search for the start of the named tag.
+ 2.  Search for the end tag. Each time we think we have found a tag
+ which might be the end tag we make sure it is not the end tag
+ of another element with the same name as our tag.
+ 3.  Calculate the position of the body of the tag given the locations
+ of the start and end.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - the string to search<DD><CODE>tag</CODE> - the tag to search for in the source string. If this tag is
+               empty or null then we will search for the next tag.<DD><CODE>range</CODE> - describes the range of character locations in the source
+               string to which the search will be limited.
+<DT><B>Returns:</B><DD>tagRange containing the ranges of the found tag.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addChildTags(net.jxta.impl.document.LiteXMLElement.charRange, net.jxta.impl.document.LiteXMLElement)"><!-- --></A><H3>
+addChildTags</H3>
+<PRE>
+protected void <B>addChildTags</B>(<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;scanRange,
+                            <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.html" title="class in net.jxta.impl.document">LiteXMLElement</A>&nbsp;addTo)</PRE>
+<DL>
+<DD>Parse a charRange and add any tags found as content as children of a
+ specified element. This process is repeated recursivly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scanRange</CODE> - the range to be parsed for sub-tags<DD><CODE>addTo</CODE> - the element to add any discovered children to.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="adjustLocations(int, int)"><!-- --></A><H3>
+adjustLocations</H3>
+<PRE>
+protected void <B>adjustLocations</B>(int&nbsp;beginningAt,
+                               int&nbsp;by)</PRE>
+<DL>
+<DD>For this element and all its children adjust the location of its ranges
+ by the amount specified.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>beginningAt</CODE> - adjust all locations which are at or past this
+                    location.<DD><CODE>by</CODE> - amount to adjust all matching locations.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="decodeEscaped(java.lang.StringBuilder)"><!-- --></A><H3>
+decodeEscaped</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A> <B>decodeEscaped</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;target)</PRE>
+<DL>
+<DD>Given a StringBuilder find all occurrences of escaped characters which
+ must be decoded and convert them back to their non-escaped equivalents.
+ <p/>
+ <p/>Also does end of line folding per: <a href="http://www.w3.org/TR/REC-xml#sec-line-ends"/>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>target</CODE> - The StringBuilder which will be decoded.
+<DT><B>Returns:</B><DD>The decoded version of the StringBuilder.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="encodeEscaped(java.lang.StringBuilder)"><!-- --></A><H3>
+encodeEscaped</H3>
+<PRE>
+protected void <B>encodeEscaped</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</A>&nbsp;target)</PRE>
+<DL>
+<DD>Given a StringBuilder find all occurrences of characters which must be
+ escaped and convert them to their escaped equivalents.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>target</CODE> - The StringBuilder which will be encoded in place.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAttributes()"><!-- --></A><H3>
+getAttributes</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html?is-external=true" title="class or interface in java.util">Enumeration</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A>&gt; <B>getAttributes</B>()</PRE>
+<DL>
+<DD>Returns an enumerations of the attributes associated with this object.
+ Each element is of type Attribute.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#getAttributes()" title="class or interface in net.jxta.document">getAttributes</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Enumeration the attributes associated with this object.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAttributeLoc(java.lang.String, net.jxta.impl.document.LiteXMLElement.charRange)"><!-- --></A><H3>
+getAttributeLoc</H3>
+<PRE>
+protected <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.tagRange.html" title="class in net.jxta.impl.document">LiteXMLElement.tagRange</A> <B>getAttributeLoc</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                                  <A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document">LiteXMLElement.charRange</A>&nbsp;inRange)</PRE>
+<DL>
+<DD>Returns the tagRange of the next attribute contained in the range
+ provided. The tag range returned consists of the startTag indicating
+ the location of the name, body indicating the location of the value and
+ endTag indicating the location of the final quote delimiter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - Name to match. null means match any name.<DD><CODE>inRange</CODE> - the limits of the locations to scan.
+<DT><B>Returns:</B><DD>tagRange containing the location of the next attribute</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAttribute(java.lang.String, java.lang.String)"><!-- --></A><H3>
+addAttribute</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>addAttribute</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
+<DL>
+<DD>Adds an attribute with the given name and value. Some implementations
+ may support only a single value for each distinct name. Others may
+ support multiple values for each name. If the value being provided
+ replaces some other value then that value is returned otherwise null
+ is returned.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#addAttribute(java.lang.String, java.lang.String)" title="class or interface in net.jxta.document">addAttribute</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - name of the attribute.<DD><CODE>value</CODE> - value for the attribute.
+<DT><B>Returns:</B><DD>String  containing previous value for this name if the value
+         is being replaced otherwise null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAttribute(net.jxta.document.Attribute)"><!-- --></A><H3>
+addAttribute</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>addAttribute</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A>&nbsp;newAttrib)</PRE>
+<DL>
+<DD>Adds an attribute with the given name and value. Some implementations
+ may support only a single value for each distinct name. Others may
+ support multiple values for each name. If the value being provided
+ replaces some other value then that value is returned otherwise null
+ is returned.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#addAttribute(net.jxta.document.Attribute)" title="class or interface in net.jxta.document">addAttribute</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newAttrib</CODE> - new attribute.
+<DT><B>Returns:</B><DD>String  containing previous value for this name if the value
+         is being replaced otherwise null.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAttribute(java.lang.String)"><!-- --></A><H3>
+getAttribute</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attribute.html?is-external=true" title="class or interface in net.jxta.document">Attribute</A> <B>getAttribute</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Returns a single attribute which matches the name provided. If no such
+ named attribute exists then null is returned. For implementations of
+ this interface which support multiple values for each name only the
+ first value will be returned. To access all values for a name you must
+ use getAttributes.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true#getAttribute(java.lang.String)" title="class or interface in net.jxta.document">getAttribute</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/document/Attributable.html?is-external=true" title="class or interface in net.jxta.document">Attributable</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - the attribute name
+<DT><B>Returns:</B><DD>Attribute the attributes matching the given name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="checkConsistency()"><!-- --></A><H3>
+checkConsistency</H3>
+<PRE>
+protected boolean <B>checkConsistency</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDocument()"><!-- --></A><H3>
+getDocument</H3>
+<PRE>
+<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document">LiteXMLDocument</A> <B>getDocument</B>()</PRE>
+<DL>
+<DD>The document we are a part of.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The document we are a part of.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/LiteXMLElement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLDocument.html" title="class in net.jxta.impl.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/document/LiteXMLElement.charRange.html" title="class in net.jxta.impl.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/document/LiteXMLElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="LiteXMLElement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+Package: textstat
+Version: 0.1-1
+Architecture: all
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Installed-Size: 708
+Depends: python, python-tk
+Section: text
+Priority: optional
+Homepage: http://neon.niederlandistik.fu-berlin.de/textstat/
+Description: Multi-lingua concordance tool
+ Multi-lingual concordance tool written with python and python-tk.
+ TextSTAT ist ein einfaches Programm zur Analyse von Texten. Es
+ liest Text-Dateien (in diversen Kodierungen) und HTML-Files
+ (auch direkt aus dem Internet), und es erstellt Wortfrequenz-Listen
+ und Konkordanzen von diesen Files. TextSTAT hat einen eigenen
+ Web-Spider, mit dem Sie eine beliebige Anzahl Seiten einer
+ bestimmten Website zu einem TextSTAT-Korpus zusammenstellen
+ können. Der integrierte News-Reader liest Berichte aus Usenet
+ Newsgroups und macht daraus ein TextSTAT-Korpus.

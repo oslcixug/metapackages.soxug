@@ -1,0 +1,7 @@
+Codename: precise
+Suite: unstable
+Origin: CIXUG
+Architectures: i386 amd64 source
+Components: main
+SignWith: osl@cixug.es
+

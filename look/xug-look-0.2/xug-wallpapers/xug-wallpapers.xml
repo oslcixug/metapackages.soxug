@@ -1,0 +1,51 @@
+<background>
+  <starttime>
+    <year>2012</year>
+    <month>01</month>
+    <day>01</day>
+    <hour>22</hour>
+    <minute>30</minute>
+    <second>00</second>
+  </starttime>
+<!-- This animation will start at midnight. -->
+  <static>
+    <duration>30600</duration> <!-- de 22h30 a 7h00 -->
+    <file>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-noite.png</file>
+  </static>
+  <transition>
+    <duration>1800</duration> <!-- 30 minutos ate as 7h30 -->
+    <from>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-noite.png</from>
+    <to>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</to>
+  </transition>
+
+  <static>
+    <duration>7200</duration> <!-- 2 horas ate as 9h30 -->
+    <file>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</file>
+  </static>
+  <transition>
+    <duration>1800</duration> <!-- ate as 10h00 -->
+    <from>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</from>
+    <to>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2.png</to>
+  </transition>
+
+  <static>
+    <duration>34200</duration> <!-- de 10h00 a 19h30 -->
+    <file>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2.png</file>
+  </static>
+  <transition>
+    <duration>1800.0</duration> <!-- ate as 20h00 -->
+    <from>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2.png</from>
+    <to>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</to>
+  </transition>
+
+  <static>
+    <duration>7200</duration> <!-- 2 horas ate as 22h00 -->
+    <file>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</file>
+  </static>
+  <transition>
+    <duration>1800</duration> <!-- ate as 22h30 -->
+    <from>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-luscofusco.png</from>
+    <to>/usr/share/backgrounds/ubuntu-xug/os.xug-wallpaper-2-noite.png</to>
+  </transition>
+
+</background>

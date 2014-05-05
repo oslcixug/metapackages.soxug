@@ -1,0 +1,12 @@
+Package: libjms-java-dev
+Source: libjms-java
+Version: 1.1-1
+Architecture: amd64
+Maintainer: Francisco Diéguez Souto <fran.dieguez@mabishu.com>
+Installed-Size: 36
+Depends: libjms-javaBROKEN (= 1.1-1)
+Section: libdevel
+Priority: extra
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ResolverService (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ResolverService (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResolverService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/resolver/ResolverService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResolverService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.resolver</FONT>
+<BR>
+Interface ResolverService</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../net/jxta/resolver/GenericResolver.html" title="interface in net.jxta.resolver">GenericResolver</A>, <A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A>, <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>ResolverService</B><DT>extends <A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A>, <A HREF="../../../net/jxta/resolver/GenericResolver.html" title="interface in net.jxta.resolver">GenericResolver</A></DL>
+</PRE>
+
+<P>
+Provides a generic mechanism for JXTA Services to send "Queries", and receive 
+ "Responses". It removes the burden for registered handlers in deal with :
+
+<ul type-disc>
+    <li>Setting message tags, to ensure uniqueness of tags and
+     ensures that messages are sent to the correct address, and group.</p>
+    <li>Authentication, and verification of credentials.</p>
+    <li>Query routing.</p>
+    <li>drop rogue messages.</p>
+</ul>
+
+ <p/>The ResolverService does not proccess the queries, nor does it not
+ compose reponses. Processing of queries, and composition of responses is left
+ up to the registered handlers. Services that wish to handle queries and
+ generate reponses must implement <A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver"><CODE>QueryHandler</CODE></A>.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service"><CODE>Service</CODE></A>, 
+<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver"><CODE>QueryHandler</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/ResolverQueryMsg.html" title="class in net.jxta.protocol"><CODE>ResolverQueryMsg</CODE></A>, 
+<A HREF="../../../net/jxta/protocol/ResolverResponseMsg.html" title="class in net.jxta.protocol"><CODE>ResolverResponseMsg</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#OK">OK</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returned by query handlers to indicate that the query has been resolved
+  and a response has been sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#Repropagate">Repropagate</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returned by query handlers to indicate that the query should be
+  forwarded to the rest of the network.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS">START_AGAIN_PROGRESS</A>, <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED">START_AGAIN_STALLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_DISABLED">START_DISABLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_OK">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#registerHandler(java.lang.String, net.jxta.resolver.QueryHandler)">registerHandler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                <A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers a given QueryHandler, returns the previous handler registered
+  under this name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#registerSrdiHandler(java.lang.String, net.jxta.resolver.SrdiHandler)">registerSrdiHandler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                    <A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers a given SrdiHandler, returns the previous handler registered
+  under this name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#sendQuery(java.lang.String, net.jxta.protocol.ResolverQueryMsg)">sendQuery</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+          <A HREF="../../../net/jxta/protocol/ResolverQueryMsg.html" title="class in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sends a resolver query.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#sendResponse(java.lang.String, net.jxta.protocol.ResolverResponseMsg)">sendResponse</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+             <A HREF="../../../net/jxta/protocol/ResolverResponseMsg.html" title="class in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a resolver response.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#sendSrdi(java.lang.String, net.jxta.protocol.ResolverSrdiMsg)">sendSrdi</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+         <A HREF="../../../net/jxta/protocol/ResolverSrdiMsg.html" title="class in net.jxta.protocol">ResolverSrdiMsg</A>&nbsp;srdi)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send an SRDI message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#unregisterHandler(java.lang.String)">unregisterHandler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregisters a given QueryHandler, returns the previous handler
+  registered under this name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/resolver/ResolverService.html#unregisterSrdiHandler(java.lang.String)">unregisterSrdiHandler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregisters a given SrdiHandler, returns the previous handler registered
+  under this name.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.service.Service"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.service.<A HREF="../../../net/jxta/service/Service.html" title="interface in net.jxta.service">Service</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/service/Service.html#getImplAdvertisement()">getImplAdvertisement</A>, <A HREF="../../../net/jxta/service/Service.html#getInterface()">getInterface</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A>, <A HREF="../../../net/jxta/platform/Module.html#startApp(java.lang.String[])">startApp</A>, <A HREF="../../../net/jxta/platform/Module.html#stopApp()">stopApp</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="Repropagate"><!-- --></A><H3>
+Repropagate</H3>
+<PRE>
+static final int <B>Repropagate</B></PRE>
+<DL>
+<DD>Returned by query handlers to indicate that the query should be
+  forwarded to the rest of the network.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.resolver.ResolverService.Repropagate">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OK"><!-- --></A><H3>
+OK</H3>
+<PRE>
+static final int <B>OK</B></PRE>
+<DL>
+<DD>Returned by query handlers to indicate that the query has been resolved
+  and a response has been sent.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.resolver.ResolverService.OK">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="registerHandler(java.lang.String, net.jxta.resolver.QueryHandler)"><!-- --></A><H3>
+registerHandler</H3>
+<PRE>
+<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A> <B>registerHandler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                             <A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A>&nbsp;handler)</PRE>
+<DL>
+<DD>Registers a given QueryHandler, returns the previous handler registered
+  under this name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name under which this handler is to be registered.<DD><CODE>handler</CODE> - The handler.
+<DT><B>Returns:</B><DD>The previous handler registered under this name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregisterHandler(java.lang.String)"><!-- --></A><H3>
+unregisterHandler</H3>
+<PRE>
+<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver">QueryHandler</A> <B>unregisterHandler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Unregisters a given QueryHandler, returns the previous handler
+  registered under this name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the handler to unregister.
+<DT><B>Returns:</B><DD>The previous handler registered under this name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerSrdiHandler(java.lang.String, net.jxta.resolver.SrdiHandler)"><!-- --></A><H3>
+registerSrdiHandler</H3>
+<PRE>
+<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A> <B>registerSrdiHandler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                                <A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A>&nbsp;handler)</PRE>
+<DL>
+<DD>Registers a given SrdiHandler, returns the previous handler registered
+  under this name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name under which this handler is to be registered.<DD><CODE>handler</CODE> - The handler.
+<DT><B>Returns:</B><DD>The previous handler registered under this name.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregisterSrdiHandler(java.lang.String)"><!-- --></A><H3>
+unregisterSrdiHandler</H3>
+<PRE>
+<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver">SrdiHandler</A> <B>unregisterSrdiHandler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name)</PRE>
+<DL>
+<DD>Unregisters a given SrdiHandler, returns the previous handler registered
+  under this name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - The name of the handler to unregister.
+<DT><B>Returns:</B><DD>The previous handler registered under this name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendQuery(java.lang.String, net.jxta.protocol.ResolverQueryMsg)"><!-- --></A><H3>
+sendQuery</H3>
+<PRE>
+void <B>sendQuery</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+               <A HREF="../../../net/jxta/protocol/ResolverQueryMsg.html" title="class in net.jxta.protocol">ResolverQueryMsg</A>&nbsp;query)</PRE>
+<DL>
+<DD>Sends a resolver query. If <tt>destPeer</tt> is <tt>null</tt> the 
+  message is propagated.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>destPeer</CODE> - The destination peer of the query or <tt>null</tt> if
+  the query is to be propagated.<DD><CODE>query</CODE> - The query to match.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendResponse(java.lang.String, net.jxta.protocol.ResolverResponseMsg)"><!-- --></A><H3>
+sendResponse</H3>
+<PRE>
+void <B>sendResponse</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+                  <A HREF="../../../net/jxta/protocol/ResolverResponseMsg.html" title="class in net.jxta.protocol">ResolverResponseMsg</A>&nbsp;response)</PRE>
+<DL>
+<DD>Send a resolver response. If <tt>destPeer</tt> is <tt>null</tt> then the
+  response is propagated. Propagated responses are generally announcements
+  and not responses to active queries.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>destPeer</CODE> - The destination peer of the response or <tt>null</tt> if
+  the response is to be propagated.<DD><CODE>response</CODE> - The response to be sent.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendSrdi(java.lang.String, net.jxta.protocol.ResolverSrdiMsg)"><!-- --></A><H3>
+sendSrdi</H3>
+<PRE>
+void <B>sendSrdi</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;destPeer,
+              <A HREF="../../../net/jxta/protocol/ResolverSrdiMsg.html" title="class in net.jxta.protocol">ResolverSrdiMsg</A>&nbsp;srdi)</PRE>
+<DL>
+<DD>Send an SRDI message.
+
+  <p/>If <tt>destPeer</tt> is <tt>null</tt> the message is walked.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>destPeer</CODE> - is the destination of the SRDI message.<DD><CODE>srdi</CODE> - is the SRDI message to be sent.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResolverService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/resolver/QueryHandler.html" title="interface in net.jxta.resolver"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/resolver/SrdiHandler.html" title="interface in net.jxta.resolver"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/resolver/ResolverService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResolverService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

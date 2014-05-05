@@ -1,0 +1,11 @@
+weka (3.6-1ubuntu1) karmic; urgency=low
+
+  * Added icon for menu application list
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Wed, 19 Aug 2009 14:12:31 +0200
+
+weka (3.6-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Oficina de Software Libre da USC <osl@usc.es>  Tue, 18 Aug 2009 14:00:10 +0200

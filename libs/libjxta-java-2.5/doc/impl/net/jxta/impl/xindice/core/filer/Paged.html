@@ -1,0 +1,1262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Paged (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Paged (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Paged.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html" title="class in net.jxta.impl.xindice.core.filer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/filer/Paged.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Paged.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.xindice.core.filer</FONT>
+<BR>
+Class Paged</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.xindice.core.filer.Paged</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">BTree</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>Paged</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Paged is a paged file implementation that is foundation for both the
+ BTree class and the HashFiler. It provides flexible paged I/O and
+ page caching functionality.
+ <p/>
+ Page has folowing configuration attributes:
+ <ul>
+ <li><strong>pagesize</strong>: Size of the page used by the paged file.
+ Default page size is 4096 bytes. This parameter can be set only
+ before paged file is created. Once it is created, this parameter
+ can not be changed.</li>
+ <li><strong>maxkeysize</strong>: Maximum allowed size of the key.
+ Default maximum key size is 256 bytes.</li>
+ <li><strong>max-descriptors</strong>: Defines maximum amount of
+ simultaneously opened file descriptors this paged file can have.
+ Several descriptors are needed to provide multithreaded access
+ to the underlying file. Too large number will limit amount of
+ collections you can open. Default value is 16
+ (DEFAULT_DESCRIPTORS_MAX).</li>
+ </ul>
+ <p/>
+ <br>FIXME: Currently it seems that maxkeysize is not used anywhere.
+ <br>TODO: Introduce Paged interface, implementations.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paged file's header</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paged file's page</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.PageHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.PageHeader</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PageHeader</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#DELETED">DELETED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deleted page status</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#NO_PAGE">NO_PAGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page ID of non-existent page</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#OVERFLOW">OVERFLOW</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overflow page status</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#sync">sync</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag whether to sync DB on every write or not.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#UNUSED">UNUSED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unused page status</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#Paged()">Paged</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#Paged(java.io.File)">Paged</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#addDirty(net.jxta.impl.xindice.core.filer.Paged.Page)">addDirty</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#checkOpened()">checkOpened</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#closeDescriptor(java.io.RandomAccessFile)">closeDescriptor</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A>&nbsp;raf)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closes a RandomAccessFile ('descriptor') and removes it from the pool.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#create()">create</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#createFileHeader()">createFileHeader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#createFileHeader(boolean)">createFileHeader</A></B>(boolean&nbsp;read)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#createFileHeader(long)">createFileHeader</A></B>(long&nbsp;pageCount)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#createFileHeader(long, int)">createFileHeader</A></B>(long&nbsp;pageCount,
+                 int&nbsp;pageSize)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.PageHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.PageHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#createPageHeader()">createPageHeader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createPageHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a PageHeader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayInt(int[], int)">deleteArrayInt</A></B>(int[]&nbsp;vals,
+               int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayLong(long[], int)">deleteArrayLong</A></B>(long[]&nbsp;vals,
+                int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;short[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayShort(short[], int)">deleteArrayShort</A></B>(short[]&nbsp;vals,
+                 int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayValue(net.jxta.impl.xindice.core.data.Value[], int)">deleteArrayValue</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]&nbsp;vals,
+                 int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#drop()">drop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#exists()">exists</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#flush()">flush</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getDescriptor()">getDescriptor</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain RandomAccessFile ('descriptor') object out of the pool.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFile()">getFile</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFile returns the file object for this Paged.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFileHeader()">getFileHeader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFileHeader returns the FileHeader</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFreePage()">getFreePage</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getFreePage returns the first free Page from secondary storage.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getPage(long)">getPage</A></B>(long&nbsp;pageNum)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getPage returns the page specified by pageNum.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayInt(int[], int, int)">insertArrayInt</A></B>(int[]&nbsp;vals,
+               int&nbsp;val,
+               int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayLong(long[], long, int)">insertArrayLong</A></B>(long[]&nbsp;vals,
+                long&nbsp;val,
+                int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;short[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayShort(short[], short, int)">insertArrayShort</A></B>(short[]&nbsp;vals,
+                 short&nbsp;val,
+                 int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayValue(net.jxta.impl.xindice.core.data.Value[], net.jxta.impl.xindice.core.data.Value, int)">insertArrayValue</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]&nbsp;vals,
+                 <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;val,
+                 int&nbsp;idx)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#isOpened()">isOpened</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#open()">open</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#putDescriptor(java.io.RandomAccessFile)">putDescriptor</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A>&nbsp;raf)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts a RandomAccessFile ('descriptor') back into the descriptor pool.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#readValue(long)">readValue</A></B>(long&nbsp;page)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readValue reads the multi-Paged Value starting at the specified
+ page number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#readValue(net.jxta.impl.xindice.core.filer.Paged.Page)">readValue</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readValue reads the multi-Paged Value starting at the specified
+ Page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#setFile(java.io.File)">setFile</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setFile sets the file object for this Paged.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#unlinkPages(long)">unlinkPages</A></B>(long&nbsp;pageNum)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unlinkPages unlinks a set of pages starting at the specified
+ page number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#unlinkPages(net.jxta.impl.xindice.core.filer.Paged.Page)">unlinkPages</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unlinkPages unlinks a set of pages starting at the specified Page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#writeValue(long, net.jxta.impl.xindice.core.data.Value)">writeValue</A></B>(long&nbsp;page,
+           <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeValue writes the multi-Paged Value starting at the specified
+ page number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#writeValue(net.jxta.impl.xindice.core.filer.Paged.Page, net.jxta.impl.xindice.core.data.Value)">writeValue</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page,
+           <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeValue writes the multi-Paged Value starting at the specified
+ Page.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="UNUSED"><!-- --></A><H3>
+UNUSED</H3>
+<PRE>
+protected static final byte <B>UNUSED</B></PRE>
+<DL>
+<DD>Unused page status
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#net.jxta.impl.xindice.core.filer.Paged.UNUSED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="OVERFLOW"><!-- --></A><H3>
+OVERFLOW</H3>
+<PRE>
+protected static final byte <B>OVERFLOW</B></PRE>
+<DL>
+<DD>Overflow page status
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#net.jxta.impl.xindice.core.filer.Paged.OVERFLOW">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DELETED"><!-- --></A><H3>
+DELETED</H3>
+<PRE>
+protected static final byte <B>DELETED</B></PRE>
+<DL>
+<DD>Deleted page status
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#net.jxta.impl.xindice.core.filer.Paged.DELETED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="NO_PAGE"><!-- --></A><H3>
+NO_PAGE</H3>
+<PRE>
+protected static final int <B>NO_PAGE</B></PRE>
+<DL>
+<DD>Page ID of non-existent page
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../../constant-values.html#net.jxta.impl.xindice.core.filer.Paged.NO_PAGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="sync"><!-- --></A><H3>
+sync</H3>
+<PRE>
+protected boolean <B>sync</B></PRE>
+<DL>
+<DD>flag whether to sync DB on every write or not.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="Paged()"><!-- --></A><H3>
+Paged</H3>
+<PRE>
+public <B>Paged</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="Paged(java.io.File)"><!-- --></A><H3>
+Paged</H3>
+<PRE>
+public <B>Paged</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="setFile(java.io.File)"><!-- --></A><H3>
+setFile</H3>
+<PRE>
+protected final void <B>setFile</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;file)</PRE>
+<DL>
+<DD>setFile sets the file object for this Paged.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>file</CODE> - The File</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFile()"><!-- --></A><H3>
+getFile</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A> <B>getFile</B>()</PRE>
+<DL>
+<DD>getFile returns the file object for this Paged.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The File</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDescriptor()"><!-- --></A><H3>
+getDescriptor</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A> <B>getDescriptor</B>()
+                                        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Obtain RandomAccessFile ('descriptor') object out of the pool.
+ If no descriptors available, and maximum amount already allocated,
+ the call will block.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the file
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putDescriptor(java.io.RandomAccessFile)"><!-- --></A><H3>
+putDescriptor</H3>
+<PRE>
+protected final void <B>putDescriptor</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A>&nbsp;raf)</PRE>
+<DL>
+<DD>Puts a RandomAccessFile ('descriptor') back into the descriptor pool.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>raf</CODE> - the file to add</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="closeDescriptor(java.io.RandomAccessFile)"><!-- --></A><H3>
+closeDescriptor</H3>
+<PRE>
+protected final void <B>closeDescriptor</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</A>&nbsp;raf)</PRE>
+<DL>
+<DD>Closes a RandomAccessFile ('descriptor') and removes it from the pool.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>raf</CODE> - the file to close</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPage(long)"><!-- --></A><H3>
+getPage</H3>
+<PRE>
+protected final <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A> <B>getPage</B>(long&nbsp;pageNum)
+                            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>getPage returns the page specified by pageNum.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pageNum</CODE> - The Page number
+<DT><B>Returns:</B><DD>The requested Page
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readValue(net.jxta.impl.xindice.core.filer.Paged.Page)"><!-- --></A><H3>
+readValue</H3>
+<PRE>
+protected final <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A> <B>readValue</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>readValue reads the multi-Paged Value starting at the specified
+ Page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>page</CODE> - The starting Page
+<DT><B>Returns:</B><DD>The Value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readValue(long)"><!-- --></A><H3>
+readValue</H3>
+<PRE>
+protected final <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A> <B>readValue</B>(long&nbsp;page)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>readValue reads the multi-Paged Value starting at the specified
+ page number.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>page</CODE> - The starting page number
+<DT><B>Returns:</B><DD>The Value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="writeValue(net.jxta.impl.xindice.core.filer.Paged.Page, net.jxta.impl.xindice.core.data.Value)"><!-- --></A><H3>
+writeValue</H3>
+<PRE>
+protected final void <B>writeValue</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page,
+                                <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>writeValue writes the multi-Paged Value starting at the specified
+ Page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>page</CODE> - The starting Page<DD><CODE>value</CODE> - The Value to write
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="writeValue(long, net.jxta.impl.xindice.core.data.Value)"><!-- --></A><H3>
+writeValue</H3>
+<PRE>
+protected final void <B>writeValue</B>(long&nbsp;page,
+                                <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>writeValue writes the multi-Paged Value starting at the specified
+ page number.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>page</CODE> - The starting page number<DD><CODE>value</CODE> - The Value to write
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unlinkPages(net.jxta.impl.xindice.core.filer.Paged.Page)"><!-- --></A><H3>
+unlinkPages</H3>
+<PRE>
+protected final void <B>unlinkPages</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)
+                          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>unlinkPages unlinks a set of pages starting at the specified Page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>page</CODE> - The starting Page to unlink
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unlinkPages(long)"><!-- --></A><H3>
+unlinkPages</H3>
+<PRE>
+protected final void <B>unlinkPages</B>(long&nbsp;pageNum)
+                          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>unlinkPages unlinks a set of pages starting at the specified
+ page number.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pageNum</CODE> - The starting page number to unlink
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFreePage()"><!-- --></A><H3>
+getFreePage</H3>
+<PRE>
+protected final <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A> <B>getFreePage</B>()
+                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>getFreePage returns the first free Page from secondary storage.
+ If no Pages are available, the file is grown as appropriate.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The next free Page
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an Exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="checkOpened()"><!-- --></A><H3>
+checkOpened</H3>
+<PRE>
+protected final void <B>checkOpened</B>()
+                          throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - COL_COLLECTION_CLOSED if paged file is closed</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFileHeader()"><!-- --></A><H3>
+getFileHeader</H3>
+<PRE>
+public <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A> <B>getFileHeader</B>()</PRE>
+<DL>
+<DD>getFileHeader returns the FileHeader
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The FileHeader</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="exists()"><!-- --></A><H3>
+exists</H3>
+<PRE>
+public boolean <B>exists</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="create()"><!-- --></A><H3>
+create</H3>
+<PRE>
+public boolean <B>create</B>()
+               throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public boolean <B>open</B>()
+             throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public boolean <B>close</B>()
+              throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isOpened()"><!-- --></A><H3>
+isOpened</H3>
+<PRE>
+public boolean <B>isOpened</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drop()"><!-- --></A><H3>
+drop</H3>
+<PRE>
+public boolean <B>drop</B>()
+             throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addDirty(net.jxta.impl.xindice.core.filer.Paged.Page)"><!-- --></A><H3>
+addDirty</H3>
+<PRE>
+void <B>addDirty</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>&nbsp;page)
+        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="flush()"><!-- --></A><H3>
+flush</H3>
+<PRE>
+public void <B>flush</B>()
+           throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createFileHeader()"><!-- --></A><H3>
+createFileHeader</H3>
+<PRE>
+public abstract <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A> <B>createFileHeader</B>()</PRE>
+<DL>
+<DD>createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a new FileHeader</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createFileHeader(boolean)"><!-- --></A><H3>
+createFileHeader</H3>
+<PRE>
+public abstract <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A> <B>createFileHeader</B>(boolean&nbsp;read)
+                                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>read</CODE> - If true, reads the FileHeader from disk
+<DT><B>Returns:</B><DD>a new FileHeader
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createFileHeader(long)"><!-- --></A><H3>
+createFileHeader</H3>
+<PRE>
+public abstract <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A> <B>createFileHeader</B>(long&nbsp;pageCount)</PRE>
+<DL>
+<DD>createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pageCount</CODE> - The number of pages to allocate for primary storage
+<DT><B>Returns:</B><DD>a new FileHeader</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createFileHeader(long, int)"><!-- --></A><H3>
+createFileHeader</H3>
+<PRE>
+public abstract <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A> <B>createFileHeader</B>(long&nbsp;pageCount,
+                                                  int&nbsp;pageSize)</PRE>
+<DL>
+<DD>createFileHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a FileHeader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pageCount</CODE> - The number of pages to allocate for primary storage<DD><CODE>pageSize</CODE> - The size of a Page (should be a multiple of a FS block)
+<DT><B>Returns:</B><DD>a new FileHeader</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPageHeader()"><!-- --></A><H3>
+createPageHeader</H3>
+<PRE>
+public abstract <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.PageHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.PageHeader</A> <B>createPageHeader</B>()</PRE>
+<DL>
+<DD>createPageHeader must be implemented by a Paged implementation
+ in order to create an appropriate subclass instance of a PageHeader.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a new PageHeader</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertArrayValue(net.jxta.impl.xindice.core.data.Value[], net.jxta.impl.xindice.core.data.Value, int)"><!-- --></A><H3>
+insertArrayValue</H3>
+<PRE>
+public static <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[] <B>insertArrayValue</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]&nbsp;vals,
+                                       <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;val,
+                                       int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteArrayValue(net.jxta.impl.xindice.core.data.Value[], int)"><!-- --></A><H3>
+deleteArrayValue</H3>
+<PRE>
+public static <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[] <B>deleteArrayValue</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>[]&nbsp;vals,
+                                       int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertArrayLong(long[], long, int)"><!-- --></A><H3>
+insertArrayLong</H3>
+<PRE>
+public static long[] <B>insertArrayLong</B>(long[]&nbsp;vals,
+                                     long&nbsp;val,
+                                     int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteArrayLong(long[], int)"><!-- --></A><H3>
+deleteArrayLong</H3>
+<PRE>
+public static long[] <B>deleteArrayLong</B>(long[]&nbsp;vals,
+                                     int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertArrayInt(int[], int, int)"><!-- --></A><H3>
+insertArrayInt</H3>
+<PRE>
+public static int[] <B>insertArrayInt</B>(int[]&nbsp;vals,
+                                   int&nbsp;val,
+                                   int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteArrayInt(int[], int)"><!-- --></A><H3>
+deleteArrayInt</H3>
+<PRE>
+public static int[] <B>deleteArrayInt</B>(int[]&nbsp;vals,
+                                   int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertArrayShort(short[], short, int)"><!-- --></A><H3>
+insertArrayShort</H3>
+<PRE>
+public static short[] <B>insertArrayShort</B>(short[]&nbsp;vals,
+                                       short&nbsp;val,
+                                       int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteArrayShort(short[], int)"><!-- --></A><H3>
+deleteArrayShort</H3>
+<PRE>
+public static short[] <B>deleteArrayShort</B>(short[]&nbsp;vals,
+                                       int&nbsp;idx)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Paged.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html" title="class in net.jxta.impl.xindice.core.filer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/filer/Paged.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Paged.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

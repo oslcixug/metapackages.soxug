@@ -1,0 +1,36 @@
+Epidat V.04.00 usa un gran número de librerías de diversos
+autores, todas ellas están sujetas a los términos y condiciones
+de uso que han establecido estos para su producto en sus 
+licencias. Tenga en cuenta que:
+
+	Todas las clases y librerías pertenecientes al proyecto
+	Apache Jakarta están publicadas bajo licencia Apache.
+	Vea: http://www.apache.org/licenses/LICENSE-2.0
+	
+	Todas las clases y librerías pertenecientes al proyecto
+	NetBeans están publicadas bajo licencia NetBeans.Vea:
+	http://www.netbeans.info/downloads/licence
+	/nb-6.1-final-2008-04-24-license.txt
+	
+	La librería Colt se ha publicado con las licencias y 
+	condiciones de uso descritas en
+	http://acs.lbl.gov/software/colt/license.html
+	
+	jFreeChart se ha publicado bajo licencia LGPL.
+	Vea: http://www.gnu.org/licenses/lgpl.html
+	
+	icepdf se ha publicado bajo licencia LGPL.
+	Vea: http://www.gnu.org/licenses/lgpl.html
+	
+	iText se ha publicado bajo licencia AGPL.
+	Vea: http://itextpdf.com/terms-of-use/index.php
+	
+	jOpenDocument se ha publicado bajo licencia GPL.
+	Vea: http://www.gnu.org/copyleft/gpl.html 
+
+	jh se ha publicado bajo licencia GPL.
+	Vea: http://www.gnu.org/copyleft/gpl.html
+
+Otras clases y librerías que no se hayan nombrado estarán 
+igualmente sujetas a los términos y condiciones de uso que 
+hayan sido establecidas.

@@ -1,0 +1,271 @@
+-5
+f s
+n 24
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+32 0
+
+s 0
+w 0
+p 0
+l 21
+3301 3278 44 Lesson 5  Behind the Scenes - Part II
+3277 3313 43 When to adjust simulation constants:
+3300 3283 36 The Transconductance Amplifier
+3279 3298 76 Both wide range and normal amplifiers are modeled (left-right).
+3279 3300 68 Transconductance function modeled with variable offsets.
+3359 3297 15 Touch the bar
+3359 3299 14 in CNFG mode
+3359 3301 15 to adjust the
+3361 3303 12 simulation
+3361 3305 10 constants
+3279 3302 55 Behavior outside of subthreshold NOT modeled.
+3279 3304 72 Unmodeled regions indicated by a red warning light on gate.
+3279 3316 66 1) Voltages are constrained to within -2V to 7V. If you
+3283 3318 64 needs more headroom, adjust the appropriate constants.
+3279 3321 64 2) Running a high-speed waveform in "Relaxed" mode may
+3283 3323 63 produce "aliasing" because of Nyquist limit problems.
+3283 3325 55 Use Exact Mode or adjust the Maximum Timestep.
+3279 3328 66 3) If your simulation is not accurate enough, decrease 
+3283 3330 60 Maximum Voltage Change per Timestep appropriately.
+3358 3336 14 John & Dave.
+3353 3332 15 Happy Trails,
+b 3
+3278 3282 3357 3307
+3351 3329 3374 3341
+3352 3330 3373 3340
+g 8
+ARROW2
+3365 3311 2 3 0 0 0
+
+
+NUMBERS
+3362 3319 0 4 0 0 16
+
+U5
+U0.1
+U7
+U-2
+U1E-4
+U1E-20
+U1E-40
+U1E-6
+U1E-40
+U1E-9
+U2
+I2
+I30
+R10
+U0.1
+U1E-14
+ TRUE
+ TRUE
+
+WRAMP
+3287 3291 4 8 0 0 11
+4 3 2 1
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+WRAMP
+3298 3291 4 8 0 0 11
+8 7 6 5
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+WRAMP
+3310 3291 4 8 0 0 11
+12 11 10 9
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+OPAMP
+3323 3291 0 7 0 0 11
+18 17 16 15
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+OPAMP
+3334 3291 0 6 0 0 11
+21 20 19 14
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+OPAMP
+3345 3291 0 5 0 0 11
+24 23 22 13
+U0
+U1
+U1
+U0.04
+U5E-17
+U0.9
+U50
+U0.04
+U1E-14
+U1E-14
+U1E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+-1.00000E+06
+-1.00000E+06
+ 1.00000E-14
+
+h 0
+.

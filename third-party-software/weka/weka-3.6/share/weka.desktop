@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Weka
+Comment=Collection of machine learning algorithms for solving real-world data mining problems
+TryExec=weka
+Exec=weka
+Type=Application
+Categories=Development;Math;Science;Education;

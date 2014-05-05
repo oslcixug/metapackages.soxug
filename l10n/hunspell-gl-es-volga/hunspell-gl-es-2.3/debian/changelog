@@ -1,0 +1,94 @@
+hunspell-gl-es (2.3-1) precise; urgency=low
+
+  * New upstream release
+
+ -- CIXUG Developers <osl@cixug.es>  Wed, 07 Nov 2012 12:36:16 +0100
+
+hunspell-gl-es (2.2a-10) unstable; urgency=low
+
+  * debian/rules:
+    - Fix lintian debian-rules-missing-recommended-target build-{arch,indep}.
+  * debian/control: Add a suggests line.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 14 Sep 2011 17:08:50 +0200
+
+hunspell-gl-es (2.2a-9) unstable; urgency=low
+
+  * Build Depends on at least dictionaries-common-dev (>= 1.10.5)
+    to stop installing update-openoffice-dicts snippets.
+  * Bump Standards-Version. No changes needed.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 07 Jun 2011 16:34:27 +0200
+
+hunspell-gl-es (2.2a-8) unstable; urgency=low
+
+  * Use installdeb-myspell (>= 1.4) to no longer create Mozilla*
+    links in new destdir.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 25 Nov 2009 12:54:03 +0100
+
+hunspell-gl-es (2.2a-7) unstable; urgency=low
+
+  * Rebuild against dictionaries-common-dev 1.3.1 to have
+    mozilla symlinks fixed.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 25 Aug 2009 16:54:21 +0200
+
+hunspell-gl-es (2.2a-6) unstable; urgency=low
+
+  * Bump Standards Version to 3.8.3. No changes required.
+  * Install myspell dicts in new location. Use new
+    installdeb-myspell (at least 1.3) for this and for
+    compatibility symlinks (Closes: #541894).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 25 Aug 2009 14:30:30 +0200
+
+hunspell-gl-es (2.2a-5) unstable; urgency=low
+
+  * debian/*.info-*spell, debian/control:
+    - Do not explicitly add '-d <lang>' to ispell-args. New
+      dictionaries-common will take care of that.
+  * debian/control:
+    - Build Dep on at least dictionaries-common-dev 1.2 to use
+      new debhelper snippets.
+  * Raise debhelper compat level to 7. Use dh_prep.
+  * Raise Standards-Version to 3.8.1. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Sun, 15 Mar 2009 22:33:06 +0100
+
+hunspell-gl-es (2.2a-4) unstable; urgency=low
+
+  * Provide/Conflict/Replace myspell-gl-es.
+  * Register for use under emacsen.
+  * Fix copyright link.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 16 Feb 2009 13:38:54 +0100
+
+hunspell-gl-es (2.2a-3) unstable; urgency=low
+
+  * debian/control:
+    - Add versioned conflicts against old mozilla*/ice* stuff that
+      used myspell.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 13 Jan 2009 18:36:57 +0100
+
+hunspell-gl-es (2.2a-2) unstable; urgency=low
+
+  * debian/control:
+    - Provides/Conflicts/Replaces mancomun hunspell-gl for Ubuntu Hardy.
+  * debian/README.Debian:
+    - Add info about sf-like upstream site.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 12 Jan 2009 17:00:23 +0100
+
+hunspell-gl-es (2.2a-1) unstable; urgency=low
+
+  * Repack sources so .aff and .dic are as plain files, not in a zipped file.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Fri, 05 Dec 2008 12:31:40 +0100
+
+hunspell-gl-es (2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #507472)
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 01 Dec 2008 18:04:07 +0100

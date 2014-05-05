@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+	purge|remove)
+		update-alternatives \
+			--remove default.plymouth /lib/plymouth/themes/xug-logo/xug-logo.plymouth
+		
+		if which update-initramfs >/dev/null 2>&1
+		then
+			update-initramfs -u
+		fi
+		;;
+esac
+
+#DEBHELPER#

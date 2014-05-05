@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+NameIndexer (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="NameIndexer (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NameIndexer.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/IndexQuery.html" title="class in net.jxta.impl.xindice.core.indexer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/indexer/NameIndexer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NameIndexer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.xindice.core.indexer</FONT>
+<BR>
+Class NameIndexer</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.Paged</A>
+      <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.BTree</A>
+          <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.xindice.core.indexer.NameIndexer</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html" title="interface in net.jxta.impl.xindice.core.indexer">Indexer</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public final class <B>NameIndexer</B><DT>extends <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">BTree</A><DT>implements <A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html" title="interface in net.jxta.impl.xindice.core.indexer">Indexer</A></DL>
+</PRE>
+
+<P>
+NameIndexer is a basic implementation of the Indexer interface.
+ It is used for maintaining element and element@attribute unique
+ indexes.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">BTree</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.BTreeFileHeader.html" title="class in net.jxta.impl.xindice.core.filer">BTree.BTreeFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.BTreePageHeader.html" title="class in net.jxta.impl.xindice.core.filer">BTree.BTreePageHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.BTreeRootInfo.html" title="class in net.jxta.impl.xindice.core.filer">BTree.BTreeRootInfo</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="nested_classes_inherited_from_class_net.jxta.impl.xindice.core.filer.Paged"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer">Paged</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.FileHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.FileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.Page.html" title="class in net.jxta.impl.xindice.core.filer">Paged.Page</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.PageHeader.html" title="class in net.jxta.impl.xindice.core.filer">Paged.PageHeader</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">BTree</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#BRANCH">BRANCH</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#LEAF">LEAF</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#STREAM">STREAM</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.xindice.core.filer.Paged"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer">Paged</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#DELETED">DELETED</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#NO_PAGE">NO_PAGE</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#OVERFLOW">OVERFLOW</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#sync">sync</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#UNUSED">UNUSED</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/NameIndexer.html#NameIndexer()">NameIndexer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/NameIndexer.html#add(net.jxta.impl.xindice.core.data.Key, long)">add</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key,
+    long&nbsp;pos)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add adds a Document to the Indexer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/NameIndexer.html#remove(net.jxta.impl.xindice.core.data.Key)">remove</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove removes all references to the specified Key from the Indexer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/NameIndexer.html#setLocation(java.lang.String, java.lang.String)">setLocation</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;dir,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html" title="class in net.jxta.impl.xindice.core.filer">BTree</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#addValue(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.data.Value, long)">addValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#addValue(net.jxta.impl.xindice.core.data.Value, long)">addValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#create()">create</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createBTreeRoot(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.data.Value)">createBTreeRoot</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createBTreeRoot(net.jxta.impl.xindice.core.data.Value)">createBTreeRoot</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createFileHeader()">createFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createFileHeader(boolean)">createFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createFileHeader(long)">createFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createFileHeader(long, int)">createFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#createPageHeader()">createPageHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#findBTreeRoot(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.data.Value)">findBTreeRoot</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#findBTreeRoot(net.jxta.impl.xindice.core.data.Value)">findBTreeRoot</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#findValue(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.data.Value)">findValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#findValue(net.jxta.impl.xindice.core.data.Value)">findValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#getRootNode()">getRootNode</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#getRootNode(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo)">getRootNode</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#open()">open</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#query(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.indexer.IndexQuery, net.jxta.impl.xindice.core.filer.BTreeCallback)">query</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#query(net.jxta.impl.xindice.core.indexer.IndexQuery, net.jxta.impl.xindice.core.filer.BTreeCallback)">query</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#removeValue(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.data.Value)">removeValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#removeValue(net.jxta.impl.xindice.core.data.Value)">removeValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#setRootNode(net.jxta.impl.xindice.core.filer.BTree.BTreeNode)">setRootNode</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#setRootNode(net.jxta.impl.xindice.core.filer.BTree.BTreeRootInfo, net.jxta.impl.xindice.core.filer.BTree.BTreeNode)">setRootNode</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/BTree.html#setSync(boolean)">setSync</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.xindice.core.filer.Paged"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.xindice.core.filer.<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer">Paged</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#checkOpened()">checkOpened</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#close()">close</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#closeDescriptor(java.io.RandomAccessFile)">closeDescriptor</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayInt(int[], int)">deleteArrayInt</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayLong(long[], int)">deleteArrayLong</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayShort(short[], int)">deleteArrayShort</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#deleteArrayValue(net.jxta.impl.xindice.core.data.Value[], int)">deleteArrayValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#drop()">drop</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#exists()">exists</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#flush()">flush</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getDescriptor()">getDescriptor</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFile()">getFile</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFileHeader()">getFileHeader</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getFreePage()">getFreePage</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#getPage(long)">getPage</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayInt(int[], int, int)">insertArrayInt</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayLong(long[], long, int)">insertArrayLong</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayShort(short[], short, int)">insertArrayShort</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#insertArrayValue(net.jxta.impl.xindice.core.data.Value[], net.jxta.impl.xindice.core.data.Value, int)">insertArrayValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#isOpened()">isOpened</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#putDescriptor(java.io.RandomAccessFile)">putDescriptor</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#readValue(long)">readValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#readValue(net.jxta.impl.xindice.core.filer.Paged.Page)">readValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#setFile(java.io.File)">setFile</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#unlinkPages(long)">unlinkPages</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#unlinkPages(net.jxta.impl.xindice.core.filer.Paged.Page)">unlinkPages</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#writeValue(long, net.jxta.impl.xindice.core.data.Value)">writeValue</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html#writeValue(net.jxta.impl.xindice.core.filer.Paged.Page, net.jxta.impl.xindice.core.data.Value)">writeValue</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.xindice.core.indexer.Indexer"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.impl.xindice.core.indexer.<A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html" title="interface in net.jxta.impl.xindice.core.indexer">Indexer</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html#flush()">flush</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.xindice.core.DBObject"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.impl.xindice.core.<A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#close()">close</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#create()">create</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#drop()">drop</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#exists()">exists</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#isOpened()">isOpened</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#open()">open</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="NameIndexer()"><!-- --></A><H3>
+NameIndexer</H3>
+<PRE>
+public <B>NameIndexer</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="setLocation(java.lang.String, java.lang.String)"><!-- --></A><H3>
+setLocation</H3>
+<PRE>
+public void <B>setLocation</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;dir,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;file)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="remove(net.jxta.impl.xindice.core.data.Key)"><!-- --></A><H3>
+remove</H3>
+<PRE>
+public void <B>remove</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)
+            throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html#remove(net.jxta.impl.xindice.core.data.Key)">Indexer</A></CODE></B></DD>
+<DD>remove removes all references to the specified Key from the Indexer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html#remove(net.jxta.impl.xindice.core.data.Key)">remove</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html" title="interface in net.jxta.impl.xindice.core.indexer">Indexer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The Object ID
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="add(net.jxta.impl.xindice.core.data.Key, long)"><!-- --></A><H3>
+add</H3>
+<PRE>
+public void <B>add</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key,
+                long&nbsp;pos)
+         throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html#add(net.jxta.impl.xindice.core.data.Key, long)">Indexer</A></CODE></B></DD>
+<DD>add adds a Document to the Indexer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html#add(net.jxta.impl.xindice.core.data.Key, long)">add</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/Indexer.html" title="interface in net.jxta.impl.xindice.core.indexer">Indexer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The Object ID<DD><CODE>pos</CODE> - record position
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NameIndexer.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/indexer/IndexQuery.html" title="class in net.jxta.impl.xindice.core.indexer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/indexer/NameIndexer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NameIndexer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree">NESTED</A>&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_net.jxta.impl.xindice.core.filer.BTree">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

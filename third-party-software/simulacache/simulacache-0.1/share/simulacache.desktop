@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=SimulaCache
+Comment= Computing system simulator, explores swapping between processor and memory
+TryExec=simulacache
+Exec=simulacache
+Type=Application
+Categories=Development;Math;Science;Education;

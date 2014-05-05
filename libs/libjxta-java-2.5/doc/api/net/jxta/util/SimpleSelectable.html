@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+SimpleSelectable (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="SimpleSelectable (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SimpleSelectable.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/util/PipeUtilities.html" title="class in net.jxta.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/util/SimpleSelectable.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SimpleSelectable.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.util</FONT>
+<BR>
+Interface SimpleSelectable</H2>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></DD>
+</DL>
+<DL>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../net/jxta/endpoint/AbstractMessenger.html" title="class in net.jxta.endpoint">AbstractMessenger</A>, <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util">AbstractSimpleSelectable</A>, <A HREF="../../../net/jxta/endpoint/AsyncChannelMessenger.html" title="class in net.jxta.endpoint">AsyncChannelMessenger</A>, <A HREF="../../../net/jxta/endpoint/ChannelMessenger.html" title="class in net.jxta.endpoint">ChannelMessenger</A>, <A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>, <A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util">SimpleSelector</A>, <A HREF="../../../net/jxta/endpoint/ThreadedMessenger.html" title="class in net.jxta.endpoint">ThreadedMessenger</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>SimpleSelectable</B></DL>
+</PRE>
+
+<P>
+This the interface that all selectable objects expose.
+
+ <p/>
+ Applications programmers should treat this API as temporary, for now.
+
+ <p/>
+ A SimpleSelectable object can register SimpleSelector objects so that
+ they are notified whenever this object chooses to report a change.
+
+ <p/>
+ SimpleSelectors are SimpleSelectable, therefore selectors can be selected.
+
+ <p/>
+ The change notification interface used to notify a selector is actually
+ specified in SimpleSelectable. As a result, certain implementations may also 
+ allow to register SimpleSelectables that are not Selectors. Selectors themselves do not allow that.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util"><CODE>SimpleSelector</CODE></A>, 
+<A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util"><CODE>AbstractSimpleSelectable</CODE></A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util">SimpleSelectable.IdentityReference</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A simple reference object that can be put in a map instead of the one it refers to.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util">SimpleSelectable.IdentityReference</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/SimpleSelectable.html#getIdentityReference()">getIdentityReference</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/SimpleSelectable.html#itemChanged(net.jxta.util.SimpleSelectable)">itemChanged</A></B>(<A HREF="../../../net/jxta/util/SimpleSelectable.html" title="interface in net.jxta.util">SimpleSelectable</A>&nbsp;changedObject)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked when the given selectable object has changed.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/SimpleSelectable.html#register(net.jxta.util.SimpleSelector)">register</A></B>(<A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util">SimpleSelector</A>&nbsp;s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers the given selector with this selectable object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/SimpleSelectable.html#unregister(net.jxta.util.SimpleSelector)">unregister</A></B>(<A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util">SimpleSelector</A>&nbsp;s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregisters the given selector, so that it is no-longer notified when 
+ this object changes.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getIdentityReference()"><!-- --></A><H3>
+getIdentityReference</H3>
+<PRE>
+<A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util">SimpleSelectable.IdentityReference</A> <B>getIdentityReference</B>()</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A canonical IdentityReference for this object.
+ A given SimpleSelectable always provides the same IdentityReference 
+ object. An IdentityReference must never overload hashCode() or equals()
+ in a way that could make different objects be equal or that could provide
+ different results from invocation to invocation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="register(net.jxta.util.SimpleSelector)"><!-- --></A><H3>
+register</H3>
+<PRE>
+void <B>register</B>(<A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util">SimpleSelector</A>&nbsp;s)</PRE>
+<DL>
+<DD>Registers the given selector with this selectable object. This always 
+ causes one change event for this object to be reported through the 
+ selector. As a result, when selecting for a condition, it is not 
+ necessary to verify whether it has already happened or not; the next call 
+ to select will be able to detect it.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>s</CODE> - The SimpleSelector to register</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregister(net.jxta.util.SimpleSelector)"><!-- --></A><H3>
+unregister</H3>
+<PRE>
+void <B>unregister</B>(<A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util">SimpleSelector</A>&nbsp;s)</PRE>
+<DL>
+<DD>Unregisters the given selector, so that it is no-longer notified when 
+ this object changes.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>s</CODE> - The SimpleSelector to unregister</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="itemChanged(net.jxta.util.SimpleSelectable)"><!-- --></A><H3>
+itemChanged</H3>
+<PRE>
+void <B>itemChanged</B>(<A HREF="../../../net/jxta/util/SimpleSelectable.html" title="interface in net.jxta.util">SimpleSelectable</A>&nbsp;changedObject)</PRE>
+<DL>
+<DD>This method is invoked when the given selectable object has changed. This
+ permits to cascade selectable objects, so that one reports a change when 
+ the other changes, without having to select it. This also permits 
+ implementation of this interface by delegating its implementation to a 
+ utility class.  
+ <p/>
+ An implementation may do what it wants about it. For example, a
+ <A HREF="../../../net/jxta/util/SimpleSelector.html" title="class in net.jxta.util"><CODE>SimpleSelector</CODE></A> will report the change to 
+ <A HREF="../../../net/jxta/util/SimpleSelector.html#select()"><CODE>SimpleSelector.select()</CODE></A> and invoke 
+ <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#notifyChange()"><CODE>AbstractSimpleSelectable.notifyChange()</CODE></A> thereby reporting its own
+ change to cascaded selectors.  Other implementations may only invoke 
+ <A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html#notifyChange()"><CODE>AbstractSimpleSelectable.notifyChange()</CODE></A> or may perform more 
+ complex tasks.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>changedObject</CODE> - the object that has changed.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/util/AbstractSimpleSelectable.html" title="class in net.jxta.util"><CODE>AbstractSimpleSelectable</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SimpleSelectable.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/util/PipeUtilities.html" title="class in net.jxta.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/util/SimpleSelectable.IdentityReference.html" title="class in net.jxta.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/util/SimpleSelectable.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SimpleSelectable.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

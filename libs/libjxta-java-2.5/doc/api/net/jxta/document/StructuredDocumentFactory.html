@@ -1,0 +1,604 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+StructuredDocumentFactory (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="StructuredDocumentFactory (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StructuredDocumentFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/StructuredDocumentFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StructuredDocumentFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.document</FONT>
+<BR>
+Class StructuredDocumentFactory</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">net.jxta.util.ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.document.StructuredDocumentFactory</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>StructuredDocumentFactory</B><DT>extends <A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</DL>
+</PRE>
+
+<P>
+A factory for constructing instances of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>.
+ Behind the scenes, it also provides for the registration of the mime-types
+ and constructors needed to accomplish the construction. All supported
+ mime-types will need to register their implementation in this factory.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document"><CODE>Document</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredTextDocument.html" title="interface in net.jxta.document"><CODE>StructuredTextDocument</CODE></A>, 
+<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>, 
+<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document"><CODE>MimeMediaType</CODE></A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface for instantiators of StructuredDocuments</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.TextInstantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.TextInstantiator</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface for instantiators of StructuredTextDocuments</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#getAssocTable()">getAssocTable</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to get the mapping of keys to constructors.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#getClassForKey()">getClassForKey</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to ensure that all keys used with the
+  mapping are of the correct type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#getClassOfInstantiators()">getClassOfInstantiators</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Used by ClassFactory methods to ensure that all of the instance classes
+  which register with this factory have the correct base class</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#getFileExtensionForMimeType(net.jxta.document.MimeMediaType)">getFileExtensionForMimeType</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the preferred extension for a given mime-type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#getMimeTypeForFileExtension(java.lang.String)">getMimeTypeForFileExtension</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;extension)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the preferred mime-type for a given file extension.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.endpoint.MessageElement)">newStructuredDocument</A></B>(<A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A>&nbsp;element)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> based upon the
+ content of the provided message element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.io.InputStream)">newStructuredDocument</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.io.Reader)">newStructuredDocument</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;reader)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String)">newStructuredDocument</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String, java.lang.String)">newStructuredDocument</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#registerAssoc(java.lang.String)">registerAssoc</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;className)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a class with the factory from its class name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/document/StructuredDocumentFactory.html#registerInstantiator(net.jxta.document.MimeMediaType, net.jxta.document.StructuredDocumentFactory.Instantiator)">registerInstantiator</A></B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                     <A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&nbsp;instantiator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register an instantiator object a mime-type of documents to be
+ constructed.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.ClassFactory"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.util.<A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getAvailableKeys()">getAvailableKeys</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#getEntrySet()">getEntrySet</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#getInstantiator(K)">getInstantiator</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerAssoc(K, I)">registerAssoc</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromFile(java.net.URI)">registerFromFile</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromResources(java.lang.String, java.lang.String)">registerFromResources</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerFromString(java.lang.String)">registerFromString</A>, <A HREF="../../../net/jxta/util/ClassFactory.html#registerProviders(java.lang.String)">registerProviders</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getAssocTable()"><!-- --></A><H3>
+getAssocTable</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt; <B>getAssocTable</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to get the mapping of keys to constructors.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getAssocTable()">getAssocTable</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the map containing the mappings.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getClassForKey()"><!-- --></A><H3>
+getClassForKey</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&gt; <B>getClassForKey</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to ensure that all keys used with the
+  mapping are of the correct type.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getClassForKey()">getClassForKey</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Class object of the key type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getClassOfInstantiators()"><!-- --></A><H3>
+getClassOfInstantiators</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt; <B>getClassOfInstantiators</B>()</PRE>
+<DL>
+<DD>Used by ClassFactory methods to ensure that all of the instance classes
+  which register with this factory have the correct base class
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#getClassOfInstantiators()">getClassOfInstantiators</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Class object of the "Factory" type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerAssoc(java.lang.String)"><!-- --></A><H3>
+registerAssoc</H3>
+<PRE>
+protected boolean <B>registerAssoc</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;className)</PRE>
+<DL>
+<DD>Register a class with the factory from its class name. Since class name
+  doesn't tell us much, we just load the class and hope that something
+  happens as a result of the class loading. This class is often overridden
+  in class factories to interogate the instance class before registering
+  the instance class.
+
+  <p/>We override the standard implementation to get the MIME type from
+  the class and use that as the key to register the class with the factory.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../net/jxta/util/ClassFactory.html#registerAssoc(java.lang.String)">registerAssoc</A></CODE> in class <CODE><A HREF="../../../net/jxta/util/ClassFactory.html" title="class in net.jxta.util">ClassFactory</A>&lt;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>,<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>className</CODE> - The class name which will be registered.
+<DT><B>Returns:</B><DD>boolean true if the class was registered otherwise false.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFileExtensionForMimeType(net.jxta.document.MimeMediaType)"><!-- --></A><H3>
+getFileExtensionForMimeType</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getFileExtensionForMimeType</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype)</PRE>
+<DL>
+<DD>Returns the preferred extension for a given mime-type. If there is no
+  mapping or no preferred extension for this MIME type then <tt>null</tt> is
+  returned.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - the MimeMediaType we wish to know the file extension for.
+<DT><B>Returns:</B><DD>String containing the extension or null for mime-types with no
+  known association.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMimeTypeForFileExtension(java.lang.String)"><!-- --></A><H3>
+getMimeTypeForFileExtension</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>getMimeTypeForFileExtension</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;extension)</PRE>
+<DL>
+<DD>Returns the preferred mime-type for a given file extension. If there is
+  no mapping then <tt>null</tt> is returned.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>extension</CODE> - The extension we wish to know the mime-type for.
+<DT><B>Returns:</B><DD>MimeMediaType associated with this file extension.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerInstantiator(net.jxta.document.MimeMediaType, net.jxta.document.StructuredDocumentFactory.Instantiator)"><!-- --></A><H3>
+registerInstantiator</H3>
+<PRE>
+public static boolean <B>registerInstantiator</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                           <A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document">StructuredDocumentFactory.Instantiator</A>&nbsp;instantiator)</PRE>
+<DL>
+<DD>Register an instantiator object a mime-type of documents to be
+ constructed.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - the mime-type associated.<DD><CODE>instantiator</CODE> - the instantiator that wants to be registered..
+<DT><B>Returns:</B><DD>boolean true   if the instantiator for this mime-type is now
+ registered. If there was already an instantiator this mime-type then
+ false will be returned.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</A></CODE> - there were permission problems registering
+  the instantiator.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String)"><!-- --></A><H3>
+newStructuredDocument</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>newStructuredDocument</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype)</PRE>
+<DL>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter. The
+ <CODE>doctype</CODE> parameter identifies the base type of the
+ <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type to be associated with
+  the <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to be created.<DD><CODE>doctype</CODE> - Specifies the root type of the <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  to be created.
+<DT><B>Returns:</B><DD>StructuredDocument The instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  or null if it could not be created.
+<DT><B>Throws:</B>
+<DD><CODE>NoSuchElementException</CODE> - invalid mime-media-type</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newStructuredDocument(net.jxta.document.MimeMediaType, java.lang.String, java.lang.String)"><!-- --></A><H3>
+newStructuredDocument</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>newStructuredDocument</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;doctype,
+                                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
+<DL>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter. The
+ <CODE>doctype</CODE> parameter identifies the base type of the
+ <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>. Value supplies a value for the root
+ element.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type to be associated with
+  the <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to be created.<DD><CODE>doctype</CODE> - Specifies the root type of the <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  to be created.<DD><CODE>value</CODE> - Specifies a value for the root element.
+<DT><B>Returns:</B><DD>StructuredDocument The instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  or null if it could not be created.
+<DT><B>Throws:</B>
+<DD><CODE>NoSuchElementException</CODE> - if the mime-type has not been registered.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newStructuredDocument(net.jxta.document.MimeMediaType, java.io.InputStream)"><!-- --></A><H3>
+newStructuredDocument</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>newStructuredDocument</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)
+                                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter. The
+ <CODE>doctype</CODE> parameter identifies the base type of the
+ <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type to be associated with the
+  <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to be created.<DD><CODE>stream</CODE> - Contains an InputStream from which the document will be
+  constructed.
+<DT><B>Returns:</B><DD>StructuredDocument The instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  or null if it could not be created.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a problem reading from the stream.
+<DD><CODE>NoSuchElementException</CODE> - if the mime-type has not been registered.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newStructuredDocument(net.jxta.document.MimeMediaType, java.io.Reader)"><!-- --></A><H3>
+newStructuredDocument</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>newStructuredDocument</B>(<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;mimetype,
+                                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;reader)
+                                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> matching
+ the mime-type specified by the <CODE>mimetype</CODE> parameter. The
+ <CODE>doctype</CODE> parameter identifies the base type of the
+ <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mimetype</CODE> - Specifies the mime media type to be associated with the
+ <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> to be created.<DD><CODE>reader</CODE> - A Reader from which the document will be constructed.
+<DT><B>Returns:</B><DD>StructuredDocument The instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+ or <code>null</code> if it could not be created.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a problem reading from the stream.
+<DD><CODE>NoSuchElementException</CODE> - if the mime-type has not been registered.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - if the mime-type provided is not
+ a text oriented MIME type.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newStructuredDocument(net.jxta.endpoint.MessageElement)"><!-- --></A><H3>
+newStructuredDocument</H3>
+<PRE>
+public static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>newStructuredDocument</B>(<A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A>&nbsp;element)
+                                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Constructs an instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A> based upon the
+ content of the provided message element.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>element</CODE> - The message element from which to create the document.
+<DT><B>Returns:</B><DD>StructuredDocument The instance of <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><CODE>StructuredDocument</CODE></A>
+  or null if it could not be created.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If there is a problem reading from the stream.
+<DD><CODE>NoSuchElementException</CODE> - if the mime-type has not been registered.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StructuredDocumentFactory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/document/StructuredDocumentFactory.Instantiator.html" title="interface in net.jxta.document"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/document/StructuredDocumentFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StructuredDocumentFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

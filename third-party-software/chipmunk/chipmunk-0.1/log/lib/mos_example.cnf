@@ -1,0 +1,359 @@
+
+{Parameters for the new MOS models developed by Michael Godfrey}
+
+{This is an example parameter file, annotated to show how to      }
+{determine parameter values from MOSIS data or SPICE extractions  }
+{This example is for an N-well process -- to model a P-well       }
+{process, reverse N and P in well-related discussions.            }
+
+{The syntax is:						          }
+
+{1. Lines enclosed in braces like this one are comments.          }
+{2. 32: <name> <var_name> <value> indicates a data field          }
+{   where: <name>     is the object ("gate") name,		  }
+{          <var_name> is the variable in the object,		  }
+{          <value>    is the value assigned to the variable.      } 
+
+{Physical Constants}
+
+{Temperature}
+32: Physical T 298
+
+{Boltzmann's constant}
+32: Physical k  1.380658e-23
+
+{Charge on an electron}
+32: Physical q  1.60217733e-19
+
+{permittivity of vacuum f/m}
+32: Physical e_v 8.854187817e-12
+
+{permittivity of Si f/m}
+32: Physical e_s 1.035939974589e-010
+
+{permittivity of SiO2 f/m}
+32: Physical e_ox 3.453133248630e-011
+
+{silicon-oxide interface charge}
+32: Physical phi_ms -0.3
+
+{The parameters below are determined from process and               }
+{specific run data. Most of this information may be taken from      }
+{an appropriate MOSIS PRM file. Below are the relevant sections     }
+{taken from the MOSIS file n6ay.prm                                 }
+{The values used by analog are indicated by [name]. For most values }
+{there is an N-device and a P-device value.                         }
+{Each anaLOG variable is shown in [...], and is marked by ^^^^      }
+{under the name.						    } 
+
+{TRANSISTOR PARAMETERS   W/L      N-CHANNEL P-CHANNEL  UNITS          }
+
+{ Delta length                    0.13[DeltaL]  0.16[DeltaL]  microns }
+{                                     ^^^^^^^^      ^^^^^^^^          }
+{  (L_eff = L_drawn-DL)                                               }
+
+{ Delta width                     0.33[DeltaW]  0.34[DeltaW]  microns }
+{                                     ^^^^^^^^      ^^^^^^^^          }
+{  (W_eff = W_drawn-DW)                                               }
+
+
+{CAPACITANCE PARAMETERS  N+DIFF  P+DIFF   POLY  METAL1  METAL2   METAL3  UNITS}
+{ Area (substrate)       544     932       90    37      19       16     aF/um^2}
+{		  [aCactive]  [aCactive]                                        }
+{                 ^^^^^^^^^^  ^^^^^^^^^^					}
+{ Area (poly)                                    60      18              aF/um^2}
+{ Area (metal1)                                          43       16     aF/um^2}
+{ Area (metal2)                                                   45     aF/um^2}
+{ Area (N+active)                        3619                            aF/um^2}
+{ Area (P+active)                        3431                            aF/um^2}
+{ Area (cap well)                        2131                            aF/um^2}
+{ Fringe (substrate)     223     242                                     aF/um}
+{ Fringe (N+active)                       107                            aF/um}
+
+{ N6AY SPICE LEVEL3 PARAMETERS}
+
+{.MODEL CMOSN NMOS LEVEL=3 PHI=0.700000[psi] TOX=9.5000E-09[Tox] XJ=0.200000U TPG=1}
+{                                      ^^^^^               ^^^^^       }
+{+ VTO=0.6674 DELTA=1.4270E+00 LD=6.3300E-08 KP=1.7146E-04             }
+{+ UO=471.7[mu0] THETA=1.6690E-01 RSH=3.3470E+01 GAMMA=0.5219          }
+{          ^^^^^						       }
+{+ NSUB=1.0840E+17[Na] NFS=5.9080E+11 VMAX=2.2650E+05 ETA=2.0550E-02   }
+{                 ^^^^						       }
+{+ KAPPA=2.1270E-01 CGDO=9.0000E-11 CGSO=9.0000E-11[linCgs]            }
+{                                                  ^^^^^^^^            }
+{+ CGBO=3.6007E-10 CJ=5.69E-04[aCactive] MJ=0.661 CJSW=2.00E-11        }
+{      			      ^^^^^^^^^^			       }
+{+ MJSW=0.609 PB=0.99                                                  }
+{* Weff = Wdrawn - Delta_W                                             }
+{* The suggested Delta_W is 3.3260E-07                                 }
+{.MODEL CMOSP PMOS LEVEL=3 PHI=0.700000[psi] TOX=9.5000E-09[Tox] XJ=0.200000U TPG=-1}
+{                                      ^^^^^               ^^^^^
+{+ VTO=-0.9188 DELTA=3.5350E-01 LD=7.8860E-08 KP=3.8312E-05            }
+{+ UO=105.4[mu0] THETA=3.3670E-02 RSH=1.6950E+01 GAMMA=0.7396          }
+{          ^^^^^						       }
+{+ NSUB=2.1770E+17[Na] NFS=5.9080E+11 VMAX=1.5650E+05 ETA=1.7260E-02   }
+{		  ^^^^						       }
+{+ KAPPA=8.8780E+00 CGDO=9.0000E-11 CGSO=9.0000E-11[linCgs]            }
+{                                                  ^^^^^^^^	       }
+{+ CGBO=3.6237E-10 CJ=9.19E-04[aCactive] MJ=0.321 CJSW=4.60E-10        }
+{			      ^^^^^^^^^^                               }
+{+ MJSW=0.100 PB=0.42                                                  }
+{* Weff = Wdrawn - Delta_W                                             }
+{* The suggested Delta_W is 3.3680E-07                                 }
+
+{parameters for N model}
+
+{MOSIS Process Name: See MOSIS file cmos14tb-tech.inf}
+32: DevTechN Process SCN3M_SUBM
+
+{photolithography scaling factor -- identical for P and N}
+{Value for 0.5um process: appropriate for HP CMOS14TB}
+
+32: DevTechN lambda 0.25e-6
+
+{oxide thickness}
+{This parameter may be taken from the HP specs (sadly HP has       }
+{declared the specs to be proprietary (like, Intel would care??)   }
+{so it is necessary to sign a non-disclosure with MOSIS to learn   }
+{the process value. However, the value may also be taken from the  }
+{SPICE LEVEL 3 data in a PRM file for the HP cmos14tb process.     }
+32: DevTechN Tox 90e-10
+
+{potential at neutral edge of depletion region}
+32: DevTechN psi 0.7
+
+{bulk doping concentration}
+32: DevTechN Na 1.0840e17
+
+{carrier mobility}
+32: DevTechN mu0 471.7
+
+{Ldrawn-Leff}
+32: DevTechN deltaL 0.13e-6
+
+{Wdrawn-Weff}
+32: DevTechN deltaW 0.33e-6
+
+{drain-dependence Na factor}
+32: DevTechN del_NaS 0
+
+{Early effect slope parameter}
+32: DevTechN Early_s 0.16
+
+{Early effect intercept parameter}
+32: DevTechN L_0 0.1e-6
+
+{Run Specific Parameters}
+
+{The specific fab run name}
+32: RunSpecN Fabrun N6AY
+
+{fixed oxide charge}
+32: RunSpecN Qss 0.0
+
+{Na multiplicative delta}
+32: RunSpecN del_Na0 1
+
+{mu multiplicative delta}
+32: RunSpecN del_mu 1
+
+{AC Parameters}
+
+{Capacitance modeling is the weak link in the current version           }
+{of these models. All capacitances are modeled linearly. See            }
+{comments below for details on each value                               }
+
+{N+ active (source/drain area) Capacitance F/um^2                       }
+{MOSIS CAPCITANCE TABLE Area (substrate) -- N+DIFF or SPICE CMOSN CJ    }
+32: DevTechN aCactive 544e-18
+
+{Well-to-bulk Capacitance F/um^2                                        }
+{Since the n-channel transistor is in the substrate, this parameter     }
+{is meaningless. We choose an insignificantly small value (not zero) to }
+{prevent numerical problems in the simulation engine                    } 
+32: DevTechN aCwell 1e-18
+
+{Overlap capacitance between gate and source F/um }
+{SPICE CGDO or CGSO * 10-6}
+32: DevTechN linCgs 90e-18
+
+{Gate capacitance -- used for AC parasitics only F/um^2}
+{The nonlinear C(V) function is upper-bounded by Cox,                   }
+{and close to CGBO in subthreshold, which we use below.                 }
+{Replace with COX for conservative delay estimates for digital designs. }
+32: DevTechN aCgw 3.6007e-16
+
+
+{Parameters for P model}
+
+{oxide thickness}
+32: DevTechP Tox 90e-10
+
+{potential at neutral edge of depletion region}
+32: DevTechP psi 0.7
+
+{bulk doping concentration}
+32: DevTechP Na 2.177e17
+
+{carrier mobility}
+32: DevTechP mu0 105.4
+
+{Ldrawn-Leff}
+32: DevTechP deltaL 0.16e-6
+
+{Wdrawn-Weff}
+32: DevTechP deltaW  0.34e-6
+
+{drain-dependence Na factor}
+32: DevTechP del_NaS 0
+
+{Early effect slope parameter}
+32: DevTechP Early_s 0.16
+
+{Early effect intercept parameter}
+32: DevTechP L_0 0.1e-6
+
+{Run Specific Parameters}
+
+{fixed oxide charge}
+32: RunSpecP Qss 0.00010
+
+{oxide thickness}
+32: RunSpecP del_Na0 1
+
+{oxide thickness}
+32: RunSpecP del_mu 1
+
+{AC Parameters}
+
+{Capacitance modeling is the weak link in the current version           }
+{of these models. All capacitances are modeled linearly. See            }
+{comments below for details on each value                               }
+
+{P+ active (source/drain area) Capacitance F/um^2}
+{MOSIS CAPCITANCE TABLE Area (substrate) -- P+DIFF or SPICE CMOSP CJ      }
+32: DevTechP aCactive 932e-18
+
+{Well-to-bulk Capacitance F/um^2}
+{Since the p-channel transistor is in the well, this parameter has        }
+{meaning. This parameter is not specified by MOSIS, nor is it in the HP   }
+{specs, so we have to make a guess.					  }
+{Here, we use half the N+DIFF capacitance as a (very loose) upper bound   }
+32: DevTechP aCwell 272e-18
+
+{Overlap capacitance between gate and source F/um }
+{SPICE CGDO or CGSO * 10-6}
+32: DevTechP linCgs 90e-18
+
+{Gate capacitance -- used for AC parasitics only F/um^2}
+{The nonlinear C(V) function is upper-bounded by Cox,                     }
+{and close to CGBO in subthreshold, which we use below.                   }
+{Replace with COX for conservative delay estimates for digital designs. }
+32: DevTechP aCgw 3.6237e-16
+
+
+{Individual Transistor Models}
+
+{Gate width of transistor, lambda}
+32: Nfet7F Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Nfet7F Ldrawn 4
+
+{Area of source region, m^2}
+32: Nfet7F SArea 36e-6
+
+{Area of drain region, m^2}
+32: Nfet7F DArea 36e-6
+
+{Area of well region, m^2}
+32: Nfet7F WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Nfet7F NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Nfet7F MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Nfet7F QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Nfet7T Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Nfet7T Ldrawn 4
+
+{Area of source region, m^2}
+32: Nfet7T SArea 36e-6
+
+{Area of drain region, m^2}
+32: Nfet7T DArea 36e-6
+
+{Area of well region, m^2}
+32: Nfet7T WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Nfet7T NaOffset 1.0
+
+{offset in Mu0 mobility, multiplicative unitless}
+32: Nfet7T MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Nfet7T QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Pfet7F Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Pfet7F Ldrawn 4
+
+{Area of source region, m^2}
+32: Pfet7F SArea 36e-6
+
+{Area of drain region, m^2}
+32: Pfet7F DArea 36e-6
+
+{Area of well region, m^2}
+32: Pfet7F WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Pfet7F NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Pfet7F MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Pfet7F QssOffset 0.0
+
+{Gate width of transistor, lambda}
+32: Pfet7T Wdrawn 6
+
+{Gate length of transistor, lambda}
+32: Pfet7T Ldrawn 4
+
+{Area of source region, m^2}
+32: Pfet7T SArea 36e-6
+
+{Area of drain region, m^2}
+32: Pfet7T DArea 36e-6
+
+{Area of well region, m^2}
+32: Pfet7T WArea 100e-6
+
+{offset in Na density, multiplicative unitless}
+32: Pfet7T NaOffset 1.0
+
+{offset in mobility, multiplicative unitless}
+32: Pfet7T MuOffset 1.0
+
+{offset in Qss, additive (C)}
+32: Pfet7T QssOffset 0.0
+
+
+
+
+
+
+
+

@@ -1,0 +1,215 @@
+
+#  "LOG", the circuit editing and simulation system, 5.64
+#  "DigLOG", the digital simulator for LOG.
+#  Copyright (C) 1985, 1990 David Gillespie.
+#  Author's address: daveg@synaptics.edu
+
+#  "AnaLOG", the analog simulator for LOG, 5.64
+#  Copyright (C) 1985, 1990 John Lazzaro.
+#  Author's address: lazzaro@cs.berkeley.edu; 
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation (any version).
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+##
+## OS Makefile changes made by Michael Godfrey, godfrey@isl.stanford.edu
+##
+##
+## Comment blocks in this Makefile point to possible changes that need
+## to be made for different OS installations. Its a good idea to look it
+## over first before starting your compilation
+## comment blocks in this Makefile point to possible changes that need
+## to be made for different systems. Its a good idea to look over each
+## block and make necessary changes before doing a "make install"
+
+## if your OS/2 doesn't have these common Unix commands installed, you'l
+## need to change these definitions.
+
+MV = mv
+CD = cd
+CP = copy
+CPR = xcopy
+RM = rm
+RMF = rm -f
+
+# replace these definitions with absolute paths
+
+LOGLIBDIR = E:\log\lib
+LIBDIR = E:\lib
+BINDIR = ..\..\bin
+
+# 
+
+LOCINC = ../../psys/include
+XINCLUDEDIR = .
+
+LIBP2C = ..\..\psys\src\libp2c.a.lib
+LIBX11 = e:\tcpip\lib\xlibi.lib  e:\tcpip\lib\tcp32dll.lib \
+	 e:\tcpip\lib\so32dll.lib
+OBJX11 = Xlib_Globals.obj Xext_Globals.obj
+OTHERLIBS=
+
+##
+##  (1) Choosing your compiler
+##  ---------------------------
+##
+##
+## The original OS/2 port was done with the icc compiler; while we expect
+## only changes for the differences in compiler flags, it might be possible
+## source or Makefile changes will be needed as well. Please let us know of
+## any such changes if you are using a different compiler, so we can update
+## the release.
+
+
+CHIPMUNKCC = icc
+
+CC = $(CHIPMUNKCC) 
+
+OBJ = obj
+
+##
+## (2) Adding appropriate flags
+## -----------------------------
+##
+## The CFLAGS below should be correct for compilation with the icc compiler.
+## Note the function of these two special flags:
+##
+##  -Ti   for symbolic debug. It is OK to leave it in CFLAGS, but
+##        only use it in LFLAGS if symbolic debug to be used.
+##  -O+   for optimizer
+##
+
+
+CFLAGS = -O+ -Wpro- -Ti -Sa -Ms -Ss -Gm -DOS2 -I$(LOCINC) -I$(XINCLUDEDIR) -DLOGLIB="\"$(LOGLIBDIR)\"" -DF_OK=0 -Se -Fd- -q -Fo$@
+LFLAGS = -B/NOE -B/NOI -B/st:0x100000 -B/nologo -B/map -Fm$@.map
+DIGOBJ = logsim.$(OBJ) logdig.$(OBJ) logsimasm.$(OBJ) logsimed.$(OBJ) diggates.$(OBJ) \
+         loghier.$(OBJ) logsimh.$(OBJ) swap.$(OBJ)
+ANAOBJ = ana\globals.$(OBJ) ana\nsolver.$(OBJ) ana\main.$(OBJ) ana\inter.$(OBJ) \
+         ana\numbers.$(OBJ) ana\mmeter.$(OBJ) ana\iscope.$(OBJ) \
+	 ana\vdiff.$(OBJ) ana\vswitch.$(OBJ) ana\stairs.$(OBJ) \
+	 ana\idiff.$(OBJ) ana\iswitch1.$(OBJ) ana\iswitch2.$(OBJ) \
+	 ana\pfet7t.$(OBJ) ana\pfet7f.$(OBJ) ana\nfet7t.$(OBJ) ana\nfet7f.$(OBJ) \
+	 ana\devtechp.$(OBJ) ana\devtechn.$(OBJ)  ana\physical.$(OBJ)\
+	 ana\runspec.$(OBJ) ana\thermal.$(OBJ)\
+	 ana\resfloat.$(OBJ) ana\capfloat.$(OBJ) ana\nfet4.$(OBJ) ana\pfet4.$(OBJ) \
+	 ana\nfet5.$(OBJ) ana\pfet5.$(OBJ) ana\pfet6.$(OBJ) ana\pspc1.$(OBJ) ana\nspc1.$(OBJ)\
+	 ana\tc.$(OBJ) ana\moscap.$(OBJ) ana\ganglion.$(OBJ) ana\hres.$(OBJ) \
+	 ana\npn1.$(OBJ) ana\pnp1.$(OBJ) ana\npn2.$(OBJ) ana\pnp2.$(OBJ) ana\diode1.$(OBJ) ana\pwl.$(OBJ) ana\rtd.$(OBJ)
+
+SIMOBJ = logcom.$(OBJ) $(DIGOBJ) $(ANAOBJ)
+TOOLOBJ = $(SIMOBJ) lplot.$(OBJ) logspc.$(OBJ) logntk.$(OBJ)
+
+main: log
+
+##
+## (3) Saving space during linking
+## -------------------------------
+##
+##  The hard links made by the line:
+##
+##  -ln $(BINDIR)/diglog $(BINDIR)/analog
+##
+##  can be changed to make symbolic links; on some systems (Linux)
+##  this can save lots of disk space, although caution is necessary
+##  when using symbolic links, see the man page for "ln" for details.
+##
+
+install: makeana all
+	$(CP) log.exe $(BINDIR)\diglog.exe
+	$(CP) $(BINDIR)\diglog.exe $(BINDIR)\analog.exe
+	$(CP) loged.exe $(BINDIR)\loged.exe
+	$(CP) fixfet7 $(BINDIR)\fixfet7
+
+clean:
+	-$(RMF) *.$(OBJ) ana\*.$(OBJ) ana\logdef.h log.exe loged.exe
+
+all:  log  loged
+
+makeana:
+	($(CD) ana; make $(MFLAGS) grab all)
+
+LOGOBJ = log.$(OBJ) $(TOOLOBJ) logstuff.$(OBJ) logdef.$(OBJ)
+
+log: $(LOGOBJ) tooldir.$(OBJ) $(LIBP2C) makeana 
+	$(CC) $(LFLAGS) $(LIBP2C) tooldir.$(OBJ) $(LOGOBJ) $(OBJX11) $(LIBX11)  \
+	$(OTHERLIBS) -Fe $@.exe
+
+# The following, if it works on your system, will enable the "linklog"
+# script to work.
+
+#log: log.a tooldir.$(OBJ) $(LIBP2C)
+#	$(CC) $(CFLAGS) tooldir.$(OBJ) log.a $(LIBP2C) -lX11 -lm -o log
+#
+#log.a: $(LOGOBJ)
+#	ar r log.a $(LOGOBJ)
+
+LOGEDOBJ = loged.$(OBJ) simdir.$(OBJ) $(SIMOBJ) logstuff.$(OBJ)
+
+loged: $(LOGEDOBJ) simdir.$(OBJ) $(LIBP2C)
+	$(CC) $(LFLAGS) $(LIBP2C) $(LOGEDOBJ) $(OBJX11) $(LIBX11) \
+	$(OTHERLIBS) -Fe $@.exe
+
+tooldir.$(OBJ): tooldir.c
+
+tooldir.c: $(TOOLOBJ)
+	$(CP) tooldir.os2 tooldir.c
+
+simdir.$(OBJ): simdir.c
+
+simdir.c: $(SIMOBJ)
+	$(CP) simdir.os2 simdir.c
+
+ 
+## The following part of the Makefile is for making a tar file of the
+## original parts of the log distribution. Most users have no need for it.
+
+
+VERSION = 5.20
+
+dist: distrib
+distrib:
+	-rm -rf dist
+	mkdir dist
+	mkdir dist/src
+	mkdir dist/src/ana
+	$(CP) log.cnf log.gate COPYING LNOTES dist/src
+	$(CP) munch* fixfet7 dist/src
+	sed -e "s;5.10;$(VERSION);" Makefile > dist/src/Makefile
+	sed -e "s;5.10;$(VERSION);" ana/Makefile > dist/src/ana/Makefile
+	sed -e "s;5.10;$(VERSION);" dist.INSTALL > dist/README
+	$(CP) *.c *.h dist/src
+	sed -e "s;5.10;$(VERSION);"  logdef.h > dist/src/logdef.h
+	$(CP) ana/*.c ana/*.h dist/src/ana
+	$(CPR) $(LOGLIBDIR) dist/lib
+	echo >dist/lib/stupid~
+	-rm dist/lib/*~ dist/lib/*.ogte
+	sed -e "s;5.10;$(VERSION);" ../lib/log.doc > dist/lib/log.doc
+
+
+tardist:
+	-rm -rf logdist
+	mkdir logdist
+	mv dist logdist/log
+	tar cvf log.tar -C logdist log
+	mv logdist/log dist
+	-rm -f log.tar.Z
+	compress log.tar
+	
+create: dist tardist 
+
+
+
+
+
+
+

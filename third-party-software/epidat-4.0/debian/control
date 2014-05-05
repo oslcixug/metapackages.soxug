@@ -1,0 +1,17 @@
+Source: epidat
+Section: main
+Priority: extra
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://www.sergas.es/MostrarContidos_N3_T01.aspx?IdPaxina=62714
+
+Package: epidat
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, java-runtime
+Description: Statistic and epidemiologic data analysis
+ Trata métodos estadísticos básicos y contiene técnicas específicas 
+ que no se encuentran habitualmente en los paquetes estadísticos 
+ como, por ejemplo, métodos para seleccionar muestras complejas. 
+ Posee una completa ayuda que incluye tanto los fundamentos teóricos 
+ como numerosos ejemplos resueltos.

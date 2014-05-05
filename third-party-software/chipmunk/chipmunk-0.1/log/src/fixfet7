@@ -1,0 +1,6 @@
+#!/bin/csh -b 
+cp $1 old$1
+sed -e s/FET7/SPC1/ < old$1 > $1
+
+
+

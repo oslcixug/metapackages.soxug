@@ -1,0 +1,2142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+JxtaBiDiPipe (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="JxtaBiDiPipe (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaBiDiPipe.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/util/IgnoreFlushFilterOutputStream.html" title="class in net.jxta.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/util/JxtaServerPipe.html" title="class in net.jxta.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/util/JxtaBiDiPipe.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaBiDiPipe.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.util</FONT>
+<BR>
+Class JxtaBiDiPipe</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.util.JxtaBiDiPipe</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A>, <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>JxtaBiDiPipe</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>, <A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A></DL>
+</PRE>
+
+<P>
+JxtaBiDiPipe is a pair of UnicastPipe channels that implements a bidirectional pipe.
+ By default, JxtaBiDiPipe operates in reliable mode, unless otherwise specified,
+ in addition, messages must not exceed the Endpoint MTU size of 64K, exceed the
+ MTU will lead to unexpected behavior.
+ <p/>
+ It highly recommended that an application message listener is specified, not doing so, may
+ lead to message loss in the event the internal queue is overflowed.
+ <p/>
+ Sending messages vis <A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#sendMessage(net.jxta.endpoint.Message)"><CODE>sendMessage(Message)</CODE></A> from within a 
+ <code>PipeMsgListener</code> may result in a deadlock due to contention
+ between the sending and receiving portions of BiDi pipes. 
+ <p/>
+ JxtaBiDiPipe, whenever possible, will attempt to utilize direct tcp messengers,
+ which leads to improved performance.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#acceptLock">acceptLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#bound">bound</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#closed">closed</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#closeLock">closeLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe">OutputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#connectOutpipe">connectOutpipe</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#credential">credential</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#credentialDoc">credentialDoc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#dequeued">dequeued</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#direct">direct</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then we are using a reliable direct messenger to the
+ remote peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#eventListener">eventListener</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#finalLock">finalLock</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#group">group</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#inputPipe">inputPipe</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#isReliable">isReliable</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>true</code> then we are using the underlying end-to-end ACK reliable
+ layer to ensure that messages are received by the remote peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#maxRetryTimeout">maxRetryTimeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#msgListener">msgListener</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#msgr">msgr</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#myPipeAdv">myPipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;OutgoingMsgrAdaptor</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#outgoing">outgoing</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#PIPE_CLOSED_EVENT">PIPE_CLOSED_EVENT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pipe close Event</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#pipeAdv">pipeAdv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/pipe/PipeService.html" title="interface in net.jxta.pipe">PipeService</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#pipeSvc">pipeSvc</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#retryTimeout">retryTimeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;ReliableInputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#ris">ris</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;ReliableOutputStream</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#ros">ros</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#stateListener">stateListener</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#stream">stream</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#timeout">timeout</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#waiting">waiting</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#windowSize">windowSize</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe()">JxtaBiDiPipe</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new object with a default timeout of #timeout, and no reliability.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.endpoint.Messenger, net.jxta.protocol.PipeAdvertisement, net.jxta.document.StructuredDocument, boolean, boolean)">JxtaBiDiPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+             <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>&nbsp;msgr,
+             <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipe,
+             <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;credDoc,
+             boolean&nbsp;isReliable,
+             boolean&nbsp;direct)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a bidirectional pipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener)">JxtaBiDiPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+             <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+             int&nbsp;timeout,
+             <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a bidirectional pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener, boolean)">JxtaBiDiPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+             <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+             int&nbsp;timeout,
+             <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener,
+             boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attempts to create a bidirectional connection to remote peer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.PipeMsgListener)">JxtaBiDiPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+             <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+             <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a bidirectional pipe.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#checkCred(net.jxta.document.StructuredDocument)">checkCred</A></B>(<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;cred)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not implemented yet</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Closes this pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#closePipe(boolean)">closePipe</A></B>(boolean&nbsp;fastClose)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+        int&nbsp;timeout,
+        <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a remote JxtaServerPipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener, boolean)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+        int&nbsp;timeout,
+        <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener,
+        boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a remote JxtaServerPipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect to a JxtaServerPipe with default timeout</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)">connect</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+        <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+        int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to a remote JxtaBiDiPipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#createOpenMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)">createOpenMessage</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a connection request message</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ Closes the JxtaBiDiPipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getCredDoc(net.jxta.peergroup.PeerGroup)">getCredDoc</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the cred doc from the group object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getCredentialDoc()">getCredentialDoc</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the remote credential doc</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getDirectMessenger(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)">getDirectMessenger</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                   <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                   <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A lightweight direct messenger output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to
+ use the pipe service to resolve the pipe we have all we need
+ to construct a messenger.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getInputPipe()">getInputPipe</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an input stream for this socket.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getListener()">getListener</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>use getMessageListener instead</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getMaxRetryTimeout()">getMaxRetryTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Maximum Retry Timeout of the reliability layer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getMessage(int)">getMessage</A></B>(int&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a message from the queue.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getMessageListener()">getMessageListener</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the message listener for this pipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getPipeAdvertisement()">getPipeAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the Assigned PipeAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getPipeEventListener()">getPipeEventListener</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the Pipe event listener for this pipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getPipeStateListener()">getPipeStateListener</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the Pipe state listener for this pipe</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getRemotePeerAdvertisement()">getRemotePeerAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns remote PeerAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getRemotePipeAdvertisement()">getRemotePipeAdvertisement</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns remote PipeAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getRetryTimeout()">getRetryTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Retry Timeout of the reliability layer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#getWindowSize()">getWindowSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When in reliable mode, gets the Reliable library window size</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#isBound()">isBound</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the binding state of the JxtaServerPipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;<A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#lightweightOutputPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)">lightweightOutputPipe</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                      <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                      <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A lightweight output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to
+ use the pipe service to resolve the pipe we have all we need
+ to construct a messenger.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#outputPipeEvent(net.jxta.pipe.OutputPipeEvent)">outputPipeEvent</A></B>(<A HREF="../../../net/jxta/pipe/OutputPipeEvent.html" title="class in net.jxta.pipe">OutputPipeEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when a input pipe has been located for a previously registered
+ pipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called for each pipe message event that occurs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#processIncomingMessage(net.jxta.endpoint.Message)">processIncomingMessage</A></B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This method is invoked by the Reliablity library for each incoming data message</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#sendMessage(net.jxta.endpoint.Message)">sendMessage</A></B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a message
+ <p/>
+ <code>Messenger</code></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setCredentialDoc(net.jxta.document.StructuredDocument)">setCredentialDoc</A></B>(<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;doc)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the connection credential doc.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setInputPipe(net.jxta.pipe.InputPipe)">setInputPipe</A></B>(<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A>&nbsp;inputPipe)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the inputPipe attribute of the JxtaBiDiPipe object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setListener(net.jxta.util.PipeEventListener)">setListener</A></B>(<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A>&nbsp;eventListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>use setPipeEventListener instead</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setListener(net.jxta.pipe.PipeMsgListener)">setListener</A></B>(<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>use setMessageListener instead</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setMaxRetryTimeout(int)">setMaxRetryTimeout</A></B>(int&nbsp;maxRetryTimeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the Maximum Retry Timeout of the reliability layer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setMessageListener(net.jxta.pipe.PipeMsgListener)">setMessageListener</A></B>(<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets message listener for a pipe spawned by the JxtaServerPipe.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setPipeEventListener(net.jxta.util.PipeEventListener)">setPipeEventListener</A></B>(<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A>&nbsp;eventListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a Pipe event listener, set listener to null to unset the listener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setPipeStateListener(net.jxta.util.PipeStateListener)">setPipeStateListener</A></B>(<A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A>&nbsp;stateListener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a Pipe state listener, set listener to null to unset the listener</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setReliable(boolean)">setReliable</A></B>(boolean&nbsp;reliable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggles reliability</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setRemotePeerAdvertisement(net.jxta.protocol.PeerAdvertisement)">setRemotePeerAdvertisement</A></B>(<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the remote PeerAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setRemotePipeAdvertisement(net.jxta.protocol.PipeAdvertisement)">setRemotePipeAdvertisement</A></B>(<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipe)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the remote PipeAdvertisement</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setRetryTimeout(int)">setRetryTimeout</A></B>(int&nbsp;retryTimeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Retry Timeout of the underlying reliability layer
+ .</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#setWindowSize(int)">setWindowSize</A></B>(int&nbsp;windowSize)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When in reliable mode, sets the Reliable library window size</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="timeout"><!-- --></A><H3>
+timeout</H3>
+<PRE>
+protected int <B>timeout</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="retryTimeout"><!-- --></A><H3>
+retryTimeout</H3>
+<PRE>
+protected int <B>retryTimeout</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="maxRetryTimeout"><!-- --></A><H3>
+maxRetryTimeout</H3>
+<PRE>
+protected int <B>maxRetryTimeout</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="windowSize"><!-- --></A><H3>
+windowSize</H3>
+<PRE>
+protected int <B>windowSize</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="group"><!-- --></A><H3>
+group</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>group</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeAdv"><!-- --></A><H3>
+pipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>pipeAdv</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="myPipeAdv"><!-- --></A><H3>
+myPipeAdv</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>myPipeAdv</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pipeSvc"><!-- --></A><H3>
+pipeSvc</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/PipeService.html" title="interface in net.jxta.pipe">PipeService</A> <B>pipeSvc</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="inputPipe"><!-- --></A><H3>
+inputPipe</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A> <B>inputPipe</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="connectOutpipe"><!-- --></A><H3>
+connectOutpipe</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe">OutputPipe</A> <B>connectOutpipe</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="msgr"><!-- --></A><H3>
+msgr</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>msgr</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="stream"><!-- --></A><H3>
+stream</H3>
+<PRE>
+protected <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A> <B>stream</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="closeLock"><!-- --></A><H3>
+closeLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>closeLock</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="acceptLock"><!-- --></A><H3>
+acceptLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>acceptLock</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="finalLock"><!-- --></A><H3>
+finalLock</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>finalLock</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="closed"><!-- --></A><H3>
+closed</H3>
+<PRE>
+protected boolean <B>closed</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="bound"><!-- --></A><H3>
+bound</H3>
+<PRE>
+protected boolean <B>bound</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="dequeued"><!-- --></A><H3>
+dequeued</H3>
+<PRE>
+protected boolean <B>dequeued</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="msgListener"><!-- --></A><H3>
+msgListener</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A> <B>msgListener</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="eventListener"><!-- --></A><H3>
+eventListener</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A> <B>eventListener</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="stateListener"><!-- --></A><H3>
+stateListener</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A> <B>stateListener</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="credential"><!-- --></A><H3>
+credential</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/credential/Credential.html" title="interface in net.jxta.credential">Credential</A> <B>credential</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="waiting"><!-- --></A><H3>
+waiting</H3>
+<PRE>
+protected boolean <B>waiting</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="isReliable"><!-- --></A><H3>
+isReliable</H3>
+<PRE>
+protected boolean <B>isReliable</B></PRE>
+<DL>
+<DD>If <code>true</code> then we are using the underlying end-to-end ACK reliable
+ layer to ensure that messages are received by the remote peer.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ris"><!-- --></A><H3>
+ris</H3>
+<PRE>
+protected ReliableInputStream <B>ris</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="ros"><!-- --></A><H3>
+ros</H3>
+<PRE>
+protected ReliableOutputStream <B>ros</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="direct"><!-- --></A><H3>
+direct</H3>
+<PRE>
+protected volatile boolean <B>direct</B></PRE>
+<DL>
+<DD>If <code>true</code> then we are using a reliable direct messenger to the
+ remote peer. We will assume that messages which are sent successfully
+ will be received successfully.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="outgoing"><!-- --></A><H3>
+outgoing</H3>
+<PRE>
+protected OutgoingMsgrAdaptor <B>outgoing</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="credentialDoc"><!-- --></A><H3>
+credentialDoc</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>credentialDoc</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="PIPE_CLOSED_EVENT"><!-- --></A><H3>
+PIPE_CLOSED_EVENT</H3>
+<PRE>
+public static final int <B>PIPE_CLOSED_EVENT</B></PRE>
+<DL>
+<DD>Pipe close Event
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../constant-values.html#net.jxta.util.JxtaBiDiPipe.PIPE_CLOSED_EVENT">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.endpoint.Messenger, net.jxta.protocol.PipeAdvertisement, net.jxta.document.StructuredDocument, boolean, boolean)"><!-- --></A><H3>
+JxtaBiDiPipe</H3>
+<PRE>
+protected <B>JxtaBiDiPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                       <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A>&nbsp;msgr,
+                       <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipe,
+                       <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;credDoc,
+                       boolean&nbsp;isReliable,
+                       boolean&nbsp;direct)
+                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a bidirectional pipe
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>msgr</CODE> - lightweight output pipe<DD><CODE>pipe</CODE> - PipeAdvertisement<DD><CODE>isReliable</CODE> - Whether the connection is reliable or not<DD><CODE>credDoc</CODE> - Credential StructuredDocument<DD><CODE>direct</CODE> - indicates a direct messenger pipe
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaBiDiPipe()"><!-- --></A><H3>
+JxtaBiDiPipe</H3>
+<PRE>
+public <B>JxtaBiDiPipe</B>()</PRE>
+<DL>
+<DD>Creates a new object with a default timeout of #timeout, and no reliability.
+<P>
+</DL>
+<HR>
+
+<A NAME="JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+JxtaBiDiPipe</H3>
+<PRE>
+public <B>JxtaBiDiPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a bidirectional pipe.
+
+ Attempts to create a bidirectional connection to remote peer within default
+ timeout of #timeout.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>msgListener</CODE> - application PipeMsgListener
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+JxtaBiDiPipe</H3>
+<PRE>
+public <B>JxtaBiDiPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    int&nbsp;timeout,
+                    <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a bidirectional pipe.
+
+ Attempts to create a bidirectional connection to remote peer within specified
+ timeout of #timeout.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>timeout</CODE> - The number of milliseconds within which the JxtaBiDiPipe must
+                    be successfully created. An exception will be thrown if the pipe
+                    cannot be created in the alotted time. A timeout value of <code>0</code>
+                    (zero) specifies an infinite timeout.<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>msgListener</CODE> - application PipeMsgListener
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="JxtaBiDiPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener, boolean)"><!-- --></A><H3>
+JxtaBiDiPipe</H3>
+<PRE>
+public <B>JxtaBiDiPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    int&nbsp;timeout,
+                    <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener,
+                    boolean&nbsp;reliable)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>attempts to create a bidirectional connection to remote peer
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - The number of milliseconds within which the JxtaBiDiPipe must
+                    be successfully created. An exception will be thrown if the pipe
+                    cannot be created in the allotted time. A timeout value of <code>0</code>
+                    (zero) specifies an infinite timeout.<DD><CODE>msgListener</CODE> - application PipeMsgListener<DD><CODE>reliable</CODE> - if true, the reliability is assumed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connect to a JxtaServerPipe with default timeout
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAd</CODE> - PipeAdvertisement
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, int)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    int&nbsp;timeout)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a remote JxtaBiDiPipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - timeout in ms, also reset object default timeout
+                to that of timeout
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    int&nbsp;timeout,
+                    <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a remote JxtaServerPipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>peerid</CODE> - peer to connect to<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - timeout in ms, also reset object default timeout to that of timeout<DD><CODE>msgListener</CODE> - application PipeMsgListener
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connect(net.jxta.peergroup.PeerGroup, net.jxta.peer.PeerID, net.jxta.protocol.PipeAdvertisement, int, net.jxta.pipe.PipeMsgListener, boolean)"><!-- --></A><H3>
+connect</H3>
+<PRE>
+public void <B>connect</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                    <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerid,
+                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd,
+                    int&nbsp;timeout,
+                    <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener,
+                    boolean&nbsp;reliable)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Connects to a remote JxtaServerPipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>peerid</CODE> - peer to connect to<DD><CODE>pipeAd</CODE> - PipeAdvertisement<DD><CODE>timeout</CODE> - timeout in ms, also reset object default timeout to that of timeout<DD><CODE>msgListener</CODE> - application PipeMsgListener<DD><CODE>reliable</CODE> - Reliable connection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setReliable(boolean)"><!-- --></A><H3>
+setReliable</H3>
+<PRE>
+public void <B>setReliable</B>(boolean&nbsp;reliable)
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Toggles reliability
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>reliable</CODE> - Toggles reliability to reliable
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if pipe is bound</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCredDoc(net.jxta.peergroup.PeerGroup)"><!-- --></A><H3>
+getCredDoc</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getCredDoc</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group)</PRE>
+<DL>
+<DD>Obtain the cred doc from the group object.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context
+<DT><B>Returns:</B><DD>The credDoc value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCredentialDoc()"><!-- --></A><H3>
+getCredentialDoc</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A> <B>getCredentialDoc</B>()</PRE>
+<DL>
+<DD>get the remote credential doc
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Credential StructuredDocument</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCredentialDoc(net.jxta.document.StructuredDocument)"><!-- --></A><H3>
+setCredentialDoc</H3>
+<PRE>
+public void <B>setCredentialDoc</B>(<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;doc)</PRE>
+<DL>
+<DD>Sets the connection credential doc.
+ If no credentials are set, the default group credential are used.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>doc</CODE> - Credential StructuredDocument</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createOpenMessage(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+createOpenMessage</H3>
+<PRE>
+protected <A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> <B>createOpenMessage</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                    <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAd)
+                             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a connection request message
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAd</CODE> - pipe advertisement
+<DT><B>Returns:</B><DD>the Message  object
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBound()"><!-- --></A><H3>
+isBound</H3>
+<PRE>
+public boolean <B>isBound</B>()</PRE>
+<DL>
+<DD>Returns the binding state of the JxtaServerPipe.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if the ServerSocket successfully bound to an address</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInputPipe()"><!-- --></A><H3>
+getInputPipe</H3>
+<PRE>
+public <A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A> <B>getInputPipe</B>()
+                       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns an input stream for this socket.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>a stream for reading from this socket.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs when creating the
+                     input stream.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRemotePeerAdvertisement()"><!-- --></A><H3>
+getRemotePeerAdvertisement</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A> <B>getRemotePeerAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns remote PeerAdvertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>remote PeerAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRemotePipeAdvertisement()"><!-- --></A><H3>
+getRemotePipeAdvertisement</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>getRemotePipeAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns remote PipeAdvertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>remote PipeAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRemotePeerAdvertisement(net.jxta.protocol.PeerAdvertisement)"><!-- --></A><H3>
+setRemotePeerAdvertisement</H3>
+<PRE>
+protected void <B>setRemotePeerAdvertisement</B>(<A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</PRE>
+<DL>
+<DD>Sets the remote PeerAdvertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peer</CODE> - Remote PeerAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRemotePipeAdvertisement(net.jxta.protocol.PipeAdvertisement)"><!-- --></A><H3>
+setRemotePipeAdvertisement</H3>
+<PRE>
+protected void <B>setRemotePipeAdvertisement</B>(<A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipe)</PRE>
+<DL>
+<DD>Sets the remote PipeAdvertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pipe</CODE> - PipeAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public void <B>close</B>()
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Closes this pipe.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs when closing this
+                     socket.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="closePipe(boolean)"><!-- --></A><H3>
+closePipe</H3>
+<PRE>
+protected void <B>closePipe</B>(boolean&nbsp;fastClose)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInputPipe(net.jxta.pipe.InputPipe)"><!-- --></A><H3>
+setInputPipe</H3>
+<PRE>
+protected void <B>setInputPipe</B>(<A HREF="../../../net/jxta/pipe/InputPipe.html" title="interface in net.jxta.pipe">InputPipe</A>&nbsp;inputPipe)</PRE>
+<DL>
+<DD>Sets the inputPipe attribute of the JxtaBiDiPipe object
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>inputPipe</CODE> - The new inputPipe value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)"><!-- --></A><H3>
+pipeMsgEvent</H3>
+<PRE>
+public void <B>pipeMsgEvent</B>(<A HREF="../../../net/jxta/pipe/PipeMsgEvent.html" title="class in net.jxta.pipe">PipeMsgEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called for each pipe message event that occurs.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html#pipeMsgEvent(net.jxta.pipe.PipeMsgEvent)">pipeMsgEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - The event being received.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMaxRetryTimeout()"><!-- --></A><H3>
+getMaxRetryTimeout</H3>
+<PRE>
+public int <B>getMaxRetryTimeout</B>()</PRE>
+<DL>
+<DD>Gets the Maximum Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The maximum retry Timeout value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMaxRetryTimeout(int)"><!-- --></A><H3>
+setMaxRetryTimeout</H3>
+<PRE>
+public void <B>setMaxRetryTimeout</B>(int&nbsp;maxRetryTimeout)</PRE>
+<DL>
+<DD>Gets the Maximum Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>maxRetryTimeout</CODE> - The new maximum retry timeout value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if maxRetryTimeout exceeds jxta platform maximum retry timeout</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRetryTimeout()"><!-- --></A><H3>
+getRetryTimeout</H3>
+<PRE>
+public int <B>getRetryTimeout</B>()</PRE>
+<DL>
+<DD>Gets the Retry Timeout of the reliability layer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The retry Timeout value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRetryTimeout(int)"><!-- --></A><H3>
+setRetryTimeout</H3>
+<PRE>
+public void <B>setRetryTimeout</B>(int&nbsp;retryTimeout)
+                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Sets the Retry Timeout of the underlying reliability layer
+ .
+ In reliable mode it is possible for this call to block
+ trying to obtain a lock on reliable input stream
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>retryTimeout</CODE> - The new retry timeout value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getWindowSize()"><!-- --></A><H3>
+getWindowSize</H3>
+<PRE>
+public int <B>getWindowSize</B>()</PRE>
+<DL>
+<DD>When in reliable mode, gets the Reliable library window size
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The windowSize value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setWindowSize(int)"><!-- --></A><H3>
+setWindowSize</H3>
+<PRE>
+public void <B>setWindowSize</B>(int&nbsp;windowSize)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>When in reliable mode, sets the Reliable library window size
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>windowSize</CODE> - The new window size value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an I/O error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processIncomingMessage(net.jxta.endpoint.Message)"><!-- --></A><H3>
+processIncomingMessage</H3>
+<PRE>
+public void <B>processIncomingMessage</B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;message)</PRE>
+<DL>
+<DD>This method is invoked by the Reliablity library for each incoming data message
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - Incoming message</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendMessage(net.jxta.endpoint.Message)"><!-- --></A><H3>
+sendMessage</H3>
+<PRE>
+public boolean <B>sendMessage</B>(<A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A>&nbsp;msg)
+                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Send a message
+ <p/>
+ <code>Messenger</code>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - Message to send to the remote side
+<DT><B>Returns:</B><DD>true if message was successfully enqueued
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if the underlying messenger breaks, either due to
+                     a physical address change, reliability issue.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint"><CODE>Message</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="outputPipeEvent(net.jxta.pipe.OutputPipeEvent)"><!-- --></A><H3>
+outputPipeEvent</H3>
+<PRE>
+public void <B>outputPipeEvent</B>(<A HREF="../../../net/jxta/pipe/OutputPipeEvent.html" title="class in net.jxta.pipe">OutputPipeEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>Called when a input pipe has been located for a previously registered
+ pipe. The event contains an <A HREF="../../../net/jxta/pipe/OutputPipe.html" title="interface in net.jxta.pipe"><CODE>OutputPipe</CODE></A> which can
+ be used to communicate with the remote peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/pipe/OutputPipeListener.html#outputPipeEvent(net.jxta.pipe.OutputPipeEvent)">outputPipeEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/pipe/OutputPipeListener.html" title="interface in net.jxta.pipe">OutputPipeListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - the event</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDirectMessenger(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)"><!-- --></A><H3>
+getDirectMessenger</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>getDirectMessenger</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                              <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                              <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</PRE>
+<DL>
+<DD>A lightweight direct messenger output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to
+ use the pipe service to resolve the pipe we have all we need
+ to construct a messenger.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - Remote Pipe Advertisement<DD><CODE>peer</CODE> - Remote Peer advertisement
+<DT><B>Returns:</B><DD>Messenger</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="lightweightOutputPipe(net.jxta.peergroup.PeerGroup, net.jxta.protocol.PipeAdvertisement, net.jxta.protocol.PeerAdvertisement)"><!-- --></A><H3>
+lightweightOutputPipe</H3>
+<PRE>
+protected static <A HREF="../../../net/jxta/endpoint/Messenger.html" title="interface in net.jxta.endpoint">Messenger</A> <B>lightweightOutputPipe</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                                                 <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A>&nbsp;pipeAdv,
+                                                 <A HREF="../../../net/jxta/protocol/PeerAdvertisement.html" title="class in net.jxta.protocol">PeerAdvertisement</A>&nbsp;peer)</PRE>
+<DL>
+<DD>A lightweight output pipe constructor, note the return type
+ Since all the info needed is available, there's no need for to
+ use the pipe service to resolve the pipe we have all we need
+ to construct a messenger.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - group context<DD><CODE>pipeAdv</CODE> - Remote Pipe Advertisement<DD><CODE>peer</CODE> - Remote Peer advertisement
+<DT><B>Returns:</B><DD>Messenger</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="checkCred(net.jxta.document.StructuredDocument)"><!-- --></A><H3>
+checkCred</H3>
+<PRE>
+protected boolean <B>checkCred</B>(<A HREF="../../../net/jxta/document/StructuredDocument.html" title="interface in net.jxta.document">StructuredDocument</A>&nbsp;cred)</PRE>
+<DL>
+<DD>Not implemented yet
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cred</CODE> - the credential document
+<DT><B>Returns:</B><DD>always returns true</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getListener()"><!-- --></A><H3>
+getListener</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A> <B>getListener</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>use getMessageListener instead</I>
+<P>
+<DD>Returns the message listener for this pipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PipeMsgListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMessageListener()"><!-- --></A><H3>
+getMessageListener</H3>
+<PRE>
+public <A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A> <B>getMessageListener</B>()</PRE>
+<DL>
+<DD>Returns the message listener for this pipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PipeMsgListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setListener(net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+setListener</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setListener</B>(<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>use setMessageListener instead</I>
+<P>
+<DD>Sets message listener for a pipe spawned by the JxtaServerPipe.
+ There is a window where a message could arrive prior to listener being
+ registered therefore a message queue is created to queue messages, once
+ a listener is registered these messages will be dequeued by calling the
+ listener until the queue is empty
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msgListener</CODE> - New value of property listener.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMessageListener(net.jxta.pipe.PipeMsgListener)"><!-- --></A><H3>
+setMessageListener</H3>
+<PRE>
+public void <B>setMessageListener</B>(<A HREF="../../../net/jxta/pipe/PipeMsgListener.html" title="interface in net.jxta.pipe">PipeMsgListener</A>&nbsp;msgListener)</PRE>
+<DL>
+<DD>Sets message listener for a pipe spawned by the JxtaServerPipe.
+ There is a window where a message could arrive prior to listener being
+ registered therefore a message queue is created to queue messages, once
+ a listener is registered these messages will be dequeued by calling the
+ listener until the queue is empty.
+ <p/>
+ Sending messages vis <A HREF="../../../net/jxta/util/JxtaBiDiPipe.html#sendMessage(net.jxta.endpoint.Message)"><CODE>sendMessage(Message)</CODE></A> from within a 
+ <code>PipeMsgListener</code> may result in a deadlock due to contention
+ between the sending and receiving portions of BiDi pipes.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msgListener</CODE> - New value of property listener.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setListener(net.jxta.util.PipeEventListener)"><!-- --></A><H3>
+setListener</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public void <B>setListener</B>(<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A>&nbsp;eventListener)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>use setPipeEventListener instead</I>
+<P>
+<DD>Sets a Pipe event listener, set listener to null to unset the listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>eventListener</CODE> - New value of property listener.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPipeEventListener(net.jxta.util.PipeEventListener)"><!-- --></A><H3>
+setPipeEventListener</H3>
+<PRE>
+public void <B>setPipeEventListener</B>(<A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A>&nbsp;eventListener)</PRE>
+<DL>
+<DD>Sets a Pipe event listener, set listener to null to unset the listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>eventListener</CODE> - New value of property listener.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPipeEventListener()"><!-- --></A><H3>
+getPipeEventListener</H3>
+<PRE>
+public <A HREF="../../../net/jxta/util/PipeEventListener.html" title="interface in net.jxta.util">PipeEventListener</A> <B>getPipeEventListener</B>()</PRE>
+<DL>
+<DD>Returns the Pipe event listener for this pipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PipeMsgListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPipeStateListener(net.jxta.util.PipeStateListener)"><!-- --></A><H3>
+setPipeStateListener</H3>
+<PRE>
+public void <B>setPipeStateListener</B>(<A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A>&nbsp;stateListener)</PRE>
+<DL>
+<DD>Sets a Pipe state listener, set listener to null to unset the listener
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>stateListener</CODE> - New value of property listener.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPipeStateListener()"><!-- --></A><H3>
+getPipeStateListener</H3>
+<PRE>
+public <A HREF="../../../net/jxta/util/PipeStateListener.html" title="interface in net.jxta.util">PipeStateListener</A> <B>getPipeStateListener</B>()</PRE>
+<DL>
+<DD>Returns the Pipe state listener for this pipe
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>PipeMsgListener</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMessage(int)"><!-- --></A><H3>
+getMessage</H3>
+<PRE>
+public <A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint">Message</A> <B>getMessage</B>(int&nbsp;timeout)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></PRE>
+<DL>
+<DD>Gets a message from the queue. If no Object is immediately available,
+ then wait the specified amount of time for a message to be inserted.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>timeout</CODE> - Amount of time to wait in milliseconds for an object to
+                be available. Per Java convention, a timeout of zero (0) means wait an
+                infinite amount of time. Negative values mean do not wait at all.
+<DT><B>Returns:</B><DD>The next message in the queue. if a listener is registered calls
+         to this method will return null
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</A></CODE> - if the operation is interrupted before
+                              the timeout interval is completed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPipeAdvertisement()"><!-- --></A><H3>
+getPipeAdvertisement</H3>
+<PRE>
+public <A HREF="../../../net/jxta/protocol/PipeAdvertisement.html" title="class in net.jxta.protocol">PipeAdvertisement</A> <B>getPipeAdvertisement</B>()</PRE>
+<DL>
+<DD>Returns the Assigned PipeAdvertisement
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the Assigned PipeAdvertisement</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>
+ <p/>
+ Closes the JxtaBiDiPipe.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JxtaBiDiPipe.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/util/IgnoreFlushFilterOutputStream.html" title="class in net.jxta.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/util/JxtaServerPipe.html" title="class in net.jxta.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/util/JxtaBiDiPipe.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JxtaBiDiPipe.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

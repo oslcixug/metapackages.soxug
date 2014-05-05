@@ -1,0 +1,25 @@
+Source: simula3ms
+Section: misc
+Priority: extra
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Homepage: http://www.des.udc.es/~margamor/Simula3MS.htm
+
+Package: simula3ms
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre
+Description: Java simulator of basic monocicle, multicicle and segmented architecture
+ Simula3MS es un proyecto, todavía en desarrollo, del grupo
+ de Arquitectura de Computadores de la Universidad
+ de A Coruña. El proyecto abarca la implementación de un
+ simulador de una arquitectura básica en sus versiones
+ monociclo, multiciclo y segmentado, que se pretende usar en
+ las prácticas de Estructura de Computadores I (EC1).
+ .
+ Los simuladores de los procesadores son ampliamente
+ utilizados en docencia debido a que ofrecen un entorno
+ de programación menos peligroso y mejor que una máquina
+ real porque pueden detectar errores, ofrecer más posibilidades
+ que un ordenador real y no modifican elementos físicos
+ del computador.

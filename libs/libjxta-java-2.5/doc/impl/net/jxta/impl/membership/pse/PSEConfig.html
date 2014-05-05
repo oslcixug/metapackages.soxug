@@ -1,0 +1,844 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PSEConfig (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PSEConfig (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PSEConfig.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEAuthenticatorEngineFactory.html" title="class in net.jxta.impl.membership.pse"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSECredential.html" title="class in net.jxta.impl.membership.pse"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/membership/pse/PSEConfig.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PSEConfig.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.membership.pse</FONT>
+<BR>
+Class PSEConfig</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.membership.pse.PSEConfig</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>PSEConfig</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Manages the state of a Personal Security Enviroment.
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#PSEConfig(net.jxta.impl.membership.pse.KeyStoreManager, char[])">PSEConfig</A></B>(<A HREF="../../../../../net/jxta/impl/membership/pse/KeyStoreManager.html" title="interface in net.jxta.impl.membership.pse">KeyStoreManager</A>&nbsp;storeManager,
+          char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Standard constructor.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#erase()">erase</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes an existing PSE enviroment.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#erase(net.jxta.id.ID)">erase</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erases the specified id from the keystore.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getKey(net.jxta.id.ID, char[])">getKey</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+       char[]&nbsp;key_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the private key for the specified ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getKeysList()">getKeysList</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the list of root certificates for which there is an associated
+ local private key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getKeysList(char[])">getKeysList</A></B>(char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the list of root certificates for which there is an associated
+ local private key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getKeyStore()">getKeyStore</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a copy of the KeyStore associated with this PSE instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getKeyStore(char[])">getKeyStore</A></B>(char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a copy of the KeyStore associated with this PSE instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getTrustedCertificate(net.jxta.id.ID)">getTrustedCertificate</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the trusted cert for the specified id.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getTrustedCertificate(net.jxta.id.ID, char[])">getTrustedCertificate</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                      char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the trusted cert for the specified id.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getTrustedCertificateChain(net.jxta.id.ID)">getTrustedCertificateChain</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the trusted cert chain for the specified id.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getTrustedCertificateID(java.security.cert.X509Certificate)">getTrustedCertificateID</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID of the provided certificate or null if the certificate is
+ not found in the keystore.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#getTrustedCertsList()">getTrustedCertsList</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the list of the trusted certificates available in this keystore.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#initialize()">initialize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initializes the PSE environment.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#isInitialized()">isInitialized</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <code>true</code> if the PSE has been initialized (created).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#isKey(net.jxta.id.ID)">isKey</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> if the specified id is associated with a private
+ key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#isKey(net.jxta.id.ID, char[])">isKey</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+      char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> if the specified id is associated with a private
+ key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#setKey(net.jxta.id.ID, java.security.cert.Certificate[], java.security.PrivateKey, char[])">setKey</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/Certificate.html?is-external=true" title="class or interface in java.security.cert">Certificate</A>[]&nbsp;certchain,
+       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;key,
+       char[]&nbsp;key_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a private key to the PSE using the specified ID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#setKeyStorePassword(char[])">setKeyStorePassword</A></B>(char[]&nbsp;store_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the passphrase to be used when unlocking the keystore.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#setTrustedCertificate(net.jxta.id.ID, java.security.cert.X509Certificate)">setTrustedCertificate</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a trusted certificate with the specified id to the key store.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#validPasswd(net.jxta.id.ID, char[], char[])">validPasswd</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+            char[]&nbsp;store_password,
+            char[]&nbsp;key_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if the provided passwords are correct for the specified identity.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PSEConfig(net.jxta.impl.membership.pse.KeyStoreManager, char[])"><!-- --></A><H3>
+PSEConfig</H3>
+<PRE>
+<B>PSEConfig</B>(<A HREF="../../../../../net/jxta/impl/membership/pse/KeyStoreManager.html" title="interface in net.jxta.impl.membership.pse">KeyStoreManager</A>&nbsp;storeManager,
+          char[]&nbsp;store_password)</PRE>
+<DL>
+<DD>Standard constructor.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>storeManager</CODE> - The StoreManager to be used for this PSEConfig
+                       instance.<DD><CODE>store_password</CODE> - The passphrase for the keystore or <tt>null</tt>.
+                       The passphrase may be set independantly via
+                       <A HREF="../../../../../net/jxta/impl/membership/pse/PSEConfig.html#setKeyStorePassword(char[])"><CODE>setKeyStorePassword(char[])</CODE></A>.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="setKeyStorePassword(char[])"><!-- --></A><H3>
+setKeyStorePassword</H3>
+<PRE>
+public final void <B>setKeyStorePassword</B>(char[]&nbsp;store_password)</PRE>
+<DL>
+<DD>Sets the passphrase to be used when unlocking the keystore.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isInitialized()"><!-- --></A><H3>
+isInitialized</H3>
+<PRE>
+public boolean <B>isInitialized</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if the PSE has been initialized (created). Some
+ keystore formats may not require initialization and may always return
+ <code>true</code>. <code>false</code> may also be returned if the keystore passphrase is
+ incorrect.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if the PSE has been previously initialized
+         otherwise <code>false</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initialize()"><!-- --></A><H3>
+initialize</H3>
+<PRE>
+public void <B>initialize</B>()
+                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Initializes the PSE environment.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="erase()"><!-- --></A><H3>
+erase</H3>
+<PRE>
+public void <B>erase</B>()
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Removes an existing PSE enviroment.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - If the PSE cannot be successfully deleted.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyStore()"><!-- --></A><H3>
+getKeyStore</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</A> <B>getKeyStore</B>()</PRE>
+<DL>
+<DD>Gets a copy of the KeyStore associated with this PSE instance. The
+ returned KeyStore is a copy and not tied to the instance maintained by
+ the PSE. Changing the returned keystore will not result in changes to
+ the PSE.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The keystore or <code>null</code> if it cannot be retrieved.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyStore(char[])"><!-- --></A><H3>
+getKeyStore</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStore.html?is-external=true" title="class or interface in java.security">KeyStore</A> <B>getKeyStore</B>(char[]&nbsp;store_password)
+                     throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Gets a copy of the KeyStore associated with this PSE instance. The
+ returned KeyStore is a copy and not tied to the instance maintained by
+ the PSE. Changing the returned keystore will not result in changes to
+ the PSE.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.
+<DT><B>Returns:</B><DD>The keystore.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.<DT><B>Since:</B></DT>
+  <DD>JXTA 2.4</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validPasswd(net.jxta.id.ID, char[], char[])"><!-- --></A><H3>
+validPasswd</H3>
+<PRE>
+boolean <B>validPasswd</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                    char[]&nbsp;store_password,
+                    char[]&nbsp;key_password)</PRE>
+<DL>
+<DD>Check if the provided passwords are correct for the specified identity.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The identity to be validated.<DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.<DD><CODE>key_password</CODE> - The passphrase associated with the private key or
+                       <code>null</code> if the key has no passphrase.
+<DT><B>Returns:</B><DD><code>true</code> if the passwords were valid for the given id
+         otherwise <code>false</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrustedCertsList()"><!-- --></A><H3>
+getTrustedCertsList</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[] <B>getTrustedCertsList</B>()
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the list of the trusted certificates available in this keystore.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>an array of the IDs of the available trusted certificates.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeysList()"><!-- --></A><H3>
+getKeysList</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[] <B>getKeysList</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the list of root certificates for which there is an associated
+ local private key.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>an array of the available keys. May be an empty array.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeysList(char[])"><!-- --></A><H3>
+getKeysList</H3>
+<PRE>
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>[] <B>getKeysList</B>(char[]&nbsp;store_password)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the list of root certificates for which there is an associated
+ local private key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.
+<DT><B>Returns:</B><DD>an array of the available keys. May be an empty array.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrustedCertificateID(java.security.cert.X509Certificate)"><!-- --></A><H3>
+getTrustedCertificateID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A> <B>getTrustedCertificateID</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the ID of the provided certificate or null if the certificate is
+ not found in the keystore.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - The certificate who's ID is desired.
+<DT><B>Returns:</B><DD>The ID of the certificate or <tt>null</tt> if no matching
+         Certificate was found.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrustedCertificate(net.jxta.id.ID)"><!-- --></A><H3>
+getTrustedCertificate</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A> <B>getTrustedCertificate</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)
+                                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the trusted cert for the specified id.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The id of the Certificate to retrieve.
+<DT><B>Returns:</B><DD>Certificate for the specified ID or null if the store does not
+         contain the specified certificate.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore key has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrustedCertificate(net.jxta.id.ID, char[])"><!-- --></A><H3>
+getTrustedCertificate</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A> <B>getTrustedCertificate</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                                      char[]&nbsp;store_password)
+                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the trusted cert for the specified id.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The id of the Certificate to retrieve.<DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.
+<DT><B>Returns:</B><DD>Certificate for the specified ID or null if the store does not
+         contain the specified certificate.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTrustedCertificateChain(net.jxta.id.ID)"><!-- --></A><H3>
+getTrustedCertificateChain</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>[] <B>getTrustedCertificateChain</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)
+                                             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the trusted cert chain for the specified id.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID of the certificate who's certificate chain is desired.
+<DT><B>Returns:</B><DD>Certificate chain for the specified ID or null if the PSE does
+         not contain the specified certificate.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKey(net.jxta.id.ID, char[])"><!-- --></A><H3>
+getKey</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A> <B>getKey</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                         char[]&nbsp;key_password)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                         <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the private key for the specified ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID of the requested private key.<DD><CODE>key_password</CODE> - The passphrase associated with the private key or
+                     <code>null</code> if the key has no passphrase.
+<DT><B>Returns:</B><DD>PrivateKey for the specified ID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isKey(net.jxta.id.ID)"><!-- --></A><H3>
+isKey</H3>
+<PRE>
+public boolean <B>isKey</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)
+              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns <tt>true</tt> if the specified id is associated with a private
+ key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID of the requested private key.
+<DT><B>Returns:</B><DD><tt>true</tt> if a private key with the specified ID is present
+         otherwise <tt>false</tt>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isKey(net.jxta.id.ID, char[])"><!-- --></A><H3>
+isKey</H3>
+<PRE>
+public boolean <B>isKey</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                     char[]&nbsp;store_password)
+              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns <tt>true</tt> if the specified id is associated with a private
+ key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID of the requested private key.<DD><CODE>store_password</CODE> - The passphrase used to unlock the keystore may be
+                       <code>null</code> for keystores with no passphrase.
+<DT><B>Returns:</B><DD><tt>true</tt> if a private key with the specified ID is present
+         otherwise <tt>false</tt>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTrustedCertificate(net.jxta.id.ID, java.security.cert.X509Certificate)"><!-- --></A><H3>
+setTrustedCertificate</H3>
+<PRE>
+public void <B>setTrustedCertificate</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Adds a trusted certificate with the specified id to the key store. The
+ certificate replaces any existing certificate or private key stored at
+ this ID.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID under which the certificate will be stored.<DD><CODE>cert</CODE> - Certificate for the specified ID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setKey(net.jxta.id.ID, java.security.cert.Certificate[], java.security.PrivateKey, char[])"><!-- --></A><H3>
+setKey</H3>
+<PRE>
+public void <B>setKey</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/Certificate.html?is-external=true" title="class or interface in java.security.cert">Certificate</A>[]&nbsp;certchain,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;key,
+                   char[]&nbsp;key_password)
+            throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Adds a private key to the PSE using the specified ID. The key replaces
+ any existing certificate or private key stored at this ID. The key is
+ stored using the provided key passphrase.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID under which the certificate chain and private key will be stored.<DD><CODE>certchain</CODE> - The certificate chain matching the private key.<DD><CODE>key</CODE> - The private key to be stored in the kestore.<DD><CODE>key_password</CODE> - The passphrase associated with the private key or
+                     <code>null</code> if the key has no passphrase.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore key has been provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="erase(net.jxta.id.ID)"><!-- --></A><H3>
+erase</H3>
+<PRE>
+public void <B>erase</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;id)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A>,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Erases the specified id from the keystore.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>id</CODE> - The ID of the key or certificate to be deleted.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyStoreException.html?is-external=true" title="class or interface in java.security">KeyStoreException</A></CODE> - When the wrong keystore password has been
+                           provided.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors related to processing the keystore.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PSEConfig.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEAuthenticatorEngineFactory.html" title="class in net.jxta.impl.membership.pse"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSECredential.html" title="class in net.jxta.impl.membership.pse"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/membership/pse/PSEConfig.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PSEConfig.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

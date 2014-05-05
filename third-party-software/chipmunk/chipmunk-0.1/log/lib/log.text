@@ -1,0 +1,9219 @@
+# Created by LOGED on Fri Aug 17 15:18:04 2001
+
+
+kind +5V
+simtype 1
+grab -12 -11 12 3
+vector 0 10 0 0
+vector -10 0 10 0
+vector -8 -6 -4 -6
+vector -6 -8 -6 -4
+vector 2 -9 -2 -9
+vector -2 -9 -2 -6
+vector -2 -6 1 -6
+vector 1 -6 2 -4
+vector 2 -4 2 -3
+vector 2 -3 1 -2
+vector 1 -2 -1 -2
+vector -1 -2 -2 -3
+vector 4 -9 6 -2
+vector 6 -2 8 -9
+pin #1 0 10
+def "Signal name: Vdd"
+label "This is the standard "Vcc" or "Vdd" source."
+
+kind +5V2
+simtype 1
+grab -10 -3 10 11
+vector 0 -10 0 0
+vector -8 0 8 0
+vector -6 4 -6 8
+vector -8 6 -4 6
+vector 2 2 -2 2
+vector -2 2 -2 5
+vector -2 5 1 5
+vector 1 5 2 7
+vector 2 7 2 8
+vector 2 8 1 9
+vector 1 9 -1 9
+vector -1 9 -2 8
+vector 4 2 6 9
+vector 6 9 8 2
+pin #1 0 -10
+def "Signal name: Vdd"
+label "Identical to +5V, but rotated."
+label "R:Stupid"
+label "2I42:Integer"
+
+kind +5V3
+simtype 1
+grab -19 -7 2 6
+vector -2 -4 -4 3
+vector -4 3 -6 -4
+vector -8 -4 -12 -4
+vector -12 -4 -12 -1
+vector -12 -1 -9 -1
+vector -9 -1 -8 1
+vector -8 1 -8 2
+vector -8 2 -9 3
+vector -9 3 -11 3
+vector -11 3 -12 2
+vector -14 -1 -18 -1
+vector -16 -3 -16 1
+vector 0 -6 0 5
+vector 0 0 5 0
+pin #1 5 0
+def "Signal name: Vdd"
+
+kind +5V4
+simtype 1
+grab -2 -7 19 6
+vector 0 -6 0 5
+vector 0 0 -5 0
+vector 2 -1 6 -1
+vector 4 -3 4 1
+vector 8 -4 12 -4
+vector 8 -4 8 -1
+vector 8 -1 11 -1
+vector 11 -1 12 1
+vector 12 1 12 2
+vector 12 2 11 3
+vector 11 3 9 3
+vector 9 3 8 2
+vector 14 -4 16 3
+vector 16 3 18 -4
+pin #1 -5 0
+def "Signal name: Vdd"
+
+kind 7SEG
+simtype 16
+group 1
+grab -14 -20 14 19
+vector -20 -5 -12 -5
+vector -20 -15 -12 -15
+vector -20 5 -12 5
+vector -20 15 -12 15
+vector -12 -18 -12 18
+vector -12 18 12 18
+vector 12 18 12 -18
+vector 12 -18 -12 -18
+vector -10 18 -10 20
+vector -5 18 -5 20
+vector 0 18 0 20
+vector 5 18 5 20
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 5 20
+pin #6 0 20
+pin #7 -5 20
+pin #8 -10 20
+connect 1 5
+connect 2 6
+connect 3 7
+connect 4 8
+def "K = FIX #1 OR FIX #5"
+def "L = FIX #2 OR FIX #6"
+def "M = FIX #3 OR FIX #7"
+def "N = FIX #4 OR FIX #8"
+def "CALL LOGSIM_LOG_16_7SEG"
+
+kind 10COUNT
+simtype 16
+group 1
+grab -14 -22 14 22
+vector -12 -20 -12 20
+vector -12 20 12 20
+vector 12 20 12 -20
+vector -12 -20 12 -20
+vector -3 -5 -3 5
+vector 12 -15 20 -15
+vector 12 15 20 15
+vector 12 5 20 5
+vector 20 -5 12 -5
+vector 9 -18 11 -11
+vector 9 -18 7 -11
+vector 8 -14 10 -14
+vector 7 11 7 18
+vector 7 18 11 17
+vector -12 -6 -6 0
+vector -6 0 -12 6
+vector -12 -15 -25 -15
+vector -12 15 -25 15
+vector 7 11 11 12
+vector 11 12 11 17
+vector 9 -5 10 -5
+vector 9 6 10 6
+vector -6 -15 -8 -12
+vector -8 -12 -10 -15
+vector -10 -15 -8 -17
+vector -8 -17 -6 -15
+vector -6 -15 -7 -8
+vector 1 -5 -1 0
+vector -1 0 1 5
+vector 1 -5 3 0
+vector 3 0 1 5
+vector -8 11 -10 14
+vector -10 14 -8 17
+vector -8 11 -6 14
+vector -6 14 -8 17
+vector -17 0 -25 0
+circle -12 0 -17 0
+pin #1 -25 0
+pin #2 -25 15
+pin #3 20 -15
+pin #4 20 -5
+pin #5 20 5
+pin #6 20 15
+pin #7 -25 -15
+def "IF FALL #1"
+def "A = NOT A"
+def "IF NOT A"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "IF NOT C"
+def "D = NOT D"
+def "END"
+def "END"
+def "END"
+def "IF B AND D"
+def "B = ZERO"
+def "D = ZERO"
+def "END"
+def "END"
+def "IFONE #2"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "IFONE #7"
+def "A = ONE"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ONE"
+def "END"
+def "#3 = A"
+def "#4 = B"
+def "#5 = C"
+def "#6 = D"
+label "BCD counter with asynchronous clear, set-to-9."
+
+kind 16COUNT
+simtype 16
+group 1
+grab -14 -22 14 22
+vector -12 -20 -12 20
+vector -12 20 12 20
+vector 12 20 12 -20
+vector -12 -20 12 -20
+vector -3 -5 -3 5
+vector 12 -15 20 -15
+vector 12 15 20 15
+vector 12 5 20 5
+vector 20 -5 12 -5
+vector 9 -18 11 -11
+vector 9 -18 7 -11
+vector 8 -14 10 -14
+vector 7 11 7 18
+vector 7 18 11 17
+vector -12 -6 -6 0
+vector -6 0 -12 6
+vector -12 15 -25 15
+vector 7 11 11 12
+vector 11 12 11 17
+vector 9 -5 10 -5
+vector 9 6 10 6
+vector 2 -5 -1 0
+vector -1 0 1 5
+vector -8 11 -10 14
+vector -10 14 -8 17
+vector -17 0 -25 0
+vector -8 11 -6 12
+vector -8 17 -6 16
+vector 1 5 4 3
+vector 4 3 2 0
+vector 2 0 -1 0
+circle -12 0 -17 0
+pin #1 -25 0
+pin #2 -25 15
+pin #3 20 -15
+pin #4 20 -5
+pin #5 20 5
+pin #6 20 15
+def "IF FALL #1"
+def "A = NOT A"
+def "IF NOT A"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "IF NOT C"
+def "D = NOT D"
+def "END"
+def "END"
+def "END"
+def "END"
+def "IFONE #2"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = B"
+def "#5 = C"
+def "#6 = D"
+label "Binary counter, with asynchronous clear."
+
+kind 7400
+simtype 16
+group 2
+grab -12 -12 15 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NAND #2"
+label "2-input NAND."
+
+kind 7401
+simtype 16
+group 2
+grab -12 -12 15 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 15 0 20 0
+vector 3 -10 3 10
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 < #1 NAND #2"
+label "2-input NAND, open-collector."
+
+kind 7402
+simtype 16
+group 2
+grab -13 -12 15 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NOR #2"
+label "2-input NOR."
+
+kind 7404
+simtype 16
+group 2
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 10 0 15 0
+vector -8 0 -15 0
+circle 5 0 10 0
+pin #1 -15 0
+pin #2 15 0
+def "IFNONE #1"
+def "#2 = ONE"
+def "END"
+def "IFCONN #1"
+def "#2 = NOT #1"
+def "END"
+label "Inverter."
+
+kind 7406
+simtype 16
+group 2
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 10 0 15 0
+vector -8 0 -15 0
+vector -1 -4 -1 4
+circle 5 0 10 0
+pin #1 -15 0
+pin #2 15 0
+def "IFCONN #1"
+def "#2 < NOT #1"
+def "END"
+def "IFNONE #1"
+def "#2 < ONE"
+def "END"
+label "Inverter, open-collector."
+
+kind 7407
+simtype 16
+group 2
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 5 0 15 0
+vector -8 0 -15 0
+vector -1 -4 -1 4
+pinnum 1 -13 -2
+pinnum 2 13 -2
+pin #1 -15 0
+pin #2 15 0
+def "IFCONN #1"
+def "#2 < #1"
+def "END"
+def "IFNONE #1"
+def "#2 < ONE"
+def "END"
+label "Non-inverting buffer, open-collector."
+
+kind 7408
+simtype 16
+group 2
+grab -12 -12 12 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 10 0 20 0
+pinnum 1 -18 -7
+pinnum 2 -18 3
+pinnum 3 18 -2
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 AND #2"
+label "2-input AND."
+
+kind 7409
+simtype 16
+group 2
+grab -12 -12 12 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 10 0 20 0
+vector 3 -10 3 10
+pinnum 1 -18 -7
+pinnum 2 -18 3
+pinnum 3 18 -2
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 < #1 AND #2"
+label "2-input AND, open-collector."
+
+kind 7410
+simtype 16
+group 2
+grab -12 -17 15 17
+vector -10 -15 -10 15
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 10 7 10 7
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NAND #2 NAND #3"
+label "3-input NAND."
+
+kind 7411
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector 10 0 20 0
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 -7 10 0
+vector 10 0 10 7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+pinnum 13 -18 -12
+pinnum 1 -18 -2
+pinnum 2 -18 8
+pinnum 12 18 -2
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 AND #2 AND #3"
+label "3-input AND."
+
+kind 7412
+simtype 16
+group 2
+grab -12 -17 15 17
+vector -10 -15 -10 15
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 10 7 10 7
+vector 15 0 20 0
+vector 4 -15 4 15
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 < #1 NAND #2 NAND #3"
+label "3-input NAND, open-collector."
+
+kind 7415
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector 10 0 20 0
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 -7 10 0
+vector 10 0 10 7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 4 -15 4 15
+pinnum 13 -18 -12
+pinnum 1 -18 -2
+pinnum 2 -18 8
+pinnum 12 18 -2
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 < #1 AND #2 AND #3"
+label "3-input AND, open-collector."
+
+kind 7420
+simtype 16
+group 2
+grab -12 -22 17 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 25 0 18 0
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 NAND #2 NAND #3 NAND #4"
+label "4-input NAND."
+
+kind 7421
+simtype 16
+group 2
+grab -12 -22 15 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 13 0 25 0
+pinnum 1 -18 -17
+pinnum 2 -18 -7
+pinnum 4 -18 3
+pinnum 5 -18 13
+pinnum 6 23 -2
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 AND #2 AND #3 AND #4"
+label "4-input AND."
+
+kind 7422
+simtype 16
+group 2
+grab -12 -22 17 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 25 0 18 0
+vector 5 -19 5 19
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 < #1 NAND #2 NAND #3 NAND #4"
+label "4-input NAND, open-collector."
+
+kind 7425
+simtype 16
+group 2
+grab -12 -22 17 22
+vector 1 -20 6 -17
+vector 6 -17 10 -10
+vector 13 0 10 10
+vector 10 10 6 17
+vector 6 17 1 20
+vector 1 20 -10 20
+vector 1 -20 -10 -20
+vector -20 15 -8 15
+vector -20 -15 -8 -15
+vector 10 -10 13 0
+vector -10 -20 -7 -11
+vector -7 -11 -6 -4
+vector -6 -4 -6 4
+vector -6 4 -7 11
+vector -7 11 -10 20
+vector -20 -5 -6 -5
+vector -20 5 -6 5
+vector 18 0 25 0
+vector 9 -11 15 -15
+vector 15 -15 15 -20
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+pin #6 15 -20
+def "#5 = #6 NAND (#1 OR #2 OR #3 OR #4)"
+label "4-input NOR with strobe."
+label ""
+label "Output is low if any input = 1, and strobe = 1."
+
+kind 7427
+simtype 16
+group 2
+grab -13 -17 14 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector -8 -5 -8 5
+vector -8 5 -11 15
+vector 6 -10 10 0
+vector 4 13 6 10
+vector 6 10 10 0
+vector -1 -15 -11 -15
+vector -11 -15 -8 -5
+vector -8 0 -20 0
+vector -10 -10 -20 -10
+vector -20 10 -10 10
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NOR #2 NOR #3"
+label "3-input NOR."
+
+kind 7430
+simtype 16
+group 2
+grab -12 -22 17 25
+vector -10 23 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 8 18
+vector 8 18 2 23
+vector 2 23 -10 23
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 25 0 18 0
+vector -10 20 -20 20
+vector -20 10 -10 10
+vector -20 0 -10 0
+vector -20 -10 -10 -10
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -10
+pin #3 -20 -5
+pin #4 -20 0
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = #1 AND #2 AND #3 AND #4"
+def "#9 = #5 NAND #6 NAND #7 NAND #8 NAND A"
+label "8-input NAND."
+
+kind 7432
+simtype 16
+group 2
+grab -13 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+pinnum 1 -18 -7
+pinnum 2 -18 3
+pinnum 3 18 -2
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 OR #2"
+label "2-input OR."
+
+kind 7433
+simtype 16
+group 2
+grab -13 -12 15 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector 15 0 20 0
+vector 3 -9 3 9
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 < #1 NOR #2"
+label "2-input NOR, open collector."
+
+kind 7442
+simtype 16
+group 2
+grab -14 -28 15 23
+vector 14 -27 14 22
+vector 14 22 -13 22
+vector -13 22 -13 -27
+vector -13 -27 14 -27
+vector 14 -20 20 -20
+vector 14 -15 20 -15
+vector 14 -10 20 -10
+vector 14 -5 20 -5
+vector 14 0 20 0
+vector 14 5 20 5
+vector 14 10 20 10
+vector 14 15 20 15
+vector 14 20 20 20
+vector 14 -25 20 -25
+vector -13 -15 -20 -15
+vector -13 -5 -20 -5
+vector -13 5 -20 5
+vector -13 15 -20 15
+vector 10 -24 9 -24
+vector 9 -24 8 -23
+vector 8 -23 8 -19
+vector 8 -19 9 -18
+vector 9 -18 10 -18
+vector 10 -18 11 -19
+vector 11 -19 11 -23
+vector 11 -23 10 -24
+vector 9 13 8 14
+vector 8 14 8 15
+vector 8 15 9 16
+vector 9 16 10 16
+vector 10 16 11 15
+vector 9 13 10 13
+vector 10 13 11 14
+vector 11 14 11 18
+vector 11 18 10 19
+vector 10 19 9 19
+vector -11 13 -11 19
+vector -11 19 -8 19
+vector -8 19 -7 18
+vector -7 18 -7 14
+vector -7 14 -8 13
+vector -8 13 -11 13
+vector -11 -12 -9 -18
+vector -9 -18 -7 -12
+vector -10 -14 -8 -14
+vector -3 -5 -3 -1
+vector -3 -1 0 -1
+vector 0 -5 0 3
+vector 2 -5 5 -5
+vector 5 -5 5 -1
+vector 5 -1 2 -1
+vector 2 -1 2 3
+vector 2 3 5 3
+pin #1 20 -20
+pin #2 20 -15
+pin #3 20 -10
+pin #4 20 -5
+pin #5 20 0
+pin #6 20 5
+pin #7 20 10
+pin #8 20 15
+pin #9 20 20
+pin #10 20 -25
+pin #11 -20 -15
+pin #12 -20 -5
+pin #13 -20 5
+pin #14 -20 15
+def "#1 = ONE"
+def "#2 = ONE"
+def "#3 = ONE"
+def "#4 = ONE"
+def "#5 = ONE"
+def "#6 = ONE"
+def "#7 = ONE"
+def "#8 = ONE"
+def "#9 = ONE"
+def "#10 = ONE"
+def "IF #14"
+def "IF #13 NOR #12"
+def "IF #11"
+def "#9 < ZERO"
+def "END"
+def "IFZERO #11"
+def "#8 < ZERO"
+def "END"
+def "END"
+def "END"
+def "IFZERO #14"
+def "IF #13"
+def "IF #12"
+def "IF #11"
+def "#7 < ZERO"
+def "END"
+def "IFZERO #11"
+def "#6 < ZERO"
+def "END"
+def "END"
+def "IFZERO #12"
+def "IF #11"
+def "#5 < ZERO"
+def "END"
+def "IFZERO #11"
+def "#4 < ZERO"
+def "END"
+def "END"
+def "END"
+def "IFZERO #13"
+def "IF #12"
+def "IF #11"
+def "#3 < ZERO"
+def "END"
+def "IFZERO #11"
+def "#2 < ZERO"
+def "END"
+def "END"
+def "IFZERO #12"
+def "IF #11"
+def "#1 < ZERO"
+def "END"
+def "IFZERO #11"
+def "#10 < ZERO"
+def "END"
+def "END"
+def "END"
+def "END"
+label "4-to-10 decoder.  Outputs are active-low.  D is MSB."
+
+kind 7450
+simtype 16
+group 2
+grab -16 -18 17 18
+vector -15 -17 -15 -3
+vector -15 -3 -8 -3
+vector -8 -3 -6 -5
+vector -6 -5 -5 -7
+vector -15 -17 -8 -17
+vector -8 -17 -6 -15
+vector -6 -15 -5 -13
+vector -5 -13 -5 -7
+vector -15 3 -15 17
+vector -15 17 -8 17
+vector -8 17 -6 15
+vector -6 15 -5 13
+vector -5 13 -5 7
+vector -5 7 -6 5
+vector -6 5 -8 3
+vector -8 3 -15 3
+vector 1 -7 3 -4
+vector 3 -4 3 4
+vector 3 4 1 7
+vector 1 7 7 7
+vector 7 7 10 6
+vector 10 6 12 3
+vector 12 3 13 0
+vector 13 0 12 -3
+vector 12 -3 10 -6
+vector 10 -6 7 -7
+vector 7 -7 1 -7
+vector -5 -10 -2 -10
+vector -2 -10 -2 -3
+vector -2 -3 3 -3
+vector -5 10 -2 10
+vector -2 10 -2 3
+vector -2 3 3 3
+vector -15 -15 -20 -15
+vector -15 -5 -20 -5
+vector -15 5 -20 5
+vector -15 15 -20 15
+circle 13 0 17 0
+vector 17 0 20 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 20 0
+def "#5 = (#1 AND #2) NOR (#3 AND #4)"
+label "AND-OR-INVERT network."
+
+kind 7454
+simtype 16
+group 2
+grab -16 -23 21 23
+vector -15 -20 -20 -20
+vector -20 -15 -15 -15
+vector -20 -10 -15 -10
+vector -20 -5 -15 -5
+vector -20 5 -15 5
+vector -20 10 -15 10
+vector -20 15 -15 15
+vector -20 20 -15 20
+vector -15 -22 -15 -13
+vector -15 -13 -11 -13
+vector -11 -13 -10 -15
+vector -10 -15 -10 -20
+vector -10 -20 -11 -22
+vector -11 -22 -15 -22
+vector -15 -11 -15 -3
+vector -15 -3 -11 -3
+vector -11 -3 -10 -5
+vector -10 -5 -10 -9
+vector -10 -9 -11 -11
+vector -11 -11 -15 -11
+vector -15 3 -15 11
+vector -15 11 -11 11
+vector -11 11 -10 9
+vector -10 9 -10 5
+vector -10 5 -11 3
+vector -11 3 -15 3
+vector -15 13 -15 22
+vector -15 22 -11 22
+vector -11 22 -10 20
+vector -10 20 -10 15
+vector -10 15 -11 13
+vector -11 13 -15 13
+vector -2 -12 0 -8
+vector 0 -8 1 -5
+vector -2 12 0 8
+vector 0 8 1 5
+vector 1 5 1 -5
+vector -2 -12 6 -12
+vector 6 -12 11 -11
+vector 11 -11 14 -7
+vector 14 -7 18 0
+vector -2 12 6 12
+vector 6 12 11 11
+vector 11 11 14 8
+vector 14 8 18 0
+vector 1 -2 -7 -2
+vector -7 -2 -7 -7
+vector -7 -7 -10 -7
+vector -10 -18 -4 -18
+vector -4 -18 -4 -8
+vector -4 -8 0 -8
+vector -10 7 -7 7
+vector -7 7 -7 2
+vector -7 2 1 2
+vector -10 18 -4 18
+vector -4 18 -4 8
+vector -4 8 0 8
+vector 22 0 25 0
+circle 18 0 22 0
+pin #1 -20 -20
+pin #2 -20 -15
+pin #3 -20 -10
+pin #4 -20 -5
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = (#1 AND #2) OR (#3 AND #4)"
+def "#9 = (#5 AND #6) NOR (#7 AND #8) NOR A"
+label "AND-OR-INVERT network."
+
+kind 7470
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector -10 0 -20 0
+vector -10 10 -20 10
+vector 15 10 20 10
+vector 0 -20 0 -25
+vector -10 -8 -15 -8
+vector -15 -8 -15 -5
+vector -15 -5 -20 -5
+vector -10 8 -15 8
+vector -15 8 -15 5
+vector -15 5 -20 5
+vector -14 -13 -17 -13
+vector -17 -13 -17 -15
+vector -17 -15 -20 -15
+vector -20 15 -17 15
+vector -17 15 -17 13
+vector -17 13 -14 13
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 1 4 1 -4
+vector 1 -4 4 -4
+vector 4 -4 4 4
+vector 4 4 1 4
+circle -10 -13 -14 -13
+circle -10 13 -14 13
+circle 0 15 0 20
+circle 10 10 15 10
+circle 0 -15 0 -20
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 -10
+pin #5 20 10
+pin #6 0 -25
+pin #7 0 25
+pin #8 -20 -5
+pin #9 -20 5
+pin #10 -20 -15
+pin #11 -20 15
+def "IF RISE #2"
+def "J = #1 AND #8 AND NOT #10"
+def "K = #3 AND #9 AND NOT #11"
+def "IF J XOR K"
+def "A = ZERO"
+def "END"
+def "IF J"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = ONE"
+def "END"
+def "IFZERO #7"
+def "A = ZERO"
+def "END"
+def "#4 = A"
+def "#5 = NOT A"
+label "Positive edge triggered J-K flip-flop with asynchronous preset, clear."
+label "J and preset are at top (with non-inverted output)."
+label ""
+label "Internal J and K are AND of two plain and one inverted input."
+
+kind 7473
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector -10 10 -20 10
+vector 15 10 20 10
+vector -15 0 -20 0
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 4 -4 1 -4
+vector 4 0 1 0
+vector 4 -4 4 4
+vector 4 4 1 4
+circle -10 0 -15 0
+circle 10 10 15 10
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 -10
+pin #5 20 10
+pin #6 0 25
+def "IF FALL #2"
+def "IF #1 XOR #3"
+def "A = ZERO"
+def "END"
+def "IF #1"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#4 = A"
+def "#5 = NOT A"
+label "Negative edge triggered J-K flip-flop with asynchronous clear."
+label "J is at top (with non-inverted output)."
+
+kind 7474
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 5 -20 5
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 15 5 20 5
+vector -10 -1 -4 5
+vector -4 5 -10 11
+vector 0 -20 0 -25
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 1 -4 1 0
+vector 1 0 4 0
+vector 4 -4 4 4
+circle 0 15 0 20
+circle 10 5 15 5
+circle 0 -15 0 -20
+pin #1 -20 -10
+pin #2 -20 5
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+def "IF RISE #2"
+def "A = #1"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Positive edge-triggered Data flip-flop with asynchronous preset, clear."
+
+kind 7475
+simtype 16
+group 2
+grab -12 -20 12 20
+vector -10 -18 -10 18
+vector -10 18 10 18
+vector 10 18 10 -18
+vector 10 -18 -10 -18
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector 10 -10 20 -10
+vector 15 10 20 10
+vector -10 5 -5 10
+vector -5 10 -10 15
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 4 -4 1 -4
+vector 1 -4 1 0
+vector 1 0 4 0
+vector 4 0 4 4
+vector 4 4 1 4
+circle 10 10 15 10
+pin #1 -20 -10
+pin #2 -20 10
+pin #3 20 -10
+pin #4 20 10
+def "IF #2"
+def "A = #1"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Latch.  If clock is high, output follows input, else output holds."
+
+kind 7476
+simtype 16
+group 2
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector 0 -20 0 -25
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector -10 10 -20 10
+vector 15 10 20 10
+vector -15 0 -20 0
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 4 -4 1 -4
+vector 1 -4 1 4
+vector 1 4 4 4
+vector 4 4 4 0
+vector 4 0 1 0
+circle 0 -15 0 -20
+circle -10 0 -15 0
+circle 0 15 0 20
+circle 10 10 15 10
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 -10
+pin #5 20 10
+pin #6 0 -25
+pin #7 0 25
+def "IF FALL #2"
+def "IF #1 XOR #3"
+def "A = ZERO"
+def "END"
+def "IF #1"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = ONE"
+def "END"
+def "IFZERO #7"
+def "A = ZERO"
+def "END"
+def "#4 = A"
+def "#5 = NOT A"
+label "Negative edge triggered J-K flip-flop, with asynchronous preset, clear."
+label "J is at top (with non-inverted output)."
+
+kind 7477
+simtype 16
+group 2
+grab -12 -20 12 20
+vector -10 -18 -10 18
+vector -10 18 10 18
+vector 10 18 10 -18
+vector 10 -18 -10 -18
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector 10 -10 20 -10
+vector -10 5 -5 10
+vector -5 10 -10 15
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector 4 -4 1 -4
+vector 4 -4 4 4
+pinnum 1 -18 -12
+pinnum 12 -18 8
+pinnum 14 18 -12
+pin #1 -20 -10
+pin #2 -20 10
+pin #3 20 -10
+def "IF #2"
+def "A = #1"
+def "END"
+def "#3 = A"
+label "Latch.  If clock is high, output follows input, else output holds."
+
+kind 7482
+simtype 16
+group 2
+grab -11 -20 11 24
+vector -10 -5 -15 -5
+vector 10 -15 15 -15
+vector 10 -5 15 -5
+vector 10 20 15 20
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector -4 4 -4 -4
+vector -4 0 -1 0
+vector 1 -4 4 -4
+vector 4 -4 4 0
+vector 4 0 1 0
+vector 1 0 1 4
+vector 1 4 4 4
+vector -15 -15 -10 -15
+vector -15 20 -10 20
+vector -10 -19 -10 23
+vector -10 23 10 23
+vector 10 23 10 -19
+vector 10 -19 -10 -19
+vector -5 -19 -5 -25
+vector -10 10 -15 10
+pinnum 2 -13 -17
+pinnum 14 -13 -7
+pinnum 3 -13 8
+pinnum 13 -13 18
+pinnum 1 13 -17
+pinnum 12 13 -7
+pinnum 10 13 18
+pinnum 5 -7 -23
+pin #1 -15 -15
+pin #2 -15 -5
+pin #3 -15 10
+pin #4 -15 20
+pin #5 -5 -25
+pin #6 15 -15
+pin #7 15 -5
+pin #8 15 20
+def "#6 = #1 XOR #3 XOR #5"
+def "C = (#1 AND #3) OR (#5 AND (#1 OR #3))"
+def "#7 = #2 XOR #4 XOR C"
+def "#8 = (#2 AND #4) OR (C AND (#2 OR #4))"
+label "2-bit full adder.  Carry input at top, carry output at bottom, top is LSB."
+
+kind 7483
+simtype 16
+group 2
+grab -10 -22 10 23
+vector -9 -21 -9 22
+vector -9 22 9 22
+vector 9 22 9 -21
+vector 9 -21 -9 -21
+vector -9 -20 -15 -20
+vector -9 -15 -15 -15
+vector -9 -10 -15 -10
+vector -9 -5 -15 -5
+vector -9 5 -15 5
+vector -9 10 -15 10
+vector -9 15 -15 15
+vector -9 20 -15 20
+vector -5 -21 -5 -25
+vector 9 -10 15 -10
+vector 9 -5 15 -5
+vector 9 0 15 0
+vector 9 5 15 5
+vector 9 15 15 15
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector -4 4 -4 -4
+vector -4 0 -1 0
+vector 1 -4 4 -4
+vector 4 -4 4 4
+vector 4 4 1 4
+vector 1 0 4 0
+pinnum 10 -13 -22
+pinnum 8 -13 -17
+pinnum 3 -13 -12
+pinnum 1 -13 -7
+pinnum 11 -13 3
+pinnum 7 -13 8
+pinnum 4 -13 13
+pinnum 16 -13 18
+pinnum 13 -7 -23
+pinnum 9 13 -12
+pinnum 6 13 -7
+pinnum 2 13 -2
+pinnum 15 13 3
+pinnum 14 13 13
+pin #1 -15 -20
+pin #2 -15 -15
+pin #3 -15 -10
+pin #4 -15 -5
+pin #5 -15 5
+pin #6 -15 10
+pin #7 -15 15
+pin #8 -15 20
+pin #9 -5 -25
+pin #10 15 -10
+pin #11 15 -5
+pin #12 15 0
+pin #13 15 5
+pin #14 15 15
+def "#10 = #1 XOR #5 XOR #9"
+def "C = (#1 AND #5) OR (#9 AND (#1 OR #5))"
+def "#11 = #2 XOR #6 XOR C"
+def "C = (#2 AND #6) OR (C AND (#2 OR #6))"
+def "#12 = #3 XOR #7 XOR C"
+def "C = (#3 AND #7) OR (C AND (#3 OR #7))"
+def "#13 = #4 XOR #8 XOR C"
+def "#14 = (#4 AND #8) OR (C AND (#4 OR #8))"
+label "4-bit full adder.  Carry input at top, carry output at bottom, top is LSB."
+
+kind 7485
+simtype 16
+group 2
+grab -22 -9 22 9
+vector -21 -8 -21 8
+vector -21 8 21 8
+vector 21 8 21 -8
+vector 21 -8 -21 -8
+vector -21 -5 -25 -5
+vector -25 0 -21 0
+vector -25 5 -21 5
+vector 21 -5 25 -5
+vector 21 0 25 0
+vector 21 5 25 5
+vector -20 8 -20 15
+vector -15 8 -15 15
+vector -10 8 -10 15
+vector -5 8 -5 15
+vector 5 8 5 15
+vector 10 8 10 15
+vector 15 8 15 15
+vector 20 8 20 15
+vector -19 -5 -17 -7
+vector -19 -5 -17 -3
+vector -17 5 -19 7
+vector -19 3 -17 5
+vector 19 -7 17 -5
+vector 17 -5 19 -3
+vector 17 7 19 5
+vector 19 5 17 3
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector -4 4 -4 -4
+vector -4 0 -1 0
+vector 4 -4 1 -4
+vector 1 -4 1 0
+vector 1 0 4 0
+vector 4 0 4 4
+vector 4 4 1 4
+vector -16 -1 -16 1
+vector -16 1 -15 2
+vector -15 2 -14 2
+vector -14 2 -13 1
+vector -13 1 -13 -1
+vector -13 -1 -14 -2
+vector -14 -2 -15 -2
+vector -15 -2 -16 -1
+vector 14 -3 16 -3
+vector 16 1 14 1
+vector 15 -3 15 1
+pinnum 7 -23 -7
+pinnum 6 -23 -2
+pinnum 5 -23 3
+pinnum 15 -21 13
+pinnum 13 -16 13
+pinnum 12 -11 13
+pinnum 10 -6 13
+pinnum 1 4 13
+pinnum 14 9 13
+pinnum 11 14 13
+pinnum 9 19 13
+pinnum 2 24 -7
+pinnum 3 24 -2
+pinnum 4 24 3
+pin #1 -20 15
+pin #2 -15 15
+pin #3 -10 15
+pin #4 -5 15
+pin #5 5 15
+pin #6 10 15
+pin #7 15 15
+pin #8 20 15
+pin #9 25 -5
+pin #10 25 0
+pin #11 25 5
+pin #12 -25 -5
+pin #13 -25 0
+pin #14 -25 5
+def "A = ZERO"
+def "B = ZERO"
+def "IFONE #4 XOR #8"
+def "A = #4"
+def "B = #8"
+def "END"
+def "IFONE #3 XOR #7"
+def "A = #3"
+def "B = #7"
+def "END"
+def "IFONE #2 XOR #6"
+def "A = #2"
+def "B = #6"
+def "END"
+def "IFONE #1 XOR #5"
+def "A = #1"
+def "B = #5"
+def "END"
+def "IF A OR B"
+def "#14 = A"
+def "#13 = ZERO"
+def "#12 = B"
+def "END"
+def "IF A NOR B"
+def "IF #10"
+def "#14 = ZERO"
+def "#13 = ONE"
+def "#12 = ZERO"
+def "END"
+def "IFZERO #10"
+def "#14 = NOT #9"
+def "#13 = ZERO"
+def "#12 = NOT #11"
+def "END"
+def "END"
+label "4-bit magnitude comparator.  Left pins are MSBs.  Outputs on left are"
+label "  left value <, =, and > right value.  Carry inputs are on the right."
+
+kind 7486
+simtype 16
+group 2
+grab -16 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector -14 -10 -11 -5
+vector -11 -5 -11 5
+vector -11 5 -14 10
+vector -20 -5 -11 -5
+vector -11 5 -20 5
+pinnum 1 -18 -7
+pinnum 2 -18 3
+pinnum 3 18 -2
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 XOR #2"
+label "2-input Exclusive OR."
+
+kind 7487
+simtype 16
+group 2
+grab -13 -21 13 21
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector -4 4 -4 -4
+vector -4 0 -1 0
+vector 1 -4 4 -4
+vector 4 -4 4 4
+vector -20 -15 -12 -15
+vector -12 -5 -20 -5
+vector -12 5 -20 5
+vector -12 15 -20 15
+vector 12 -15 20 -15
+vector 12 -5 20 -5
+vector 12 5 20 5
+vector 12 15 20 15
+vector -5 20 -5 25
+vector 5 20 5 25
+vector 12 -20 12 20
+vector 12 20 -12 20
+vector -12 20 -12 -20
+vector -12 -20 12 -20
+pinnum 2 -18 -17
+pinnum 5 -18 -7
+pinnum 10 -18 3
+pinnum 13 -18 13
+pinnum 8 -7 23
+pinnum 1 3 23
+pinnum 12 18 13
+pinnum 9 18 3
+pinnum 6 18 -7
+pinnum 3 18 -17
+pin #1 -5 25
+pin #2 5 25
+pin #3 -20 -15
+pin #4 -20 -5
+pin #5 -20 5
+pin #6 -20 15
+pin #7 20 -15
+pin #8 20 -5
+pin #9 20 5
+pin #10 20 15
+def "#7 = (NOT #3 OR #1) XOR #2"
+def "#8 = (NOT #4 OR #1) XOR #2"
+def "#9 = (NOT #5 OR #1) XOR #2"
+def "#10 = (NOT #6 OR #1) XOR #2"
+label "Quad 1-0-true-invert element.  Depending on control pins, outputs on right are"
+label ""
+label "   00   Inverse of input"
+label "   01   Input"
+label "   10   One"
+label "   11   Zero"
+
+kind 7490
+simtype 16
+group 2
+grab -14 -22 14 22
+vector -12 -18 -12 20
+vector -12 20 12 20
+vector 12 20 12 -18
+vector -12 -18 12 -18
+vector 12 -15 20 -15
+vector 12 15 20 15
+vector 12 5 20 5
+vector 20 -5 12 -5
+vector -12 -6 -6 0
+vector -6 0 -12 6
+vector -12 -15 -20 -15
+vector -12 15 -20 15
+vector -17 0 -20 0
+vector -12 -13 -16 -13
+vector -16 -13 -16 -10
+vector -16 -10 -20 -10
+vector -12 13 -16 13
+vector -16 13 -16 10
+vector -16 10 -20 10
+vector -1 0 -4 0
+vector -4 0 -4 -4
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector 1 -4 1 4
+vector 1 4 4 4
+vector 4 4 4 -4
+vector 4 -4 1 -4
+vector 0 -18 5 -12
+vector 5 -12 10 -18
+vector 5 -23 5 -25
+circle 5 -18 5 -23
+circle -12 0 -17 0
+pin #1 -20 0
+pin #2 -20 15
+pin #3 20 -15
+pin #4 20 -5
+pin #5 20 5
+pin #6 20 15
+pin #7 -20 -15
+pin #8 -20 10
+pin #9 -20 -10
+pin #10 5 -25
+def "IF FALL #1"
+def "A = NOT A"
+def "END"
+def "E = #3 SAME #10"
+def "IFNONE #10"
+def "E = ZERO"
+def "END"
+def "F = E AND FALL #1 AND NOT A"
+def "IF (FALL #10 AND NOT E) OR F"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "IF NOT C"
+def "D = NOT D"
+def "END"
+def "END"
+def "END"
+def "IF B AND D"
+def "B = ZERO"
+def "D = ZERO"
+def "END"
+def "IFONE #2 AND #8"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "IFONE #7 AND #9"
+def "A = ONE"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ONE"
+def "END"
+def "#3 = A"
+def "#4 = B"
+def "#5 = C"
+def "#6 = D"
+label "BCD counter.  Internal clear and set-to-nine are AND of input pins."
+label "Clear and MSB are at the bottom."
+label "Clock at left controls only LSB.  Clock at top controls other 3 bits."
+label "Connect top clock to closest output for full BCD counter."
+
+kind 7492
+simtype 16
+group 2
+grab -14 -22 14 22
+vector -12 -18 -12 20
+vector -12 20 12 20
+vector 12 20 12 -18
+vector -12 -18 12 -18
+vector 12 -15 20 -15
+vector 12 15 20 15
+vector 12 5 20 5
+vector 20 -5 12 -5
+vector -12 -6 -6 0
+vector -6 0 -12 6
+vector -12 15 -20 15
+vector -17 0 -20 0
+vector -12 13 -16 13
+vector -16 13 -16 10
+vector -16 10 -20 10
+vector -1 0 -4 0
+vector -4 0 -4 -4
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector 0 -18 5 -12
+vector 5 -12 10 -18
+vector 5 -23 5 -25
+vector 1 -4 4 -4
+vector 4 -4 4 0
+vector 4 0 1 0
+vector 1 0 1 4
+vector 1 4 4 4
+circle 5 -18 5 -23
+circle -12 0 -17 0
+pin #1 -20 0
+pin #2 -20 15
+pin #3 20 -15
+pin #4 20 -5
+pin #5 20 5
+pin #6 20 15
+pin #7 5 -25
+pin #8 -20 10
+def "IF FALL #1"
+def "A = NOT A"
+def "END"
+def "E = #3 SAME #7"
+def "IFNONE #7"
+def "E = ZERO"
+def "END"
+def "F = E AND FALL #1 AND NOT A"
+def "IF (FALL #7 AND NOT E) OR F"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "END"
+def "IF B AND C"
+def "B = ZERO"
+def "C = ZERO"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFONE #2 AND #8"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = B"
+def "#5 = C"
+def "#6 = D"
+label "Twelve-counter.  Internal clear is AND of two input pins.  MSB is at bottom."
+label "Clock at left controls only LSB.  Clock at top controls other 3 bits."
+label "Connect top clock to closest output for full 12-counter."
+label "Sequence for 3 high bits is 000-001-010-100-101-110."
+
+kind 7493
+simtype 16
+group 2
+grab -14 -22 14 22
+vector -12 -18 -12 20
+vector -12 20 12 20
+vector 12 20 12 -18
+vector -12 -18 12 -18
+vector 12 -15 20 -15
+vector 12 15 20 15
+vector 12 5 20 5
+vector 20 -5 12 -5
+vector -12 -6 -6 0
+vector -6 0 -12 6
+vector -12 15 -20 15
+vector -17 0 -20 0
+vector -12 13 -16 13
+vector -16 13 -16 10
+vector -16 10 -20 10
+vector -1 0 -4 0
+vector -4 0 -4 -4
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector 0 -18 5 -12
+vector 5 -12 10 -18
+vector 5 -23 5 -25
+vector 1 -4 4 -4
+vector 1 4 4 4
+vector 1 0 4 0
+vector 4 -4 4 4
+circle -12 0 -17 0
+circle 5 -18 5 -23
+pin #1 -20 0
+pin #2 -20 15
+pin #3 20 -15
+pin #4 20 -5
+pin #5 20 5
+pin #6 20 15
+pin #7 5 -25
+pin #8 -20 10
+def "IF FALL #1"
+def "A = NOT A"
+def "END"
+def "E = #3 SAME #7"
+def "IFNONE #7"
+def "E = ZERO"
+def "END"
+def "F = (FALL #7 AND NOT E) OR F"
+def "IF FALL #7"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "IF NOT C"
+def "D = NOT D"
+def "END"
+def "END"
+def "END"
+def "IFONE #2 AND #8"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = B"
+def "#5 = C"
+def "#6 = D"
+label "Binary counter.  Internal clear is AND of two input pins.  MSB is at bottom."
+label "Clock at left controls only LSB.  Clock at top controls other 3 bits."
+label "Connect top clock to closest output for full binary counter."
+
+kind 7497
+simtype 16
+group 2
+grab -13 -19 12 23
+vector -12 22 -12 -18
+vector -12 -18 11 -18
+vector 11 -18 11 22
+vector 11 22 -12 22
+vector -17 -15 -20 -15
+vector 16 -15 20 -15
+vector -12 -5 -20 -5
+vector -12 0 -20 0
+vector -12 5 -20 5
+vector -12 10 -20 10
+vector -12 15 -20 15
+vector -12 20 -20 20
+vector 11 5 20 5
+vector -5 22 -5 25
+vector 5 22 5 25
+vector -9 22 -5 16
+vector -5 16 -1 22
+vector -5 -23 -5 -25
+vector 5 -23 5 -25
+vector -4 -4 -1 -4
+vector -1 -4 -1 4
+vector -1 4 -4 4
+vector -1 0 -4 0
+vector -4 0 -4 -4
+vector 1 -4 4 -4
+vector 4 -4 4 4
+circle -12 -15 -17 -15
+circle 5 -18 5 -23
+circle -5 -18 -5 -23
+circle 11 -15 16 -15
+circle 11 15 16 15
+vector 20 15 16 15
+pin #1 -20 20
+pin #2 -20 15
+pin #3 -20 10
+pin #4 -20 5
+pin #5 -20 0
+pin #6 -20 -5
+pin #7 -20 -15
+pin #8 -5 -25
+pin #9 5 -25
+pin #10 20 -15
+pin #11 20 5
+pin #12 20 15
+pin #13 5 25
+pin #14 -5 25
+def "IF NOT #7 AND RISE #14"
+def "A = NOT A"
+def "IF NOT A"
+def "B = NOT B"
+def "IF NOT B"
+def "C = NOT C"
+def "IF NOT C"
+def "D = NOT D"
+def "IF NOT D"
+def "E = NOT E"
+def "IF NOT E"
+def "F = NOT F"
+def "END"
+def "END"
+def "END"
+def "END"
+def "END"
+def "END"
+def "IFONE #13"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "E = ZERO"
+def "F = ZERO"
+def "END"
+def "G = A AND B AND C AND D AND E AND F"
+def "#10 = #7 OR NOT G"
+def "G = NOT F AND #6"
+def "G = (E AND G) OR (NOT E AND #5)"
+def "G = (D AND G) OR (NOT D AND #4)"
+def "G = (C AND G) OR (NOT C AND #3)"
+def "G = (B AND G) OR (NOT B AND #2)"
+def "G = (A AND G) OR (NOT A AND #1)"
+def "G = (#14 NOR #8) NAND G"
+def "#12 = G"
+def "#11 = G NAND #9"
+label "6-bit Rate Multiplier, with all sorts of inputs and outputs!"
+
+kind 7498
+simtype 16
+group 2
+grab -10 -23 10 22
+vector -9 21 -9 -22
+vector -9 -22 9 -22
+vector 9 -22 9 21
+vector 9 21 -9 21
+vector -4 4 -1 4
+vector -1 4 -1 -4
+vector -1 -4 -4 -4
+vector -4 -4 -4 0
+vector -4 0 -1 0
+vector 1 -4 4 -4
+vector 4 -4 4 4
+vector 4 4 1 4
+vector 1 4 1 -4
+vector 1 0 4 0
+vector -9 20 -15 20
+vector -15 15 -9 15
+vector -15 10 -9 10
+vector -15 5 -9 5
+vector -15 -5 -9 -5
+vector -15 -10 -9 -10
+vector -15 -15 -9 -15
+vector -15 -20 -9 -20
+vector -5 -22 -5 -25
+vector 9 5 15 5
+vector 9 10 15 10
+vector 9 15 15 15
+vector 9 20 15 20
+vector -6 -18 -6 -13
+vector -6 13 -7 14
+vector -7 14 -7 17
+vector -7 17 -6 18
+vector -6 18 -5 17
+vector -5 17 -5 14
+vector -5 14 -6 13
+circle -5 21 -5 25
+pin #1 -5 -25
+pin #2 -15 -20
+pin #3 -15 -15
+pin #4 -15 -10
+pin #5 -15 -5
+pin #6 -15 5
+pin #7 -15 10
+pin #8 -15 15
+pin #9 -15 20
+pin #10 -5 25
+pin #11 15 5
+pin #12 15 10
+pin #13 15 15
+pin #14 15 20
+def "IF FALL #10"
+def "IF #1"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "IFZERO #1"
+def "A = #6"
+def "B = #7"
+def "C = #8"
+def "D = #9"
+def "END"
+def "END"
+def "#11 = A"
+def "#12 = B"
+def "#13 = C"
+def "#14 = D"
+label "Data selector/register.  Register loads from inputs on falling edge of clock."
+label "Upper inputs are used if top pin is one, else lower inputs are used."
+
+kind 74120
+simtype 16
+group 2
+grab -13 -16 13 16
+vector -12 -15 -12 15
+vector -12 15 12 15
+vector 12 15 12 -15
+vector 12 -15 -12 -15
+vector -3 -4 0 -4
+vector 0 -4 0 0
+vector 0 0 -3 0
+vector -3 0 -3 4
+vector -3 4 0 4
+vector 2 -4 2 4
+vector 2 4 5 4
+vector 5 4 5 -4
+vector 5 -4 2 -4
+vector -5 -4 -5 4
+vector -4 15 0 10
+vector 0 10 4 15
+vector 0 -15 0 -20
+vector -12 -10 -20 -10
+vector -20 0 -12 0
+vector -12 10 -20 10
+vector 17 5 20 5
+vector 12 -5 20 -5
+vector 0 15 0 20
+vector -10 8 -10 13
+vector -10 8 -8 8
+vector -8 8 -8 10
+vector -8 10 -10 10
+vector -10 10 -8 13
+circle 12 5 17 5
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 0 20
+pin #5 0 -20
+pin #6 20 -5
+pin #7 20 5
+def "IF #1 NAND #2"
+def "A = ONE"
+def "END"
+def "IFZERO #3"
+def "A = ZERO"
+def "END"
+def "IF RISE #4"
+def "B = A"
+def "END"
+def "IF FALL #4"
+def "IFONE #5"
+def "A = A AND NOT B"
+def "END"
+def "B = ZERO"
+def "END"
+def "#6 = B"
+def "#7 = NOT B"
+def ""
+label "Clock synchronizer."
+
+kind 74125
+simtype 16
+group 2
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 5 0 15 0
+vector -8 0 -15 0
+vector 0 -9 0 -15
+circle 0 -4 0 -9
+pin #1 -15 0
+pin #2 15 0
+pin #3 0 -15
+pin #4 0 5
+def "IFZERO #3"
+def "IFCONN #1"
+def "#2 = #1"
+def "END"
+def "IFNONE #1"
+def "#2 = ONE"
+def "END"
+def "END"
+def "#4 = #3"
+label "Tristate buffer.  Floats if control is high."
+label "Hidden pin at bottom follows control input, for easily cascading buffers."
+
+kind 74126
+simtype 16
+group 2
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 5 0 15 0
+vector -8 0 -15 0
+vector 0 -4 0 -15
+pinnum 2 -13 -2
+pinnum 1 -2 -14
+pinnum 3 13 -2
+pin #1 -15 0
+pin #2 15 0
+pin #3 0 -15
+pin #4 0 5
+def "IF #3"
+def "IFCONN #1"
+def "#2 = #1"
+def "END"
+def "IFNONE #1"
+def "#2 = ONE"
+def "END"
+def "END"
+def "#4 = #3"
+label "Tri-state buffer.  Floats if control input is low."
+label "Hidden pin at bottom follows control input, for easily cascading buffers."
+
+kind 74133
+simtype 16
+group 2
+grab -14 -25 16 25
+vector -10 -23 -10 23
+vector -10 23 2 23
+vector 2 23 8 18
+vector 8 18 11 12
+vector 11 12 12 0
+vector 12 0 11 -12
+vector 11 -12 8 -17
+vector 8 -17 2 -23
+vector 2 -23 -10 -23
+vector 17 0 20 0
+vector -10 0 -20 0
+vector -20 -5 -10 -5
+vector -20 -10 -10 -10
+vector -20 -15 -17 -15
+vector -17 -15 -17 -13
+vector -17 -13 -10 -13
+vector -20 -20 -15 -20
+vector -15 -20 -15 -16
+vector -15 -16 -10 -16
+vector -15 -25 -13 -25
+vector -13 -25 -13 -19
+vector -13 -19 -10 -19
+vector -10 -22 -11 -22
+vector -11 -30 -20 -30
+vector -15 -25 -20 -25
+vector -10 5 -20 5
+vector -20 10 -10 10
+vector -10 22 -11 22
+vector -11 22 -11 30
+vector -10 19 -13 19
+vector -13 19 -13 25
+vector -13 25 -20 25
+vector -10 16 -15 16
+vector -15 16 -15 20
+vector -15 20 -20 20
+vector -20 15 -17 15
+vector -17 15 -17 13
+vector -17 13 -10 13
+circle 12 0 17 0
+vector -11 -22 -11 -30
+vector -11 30 -20 30
+pin #1 -20 -30
+pin #2 -20 -25
+pin #3 -20 -20
+pin #4 -20 -15
+pin #5 -20 -10
+pin #6 -20 -5
+pin #7 -20 0
+pin #8 -20 5
+pin #9 -20 10
+pin #10 -20 15
+pin #11 -20 20
+pin #12 -20 25
+pin #13 -20 30
+pin #14 20 0
+def "A = #1 AND #2 AND #3 AND #4 AND #5"
+def "A = A AND #6 AND #7 AND #8 AND #9"
+def "#14 = A NAND #10 NAND #11 NAND #12 NAND #13"
+label "13-input NAND."
+
+kind 74134
+simtype 16
+group 2
+grab -14 -25 16 23
+vector -10 -23 -10 21
+vector -10 21 2 21
+vector 2 21 8 18
+vector 8 18 11 12
+vector 11 12 12 0
+vector 12 0 11 -12
+vector 11 -12 8 -17
+vector 8 -17 1 -23
+vector 1 -23 -10 -23
+vector 17 0 20 0
+vector -10 0 -20 0
+vector -20 -5 -10 -5
+vector -20 -10 -10 -10
+vector -20 -15 -17 -15
+vector -17 -15 -17 -13
+vector -17 -13 -10 -13
+vector -20 -20 -15 -20
+vector -15 -20 -15 -16
+vector -15 -16 -10 -16
+vector -15 -25 -13 -25
+vector -13 -25 -13 -19
+vector -13 -19 -10 -19
+vector -10 -22 -11 -22
+vector -11 -22 -11 -30
+vector -15 -25 -20 -25
+vector -10 5 -20 5
+vector -20 10 -10 10
+vector -10 20 -13 20
+vector -13 20 -13 25
+vector -13 25 -20 25
+vector -10 17 -15 17
+vector -15 17 -15 20
+vector -15 20 -20 20
+vector -20 15 -17 15
+vector -17 15 -17 13
+vector -17 13 -10 13
+vector 5 -26 5 -30
+circle 12 0 17 0
+circle 5 -21 5 -26
+vector -11 -30 -20 -30
+pin #1 -20 -30
+pin #2 -20 -25
+pin #3 -20 -20
+pin #4 -20 -15
+pin #5 -20 -10
+pin #6 -20 -5
+pin #7 -20 0
+pin #8 -20 5
+pin #9 -20 10
+pin #10 -20 15
+pin #11 -20 20
+pin #12 -20 25
+pin #13 5 -30
+pin #14 20 0
+def "IFZERO #13"
+def "A = #1 AND #2 AND #3 AND #4 AND #5"
+def "A = A AND #6 AND #7 AND #8 AND #9"
+def "#14 = A NAND #10 NAND #11 NAND #12"
+def "END"
+label "12-input NAND with tri-state output.  Floats if control input is one."
+label "Hidden pin at bottom follows control input, for easily cascading gates."
+
+kind 74136
+simtype 16
+group 2
+grab -16 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector -14 -10 -11 -5
+vector -11 -5 -11 5
+vector -11 5 -14 10
+vector -20 -5 -11 -5
+vector -11 5 -20 5
+vector 3 -9 3 9
+pinnum 1 -18 -7
+pinnum 2 -18 3
+pinnum 3 18 -2
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 < #1 XOR #2"
+label "2-input Exclusive OR, open-collector."
+
+kind 74138
+simtype 16
+group 2
+grab -10 -18 11 23
+vector 10 -17 10 22
+vector 10 22 -9 22
+vector -9 22 -9 -17
+vector -9 -17 10 -17
+vector 10 -15 15 -15
+vector 10 -10 15 -10
+vector 10 -5 15 -5
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector 10 20 15 20
+vector -9 5 -15 5
+vector -9 10 -15 10
+vector -9 15 -15 15
+vector -13 -10 -15 -10
+vector -9 -15 -15 -15
+vector -15 -5 -13 -5
+vector -3 -4 0 -4
+vector 0 -4 0 4
+vector 0 4 -3 4
+vector -3 0 0 0
+vector 2 -4 2 4
+vector 2 4 5 4
+vector 5 4 5 -4
+vector 5 -4 2 -4
+vector 2 0 5 0
+vector -5 -4 -5 4
+circle -9 -10 -13 -10
+circle -9 -5 -13 -5
+pin #1 -15 -15
+pin #2 -15 -10
+pin #3 -15 -5
+pin #4 -15 5
+pin #5 -15 10
+pin #6 -15 15
+pin #7 15 -15
+pin #8 15 -10
+pin #9 15 -5
+pin #10 15 0
+pin #11 15 5
+pin #12 15 10
+pin #13 15 15
+pin #14 15 20
+def "G = ONE"
+def "IF #1"
+def "IF NOT #2"
+def "IF NOT #3"
+def "G = ZERO"
+def "END"
+def "END"
+def "END"
+def "C = #4"
+def "B = #5"
+def "A = #6"
+def "#7 = (NOT A NAND (B NOR C)) OR G"
+def "#8 = (NOT A NAND NOT B NAND C) OR G"
+def "#9 = (NOT A NAND B NAND NOT C) OR G"
+def "#10 = (NOT A NAND B NAND C) OR G"
+def "#11 = (A NAND (B NOR C)) OR G"
+def "#12 = (A NAND NOT B NAND C) OR G"
+def "#13 = (A NAND B NAND NOT C) OR G"
+def "#14 = (A NAND B NAND C) OR G"
+label "3-to-8 decoder.  If gate pins are high/low/low, selected output goes low."
+label "0 and LSB at top, 7 and MSB at bottom."
+
+kind 74139
+simtype 16
+group 2
+grab -10 -21 11 21
+vector 10 -20 10 20
+vector 10 20 -9 20
+vector -9 20 -9 -20
+vector -9 -20 10 -20
+vector 10 -15 15 -15
+vector 10 -5 15 -5
+vector 10 5 15 5
+vector 10 15 15 15
+vector -9 15 -15 15
+vector -9 5 -15 5
+vector -14 -15 -15 -15
+vector -5 -4 -5 4
+vector -3 -4 0 -4
+vector 0 -4 0 4
+vector 0 4 -3 4
+vector -3 0 0 0
+vector 2 4 5 4
+vector 5 4 5 -4
+vector 5 -4 2 -4
+vector 2 -4 2 0
+vector 2 0 5 0
+circle -9 -15 -14 -15
+pin #1 -15 -15
+pin #2 -15 5
+pin #3 -15 15
+pin #4 15 -15
+pin #5 15 -5
+pin #6 15 5
+pin #7 15 15
+def "#4 = #2 OR #3 OR #1"
+def "#5 = NOT #2 OR #3 OR #1"
+def "#6 = #2 OR NOT #3 OR #1"
+def "#7 = (#2 NAND #3) OR #1"
+label "2-to-4 decoder.  If gate input is low, selected output goes low."
+label "0 and LSB at top, 3 and MSB at bottom."
+
+kind 74147
+simtype 16
+group 2
+grab -11 -23 11 23
+vector -10 22 10 22
+vector 10 22 10 -22
+vector 10 -22 -10 -22
+vector -10 -22 -10 22
+vector -5 -4 -5 4
+vector -3 -4 -3 0
+vector -3 0 0 0
+vector 0 -4 0 4
+vector 2 -4 5 -4
+vector 5 -4 5 4
+vector 10 5 15 5
+vector 10 15 15 15
+vector 10 -5 15 -5
+vector 10 -15 15 -15
+vector -10 -20 -15 -20
+vector -15 -15 -10 -15
+vector -15 -10 -10 -10
+vector -15 -5 -10 -5
+vector -15 0 -10 0
+vector -10 5 -15 5
+vector -15 10 -10 10
+vector -15 15 -10 15
+vector -15 20 -10 20
+vector -6 20 -6 15
+vector -6 15 -8 15
+vector -8 15 -8 17
+vector -8 17 -6 17
+vector -8 20 -6 20
+pinnum 11 -13 -22
+pinnum 12 -13 -17
+pinnum 13 -13 -12
+pinnum 1 -13 -7
+pinnum 2 -13 -2
+pinnum 3 -13 3
+pinnum 4 -13 8
+pinnum 5 -13 13
+pinnum 10 -13 18
+pinnum 9 13 -17
+pinnum 7 13 -7
+pinnum 6 13 3
+pinnum 14 13 13
+pin #1 -15 -20
+pin #2 -15 -15
+pin #3 -15 -10
+pin #4 -15 -5
+pin #5 -15 0
+pin #6 -15 5
+pin #7 -15 10
+pin #8 -15 15
+pin #9 -15 20
+pin #10 15 -15
+pin #11 15 -5
+pin #12 15 5
+pin #13 15 15
+def "A = ONE"
+def "B = ONE"
+def "C = ONE"
+def "D = ONE"
+def "IFZERO #1"
+def "A = ZERO"
+def "END"
+def "IFZERO #2 AND #3"
+def "A = #3"
+def "B = ZERO"
+def "END"
+def "IFZERO #4 AND #5 AND #6 AND #7"
+def "C = ZERO"
+def "B = #6 AND #7"
+def "A = #7 AND (B NAND NOT #5)"
+def "END"
+def "IFZERO #8 AND #9"
+def "D = ZERO"
+def "C = ONE"
+def "B = ONE"
+def "A = #9"
+def "END"
+def "#10 = A"
+def "#11 = B"
+def "#12 = C"
+def "#13 = D"
+label "Priority encoder.  Output is inverted BCD number, MSB at bottom."
+label "Result is number of highest input which is low, or 0 (1111) if all high."
+
+kind 74148
+simtype 16
+group 2
+grab -11 -23 11 20
+vector -10 19 10 19
+vector 10 19 10 -22
+vector 10 -22 -10 -22
+vector -10 -22 -10 19
+vector -15 15 -10 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector -15 -5 -10 -5
+vector -15 -10 -10 -10
+vector -15 -15 -10 -15
+vector -15 -20 -10 -20
+vector 10 5 15 5
+vector 10 -15 15 -15
+vector 10 10 15 10
+vector 10 0 15 0
+vector -5 -4 -5 4
+vector -3 -4 -3 0
+vector -3 0 0 0
+vector 0 -4 0 4
+vector 2 -4 5 -4
+vector 5 -4 5 4
+vector 5 4 2 4
+vector 2 4 2 -4
+vector 2 0 5 0
+vector 0 19 0 25
+vector 0 -22 0 -25
+pinnum 10 -13 -22
+pinnum 11 -13 -17
+pinnum 12 -13 -12
+pinnum 13 -13 -7
+pinnum 1 -13 -2
+pinnum 2 -13 3
+pinnum 3 -13 8
+pinnum 4 -13 13
+pinnum 5 -2 23
+pinnum 15 -2 -24
+pinnum 14 13 -17
+pinnum 9 13 -2
+pinnum 7 13 3
+pinnum 6 13 8
+pin #1 -15 -15
+pin #2 -15 -10
+pin #3 -15 -5
+pin #4 -15 0
+pin #5 -15 5
+pin #6 -15 10
+pin #7 -15 15
+pin #8 -15 -20
+pin #9 0 -25
+pin #10 0 25
+pin #11 15 -15
+pin #12 15 0
+pin #13 15 5
+pin #14 15 10
+def "A = ONE"
+def "B = ONE"
+def "C = ONE"
+def "D = ONE"
+def "IFZERO #8 AND #1 AND #2 AND #3"
+def "D = ZERO"
+def "IFZERO #8 AND #1"
+def "B = ONE"
+def "A = #1"
+def "END"
+def "IFZERO #2 AND #3"
+def "B = ZERO"
+def "A = #3"
+def "END"
+def "END"
+def "IFZERO #4 AND #5 AND #6 AND #7"
+def "D = ZERO"
+def "C = ZERO"
+def "IFZERO #4 AND #5"
+def "B = ONE"
+def "A = #5"
+def "END"
+def "IFZERO #6 AND #7"
+def "B = ZERO"
+def "A = #7"
+def "END"
+def "END"
+def "#9 = #10 OR NOT D"
+def "#11 = #10 OR D"
+def "#12 = #10 OR A"
+def "#13 = #10 OR B"
+def "#14 = #10 OR C"
+label "Priority encoder.  Bottom pins are MSB and highest-priority input."
+label "If bottom pin is one, all outputs are one.  Otherwise, result is"
+label "inverted 3-bit code of highest-priority input which is low, and other"
+label "two outputs go low (top-right) and high (top) if any input is low."
+
+kind 74150
+simtype 16
+group 2
+grab -11 -41 16 46
+vector -15 -35 -10 -35
+vector -15 -30 -10 -30
+vector -15 -25 -10 -25
+vector -15 -20 -10 -20
+vector -15 -15 -10 -15
+vector -15 -10 -10 -10
+vector -10 45 -10 -40
+vector -5 -5 -5 5
+vector 2 -5 -2 -5
+vector -2 -5 -2 0
+vector -2 0 2 0
+vector 5 5 5 -5
+vector 5 -5 10 -5
+vector 10 -5 10 5
+vector -10 -5 -15 -5
+vector -10 0 -15 0
+vector -10 -40 15 -40
+vector 15 -40 15 45
+vector 0 -40 0 -45
+vector -7 -37 -8 -36
+vector -8 -36 -8 -33
+vector -8 -33 -7 -32
+vector -7 -32 -6 -33
+vector -6 -33 -6 -36
+vector -6 -36 -7 -37
+vector 2 0 2 5
+vector 2 5 -2 5
+vector 5 5 10 5
+vector -10 5 -15 5
+vector -10 10 -15 10
+vector -15 15 -10 15
+vector -10 20 -15 20
+vector -10 25 -15 25
+vector -10 30 -15 30
+vector -10 35 -15 35
+vector -15 40 -10 40
+vector 15 45 -10 45
+vector -5 45 -5 50
+vector 0 45 0 50
+vector 5 45 5 50
+vector 10 45 10 50
+vector 15 0 20 0
+pinnum 9 -2 -18
+pinnum 8 -13 -12
+pinnum 7 -13 -7
+pinnum 6 -13 -2
+pinnum 5 -13 3
+pinnum 4 -13 8
+pinnum 3 -13 13
+pinnum 2 -13 18
+pinnum 1 -13 23
+pin #1 0 -45
+pin #2 -15 -35
+pin #3 -15 -30
+pin #4 -15 -25
+pin #5 -15 -20
+pin #6 -15 -15
+pin #7 -15 -10
+pin #8 -15 -5
+pin #9 -15 0
+pin #10 -15 5
+pin #11 -15 10
+pin #12 -15 15
+pin #13 -15 20
+pin #14 -15 25
+pin #15 -15 30
+pin #16 -15 35
+pin #17 -15 40
+pin #18 -5 50
+pin #19 0 50
+pin #20 5 50
+pin #21 10 50
+pin #22 20 0
+def "IFZERO #18"
+def "IFZERO #19"
+def "IFZERO #20"
+def "IFZERO #21"
+def "A = #2"
+def "ELSE"
+def "A = #3"
+def "END"
+def "ELSE"
+def "IFZERO #21"
+def "A = #4"
+def "ELSE"
+def "A = #5"
+def "END"
+def "END"
+def "ELSE"
+def "IFZERO #20"
+def "IFZERO #21"
+def "A = #6"
+def "ELSE"
+def "A = #7"
+def "END"
+def "ELSE"
+def "IFZERO #21"
+def "A = #8"
+def "ELSE"
+def "A = #9"
+def "END"
+def "END"
+def "END"
+def "ELSE"
+def "IFZERO #19"
+def "IFZERO #20"
+def "IFZERO #21"
+def "A = #10"
+def "ELSE"
+def "A = #11"
+def "END"
+def "ELSE"
+def "IFZERO #21"
+def "A = #12"
+def "ELSE"
+def "A = #13"
+def "END"
+def "END"
+def "ELSE"
+def "IFZERO #20"
+def "IFZERO #21"
+def "A = #14"
+def "ELSE"
+def "A = #15"
+def "END"
+def "ELSE"
+def "IFZERO #21"
+def "A = #16"
+def "ELSE"
+def "A = #17"
+def "END"
+def "END"
+def "END"
+def "END"
+def "#22 = FIX #1 OR NOT A"
+label "Top half of 1-of-16 selector.  Join to 74150A for complete chip."
+label "If strobe at top is low, selects data.  If high, forces output high."
+
+kind 74150A
+simtype 16
+group 8
+grab -11 -24 16 20
+vector -10 -20 -15 -20
+vector -15 -15 -10 -15
+vector -15 -10 -10 -10
+vector -15 -5 -10 -5
+vector -15 0 -10 0
+vector -15 5 -10 5
+vector -15 10 -10 10
+vector -15 15 -10 15
+vector -10 19 15 19
+vector -5 19 -5 25
+vector 0 19 0 25
+vector 5 19 5 25
+vector 10 19 10 25
+vector 15 -25 15 19
+vector 5 -25 5 -20
+vector 5 -20 10 -20
+vector 10 -20 10 -25
+vector 2 -20 -2 -20
+vector -5 -20 -5 -25
+vector -2 -25 2 -25
+vector 2 -25 2 -20
+vector 15 -25 20 -25
+vector -8 12 -8 16
+vector -4 12 -6 12
+vector -6 12 -6 14
+vector -6 14 -4 14
+vector -4 14 -4 16
+vector -4 16 -6 16
+vector -10 -25 -10 19
+pinnum 11 -6 24
+pinnum 13 -1 24
+pinnum 14 4 24
+pinnum 15 9 24
+pinnum 16 -13 13
+pinnum 17 -13 8
+pinnum 18 -13 3
+pinnum 19 -13 -2
+pinnum 20 -13 -7
+pinnum 21 -13 -12
+pinnum 22 -13 -17
+pinnum 23 -13 -22
+pinnum 10 18 -23
+pin #1 20 -25
+pin #2 -15 -20
+pin #3 -15 -15
+pin #4 -15 -10
+pin #5 -15 -5
+pin #6 -15 0
+pin #7 -15 5
+pin #8 -15 10
+pin #9 -15 15
+pin #10 -5 25
+pin #11 0 25
+pin #12 5 25
+pin #13 10 25
+pin #14 -5 -25
+pin #15 0 -25
+pin #16 5 -25
+pin #17 10 -25
+pin #18 -10 -25
+pin #19 15 -25
+def "#1 = #19 OR (J NOR #18)"
+def "I = O AND ((G AND NOT P) OR (H AND P))"
+def "I = I OR (NOT O AND ((E AND NOT P) OR (F AND P)))"
+def "J = O AND ((C AND NOT P) OR (D AND P))"
+def "J = J OR (NOT O AND ((A AND NOT P) OR (B AND P)))"
+def "J = M AND ((I AND N) OR (J AND NOT N))"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "E = #6"
+def "F = #7"
+def "G = #8"
+def "H = #9"
+def "M = #10"
+def "N = #11"
+def "O = #12"
+def "P = #13"
+def "#14 = M"
+def "#15 = N"
+def "#16 = O"
+def "#17 = P"
+label "Bottom half of 1-of-16 selector.  Join to 74150B for complete chip."
+label "Left control pin is MSB.  Output at right is inverted copy of selected input."
+
+kind 74150B
+simtype 16
+group 8
+grab -11 -16 16 24
+vector -15 -10 -10 -10
+vector -15 -5 -10 -5
+vector -15 0 -10 0
+vector -15 5 -10 5
+vector -15 10 -10 10
+vector -15 15 -10 15
+vector -10 25 -10 -15
+vector -5 20 -5 25
+vector 2 20 -2 20
+vector -2 20 -2 25
+vector -2 25 2 25
+vector 5 25 5 20
+vector 5 20 10 20
+vector 10 20 10 25
+vector -10 20 -15 20
+vector -10 25 -15 25
+vector -10 -15 15 -15
+vector 15 -15 15 25
+vector 0 -15 0 -20
+vector -7 -12 -8 -11
+vector -8 -11 -8 -8
+vector -8 -8 -7 -7
+vector -7 -7 -6 -8
+vector -6 -8 -6 -11
+vector -6 -11 -7 -12
+pinnum 9 -2 -18
+pinnum 8 -13 -12
+pinnum 7 -13 -7
+pinnum 6 -13 -2
+pinnum 5 -13 3
+pinnum 4 -13 8
+pinnum 3 -13 13
+pinnum 2 -13 18
+pinnum 1 -13 23
+pin #1 0 -20
+pin #2 -15 -10
+pin #3 -15 -5
+pin #4 -15 0
+pin #5 -15 5
+pin #6 -15 10
+pin #7 -15 15
+pin #8 -15 20
+pin #9 -15 25
+pin #10 -5 25
+pin #11 0 25
+pin #12 5 25
+pin #13 10 25
+pin #14 -10 25
+pin #15 15 25
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "E = #6"
+def "F = #7"
+def "G = #8"
+def "H = #9"
+def "M = NOT #10"
+def "N = #11"
+def "O = #12"
+def "P = #13"
+def "I = O AND ((G AND NOT P) OR (H AND P))"
+def "I = I OR (NOT O AND ((E AND NOT P) OR (F AND P)))"
+def "J = O AND ((C AND NOT P) OR (D AND P))"
+def "J = J OR (NOT O AND ((A AND NOT P) OR (B AND P)))"
+def "J = M AND ((I AND N) OR (J AND NOT N))"
+def "#14 = J"
+def "#15 = K"
+def "K = #1"
+label "Top half of 1-of-16 selector.  Join to 74150A for complete chip."
+label "If strobe at top is low, selects data.  If high, forces output high."
+
+kind 74153
+simtype 16
+group 2
+grab -10 -15 10 10
+vector -9 0 -15 0
+vector -9 -5 -15 -5
+vector -9 -10 -15 -10
+vector -9 5 -15 5
+vector -9 -14 -9 9
+vector -9 9 9 9
+vector 9 9 9 -14
+vector 9 -14 -9 -14
+vector -5 -7 -5 1
+vector 0 -7 -3 -7
+vector -3 -7 -3 -3
+vector -3 -3 0 -3
+vector 0 -3 0 1
+vector 0 1 -3 1
+vector 2 -7 5 -7
+vector 5 -7 5 1
+vector 5 1 2 1
+vector 2 -3 5 -3
+vector 9 -5 15 -5
+vector -5 9 -5 15
+vector 5 9 5 15
+vector 0 -19 0 -25
+circle 0 -14 0 -19
+pin #1 -15 -10
+pin #2 -15 -5
+pin #3 -15 0
+pin #4 -15 5
+pin #5 0 -25
+pin #6 -5 15
+pin #7 5 15
+pin #8 15 -5
+def "IF #6"
+def "IF #7"
+def "#8 = #4"
+def "END"
+def "IFZERO #7"
+def "#8 = #3"
+def "END"
+def "END"
+def "IFZERO #6"
+def "IF #7"
+def "#8 = #2"
+def "END"
+def "IFZERO #7"
+def "#8 = #1"
+def "END"
+def "END"
+def "IFONE #5"
+def "#8 < ZERO"
+def "END"
+label "1-of-4 selector.  Left control pin is MSB.  If strobe at top is high, forces"
+label "output at right low, else output follows selected input."
+
+kind 74154
+simtype 16
+group 2
+grab -16 -41 11 46
+vector -15 38 -15 -40
+vector -15 -40 10 -40
+vector 10 -40 10 45
+vector 10 0 15 0
+vector -10 -3 -10 7
+vector 10 -35 15 -35
+vector 10 -25 15 -25
+vector 10 -20 15 -20
+vector 10 -15 15 -15
+vector 10 -5 15 -5
+vector -15 -5 -20 -5
+vector -15 0 -20 0
+vector -3 -3 -7 -3
+vector -7 -3 -7 2
+vector 0 -3 0 2
+vector 5 -3 5 7
+vector 15 -10 10 -10
+vector 15 -30 10 -30
+vector -20 -35 -19 -35
+vector -19 -30 -20 -30
+vector 0 2 5 2
+vector -7 2 -3 2
+vector -3 2 -3 7
+vector -3 7 -7 7
+vector 10 45 -15 45
+vector -15 45 -15 38
+vector -15 5 -20 5
+vector -15 10 -20 10
+vector 15 5 10 5
+vector 15 10 10 10
+vector 15 15 10 15
+vector 15 20 10 20
+vector 15 25 10 25
+vector 15 30 10 30
+vector 15 35 10 35
+vector 15 40 10 40
+vector 8 -36 8 -33
+vector 8 -33 7 -32
+vector 7 -32 6 -33
+vector 6 -33 6 -36
+vector 6 -36 7 -37
+vector 7 -37 8 -36
+circle -15 -35 -19 -35
+circle -15 -30 -19 -30
+pin #1 15 -35
+pin #2 15 -30
+pin #3 15 -25
+pin #4 15 -20
+pin #5 15 -15
+pin #6 15 -10
+pin #7 15 -5
+pin #8 15 0
+pin #9 15 5
+pin #10 15 10
+pin #11 15 15
+pin #12 15 20
+pin #13 15 25
+pin #14 15 30
+pin #15 15 35
+pin #16 15 40
+pin #17 -20 -30
+pin #18 -20 -35
+pin #19 -20 -5
+pin #20 -20 0
+pin #21 -20 5
+pin #22 -20 10
+def "A = #22"
+def "B = #21"
+def "C = #20"
+def "D = #19"
+def "E = FIX #18 OR FIX #17"
+def "#1 = E OR A OR B OR C OR D"
+def "#2 = E OR A OR B OR C OR NOT D"
+def "#3 = E OR A OR B OR NOT C OR D"
+def "#4 = E OR A OR B OR (C NAND D)"
+def "#5 = E OR A OR NOT B OR C OR D"
+def "#6 = E OR A OR C OR (B NAND D)"
+def "#7 = E OR A OR D OR (B NAND C)"
+def "#8 = E OR A OR (B NAND C NAND D)"
+def "#9 = E OR NOT A OR B OR C OR D"
+def "#10 = E OR B OR C OR (A NAND D)"
+def "#11 = E OR B OR D OR (A NAND C)"
+def "#12 = E OR B OR (A NAND C NAND D)"
+def "#13 = E OR C OR D OR (A NAND B)"
+def "#14 = E OR C OR (A NAND B NAND D)"
+def "#15 = E OR D OR (A NAND B NAND C)"
+def "#16 = E OR (A NAND B NAND C NAND D)"
+
+kind 74154A
+simtype 16
+group 8
+grab -16 -24 11 20
+vector -15 -25 -15 19
+vector -15 19 10 19
+vector 10 19 10 -25
+vector 10 15 15 15
+vector -10 -20 -10 -25
+vector -7 -20 -3 -20
+vector -3 -20 -3 -25
+vector -3 -25 -7 -25
+vector 0 -25 5 -25
+vector 5 -25 5 -20
+vector 10 -20 15 -20
+vector 10 -15 15 -15
+vector 10 -10 15 -10
+vector 10 -5 15 -5
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector -15 -20 -20 -20
+vector -15 -15 -20 -15
+vector 3 13 3 17
+vector 7 13 5 13
+vector 5 13 5 15
+vector 5 15 7 15
+vector 7 15 7 17
+vector 7 17 5 17
+pin #1 15 -20
+pin #2 15 -15
+pin #3 15 -10
+pin #4 15 -5
+pin #5 15 0
+pin #6 15 5
+pin #7 15 10
+pin #8 15 15
+pin #9 -20 -20
+pin #10 -20 -15
+pin #11 -15 -25
+pin #12 -10 -25
+pin #13 -5 -25
+pin #14 0 -25
+pin #15 5 -25
+pin #16 10 -25
+connect 9 13
+connect 10 12
+def "A = #12"
+def "B = #13"
+def "C = #14"
+def "D = #15"
+def "E = ONE"
+def "IF NOT #11"
+def "IF NOT #16"
+def "E = NOT A"
+def "END"
+def "END"
+def "#1 = E OR B OR C OR D"
+def "#2 = E OR B OR C OR NOT D"
+def "#3 = E OR B OR NOT C OR D"
+def "#4 = E OR B OR (C NAND D)"
+def "#5 = E OR NOT B OR C OR D"
+def "#6 = E OR C OR (B NAND D)"
+def "#7 = E OR D OR (B NAND C)"
+def "#8 = E OR (B NAND C NAND D)"
+
+kind 74154B
+simtype 16
+group 8
+grab -16 -16 11 24
+vector -15 25 -15 -15
+vector -15 -15 10 -15
+vector 10 -15 10 25
+vector 10 25 15 25
+vector -10 20 -10 25
+vector 10 -10 15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 20 15 20
+vector -15 20 -20 20
+vector -15 25 -20 25
+vector -3 20 -7 20
+vector -7 20 -7 25
+vector 0 20 0 25
+vector 5 20 5 25
+vector 15 15 10 15
+vector 15 -5 10 -5
+vector -15 -10 -17 -12
+vector -17 -12 -19 -10
+vector -19 -10 -17 -8
+vector -17 -8 -15 -10
+vector -20 -10 -19 -10
+vector -15 -5 -17 -7
+vector -17 -7 -19 -5
+vector -19 -5 -17 -3
+vector -17 -3 -15 -5
+vector -19 -5 -20 -5
+pin #1 15 -10
+pin #2 15 -5
+pin #3 15 0
+pin #4 15 5
+pin #5 15 10
+pin #6 15 15
+pin #7 15 20
+pin #8 15 25
+pin #9 -20 20
+pin #10 -20 25
+pin #11 -15 25
+pin #12 -10 25
+pin #13 -5 25
+pin #14 0 25
+pin #15 5 25
+pin #16 10 25
+pin #17 -20 -5
+pin #18 -20 -10
+connect 9 15
+connect 10 14
+connect 11 18
+connect 16 17
+def "A = #12"
+def "B = #13"
+def "C = #14"
+def "D = #15"
+def "E = ONE"
+def "IF NOT #11"
+def "IF NOT #16"
+def "E = A"
+def "END"
+def "END"
+def "#1 = E OR B OR C OR D"
+def "#2 = E OR B OR C OR NOT D"
+def "#3 = E OR B OR NOT C OR D"
+def "#4 = E OR B OR (C NAND D)"
+def "#5 = E OR NOT B OR C OR D"
+def "#6 = E OR C OR (B NAND D)"
+def "#7 = E OR D OR (B NAND C)"
+def "#8 = E OR (B NAND C NAND D)"
+
+kind 74155
+simtype 16
+group 2
+grab -10 -15 10 10
+vector -9 -14 -9 9
+vector -9 9 9 9
+vector 9 9 9 -14
+vector 9 -14 -9 -14
+vector -5 -7 -5 1
+vector 0 -7 -3 -7
+vector -3 -7 -3 -3
+vector -3 -3 0 -3
+vector 0 -3 0 1
+vector 0 1 -3 1
+vector 2 -7 5 -7
+vector 9 -5 15 -5
+vector -5 9 -5 15
+vector 5 9 5 15
+vector 2 -7 2 -3
+vector 2 -3 5 -3
+vector 5 -3 5 1
+vector 5 1 2 1
+vector 9 -10 15 -10
+vector 9 0 15 0
+vector 9 5 15 5
+vector -9 -5 -15 -5
+vector -14 0 -15 0
+circle -9 0 -14 0
+pin #1 15 -10
+pin #2 15 -5
+pin #3 15 0
+pin #4 15 5
+pin #5 -15 0
+pin #6 -5 15
+pin #7 5 15
+pin #8 -15 -5
+def "#1 = PULLUP"
+def "#2 = PULLUP"
+def "#3 = PULLUP"
+def "#4 = PULLUP"
+def "IF NOT #5"
+def "IF #8"
+def "IF #6"
+def "IF #7"
+def "#4 < ZERO"
+def "END"
+def "IFZERO #7"
+def "#3 < ZERO"
+def "END"
+def "END"
+def "IFZERO #6"
+def "IF #7"
+def "#2 < ZERO"
+def "END"
+def "IFZERO #7"
+def "#1 < ZERO"
+def "END"
+def "END"
+def "END"
+def "END"
+label "2-to-4 decoder.  If gate inputs are high/low, selected output goes low."
+
+kind 74155A
+simtype 16
+group 2
+grab -10 -15 10 10
+vector -9 -14 -9 9
+vector -9 9 9 9
+vector 9 9 9 -14
+vector 9 -14 -9 -14
+vector -5 -7 -5 1
+vector 0 -7 -3 -7
+vector -3 -7 -3 -3
+vector -3 -3 0 -3
+vector 0 -3 0 1
+vector 0 1 -3 1
+vector 2 -7 5 -7
+vector 9 -5 15 -5
+vector -5 9 -5 15
+vector 5 9 5 15
+vector 2 -7 2 -3
+vector 2 -3 5 -3
+vector 5 -3 5 1
+vector 5 1 2 1
+vector 9 -10 15 -10
+vector 9 0 15 0
+vector 9 5 15 5
+vector -13 -5 -15 -5
+vector -13 0 -15 0
+circle -9 -5 -13 -5
+circle -9 0 -13 0
+pin #1 15 -10
+pin #2 15 -5
+pin #3 15 0
+pin #4 15 5
+pin #5 -15 0
+pin #6 -5 15
+pin #7 5 15
+pin #8 -15 -5
+def "#1 = PULLUP"
+def "#2 = PULLUP"
+def "#3 = PULLUP"
+def "#4 = PULLUP"
+def "IF NOT #5"
+def "IF NOT #8"
+def "IF #6"
+def "IF #7"
+def "#4 < ZERO"
+def "END"
+def "IFZERO #7"
+def "#3 < ZERO"
+def "END"
+def "END"
+def "IFZERO #6"
+def "IF #7"
+def "#2 < ZERO"
+def "END"
+def "IFZERO #7"
+def "#1 < ZERO"
+def "END"
+def "END"
+def "END"
+def "END"
+label "2-to-4 decoder.  If gate inputs are low/low, selected output goes low."
+
+kind 74157
+simtype 16
+group 2
+grab -10 -22 10 22
+vector -9 -21 -9 21
+vector -9 21 9 21
+vector 9 21 9 -21
+vector 9 -21 -9 -21
+vector -9 -20 -15 -20
+vector -9 -15 -15 -15
+vector -9 -10 -15 -10
+vector -9 -5 -15 -5
+vector -9 5 -15 5
+vector -9 10 -15 10
+vector -9 15 -15 15
+vector -9 20 -15 20
+vector 9 -5 15 -5
+vector 9 -15 15 -15
+vector 9 5 15 5
+vector 9 15 15 15
+vector -5 21 -5 25
+vector -5 -4 -5 4
+vector 0 -4 -3 -4
+vector -3 -4 -3 0
+vector -3 0 0 0
+vector 0 0 0 4
+vector 0 4 -3 4
+vector 2 -4 5 -4
+vector 5 -4 5 4
+vector -6 14 -6 18
+circle 5 21 5 25
+pin #1 -5 25
+pin #2 5 25
+pin #3 -15 -20
+pin #4 -15 -15
+pin #5 -15 -10
+pin #6 -15 -5
+pin #7 -15 5
+pin #8 -15 10
+pin #9 -15 15
+pin #10 -15 20
+pin #11 15 -15
+pin #12 15 -5
+pin #13 15 5
+pin #14 15 15
+def "IF NOT #2"
+def "IF #1"
+def "#11 = #7"
+def "#12 = #8"
+def "#13 = #9"
+def "#14 = #10"
+def "END"
+def "IFZERO #1"
+def "#11 = #3"
+def "#12 = #4"
+def "#13 = #5"
+def "#14 = #6"
+def "END"
+def "END"
+def "IFONE #2"
+def "#11 = ZERO"
+def "#12 = ZERO"
+def "#13 = ZERO"
+def "#14 = ZERO"
+def "END"
+label "Quad 1-of-2 selector.  If enable on right is high, all outputs go low,"
+label "else outputs follow selected inputs (bottom if control on left is one)."
+
+kind 74158
+simtype 16
+group 2
+grab -10 -22 10 22
+vector -9 -21 -9 21
+vector -9 21 9 21
+vector 9 21 9 -21
+vector 9 -21 -9 -21
+vector -9 -20 -15 -20
+vector -9 -15 -15 -15
+vector -9 -10 -15 -10
+vector -9 -5 -15 -5
+vector -9 5 -15 5
+vector -9 10 -15 10
+vector -9 15 -15 15
+vector -9 20 -15 20
+vector 13 -5 15 -5
+vector 13 -15 15 -15
+vector 13 5 15 5
+vector 13 15 15 15
+vector -5 21 -5 25
+vector -5 -4 -5 4
+vector 0 -4 -3 -4
+vector -3 -4 -3 0
+vector -3 0 0 0
+vector 0 0 0 4
+vector 0 4 -3 4
+vector 2 -4 5 -4
+vector 5 -4 5 4
+vector 5 0 2 0
+vector 2 -4 2 4
+vector 2 4 5 4
+circle 5 21 5 25
+circle 9 -15 13 -15
+circle 9 -5 13 -5
+circle 9 5 13 5
+circle 9 15 13 15
+pin #1 -5 25
+pin #2 5 25
+pin #3 -15 -20
+pin #4 -15 -15
+pin #5 -15 -10
+pin #6 -15 -5
+pin #7 -15 5
+pin #8 -15 10
+pin #9 -15 15
+pin #10 -15 20
+pin #11 15 -15
+pin #12 15 -5
+pin #13 15 5
+pin #14 15 15
+def "IF NOT #2"
+def "IF #1"
+def "#11 = NOT #7"
+def "#12 = NOT #8"
+def "#13 = NOT #9"
+def "#14 = NOT #10"
+def "END"
+def "IFZERO #1"
+def "#11 = NOT #3"
+def "#12 = NOT #4"
+def "#13 = NOT #5"
+def "#14 = NOT #6"
+def "END"
+def "END"
+def "IFONE #2"
+def "#11 = ONE"
+def "#12 = ONE"
+def "#13 = ONE"
+def "#14 = ONE"
+def "END"
+label "Quad 1-of-2 selector.  If enable on right is high, all outputs go high,"
+label "else outputs invert selected inputs (bottom if control on right is one)."
+
+kind 74160
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 10 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -17 -5 -20
+vector 5 -17 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector 6 -10 4 -10
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector -3 -2 -3 6
+vector -3 6 0 6
+vector 0 6 0 2
+vector 0 2 -3 2
+vector 2 -2 2 6
+vector 2 6 5 6
+vector 5 6 5 -2
+vector 5 -2 2 -2
+circle 5 -12 5 -17
+circle -5 -12 -5 -17
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF #1 AND #12"
+def "A = NOT A"
+def "IF E AND NOT H"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND ((F AND G) OR H)"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "END"
+def "IFZERO #14"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#6 = #1 AND A AND D"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "BCD counter.  Clocks on rising edge.  Synchronous load, asynchronous clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 9 and left carry in is one."
+
+kind 74161
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 10 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -17 -5 -20
+vector 5 -17 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector 6 -10 4 -10
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 1 -2 -2 -2
+vector -2 -2 -2 6
+vector -2 6 1 6
+vector 4 -2 4 6
+vector -2 2 1 2
+vector 1 2 1 6
+circle 5 -12 5 -17
+circle -5 -12 -5 -17
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF #1 AND #12"
+def "A = NOT A"
+def "IF E"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND F AND G"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "END"
+def "IFZERO #14"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#6 = #1 AND A AND B AND C AND D"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "Binary counter.  Clocks on rising edge.  Synchronous load, asynchronous clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 15 and left carry in is one."
+
+kind 74162
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 10 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -17 -5 -20
+vector 5 -17 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector 6 -10 4 -10
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector -3 -2 -3 6
+vector -3 6 0 6
+vector 0 6 0 2
+vector 0 2 -3 2
+vector 2 -2 5 -2
+vector 5 -2 5 2
+vector 5 2 2 2
+vector 2 2 2 6
+vector 2 6 5 6
+circle 5 -12 5 -17
+circle -5 -12 -5 -17
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF #1 AND #12"
+def "A = NOT A"
+def "IF E AND NOT H"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND ((F AND G) OR H)"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "IFZERO #14"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "END"
+def "#6 = #1 AND A AND D"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "BCD counter.  Clocks on rising edge.  Synchronous load and clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 9 and left carry in is one."
+
+kind 74163
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 10 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -17 -5 -20
+vector 5 -17 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector 6 -10 4 -10
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector -3 -2 -3 6
+vector -3 6 0 6
+vector 0 6 0 2
+vector 0 2 -3 2
+vector 2 -2 5 -2
+vector 2 6 5 6
+vector 5 -2 5 6
+vector 2 2 5 2
+circle 5 -12 5 -17
+circle -5 -12 -5 -17
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF #1 AND #12"
+def "A = NOT A"
+def "IF E"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND F AND G"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "IFZERO #14"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "END"
+def "#6 = #1 AND A AND B AND C AND D"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "Binary counter.  Clocks on rising edge.  Synchronous load and clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 15 and left carry in is one."
+
+kind 74168
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 14 -10 15 -10
+vector -14 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -16 -5 -20
+vector 5 -12 5 -20
+vector -5 18 -5 25
+vector 5 22 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector -3 -2 -3 6
+vector -3 6 0 6
+vector 0 6 0 2
+vector 0 2 -3 2
+vector 2 -2 5 -2
+vector 5 -2 5 6
+vector 5 6 2 6
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector 6 -7 6 -10
+vector 2 -2 2 6
+vector 2 2 5 2
+circle -5 -12 -5 -16
+circle -10 -10 -14 -10
+circle 10 -10 14 -10
+circle 5 18 5 22
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF NOT #1"
+def "IF NOT #12"
+def "IF #14"
+def "A = NOT A"
+def "IF E"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND F AND G"
+def "D = NOT D"
+def "END"
+def "IF B AND D"
+def "B = ZERO"
+def "D = ZERO"
+def "END"
+def "END"
+def "IFZERO #14"
+def "A = NOT A"
+def "IF NOT E"
+def "B = NOT B"
+def "END"
+def "IF E NOR F"
+def "C = NOT C"
+def "END"
+def "IF E NOR F NOR G"
+def "D = NOT D"
+def "END"
+def "IF C AND D"
+def "B = ZERO"
+def "C = ZERO"
+def "END"
+def "END"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "END"
+def "I = #14 NOR A NOR B NOR C NOR D"
+def "J = A AND NOT B AND NOT C AND D AND #14"
+def "#6 = #1 OR (I NOR J)"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "BCD up/down counter.  Clocks on rising edge.  Synchronous load."
+label "Counts up if U is one, down is U is zero.  Count is inhibited if either"
+label "left or bottom carry in is one.  Carry out is zero if count is 9 (up) or"
+label "0 (down), and left carry in is zero."
+
+kind 74169
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 14 -10 15 -10
+vector -14 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -16 -5 -20
+vector 5 -12 5 -20
+vector -5 18 -5 25
+vector 5 22 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 4 16 4 12
+vector 4 12 6 12
+vector 6 12 6 14
+vector 6 14 4 14
+vector -6 -10 -6 -7
+vector -6 -7 -4 -7
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector -3 -2 -3 6
+vector -3 6 0 6
+vector 0 6 0 2
+vector 0 2 -3 2
+vector 2 -2 5 -2
+vector 5 -2 5 6
+vector 2 -2 2 2
+vector 2 2 5 2
+vector 5 6 2 6
+vector 4 -10 4 -7
+vector 4 -7 6 -7
+vector 6 -7 6 -10
+circle -5 -12 -5 -16
+circle -10 -10 -14 -10
+circle 10 -10 14 -10
+circle 5 18 5 22
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "E = A"
+def "F = B"
+def "G = C"
+def "H = D"
+def "IF RISE #11"
+def "IF NOT #1"
+def "IF NOT #12"
+def "IF #14"
+def "A = NOT A"
+def "IF E"
+def "B = NOT B"
+def "END"
+def "IF E AND F"
+def "C = NOT C"
+def "END"
+def "IF E AND F AND G"
+def "D = NOT D"
+def "END"
+def "END"
+def "IFZERO #14"
+def "A = NOT A"
+def "IF NOT E"
+def "B = NOT B"
+def "END"
+def "IF E NOR F"
+def "C = NOT C"
+def "END"
+def "IF E NOR F NOR G"
+def "D = NOT D"
+def "END"
+def "END"
+def "END"
+def "END"
+def "IFZERO #13"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "END"
+def "I = A NOR B NOR C NOR D NOR #14"
+def "#6 = #1 OR (I NOR (A AND B AND C AND D AND #14))"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "Binary up/down counter.  Clocks on rising edge.  Synchronous load."
+label "Counts up if U is one, down if U is zero.  Count is inhibited if either"
+label "left or bottom carry in is one.  Carry out is zero if count was 15 (up) or"
+label "0 (down), and left carry in is zero."
+
+kind 74174
+simtype 16
+group 2
+grab -13 -19 13 18
+vector -20 -15 -12 -15
+vector -20 -5 -12 -5
+vector -20 5 -12 5
+vector -12 -18 -12 17
+vector -12 17 12 17
+vector 12 17 12 -18
+vector 12 -18 -12 -18
+vector 12 -15 20 -15
+vector 12 -10 20 -10
+vector 12 -5 20 -5
+vector 12 0 20 0
+vector 12 5 20 5
+vector 12 10 20 10
+vector 0 17 0 20
+vector 0 -23 0 -25
+vector -5 -4 -5 4
+vector -3 -4 0 -4
+vector 0 -4 0 4
+vector 2 -4 2 0
+vector 2 0 5 0
+vector 5 -4 5 4
+vector -12 -10 -20 -10
+vector -12 0 -20 0
+vector -12 10 -20 10
+vector -4 17 0 11
+vector 0 11 4 17
+circle 0 -18 0 -23
+pin #1 0 20
+pin #2 0 -25
+pin #3 -20 -15
+pin #4 -20 -10
+pin #5 -20 -5
+pin #6 -20 0
+pin #7 -20 5
+pin #8 -20 10
+pin #9 20 -15
+pin #10 20 -10
+pin #11 20 -5
+pin #12 20 0
+pin #13 20 5
+pin #14 20 10
+def "IF RISE #1"
+def "A = #3"
+def "B = #4"
+def "C = #5"
+def "D = #6"
+def "E = #7"
+def "F = #8"
+def "END"
+def "IFZERO #2"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "E = ZERO"
+def "F = ZERO"
+def "END"
+def "#9 = A"
+def "#10 = B"
+def "#11 = C"
+def "#12 = D"
+def "#13 = E"
+def "#14 = F"
+label "6-bit register.  Asynchronous clear.  Clocks on rising edge."
+
+kind 74175
+simtype 16
+group 2
+grab -13 -19 13 23
+vector -20 -15 -12 -15
+vector -20 -5 -12 -5
+vector -20 5 -12 5
+vector -20 15 -12 15
+vector -12 -18 -12 22
+vector -12 22 12 22
+vector 12 22 12 -18
+vector 12 -18 -12 -18
+vector 12 -15 20 -15
+vector 12 -10 20 -10
+vector 12 -5 20 -5
+vector 12 0 20 0
+vector 12 5 20 5
+vector 12 10 20 10
+vector 12 15 20 15
+vector 12 20 20 20
+vector -4 22 0 16
+vector 0 16 4 22
+vector 0 22 0 25
+vector 0 -23 0 -25
+vector -5 -4 -5 4
+vector -3 -4 0 -4
+vector 0 -4 0 4
+vector 5 -4 2 -4
+vector 2 -4 2 0
+vector 2 0 5 0
+vector 5 0 5 4
+vector 5 4 2 4
+circle 0 -18 0 -23
+pin #1 0 25
+pin #2 0 -25
+pin #3 -20 -15
+pin #4 -20 -5
+pin #5 -20 5
+pin #6 -20 15
+pin #7 20 -15
+pin #8 20 -5
+pin #9 20 5
+pin #10 20 15
+pin #11 20 -10
+pin #12 20 0
+pin #13 20 10
+pin #14 20 20
+def "IF RISE #1"
+def "A = #3"
+def "B = #4"
+def "C = #5"
+def "D = #6"
+def "END"
+def "IFZERO #2"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+def "#11 = NOT A"
+def "#12 = NOT B"
+def "#13 = NOT C"
+def "#14 = NOT D"
+label "4-bit register.  Alternate outputs are inverted.  Asynchronous clear."
+label "Clocks on rising edge."
+
+kind 74175A
+simtype 16
+group 2
+grab -13 -19 13 23
+vector -20 -15 -12 -15
+vector -20 -5 -12 -5
+vector -20 5 -12 5
+vector -20 15 -12 15
+vector -12 -18 -12 22
+vector -12 22 12 22
+vector 12 22 12 -18
+vector 12 -18 -12 -18
+vector 12 -15 20 -15
+vector 12 -5 20 -5
+vector 12 5 20 5
+vector 12 15 20 15
+vector -4 22 0 16
+vector 0 16 4 22
+vector 0 22 0 25
+vector 0 -23 0 -25
+vector -5 -4 -5 4
+vector -3 -4 0 -4
+vector 0 -4 0 4
+vector 5 -4 2 -4
+vector 2 -4 2 0
+vector 2 0 5 0
+vector 5 0 5 4
+vector 5 4 2 4
+circle 0 -18 0 -23
+pin #1 0 25
+pin #2 0 -25
+pin #3 -20 -15
+pin #4 -20 -5
+pin #5 -20 5
+pin #6 -20 15
+pin #7 20 -15
+pin #8 20 -5
+pin #9 20 5
+pin #10 20 15
+def "IF RISE #1"
+def "A = #3"
+def "B = #4"
+def "C = #5"
+def "D = #6"
+def "END"
+def "IFZERO #2"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "4-bit register.  Asynchronous clear.  Clocks on rising edge."
+
+kind 74192
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 14 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -16 -5 -20
+vector 5 -16 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 6 -9 4 -10
+vector 4 -10 4 -6
+vector 4 -6 6 -7
+vector -6 -10 -6 -6
+vector -6 -6 -4 -6
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector 2 -2 5 -2
+vector -3 -2 -3 2
+vector -3 2 0 2
+vector 0 -2 0 6
+vector 0 6 -3 6
+vector 2 2 5 2
+vector 1 18 5 12
+vector 5 12 9 18
+vector -6 -10 -4 -10
+vector 6 -7 4 -8
+vector 4 -8 6 -9
+vector 5 -2 5 2
+vector 2 2 2 6
+vector 2 6 5 6
+circle 5 -12 5 -16
+circle -5 -12 -5 -16
+circle 10 -10 14 -10
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "#13 = #11 OR (A NAND D)"
+def "#14 = #12 OR A OR B OR C OR D"
+def "IF RISE #11"
+def "IF #12"
+def "D = D XOR (A AND B AND C)"
+def "C = C XOR (A AND B)"
+def "B = B XOR A"
+def "A = NOT A"
+def "IF B AND D"
+def "B = ZERO"
+def "D = ZERO"
+def "END"
+def "END"
+def "END"
+def "IF RISE #12"
+def "IF #11"
+def "D = D XOR (A NOR B NOR C)"
+def "C = C XOR (A NOR B)"
+def "B = B XOR NOT A"
+def "A = NOT A"
+def "IF B AND D"
+def "B = ZERO"
+def "C = ZERO"
+def "END"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "IFONE #1"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "BCD counter.  Clocks on rising edge.  Synchronous load and clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 9 and left carry in is one."
+
+kind 74193
+simtype 16
+group 2
+grab -11 -13 11 19
+vector -10 18 -10 -12
+vector -10 -12 10 -12
+vector 10 -12 10 18
+vector 10 18 -10 18
+vector -10 15 -15 15
+vector -15 10 -10 10
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 14 -10 15 -10
+vector -10 -10 -15 -10
+vector 10 0 15 0
+vector 10 5 15 5
+vector 10 10 15 10
+vector 10 15 15 15
+vector -5 -16 -5 -20
+vector 5 -16 5 -20
+vector -5 18 -5 25
+vector 5 18 5 25
+vector -9 18 -5 12
+vector -5 12 -1 18
+vector 6 -9 4 -10
+vector 4 -10 4 -6
+vector 4 -6 6 -7
+vector -6 -10 -6 -6
+vector -6 -6 -4 -6
+vector -5 -2 -5 6
+vector 0 -2 -3 -2
+vector 2 -2 5 -2
+vector -3 -2 -3 2
+vector -3 2 0 2
+vector 0 -2 0 6
+vector 0 6 -3 6
+vector 2 2 5 2
+vector 5 -2 5 6
+vector 1 18 5 12
+vector 5 12 9 18
+vector -6 -10 -4 -10
+vector 6 -7 4 -8
+vector 4 -8 6 -9
+vector 2 6 5 6
+circle 5 -12 5 -16
+circle -5 -12 -5 -16
+circle 10 -10 14 -10
+pin #1 -15 -10
+pin #2 -15 0
+pin #3 -15 5
+pin #4 -15 10
+pin #5 -15 15
+pin #6 15 -10
+pin #7 15 0
+pin #8 15 5
+pin #9 15 10
+pin #10 15 15
+pin #11 -5 25
+pin #12 5 25
+pin #13 -5 -20
+pin #14 5 -20
+def "#13 = #11 OR (A NAND B NAND C NAND D)"
+def "#14 = #12 OR A OR B OR C OR D"
+def "IF RISE #11"
+def "IF #12"
+def "D = D XOR (A AND B AND C)"
+def "C = C XOR (A AND B)"
+def "B = B XOR A"
+def "A = NOT A"
+def "END"
+def "END"
+def "IF RISE #12"
+def "IF #11"
+def "D = D XOR (A NOR B NOR C)"
+def "C = C XOR (A NOR B)"
+def "B = B XOR NOT A"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = #2"
+def "B = #3"
+def "C = #4"
+def "D = #5"
+def "END"
+def "IFONE #1"
+def "A = ZERO"
+def "B = ZERO"
+def "C = ZERO"
+def "D = ZERO"
+def "END"
+def "#7 = A"
+def "#8 = B"
+def "#9 = C"
+def "#10 = D"
+label "Binary counter.  Clocks on rising edge.  Synchronous load and clear."
+label "Count is inhibited if left or bottom carry in is zero.  Carry out is one if"
+label "count is 15 and left carry in is one."
+
+kind 74244
+simtype 16
+group 2
+grab -12 -18 12 23
+vector 8 -17 11 -17
+vector 11 -17 11 22
+vector 11 22 -11 22
+vector -11 22 -11 -17
+vector -11 -17 8 -17
+vector 11 -15 15 -15
+vector 11 -10 15 -10
+vector 11 -5 15 -5
+vector 11 0 15 0
+vector 11 5 15 5
+vector 11 10 15 10
+vector 11 15 15 15
+vector 11 20 15 20
+vector -11 -15 -15 -15
+vector -11 -10 -15 -10
+vector -11 -5 -15 -5
+vector -11 0 -15 0
+vector -11 5 -15 5
+vector -11 10 -15 10
+vector -11 15 -15 15
+vector -11 20 -15 20
+vector 0 22 0 25
+vector 0 -17 0 -20
+vector 2 -3 2 3
+vector -7 -3 -4 -3
+vector 7 -3 7 3
+vector 7 0 4 0
+vector 4 0 4 -3
+vector 2 0 -1 0
+vector -1 0 -1 -3
+vector -4 -3 -4 0
+vector -4 0 -7 0
+vector -7 0 -7 3
+vector -7 3 -4 3
+vector -4 0 -7 0
+vector -7 0 -7 3
+vector -7 3 -4 3
+vector 0 -17 0 -20
+pinnum 2 -13 -17
+pinnum 4 -13 -12
+pinnum 6 -13 -7
+pinnum 8 -13 -2
+pinnum 11 -13 3
+pinnum 13 -13 8
+pinnum 15 -13 13
+pinnum 17 -13 18
+pinnum 1 -2 -19
+pinnum 19 -2 24
+pinnum 18 14 -17
+pinnum 16 14 -12
+pinnum 14 14 -7
+pinnum 12 14 -2
+pinnum 9 14 3
+pinnum 7 14 8
+pinnum 5 14 13
+pinnum 3 14 18
+pin #1 15 -15
+pin #2 15 -10
+pin #3 15 -5
+pin #4 15 0
+pin #5 15 5
+pin #6 15 10
+pin #7 15 15
+pin #8 15 20
+pin #9 -15 -15
+pin #10 -15 -10
+pin #11 -15 -5
+pin #12 -15 0
+pin #13 -15 5
+pin #14 -15 10
+pin #15 -15 15
+pin #16 -15 20
+pin #17 0 25
+pin #18 0 -20
+def "IF NOT #18"
+def "#1 = #9"
+def "#2 = #10"
+def "#3 = #11"
+def "#4 = #12"
+def "END"
+def "IF NOT #17"
+def "#5 = #13"
+def "#6 = #14"
+def "#7 = #15"
+def "#8 = #16"
+def "END"
+label "Eight-bit tristate buffer.  Upper four bits conduct left to right when top"
+label "pin is low; bottom pin controls lower four bits."
+
+kind 74245
+simtype 16
+group 2
+grab -12 -18 12 23
+vector 8 -17 11 -17
+vector 11 -17 11 22
+vector 11 22 -11 22
+vector -11 22 -11 -17
+vector -11 -17 8 -17
+vector 11 -15 15 -15
+vector 11 -10 15 -10
+vector 11 -5 15 -5
+vector 11 0 15 0
+vector 11 5 15 5
+vector 11 10 15 10
+vector 11 15 15 15
+vector 11 20 15 20
+vector -11 -15 -15 -15
+vector -11 -10 -15 -10
+vector -11 -5 -15 -5
+vector -11 0 -15 0
+vector -11 5 -15 5
+vector -11 10 -15 10
+vector -11 15 -15 15
+vector -11 20 -15 20
+vector 0 22 0 25
+vector 5 -17 5 -20
+vector 2 -3 2 3
+vector -7 -3 -4 -3
+vector 7 0 4 0
+vector 4 0 4 -3
+vector 2 0 -1 0
+vector -1 0 -1 -3
+vector -4 -3 -4 0
+vector -4 0 -7 0
+vector -7 0 -7 3
+vector -7 3 -4 3
+vector -4 0 -7 0
+vector -7 0 -7 3
+vector -7 3 -4 3
+vector 5 -17 5 -20
+vector 5 -17 5 -20
+vector 7 -3 4 -3
+vector 7 0 7 3
+vector 7 3 4 3
+pinnum 18 -13 -17
+pinnum 17 -13 -12
+pinnum 16 -13 -7
+pinnum 15 -13 -2
+pinnum 14 -13 3
+pinnum 13 -13 8
+pinnum 12 -13 13
+pinnum 11 -13 18
+pinnum 1 3 -19
+pinnum 19 -2 24
+pinnum 2 14 -17
+pinnum 3 14 -12
+pinnum 4 14 -7
+pinnum 5 14 -2
+pinnum 6 14 3
+pinnum 7 14 8
+pinnum 8 14 13
+pinnum 9 14 18
+pin #1 15 -15
+pin #2 15 -10
+pin #3 15 -5
+pin #4 15 0
+pin #5 15 5
+pin #6 15 10
+pin #7 15 15
+pin #8 15 20
+pin #9 -15 -15
+pin #10 -15 -10
+pin #11 -15 -5
+pin #12 -15 0
+pin #13 -15 5
+pin #14 -15 10
+pin #15 -15 15
+pin #16 -15 20
+pin #17 0 25
+pin #18 5 -20
+def "IF NOT #17"
+def "IFZERO #18"
+def "#1 = #9"
+def "#2 = #10"
+def "#3 = #11"
+def "#4 = #12"
+def "#5 = #13"
+def "#6 = #14"
+def "#7 = #15"
+def "#8 = #16"
+def "END"
+def "IF #18"
+def "#9 = #1"
+def "#10 = #2"
+def "#11 = #3"
+def "#12 = #4"
+def "#13 = #5"
+def "#14 = #6"
+def "#15 = #7"
+def "#16 = #8"
+def "END"
+def "END"
+label "Bidirectional buffer.  If bottom pin is high, all pins are tri-state.  If low,"
+label "pins conduct left-to-right if top pin low, right-to-left if top pin high."
+
+kind 74373
+simtype 16
+group 2
+grab -12 -18 12 23
+vector 8 -17 11 -17
+vector 11 -17 11 22
+vector 11 22 -11 22
+vector -11 22 -11 -17
+vector -11 -17 8 -17
+vector 11 -15 15 -15
+vector 11 -10 15 -10
+vector 11 -5 15 -5
+vector 11 0 15 0
+vector 11 5 15 5
+vector 11 10 15 10
+vector 11 15 15 15
+vector 11 20 15 20
+vector -11 -15 -15 -15
+vector -11 -10 -15 -10
+vector -11 -5 -15 -5
+vector -11 0 -15 0
+vector -11 5 -15 5
+vector -11 10 -15 10
+vector -11 15 -15 15
+vector -11 20 -15 20
+vector 0 22 0 25
+vector 5 -17 5 -20
+vector -2 -3 2 -3
+vector 2 -3 2 3
+vector -7 -3 -4 -3
+vector -4 -3 -4 3
+vector -4 3 -7 3
+vector -6 0 -4 0
+vector 4 -3 7 -3
+vector 7 -3 7 3
+vector 7 3 4 3
+vector 5 0 7 0
+pinnum 3 -13 -17
+pinnum 4 -13 -12
+pinnum 7 -13 -7
+pinnum 8 -13 -2
+pinnum 13 -13 3
+pinnum 14 -13 8
+pinnum 17 -13 13
+pinnum 18 -13 18
+pinnum 1 3 -19
+pinnum 11 -2 24
+pinnum 2 14 -17
+pinnum 5 14 -12
+pinnum 6 14 -7
+pinnum 9 14 -2
+pinnum 12 14 3
+pinnum 15 14 8
+pinnum 16 14 13
+pinnum 19 14 18
+pin #1 15 -15
+pin #2 15 -10
+pin #3 15 -5
+pin #4 15 0
+pin #5 15 5
+pin #6 15 10
+pin #7 15 15
+pin #8 15 20
+pin #9 -15 -15
+pin #10 -15 -10
+pin #11 -15 -5
+pin #12 -15 0
+pin #13 -15 5
+pin #14 -15 10
+pin #15 -15 15
+pin #16 -15 20
+pin #17 0 25
+pin #18 5 -20
+def "IF #17"
+def "A = #9"
+def "B = #10"
+def "C = #11"
+def "D = #12"
+def "E = #13"
+def "F = #14"
+def "G = #15"
+def "H = #16"
+def "END"
+def "IF NOT #18"
+def "#1 = A"
+def "#2 = B"
+def "#3 = C"
+def "#4 = D"
+def "#5 = E"
+def "#6 = F"
+def "#7 = G"
+def "#8 = H"
+def "END"
+label "Eight-bit latch with tristate outputs.  If top pin is high, outputs float.  If"
+label "low, outputs follow inputs for bottom pin high, latch for bottom pin low."
+
+kind 74374
+simtype 16
+group 2
+grab -12 -18 12 23
+vector 8 -17 11 -17
+vector 11 -17 11 22
+vector 11 22 -11 22
+vector -11 22 -11 -17
+vector -11 -17 8 -17
+vector 11 -15 15 -15
+vector 11 -10 15 -10
+vector 11 -5 15 -5
+vector 11 0 15 0
+vector 11 5 15 5
+vector 11 10 15 10
+vector 11 15 15 15
+vector 11 20 15 20
+vector -11 -15 -15 -15
+vector -11 -10 -15 -10
+vector -11 -5 -15 -5
+vector -11 0 -15 0
+vector -11 5 -15 5
+vector -11 10 -15 10
+vector -11 15 -15 15
+vector -11 20 -15 20
+vector 0 22 0 25
+vector 5 -17 5 -20
+vector -2 -3 2 -3
+vector 2 -3 2 3
+vector -7 -3 -4 -3
+vector -4 -3 -4 3
+vector -4 3 -7 3
+vector -6 0 -4 0
+vector 7 -3 7 3
+vector 7 0 4 0
+vector 4 0 4 -3
+vector -4 22 0 17
+vector 0 17 4 22
+pinnum 1 3 -19
+pinnum 11 -2 24
+pinnum 3 -13 -17
+pinnum 4 -13 -12
+pinnum 7 -13 -7
+pinnum 8 -13 -2
+pinnum 13 -13 3
+pinnum 14 -13 8
+pinnum 17 -13 13
+pinnum 18 -13 18
+pinnum 2 14 -17
+pinnum 5 14 -12
+pinnum 6 14 -7
+pinnum 9 14 -2
+pinnum 12 14 3
+pinnum 15 14 8
+pinnum 16 14 13
+pinnum 19 14 18
+pin #1 15 -15
+pin #2 15 -10
+pin #3 15 -5
+pin #4 15 0
+pin #5 15 5
+pin #6 15 10
+pin #7 15 15
+pin #8 15 20
+pin #9 -15 -15
+pin #10 -15 -10
+pin #11 -15 -5
+pin #12 -15 0
+pin #13 -15 5
+pin #14 -15 10
+pin #15 -15 15
+pin #16 -15 20
+pin #17 0 25
+pin #18 5 -20
+def "IF RISE #17"
+def "A = #9"
+def "B = #10"
+def "C = #11"
+def "D = #12"
+def "E = #13"
+def "F = #14"
+def "G = #15"
+def "H = #16"
+def "END"
+def "IF NOT #18"
+def "#1 = A"
+def "#2 = B"
+def "#3 = C"
+def "#4 = D"
+def "#5 = E"
+def "#6 = F"
+def "#7 = G"
+def "#8 = H"
+def "END"
+label "Eight-bit latch with tristate outputs.  If top pin is high, outputs float.  If"
+label "low, outputs are enabled.  Inputs are latched on rising edge of bottom pin."
+
+kind AND
+simtype 16
+group 1
+grab -12 -12 12 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 10 0 20 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 AND #2"
+
+kind AND3
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector 10 0 20 0
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 -7 10 0
+vector 10 0 10 7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 AND #2 AND #3"
+
+kind AND4
+simtype 16
+group 1
+grab -12 -22 15 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 13 0 25 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 AND #2 AND #3 AND #4"
+
+kind AND8
+simtype 16
+group 1
+grab -12 -22 17 25
+vector -10 23 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 8 18
+vector 8 18 2 23
+vector 2 23 -10 23
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 25 0 13 0
+vector -10 20 -20 20
+vector -20 10 -10 10
+vector -20 0 -10 0
+vector -20 -10 -10 -10
+pin #1 -20 -15
+pin #2 -20 -10
+pin #3 -20 -5
+pin #4 -20 0
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = #1 AND #2 AND #3 AND #4"
+def "#9 = #5 AND #6 AND #7 AND #8 AND A"
+
+kind ANDX
+simtype 16
+group 1
+grab -13 -12 15 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -10 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -10 -10
+vector 15 0 20 0
+vector -10 -10 -8 -5
+vector -8 -5 -8 5
+vector -8 5 -10 10
+vector -13 -5 -20 -5
+vector -13 5 -20 5
+circle -8 -5 -13 -5
+circle -8 5 -13 5
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 AND #2"
+
+kind ANDX3
+simtype 16
+group 1
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector -8 -5 -8 5
+vector -8 5 -11 15
+vector 4 13 6 10
+vector -1 -15 -11 -15
+vector -11 -15 -8 -5
+vector 10 0 6 -10
+vector 10 0 6 10
+vector 15 0 20 0
+vector -20 0 -13 0
+vector -20 -10 -15 -10
+vector -20 10 -15 10
+circle -10 -10 -15 -10
+circle -8 0 -13 0
+circle -10 10 -15 10
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 AND #2 AND #3"
+
+kind ANDX4
+simtype 16
+group 1
+grab -12 -22 17 22
+vector 1 -20 6 -17
+vector 6 -17 10 -10
+vector 13 0 10 10
+vector 10 10 6 17
+vector 6 17 1 20
+vector 1 20 -10 20
+vector 1 -20 -10 -20
+vector 10 -10 13 0
+vector -10 -20 -7 -11
+vector -7 -11 -6 -4
+vector -6 -4 -6 4
+vector -6 4 -7 11
+vector -7 11 -10 20
+vector 18 0 25 0
+vector -20 -5 -11 -5
+vector -20 -15 -14 -15
+vector -20 5 -11 5
+vector -20 15 -14 15
+circle -9 -15 -14 -15
+circle -6 -5 -11 -5
+circle -6 5 -11 5
+circle -9 15 -14 15
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 AND #2 AND #3 AND #4"
+
+kind ARROW1
+grab -4 -9 4 9
+vector 0 10 0 -10
+vector 0 -10 -3 -5
+vector 3 -5 0 -10
+
+kind ARROW2
+grab -6 -6 5 6
+vector 7 -7 -7 7
+vector 6 -2 7 -7
+vector 7 -7 2 -6
+
+kind ASCDISP
+simtype 16
+group 1
+grab -22 -25 25 22
+vector -23 -25 -23 23
+vector 25 23 -23 23
+vector 15 23 15 25
+vector 10 23 10 25
+vector 5 23 5 25
+vector 0 23 0 25
+vector -5 23 -5 25
+vector -10 23 -10 25
+vector -15 23 -15 25
+vector -20 23 -20 25
+vector -25 20 -23 20
+vector -23 10 -25 10
+pin #1 -20 25
+pin #2 -15 25
+pin #3 -10 25
+pin #4 -5 25
+pin #5 0 25
+pin #6 5 25
+pin #7 10 25
+pin #8 15 25
+pin #9 -25 20
+pin #10 -25 10
+def "A = #8"
+def "B = #7"
+def "C = #6"
+def "D = #5"
+def "E = #4"
+def "F = #3"
+def "G = #2"
+def "H = #1"
+def "I = #9"
+def "J = FIX #10"
+def "CALL MYGATES_ASCDISP"
+label "ASCII terminal display."
+label ""
+label "Lefthand pins are clear (above) and strobe (below)."
+label ""
+label ""
+label "[auto-lf] BY:Auto LF on CR:"
+label "[erase-bs] BN:Erase on backspace:"
+label "[auto-wrap] BY:Auto wrap at EOL:"
+
+kind ASCKBD
+simtype 16
+group 1
+grab -62 -29 67 25
+vector 68 -30 -63 -30
+vector -63 -30 -63 26
+vector -63 26 68 26
+vector -63 -20 -65 -20
+vector -63 -15 -65 -15
+vector -63 -10 -65 -10
+vector -63 -5 -65 -5
+vector -63 0 -65 0
+vector -63 5 -65 5
+vector -63 10 -65 10
+vector -63 15 -65 15
+vector -55 26 -55 30
+vector 68 -30 68 26
+text -52 -22 cc 70 "1"
+text -42 -22 cc 70 "2"
+text -32 -22 cc 70 "3"
+text -22 -22 cc 70 "4"
+text -12 -22 cc 70 "5"
+text -2 -22 cc 70 "6"
+text 8 -22 cc 70 "7"
+text 18 -22 cc 70 "8"
+text 28 -22 cc 70 "9"
+text 38 -22 cc 70 "0"
+text 48 -22 cc 70 "-"
+text 58 -22 cc 70 "="
+text -52 -12 cc 70 "Q"
+text -42 -12 cc 70 "W"
+text -32 -12 cc 70 "E"
+text -22 -12 cc 70 "R"
+text -12 -12 cc 70 "T"
+text -2 -12 cc 70 "Y"
+text 8 -12 cc 70 "U"
+text 18 -12 cc 70 "I"
+text 28 -12 cc 70 "O"
+text 38 -12 cc 70 "P"
+text 48 -12 cc 70 "["
+text 58 -12 cc 70 "]"
+text -52 -2 cc 70 "A"
+text -42 -2 cc 70 "S"
+text -32 -2 cc 70 "D"
+text -22 -2 cc 70 "F"
+text -12 -2 cc 70 "G"
+text -2 -2 cc 70 "H"
+text 8 -2 cc 70 "J"
+text 18 -2 cc 70 "K"
+text 28 -2 cc 70 "L"
+text 38 -2 cc 70 ";"
+text 48 -2 cc 70 "'"
+text -52 8 cc 70 "Z"
+text -42 8 cc 70 "X"
+text -32 8 cc 70 "C"
+text -22 8 cc 70 "V"
+text -12 8 cc 70 "B"
+text -2 8 cc 70 "N"
+text 8 8 cc 70 "M"
+text 18 8 cc 70 ","
+text 28 8 cc 70 "."
+text 38 8 cc 70 "/"
+vector -27 15 -27 21
+vector -27 21 33 21
+vector 33 21 33 15
+vector 33 15 -27 15
+vector 58 -5 56 -5
+vector 56 -5 56 -2
+vector 56 -2 58 -2
+vector 58 1 58 -2
+vector 58 -2 60 -1
+vector 60 -1 59 0
+vector 59 0 60 1
+vector 58 8 56 8
+vector 56 8 56 5
+vector 56 5 58 5
+vector 58 5 57 6
+vector 57 6 58 8
+vector 60 8 58 9
+vector 58 9 60 10
+vector 60 10 58 11
+vector 48 5 46 6
+vector 46 6 48 7
+vector 48 7 46 8
+vector 48 8 48 11
+vector 50 8 50 11
+vector 48 10 50 10
+vector -52 15 -54 15
+vector -54 15 -54 18
+vector -54 18 -52 18
+vector -52 17 -50 17
+vector -51 17 -51 20
+pin #1 -65 -20
+pin #2 -65 -15
+pin #3 -65 -10
+pin #4 -65 -5
+pin #5 -65 0
+pin #6 -65 5
+pin #7 -65 10
+pin #8 -65 15
+pin #9 -55 30
+def "CALL MYGATES_ASCKBD"
+def "#1 = A"
+def "#2 = B"
+def "#3 = C"
+def "#4 = D"
+def "#5 = E"
+def "#6 = F"
+def "#7 = G"
+def "#8 = H"
+def "#9 = I"
+label "ASCII keyboard."
+label ""
+label "LSB is on top, MSB on bottom.  Strobe is below."
+label ""
+label "VASCII,Key-Codes:Mode:"
+
+kind BREAK
+simtype 16
+group 1
+grab -9 -9 9 9
+vector 5 -5 -5 5
+vector -5 -5 5 5
+vector -8 -8 -8 8
+vector -8 8 8 8
+vector 8 8 8 -8
+vector 8 -8 -8 -8
+vector -13 5 -15 5
+vector -15 -5 -8 -5
+circle -8 5 -13 5
+pin #1 -15 -5
+pin #2 -15 5
+def "P = RISE #1 OR FALL #2"
+def "CALL LOGSIM_LOG_16_BREAK"
+
+kind CIRC
+grab -10 -10 10 10
+vector 7 -10 10 -7
+ellipse -12 -12 12 12
+
+kind CIRC1
+grab -8 -8 8 8
+ellipse -10 -10 10 10
+
+kind CIRC2
+grab -13 -13 13 13
+ellipse -15 -15 15 15
+
+kind CLOCK
+simtype 16
+group 1
+grab -14 -14 14 14
+vector -12 -12 -12 12
+vector -12 -12 12 -12
+vector 12 -12 12 12
+vector 12 12 -12 12
+vector 8 -7 8 -3
+vector 7 -2 3 -2
+vector 2 -3 2 -7
+vector 3 -8 7 -8
+vector 7 2 3 2
+vector 2 3 2 7
+vector 3 8 7 8
+vector 8 7 8 3
+vector 12 -5 20 -5
+vector 12 5 20 5
+pin #1 20 -5
+pin #2 20 5
+def "CALL LOGSIM_LOG_16_CLOCK"
+def "#1 = P"
+def "#2 = N"
+label "TTL clock generator"
+label ""
+label "1VTimed,Count,Sync:Timing mode:"
+label ""
+label "Timed;I1:Rate (cycles per second):"
+label "Count;I1:Rate (timesteps per cycle):"
+label "Sync;I1:Cycle lag (timesteps):"
+label ""
+label "VTwo,Four:Clock phases:"
+
+kind COMPL
+simtype 16
+group 1
+grab -10 -12 7 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector -8 0 -15 0
+vector 10 -5 -1 -5
+vector 10 5 5 5
+circle 0 5 5 5
+pin #1 -15 0
+pin #2 10 -5
+pin #3 10 5
+def "IFCONN #1"
+def "#2 = #1"
+def "#3 = NOT #1"
+def "END"
+
+kind COMPL2
+simtype 16
+group 1
+grab -8 -3 3 8
+vector -7 0 -10 0
+vector -7 -2 -7 7
+vector -7 -2 0 2
+vector 0 2 -7 7
+vector 5 0 -3 0
+vector 0 5 5 5
+circle -3 5 0 5
+pin #1 -10 0
+pin #2 5 0
+pin #3 5 5
+def "IFCONN #1"
+def "#2 = #1"
+def "#3 = NOT #1"
+def "END"
+
+kind CROSS2
+grab -4 -7 4 7
+vector -5 5 5 -5
+vector -5 -5 5 5
+pin #1 -5 -5
+pin #2 5 -5
+pin #3 -5 5
+pin #4 5 5
+connect 1 4
+connect 2 3
+
+kind CROSS3
+grab -4 -7 9 12
+vector -5 10 10 -5
+vector -5 -5 10 10
+pin #1 -5 -5
+pin #2 10 -5
+pin #3 -5 10
+pin #4 10 10
+connect 1 4
+connect 2 3
+
+kind CROSS4
+grab -8 -17 8 17
+vector -10 -5 -5 -5
+vector -10 5 -5 5
+vector -10 15 -5 15
+vector -5 15 5 -15
+vector 5 -15 10 -15
+vector -10 -15 -5 -15
+vector -5 -15 5 15
+vector 5 15 10 15
+vector -5 5 5 -5
+vector 5 -5 10 -5
+vector -5 -5 5 5
+vector 5 5 10 5
+pin #1 -10 -15
+pin #2 10 -15
+pin #3 -10 -5
+pin #4 10 -5
+pin #5 -10 5
+pin #6 10 5
+pin #7 -10 15
+pin #8 10 15
+connect 1 8
+connect 2 7
+connect 3 6
+connect 4 5
+
+kind CROSS5
+grab -8 -8 8 8
+vector -10 10 10 -10
+vector -10 -10 10 10
+pin #1 -10 -10
+pin #2 10 -10
+pin #3 -10 10
+pin #4 10 10
+connect 1 4
+connect 2 3
+
+kind CRUNCH
+grab -8 -17 8 17
+vector -10 -5 -5 -5
+vector -10 -15 10 -15
+vector -5 -5 -5 -10
+vector -5 -10 10 -10
+vector -10 5 0 5
+vector 0 5 0 -5
+vector 0 -5 10 -5
+vector -10 15 5 15
+vector 5 15 5 0
+vector 5 0 10 0
+pin #1 -10 -15
+pin #2 10 -15
+pin #3 -10 -5
+pin #4 10 -10
+pin #5 -10 5
+pin #6 10 -5
+pin #7 -10 15
+pin #8 10 0
+connect 1 2
+connect 3 4
+connect 5 6
+connect 7 8
+
+kind CRUNCH2
+grab -8 -17 8 17
+vector -10 -10 -10 -15
+vector -10 -15 10 -15
+vector -10 0 -5 0
+vector -5 0 -5 -10
+vector -5 -10 10 -10
+vector -10 10 0 10
+vector 0 10 0 -5
+vector 0 -5 10 -5
+vector -10 20 5 20
+vector 5 20 5 0
+vector 5 0 10 0
+pin #1 -10 -10
+pin #2 10 -15
+pin #3 -10 0
+pin #4 10 -10
+pin #5 -10 10
+pin #6 10 -5
+pin #7 -10 20
+pin #8 10 0
+connect 1 2
+connect 3 4
+connect 5 6
+connect 7 8
+
+kind DIGH
+simtype 16
+group 1
+grab -25 -21 25 21
+vector -24 -20 -24 20
+vector -24 20 24 20
+vector 24 20 24 -20
+vector 24 -20 -24 -20
+vector -22 -18 -22 18
+vector -22 18 22 18
+vector 22 18 22 -18
+vector 22 -18 -22 -18
+vector -20 -16 -20 16
+vector -20 16 20 16
+vector 20 16 20 -16
+vector 20 -16 -20 -16
+def "CALL LOGSIMH_LOG_16_DIGH"
+label "Digital hierarchy control panel"
+label ""
+label "[opt] I:Optimization limit:"
+label "[opt-when] VAlways,When dumping,On request only:Optimize when:"
+label "[opt-delay] BT:Optimize gate delay?"
+label ""
+label "[disp] BT:Display "Compiling" message?"
+label "[stats] BF:Display compilation statistics?"
+label ""
+label "[dump] VOff,Dump,Big dump,Write:Dumping mode:"
+label "[write-file] Write;A:Write file name:"
+
+kind DNEG
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector 0 -20 0 -25
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -15 5 -20 5
+vector -10 -1 -4 5
+vector -4 5 -10 11
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -7 -12 -7 -7
+vector -7 -7 -4 -8
+vector -4 -8 -4 -11
+vector -4 -11 -7 -12
+circle 0 -15 0 -20
+circle -10 5 -15 5
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 5
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+def "IF FALL #2"
+def "A = #1"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Negative edge triggered Data flip-flop, with asynchronous preset and clear."
+
+kind DPOS
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 5 -20 5
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -10 -1 -4 5
+vector -4 5 -10 11
+vector 0 -20 0 -25
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -7 -12 -7 -7
+vector -7 -7 -4 -8
+vector -4 -8 -4 -11
+vector -4 -11 -7 -12
+circle 0 -15 0 -20
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 5
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+def "IF RISE #2"
+def "A = #1"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Positive edge triggered Data flip-flop, with asynchronous preset, clear."
+
+kind DTOA
+simtype 32
+group 8
+grab -12 -12 12 12
+vector -10 -10 -10 10
+vector -10 10 10 0
+vector 10 0 -10 -10
+vector -15 -5 -10 -5
+vector -15 5 -10 5
+vector -15 0 -10 0
+vector 10 0 15 0
+pin #1 15 0
+pin #2 -15 -5 16
+pin #3 -15 0 16
+pin #4 -15 5 16
+def ""
+
+kind EDGE
+simtype 16
+group 1
+grab -7 -7 7 7
+vector -10 0 -5 -5
+vector -5 -5 5 -5
+vector 5 -5 5 5
+vector 5 5 -5 5
+vector -5 5 -10 0
+vector -2 -3 2 -3
+vector 3 -2 3 2
+vector 2 3 -2 3
+vector -3 2 -3 -2
+vector -5 -5 -5 5
+pin #1 -10 0
+def "P = P OR RISE #1"
+def "CALL LOGSIM_LOG_16_SWITCH"
+
+kind FORCEDRV
+simtype 16
+group 1
+grab -7 -7 7 7
+vector 6 0 0 -6
+vector 0 -6 -6 0
+vector -6 0 0 6
+vector 0 6 6 0
+vector 0 -4 -4 0
+vector 0 -4 4 0
+vector 4 0 0 4
+vector 0 4 -4 0
+pin #1 0 0
+def "# FORCE_DRIVEN 1"
+
+kind FROM
+simtype 1
+grab 6 -7 23 7
+vector 18 -5 23 0
+vector 23 0 18 5
+vector 23 0 25 0
+pin #1 25 0
+flags NAMED
+def "Signal name: "
+
+kind GDNEG
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector 0 -20 0 -25
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -15 0 -20 0
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -7 -12 -7 -7
+vector -7 -7 -4 -8
+vector -4 -8 -4 -11
+vector -4 -11 -7 -12
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector -10 10 -20 10
+vector -4 8 -7 8
+vector -7 8 -7 13
+vector -7 13 -4 13
+vector -4 13 -4 11
+vector -4 11 -5 11
+circle 0 -15 0 -20
+circle 0 15 0 20
+circle -10 0 -15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+pin #7 -20 10
+def "IF FALL #2"
+def "IF #7"
+def "A = #1"
+def "END"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Negative edge triggered Data flip-flop, with asynchronous preset and clear."
+
+kind GDPOS
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 0 -20 0
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -10 -6 -4 0
+vector -4 0 -10 5
+vector 0 -20 0 -25
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -7 -12 -7 -7
+vector -7 -7 -4 -8
+vector -4 -8 -4 -11
+vector -4 -11 -7 -12
+vector -10 10 -20 10
+vector -4 8 -7 8
+vector -7 8 -7 13
+vector -7 13 -4 13
+vector -4 13 -4 11
+vector -4 11 -5 11
+circle 0 -15 0 -20
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+pin #7 -20 10
+def "IF RISE #2"
+def "IF #7"
+def "A = #1"
+def "END"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Positive edge triggered Data flip-flop, with asynchronous preset, clear."
+
+kind GINST1
+simtype 7
+grab -8 -13 8 13
+vector -10 -15 10 -15
+vector 10 -15 10 15
+vector 10 15 -10 15
+vector -10 15 -10 -15
+vector 6 -13 6 -8
+vector 6 -13 8 -11
+vector 6 -13 4 -11
+pin #1 -5 -15
+pin #2 0 -15
+pin #3 5 -15
+pin #4 10 -10
+pin #5 10 -5
+pin #6 10 0
+pin #7 10 5
+pin #8 10 10
+pin #9 5 15
+pin #10 0 15
+pin #11 -5 15
+pin #12 -10 10
+pin #13 -10 5
+pin #14 -10 0
+pin #15 -10 -5
+pin #16 -10 -10
+def "Procedure name: LOGHIER_LOG_7_GINST"
+label "General instance gate, up to 16 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind GINST2
+simtype 7
+grab -13 -13 13 13
+vector -15 -15 -15 15
+vector -15 15 15 15
+vector 15 15 15 -15
+vector 15 -15 -15 -15
+vector 13 -11 11 -13
+vector 11 -13 9 -11
+vector 11 -13 11 -8
+pin #1 -10 -15
+pin #2 -5 -15
+pin #3 0 -15
+pin #4 5 -15
+pin #5 10 -15
+pin #6 15 -10
+pin #7 15 -5
+pin #8 15 0
+pin #9 15 5
+pin #10 15 10
+pin #11 10 15
+pin #12 5 15
+pin #13 0 15
+pin #14 -5 15
+pin #15 -10 15
+pin #16 -15 10
+pin #17 -15 5
+pin #18 -15 0
+pin #19 -15 -5
+pin #20 -15 -10
+def "Procedure name: LOGHIER_LOG_7_GINST"
+label "General instance gate, up to 20 pins"
+label ""
+label "[inst-of] [inst-of] C:Instance of:"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind GINST3
+simtype 7
+grab -8 -23 8 23
+vector -10 -25 10 -25
+vector 10 -25 10 25
+vector 10 25 -10 25
+vector -10 25 -10 -25
+vector 6 -23 8 -21
+vector 4 -21 6 -23
+vector 6 -23 6 -18
+pin #1 -5 -25
+pin #2 0 -25
+pin #3 5 -25
+pin #4 10 -20
+pin #5 10 -15
+pin #6 10 -10
+pin #7 10 -5
+pin #8 10 0
+pin #9 10 5
+pin #10 10 10
+pin #11 10 15
+pin #12 10 20
+pin #13 5 25
+pin #14 0 25
+pin #15 -5 25
+pin #16 -10 20
+pin #17 -10 15
+pin #18 -10 10
+pin #19 -10 5
+pin #20 -10 0
+pin #21 -10 -5
+pin #22 -10 -10
+pin #23 -10 -15
+pin #24 -10 -20
+def "Procedure name: LOGHIER_LOG_7_GINST"
+label "General instance gate, up to 24 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind GINST4
+simtype 7
+grab -23 -23 23 23
+vector -25 -25 -25 25
+vector -25 25 25 25
+vector 25 25 25 -25
+vector 25 -25 -25 -25
+vector 23 -21 21 -23
+vector 21 -23 19 -21
+vector 21 -23 21 -18
+pin #1 -20 -25
+pin #2 -15 -25
+pin #3 -10 -25
+pin #4 -5 -25
+pin #5 0 -25
+pin #6 5 -25
+pin #7 10 -25
+pin #8 15 -25
+pin #9 20 -25
+pin #10 25 -20
+pin #11 25 -15
+pin #12 25 -10
+pin #13 25 -5
+pin #14 25 0
+pin #15 25 5
+pin #16 25 10
+pin #17 25 15
+pin #18 25 20
+pin #19 20 25
+pin #20 15 25
+pin #21 10 25
+pin #22 5 25
+pin #23 0 25
+pin #24 -5 25
+pin #25 -10 25
+pin #26 -15 25
+pin #27 -20 25
+pin #28 -25 20
+pin #29 -25 15
+pin #30 -25 10
+pin #31 -25 5
+pin #32 -25 0
+pin #33 -25 -5
+pin #34 -25 -10
+pin #35 -25 -15
+pin #36 -25 -20
+def "Procedure name: LOGHIER_LOG_7_GINST"
+label "General instance gate, up to 36 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind GINST5
+simtype 7
+grab -13 -43 13 38
+vector -15 -45 15 -45
+vector -15 40 15 40
+vector 15 40 15 -45
+vector -15 -45 -15 40
+vector 13 -41 11 -43
+vector 11 -43 9 -41
+vector 11 -43 11 -38
+pin #1 -10 -45
+pin #2 -5 -45
+pin #3 0 -45
+pin #4 5 -45
+pin #5 10 -45
+pin #6 15 -40
+pin #7 15 -35
+pin #8 15 -30
+pin #9 15 -25
+pin #10 15 -20
+pin #11 15 -15
+pin #12 15 -10
+pin #13 15 -5
+pin #14 15 0
+pin #15 15 5
+pin #16 15 10
+pin #17 15 15
+pin #18 15 20
+pin #19 15 25
+pin #20 15 30
+pin #21 15 35
+pin #22 10 40
+pin #23 5 40
+pin #24 0 40
+pin #25 -5 40
+pin #26 -10 40
+pin #27 -15 35
+pin #28 -15 30
+pin #29 -15 25
+pin #30 -15 20
+pin #31 -15 15
+pin #32 -15 10
+pin #33 -15 5
+pin #34 -15 0
+pin #35 -15 -5
+pin #36 -15 -10
+pin #37 -15 -15
+pin #38 -15 -20
+pin #39 -15 -25
+pin #40 -15 -30
+pin #41 -15 -35
+pin #42 -15 -40
+def "Procedure name: LOGHIER_LOG_7_GINST"
+label "General instance gate, up to 42 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind GND
+simtype 1
+grab -10 5 10 21
+vector 0 0 0 15
+vector -10 15 10 15
+vector -7 17 7 17
+vector -4 19 4 19
+vector -1 21 1 21
+pin #1 0 0
+def "Signal name: Gnd"
+
+kind INST0
+simtype 16
+group 1
+grab -4 -9 4 9
+vector -5 -10 5 -10
+vector 5 -10 5 10
+vector 5 10 -5 10
+vector -5 10 -5 -10
+vector 2 -9 2 -4
+vector 2 -9 4 -7
+vector 2 -9 0 -7
+pin #1 0 -10
+pin #2 5 -5
+pin #3 5 0
+pin #4 5 5
+pin #5 0 10
+pin #6 -5 5
+pin #7 -5 0
+pin #8 -5 -5
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 8 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INST1
+simtype 16
+group 1
+grab -8 -13 8 13
+vector -10 -15 10 -15
+vector 10 -15 10 15
+vector 10 15 -10 15
+vector -10 15 -10 -15
+vector 6 -13 6 -8
+vector 6 -13 8 -11
+vector 6 -13 4 -11
+pin #1 -5 -15
+pin #2 0 -15
+pin #3 5 -15
+pin #4 10 -10
+pin #5 10 -5
+pin #6 10 0
+pin #7 10 5
+pin #8 10 10
+pin #9 5 15
+pin #10 0 15
+pin #11 -5 15
+pin #12 -10 10
+pin #13 -10 5
+pin #14 -10 0
+pin #15 -10 -5
+pin #16 -10 -10
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 16 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INST2
+simtype 16
+group 1
+grab -13 -13 13 13
+vector -15 -15 -15 15
+vector -15 15 15 15
+vector 15 15 15 -15
+vector 15 -15 -15 -15
+vector 13 -11 11 -13
+vector 11 -13 9 -11
+vector 11 -13 11 -8
+pin #1 -10 -15
+pin #2 -5 -15
+pin #3 0 -15
+pin #4 5 -15
+pin #5 10 -15
+pin #6 15 -10
+pin #7 15 -5
+pin #8 15 0
+pin #9 15 5
+pin #10 15 10
+pin #11 10 15
+pin #12 5 15
+pin #13 0 15
+pin #14 -5 15
+pin #15 -10 15
+pin #16 -15 10
+pin #17 -15 5
+pin #18 -15 0
+pin #19 -15 -5
+pin #20 -15 -10
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 20 pins"
+label ""
+label "[inst-of] [inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INST3
+simtype 16
+group 1
+grab -8 -23 8 23
+vector -10 -25 10 -25
+vector 10 -25 10 25
+vector 10 25 -10 25
+vector -10 25 -10 -25
+vector 6 -23 8 -21
+vector 4 -21 6 -23
+vector 6 -23 6 -18
+pin #1 -5 -25
+pin #2 0 -25
+pin #3 5 -25
+pin #4 10 -20
+pin #5 10 -15
+pin #6 10 -10
+pin #7 10 -5
+pin #8 10 0
+pin #9 10 5
+pin #10 10 10
+pin #11 10 15
+pin #12 10 20
+pin #13 5 25
+pin #14 0 25
+pin #15 -5 25
+pin #16 -10 20
+pin #17 -10 15
+pin #18 -10 10
+pin #19 -10 5
+pin #20 -10 0
+pin #21 -10 -5
+pin #22 -10 -10
+pin #23 -10 -15
+pin #24 -10 -20
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 24 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INST4
+simtype 16
+group 1
+grab -23 -23 23 23
+vector -25 -25 -25 25
+vector -25 25 25 25
+vector 25 25 25 -25
+vector 25 -25 -25 -25
+vector 23 -21 21 -23
+vector 21 -23 19 -21
+vector 21 -23 21 -18
+pin #1 -20 -25
+pin #2 -15 -25
+pin #3 -10 -25
+pin #4 -5 -25
+pin #5 0 -25
+pin #6 5 -25
+pin #7 10 -25
+pin #8 15 -25
+pin #9 20 -25
+pin #10 25 -20
+pin #11 25 -15
+pin #12 25 -10
+pin #13 25 -5
+pin #14 25 0
+pin #15 25 5
+pin #16 25 10
+pin #17 25 15
+pin #18 25 20
+pin #19 20 25
+pin #20 15 25
+pin #21 10 25
+pin #22 5 25
+pin #23 0 25
+pin #24 -5 25
+pin #25 -10 25
+pin #26 -15 25
+pin #27 -20 25
+pin #28 -25 20
+pin #29 -25 15
+pin #30 -25 10
+pin #31 -25 5
+pin #32 -25 0
+pin #33 -25 -5
+pin #34 -25 -10
+pin #35 -25 -15
+pin #36 -25 -20
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 36 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INST5
+simtype 16
+group 1
+grab -13 -43 13 38
+vector -15 -45 15 -45
+vector -15 40 15 40
+vector 15 40 15 -45
+vector -15 -45 -15 40
+vector 13 -41 11 -43
+vector 11 -43 9 -41
+vector 11 -43 11 -38
+pin #1 -10 -45
+pin #2 -5 -45
+pin #3 0 -45
+pin #4 5 -45
+pin #5 10 -45
+pin #6 15 -40
+pin #7 15 -35
+pin #8 15 -30
+pin #9 15 -25
+pin #10 15 -20
+pin #11 15 -15
+pin #12 15 -10
+pin #13 15 -5
+pin #14 15 0
+pin #15 15 5
+pin #16 15 10
+pin #17 15 15
+pin #18 15 20
+pin #19 15 25
+pin #20 15 30
+pin #21 15 35
+pin #22 10 40
+pin #23 5 40
+pin #24 0 40
+pin #25 -5 40
+pin #26 -10 40
+pin #27 -15 35
+pin #28 -15 30
+pin #29 -15 25
+pin #30 -15 20
+pin #31 -15 15
+pin #32 -15 10
+pin #33 -15 5
+pin #34 -15 0
+pin #35 -15 -5
+pin #36 -15 -10
+pin #37 -15 -15
+pin #38 -15 -20
+pin #39 -15 -25
+pin #40 -15 -30
+pin #41 -15 -35
+pin #42 -15 -40
+def "CALL LOGSIMH_LOG_16_INST"
+label "Digital instance gate, up to 42 pins"
+label ""
+label "[inst-of] C:Instance of:"
+label "[disp-inst-name] B:Display name?"
+label ""
+label "[gate-name] C:Instance name:"
+
+kind INV
+simtype 16
+group 1
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 10 0 15 0
+vector -8 0 -15 0
+circle 5 0 10 0
+pin #1 -15 0
+pin #2 15 0
+def "#2 = NOT FIX #1"
+
+kind INV4
+simtype 16
+group 1
+grab -8 -17 8 17
+vector 4 -15 10 -15
+vector 4 15 10 15
+vector 4 -5 10 -5
+vector 4 5 10 5
+vector -10 -15 -5 -15
+vector -10 -5 -5 -5
+vector -10 5 -5 5
+vector -10 15 -5 15
+vector -5 -19 -5 -11
+vector -5 -11 0 -15
+vector 0 -15 -5 -19
+vector -5 -9 -5 -1
+vector -5 -1 0 -5
+vector 0 -5 -5 -9
+vector -5 1 -5 9
+vector -5 9 0 5
+vector 0 5 -5 1
+vector -5 11 -5 19
+vector -5 19 0 15
+vector 0 15 -5 11
+circle 0 -15 4 -15
+circle 0 -5 4 -5
+circle 0 5 4 5
+circle 0 15 4 15
+pin #1 -10 -15
+pin #2 10 -15
+pin #3 -10 -5
+pin #4 10 -5
+pin #5 -10 5
+pin #6 10 5
+pin #7 -10 15
+pin #8 10 15
+def "#2 = NOT #1"
+def "#4 = NOT #3"
+def "#6 = NOT #5"
+def "#8 = NOT #7"
+
+kind INV4A
+simtype 16
+group 1
+grab -8 -17 18 2
+vector 4 -15 20 -15
+vector 15 0 20 0
+vector 15 -10 20 -10
+vector 4 -5 20 -5
+vector -10 -15 -5 -15
+vector -10 -10 6 -10
+vector -10 -5 -5 -5
+vector -10 0 6 0
+vector -5 -19 -5 -11
+vector -5 -11 0 -15
+vector 0 -15 -5 -19
+vector 6 -14 6 -6
+vector 6 -6 11 -10
+vector 11 -10 6 -14
+vector -5 -9 -5 -1
+vector -5 -1 0 -5
+vector 0 -5 -5 -9
+vector 11 0 6 -4
+circle 0 -15 4 -15
+circle 0 -5 4 -5
+vector 6 -4 6 4
+vector 6 4 11 0
+circle 11 -10 15 -10
+circle 11 0 15 0
+pin #1 -10 -15
+pin #2 20 -15
+pin #3 -10 -10
+pin #4 20 -10
+pin #5 -10 -5
+pin #6 20 -5
+pin #7 -10 0
+pin #8 20 0
+def "#2 = NOT #1"
+def "#4 = NOT #3"
+def "#6 = NOT #5"
+def "#8 = NOT #7"
+
+kind INVX
+simtype 16
+group 1
+grab -10 -12 8 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector -13 0 -15 0
+vector 10 0 5 0
+circle -8 0 -13 0
+pin #1 -15 0
+pin #2 10 0
+def "#2 = NOT FIX #1"
+
+kind JKNEG
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector 0 -20 0 -25
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector -10 10 -20 10
+vector 10 10 20 10
+vector -2 -12 -4 -12
+vector -6 5 -6 13
+vector -6 9 -2 5
+vector -6 9 -2 13
+vector -3 -4 -3 -12
+vector -3 -4 -6 -5
+vector -15 0 -20 0
+vector 6 -12 7 -12
+vector 7 -12 8 -11
+vector 8 -11 8 -8
+vector 8 -8 7 -7
+vector 7 -7 6 -7
+vector 6 -7 5 -8
+vector 5 -8 5 -11
+vector 5 -11 6 -12
+vector 7 -8 8 -7
+vector 7 8 6 8
+vector 6 8 5 9
+vector 5 9 5 12
+vector 5 12 6 13
+vector 6 13 7 13
+vector 7 13 8 12
+vector 8 12 8 9
+vector 8 9 7 8
+vector 7 12 8 13
+vector 5 6 8 6
+circle 0 -15 0 -20
+circle 0 15 0 20
+circle -10 0 -15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 -10
+pin #5 20 10
+pin #6 0 -25
+pin #7 0 25
+def "IF FALL #2"
+def "IF #1 XOR #3"
+def "A = ZERO"
+def "END"
+def "IF #1"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = ONE"
+def "END"
+def "IFZERO #7"
+def "A = ZERO"
+def "END"
+def "#4 = A"
+def "#5 = NOT A"
+label "Negative edge triggered J-K flip-flop, with asynchronous preset and clear."
+
+kind JKPOS
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 -6 -4 0
+vector -4 0 -10 6
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector -10 0 -20 0
+vector -10 10 -20 10
+vector 10 10 20 10
+vector -2 -12 -4 -12
+vector -3 -12 -3 -6
+vector -3 -6 -5 -4
+vector -5 -4 -6 -5
+vector -6 -5 -7 -6
+vector -6 5 -6 13
+vector -6 9 -2 5
+vector -6 9 -2 13
+vector 0 -20 0 -25
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 8 6 8
+vector 6 8 5 9
+vector 5 9 5 12
+vector 5 12 6 13
+vector 6 13 7 13
+vector 7 13 8 12
+vector 8 12 8 9
+vector 8 9 7 8
+vector 5 6 8 6
+vector 7 12 8 13
+circle 0 -15 0 -20
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 -10
+pin #5 20 10
+pin #6 0 -25
+pin #7 0 25
+def "IF RISE #2"
+def "IF #1 XOR #3"
+def "A = ZERO"
+def "END"
+def "IF #1"
+def "A = NOT A"
+def "END"
+def "END"
+def "IFZERO #6"
+def "A = ONE"
+def "END"
+def "IFZERO #7"
+def "A = ZERO"
+def "END"
+def "#4 = A"
+def "#5 = NOT A"
+label "Positive edge triggered J-K flip-flop, with asynchronous preset and clear."
+
+kind JUMPER
+grab -7 -3 9 8
+vector 1 9 -1 9
+vector -2 5 -1 9
+vector -2 0 -2 5
+vector -1 10 1 10
+vector -1 11 1 11
+vector 4 -6 6 -6
+vector 4 -5 6 -5
+vector 4 -4 6 -4
+vector 4 -5 0 -3
+vector 0 -3 -2 0
+pin #1 5 -5
+pin #2 0 10
+connect 1 2
+
+kind JUMPER2
+grab -4 -6 4 2
+vector -4 -1 -6 -1
+vector -6 0 -4 0
+vector -6 1 -4 1
+vector 4 -1 6 -1
+vector 4 0 6 0
+vector 4 1 6 1
+vector -4 -1 -3 -3
+vector -3 -3 -2 -4
+vector -2 -4 2 -4
+vector 2 -4 3 -3
+vector 3 -3 4 -1
+pin #1 5 0
+pin #2 -5 0
+connect 1 2
+
+kind JUMPER3
+grab -4 -6 4 2
+vector -4 -1 -6 -1
+vector -6 1 -4 1
+vector 4 -1 6 -1
+vector -6 0 6 0
+vector 4 1 6 1
+pin #1 5 0
+pin #2 -5 0
+connect 1 2
+
+kind JUMPER4
+grab -4 -2 4 2
+vector -5 0 6 0
+vector 4 -1 6 -1
+vector 4 1 6 1
+pin #1 -5 0
+pin #2 5 0
+connect 1 2
+
+kind JUMPER5
+grab -4 -2 4 2
+vector -6 -1 -4 -1
+vector -4 1 -6 1
+vector -6 0 5 0
+pin #1 -5 0
+pin #2 5 0
+connect 1 2
+
+kind JUMPER6
+grab -4 -4 4 1
+vector -5 0 -3 -2
+vector -3 -2 3 -2
+vector 3 -2 5 0
+pin #1 -5 0
+pin #2 5 0
+connect 1 2
+
+kind KEYPAD
+simtype 16
+group 1
+grab -23 -23 19 19
+vector 18 5 25 5
+vector 18 -5 25 -5
+vector 18 -15 25 -15
+vector 5 18 5 25
+vector -22 -22 -22 18
+vector -22 18 18 18
+vector 18 18 18 -22
+vector -22 -22 18 -22
+vector 18 15 25 15
+vector -19 -20 -15 -20
+vector -15 -20 -15 -14
+vector -9 -20 -5 -20
+vector -5 -20 -5 -14
+vector -5 -14 -9 -14
+vector -9 -14 -9 -20
+vector -9 -17 -5 -17
+vector 1 -14 5 -14
+vector 5 -14 5 -20
+vector 5 -20 1 -20
+vector 1 -20 1 -17
+vector 1 -17 5 -17
+vector 11 -14 11 -20
+vector 11 -20 15 -20
+vector 11 -17 14 -17
+vector -16 -10 -19 -6
+vector -19 -6 -15 -6
+vector -15 -10 -15 -4
+vector -5 -10 -9 -10
+vector -9 -10 -9 -7
+vector -9 -7 -5 -7
+vector -5 -7 -5 -4
+vector -5 -4 -9 -4
+vector 5 -10 1 -10
+vector 1 -10 1 -4
+vector 1 -4 5 -6
+vector 5 -6 2 -8
+vector 11 -4 15 -4
+vector 11 -4 11 -10
+vector 11 -10 15 -10
+vector 14 -7 11 -7
+vector -17 0 -17 6
+vector -9 0 -5 1
+vector -5 1 -9 6
+vector -9 6 -5 6
+vector 1 0 5 0
+vector 5 0 5 6
+vector 5 6 1 6
+vector 5 3 2 3
+vector 15 0 15 6
+vector 15 6 12 4
+vector 12 4 14 3
+vector -19 10 -15 10
+vector -15 10 -15 16
+vector -15 16 -19 16
+vector -19 16 -19 10
+vector -9 16 -7 10
+vector -7 10 -5 16
+vector -8 14 -6 14
+vector 1 10 1 16
+vector 1 16 4 14
+vector 4 14 2 13
+vector 14 10 11 13
+vector 11 13 14 16
+pin #1 25 -15
+pin #2 25 -5
+pin #3 25 5
+pin #4 25 15
+pin #5 5 25
+def "CALL LOGSIM_LOG_16_KEYPAD"
+def "CALL LOGSIM_LOG_16_PULSE"
+def "#1 = K"
+def "#2 = L"
+def "#3 = M"
+def "#4 = N"
+def "#5 = P"
+
+kind LATCH
+simtype 16
+group 1
+grab -12 -20 12 20
+vector -10 -18 -10 18
+vector -10 18 10 18
+vector 10 18 10 -18
+vector 10 -18 -10 -18
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector 10 -10 20 -10
+vector 10 10 20 10
+vector -7 -14 -7 -6
+vector -7 -6 -3 -6
+vector -3 -6 -2 -8
+vector -2 -8 -2 -12
+vector -2 -12 -3 -14
+vector -3 -14 -7 -14
+vector -7 6 -7 14
+vector -7 14 -3 14
+vector 6 -12 7 -12
+vector 7 -12 8 -11
+vector 8 -11 8 -8
+vector 8 -8 7 -7
+vector 7 -7 6 -7
+vector 6 -7 5 -8
+vector 5 -8 5 -11
+vector 5 -11 6 -12
+vector 7 -8 8 -7
+vector 7 8 6 8
+vector 6 8 5 9
+vector 5 9 5 12
+vector 5 12 6 13
+vector 6 13 7 13
+vector 7 13 8 12
+vector 8 12 8 9
+vector 8 9 7 8
+vector 7 12 8 13
+vector 5 6 8 6
+pin #1 -20 -10
+pin #2 -20 10
+pin #3 20 -10
+pin #4 20 10
+def "IF #2"
+def "A = #1"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Latch.  Q follows D when L=1, Q holds when L=0."
+
+kind LED
+simtype 16
+group 1
+grab -4 -4 4 4
+vector -5 -5 5 -5
+vector 5 -5 5 5
+vector 5 5 -5 5
+vector -5 5 -5 -5
+vector -2 -3 2 -3
+vector 3 -2 3 2
+vector 2 3 -2 3
+vector -3 2 -3 -2
+pin #1 -5 0
+pin #2 -5 -5
+pin #3 0 -5
+pin #4 5 -5
+pin #5 5 0
+pin #6 5 5
+pin #7 0 5
+pin #8 -5 5
+connect 1 2 3 4 5 6 7 8
+def "CALL LOGSIM_LOG_16_LEDGATE"
+
+kind LED2
+simtype 16
+group 1
+grab -4 -4 4 4
+vector -5 -5 5 -5
+vector 5 -5 5 5
+vector 5 5 -5 5
+vector -5 5 -5 -5
+vector -2 -3 2 -3
+vector 3 -2 3 2
+vector 2 3 -2 3
+vector -3 2 -3 -2
+pin #1 -5 0
+pin #2 -5 -5
+pin #3 0 -5
+pin #4 5 -5
+pin #5 5 0
+pin #6 5 5
+pin #7 0 5
+pin #8 -5 5
+def "CALL LOGSIM_LOG_16_LEDGATE2"
+
+kind LED3
+simtype 16
+group 1
+grab -4 -4 4 4
+vector -2 -3 2 -3
+vector 3 -2 3 2
+vector 2 3 -2 3
+vector -3 2 -3 -2
+vector -2 -3 -3 -2
+vector 2 -3 3 -2
+vector 3 2 2 3
+vector -2 3 -3 2
+pin #1 0 0
+def "CALL LOGSIM_LOG_16_LEDGATE"
+
+kind NAND
+simtype 16
+group 1
+grab -12 -12 15 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NAND #2"
+
+kind NAND3
+simtype 16
+group 1
+grab -12 -17 15 17
+vector -10 -15 -10 15
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 10 7 10 7
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NAND #2 NAND #3"
+
+kind NAND4
+simtype 16
+group 1
+grab -12 -22 18 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+circle 13 0 18 0
+vector 18 0 25 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 NAND #2 NAND #3 NAND #4"
+
+kind NAND8
+simtype 16
+group 1
+grab -12 -22 17 25
+vector -10 23 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 8 18
+vector 8 18 2 23
+vector 2 23 -10 23
+vector -10 -15 -20 -15
+vector -10 5 -20 5
+vector -10 -5 -20 -5
+vector -10 15 -20 15
+vector 25 0 18 0
+vector -10 20 -20 20
+vector -20 10 -10 10
+vector -20 0 -10 0
+vector -20 -10 -10 -10
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -10
+pin #3 -20 -5
+pin #4 -20 0
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = #1 AND #2 AND #3 AND #4"
+def "#9 = #5 NAND #6 NAND #7 NAND #8 NAND A"
+
+kind NANDX
+simtype 16
+group 1
+grab -13 -12 11 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -10 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -10 -10
+vector -10 -10 -8 -5
+vector -8 -5 -8 5
+vector -8 5 -10 10
+vector -13 -5 -20 -5
+vector -13 5 -20 5
+vector 10 0 20 0
+circle -8 -5 -13 -5
+circle -8 5 -13 5
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NAND #2"
+
+kind NANDX3
+simtype 16
+group 1
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector 4 13 6 10
+vector -1 -15 -11 -15
+vector 10 0 6 -10
+vector 10 0 6 10
+vector 10 0 20 0
+vector -20 0 -13 0
+vector -20 -10 -14 -10
+vector -20 10 -14 10
+circle -9 -10 -14 -10
+circle -13 0 -8 0
+circle -9 10 -14 10
+bezier -11 -15 -8 -9 -8 -5 -8 0
+bezier -11 15 -8 9 -8 5 -8 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NAND #2 NAND #3"
+
+kind NANDX4
+simtype 16
+group 1
+grab -12 -22 17 22
+vector 1 -20 6 -17
+vector 6 -17 10 -10
+vector 13 0 10 10
+vector 10 10 6 17
+vector 6 17 1 20
+vector 1 20 -10 20
+vector 1 -20 -10 -20
+vector 10 -10 13 0
+vector -10 -20 -7 -11
+vector -7 -11 -6 -4
+vector -6 -4 -6 4
+vector -6 4 -7 11
+vector -7 11 -10 20
+vector 13 0 25 0
+vector -20 -5 -11 -5
+vector -20 -15 -13 -15
+vector -20 5 -11 5
+vector -20 15 -13 15
+circle -8 -15 -13 -15
+circle -6 -5 -11 -5
+circle -6 5 -11 5
+circle -8 15 -13 15
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 NAND #2 NAND #3 NAND #4"
+
+kind NOR
+simtype 16
+group 1
+grab -13 -12 15 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NOR #2"
+
+kind NOR3
+simtype 16
+group 1
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector -8 -5 -8 5
+vector -8 5 -11 15
+vector 4 13 6 10
+vector -1 -15 -11 -15
+vector -11 -15 -8 -5
+vector -8 0 -20 0
+vector -10 -10 -20 -10
+vector -20 10 -10 10
+vector 10 0 6 -10
+vector 10 0 6 10
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NOR #2 NOR #3"
+
+kind NOR4
+simtype 16
+group 1
+grab -12 -22 17 22
+vector 1 -20 6 -17
+vector 6 -17 10 -10
+vector 13 0 10 10
+vector 10 10 6 17
+vector 6 17 1 20
+vector 1 20 -10 20
+vector 1 -20 -10 -20
+vector -20 15 -8 15
+vector -20 -15 -8 -15
+vector 10 -10 13 0
+vector -10 -20 -7 -11
+vector -7 -11 -6 -4
+vector -6 -4 -6 4
+vector -6 4 -7 11
+vector -7 11 -10 20
+vector -20 -5 -6 -5
+vector -20 5 -6 5
+vector 18 0 25 0
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 NOR #2 NOR #3 NOR #4"
+
+kind NOR8
+simtype 16
+group 1
+grab -12 -22 17 25
+vector 0 -20 7 -16
+vector 7 -16 11 -8
+vector 11 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 11 8
+vector 11 8 7 18
+vector 7 18 0 23
+vector 0 23 -10 23
+vector -8 -15 -20 -15
+vector -6 5 -20 5
+vector -6 -5 -20 -5
+vector -8 15 -20 15
+vector 25 0 18 0
+vector -10 20 -20 20
+vector -20 10 -7 10
+vector -20 0 -6 0
+vector -20 -10 -7 -10
+vector 0 -20 -10 -20
+vector -10 -20 -7 -12
+vector -7 -12 -6 -3
+vector -6 -3 -6 3
+vector -6 3 -7 12
+vector -7 12 -10 23
+circle 13 0 18 0
+pin #1 -20 -15
+pin #2 -20 -10
+pin #3 -20 -5
+pin #4 -20 0
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = #1 OR #2 OR #3 OR #4"
+def "#9 = #5 NOR #6 NOR #7 NOR #8 NOR A"
+
+kind NORX
+simtype 16
+group 1
+grab -14 -12 11 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -20 -5 -15 -5
+vector -20 5 -15 5
+vector 10 0 20 0
+circle -10 -5 -15 -5
+circle -10 5 -15 5
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 NOR #2"
+
+kind NORX3
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -15 0 -20 0
+vector -15 -10 -20 -10
+vector -15 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 20 0 10 0
+circle -10 -10 -15 -10
+circle -10 0 -15 0
+circle -10 10 -15 10
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 NOR #2 NOR #3"
+
+kind NORX4
+simtype 16
+group 1
+grab -12 -22 15 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -15 -15 -20 -15
+vector -15 5 -20 5
+vector -15 -5 -20 -5
+vector -15 15 -20 15
+vector 13 0 25 0
+circle -15 -15 -10 -15
+circle -15 -5 -10 -5
+circle -15 5 -10 5
+circle -15 15 -10 15
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 NOR #2 NOR #3 NOR #4"
+
+kind OLDGND
+simtype 1
+grab -9 -2 9 12
+vector 0 -10 0 0
+vector -7 0 7 0
+vector -4 3 4 3
+vector -2 6 2 6
+vector 0 9 0 9
+pin #1 0 -10
+def "Signal name: Gnd"
+label "Ground (0 volts)."
+
+kind OLDTIME
+simtype 2
+grab -18 -18 18 18
+vector -6 -20 6 -20
+vector 6 -20 15 -15
+vector 15 -15 20 -6
+vector 20 -6 20 6
+vector 20 6 15 15
+vector 15 15 6 20
+vector 6 20 -6 20
+vector -6 20 -15 15
+vector -15 15 -20 6
+vector -20 6 -20 -6
+vector -20 -6 -15 -15
+vector -15 -15 -6 -20
+vector 0 -15 0 -13
+vector 0 0 0 0
+vector 0 14 0 14
+vector 8 -12 8 -12
+vector 14 -5 14 -5
+vector 14 5 14 5
+vector -8 12 -8 12
+vector -14 5 -14 5
+vector -14 -5 -14 -5
+vector -8 -12 -8 -12
+vector 7 7 7 13
+vector 7 13 13 13
+vector 13 13 13 7
+vector 13 7 7 7
+flags NOFLIP
+label "Simulation Status"
+label ""
+label "BT:Display current time?"
+label "BT:Display timestep?"
+label "BF:Display performance?"
+label "BF:Display response speed?"
+label "BF:Display real clock?"
+label "BF:Display stopwatch?"
+
+kind OR
+simtype 16
+group 1
+grab -13 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 OR #2"
+
+kind OR3
+simtype 16
+group 1
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 15
+vector 6 -10 10 0
+vector 4 13 6 10
+vector 6 10 10 0
+vector -1 -15 -11 -15
+vector -11 -15 -8 -5
+vector -8 0 -20 0
+vector -10 -10 -20 -10
+vector -20 10 -10 10
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 OR #2 OR #3"
+
+kind OR4
+simtype 16
+group 1
+grab -12 -22 15 22
+vector 1 -20 6 -17
+vector 6 -17 10 -10
+vector 13 0 10 10
+vector 10 10 6 17
+vector 6 17 1 20
+vector 1 20 -10 20
+vector 13 0 25 0
+vector 1 -20 -10 -20
+vector -20 15 -8 15
+vector -20 -15 -8 -15
+vector 10 -10 13 0
+vector -10 -20 -7 -11
+vector -7 -11 -6 -4
+vector -6 -4 -6 4
+vector -6 4 -7 11
+vector -7 11 -10 20
+vector -20 -5 -6 -5
+vector -20 5 -6 5
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 OR #2 OR #3 OR #4"
+
+kind OR8
+simtype 16
+group 1
+grab -12 -22 17 25
+vector 1 -20 7 -17
+vector 7 -17 13 -8
+vector 16 0 13 9
+vector 13 9 7 19
+vector 7 19 1 23
+vector 1 23 -10 23
+vector -8 -15 -20 -15
+vector -6 5 -20 5
+vector -6 -5 -20 -5
+vector -8 15 -20 15
+vector 25 0 16 0
+vector -9 20 -20 20
+vector -20 10 -7 10
+vector -20 0 -6 0
+vector -20 -10 -7 -10
+vector 1 -20 -10 -20
+vector -10 -20 -7 -12
+vector -7 -12 -6 -3
+vector -6 -3 -6 3
+vector -6 3 -7 12
+vector -7 12 -10 23
+vector 13 -8 16 0
+pin #1 -20 -15
+pin #2 -20 -10
+pin #3 -20 -5
+pin #4 -20 0
+pin #5 -20 5
+pin #6 -20 10
+pin #7 -20 15
+pin #8 -20 20
+pin #9 25 0
+def "A = #1 OR #2 OR #3 OR #4"
+def "#9 = #5 OR #6 OR #7 OR #8 OR A"
+
+kind ORX
+simtype 16
+group 1
+grab -14 -12 15 12
+vector -10 -10 -10 10
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector 15 0 20 0
+vector -20 -5 -15 -5
+vector -20 5 -15 5
+circle -15 -5 -10 -5
+circle -15 5 -10 5
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 OR #2"
+
+kind ORX3
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -15 0 -20 0
+vector -15 -10 -20 -10
+vector -15 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 20 0 15 0
+circle -15 -10 -10 -10
+circle -15 0 -10 0
+circle -15 10 -10 10
+circle 15 0 10 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "#4 = #1 OR #2 OR #3"
+
+kind ORX4
+simtype 16
+group 1
+grab -12 -22 15 22
+vector -10 20 -10 -20
+vector -10 -20 4 -20
+vector 4 -20 9 -16
+vector 9 -16 12 -8
+vector 12 -8 13 -2
+vector 13 -2 13 2
+vector 13 2 12 8
+vector 12 8 9 16
+vector 9 16 4 20
+vector 4 20 -10 20
+vector -15 -15 -20 -15
+vector -15 5 -20 5
+vector -15 -5 -20 -5
+vector -15 15 -20 15
+vector 18 0 25 0
+circle 18 0 13 0
+circle -15 -15 -10 -15
+circle -15 -5 -10 -5
+circle -15 5 -10 5
+circle -15 15 -10 15
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 25 0
+def "#5 = #1 OR #2 OR #3 OR #4"
+
+kind PULSE
+simtype 16
+group 1
+grab -7 -7 7 7
+vector -5 -5 -5 5
+vector -5 5 6 5
+vector 6 5 11 0
+vector 11 0 6 -5
+vector 6 -5 -5 -5
+vector 15 0 10 5
+vector 10 5 6 5
+vector 2 -3 -2 -3
+vector -3 -2 -3 2
+vector -2 3 2 3
+vector 3 -2 3 2
+vector 6 -5 10 -5
+vector 10 -5 15 0
+pin #1 15 0
+def "CALL LOGSIM_LOG_16_SWITCH"
+def "CALL LOGSIM_LOG_16_PULSE"
+def "#1 = P"
+
+kind SCOPE
+simtype 16
+group 1
+grab -14 -9 19 6
+vector -15 7 -15 -10
+vector -15 -10 20 -10
+vector 20 -10 20 7
+vector 20 7 -15 7
+vector 17 3 17 4
+vector 17 4 16 4
+vector 16 -7 17 -7
+vector 17 -7 17 -6
+vector -6 -7 -7 -7
+vector -7 -7 -7 -6
+vector -7 3 -7 4
+vector -7 4 -6 4
+vector -13 -7 -13 -2
+vector -13 -2 -11 -2
+vector -11 -2 -10 -3
+vector -10 -3 -10 -6
+vector -10 -6 -11 -7
+vector -11 -7 -13 -7
+vector -15 -5 -20 -5
+vector -10 7 -10 10
+vector -11 2 -11 6
+vector -13 2 -9 2
+pin #1 -20 -5
+pin #2 -10 10
+def "CALL LOGSIM_LOG_16_SCOPE"
+
+kind SHIFT
+simtype 16
+group 1
+grab -14 -22 14 20
+vector -12 -20 -12 18
+vector -12 18 12 18
+vector 12 18 12 -20
+vector 12 -20 -12 -20
+vector -12 -15 -20 -15
+vector -12 -5 -20 -5
+vector -12 15 -20 15
+vector 12 15 20 15
+vector 12 5 20 5
+vector -4 18 0 11
+vector 0 11 4 18
+vector 5 -20 5 -25
+vector -12 5 -20 5
+vector 12 -15 20 -15
+vector 12 -5 20 -5
+vector 9 -9 9 9
+vector 9 9 6 6
+vector -7 -18 -7 -13
+vector -7 -13 -4 -14
+vector -4 -14 -4 -17
+vector -4 -17 -7 -18
+vector 3 -14 4 -18
+vector 4 -18 5 -16
+vector 5 -16 6 -18
+vector 6 -18 7 -14
+vector -5 -20 -5 -25
+vector 0 23 0 25
+circle 0 18 0 23
+pin #1 -20 -15
+pin #2 -20 -5
+pin #3 -20 5
+pin #4 -20 15
+pin #5 20 -15
+pin #6 20 -5
+pin #7 20 5
+pin #8 20 15
+pin #9 -5 -25
+pin #10 5 -25
+pin #11 0 25
+def "IF FALL #11"
+def "IFONE #10"
+def "D = #4"
+def "C = #3"
+def "B = #2"
+def "A = #1"
+def "END"
+def "IF NOT #10"
+def "D = C"
+def "C = B"
+def "B = A"
+def "A = #9"
+def "END"
+def "END"
+def "#5 = A"
+def "#6 = B"
+def "#7 = C"
+def "#8 = D"
+label "Shift Register"
+label ""
+label "If M=1, loads."
+label "If M=0, shifts in direction of arrow."
+
+kind SRAM8K
+simtype 16
+group 1
+grab -21 -36 26 36
+vector -20 -35 -20 35
+vector -25 0 -20 0
+vector -20 5 -25 5
+vector -20 10 -25 10
+vector -20 15 -25 15
+vector -20 20 -25 20
+vector -20 25 -25 25
+vector -20 30 -25 30
+vector -20 35 25 35
+vector 25 35 25 -35
+vector 20 35 20 40
+vector 15 35 15 40
+vector 10 35 10 40
+vector 5 35 5 40
+vector 0 35 0 40
+vector -5 35 -5 40
+vector -10 35 -10 40
+vector -15 35 -15 40
+vector -20 -35 25 -35
+vector 3 -27 3 -33
+vector 3 -33 6 -33
+vector 6 -33 7 -32
+vector 7 -32 7 -31
+vector 7 -31 6 -30
+vector 6 -30 3 -30
+vector 4 -30 7 -27
+vector 12 -31 12 -29
+vector 12 -29 13 -28
+vector 13 -28 14 -28
+vector 14 -28 15 -29
+vector 15 -29 15 -31
+vector 15 -31 14 -32
+vector 14 -32 13 -32
+vector 13 -32 12 -31
+vector 20 -32 17 -32
+vector 17 -32 17 -28
+vector 17 -28 20 -28
+vector 19 -30 17 -30
+vector -14 -35 -10 -31
+vector -10 -31 -6 -35
+vector -10 -35 -10 -40
+vector 5 -35 5 -40
+vector 15 -35 15 -40
+vector -20 -5 -25 -5
+vector -20 -10 -25 -10
+vector -20 -15 -25 -15
+vector -20 -20 -25 -20
+vector -20 -25 -25 -25
+vector -20 -30 -25 -30
+pin #1 -25 -30
+pin #2 -25 -25
+pin #3 -25 -20
+pin #4 -25 -15
+pin #5 -25 -10
+pin #6 -25 -5
+pin #7 -25 0
+pin #8 -25 5
+pin #9 -25 10
+pin #10 -25 15
+pin #11 -25 20
+pin #12 -25 25
+pin #13 -25 30
+pin #14 -15 40
+pin #15 -10 40
+pin #16 -5 40
+pin #17 0 40
+pin #18 5 40
+pin #19 10 40
+pin #20 15 40
+pin #21 20 40
+pin #22 -10 -40
+pin #23 5 -40
+pin #24 15 -40
+def "P = #13"
+def "O = #12"
+def "N = #11"
+def "M = #10"
+def "L = #9"
+def "K = #8"
+def "J = #7"
+def "I = #6"
+def "H = #5"
+def "G = #4"
+def "F = #3"
+def "E = #2"
+def "D = #1"
+def "C = #22"
+def "B = #23"
+def "A = #24"
+def "CALL MYGATES_SRAM8K"
+def ""
+label "8K by 8 bit RAM (or ROM)."
+label ""
+label "VRead-only,Deposit,Deposit Next:Mode:"
+label ""
+label "H0000:Address (hex):"
+label "I0:Address (dec):"
+label ""
+label "2H0:Data (hex):"
+label "I0:Data (dec):"
+label ""
+label "BN:Save in circuit file?"
+label "C:File name to load:"
+label "C:File name to save:"
+label "I0:First address to save:"
+label "I8191:Last address to save:"
+
+kind SW2
+grab -8 -2 8 8
+vector -1 10 1 10
+vector -1 11 1 11
+vector -6 -6 -4 -6
+vector -6 -5 -4 -5
+vector -6 -4 -4 -4
+vector 4 -6 6 -6
+vector 4 -5 6 -5
+vector 4 -4 6 -4
+vector 0 9 -4 -4
+vector -4 -4 -6 2
+vector -4 -4 0 -1
+vector -1 9 1 9
+pin #1 0 10
+pin #2 -5 -5
+pin #3 5 -5
+connect 1 2
+flags TOGGLE VISIBLE
+
+kind SW4
+grab -18 -7 18 3
+vector -6 4 -4 4
+vector -6 5 -4 5
+vector -6 6 -4 6
+vector 4 4 6 4
+vector 4 5 6 5
+vector 4 6 6 6
+vector -16 4 -14 4
+vector -16 5 -14 5
+vector -16 6 -14 6
+vector 14 4 16 4
+vector 14 5 16 5
+vector 14 6 16 6
+vector 9 -11 11 -11
+vector 9 -10 11 -10
+vector 9 -9 11 -9
+vector -11 -11 -9 -11
+vector -11 -10 -9 -10
+vector -11 -9 -9 -9
+vector 10 -9 6 4
+vector 6 4 10 1
+vector 6 4 4 -1
+vector -10 -9 -14 4
+vector -14 4 -10 1
+vector -14 4 -16 -2
+vector -9 -3 -7 -3
+vector -4 -3 -2 -3
+vector 1 -3 3 -3
+pin #1 -10 -10
+pin #2 -15 5
+pin #3 -5 5
+pin #4 10 -10
+pin #5 5 5
+pin #6 15 5
+connect 1 2
+connect 4 5
+flags TOGGLE
+
+kind SWCOMPL
+simtype 16
+group 1
+grab -9 -9 12 9
+vector -8 -8 -8 8
+vector -8 8 8 8
+vector 8 -8 -8 -8
+vector -2 -3 2 -3
+vector -3 -2 -3 2
+vector -2 3 2 3
+vector 3 -2 3 2
+vector 8 -8 8 8
+vector 15 -5 8 -5
+circle 8 5 13 5
+vector 13 5 15 5
+pin #1 15 -5
+pin #2 15 5
+def "E = F"
+def "F = G"
+def "G = H"
+def "H = P"
+def "CALL LOGSIM_LOG_16_SWITCH"
+def "#1 = P AND H AND G AND F AND E"
+def "#2 = P NOR H NOR G NOR F NOR E"
+
+kind SWITCH
+simtype 16
+group 1
+grab -7 -7 7 7
+vector -5 -5 -5 5
+vector -5 5 5 5
+vector 5 5 10 0
+vector 10 0 5 -5
+vector 5 -5 -5 -5
+vector -2 -3 2 -3
+vector -3 -2 -3 2
+vector -2 3 2 3
+vector 3 -2 3 2
+pin #1 10 0
+def "CALL LOGSIM_LOG_16_SWITCH"
+def "#1 = P"
+
+kind SWITCH2
+simtype 16
+group 1
+grab -4 -2 7 2
+vector -5 -2 -5 2
+vector 10 0 7 -3
+vector 10 0 7 3
+vector 7 -3 -4 -3
+vector -4 -3 -5 -2
+vector 7 3 -4 3
+vector -4 3 -5 2
+ellipse -3 -3 3 3
+pin #1 10 0
+def "CALL LOGSIM_LOG_16_SWITCH"
+def "#1 = P"
+
+kind TIE
+simtype 16
+group 1
+grab -12 -16 12 12
+vector 2 -14 -2 -14
+vector -2 -14 -2 -11
+vector -2 -11 1 -11
+vector 1 -11 2 -9
+vector 2 -9 2 -8
+vector 2 -8 1 -7
+vector 1 -7 -1 -7
+vector -1 -7 -2 -8
+vector 4 -14 6 -7
+vector 6 -7 8 -14
+vector -8 -11 -4 -11
+vector -6 -13 -6 -9
+vector -8 -5 8 -5
+vector 0 -5 0 -1
+vector 0 -1 -2 0
+vector -2 0 2 2
+vector 2 2 -2 4
+vector -2 4 2 6
+vector 2 6 -2 8
+vector -2 8 2 10
+vector 2 10 0 11
+vector 0 11 0 15
+pin #1 0 15
+def "#1 = PULLUP"
+
+kind TIEGND
+simtype 16
+group 1
+grab -9 -12 9 17
+vector -7 5 7 5
+vector -4 8 4 8
+vector -2 11 2 11
+vector 0 14 0 14
+vector 0 -15 0 -11
+vector 0 -11 -2 -10
+vector -2 -10 2 -8
+vector 2 -8 -2 -6
+vector -2 -6 2 -4
+vector 2 -4 -2 -2
+vector -2 -2 2 0
+vector 2 0 0 1
+vector 0 1 0 5
+pin #1 0 -15
+def "#1 = PULLDN"
+label "Ground (0 volts)."
+
+kind TIME
+simtype 7
+grab -18 -18 18 18
+vector 0 -15 0 -13
+vector 0 0 0 0
+vector 0 14 0 14
+vector 8 -12 8 -12
+vector 14 -5 14 -5
+vector 14 5 14 5
+vector -8 12 -8 12
+vector -14 5 -14 5
+vector -14 -5 -14 -5
+vector -8 -12 -8 -12
+vector 7 7 7 13
+vector 7 13 13 13
+vector 13 13 13 7
+vector 13 7 7 7
+circle -20 -20 20 20
+flags NOFLIP
+def "Procedure name: LOGCOM_LOG_7_TIME"
+label "Simulation Status"
+label ""
+label "BT:Display current time?"
+label "BT:Display timestep?"
+label "BF:Display performance?"
+label "BF:Display response speed?"
+label "BF:Display real clock?"
+label "BF:Display stopwatch?"
+
+kind TNEG
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector 0 -20 0 -25
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -15 5 -20 5
+vector -10 -1 -4 5
+vector -4 5 -10 11
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -8 -12 -4 -12
+vector -6 -12 -6 -7
+circle -10 5 -15 5
+circle 0 15 0 20
+circle 0 -15 0 -20
+pin #1 -20 -10
+pin #2 -20 5
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+def "IF FALL #2"
+def "A = A XOR #1"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Negative edge triggered Toggle flip-flop, with asynchronous preset, clear."
+
+kind TO
+simtype 1
+grab -23 -7 -6 7
+vector -23 -5 -18 0
+vector -18 0 -23 5
+vector -25 0 -18 0
+pin #1 -25 0
+flags NAMED NRIGHT
+def "Signal name: "
+
+kind TPOS
+simtype 16
+group 1
+grab -12 -17 12 17
+vector -10 -15 -10 15
+vector -10 15 10 15
+vector 10 15 10 -15
+vector 10 -15 -10 -15
+vector -10 -10 -20 -10
+vector -10 5 -20 5
+vector 0 20 0 25
+vector 10 -10 20 -10
+vector 10 5 20 5
+vector -10 -1 -4 5
+vector -4 5 -10 11
+vector 0 -20 0 -25
+vector 7 -12 6 -12
+vector 6 -12 5 -11
+vector 5 -11 5 -8
+vector 5 -8 6 -7
+vector 6 -7 7 -7
+vector 7 -7 8 -8
+vector 8 -8 8 -11
+vector 8 -11 7 -12
+vector 7 -8 8 -7
+vector 7 3 6 3
+vector 6 3 5 4
+vector 5 4 5 7
+vector 5 7 6 8
+vector 6 8 7 8
+vector 7 8 8 7
+vector 8 7 8 4
+vector 8 4 7 3
+vector 7 7 8 8
+vector 5 1 8 1
+vector -8 -12 -4 -12
+vector -6 -12 -6 -7
+circle 0 -15 0 -20
+circle 0 15 0 20
+pin #1 -20 -10
+pin #2 -20 5
+pin #3 20 -10
+pin #4 20 5
+pin #5 0 -25
+pin #6 0 25
+def "IF RISE #2"
+def "A = A XOR #1"
+def "END"
+def "IFZERO #5"
+def "A = ONE"
+def "END"
+def "IFZERO #6"
+def "A = ZERO"
+def "END"
+def "#3 = A"
+def "#4 = NOT A"
+label "Positive edge triggered Toggle flip-flop, with asynchronous preset, clear."
+
+kind VDD
+simtype 1
+grab -10 -20 10 -5
+vector -10 -15 10 -15
+vector 0 -15 0 0
+vector -9 -20 -7 -16
+vector -7 -16 -5 -20
+vector 1 -20 1 -16
+vector 1 -16 -1 -16
+vector -1 -16 -1 -18
+vector -1 -18 1 -18
+vector 8 -20 8 -16
+vector 8 -16 6 -16
+vector 6 -16 6 -18
+vector 6 -18 8 -18
+pin #1 0 0
+def "Signal name: Vdd"
+
+kind V_AND
+simtype 16
+group 5
+grab -12 -12 12 12
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 10 0 20 0
+fpoly -10 -10 -7 -10 -7 10 -10 10
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "#3 = #1 AND #2"
+
+kind V_AND3
+simtype 16
+group 5
+grab -12 -17 12 17
+vector 10 0 20 0
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 -7 10 0
+vector 10 0 10 7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+fpoly -10 -15 -7 -15 -7 15 -10 15
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "IF #3"
+def "#3 = PULLUP"
+def "ELSE"
+def "#3 = PULLDN"
+def "END"
+def "#4 = #1 AND #2 AND #3"
+
+kind V_BUF
+simtype 16
+group 5
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 5 0 15 0
+vector -8 0 -15 0
+fpoly -8 -10 -5 -8 -5 8 -8 10
+pin #1 -15 0
+pin #2 15 0
+def "IFCONN #1"
+def "A = #1"
+def "END"
+def "#2 = A"
+
+kind V_CSRL
+simtype 16
+group 5
+grab -10 -15 10 15
+vector -15 -10 -9 -10
+vector -15 10 -9 10
+vector -9 -14 -9 14
+vector -9 14 9 14
+vector 9 14 9 -14
+vector 9 -14 -9 -14
+vector 9 -10 15 -10
+vector 9 10 15 10
+vector -5 -2 -7 -2
+vector -7 -2 -7 2
+vector -7 2 -5 2
+vector -1 -2 -3 -2
+vector -3 -2 -3 0
+vector -3 0 -1 0
+vector -1 0 -1 2
+vector -1 2 -3 2
+vector 1 -2 1 2
+vector 1 -2 3 -2
+vector 3 -2 3 0
+vector 3 0 1 0
+vector 1 0 3 2
+vector 5 -2 5 2
+vector 5 2 7 2
+vector 0 14 0 25
+pin #1 0 25
+pin #2 -15 10
+pin #3 -15 -10
+pin #4 15 10
+pin #5 15 -10
+def "IF #1"
+def "#1 = PULLUP"
+def "IFZERO #3"
+def "B = ZERO"
+def "END"
+def "IFZERO #2"
+def "B = ONE"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "#5 = B"
+def "#4 = NOT B"
+
+kind V_CSRL0
+simtype 16
+group 5
+grab -10 -15 10 15
+vector -15 -10 -9 -10
+vector -15 10 -9 10
+vector -9 -14 -9 14
+vector -9 14 9 14
+vector 9 14 9 -14
+vector 9 -14 -9 -14
+vector 9 -10 15 -10
+vector 9 10 15 10
+vector -5 14 -5 20
+vector -5 -2 -7 -2
+vector -7 -2 -7 2
+vector -7 2 -5 2
+vector -1 -2 -3 -2
+vector -3 -2 -3 0
+vector -3 0 -1 0
+vector -1 0 -1 2
+vector -1 2 -3 2
+vector 1 -2 1 2
+vector 1 -2 3 -2
+vector 3 -2 3 0
+vector 3 0 1 0
+vector 1 0 3 2
+vector 5 -2 5 2
+vector 5 2 7 2
+pin #1 -5 20
+pin #2 -15 10
+pin #3 -15 -10
+pin #4 15 10
+pin #5 15 -10
+def "IF #1"
+def "#1 = PULLUP"
+def "IFZERO #3"
+def "B = ZERO"
+def "END"
+def "IFZERO #2"
+def "B = ONE"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "#5 = B"
+def "#4 = NOT B"
+
+kind V_CSRL2
+simtype 16
+group 5
+grab -10 -25 10 20
+vector -15 -10 -9 -10
+vector -15 -20 -9 -20
+vector -9 -24 -9 19
+vector -9 19 9 19
+vector 9 19 9 -24
+vector 9 -24 -9 -24
+vector 9 -10 15 -10
+vector 9 -20 15 -20
+vector 0 19 0 25
+vector -9 5 -15 5
+vector -9 15 -15 15
+vector 9 5 15 5
+vector 9 15 15 15
+vector -5 -4 -7 -4
+vector -7 -4 -7 0
+vector -7 0 -5 0
+vector -1 -4 -3 -4
+vector -3 -4 -3 -2
+vector -3 -2 -1 -2
+vector -1 -2 -1 0
+vector -1 0 -3 0
+vector 1 0 1 -4
+vector 1 -4 3 -4
+vector 3 -4 3 -2
+vector 3 -2 1 -2
+vector 1 -2 3 0
+vector 5 -4 5 0
+vector 5 0 7 0
+pin #1 0 25
+pin #2 -15 -20
+pin #3 -15 -10
+pin #4 15 -20
+pin #5 15 -10
+pin #6 -15 5
+pin #7 -15 15
+pin #8 15 5
+pin #9 15 15
+def "IF #1"
+def "#1 = PULLUP"
+def "IFZERO #2"
+def "B = ZERO"
+def "END"
+def "IFZERO #3"
+def "B = ONE"
+def "END"
+def "IFZERO #6"
+def "C = ZERO"
+def "END"
+def "IFZERO #7"
+def "C = ONE"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "#4 = B"
+def "#5 = NOT B"
+def "#8 = C"
+def "#9 = NOT C"
+
+kind V_CSRL4
+simtype 16
+group 5
+grab -10 -50 10 45
+vector -15 -35 -9 -35
+vector -15 -45 -9 -45
+vector -9 -49 -9 44
+vector -9 44 9 44
+vector 9 44 9 -49
+vector 9 -49 -9 -49
+vector 9 -35 15 -35
+vector 9 -45 15 -45
+vector 0 44 0 50
+vector -9 5 -15 5
+vector -9 15 -15 15
+vector 9 -20 15 -20
+vector 9 -10 15 -10
+vector -5 -4 -7 -4
+vector -7 -4 -7 0
+vector -7 0 -5 0
+vector -1 -4 -3 -4
+vector -3 -4 -3 -2
+vector -3 -2 -1 -2
+vector -1 -2 -1 0
+vector -1 0 -3 0
+vector 1 0 1 -4
+vector 1 -4 3 -4
+vector 3 -4 3 -2
+vector 3 -2 1 -2
+vector 1 -2 3 0
+vector 5 -4 5 0
+vector 5 0 7 0
+vector -9 -20 -15 -20
+vector -9 -10 -15 -10
+vector -9 30 -15 30
+vector -9 40 -15 40
+vector 9 5 15 5
+vector 9 15 15 15
+vector 9 30 15 30
+vector 9 40 15 40
+pin #1 0 50
+pin #2 -15 -45
+pin #3 -15 -35
+pin #4 15 -45
+pin #5 15 -35
+pin #6 -15 -20
+pin #7 -15 -10
+pin #8 15 -20
+pin #9 15 -10
+pin #10 -15 5
+pin #11 -15 15
+pin #12 15 5
+pin #13 15 15
+pin #14 -15 30
+pin #15 -15 40
+pin #16 15 30
+pin #17 15 40
+def "IF #1"
+def "#1 = PULLUP"
+def "IFZERO #2"
+def "B = ZERO"
+def "END"
+def "IFZERO #3"
+def "B = ONE"
+def "END"
+def "IFZERO #6"
+def "C = ZERO"
+def "END"
+def "IFZERO #7"
+def "C = ONE"
+def "END"
+def "IFZERO #10"
+def "D = ZERO"
+def "END"
+def "IFZERO #11"
+def "D = ONE"
+def "END"
+def "IFZERO #14"
+def "E = ZERO"
+def "END"
+def "IFZERO #15"
+def "E = ONE"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "#4 = B"
+def "#5 = NOT B"
+def "#8 = C"
+def "#9 = NOT C"
+def "#12 = D"
+def "#13 = NOT D"
+def "#16 = E"
+def "#17 = NOT E"
+
+kind V_CSRLN
+simtype 16
+group 5
+grab -10 -15 10 15
+vector -15 -10 -9 -10
+vector -15 10 -9 10
+vector -9 -14 -9 14
+vector -9 14 9 14
+vector 9 14 9 -14
+vector 9 -14 -9 -14
+vector 9 -10 15 -10
+vector 9 10 15 10
+vector -5 -2 -7 -2
+vector -7 -2 -7 2
+vector -7 2 -5 2
+vector -1 -2 -3 -2
+vector -3 -2 -3 0
+vector -3 0 -1 0
+vector -1 0 -1 2
+vector -1 2 -3 2
+vector 1 -2 1 2
+vector 1 -2 3 -2
+vector 3 -2 3 0
+vector 3 0 1 0
+vector 1 0 3 2
+vector 5 -2 5 2
+vector 5 2 7 2
+vector 0 19 0 25
+circle 0 14 0 19
+pin #1 0 25
+pin #2 -15 10
+pin #3 -15 -10
+pin #4 15 10
+pin #5 15 -10
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "IFZERO #3"
+def "B = ZERO"
+def "END"
+def "IFZERO #2"
+def "B = ONE"
+def "END"
+def "END"
+def "#5 = B"
+def "#4 = NOT B"
+
+kind V_INV
+simtype 16
+group 5
+grab -10 -12 10 12
+vector -8 -10 -8 10
+vector -8 10 5 0
+vector 5 0 -8 -10
+vector 10 0 15 0
+vector -8 0 -15 0
+fpoly -8 -10 -5 -8 -5 8 -8 10
+circle 5 0 10 0
+pin #1 -15 0
+pin #2 15 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "#2 = NOT #1"
+
+kind V_NAND
+simtype 16
+group 5
+grab -12 -12 15 12
+vector -10 -10 3 -10
+vector 10 -3 10 3
+vector 10 -3 9 -6
+vector 9 -6 7 -9
+vector 7 -9 3 -10
+vector 10 3 9 6
+vector 9 6 7 9
+vector 7 9 3 10
+vector 3 10 -10 10
+vector -10 -5 -20 -5
+vector -10 5 -20 5
+vector 15 0 20 0
+fpoly -10 -10 -10 10 -7 10 -7 -10
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "#3 = #1 NAND #2"
+
+kind V_NAND3
+simtype 16
+group 5
+grab -12 -17 15 17
+vector -10 -15 -10 15
+vector -10 0 -20 0
+vector -10 -10 -20 -10
+vector -10 10 -20 10
+vector -10 -15 5 -15
+vector 5 -15 9 -11
+vector 9 -11 10 -7
+vector 10 7 9 11
+vector 9 11 5 15
+vector 5 15 -10 15
+vector 10 -7 10 7
+vector 10 7 10 7
+vector 15 0 20 0
+fpoly -10 -15 -7 -15 -7 15 -10 15
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "IF #3"
+def "#3 = PULLUP"
+def "ELSE"
+def "#3 = PULLDN"
+def "END"
+def "#4 = #1 NAND #2 NAND #3"
+
+kind V_NFET
+simtype 16
+group 5
+grab -7 -13 7 13
+vector 3 -10 3 10
+vector -1 0 -10 0
+vector -1 -10 -1 10
+vector 3 10 10 10
+vector 3 -10 10 -10
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFONE #1"
+def "#1 = PULLUP"
+def "IFZERO C"
+def "IFNONE STRONG #2"
+def "IFZERO STRONG #3"
+def "C = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFZERO STRONG #2"
+def "C = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "C = ZERO"
+def "END"
+def "IF B"
+def "IFZERO STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFZERO STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+
+kind V_NFETD
+simtype 16
+group 5
+grab -7 -13 7 13
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -10 3 10
+vector -1 0 -10 0
+vector 9 10 6 13
+vector 9 10 6 7
+vector -1 -10 -1 10
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFONE #1"
+def "#1 = PULLUP"
+def "IFZERO STRONG #3"
+def "#2 = #3"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+
+kind V_NFETD2
+simtype 16
+group 5
+grab -13 -8 13 8
+vector -10 -10 -10 -3
+vector 10 -10 10 -3
+vector -10 -3 10 -3
+vector 0 1 0 10
+vector 10 -9 13 -6
+vector 10 -9 7 -6
+vector -10 1 10 1
+pin #1 0 10
+pin #2 -10 -10
+pin #3 10 -10
+flags TOGGLE
+def "IFONE #1"
+def "#1 = PULLUP"
+def "IFZERO STRONG #3"
+def "#2 = #3"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+
+kind V_NFETX
+simtype 16
+group 5
+grab -7 -13 7 13
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -10 3 10
+vector -1 0 -10 0
+vector 9 10 6 13
+vector 9 10 6 7
+vector -1 -10 -1 10
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFCONN #1"
+def "A = #1"
+def "END"
+def "IF A"
+def "IFZERO #3"
+def "#2 = #3"
+def "END"
+def "END"
+
+kind V_NFETX2
+simtype 16
+group 5
+grab -13 -8 13 8
+vector -10 -10 -10 -3
+vector 10 -10 10 -3
+vector -10 -3 10 -3
+vector 0 1 0 10
+vector 10 -9 13 -6
+vector 10 -9 7 -6
+vector -10 1 10 1
+pin #1 0 10
+pin #2 -10 -10
+pin #3 10 -10
+flags TOGGLE
+def "IFCONN #1"
+def "A = #1"
+def "END"
+def "IF A"
+def "IFZERO #3"
+def "#2 = #3"
+def "END"
+def "END"
+
+kind V_NFETZ
+simtype 16
+group 5
+grab -7 -14 7 14
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -14 3 14
+vector -3 0 -10 0
+fpoly -3 -8 -1 -8 -1 8 -3 8
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFONE #1"
+def "#1 = PULLUP"
+def "IFZERO C"
+def "IFNONE STRONG #2"
+def "IFZERO STRONG #3"
+def "C = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFZERO STRONG #2"
+def "C = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "C = ZERO"
+def "END"
+def "IF B"
+def "IFZERO STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFZERO STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+
+kind V_NOR
+simtype 16
+group 5
+grab -13 -12 15 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector 15 0 20 0
+bezier -11 -10 -6 -6 -6 6 -11 10
+fpoly -11 -10 -7 -5 -5 -6 -8 -10
+fpoly -7 -5 -7 0 -4 0 -5 -6
+fpoly -7 5 -11 10 -8 10 -5 6
+fpoly -7 0 -7 5 -5 6 -4 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "#3 = #1 NOR #2"
+
+kind V_NOR3
+simtype 16
+group 5
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector 4 13 6 10
+vector -1 -15 -11 -15
+vector -7 0 -20 0
+vector -9 -10 -20 -10
+vector -20 10 -9 10
+vector 10 0 6 -10
+vector 10 0 6 10
+vector 15 0 20 0
+bezier -11 -15 -6 -10 -6 10 -11 15
+fpoly -11 -15 -7 -8 -5 -9 -7 -15
+fpoly -5 -9 -7 -8 -7 0 -4 0
+fpoly -7 0 -7 8 -5 9 -4 0
+fpoly -7 8 -11 15 -8 15 -5 9
+circle 10 0 15 0
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "IF #3"
+def "#3 = PULLUP"
+def "ELSE"
+def "#3 = PULLDN"
+def "END"
+def "#4 = #1 NOR #2 NOR #3"
+
+kind V_OR
+simtype 16
+group 5
+grab -13 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -20 -5
+vector -8 5 -20 5
+vector 10 0 20 0
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+bezier -11 -10 -6 -6 -6 6 -11 10
+fpoly -11 -10 -7 -5 -5 -6 -8 -10
+fpoly -7 -5 -7 0 -4 0 -5 -6
+fpoly -7 0 -7 5 -5 6 -4 0
+fpoly -7 5 -11 10 -8 10 -5 6
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "#3 = #1 OR #2"
+
+kind V_OR3
+simtype 16
+group 5
+grab -13 -17 12 17
+vector 6 -10 4 -13
+vector 4 -13 -1 -15
+vector 4 13 -1 15
+vector -1 15 -11 15
+vector 10 0 20 0
+vector 6 -10 10 0
+vector 4 13 6 10
+vector 6 10 10 0
+vector -1 -15 -11 -15
+vector -7 0 -20 0
+vector -9 -10 -20 -10
+vector -20 10 -9 10
+bezier -11 -15 -6 -10 -6 10 -11 15
+fpoly -11 -15 -7 -8 -5 -9 -7 -15
+fpoly -7 -8 -7 0 -4 0 -5 -9
+fpoly -7 0 -7 8 -5 9 -4 0
+fpoly -7 8 -11 15 -8 15 -5 9
+pin #1 -20 -10
+pin #2 -20 0
+pin #3 -20 10
+pin #4 20 0
+def "IF #1"
+def "#1 = PULLUP"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+def "IF #2"
+def "#2 = PULLUP"
+def "ELSE"
+def "#2 = PULLDN"
+def "END"
+def "IF #3"
+def "#3 = PULLUP"
+def "ELSE"
+def "#3 = PULLDN"
+def "END"
+def "#4 = #1 OR #2 OR #3"
+
+kind V_PFET
+simtype 16
+group 5
+grab -8 -13 7 13
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -10 3 10
+vector -6 0 -10 0
+vector -1 -10 -1 10
+circle -1 0 -6 0
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFZERO #1"
+def "#1 = PULLDN"
+def "IFZERO C"
+def "IFNONE STRONG #2"
+def "IFONE STRONG #3"
+def "C = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFONE STRONG #2"
+def "C = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "C = ZERO"
+def "END"
+def "IF B"
+def "IFONE STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFONE STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLUP"
+def "END"
+
+kind V_PFETD
+simtype 16
+group 5
+grab -8 -13 7 13
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -10 3 10
+vector -6 0 -10 0
+vector 6 -13 3 -10
+vector 3 -10 6 -7
+vector -1 -10 -1 10
+circle -1 0 -6 0
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFZERO #1"
+def "#1 = PULLDN"
+def "IFONE STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "#1 = PULLUP"
+def "END"
+
+kind V_PFETD2
+simtype 16
+group 5
+grab -13 -8 13 8
+vector -10 -10 -10 -3
+vector 10 -10 10 -3
+vector -10 -3 10 -3
+vector 0 6 0 10
+vector -10 -3 -7 -6
+vector -10 -3 -13 -6
+vector -10 1 10 1
+circle 0 6 0 1
+pin #1 0 10
+pin #2 -10 -10
+pin #3 10 -10
+flags TOGGLE
+def "IFZERO #1"
+def "#1 = PULLDN"
+def "IFONE STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "#1 = PULLUP"
+def "END"
+
+kind V_PFETX
+simtype 16
+group 5
+grab -8 -13 7 13
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -10 3 10
+vector -6 0 -10 0
+vector 6 -13 3 -10
+vector 3 -10 6 -7
+vector -1 -10 -1 10
+circle -1 0 -6 0
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFCONN #1"
+def "A = #1"
+def "END"
+def "IFZERO A"
+def "IFONE #2"
+def "#3 = #2"
+def "END"
+def "END"
+
+kind V_PFETX2
+simtype 16
+group 5
+grab -13 -8 13 8
+vector -10 -10 -10 -3
+vector 10 -10 10 -3
+vector -10 -3 10 -3
+vector 0 6 0 10
+vector -10 -3 -7 -6
+vector -10 -3 -13 -6
+vector -10 1 10 1
+circle 0 6 0 1
+pin #1 0 10
+pin #2 -10 -10
+pin #3 10 -10
+flags TOGGLE
+def "IFCONN #1"
+def "A = #1"
+def "END"
+def "IFZERO A"
+def "IFONE #2"
+def "#3 = #2"
+def "END"
+def "END"
+
+kind V_PFETZ
+simtype 16
+group 5
+grab -8 -14 7 14
+vector 10 -10 3 -10
+vector 10 10 3 10
+vector 3 -14 3 14
+vector -8 0 -10 0
+fpoly -3 -8 -1 -8 -1 8 -3 8
+circle -3 0 -8 0
+pin #1 -10 0
+pin #2 10 -10
+pin #3 10 10
+def "IFZERO #1"
+def "#1 = PULLDN"
+def "IFZERO C"
+def "IFNONE STRONG #2"
+def "IFONE STRONG #3"
+def "C = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFONE STRONG #2"
+def "C = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "C = ZERO"
+def "END"
+def "IF B"
+def "IFONE STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFONE STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLUP"
+def "END"
+
+kind V_TRANS
+simtype 16
+group 5
+grab -10 -6 10 6
+vector -8 -4 -8 4
+vector -8 4 8 4
+vector 8 4 8 -4
+vector 8 -4 -8 -4
+vector -15 0 -8 0
+vector 8 0 15 0
+vector 0 4 0 10
+pin #1 0 10
+pin #2 -15 0
+pin #3 15 0
+def "IFONE #1"
+def "#1 = PULLUP"
+def "IFZERO A"
+def "IFNONE STRONG #2"
+def "IFCONN STRONG #3"
+def "A = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFCONN STRONG #2"
+def "A = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "A = ZERO"
+def "END"
+def "IF B"
+def "IFCONN STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFCONN STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLDN"
+def "END"
+
+kind V_TRANSN
+simtype 16
+group 5
+grab -10 -6 10 6
+vector -8 -4 -8 4
+vector -8 4 8 4
+vector 8 4 8 -4
+vector 8 -4 -8 -4
+vector -15 0 -8 0
+vector 8 0 15 0
+vector 0 9 0 10
+circle 0 4 0 9
+pin #1 0 10
+pin #2 -15 0
+pin #3 15 0
+def "IFZERO #1"
+def "#1 = PULLDN"
+def "IFZERO A"
+def "IFNONE STRONG #2"
+def "IFCONN STRONG #3"
+def "A = B"
+def "B = ZERO"
+def "END"
+def "END"
+def "IFNONE STRONG #3"
+def "IFCONN STRONG #2"
+def "A = NOT B"
+def "B = ONE"
+def "END"
+def "END"
+def "ELSE"
+def "A = ZERO"
+def "END"
+def "IF B"
+def "IFCONN STRONG #2"
+def "#3 = #2"
+def "END"
+def "ELSE"
+def "IFCONN STRONG #3"
+def "#2 = #3"
+def "END"
+def "END"
+def "ELSE"
+def "#1 = PULLUP"
+def "END"
+
+kind XNOR
+simtype 16
+group 1
+grab -16 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 5 8 7 6
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector -14 -10 -11 -5
+vector -11 -5 -11 5
+vector -11 5 -14 10
+vector -20 -5 -11 -5
+vector -11 5 -20 5
+vector 7 -6 10 0
+vector 10 0 7 6
+vector 15 0 20 0
+circle 10 0 15 0
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = NOT (#1 XOR #2)"
+
+kind XOR
+simtype 16
+group 1
+grab -16 -12 12 12
+vector 7 -6 5 -8
+vector 5 -8 1 -10
+vector 5 8 1 10
+vector 1 10 -11 10
+vector 10 0 20 0
+vector -8 -5 -8 5
+vector -8 5 -11 10
+vector 7 -6 10 0
+vector 5 8 7 6
+vector 7 6 10 0
+vector 1 -10 -11 -10
+vector -11 -10 -8 -5
+vector -14 -10 -11 -5
+vector -11 -5 -11 5
+vector -11 5 -14 10
+vector -20 -5 -11 -5
+vector -11 5 -20 5
+pin #1 -20 -5
+pin #2 -20 5
+pin #3 20 0
+def "#3 = #1 XOR #2"
+
+
+# End of file.
+

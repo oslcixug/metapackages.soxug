@@ -1,0 +1,824 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PSEUtils (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PSEUtils (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PSEUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSESecurityEngineFactory.html" title="class in net.jxta.impl.membership.pse"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/membership/pse/PSEUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PSEUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.membership.pse</FONT>
+<BR>
+Class PSEUtils</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.membership.pse.PSEUtils</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>PSEUtils</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Singleton class of static utility methods.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issuer Information</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#PKCS5_PBSE1_ALGO">PKCS5_PBSE1_ALGO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are trying to use : PBEWITHMD5ANDDES</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#srng">srng</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A SecureRandom for generating keys.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#base64Decode(java.io.Reader)">base64Decode</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Convert a BASE64 Encoded String into byte array.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#base64Encode(byte[])">base64Encode</A></B>(byte[]&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Convert a byte array into a BASE64 encoded String.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#base64Encode(byte[], boolean)">base64Encode</A></B>(byte[]&nbsp;in,
+             boolean&nbsp;wrap)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Convert a byte array into a BASE64 encoded String.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#computeSignature(java.lang.String, java.security.PrivateKey, java.io.InputStream)">computeSignature</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;key,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute the signature of a stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#findObject(java.io.BufferedReader, java.lang.String)">findObject</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#genCert(java.lang.String, net.jxta.impl.membership.pse.PSEUtils.IssuerInfo)">genCert</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;cn,
+        <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A>&nbsp;issuerinfo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate a Cert</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#genCert(javax.security.auth.x500.X500Principal, java.security.KeyPair, net.jxta.impl.membership.pse.PSEUtils.IssuerInfo)">genCert</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</A>&nbsp;subject,
+        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</A>&nbsp;keypair,
+        <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A>&nbsp;issuerinfo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate a Cert given a keypair</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#getCertIssuerCName(java.security.cert.X509Certificate)">getCertIssuerCName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return the CN token from the provided cert's issuerDN</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#getCertSubjectCName(java.security.cert.X509Certificate)">getCertSubjectCName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return the CN token from the provided cert's subjectDN</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#hash(java.lang.String, byte[])">hash</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+     byte[]&nbsp;data)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns a hash SHA-1 of the given byte array</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#loadBase64Object(java.io.BufferedReader, java.lang.String)">loadBase64Object</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;rdr,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WrappedObject.java
+ <p/>
+ Copyright (C) 1999, Claymore Systems, Inc.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#loadObject(java.io.BufferedReader, java.lang.String)">loadObject</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;rdr,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#pkcs5_Decrypt_pbePrivateKey(char[], java.lang.String, javax.crypto.EncryptedPrivateKeyInfo)">pkcs5_Decrypt_pbePrivateKey</A></B>(char[]&nbsp;password,
+                            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html?is-external=true" title="class or interface in javax.crypto">EncryptedPrivateKeyInfo</A>&nbsp;encryptedPrivKey)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given an encrypted private key and a password, decrypt the private key
+ using the PBESE1 algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html?is-external=true" title="class or interface in javax.crypto">EncryptedPrivateKeyInfo</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#pkcs5_Encrypt_pbePrivateKey(char[], java.security.PrivateKey, int)">pkcs5_Encrypt_pbePrivateKey</A></B>(char[]&nbsp;password,
+                            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;privkey,
+                            int&nbsp;iterations)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a private key and a password, encrypt the private key using the
+ PBESE1 algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#readBase64Object(java.io.BufferedReader, java.lang.String)">readBase64Object</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We read a block of n-lines (\n terminated) and return a String of n-lines
+ concatenated together.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#readObject(java.io.BufferedReader, java.lang.String)">readObject</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read an object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#verifySignature(java.lang.String, java.security.cert.Certificate, byte[], java.io.InputStream)">verifySignature</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/Certificate.html?is-external=true" title="class or interface in java.security.cert">Certificate</A>&nbsp;cert,
+                byte[]&nbsp;signature,
+                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verify a signature of a stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#writeBase64Object(java.io.BufferedWriter, java.lang.String, java.lang.String)">writeBase64Object</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedWriter.html?is-external=true" title="class or interface in java.io">BufferedWriter</A>&nbsp;bw,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write an object that is already base64 encoded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.html#writeObject(java.io.BufferedWriter, java.lang.String, byte[])">writeObject</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedWriter.html?is-external=true" title="class or interface in java.io">BufferedWriter</A>&nbsp;out,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+            byte[]&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="srng"><!-- --></A><H3>
+srng</H3>
+<PRE>
+final transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security">SecureRandom</A> <B>srng</B></PRE>
+<DL>
+<DD>A SecureRandom for generating keys.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="PKCS5_PBSE1_ALGO"><!-- --></A><H3>
+PKCS5_PBSE1_ALGO</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>PKCS5_PBSE1_ALGO</B></PRE>
+<DL>
+<DD>We are trying to use : PBEWITHMD5ANDDES
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.membership.pse.PSEUtils.PKCS5_PBSE1_ALGO">Constant Field Values</A></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="genCert(java.lang.String, net.jxta.impl.membership.pse.PSEUtils.IssuerInfo)"><!-- --></A><H3>
+genCert</H3>
+<PRE>
+public static <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A> <B>genCert</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;cn,
+                                          <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A>&nbsp;issuerinfo)
+                                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</A></PRE>
+<DL>
+<DD>Generate a Cert
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cn</CODE> - subject cn for the certificate<DD><CODE>issuerinfo</CODE> - the cert issuer or null if self-signed root cert.
+<DT><B>Returns:</B><DD>the details of the generated cert.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</A></CODE> - if the cert could not be generated.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="genCert(javax.security.auth.x500.X500Principal, java.security.KeyPair, net.jxta.impl.membership.pse.PSEUtils.IssuerInfo)"><!-- --></A><H3>
+genCert</H3>
+<PRE>
+public static <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A> <B>genCert</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/security/auth/x500/X500Principal.html?is-external=true" title="class or interface in javax.security.auth.x500">X500Principal</A>&nbsp;subject,
+                                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/KeyPair.html?is-external=true" title="class or interface in java.security">KeyPair</A>&nbsp;keypair,
+                                          <A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse">PSEUtils.IssuerInfo</A>&nbsp;issuerinfo)
+                                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</A></PRE>
+<DL>
+<DD>Generate a Cert given a keypair
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>subject</CODE> - subjectDN for the certificate<DD><CODE>keypair</CODE> - the keypair to use.<DD><CODE>issuerinfo</CODE> - the cert issuer or null if self-signed root cert.
+<DT><B>Returns:</B><DD>the details of the generated cert.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</A></CODE> - if the cert could not be generated.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCertSubjectCName(java.security.cert.X509Certificate)"><!-- --></A><H3>
+getCertSubjectCName</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCertSubjectCName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</PRE>
+<DL>
+<DD>return the CN token from the provided cert's subjectDN
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - the certificate to examine
+<DT><B>Returns:</B><DD>the CN name or null if none could be found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCertIssuerCName(java.security.cert.X509Certificate)"><!-- --></A><H3>
+getCertIssuerCName</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCertIssuerCName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/X509Certificate.html?is-external=true" title="class or interface in java.security.cert">X509Certificate</A>&nbsp;cert)</PRE>
+<DL>
+<DD>return the CN token from the provided cert's issuerDN
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - the certificate to examine
+<DT><B>Returns:</B><DD>the CN name or null if none could be found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="computeSignature(java.lang.String, java.security.PrivateKey, java.io.InputStream)"><!-- --></A><H3>
+computeSignature</H3>
+<PRE>
+public static byte[] <B>computeSignature</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;key,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)
+                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</A>,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</A>,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Compute the signature of a stream.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - the private key used to sign the stream<DD><CODE>stream</CODE> - the stream to sign.
+<DT><B>Returns:</B><DD>byte[] the signature
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</A></CODE>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</A></CODE>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="verifySignature(java.lang.String, java.security.cert.Certificate, byte[], java.io.InputStream)"><!-- --></A><H3>
+verifySignature</H3>
+<PRE>
+public static boolean <B>verifySignature</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/cert/Certificate.html?is-external=true" title="class or interface in java.security.cert">Certificate</A>&nbsp;cert,
+                                      byte[]&nbsp;signature,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;stream)
+                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</A>,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</A>,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Verify a signature of a stream.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>cert</CODE> - The certificate containing the public key which will be used
+                  to verify the signature.<DD><CODE>signature</CODE> - The signature to verify.<DD><CODE>stream</CODE> - The stream to verify.
+<DT><B>Returns:</B><DD>boolean true if the signature was valid otherwise false.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</A></CODE>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</A></CODE>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hash(java.lang.String, byte[])"><!-- --></A><H3>
+hash</H3>
+<PRE>
+public static byte[] <B>hash</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                          byte[]&nbsp;data)</PRE>
+<DL>
+<DD>returns a hash SHA-1 of the given byte array
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>data</CODE> - the data to be hashed
+<DT><B>Returns:</B><DD>byte[] the hash of the data</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pkcs5_Encrypt_pbePrivateKey(char[], java.security.PrivateKey, int)"><!-- --></A><H3>
+pkcs5_Encrypt_pbePrivateKey</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html?is-external=true" title="class or interface in javax.crypto">EncryptedPrivateKeyInfo</A> <B>pkcs5_Encrypt_pbePrivateKey</B>(char[]&nbsp;password,
+                                                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A>&nbsp;privkey,
+                                                                  int&nbsp;iterations)</PRE>
+<DL>
+<DD>Given a private key and a password, encrypt the private key using the
+ PBESE1 algorithm.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>password</CODE> - The password which will be used.<DD><CODE>privkey</CODE> - The private key to be encrypted.<DD><CODE>iterations</CODE> - Number of iterations.
+<DT><B>Returns:</B><DD>An encrypted private key info or null if the key could not be
+         encrypted.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pkcs5_Decrypt_pbePrivateKey(char[], java.lang.String, javax.crypto.EncryptedPrivateKeyInfo)"><!-- --></A><H3>
+pkcs5_Decrypt_pbePrivateKey</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/security/PrivateKey.html?is-external=true" title="class or interface in java.security">PrivateKey</A> <B>pkcs5_Decrypt_pbePrivateKey</B>(char[]&nbsp;password,
+                                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithm,
+                                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html?is-external=true" title="class or interface in javax.crypto">EncryptedPrivateKeyInfo</A>&nbsp;encryptedPrivKey)</PRE>
+<DL>
+<DD>Given an encrypted private key and a password, decrypt the private key
+ using the PBESE1 algorithm.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>password</CODE> - The password which will be used.<DD><CODE>encryptedPrivKey</CODE> - The private key to be encrypted.
+<DT><B>Returns:</B><DD>The decrypted private key or null if the key could not be decrpyted.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="loadBase64Object(java.io.BufferedReader, java.lang.String)"><!-- --></A><H3>
+loadBase64Object</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>loadBase64Object</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;rdr,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)
+                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>WrappedObject.java
+ <p/>
+ Copyright (C) 1999, Claymore Systems, Inc.
+ All Rights Reserved.
+ <p/>
+ ekr@rtfm.com  Fri Jun  4 09:11:27 1999
+ <p/>
+ This package is a SSLv3/TLS implementation written by Eric Rescorla
+ <ekr@rtfm.com> and licensed by Claymore Systems, Inc.
+ <p/>
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+ must display the following acknowledgement:
+ This product includes software developed by Claymore Systems, Inc.
+ 4. Neither the name of Claymore Systems, Inc. nor the name of Eric
+ Rescorla may be used to endorse or promote products derived from this
+ software without specific prior written permission.
+ <p/>
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="loadObject(java.io.BufferedReader, java.lang.String)"><!-- --></A><H3>
+loadObject</H3>
+<PRE>
+public static byte[] <B>loadObject</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;rdr,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="findObject(java.io.BufferedReader, java.lang.String)"><!-- --></A><H3>
+findObject</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>findObject</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readBase64Object(java.io.BufferedReader, java.lang.String)"><!-- --></A><H3>
+readBase64Object</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>readBase64Object</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+                                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)
+                               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>We read a block of n-lines (\n terminated) and return a String of n-lines
+ concatenated together. This keeps the format consistent with the pureTLS
+ requirements.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readObject(java.io.BufferedReader, java.lang.String)"><!-- --></A><H3>
+readObject</H3>
+<PRE>
+public static byte[] <B>readObject</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedReader.html?is-external=true" title="class or interface in java.io">BufferedReader</A>&nbsp;br,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type)
+                         throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Read an object
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="writeBase64Object(java.io.BufferedWriter, java.lang.String, java.lang.String)"><!-- --></A><H3>
+writeBase64Object</H3>
+<PRE>
+public static void <B>writeBase64Object</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedWriter.html?is-external=true" title="class or interface in java.io">BufferedWriter</A>&nbsp;bw,
+                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+                                     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;object)
+                              throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Write an object that is already base64 encoded.
+<P>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="writeObject(java.io.BufferedWriter, java.lang.String, byte[])"><!-- --></A><H3>
+writeObject</H3>
+<PRE>
+public static void <B>writeObject</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/BufferedWriter.html?is-external=true" title="class or interface in java.io">BufferedWriter</A>&nbsp;out,
+                               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;type,
+                               byte[]&nbsp;object)
+                        throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="base64Encode(byte[])"><!-- --></A><H3>
+base64Encode</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>base64Encode</B>(byte[]&nbsp;in)
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Convert a byte array into a BASE64 encoded String.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>in</CODE> - The bytes to be converted
+<DT><B>Returns:</B><DD>the BASE64 encoded String.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="base64Encode(byte[], boolean)"><!-- --></A><H3>
+base64Encode</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>base64Encode</B>(byte[]&nbsp;in,
+                                  boolean&nbsp;wrap)
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Convert a byte array into a BASE64 encoded String.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>in</CODE> - the bytes to be converted
+<DT><B>Returns:</B><DD>the BASE64 encoded String.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="base64Decode(java.io.Reader)"><!-- --></A><H3>
+base64Decode</H3>
+<PRE>
+public static byte[] <B>base64Decode</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</A>&nbsp;in)
+                           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Convert a BASE64 Encoded String into byte array.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>in</CODE> - BASE64 encoded String
+<DT><B>Returns:</B><DD>the decoded bytes.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PSEUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSESecurityEngineFactory.html" title="class in net.jxta.impl.membership.pse"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/membership/pse/PSEUtils.IssuerInfo.html" title="class in net.jxta.impl.membership.pse"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/membership/pse/PSEUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PSEUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

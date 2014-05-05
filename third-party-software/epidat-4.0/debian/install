@@ -1,0 +1,4 @@
+bin/* usr/bin
+epidat usr/share
+epidat.desktop usr/share/applications
+epidat/Epidat.png usr/share/icons

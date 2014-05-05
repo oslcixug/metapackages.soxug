@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: epidat
+Source: http://www.sergas.es/MostrarContidos_N3_T01.aspx?IdPaxina=62714
+
+Files: *
+Copyright: 2012 Sergas
+License: Creative Commons CC-BY-NC
+

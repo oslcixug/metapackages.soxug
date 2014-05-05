@@ -1,0 +1,551 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ServiceMonitor (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ServiceMonitor (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ServiceMonitor.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/meter/ServiceMonitor.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ServiceMonitor.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.meter</FONT>
+<BR>
+Interface ServiceMonitor</H2>
+<DL>
+<DT><B>All Superinterfaces:</B> <DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public interface <B>ServiceMonitor</B><DT>extends <A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></DL>
+</PRE>
+
+<P>
+The base interface for all ServiceMonitors
+  For complete information about Service Monitors see the 
+  Document <I> Designing and Implementing Service Monitors </I>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_PROGRESS">START_AGAIN_PROGRESS</A>, <A HREF="../../../net/jxta/platform/Module.html#START_AGAIN_STALLED">START_AGAIN_STALLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_DISABLED">START_DISABLED</A>, <A HREF="../../../net/jxta/platform/Module.html#START_OK">START_OK</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#beginCumulativeReport()">beginCumulativeReport</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A request for a cumulative Report(s) are coming, prepare to receive them</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#createSupportedCumulativeServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter)">createSupportedCumulativeServiceMonitorFilter</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transform the provided ServiceMonitorFilter into one that is supported for cumulative reporting</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#createSupportedServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter, long)">createSupportedServiceMonitorFilter</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                    long&nbsp;reportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transform the provided ServiceMonitorFilter into one that is supported for periodic reporting at the specified rate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#destroy()">destroy</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clean up.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#endCumulativeReport()">endCumulativeReport</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indication that the flurry of requests for cumulative Report is over</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter">ServiceMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#getCumulativeServiceMetric(net.jxta.meter.ServiceMonitorFilter, long, long)">getCumulativeServiceMetric</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                           long&nbsp;fromTime,
+                           long&nbsp;toTime)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get ServiceMetrics since the start (or last reset time) of this ServiceMonitor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#getModuleClassID()">getModuleClassID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get ModuleClassID of this ServiceMonitor</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter">ServiceMetric</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#getServiceMetric(net.jxta.meter.ServiceMonitorFilter, long, long, int, long)">getServiceMetric</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                 long&nbsp;fromTime,
+                 long&nbsp;toTime,
+                 int&nbsp;pulseIndex,
+                 long&nbsp;reportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get ServiceMetrics accrued in during this pulse interval</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#serviceMonitorFilterDeregistered(net.jxta.meter.ServiceMonitorFilter, int, long, boolean)">serviceMonitorFilterDeregistered</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                 int&nbsp;reportRateIndex,
+                                 long&nbsp;reportRate,
+                                 boolean&nbsp;retiredRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information that the Monitor Manager is deregistering the Monitoring for this filter at this rate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#serviceMonitorFilterRegistered(net.jxta.meter.ServiceMonitorFilter, int, long, boolean)">serviceMonitorFilterRegistered</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                               int&nbsp;reportRateIndex,
+                               long&nbsp;reportRate,
+                               boolean&nbsp;newRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information that the Monitor Manager has accepted a Monitoring for this filter at this rate</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#validateCumulativeServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter)">validateCumulativeServiceMonitorFilter</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate ServiceMonitorFilter for a cumulative Report</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/meter/ServiceMonitor.html#validateServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter, long)">validateServiceMonitorFilter</A></B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                             long&nbsp;reportRate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate ServiceMonitorFilter for a periodic Reporting</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.platform.Module"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.platform.<A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform">Module</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/platform/Module.html#init(net.jxta.peergroup.PeerGroup, net.jxta.id.ID, net.jxta.document.Advertisement)">init</A>, <A HREF="../../../net/jxta/platform/Module.html#startApp(java.lang.String[])">startApp</A>, <A HREF="../../../net/jxta/platform/Module.html#stopApp()">stopApp</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getModuleClassID()"><!-- --></A><H3>
+getModuleClassID</H3>
+<PRE>
+<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A> <B>getModuleClassID</B>()</PRE>
+<DL>
+<DD>Get ModuleClassID of this ServiceMonitor
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServiceMetric(net.jxta.meter.ServiceMonitorFilter, long, long, int, long)"><!-- --></A><H3>
+getServiceMetric</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter">ServiceMetric</A> <B>getServiceMetric</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                               long&nbsp;fromTime,
+                               long&nbsp;toTime,
+                               int&nbsp;pulseIndex,
+                               long&nbsp;reportRate)</PRE>
+<DL>
+<DD>Get ServiceMetrics accrued in during this pulse interval
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>serviceMonitorFilter</CODE> - Filter Metrics based upon this MonitorFilter<DD><CODE>fromTime</CODE> - Beginning time as determined by the MonitorManager<DD><CODE>toTime</CODE> - Ending time as determined by the MonitorManager<DD><CODE>pulseIndex</CODE> - Pulse Index of the reporting rate Pyramid<DD><CODE>reportRate</CODE> - Reporting Rate (corresponding to the PulseNumber's index)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="beginCumulativeReport()"><!-- --></A><H3>
+beginCumulativeReport</H3>
+<PRE>
+void <B>beginCumulativeReport</B>()</PRE>
+<DL>
+<DD>A request for a cumulative Report(s) are coming, prepare to receive them
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/meter/ServiceMonitor.html#endCumulativeReport()"><CODE>endCumulativeReport()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCumulativeServiceMetric(net.jxta.meter.ServiceMonitorFilter, long, long)"><!-- --></A><H3>
+getCumulativeServiceMetric</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter">ServiceMetric</A> <B>getCumulativeServiceMetric</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                         long&nbsp;fromTime,
+                                         long&nbsp;toTime)</PRE>
+<DL>
+<DD>Get ServiceMetrics since the start (or last reset time) of this ServiceMonitor.
+ Calls to this will only occurr between calls to beginCumulativeReport() and endCumulativeReport()
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>serviceMonitorFilter</CODE> - Filter Metrics based upon this MonitorFilter<DD><CODE>fromTime</CODE> - Beginning time as determined by the MonitorManager<DD><CODE>toTime</CODE> - Ending time as determined by the MonitorManager<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/meter/ServiceMonitor.html#beginCumulativeReport()"><CODE>beginCumulativeReport()</CODE></A>, 
+<A HREF="../../../net/jxta/meter/ServiceMonitor.html#endCumulativeReport()"><CODE>endCumulativeReport()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="endCumulativeReport()"><!-- --></A><H3>
+endCumulativeReport</H3>
+<PRE>
+void <B>endCumulativeReport</B>()</PRE>
+<DL>
+<DD>Indication that the flurry of requests for cumulative Report is over
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/meter/ServiceMonitor.html#beginCumulativeReport()"><CODE>beginCumulativeReport()</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validateCumulativeServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter)"><!-- --></A><H3>
+validateCumulativeServiceMonitorFilter</H3>
+<PRE>
+void <B>validateCumulativeServiceMonitorFilter</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter)
+                                            throws <A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></PRE>
+<DL>
+<DD>Validate ServiceMonitorFilter for a cumulative Report
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validateServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter, long)"><!-- --></A><H3>
+validateServiceMonitorFilter</H3>
+<PRE>
+void <B>validateServiceMonitorFilter</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                  long&nbsp;reportRate)
+                                  throws <A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></PRE>
+<DL>
+<DD>Validate ServiceMonitorFilter for a periodic Reporting
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createSupportedCumulativeServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter)"><!-- --></A><H3>
+createSupportedCumulativeServiceMonitorFilter</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A> <B>createSupportedCumulativeServiceMonitorFilter</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter)
+                                                                   throws <A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></PRE>
+<DL>
+<DD>Transform the provided ServiceMonitorFilter into one that is supported for cumulative reporting
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createSupportedServiceMonitorFilter(net.jxta.meter.ServiceMonitorFilter, long)"><!-- --></A><H3>
+createSupportedServiceMonitorFilter</H3>
+<PRE>
+<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A> <B>createSupportedServiceMonitorFilter</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                                         long&nbsp;reportRate)
+                                                         throws <A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></PRE>
+<DL>
+<DD>Transform the provided ServiceMonitorFilter into one that is supported for periodic reporting at the specified rate
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/meter/MonitorFilterException.html" title="class in net.jxta.meter">MonitorFilterException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="serviceMonitorFilterRegistered(net.jxta.meter.ServiceMonitorFilter, int, long, boolean)"><!-- --></A><H3>
+serviceMonitorFilterRegistered</H3>
+<PRE>
+void <B>serviceMonitorFilterRegistered</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                    int&nbsp;reportRateIndex,
+                                    long&nbsp;reportRate,
+                                    boolean&nbsp;newRate)</PRE>
+<DL>
+<DD>Information that the Monitor Manager has accepted a Monitoring for this filter at this rate
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>serviceMonitorFilter</CODE> - Accepted Filter<DD><CODE>reportRateIndex</CODE> - Pulse Index into pyramid of accepted rate<DD><CODE>reportRate</CODE> - Accepted reporting rate<DD><CODE>newRate</CODE> - Is this a new reporting rate (ie you don't have any currently registered at this rate)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="serviceMonitorFilterDeregistered(net.jxta.meter.ServiceMonitorFilter, int, long, boolean)"><!-- --></A><H3>
+serviceMonitorFilterDeregistered</H3>
+<PRE>
+void <B>serviceMonitorFilterDeregistered</B>(<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter">ServiceMonitorFilter</A>&nbsp;serviceMonitorFilter,
+                                      int&nbsp;reportRateIndex,
+                                      long&nbsp;reportRate,
+                                      boolean&nbsp;retiredRate)</PRE>
+<DL>
+<DD>Information that the Monitor Manager is deregistering the Monitoring for this filter at this rate
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>serviceMonitorFilter</CODE> - Deregistered Filter<DD><CODE>reportRateIndex</CODE> - Pulse Index into pyramid of deregistered filter<DD><CODE>reportRate</CODE> - Reporting rate of deregistered filter<DD><CODE>retiredRate</CODE> - Is this a retired filter the last one registered at this rate (ie you don't have to keep metrics for this rate any longer)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="destroy()"><!-- --></A><H3>
+destroy</H3>
+<PRE>
+void <B>destroy</B>()</PRE>
+<DL>
+<DD>Clean up.  The PeerGroup is probably about to be destroyed
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ServiceMonitor.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/meter/ServiceMetric.html" title="interface in net.jxta.meter"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/meter/ServiceMonitorFilter.html" title="interface in net.jxta.meter"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/meter/ServiceMonitor.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ServiceMonitor.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

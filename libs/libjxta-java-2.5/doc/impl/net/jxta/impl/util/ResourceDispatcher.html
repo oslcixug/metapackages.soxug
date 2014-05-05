@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+ResourceDispatcher (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ResourceDispatcher (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResourceDispatcher.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html" title="class in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/ResourceDispatcher.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResourceDispatcher.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.util</FONT>
+<BR>
+Class ResourceDispatcher</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.util.ResourceDispatcher</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>ResourceDispatcher</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+This class does not in itself allocate anything; it just does accounting.
+ Its role is to make sure that resource consumers ("accounts")
+ are guaranteed to be able to hold a pre-determined number of items,
+ the extra being granted on a first-come-first-serve basis.
+ It just replies yes/no to an account that wants to allocate an item.
+ Synchronization is external.
+
+ <p/><em>Note that this is all essentially a limiter device. It assumes
+ that the resources that are dispatched in that way are not otherwise
+ in short supply.</em>
+
+ <p/>The rules of the game are as follows:
+ <p/>At initialization, an absolute maximum authorized number of items
+ is computed. All item reservations and authorizations are done
+ within this budget.
+ <p/>At any given point in time, out of this maximum, a number of items are
+ permanently reserved for the minimum guaranteed to each current account,
+ a number of items are set aside for future accounts guarantee reservation,
+ and the rest is open for dynamic attribution on a first come first serve
+ basis.
+
+ <p/>The current strategy is as follows:
+
+ The initialization parameters are:<ul>
+ <li>minimum number of guaranteed accounts: <code>minAccounts</code></li>
+ <li>minimum commitment to new accounts up to minAccounts: <code>minReserve</code></li>
+ <li>maximum commitment to new accounts: <code>maxReserve</code></li>
+ <li>extra number of dynamically allocatable items: <code>extraItems</code></li>
+ </ul>
+
+ <p/>We infer the number of items dedicated to reservation: <code>reservedItems</code>
+ That is <code>minReserve * minAccounts</code>.
+
+ <p/>Accounts can ask for a commitment in excess of minReserve. Any reservation
+ made by an account beyond the minimum is satisfied from extraItems
+ limited by what's available and maxReserve. When minAccounts have
+ registered, it is possible that reservedItems is exhausted. New accounts
+ are then accepted on a best effort basis using extra items exclusively. This
+ may cause such new accounts to be given a commitment inferior to minReserve,
+ including zero. It is up to the account to reject the offer and give up
+ by closing, or to go along with the offer. At this time, we do not try
+ to raise the commitment made to an account while it is registered.
+
+ <p/>During the life of the account, items are allocated first from the set
+ reserved by this account. If the account is out of reserved items, an attempt
+ is made at getting the item from extraItems.
+
+ <p/>For each account we count the number of items reserved from reservedItems,
+ reserved from extraItems, allocated from the local reserved items
+ and allocated from extraItems separately. When an item is released, it is
+ accounted to extraItems if the account had anything allocated from
+ extra items, or to the local reserved items.
+ When an account goes away, the number of items that were reserved from
+ reserveItems go back to reserveItems and likewise for those coming
+ from extraItems. This is done rather than giving priority to reserve
+ items so that the system does not favor reservation beyond its initial
+ parameters when an account goes away under load.
+
+ <p/>When resources are scarce, two modes of operations are available.
+ <dl>
+ <dt>Unfair</dt>
+ <dd>each account keeps its items as long it has a use for them. If
+ the allocation of a new item is denied for an account, the account just has
+ to live with it and try again the next time more items are desired.
+ <dd>
+ <dt>RoundRobin<dt>
+ <dd>Each account releases each item after one use. When allocation
+ of a new item is denied for an account by reason of item shortage, the
+ account is placed on a list of eligible accounts. Every time an item is
+ released, it is re-assigned to the oldest eligible account.
+ </dd>
+ </dl>
+ <p/>From an API point of view the difference is not visible: account users
+ are advised to release items after one use. Release returns the account to
+ which the item has been re-assigned. If RoundRobin is not used, then
+ the item is always re-assigned to the account that releases it unless it
+ is not needed, in which case it returns to the available pool.
+ So, with round-robin off the following is true:
+ <pre>
+ a.releaseItem() == (a.needs ? a : null);
+ </pre>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html" title="class in net.jxta.impl.util">ResourceDispatcher.ClientAccount</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html#ResourceDispatcher(long, long, long, long, long, long, boolean, java.lang.String)">ResourceDispatcher</A></B>(long&nbsp;minAccounts,
+                   long&nbsp;minReservedPerAccount,
+                   long&nbsp;maxReservedPerAccount,
+                   long&nbsp;extraItems,
+                   long&nbsp;maxExtraPerAccount,
+                   long&nbsp;minExtraPoolSize,
+                   boolean&nbsp;roundRobin,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;dispatcherName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a Fair Resource Allocator with the given parameters:</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html#getNbEligibles()">getNbEligibles</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.html#newAccount(long, long, java.lang.Object)">newAccount</A></B>(long&nbsp;nbReq,
+           long&nbsp;maxExtra,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;userObject)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates and returns a new client account.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="ResourceDispatcher(long, long, long, long, long, long, boolean, java.lang.String)"><!-- --></A><H3>
+ResourceDispatcher</H3>
+<PRE>
+public <B>ResourceDispatcher</B>(long&nbsp;minAccounts,
+                          long&nbsp;minReservedPerAccount,
+                          long&nbsp;maxReservedPerAccount,
+                          long&nbsp;extraItems,
+                          long&nbsp;maxExtraPerAccount,
+                          long&nbsp;minExtraPoolSize,
+                          boolean&nbsp;roundRobin,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;dispatcherName)</PRE>
+<DL>
+<DD>Construct a Fair Resource Allocator with the given parameters:
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>minAccounts</CODE> - The minimum number of client accounts that we want to
+ guarantee we can handle. <0 means 0<DD><CODE>minReservedPerAccount</CODE> - The minimum reservation request that we will
+ always grant to accounts as long as we have less than minAccounts <0 means
+ 0.<DD><CODE>maxReservedPerAccount</CODE> - The maximum reservation request that we ever
+ will grant to any given account. <minReservedPerAccount means ==<DD><CODE>extraItems</CODE> - The total number of items that we will authorize
+ beyond what has been reserved. <0 means 0.<DD><CODE>maxExtraPerAccount</CODE> - The maximum number of extra items we will ever
+ let any given account occupy. <0 or >extraItems means ==extraItems.<DD><CODE>minExtraPoolSize</CODE> - The number of extra items that can never be
+ taken out of the extra pool to satisfy a reservation request.<DD><CODE>roundRobin</CODE> - If true, when there is no items available, all
+ eligible accounts are put in a FIFO. Accounts release items often, and the
+ oldest account in the FIFO will get it. If false, accounts always keep
+ items for as long as they can use them, and there is no FIFO of eligible
+ accounts. Accounts can obtain new resources only if available at the time
+ they try to aquire it. RoundRobin is more fair but has more overhead.
+ Neither mode will cause starvation as long as accounts reserve at least
+ one item each. RoundRobin is most useful when allocating threads.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getNbEligibles()"><!-- --></A><H3>
+getNbEligibles</H3>
+<PRE>
+public int <B>getNbEligibles</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newAccount(long, long, java.lang.Object)"><!-- --></A><H3>
+newAccount</H3>
+<PRE>
+public <A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util">ResourceAccount</A> <B>newAccount</B>(long&nbsp;nbReq,
+                                  long&nbsp;maxExtra,
+                                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;userObject)</PRE>
+<DL>
+<DD>Creates and returns a new client account.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>nbReq</CODE> - the number of reserved items requested (may not be
+ always granted in full). A negative value is taken to mean 0.<DD><CODE>maxExtra</CODE> - the number of additional items that this account
+ authorizes to be allocated in addition to the reserved ones. This
+ is typically useful if the items are threads and if some accounts
+ are not re-entrant. Then nbReq would be 1 and maxExtra would be 0.
+ It is also permitted to have some accounts receive no items at all
+ ever by setting nbReq and maxExtra both to zero. A negative maxExtra
+ is taken as meaning no specified limit, in which case an actual limit
+ may be set silently.<DD><CODE>userObject</CODE> - An opaque cookie that the account object will return
+ when requested. This is useful to relate an account returned by
+ ClientAccount.releaseItem() to an invoking code relevant object.
+<DT><B>Returns:</B><DD>ResourceAccount An account with this allocator.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/ResourceDispatcher.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceAccount.html" title="interface in net.jxta.impl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../net/jxta/impl/util/ResourceDispatcher.ClientAccount.html" title="class in net.jxta.impl.util"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?net/jxta/impl/util/ResourceDispatcher.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResourceDispatcher.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

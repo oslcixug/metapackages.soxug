@@ -1,0 +1,29 @@
+
+{ Default configuration for LPLOT, the LOG plotting tool }
+{ To be included by LOG.CNF }
+
+tool lplot lplot "LOG Plotting Tool"
+
+command lplot   lplot plot lplot:     { "If these commands are given, }
+                                      {  activate the LPLOT tool" }
+
+include pens.cnf                      { Pen color assignments }
+
+lplot: plotter     { 5 }              { HP-IB address of plotter }
+
+{The following are commented out because the defaults in plot.c work fine.}
+{lplot: font       /usr/chipmunk/lib/lplot.font  { Name of font file to use }
+{lplot: header     /usr/chipmunk/lib/texstuff.ps { (These must be full paths) }
+
+lplot: nodots      led           { Gates which don't form solder dots on pins }
+lplot: invisible   numbers time  { Gates which don't show up on the plot }
+lplot: invisible   digh
+lplot: labelfont   2             { Font number for labels }
+lplot: sigfont     2             { Font number for "TO/FROM" signal names }
+
+lplot: color border  red
+lplot: color onled   red
+lplot: color offled  yellow
+
+{ uncomment and edit this line for customizing printing }
+{ lplot: psfile /tmp/*.ps | lpr * }

@@ -1,0 +1,29 @@
+Source: hunspell-gl-es
+Section: text
+Priority: optional
+Maintainer: CIXUG Developers <osl@cixug.es>
+Build-Depends: debhelper (>= 7), dictionaries-common-dev (>= 1.10.5)
+Standards-Version: 3.9.2
+Homepage: http://wiki.mancomun.org/index.php/Corrector_ortogr%C3%A1fico_para_OpenOffice.org
+Vcs-Browser: http://git.debian.org/?p=users/agmartin/hunspell-gl-es.git
+Vcs-Git: git://git.debian.org/git/users/agmartin/hunspell-gl-es.git
+
+
+Package: hunspell-gl-es
+Architecture: all
+Provides: hunspell-dictionary, hunspell-dictionary-gl, hunspell-gl,
+ myspell-gl-es, openoffice.org-spellcheck-gl
+Conflicts: myspell-gl-es, hunspell-gl, openoffice.org-spellcheck-gl,
+ openoffice.org (<= 1.0.3-2), openoffice.org-core (<< 2.1~m190-1),
+ mozilla-browser (<< 1.8+1.1.1-2), iceape-browser (<< 1.1.1-2), firefox (<< 2.0.0.3-2),
+ thunderbird (<< 2.0.0.1+0dfsg-0), iceweasel (<< 2.0.0.3-2), icedove (<< 2.0.0.0-4),
+ libxul0d (= 1.8.0.11-3)
+Replaces: openoffice.org-spellcheck-gl, hunspell-gl, myspell-gl-es
+Depends: dictionaries-common (>= 1.1), ${misc:Depends}
+Suggests: hunspell,
+ libreoffice-core | openoffice.org-hunspell | openoffice.org-core (>= 2.0.2),
+ iceape-browser | iceweasel | icedove
+Description: Galician dictionary for hunspell
+ This is the Galician dictionary for hunspell spellchecker
+ which is currently used within OpenOffice.org and the mozilla
+ variants. It uses the official RAG standard.

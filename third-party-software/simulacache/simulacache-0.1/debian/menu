@@ -1,0 +1,2 @@
+?package(simulacache):needs="X11" section="Applications/Programming"\
+  title="simulacache" command="/usr/bin/simulacache"

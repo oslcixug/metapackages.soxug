@@ -1,0 +1,922 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MessageElement (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MessageElement (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MessageElement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/endpoint/Message.ElementIterator.html" title="class in net.jxta.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/endpoint/MessageFilterListener.html" title="interface in net.jxta.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/MessageElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MessageElement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.endpoint</FONT>
+<BR>
+Class MessageElement</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.endpoint.MessageElement</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A>, <A HREF="../../../net/jxta/document/DocumentStreamIO.html" title="interface in net.jxta.document">DocumentStreamIO</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../net/jxta/endpoint/ByteArrayMessageElement.html" title="class in net.jxta.endpoint">ByteArrayMessageElement</A>, <A HREF="../../../net/jxta/endpoint/InputStreamMessageElement.html" title="class in net.jxta.endpoint">InputStreamMessageElement</A>, <A HREF="../../../net/jxta/endpoint/TextMessageElement.html" title="class in net.jxta.endpoint">TextMessageElement</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>MessageElement</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A></DL>
+</PRE>
+
+<P>
+JXTA Message Elements are used to add data to a JXTA Message. Message 
+ Elements are immutable objects. A Message Element may be shared amongst as 
+ many messages as is desired. 
+ <p/>
+ Several Message Element sub-classes are provided for handling various types
+ of data. All Message Elements are internally converted to raw bytes when sent
+ as part of a Message. The various Message Element flavors are provided for
+ convenience and efficiency. They enable the simplest creation and most 
+ efficient conversion from the individual data types to the appropriate binary 
+ data. <b>Because Message Elements are merely a convenient representation for 
+ binary data the object type of Message Element received by a peer may not 
+ be the same as was sent by the sending peer.</b> Even though the Message 
+ Element container may change during transmission the data contained in the 
+ Message Element is faithfully preserved.
+ <p/>
+ A Message Element is composed of four components:
+ <p/>
+ <ul>
+ <li>An optional name. This may be any <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><CODE>String</CODE></A>. Unnamed
+ elements are assumed to have the name "" (the empty string).</li>
+ <li>An optional <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document"><CODE>MimeMediaType</CODE></A>. If not specified
+ the Mime Media Type is assumed to be "Application/Octet-Stream".</li>
+ <li>Data. Sub-classes of MessageElement allow you to create elements based
+ on a variety of data formats.</li>
+ <li>An optional signature. This is a Message Element that is associated to
+ this element and may contain a cryptographic signature/hash of this message
+ element.
+ </li>
+ </ul>
+ <p/>
+ <p/>The data contained within a MessageElement is accessible in four ways:
+ <p/>
+ <ul>
+ <li>As an <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io"><CODE>InputStream</CODE></A> from <A HREF="../../../net/jxta/document/DocumentStreamIO.html#getStream()"><CODE>DocumentStreamIO.getStream()</CODE></A></li>
+ <li>Sending the data a <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io"><CODE>OutputStream</CODE></A> via <A HREF="../../../net/jxta/endpoint/MessageElement.html#sendToStream(java.io.OutputStream)"><CODE>sendToStream(OutputStream)</CODE></A></li>
+ <li>As a <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><CODE>String</CODE></A> from <A HREF="../../../net/jxta/endpoint/MessageElement.html#toString()"><CODE>toString()</CODE></A></li>
+ <li>As a byte array from  from <A HREF="../../../net/jxta/endpoint/MessageElement.html#getBytes(boolean)"><CODE>getBytes(boolean)</CODE></A></li>
+ </ul>
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/endpoint/Message.html" title="class in net.jxta.endpoint"><CODE>Message</CODE></A></DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#cachedGetByteLength">cachedGetByteLength</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#getByteLength()"><CODE>getByteLength()</CODE></A> operation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ref/SoftReference.html?is-external=true" title="class or interface in java.lang.ref">SoftReference</A>&lt;byte[]&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#cachedGetBytes">cachedGetBytes</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#getBytes(boolean)"><CODE>getBytes(boolean)</CODE></A> operation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ref/SoftReference.html?is-external=true" title="class or interface in java.lang.ref">SoftReference</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#cachedToString">cachedToString</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#toString()"><CODE>toString()</CODE></A> operation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#name">name</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#sig">sig</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The optional element which digitally signs or digests this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#type">type</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of this element.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#MessageElement(java.lang.String, net.jxta.document.MimeMediaType, net.jxta.endpoint.MessageElement)">MessageElement</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+               <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+               <A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A>&nbsp;sig)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Internal constructor for initializing everything but the data.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#clone()">clone</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Since Message Elements are immutable this method does
+             nothing useful.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#copyInputStreamToOutputStream(java.io.InputStream, java.io.OutputStream)">copyInputStreamToOutputStream</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;source,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;sink)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copies an input stream to an output stream with buffering.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#equals(java.lang.Object)">equals</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;target)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ <p/>Elements are considered equal if they have the same name, type and
+ signatures.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getByteLength()">getByteLength</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the size of the element data in bytes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getBytes(boolean)">getBytes</A></B>(boolean&nbsp;copy)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a byte array which contains the element data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getElementName()">getElementName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the MessageElement.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getElementProperty(java.lang.Object)">getElementProperty</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves a transient property from the set for this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getFileExtension()">getFileExtension</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the file extension type used by this <code>Document</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getMimeType()">getMimeType</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the MIME Media type of this <code>Document</code> per
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getSequentialName()">getSequentialName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a string containing a pseudo-random unique string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getSignature()">getSignature</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the element containing the digest/digital signature for
+ this element</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#getUniqueName()">getUniqueName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a pseudo-random unique string which can be used as an element
+ name.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#hashCode()">hashCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#sendToStream(java.io.OutputStream)">sendToStream</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;sendTo)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send the contents of this <code>Document</code> to the specified stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#setElementProperty(java.lang.Object, java.lang.Object)">setElementProperty</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate a transient property with this element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/endpoint/MessageElement.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ <p/>Returns a String representation of the element data.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.document.DocumentStreamIO"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.document.<A HREF="../../../net/jxta/document/DocumentStreamIO.html" title="interface in net.jxta.document">DocumentStreamIO</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../net/jxta/document/DocumentStreamIO.html#getStream()">getStream</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="name"><!-- --></A><H3>
+name</H3>
+<PRE>
+protected final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>name</B></PRE>
+<DL>
+<DD>The name of this element. May be the empty string ("") if the element is
+ unnamed.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="type"><!-- --></A><H3>
+type</H3>
+<PRE>
+protected final <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>type</B></PRE>
+<DL>
+<DD>The type of this element.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="sig"><!-- --></A><H3>
+sig</H3>
+<PRE>
+protected final <A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A> <B>sig</B></PRE>
+<DL>
+<DD>The optional element which digitally signs or digests this element.
+ If null then the element is has no signature element.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cachedGetByteLength"><!-- --></A><H3>
+cachedGetByteLength</H3>
+<PRE>
+protected transient long <B>cachedGetByteLength</B></PRE>
+<DL>
+<DD>cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#getByteLength()"><CODE>getByteLength()</CODE></A> operation.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cachedGetBytes"><!-- --></A><H3>
+cachedGetBytes</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ref/SoftReference.html?is-external=true" title="class or interface in java.lang.ref">SoftReference</A>&lt;byte[]&gt; <B>cachedGetBytes</B></PRE>
+<DL>
+<DD>cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#getBytes(boolean)"><CODE>getBytes(boolean)</CODE></A> operation.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cachedToString"><!-- --></A><H3>
+cachedToString</H3>
+<PRE>
+protected transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ref/SoftReference.html?is-external=true" title="class or interface in java.lang.ref">SoftReference</A>&lt;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt; <B>cachedToString</B></PRE>
+<DL>
+<DD>cached result of <A HREF="../../../net/jxta/endpoint/MessageElement.html#toString()"><CODE>toString()</CODE></A> operation.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MessageElement(java.lang.String, net.jxta.document.MimeMediaType, net.jxta.endpoint.MessageElement)"><!-- --></A><H3>
+MessageElement</H3>
+<PRE>
+protected <B>MessageElement</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
+                         <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A>&nbsp;type,
+                         <A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A>&nbsp;sig)</PRE>
+<DL>
+<DD>Internal constructor for initializing everything but the data.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE> - Name of the Element. May be the empty string ("") if
+             the Element is not named.<DD><CODE>type</CODE> - Type of the Element. null is equivalent to specifying
+             the type "Application/Octet-stream"<DD><CODE>sig</CODE> - optional message digest/digital signature element. If
+             no signature is to be specified, pass null.</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getUniqueName()"><!-- --></A><H3>
+getUniqueName</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getUniqueName</B>()</PRE>
+<DL>
+<DD>Returns a pseudo-random unique string which can be used as an element
+ name.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String containing a pseudo-random value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSequentialName()"><!-- --></A><H3>
+getSequentialName</H3>
+<PRE>
+public static <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getSequentialName</B>()</PRE>
+<DL>
+<DD>Returns a string containing a pseudo-random unique string. The result of
+ <code>String.compare()</code> will be consistent with the order in which
+ results were returned from this function.
+ <p/>
+ <p/>Security Consideration : Be aware that the pseudo random portion of
+ the names generated by this string are shared amongst all peer groups
+ running in the same classloader. You may be at a risk for loss of
+ anonymity if you use the element names produced in more than one peer
+ group.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String containing a pseudo-random value. The result of
+         <code>String.compare()</code> will be consistent with the order in
+         which results were returned from this function.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clone()"><!-- --></A><H3>
+clone</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT>public final <A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A> <B>clone</B>()</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Since Message Elements are immutable this method does
+             nothing useful.</I>
+<P>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="equals(java.lang.Object)"><!-- --></A><H3>
+equals</H3>
+<PRE>
+public boolean <B>equals</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;target)</PRE>
+<DL>
+<DD>
+ <p/>
+ <p/>Elements are considered equal if they have the same name, type and
+ signatures. Element data is not considered by this implementation as
+ it is mostly intended for subclass use.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hashCode()"><!-- --></A><H3>
+hashCode</H3>
+<PRE>
+public int <B>hashCode</B>()</PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>toString</B>()</PRE>
+<DL>
+<DD>
+ <p/>
+ <p/>Returns a String representation of the element data. The
+ <code>'charset'</code> parameter of the message element's mimetype, if
+ any, is used to determine encoding. If the charset specified is
+ unsupported then the default encoding will be used.
+ <p/>
+ <p/>synchronized for caching purposes.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getElementName()"><!-- --></A><H3>
+getElementName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getElementName</B>()</PRE>
+<DL>
+<DD>Returns the name of the MessageElement. Unnamed elements will return
+ the empty string ("");
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String containing the name of the MessageElement.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMimeType()"><!-- --></A><H3>
+getMimeType</H3>
+<PRE>
+public <A HREF="../../../net/jxta/document/MimeMediaType.html" title="class in net.jxta.document">MimeMediaType</A> <B>getMimeType</B>()</PRE>
+<DL>
+<DD>Returns the MIME Media type of this <code>Document</code> per
+ <a href="http://www.ietf.org/rfc/rfc2046.txt" target="_blank">IETF RFC 2046 <i>MIME : Media Types</i></a>.
+
+ <p/>JXTA does not currently support the '<code>Multipart</code>' or
+ '<code>Message</code>' media types.
+ <p/>
+ <p/>Will return "Application/Octet-Stream" if no type was originally
+ specified.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/Document.html#getMimeType()">getMimeType</A></CODE> in interface <CODE><A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The MIME Media Type for this <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFileExtension()"><!-- --></A><H3>
+getFileExtension</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getFileExtension</B>()</PRE>
+<DL>
+<DD>Returns the file extension type used by this <code>Document</code>. This
+ value is usually chosen based upon the MIME Media Type.
+ <p/>
+ <p/>We use the "unknown" extension and leave it to sub-classes to
+ extend this. If we had a mailcap facility we could do better
+ classification based on mimetype.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/Document.html#getFileExtension()">getFileExtension</A></CODE> in interface <CODE><A HREF="../../../net/jxta/document/Document.html" title="interface in net.jxta.document">Document</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An appropriate file extension for this <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getByteLength()"><!-- --></A><H3>
+getByteLength</H3>
+<PRE>
+public long <B>getByteLength</B>()</PRE>
+<DL>
+<DD>Returns the size of the element data in bytes.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>long containing the size of the element data.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBytes(boolean)"><!-- --></A><H3>
+getBytes</H3>
+<PRE>
+public byte[] <B>getBytes</B>(boolean&nbsp;copy)</PRE>
+<DL>
+<DD>Returns a byte array which contains the element data. The byte array
+ returned <b>may be shared amongst all copies of the element</b>,
+ do not modify it. The <code>copy</code> parameter allows you to request a
+ private, modifiable copy of the element data.
+ <p/>
+ <p/>This implementation builds the byte array from the stream.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>copy</CODE> - If true then the result can be modified without damaging the state of this
+             MessageElement. If false, then the result may be a shared copy of the data and
+             should be considered read-only.
+<DT><B>Returns:</B><DD>byte[] Contents of message element.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendToStream(java.io.OutputStream)"><!-- --></A><H3>
+sendToStream</H3>
+<PRE>
+public void <B>sendToStream</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;sendTo)
+                  throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Send the contents of this <code>Document</code> to the specified stream.
+ <p/>
+ <p/>This version probably has sub-optimal performance. Sub-classes
+ should override this implementation.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/document/DocumentStreamIO.html#sendToStream(java.io.OutputStream)">sendToStream</A></CODE> in interface <CODE><A HREF="../../../net/jxta/document/DocumentStreamIO.html" title="interface in net.jxta.document">DocumentStreamIO</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sendTo</CODE> - The OutputStream to which the <code>Document</code> will
+  be written.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - For errors while writing the <code>Document</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSignature()"><!-- --></A><H3>
+getSignature</H3>
+<PRE>
+public <A HREF="../../../net/jxta/endpoint/MessageElement.html" title="class in net.jxta.endpoint">MessageElement</A> <B>getSignature</B>()</PRE>
+<DL>
+<DD>Returns the element containing the digest/digital signature for
+ this element
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Element containing the digital signature.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setElementProperty(java.lang.Object, java.lang.Object)"><!-- --></A><H3>
+setElementProperty</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>setElementProperty</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key,
+                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;value)</PRE>
+<DL>
+<DD>Associate a transient property with this element. If there was a previous
+ value for the key provided then it is returned.
+ <p/>
+ <p/>Element properties are useful for managing the state of element
+ during processing. Element properties are not transmitted with the
+ message element when the message element is sent as part of a message.
+ <p/>
+ <p/>The setting of particular keys may be controlled by a Java Security
+ Manager. Keys of type 'java.lang.Class' are checked against the caller of
+ this method. Only callers which are instances of the key class may modify
+ the property. This check is not possible through reflection. All other
+ types of keys are unchecked.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - the property key<DD><CODE>value</CODE> - the value for the property
+<DT><B>Returns:</B><DD>previous value for the property or null if no previous</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getElementProperty(java.lang.Object)"><!-- --></A><H3>
+getElementProperty</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> <B>getElementProperty</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;key)</PRE>
+<DL>
+<DD>Retrieves a transient property from the set for this element.
+ 
+ <p/>Element properties are useful for managing the state of element
+ during processing. Element properties are not transmitted with the
+ message element when the message element is sent as part of a message.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - the property key.
+<DT><B>Returns:</B><DD>value for the property or null if there is no property for this
+         key.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="copyInputStreamToOutputStream(java.io.InputStream, java.io.OutputStream)"><!-- --></A><H3>
+copyInputStreamToOutputStream</H3>
+<PRE>
+protected static void <B>copyInputStreamToOutputStream</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;source,
+                                                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</A>&nbsp;sink)
+                                             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Copies an input stream to an output stream with buffering.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - The stream to copy from.<DD><CODE>sink</CODE> - The stream to send the data to.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if there is a problem copying the data</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MessageElement.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/endpoint/Message.ElementIterator.html" title="class in net.jxta.endpoint"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/endpoint/MessageFilterListener.html" title="interface in net.jxta.endpoint"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/endpoint/MessageElement.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MessageElement.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

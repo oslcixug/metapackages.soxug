@@ -1,0 +1,747 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+IDFactory.Instantiator (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="IDFactory.Instantiator (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IDFactory.Instantiator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/id/IDFactory.html" title="class in net.jxta.id"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/id/IDFactory.URIInstantiator.html" title="interface in net.jxta.id"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/id/IDFactory.Instantiator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IDFactory.Instantiator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.id</FONT>
+<BR>
+Interface IDFactory.Instantiator</H2>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../net/jxta/id/IDFactory.URIInstantiator.html" title="interface in net.jxta.id">IDFactory.URIInstantiator</A></DD>
+</DL>
+<DL>
+<DT><B>Enclosing class:</B><DD><A HREF="../../../net/jxta/id/IDFactory.html" title="class in net.jxta.id">IDFactory</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public static interface <B>IDFactory.Instantiator</B></DL>
+</PRE>
+
+<P>
+Interface for instantiators of IDs. Each ID Format registered with the
+  ID Factory implements a class with this interface.
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#fromURI(java.net.URI)">fromURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new ID instance from a JXTA ID contained in a URI.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#fromURL(java.net.URL)">fromURL</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Convert to <code>fromURI</code>.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#fromURNNamespaceSpecificPart(java.lang.String)">fromURNNamespaceSpecificPart</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new ID instance from the scheme specific portion of a jxta
+  URN.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#getSupportedIDFormat()">getSupportedIDFormat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID Format value associated with this ID Format</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID)">newCodatID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID Instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, byte[])">newCodatID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, byte[], java.io.InputStream)">newCodatID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           byte[]&nbsp;seed,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, java.io.InputStream)">newCodatID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newModuleClassID()">newModuleClassID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new ModuleClassID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newModuleClassID(net.jxta.platform.ModuleClassID)">newModuleClassID</A></B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;baseClass)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new ModuleClassID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newModuleSpecID(net.jxta.platform.ModuleClassID)">newModuleSpecID</A></B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;baseClass)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new  ModuleSpecID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerGroupID()">newPeerGroupID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerGroupID(byte[])">newPeerGroupID</A></B>(byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerGroupID(net.jxta.peergroup.PeerGroupID)">newPeerGroupID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance with the specified parent group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerGroupID(net.jxta.peergroup.PeerGroupID, byte[])">newPeerGroupID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent,
+               byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance with the specified parent group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerID(net.jxta.peergroup.PeerGroupID)">newPeerID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPeerID(net.jxta.peergroup.PeerGroupID, byte[])">newPeerID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+          byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/pipe/PipeID.html" title="class in net.jxta.pipe">PipeID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPipeID(net.jxta.peergroup.PeerGroupID)">newPipeID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PipeID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/pipe/PipeID.html" title="class in net.jxta.pipe">PipeID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/id/IDFactory.Instantiator.html#newPipeID(net.jxta.peergroup.PeerGroupID, byte[])">newPipeID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+          byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PipeID instance.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getSupportedIDFormat()"><!-- --></A><H3>
+getSupportedIDFormat</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getSupportedIDFormat</B>()</PRE>
+<DL>
+<DD>Returns the ID Format value associated with this ID Format
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String containing the ID format value for this format.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURL(java.net.URL)"><!-- --></A><H3>
+fromURL</H3>
+<PRE>
+<FONT SIZE="-1"><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
+</FONT><A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>fromURL</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;source)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A>,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/UnknownServiceException.html?is-external=true" title="class or interface in java.net">UnknownServiceException</A></PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Convert to <code>fromURI</code>.</I>
+<P>
+<DD>Construct a new ID instance from a JXTA ID contained in a URL.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - URL which will be decoded to create a new ID instance.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the URL.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/UnknownServiceException.html?is-external=true" title="class or interface in java.net">UnknownServiceException</A></CODE> - Is thrown if the URL provided is of
+  a format unrecognized by this JXTA implementation.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></CODE> - Is thrown if the URL provided is not
+  a valid, recognized JXTA URL.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURI(java.net.URI)"><!-- --></A><H3>
+fromURI</H3>
+<PRE>
+<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>fromURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;source)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></PRE>
+<DL>
+<DD>Construct a new ID instance from a JXTA ID contained in a URI.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - URI which will be decoded to create a new ID instance.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the source.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></CODE> - if the URI provided is not a valid,
+  recognized JXTA URI.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURNNamespaceSpecificPart(java.lang.String)"><!-- --></A><H3>
+fromURNNamespaceSpecificPart</H3>
+<PRE>
+<A HREF="../../../net/jxta/id/ID.html" title="class in net.jxta.id">ID</A> <B>fromURNNamespaceSpecificPart</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;source)
+                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></PRE>
+<DL>
+<DD>Construct a new ID instance from the scheme specific portion of a jxta
+  URN.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - the scheme specific portion of a jxta URN.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the source.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></CODE> - if the URI provided is not a valid,
+  recognized JXTA URI.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new CodatID Instance. A new random CodatID is created for
+  the provided Peer Group. This type of CodatID can be used as a
+  canonical reference for dynamic content.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this content will belong.
+<DT><B>Returns:</B><DD>The newly created CodatID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/codat/Codat.html" title="class in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                   byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new CodatID is created for the
+  provided Peer Group. This type of CodatID can be used as a
+  canonical reference for dynamic content.
+
+  <p/>This variant of CodatID allows you to create "Well-known" codats
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of CodatID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this content will belong.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  codatID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created CodatID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/codat/Codat.html" title="class in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, java.io.InputStream)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new random CodatID is created for
+  the provided Peer Group and contains a hash value for the Codat data.
+  This type of Codat ID is most appropriate for static content. By
+  including a hash value this form of Codat ID provides greater
+  assurance of the canonical property of IDs. It also allows the
+  document content returned when this ID is used to be verified to
+  ensure it has not been altered.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this ID will belong.<DD><CODE>in</CODE> - The InputStream from which the content hash is calculated.
+  The stream is read until EOF and then closed.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - I/O Error reading document<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/codat/Codat.html" title="class in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, byte[], java.io.InputStream)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+<A HREF="../../../net/jxta/codat/CodatID.html" title="class in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                   byte[]&nbsp;seed,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new CodatID is created for the
+  provided Peer Group and contains a hash value for the Codat data.
+  By including a hash value this form of Codat ID provides greater
+  assurance of the canonical property of IDs. It also allows the
+  document content returned when this ID is used to be verified to
+  ensure it has not been altered. This type of Codat ID is most
+  appropriate for static content.
+
+  <p/>This variant of CodatID allows you to create "Well-known" codats
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of CodatID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this ID will belong.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  codat ID. The seed information should be at least four bytes in
+  length, though longer values are better.<DD><CODE>in</CODE> - The InputStream from which the content hash is calculated.
+  The stream is read until EOF and then closed.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - I/O Error reading document<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/codat/Codat.html" title="class in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPeerID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>newPeerID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new PeerID instance. A new random peer id will be generated.
+  The PeerID will be a member of the provided group.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this PeerID will belong.
+<DT><B>Returns:</B><DD>The newly created PeerID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPeerID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>newPeerID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                 byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new PeerID instance. A new PeerID will be generated.
+  The PeerID will be a member of the provided group.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this PeerID will belong.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  PeerID. The seed information should be at least four bytes in length,
+  though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID()"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>()</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance. A new random peer group id will be
+  generated. The PeerGroupID will be created using the default ID Format.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(byte[])"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance. A new PeerGroupID will be
+  generated using the provided seed information. The PeerGroupID will
+  be created using the default ID Format.
+
+  <p/>This method allows you to create "Well-known" PeerGroupIDs.
+  This is similar to how the JXTA "World Peer Group" and "Net
+  Peer Group". "Well-known" IDs can be useful for common services
+  that need to do  discovery without advertisements or for network
+  organization  services. Because of the potential for ID collisions
+  and the difficulties with maintaining common service interfaces this
+  variant of PeerGroupID should be used with great caution and
+  pre-planning.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  PeerGroupID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance with the specified parent group.
+  A new random peer group id will be generated.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - The group which will be the parent of this group.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent,
+                           byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance with the specified parent group.
+  A new PeerGroupID will be generated using the provided seed
+  information.
+
+  <p/>This method allows you to create "Well-known" PeerGroupIDs.
+  This is similar to how the JXTA "World Peer Group" and "Net
+  Peer Group". "Well-known" IDs can be useful for common services
+  that need to do  discovery without advertisements or for network
+  organization  services. Because of the potential for ID collisions
+  and the difficulties with maintaining common service interfaces this
+  variant of PeerGroupID should be used with great caution and
+  pre-planning.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - The group which will be the parent of this group.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  PeerGroupID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPipeID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPipeID</H3>
+<PRE>
+<A HREF="../../../net/jxta/pipe/PipeID.html" title="class in net.jxta.pipe">PipeID</A> <B>newPipeID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new PipeID instance. A new random PipeID will be generated.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this Pipe ID will belong.
+<DT><B>Returns:</B><DD>The newly created PipeID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPipeID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPipeID</H3>
+<PRE>
+<A HREF="../../../net/jxta/pipe/PipeID.html" title="class in net.jxta.pipe">PipeID</A> <B>newPipeID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                 byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new PipeID instance. A new pipe id will be generated with
+  the provided seed information. The Pipe ID will be a member of the
+  provided group.
+
+  <p/>This variant of PipeID allows you to create "Well-known" pipes
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of PipeID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this Pipe ID will belong.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  pipeID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>the newly created PipeID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleClassID()"><!-- --></A><H3>
+newModuleClassID</H3>
+<PRE>
+<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A> <B>newModuleClassID</B>()</PRE>
+<DL>
+<DD>Creates a new ModuleClassID instance. A new random ModuleClassID
+  will be generated with a zero value role identifier. This form of
+  ModuleClassID is appropriate for cases where the module does not
+  need to be distinguished from other instances of the same Module.
+  The ModuleClassID will be created using the default ID Format.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The newly created ModuleClassID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleClassID(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+newModuleClassID</H3>
+<PRE>
+<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A> <B>newModuleClassID</B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;baseClass)</PRE>
+<DL>
+<DD>Creates a new ModuleClassID instance. A new random ModuleClassID
+  will be generated with a a random value role identifier and a base
+  class of the provided ModuleClassID. This form of ModuleClassID is
+  appropriate for cases where it is necessary to distinguish instances
+  of the same service interface.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>baseClass</CODE> - The ModuleClassID which will be used as a base
+  class for this new role value instance.
+<DT><B>Returns:</B><DD>The newly created ModuleClassID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleSpecID(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+newModuleSpecID</H3>
+<PRE>
+<A HREF="../../../net/jxta/platform/ModuleSpecID.html" title="class in net.jxta.platform">ModuleSpecID</A> <B>newModuleSpecID</B>(<A HREF="../../../net/jxta/platform/ModuleClassID.html" title="class in net.jxta.platform">ModuleClassID</A>&nbsp;baseClass)</PRE>
+<DL>
+<DD>Creates a new  ModuleSpecID instance. A new random ModuleSpecID will
+  be generated.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>baseClass</CODE> - The ModuleClassID which will be used as a base
+  class for this new ModuleSpecID.
+<DT><B>Returns:</B><DD>The newly created ModuleSpecID.<DT><B>See Also:</B><DD><A HREF="../../../net/jxta/platform/Module.html" title="interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IDFactory.Instantiator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/id/IDFactory.html" title="class in net.jxta.id"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/id/IDFactory.URIInstantiator.html" title="interface in net.jxta.id"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/id/IDFactory.Instantiator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IDFactory.Instantiator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

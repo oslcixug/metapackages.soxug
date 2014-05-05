@@ -1,0 +1,897 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Instantiator (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Instantiator (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Instantiator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/IDFormat.html" title="class in net.jxta.impl.id.binaryID"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/ModuleClassBinaryID.html" title="class in net.jxta.impl.id.binaryID"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/id/binaryID/Instantiator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Instantiator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.id.binaryID</FONT>
+<BR>
+Class Instantiator</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.id.binaryID.Instantiator</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.URIInstantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.URIInstantiator</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public final class <B>Instantiator</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.URIInstantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.URIInstantiator</A></DL>
+</PRE>
+
+<P>
+ID Factory for the binary ID type. All identifiers in this type are prefixed by "binaryid".
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Daniel Brookshier <a HREF="mailto:turbogeek@cluck.com">turbogeek@cluck.com</a></DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#BinaryIDEncoded">BinaryIDEncoded</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our ID Format</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#Instantiator()">Instantiator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#fromURI(java.net.URI)">fromURI</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new ID instance from a JXTA ID contained in a URI.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#fromURL(java.net.URL)">fromURL</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;source)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new ID instance from a JXTA ID contained in a URL.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#fromURNNamespaceSpecificPart(java.lang.String)">fromURNNamespaceSpecificPart</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;encoded)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new ID instance from the scheme specific portion of a jxta
+  URN.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#getSupportedIDFormat()">getSupportedIDFormat</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ID Format value associated with this ID Format</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID)">newCodatID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID Instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, byte[])">newCodatID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           byte[]&nbsp;seed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, byte[], java.io.InputStream)">newCodatID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           byte[]&nbsp;idValue,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newCodatID(net.jxta.peergroup.PeerGroupID, java.io.InputStream)">newCodatID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+           <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new CodatID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newModuleClassID()">newModuleClassID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new ModuleClassID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newModuleClassID(net.jxta.platform.ModuleClassID)">newModuleClassID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;classID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new ModuleClassID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newModuleSpecID(net.jxta.platform.ModuleClassID)">newModuleSpecID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;classID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new  ModuleSpecID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerGroupID()">newPeerGroupID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerGroupID(byte[])">newPeerGroupID</A></B>(byte[]&nbsp;idValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerGroupID(net.jxta.peergroup.PeerGroupID)">newPeerGroupID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance with the specified parent group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerGroupID(net.jxta.peergroup.PeerGroupID, byte[])">newPeerGroupID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent,
+               byte[]&nbsp;idValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerGroupID instance with the specified parent group.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerID(net.jxta.peergroup.PeerGroupID)">newPeerID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPeerID(net.jxta.peergroup.PeerGroupID, byte[])">newPeerID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+          byte[]&nbsp;idValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PeerID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPipeID(net.jxta.peergroup.PeerGroupID)">newPipeID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PipeID instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/Instantiator.html#newPipeID(net.jxta.peergroup.PeerGroupID, byte[])">newPipeID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+          byte[]&nbsp;idValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new PipeID instance.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="BinaryIDEncoded"><!-- --></A><H3>
+BinaryIDEncoded</H3>
+<PRE>
+static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>BinaryIDEncoded</B></PRE>
+<DL>
+<DD>Our ID Format
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.Instantiator.BinaryIDEncoded">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="Instantiator()"><!-- --></A><H3>
+Instantiator</H3>
+<PRE>
+public <B>Instantiator</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getSupportedIDFormat()"><!-- --></A><H3>
+getSupportedIDFormat</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getSupportedIDFormat</B>()</PRE>
+<DL>
+<DD>Returns the ID Format value associated with this ID Format
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#getSupportedIDFormat()" title="class or interface in net.jxta.id">getSupportedIDFormat</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>String containing the ID format value for this format.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURL(java.net.URL)"><!-- --></A><H3>
+fromURL</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A> <B>fromURL</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;source)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A>,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/UnknownServiceException.html?is-external=true" title="class or interface in java.net">UnknownServiceException</A></PRE>
+<DL>
+<DD>Construct a new ID instance from a JXTA ID contained in a URL.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#fromURL(java.net.URL)" title="class or interface in net.jxta.id">fromURL</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - URL which will be decoded to create a new ID instance.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the URL.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</A></CODE> - Is thrown if the URL provided is not
+  a valid, recognized JXTA URL.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/UnknownServiceException.html?is-external=true" title="class or interface in java.net">UnknownServiceException</A></CODE> - Is thrown if the URL provided is of
+  a format unrecognized by this JXTA implementation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURI(java.net.URI)"><!-- --></A><H3>
+fromURI</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A> <B>fromURI</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;source)
+           throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></PRE>
+<DL>
+<DD>Construct a new ID instance from a JXTA ID contained in a URI.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#fromURI(java.net.URI)" title="class or interface in net.jxta.id">fromURI</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - URI which will be decoded to create a new ID instance.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the source.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></CODE> - if the URI provided is not a valid,
+  recognized JXTA URI.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fromURNNamespaceSpecificPart(java.lang.String)"><!-- --></A><H3>
+fromURNNamespaceSpecificPart</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A> <B>fromURNNamespaceSpecificPart</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;encoded)
+                                throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></PRE>
+<DL>
+<DD>Construct a new ID instance from the scheme specific portion of a jxta
+  URN.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#fromURNNamespaceSpecificPart(java.lang.String)" title="class or interface in net.jxta.id">fromURNNamespaceSpecificPart</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>encoded</CODE> - the scheme specific portion of a jxta URN.
+<DT><B>Returns:</B><DD>ID containing the new ID instance initialized from the source.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URISyntaxException.html?is-external=true" title="class or interface in java.net">URISyntaxException</A></CODE> - if the URI provided is not a valid,
+  recognized JXTA URI.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new CodatID Instance. A new random CodatID is created for
+  the provided Peer Group. This type of CodatID can be used as a
+  canonical reference for dynamic content.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newCodatID(net.jxta.peergroup.PeerGroupID)" title="class or interface in net.jxta.id">newCodatID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this content will belong.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported. Use CODAT from UUID package instead.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/Codat.html?is-external=true" title="class or interface in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                          byte[]&nbsp;seed)</PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new CodatID is created for the
+  provided Peer Group. This type of CodatID can be used as a
+  canonical reference for dynamic content.
+
+  <p/>This variant of CodatID allows you to create "Well-known" codats
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of CodatID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newCodatID(net.jxta.peergroup.PeerGroupID, byte[])" title="class or interface in net.jxta.id">newCodatID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this content will belong.<DD><CODE>seed</CODE> - The seed information which will be used in creating the
+  codatID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported. Use CODAT from UUID package instead.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/Codat.html?is-external=true" title="class or interface in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, java.io.InputStream)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new random CodatID is created for
+  the provided Peer Group and contains a hash value for the Codat data.
+  This type of Codat ID is most appropriate for static content. By
+  including a hash value this form of Codat ID provides greater
+  assurance of the canonical property of IDs. It also allows the
+  document content returned when this ID is used to be verified to
+  ensure it has not been altered.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newCodatID(net.jxta.peergroup.PeerGroupID, java.io.InputStream)" title="class or interface in net.jxta.id">newCodatID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this ID will belong.<DD><CODE>in</CODE> - The InputStream from which the content hash is calculated.
+  The stream is read until EOF and then closed.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported. Use CODAT from UUID package instead.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - I/O Error reading document<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/Codat.html?is-external=true" title="class or interface in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newCodatID(net.jxta.peergroup.PeerGroupID, byte[], java.io.InputStream)"><!-- --></A><H3>
+newCodatID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> <B>newCodatID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                          byte[]&nbsp;idValue,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</A>&nbsp;in)
+                   throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates a new CodatID instance. A new CodatID is created for the
+  provided Peer Group and contains a hash value for the Codat data.
+  By including a hash value this form of Codat ID provides greater
+  assurance of the canonical property of IDs. It also allows the
+  document content returned when this ID is used to be verified to
+  ensure it has not been altered. This type of Codat ID is most
+  appropriate for static content.
+
+  <p/>This variant of CodatID allows you to create "Well-known" codats
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of CodatID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newCodatID(net.jxta.peergroup.PeerGroupID, byte[], java.io.InputStream)" title="class or interface in net.jxta.id">newCodatID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this ID will belong.<DD><CODE>idValue</CODE> - The seed information which will be used in creating the
+  codat ID. The seed information should be at least four bytes in
+  length, though longer values are better.<DD><CODE>in</CODE> - The InputStream from which the content hash is calculated.
+  The stream is read until EOF and then closed.
+<DT><B>Returns:</B><DD>The newly created CodatID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported. Use CODAT from UUID package instead.
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - I/O Error reading document<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/Codat.html?is-external=true" title="class or interface in net.jxta.codat"><CODE>Codat</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPeerID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A> <B>newPeerID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new PeerID instance. A new random peer id will be generated.
+  The PeerID will be a member of the provided group.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerID(net.jxta.peergroup.PeerGroupID)" title="class or interface in net.jxta.id">newPeerID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this PeerID will belong.
+<DT><B>Returns:</B><DD>The newly created PeerID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPeerID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A> <B>newPeerID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                        byte[]&nbsp;idValue)</PRE>
+<DL>
+<DD>Creates a new PeerID instance. A new PeerID will be generated.
+  The PeerID will be a member of the provided group.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerID(net.jxta.peergroup.PeerGroupID, byte[])" title="class or interface in net.jxta.id">newPeerID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this PeerID will belong.<DD><CODE>idValue</CODE> - The seed information which will be used in creating the
+  PeerID. The seed information should be at least four bytes in length,
+  though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID()"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>()</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance. A new random peer group id will be
+  generated. The PeerGroupID will be created using the default ID Format.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerGroupID()" title="class or interface in net.jxta.id">newPeerGroupID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(byte[])"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(byte[]&nbsp;idValue)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance. A new PeerGroupID will be
+  generated using the provided seed information. The PeerGroupID will
+  be created using the default ID Format.
+
+  <p/>This method allows you to create "Well-known" PeerGroupIDs.
+  This is similar to how the JXTA "World Peer Group" and "Net
+  Peer Group". "Well-known" IDs can be useful for common services
+  that need to do  discovery without advertisements or for network
+  organization  services. Because of the potential for ID collisions
+  and the difficulties with maintaining common service interfaces this
+  variant of PeerGroupID should be used with great caution and
+  pre-planning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerGroupID(byte[])" title="class or interface in net.jxta.id">newPeerGroupID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>idValue</CODE> - The seed information which will be used in creating the
+  PeerGroupID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance with the specified parent group.
+  A new random peer group id will be generated.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerGroupID(net.jxta.peergroup.PeerGroupID)" title="class or interface in net.jxta.id">newPeerGroupID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - The group which will be the parent of this group.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPeerGroupID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPeerGroupID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> <B>newPeerGroupID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parent,
+                                  byte[]&nbsp;idValue)</PRE>
+<DL>
+<DD>Creates a new PeerGroupID instance with the specified parent group.
+  A new PeerGroupID will be generated using the provided seed
+  information.
+
+  <p/>This method allows you to create "Well-known" PeerGroupIDs.
+  This is similar to how the JXTA "World Peer Group" and "Net
+  Peer Group". "Well-known" IDs can be useful for common services
+  that need to do  discovery without advertisements or for network
+  organization  services. Because of the potential for ID collisions
+  and the difficulties with maintaining common service interfaces this
+  variant of PeerGroupID should be used with great caution and
+  pre-planning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPeerGroupID(net.jxta.peergroup.PeerGroupID, byte[])" title="class or interface in net.jxta.id">newPeerGroupID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - The group which will be the parent of this group.<DD><CODE>idValue</CODE> - The seed information which will be used in creating the
+  PeerGroupID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>The newly created PeerGroupID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup"><CODE>PeerGroup</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPipeID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+newPipeID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A> <B>newPipeID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID)</PRE>
+<DL>
+<DD>Creates a new PipeID instance. A new random PipeID will be generated.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPipeID(net.jxta.peergroup.PeerGroupID)" title="class or interface in net.jxta.id">newPipeID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - The group to which this Pipe ID will belong.
+<DT><B>Returns:</B><DD>The newly created PipeID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newPipeID(net.jxta.peergroup.PeerGroupID, byte[])"><!-- --></A><H3>
+newPipeID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A> <B>newPipeID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;groupID,
+                        byte[]&nbsp;idValue)</PRE>
+<DL>
+<DD>Creates a new PipeID instance. A new pipe id will be generated with
+  the provided seed information. The Pipe ID will be a member of the
+  provided group.
+
+  <p/>This variant of PipeID allows you to create "Well-known" pipes
+  within the context of diverse groups. This can be useful for common
+  services that need to do discovery without advertisements or for
+  network organization services.  Because of the potential for ID
+  collisions and the difficulties with maintaining common service
+  interfaces this variant of PipeID should be used with great caution
+  and pre-planning.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newPipeID(net.jxta.peergroup.PeerGroupID, byte[])" title="class or interface in net.jxta.id">newPipeID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>groupID</CODE> - the group to which this Pipe ID will belong.<DD><CODE>idValue</CODE> - The seed information which will be used in creating the
+  pipeID. The seed information should be at least four bytes in
+  length, though longer values are better.
+<DT><B>Returns:</B><DD>the newly created PipeID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleClassID()"><!-- --></A><H3>
+newModuleClassID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A> <B>newModuleClassID</B>()</PRE>
+<DL>
+<DD>Creates a new ModuleClassID instance. A new random ModuleClassID
+  will be generated with a zero value role identifier. This form of
+  ModuleClassID is appropriate for cases where the module does not
+  need to be distinguished from other instances of the same Module.
+  The ModuleClassID will be created using the default ID Format.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newModuleClassID()" title="class or interface in net.jxta.id">newModuleClassID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The newly created ModuleClassID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported because a binary ID is meant to be created with a random ID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleClassID(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+newModuleClassID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A> <B>newModuleClassID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;classID)</PRE>
+<DL>
+<DD>Creates a new ModuleClassID instance. A new random ModuleClassID
+  will be generated with a a random value role identifier and a base
+  class of the provided ModuleClassID. This form of ModuleClassID is
+  appropriate for cases where it is necessary to distinguish instances
+  of the same service interface.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newModuleClassID(net.jxta.platform.ModuleClassID)" title="class or interface in net.jxta.id">newModuleClassID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>classID</CODE> - The ModuleClassID which will be used as a base
+  class for this new role value instance.
+<DT><B>Returns:</B><DD>The newly created ModuleClassID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported because a binary ID is meant to be created with a random ID.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="newModuleSpecID(net.jxta.platform.ModuleClassID)"><!-- --></A><H3>
+newModuleSpecID</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A> <B>newModuleSpecID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A>&nbsp;classID)</PRE>
+<DL>
+<DD>Creates a new  ModuleSpecID instance. A new random ModuleSpecID will
+  be generated.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true#newModuleSpecID(net.jxta.platform.ModuleClassID)" title="class or interface in net.jxta.id">newModuleSpecID</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/IDFactory.Instantiator.html?is-external=true" title="class or interface in net.jxta.id">IDFactory.Instantiator</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>classID</CODE> - The ModuleClassID which will be used as a base
+  class for this new ModuleSpecID.
+<DT><B>Returns:</B><DD>The newly created ModuleSpecID.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</A></CODE> - This form is not supported because a binary ID is meant to be created with a random ID. Use UUID instead.<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/Module.html?is-external=true" title="class or interface in net.jxta.platform"><CODE>Module</CODE></A></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Instantiator.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/IDFormat.html" title="class in net.jxta.impl.id.binaryID"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/ModuleClassBinaryID.html" title="class in net.jxta.impl.id.binaryID"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/id/binaryID/Instantiator.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="Instantiator.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

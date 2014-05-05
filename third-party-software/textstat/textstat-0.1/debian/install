@@ -1,0 +1,3 @@
+bin/* usr/bin/
+TextSTAT2 usr/share/pyshared/
+textstat.desktop usr/share/applications/

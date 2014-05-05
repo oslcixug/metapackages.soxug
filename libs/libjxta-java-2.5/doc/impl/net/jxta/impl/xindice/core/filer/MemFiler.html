@@ -1,0 +1,693 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+MemFiler (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MemFiler (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MemFiler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/FilerException.html" title="class in net.jxta.impl.xindice.core.filer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/filer/MemFiler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MemFiler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.xindice.core.filer</FONT>
+<BR>
+Class MemFiler</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.xindice.core.filer.MemFiler</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A>, <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A>, <A HREF="../../../../../../net/jxta/impl/xindice/util/Named.html" title="interface in net.jxta.impl.xindice.util">Named</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public final class <B>MemFiler</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></DL>
+</PRE>
+
+<P>
+MemFiler is an In-Memory Filer implementation for Xindice.  MemFiler can be
+ used for temporary collections and caching.  It's basically a layering on
+ top of HashMap.
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#MemFiler()">MemFiler</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#MemFiler(java.util.Map)">MemFiler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>,<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A>&gt;&nbsp;hashTable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#MemFiler(java.util.Map, boolean)">MemFiler</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>,<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A>&gt;&nbsp;hashTable,
+         boolean&nbsp;readOnly)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#close()">close</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;close closes the DBObject</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#create()">create</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;create creates a new DBObject and any associated resources for the new
+ DBObject, such as disk files, etc.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#deleteRecord(net.jxta.impl.xindice.core.data.Key)">deleteRecord</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deleteRecord removes a Record from the Filer based on the
+ specified Key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#drop()">drop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop instructs the DBObjectimplementation to remove itself from
+ existence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#exists()">exists</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exists returns whether or not a physical representation of this
+ DBObject actually exists.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#flush()">flush</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flush forcefully flushes any unwritten buffers to disk.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getName retrieves the contextually important name of the object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#getRecordCount()">getRecordCount</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getRecordCount returns the number of Records in the Filer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/RecordSet.html" title="interface in net.jxta.impl.xindice.core.data">RecordSet</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#getRecordSet()">getRecordSet</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getRecordSet returns a RecordSet object for the current Filer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#isOpened()">isOpened</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isOpened returns whether or not the DBObject is opened for business.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#open()">open</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open opens the DBObject</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#readRecord(net.jxta.impl.xindice.core.data.Key)">readRecord</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readRecord returns a Record from the Filer based on the specified
+ Key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#readRecord(long)">readRecord</A></B>(long&nbsp;pos)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readRecord returns a Record from the Filer at the specified
+ position.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#setLocation(java.io.File, java.lang.String)">setLocation</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;root,
+            <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;location)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/MemFiler.html#writeRecord(net.jxta.impl.xindice.core.data.Key, net.jxta.impl.xindice.core.data.Value)">writeRecord</A></B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key,
+            <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeRecord writes a Value to the Filer based on the specified Key.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="MemFiler()"><!-- --></A><H3>
+MemFiler</H3>
+<PRE>
+public <B>MemFiler</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="MemFiler(java.util.Map, boolean)"><!-- --></A><H3>
+MemFiler</H3>
+<PRE>
+public <B>MemFiler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>,<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A>&gt;&nbsp;hashTable,
+                boolean&nbsp;readOnly)</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="MemFiler(java.util.Map)"><!-- --></A><H3>
+MemFiler</H3>
+<PRE>
+public <B>MemFiler</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</A>&lt;<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>,<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A>&gt;&nbsp;hashTable)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="setLocation(java.io.File, java.lang.String)"><!-- --></A><H3>
+setLocation</H3>
+<PRE>
+public void <B>setLocation</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</A>&nbsp;root,
+                        <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;location)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getName</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/util/Named.html#getName()">Named</A></CODE></B></DD>
+<DD>getName retrieves the contextually important name of the object
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/util/Named.html#getName()">getName</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/util/Named.html" title="interface in net.jxta.impl.xindice.util">Named</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The object's name</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="create()"><!-- --></A><H3>
+create</H3>
+<PRE>
+public boolean <B>create</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#create()">DBObject</A></CODE></B></DD>
+<DD>create creates a new DBObject and any associated resources for the new
+ DBObject, such as disk files, etc.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#create()">create</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Whether or not the DBObject was created</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public boolean <B>open</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#open()">DBObject</A></CODE></B></DD>
+<DD>open opens the DBObject
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#open()">open</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Whether or not the DBObject was opened</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isOpened()"><!-- --></A><H3>
+isOpened</H3>
+<PRE>
+public boolean <B>isOpened</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#isOpened()">DBObject</A></CODE></B></DD>
+<DD>isOpened returns whether or not the DBObject is opened for business.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#isOpened()">isOpened</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The open status of the DBObject</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="exists()"><!-- --></A><H3>
+exists</H3>
+<PRE>
+public boolean <B>exists</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#exists()">DBObject</A></CODE></B></DD>
+<DD>exists returns whether or not a physical representation of this
+ DBObject actually exists.  In the case of a HashFiler, this would
+ check for the file, and in the case of an FTPFiler, it might
+ perform a connection check.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#exists()">exists</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Whether or not the physical resource exists</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drop()"><!-- --></A><H3>
+drop</H3>
+<PRE>
+public boolean <B>drop</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#drop()">DBObject</A></CODE></B></DD>
+<DD>drop instructs the DBObjectimplementation to remove itself from
+ existence.  The DBObject's parent is responsible for removing any
+ references to the DBObject in its own context.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#drop()">drop</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Whether or not the DBObject was dropped</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public boolean <B>close</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#close()">DBObject</A></CODE></B></DD>
+<DD>close closes the DBObject
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html#close()">close</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBObject.html" title="interface in net.jxta.impl.xindice.core">DBObject</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Whether or not the DBObject was closed</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="flush()"><!-- --></A><H3>
+flush</H3>
+<PRE>
+public void <B>flush</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#flush()">Filer</A></CODE></B></DD>
+<DD>flush forcefully flushes any unwritten buffers to disk.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#flush()">flush</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readRecord(net.jxta.impl.xindice.core.data.Key)"><!-- --></A><H3>
+readRecord</H3>
+<PRE>
+public <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A> <B>readRecord</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)
+                  throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#readRecord(net.jxta.impl.xindice.core.data.Key)">Filer</A></CODE></B></DD>
+<DD>readRecord returns a Record from the Filer based on the specified
+ Key.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#readRecord(net.jxta.impl.xindice.core.data.Key)">readRecord</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The Record's Key
+<DT><B>Returns:</B><DD>The returned Record
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readRecord(long)"><!-- --></A><H3>
+readRecord</H3>
+<PRE>
+public <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Record.html" title="class in net.jxta.impl.xindice.core.data">Record</A> <B>readRecord</B>(long&nbsp;pos)
+                  throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#readRecord(long)">Filer</A></CODE></B></DD>
+<DD>readRecord returns a Record from the Filer at the specified
+ position. The Record's Key will be set to null.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#readRecord(long)">readRecord</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pos</CODE> - The Record's position
+<DT><B>Returns:</B><DD>The returned Record
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="writeRecord(net.jxta.impl.xindice.core.data.Key, net.jxta.impl.xindice.core.data.Value)"><!-- --></A><H3>
+writeRecord</H3>
+<PRE>
+public long <B>writeRecord</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key,
+                        <A HREF="../../../../../../net/jxta/impl/xindice/core/data/Value.html" title="class in net.jxta.impl.xindice.core.data">Value</A>&nbsp;value)
+                 throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#writeRecord(net.jxta.impl.xindice.core.data.Key, net.jxta.impl.xindice.core.data.Value)">Filer</A></CODE></B></DD>
+<DD>writeRecord writes a Value to the Filer based on the specified Key.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#writeRecord(net.jxta.impl.xindice.core.data.Key, net.jxta.impl.xindice.core.data.Value)">writeRecord</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The Record's Key<DD><CODE>value</CODE> - The Record's Value
+<DT><B>Returns:</B><DD>0 if the Record could not be written, the starting
+ offset of the Record otherwise (used for indexing)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteRecord(net.jxta.impl.xindice.core.data.Key)"><!-- --></A><H3>
+deleteRecord</H3>
+<PRE>
+public boolean <B>deleteRecord</B>(<A HREF="../../../../../../net/jxta/impl/xindice/core/data/Key.html" title="class in net.jxta.impl.xindice.core.data">Key</A>&nbsp;key)
+                     throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#deleteRecord(net.jxta.impl.xindice.core.data.Key)">Filer</A></CODE></B></DD>
+<DD>deleteRecord removes a Record from the Filer based on the
+ specified Key.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#deleteRecord(net.jxta.impl.xindice.core.data.Key)">deleteRecord</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>key</CODE> - The Record's Key
+<DT><B>Returns:</B><DD>Whether or not the Record was deleted
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRecordCount()"><!-- --></A><H3>
+getRecordCount</H3>
+<PRE>
+public long <B>getRecordCount</B>()
+                    throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#getRecordCount()">Filer</A></CODE></B></DD>
+<DD>getRecordCount returns the number of Records in the Filer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#getRecordCount()">getRecordCount</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The Record count
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getRecordSet()"><!-- --></A><H3>
+getRecordSet</H3>
+<PRE>
+public <A HREF="../../../../../../net/jxta/impl/xindice/core/data/RecordSet.html" title="interface in net.jxta.impl.xindice.core.data">RecordSet</A> <B>getRecordSet</B>()
+                       throws <A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#getRecordSet()">Filer</A></CODE></B></DD>
+<DD>getRecordSet returns a RecordSet object for the current Filer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html#getRecordSet()">getRecordSet</A></CODE> in interface <CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Filer.html" title="interface in net.jxta.impl.xindice.core.filer">Filer</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The Filer Enumerator
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../../../net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A></CODE> - if a db exception occurs</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/MemFiler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/FilerException.html" title="class in net.jxta.impl.xindice.core.filer"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../net/jxta/impl/xindice/core/filer/Paged.html" title="class in net.jxta.impl.xindice.core.filer"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../../index.html?net/jxta/impl/xindice/core/filer/MemFiler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="MemFiler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

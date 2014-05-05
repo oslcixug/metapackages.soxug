@@ -1,0 +1,739 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DigestTool (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DigestTool (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DigestTool.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/CodatBinaryID.html" title="class in net.jxta.impl.id.binaryID"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/IDFormat.html" title="class in net.jxta.impl.id.binaryID"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/id/binaryID/DigestTool.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DigestTool.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.id.binaryID</FONT>
+<BR>
+Class DigestTool</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.id.binaryID.DigestTool</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>DigestTool</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+This is a utility class used to create pipe advertisement named and BinaryID for the pipeID to create
+ a private address space that can be hosted in the public discovery system or sent over unencrypted
+ channeds without revealing their intent or purpose. <p>
+ <p/>
+ We use a one-way hashing algorythum to create an ID from private information like
+ a user's social security number or a user's email address.
+ We search for the pipe by with this private information securly by creating the
+ matching hash using the same methods. <p>
+ <p/>
+ The purpose of this system is to create a way to search
+ for a pipe (or other BinaryID based system) without exposing the
+ pipe owner's clearTextID while allowing for  people that
+ know what they are looking for to find the right pipe. The
+ system also has the ability to create pipes that have a specific purpose.
+ For example, the email address is appended with a function name. Say you
+ have a pipe for messages and one for administrative purposes. You would
+ supply the email and a string for the function. The same combination can be
+ created by another peer to search for either of these pipes. <p>
+ <p/>
+ This implementation uses the "SHA-1" algorythum. This was selected for relitive
+ speed. It is used as a one-way conversion that cannot be reversed engineered to
+ create the original string. This allows you to publish the hash without the
+ possibility of the contents being decoded. This allows for public indexing of
+ data that is only known by the parties involved.<p>
+ <p/>
+ Note that this can also be used to generate safe password verification hash codes.
+ Sample useage:
+ <code>
+ String clearTextID = "turbogeek@cluck.com";
+ String function = "eventPipe";
+ System.out.println("clear text ID: "+clearTextID);
+ System.out.println("function text: "+function);
+ String digest1 = DigestID.generateHashString(clearTextID, function);
+ String digest2 = DigestID.generateHashString(clearTextID);
+ System.out.println("Digest1: '"+digest1+"'");
+ System.out.println("Digest2: '"+digest2+"'");
+ System.out.println("test1: "+DigestID.test(clearTextID, function,digest1));
+ System.out.println("test2: "+DigestID.test(clearTextID, digest2));
+ System.out.println("Digest1 != Digest2: "+DigestID.test(clearTextID, function,digest2));
+ </code><p>
+ <p/>
+ To use an algorythum other than SHA-1, you will need stronger encyption.
+ The BouncyCastle that comes with JXTA is just a minimum implimentation so
+ a good choice is  the normal bouncy castle (it is much larger, nearing a meg,
+ which is why it is not a part of the normal JXTA distribution. The full version
+ of bouncy includes SHA-128, SHA-256, SHA-384, and SHA-512.<p>
+ <p/>
+ Here is how you create a provider from the full version of Bouncy. Once you do this, you can access the extended
+ Digest ecryption levels.
+ <code>
+ provider = new org.bouncycastle.jce.provider.BouncyCastleProvider();
+ System.out.println("provider:"+provider.getName());
+ Security.addProvider(provider);
+ </code><p>
+ Security Note<p>
+ <p/>
+ This class should have all of its fields and properties marked as 'final' to prevent overriding the default behavior.
+ Failure to do so could allow a less scrupulous person to cause the BinaryID or hash codes to contain the original information.
+ Note that the class itself is not final to allow for additional convienience methods to be added. There
+ a no methods for creating ModuleClassBinaryID, ModuleSpecBinaryID, or CodatID because this is meant for general'
+ use, not for extending platform (you can write your own using similar code). <p>
+<P>
+
+<P>
+<DL>
+<DT><B>Version:</B></DT>
+  <DD>$Revision: 1.9 $</DD>
+<DT><B>Author:</B></DT>
+  <DD>Daniel Brookshier <a HREF="mailto:turbogeek@cluck.com">turbogeek@cluck.com</a></DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#algorithmType">algorithmType</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#debug">debug</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;varaible used for conditional compile of debug printing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#functionSeperator">functionSeperator</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tilde character used to seperate candidate strings from a function.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#SHA128">SHA128</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA-128 digest algorithm type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#SHA256">SHA256</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA-256 digest algorithm type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#SHA384">SHA384</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA-384 digest algorithm type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#SHA512">SHA512</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA-512 digest algorithm type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#SHAOne">SHAOne</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defualt SHA-1 digest algorithm type.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#DigestTool()">DigestTool</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#DigestTool(java.lang.String)">DigestTool</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithmType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/PeerGroupBinaryID.html" title="class in net.jxta.impl.id.binaryID">PeerGroupBinaryID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#createPeerGroupID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">createPeerGroupID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parentPeerGroupID,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a PeerGroupID based on the BinaryID type with a digest of the clearTextID and function.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/PeerBinaryID.html" title="class in net.jxta.impl.id.binaryID">PeerBinaryID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#createPeerID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">createPeerID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;peerGroupID,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a PeerID based on the BinaryID type with a digest of the clearTextID and function.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/PipeBinaryID.html" title="class in net.jxta.impl.id.binaryID">PipeBinaryID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#createPipeID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">createPipeID</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;peerGroupID,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a PipeID based on the BinaryID type with a digest of the clearTextID and function.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#generateHash(java.lang.String)">generateHash</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates a SHA-1 digest hash of the string: clearTextID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#generateHash(java.lang.String, java.lang.String)">generateHash</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates an SHA-1 digest hash of the string: clearTextID+"-"+function or: clearTextID if function was blank.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#generateHashString(java.lang.String)">generateHashString</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates a Base64 encoded string of an SHA-1 digest hash of the string: clearTextID.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#generateHashString(java.lang.String, java.lang.String)">generateHashString</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                   <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates a Base64 encoded string of an SHA-1 digest hash of the string: clearTextID+"-"+function or: clearTextID if function was blank.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#test(java.lang.String, byte[])">test</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+     byte[]&nbsp;testHash)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compares a clear text code or ID with a candidate hash code.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#test(java.lang.String, java.lang.String)">test</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;testHash)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compares a clear text code or ID with a candidate hash code.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/id/binaryID/DigestTool.html#test(java.lang.String, java.lang.String, java.lang.String)">test</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;testHash)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates an SHA-1 digest hash of the string: clearTextID.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="debug"><!-- --></A><H3>
+debug</H3>
+<PRE>
+public static final boolean <B>debug</B></PRE>
+<DL>
+<DD>varaible used for conditional compile of debug printing.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.debug">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SHAOne"><!-- --></A><H3>
+SHAOne</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SHAOne</B></PRE>
+<DL>
+<DD>Defualt SHA-1 digest algorithm type. This is a 20 byte hash function (note: that MD5 is only 16 so we don't use it).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.SHAOne">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SHA128"><!-- --></A><H3>
+SHA128</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SHA128</B></PRE>
+<DL>
+<DD>SHA-128 digest algorithm type. This is a 128 bit hash function (note: must have another provider registered to use).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.SHA128">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SHA256"><!-- --></A><H3>
+SHA256</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SHA256</B></PRE>
+<DL>
+<DD>SHA-256 digest algorithm type. This is a 256 bit hash function (note: must have another provider registered to use).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.SHA256">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SHA384"><!-- --></A><H3>
+SHA384</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SHA384</B></PRE>
+<DL>
+<DD>SHA-384 digest algorithm type. This is a 384 bit hash function (note: must have another provider registered to use).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.SHA384">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SHA512"><!-- --></A><H3>
+SHA512</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>SHA512</B></PRE>
+<DL>
+<DD>SHA-512 digest algorithm type. This is a 512 bit hash function (note: must have another provider registered to use).
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.SHA512">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="functionSeperator"><!-- --></A><H3>
+functionSeperator</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>functionSeperator</B></PRE>
+<DL>
+<DD>Tilde character used to seperate candidate strings from a function.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.id.binaryID.DigestTool.functionSeperator">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="algorithmType"><!-- --></A><H3>
+algorithmType</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>algorithmType</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DigestTool()"><!-- --></A><H3>
+DigestTool</H3>
+<PRE>
+public <B>DigestTool</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="DigestTool(java.lang.String)"><!-- --></A><H3>
+DigestTool</H3>
+<PRE>
+public <B>DigestTool</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;algorithmType)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="createPipeID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+createPipeID</H3>
+<PRE>
+public final <A HREF="../../../../../net/jxta/impl/id/binaryID/PipeBinaryID.html" title="class in net.jxta.impl.id.binaryID">PipeBinaryID</A> <B>createPipeID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;peerGroupID,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</PRE>
+<DL>
+<DD>Create a PipeID based on the BinaryID type with a digest of the clearTextID and function.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerGroupID</CODE> - Parent peer group ID.<DD><CODE>clearTextID</CODE> - String used as the significant part of the address<DD><CODE>function</CODE> - String used to diferentiate different clearTextID addresses (can be null).
+<DT><B>Returns:</B><DD>PipeBinaryID with the digest hash of the string: clearTextID+"~"+function.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPeerGroupID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+createPeerGroupID</H3>
+<PRE>
+public final <A HREF="../../../../../net/jxta/impl/id/binaryID/PeerGroupBinaryID.html" title="class in net.jxta.impl.id.binaryID">PeerGroupBinaryID</A> <B>createPeerGroupID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;parentPeerGroupID,
+                                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</PRE>
+<DL>
+<DD>Create a PeerGroupID based on the BinaryID type with a digest of the clearTextID and function.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parentPeerGroupID</CODE> - Parent peer group ID.<DD><CODE>clearTextID</CODE> - String used as the significant part of the address<DD><CODE>function</CODE> - String used to diferentiate different clearTextID addresses (can be null).
+<DT><B>Returns:</B><DD>PeerGroupBinaryID with the digest hash of the string: clearTextID+"~"+function.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createPeerID(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)"><!-- --></A><H3>
+createPeerID</H3>
+<PRE>
+public final <A HREF="../../../../../net/jxta/impl/id/binaryID/PeerBinaryID.html" title="class in net.jxta.impl.id.binaryID">PeerBinaryID</A> <B>createPeerID</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A>&nbsp;peerGroupID,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</PRE>
+<DL>
+<DD>Create a PeerID based on the BinaryID type with a digest of the clearTextID and function.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerGroupID</CODE> - Parent peer group ID.<DD><CODE>clearTextID</CODE> - String used as the significant part of the address<DD><CODE>function</CODE> - String used to diferentiate different clearTextID addresses (can be null).
+<DT><B>Returns:</B><DD>PeerBinaryID with the digest hash of the string: clearTextID+"~"+function.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="generateHashString(java.lang.String)"><!-- --></A><H3>
+generateHashString</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>generateHashString</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID)</PRE>
+<DL>
+<DD>Generates a Base64 encoded string of an SHA-1 digest hash of the string: clearTextID.<p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.
+<DT><B>Returns:</B><DD>Base64 encoded string containing the hash of the string: clearTextID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="generateHashString(java.lang.String, java.lang.String)"><!-- --></A><H3>
+generateHashString</H3>
+<PRE>
+public final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>generateHashString</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                                       <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</PRE>
+<DL>
+<DD>Generates a Base64 encoded string of an SHA-1 digest hash of the string: clearTextID+"-"+function or: clearTextID if function was blank.<p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.<DD><CODE>function</CODE> - A function related to the clearTextID string. This is used to create a hash associated with clearTextID so that it is a uique code.
+<DT><B>Returns:</B><DD>Base64 encoded string containing the hash of the string: clearTextID+"-"+function or clearTextID if function was blank.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="generateHash(java.lang.String)"><!-- --></A><H3>
+generateHash</H3>
+<PRE>
+public final byte[] <B>generateHash</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID)</PRE>
+<DL>
+<DD>Generates a SHA-1 digest hash of the string: clearTextID.<p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.
+<DT><B>Returns:</B><DD>String containing the hash of the string: clearTextID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="generateHash(java.lang.String, java.lang.String)"><!-- --></A><H3>
+generateHash</H3>
+<PRE>
+public final byte[] <B>generateHash</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function)</PRE>
+<DL>
+<DD>Generates an SHA-1 digest hash of the string: clearTextID+"-"+function or: clearTextID if function was blank.<p>
+ <p/>
+ Note that the SHA-1 used only creates a 20 byte hash.<p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.<DD><CODE>function</CODE> - A function related to the clearTextID string. This is used to create a hash associated with clearTextID so that it is a uique code.
+<DT><B>Returns:</B><DD>array of bytes containing the hash of the string: clearTextID+"-"+function or clearTextID if function was blank. Can return null if SHA-1 does not exist on platform.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="test(java.lang.String, java.lang.String, java.lang.String)"><!-- --></A><H3>
+test</H3>
+<PRE>
+public final boolean <B>test</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;function,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;testHash)</PRE>
+<DL>
+<DD>Generates an SHA-1 digest hash of the string: clearTextID.<p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>function</CODE> - the function<DD><CODE>testHash</CODE> - test hash<DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.
+<DT><B>Returns:</B><DD>String containing the hash of the string: clearTextID.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="test(java.lang.String, java.lang.String)"><!-- --></A><H3>
+test</H3>
+<PRE>
+public final boolean <B>test</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;testHash)</PRE>
+<DL>
+<DD>Compares a clear text code or ID with a candidate hash code.
+ This is used to confirm that the clearTextID can be successfully converted to the hash.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.<DD><CODE>testHash</CODE> - A string of hashed string.
+<DT><B>Returns:</B><DD>true if the hash created from clearTextID is equal to the testHash string.Can return false if SHA-1 does not exist on platform.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="test(java.lang.String, byte[])"><!-- --></A><H3>
+test</H3>
+<PRE>
+public final boolean <B>test</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;clearTextID,
+                          byte[]&nbsp;testHash)</PRE>
+<DL>
+<DD>Compares a clear text code or ID with a candidate hash code.
+ This is used to confirm that the clearTextID can be successfully converted to the hash.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>clearTextID</CODE> - A string that is to be hashed. This can be any string used for hashing or hiding data.<DD><CODE>testHash</CODE> - A string of hashed string.
+<DT><B>Returns:</B><DD>true if the hash created from clearTextID is equal to the testHash string.Can return false if SHA-1 does not exist on platform.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DigestTool.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/CodatBinaryID.html" title="class in net.jxta.impl.id.binaryID"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/id/binaryID/IDFormat.html" title="class in net.jxta.impl.id.binaryID"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/id/binaryID/DigestTool.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DigestTool.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

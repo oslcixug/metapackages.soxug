@@ -1,0 +1,1117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+Serialized Form (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Serialized Form (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Package</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Use</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html?serialized-form.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="serialized-form.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<CENTER>
+<H1>
+Serialized Form</H1>
+</CENTER>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.id.binaryID</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.BinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.BinaryID</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+encodedValue</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>encodedValue</B></PRE>
+<DL>
+<DD>Array that holds the length and the value of the id in base64 format. This is the default format
+ rather than binary byte because it saves time converting. Odds of returning the actual binary are
+ low so it is done on demand only. Callers of the toByteArray() method should consider the cost of
+ decoding if it is to be called often.
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.CodatBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/CodatBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.CodatBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.ModuleClassBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/ModuleClassBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.ModuleClassBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+classID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>classID</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+parentClassID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>parentClassID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+roleID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>roleID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+peerGroupID</H3>
+<PRE>
+<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> <B>peerGroupID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.ModuleSpecBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/ModuleSpecBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.ModuleSpecBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+classID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>classID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+baseClassID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>baseClassID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+specID</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/binaryID/BinaryID.html" title="class in net.jxta.impl.id.binaryID">BinaryID</A> <B>specID</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.PeerBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/PeerBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.PeerBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>id</B></PRE>
+<DL>
+<DD>This is the id string used in the XML of the id. The format is TX0..Xn where T is the type and X0 through Xn are the base64 encoded id.
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.PeerGroupBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/PeerGroupBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.PeerGroupBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>id</B></PRE>
+<DL>
+<DD>This is the id string used in the XML of the id. The format is TX0..Xn where T is the type and X0 through Xn are the base64 encoded id.
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.binaryID.PipeBinaryID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/binaryID/PipeBinaryID.html" title="class in net.jxta.impl.id.binaryID">net.jxta.impl.id.binaryID.PipeBinaryID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.id.CBID</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.CodatID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/CodatID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.CodatID</A> extends <A HREF="net/jxta/impl/id/UUID/CodatID.html" title="class in net.jxta.impl.id.UUID">CodatID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.ModuleClassID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/ModuleClassID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.ModuleClassID</A> extends <A HREF="net/jxta/impl/id/UUID/ModuleClassID.html" title="class in net.jxta.impl.id.UUID">ModuleClassID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.ModuleSpecID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/ModuleSpecID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.ModuleSpecID</A> extends <A HREF="net/jxta/impl/id/UUID/ModuleSpecID.html" title="class in net.jxta.impl.id.UUID">ModuleSpecID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.PeerGroupID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/PeerGroupID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.PeerGroupID</A> extends <A HREF="net/jxta/impl/id/UUID/PeerGroupID.html" title="class in net.jxta.impl.id.UUID">PeerGroupID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.PeerID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/PeerID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.PeerID</A> extends <A HREF="net/jxta/impl/id/UUID/PeerID.html" title="class in net.jxta.impl.id.UUID">PeerID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.id.CBID.PipeID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/CBID/PipeID.html" title="class in net.jxta.impl.id.CBID">net.jxta.impl.id.CBID.PipeID</A> extends <A HREF="net/jxta/impl/id/UUID/PipeID.html" title="class in net.jxta.impl.id.UUID">PipeID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.id.unknown</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.id.unknown.ID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/unknown/ID.html" title="class in net.jxta.impl.id.unknown">net.jxta.impl.id.unknown.ID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+unqiueValue</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>unqiueValue</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.id.UUID</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.CodatID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/CodatID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.CodatID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/codat/CodatID.html?is-external=true" title="class or interface in net.jxta.codat">CodatID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.IDBytes"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.IDBytes</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+bytes</H3>
+<PRE>
+byte[] <B>bytes</B></PRE>
+<DL>
+<DD>The bytes.
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.ModuleClassID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/ModuleClassID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.ModuleClassID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleClassID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleClassID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.ModuleSpecID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/ModuleSpecID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.ModuleSpecID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/platform/ModuleSpecID.html?is-external=true" title="class or interface in net.jxta.platform">ModuleSpecID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.PeerGroupID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/PeerGroupID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.PeerGroupID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroupID.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroupID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.PeerID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/PeerID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.PeerID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peer/PeerID.html?is-external=true" title="class or interface in net.jxta.peer">PeerID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.PipeID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/PipeID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.PipeID</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/pipe/PipeID.html?is-external=true" title="class or interface in net.jxta.pipe">PipeID</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+id</H3>
+<PRE>
+<A HREF="net/jxta/impl/id/UUID/IDBytes.html" title="class in net.jxta.impl.id.UUID">IDBytes</A> <B>id</B></PRE>
+<DL>
+<DD>The id data
+<P>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.id.UUID.UUID"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/id/UUID/UUID.html" title="class in net.jxta.impl.id.UUID">net.jxta.impl.id.UUID.UUID</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+mostSig</H3>
+<PRE>
+long <B>mostSig</B></PRE>
+<DL>
+<DD>The most significant 64 bits.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+leastSig</H3>
+<PRE>
+long <B>leastSig</B></PRE>
+<DL>
+<DD>The least significant 64 bits.
+<P>
+<DL>
+</DL>
+</DL>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.peergroup</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.peergroup.ConfigDialog"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/peergroup/ConfigDialog.html" title="class in net.jxta.impl.peergroup">net.jxta.impl.peergroup.ConfigDialog</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/Frame.html?is-external=true" title="class or interface in java.awt">Frame</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+configAdv</H3>
+<PRE>
+<A HREF="net/jxta/impl/protocol/PlatformConfig.html" title="class in net.jxta.impl.protocol">PlatformConfig</A> <B>configAdv</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+helpLabel</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/Label.html?is-external=true" title="class or interface in java.awt">Label</A> <B>helpLabel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+idPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.IdPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.IdPanel</A> <B>idPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+enablingPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.EnablingPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.EnablingPanel</A> <B>enablingPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+tcpPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.IPTptPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.IPTptPanel</A> <B>tcpPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+httpPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.IPTptPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.IPTptPanel</A> <B>httpPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+rdvPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.RdvPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.RdvPanel</A> <B>rdvPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+relayPanel</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.RelayPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.RelayPanel</A> <B>relayPanel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+ok</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/Button.html?is-external=true" title="class or interface in java.awt">Button</A> <B>ok</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+cancel</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/awt/Button.html?is-external=true" title="class or interface in java.awt">Button</A> <B>cancel</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+pages</H3>
+<PRE>
+<A HREF="net/jxta/impl/peergroup/ConfigDialog.PagesPanel.html" title="class in net.jxta.impl.peergroup">ConfigDialog.PagesPanel</A> <B>pages</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+done</H3>
+<PRE>
+boolean <B>done</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+canceled</H3>
+<PRE>
+boolean <B>canceled</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+tcpMulticastAddr</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>tcpMulticastAddr</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+tcpMulticastPort</H3>
+<PRE>
+int <B>tcpMulticastPort</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+tcpMulticastLength</H3>
+<PRE>
+int <B>tcpMulticastLength</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<P>
+<A NAME="net.jxta.impl.peergroup.IncompleteConfigurationException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/peergroup/IncompleteConfigurationException.html" title="class in net.jxta.impl.peergroup">net.jxta.impl.peergroup.IncompleteConfigurationException</A> extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/exception/ConfiguratorException.html?is-external=true" title="class or interface in net.jxta.exception">ConfiguratorException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.rendezvous.rpv</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.rendezvous.rpv.PeerViewEvent"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/rendezvous/rpv/PeerViewEvent.html" title="class in net.jxta.impl.rendezvous.rpv">net.jxta.impl.rendezvous.rpv.PeerViewEvent</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventObject.html?is-external=true" title="class or interface in java.util">EventObject</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+type</H3>
+<PRE>
+int <B>type</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+<H3>
+element</H3>
+<PRE>
+<A HREF="net/jxta/impl/rendezvous/rpv/PeerViewElement.html" title="class in net.jxta.impl.rendezvous.rpv">PeerViewElement</A> <B>element</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.xindice.core</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.xindice.core.DBException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">net.jxta.impl.xindice.core.DBException</A> extends <A HREF="net/jxta/impl/xindice/util/XindiceException.html" title="class in net.jxta.impl.xindice.util">XindiceException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+faultCode</H3>
+<PRE>
+int <B>faultCode</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.xindice.core.filer</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.xindice.core.filer.BTreeCorruptException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/core/filer/BTreeCorruptException.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.BTreeCorruptException</A> extends <A HREF="net/jxta/impl/xindice/core/filer/BTreeException.html" title="class in net.jxta.impl.xindice.core.filer">BTreeException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.xindice.core.filer.BTreeException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/core/filer/BTreeException.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.BTreeException</A> extends <A HREF="net/jxta/impl/xindice/core/filer/FilerException.html" title="class in net.jxta.impl.xindice.core.filer">FilerException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.xindice.core.filer.BTreeNotFoundException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/core/filer/BTreeNotFoundException.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.BTreeNotFoundException</A> extends <A HREF="net/jxta/impl/xindice/core/filer/BTreeException.html" title="class in net.jxta.impl.xindice.core.filer">BTreeException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.xindice.core.filer.FilerException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/core/filer/FilerException.html" title="class in net.jxta.impl.xindice.core.filer">net.jxta.impl.xindice.core.filer.FilerException</A> extends <A HREF="net/jxta/impl/xindice/core/DBException.html" title="class in net.jxta.impl.xindice.core">DBException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<HR SIZE="4" NOSHADE>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="center"><FONT SIZE="+2">
+<B>Package</B> <B>net.jxta.impl.xindice.util</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="net.jxta.impl.xindice.util.XindiceException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/util/XindiceException.html" title="class in net.jxta.impl.xindice.util">net.jxta.impl.xindice.util.XindiceException</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+
+<P>
+<A NAME="net.jxta.impl.xindice.util.XindiceRuntimeException"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Class <A HREF="net/jxta/impl/xindice/util/XindiceRuntimeException.html" title="class in net.jxta.impl.xindice.util">net.jxta.impl.xindice.util.XindiceRuntimeException</A> extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</A> implements Serializable</B></FONT></TH>
+</TR>
+</TABLE>
+
+<P>
+<A NAME="serializedForm"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Serialized Fields</B></FONT></TH>
+</TR>
+</TABLE>
+
+<H3>
+cause</H3>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A> <B>cause</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<P>
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Package</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <FONT CLASS="NavBarFont1">Use</FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html?serialized-form.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="serialized-form.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

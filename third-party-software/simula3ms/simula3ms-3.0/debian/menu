@@ -1,0 +1,2 @@
+?package(simula3ms):needs="x11" section="Applications/Programming"\
+  title="simula3ms" command="/usr/bin/simula3ms"

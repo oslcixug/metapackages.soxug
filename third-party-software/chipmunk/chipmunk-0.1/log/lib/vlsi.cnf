@@ -1,0 +1,8 @@
+{ Configuration file for Digital LOG with VLSI stuff }
+include /lib/log/dlog.cnf
+
+get + v_*
+menu led switch vdd gnd v_nfet v_pfet v_inv
+
+glow on
+

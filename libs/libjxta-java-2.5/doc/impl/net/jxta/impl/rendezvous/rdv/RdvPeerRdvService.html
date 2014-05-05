@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RdvPeerRdvService (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="RdvPeerRdvService (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RdvPeerRdvService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rdv/ClientConnection.html" title="class in net.jxta.impl.rendezvous.rdv"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RdvPeerRdvService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_net.jxta.impl.rendezvous.StdRendezVousService">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.rendezvous.rdv</FONT>
+<BR>
+Class RdvPeerRdvService</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">net.jxta.impl.rendezvous.RendezVousServiceProvider</A>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">net.jxta.impl.rendezvous.StdRendezVousService</A>
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.rendezvous.rdv.RdvPeerRdvService</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointListener.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>RdvPeerRdvService</B><DT>extends <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></DL>
+</PRE>
+
+<P>
+A JXTA <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezVousService.html?is-external=true" title="class or interface in net.jxta.rendezvous"><CODE>RendezVousService</CODE></A> implementation which
+ implements the rendezvous server portion of the standard JXTA Rendezvous
+ Protocol (RVP).
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/rendezvous/RendezVousService.html?is-external=true" title="class or interface in net.jxta.rendezvous"><CODE>RendezVousService</CODE></A>, 
+<a href="https://jxta-spec.dev.java.net/nonav/JXTAProtocols.html#proto-rvp" target="_blank">JXTA Protocols Specification : Rendezvous Protocol</a></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_net.jxta.impl.rendezvous.StdRendezVousService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.StdRdvProtocolListener.html" title="interface in net.jxta.impl.rendezvous">StdRendezVousService.StdRdvProtocolListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#DEFAULT_LEASE_DURATION">DEFAULT_LEASE_DURATION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#DEFAULT_MAX_CLIENTS">DEFAULT_MAX_CLIENTS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#GC_INTERVAL">GC_INTERVAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#RDV_WALK_SVC_NAME">RDV_WALK_SVC_NAME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#RDV_WALK_SVC_PARAM">RDV_WALK_SVC_PARAM</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#rpv">rpv</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The peer view for this rendezvous server.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.rendezvous.StdRendezVousService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#ConnectedLeaseReply">ConnectedLeaseReply</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#ConnectedPeerReply">ConnectedPeerReply</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#ConnectedRdvAdvReply">ConnectedRdvAdvReply</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#ConnectRequest">ConnectRequest</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#DEFAULT_MAX_TTL">DEFAULT_MAX_TTL</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#DisconnectRequest">DisconnectRequest</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#pName">pName</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#pParam">pParam</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#timer">timer</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.impl.rendezvous.RendezVousServiceProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#closed">closed</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#group">group</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#MAX_TTL">MAX_TTL</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#PROP_HDR_ELEMENT_NAME">PROP_HDR_ELEMENT_NAME</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#PropPName">PropPName</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#PropSName">PropSName</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#RDV_MSG_NAMESPACE_NAME">RDV_MSG_NAMESPACE_NAME</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#rdvService">rdvService</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#rendezvousMeter">rendezvousMeter</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#rendezvousServiceMonitor">rendezvousServiceMonitor</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#RdvPeerRdvService(net.jxta.peergroup.PeerGroup, net.jxta.impl.rendezvous.RendezVousServiceImpl)">RdvPeerRdvService</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                  <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceImpl.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceImpl</A>&nbsp;rdvService)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructor for the RdvPeerRdvService object</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#challengeRendezVous(net.jxta.id.ID, long)">challengeRendezVous</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer,
+                    long&nbsp;delay)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resets the local idea of the lease to the specified value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#connectToRendezVous(net.jxta.endpoint.EndpointAddress, java.lang.Object)">connectToRendezVous</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr,
+                    <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;hint)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attempt to connect to the specified rendezvous peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#disconnectFromRendezVous(net.jxta.id.ID)">disconnectFromRendezVous</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peerId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a RendezVousService point.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#getConnectedPeerIDs()">getConnectedPeerIDs</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the peers that are currently connected to this peer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/PeerConnection.html" title="class in net.jxta.impl.rendezvous">PeerConnection</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#getPeerConnection(net.jxta.id.ID)">getPeerConnection</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the peer connection or null if not present.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/PeerConnection.html" title="class in net.jxta.impl.rendezvous">PeerConnection</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#getPeerConnections()">getPeerConnections</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an array of the current peer connections.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#isConnectedToRendezVous()">isConnectedToRendezVous</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if connected to a rendezvous.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+          <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+          int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propagates a message onto as many peers on the local network
+ as possible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#propagateInGroup(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagateInGroup</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                 int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#startApp(java.lang.String[])">startApp</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;argv)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supply arguments and starts this service if it hadn't started by itself.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#stopApp()">stopApp</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ask this service to stop.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#walk(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+     int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html#walk(java.util.Vector, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;destPeerIDs,
+     <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+     <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+     int&nbsp;initialTTL)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.rendezvous.StdRendezVousService"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#processReceivedMessage(net.jxta.endpoint.Message, net.jxta.impl.rendezvous.RendezVousPropagateMessage, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">processReceivedMessage</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#propagate(java.util.Enumeration, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#propagateToNeighbors(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagateToNeighbors</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#repropagate(net.jxta.endpoint.Message, net.jxta.impl.rendezvous.RendezVousPropagateMessage, java.lang.String, java.lang.String)">repropagate</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#sendDisconnect(net.jxta.id.ID, net.jxta.protocol.PeerAdvertisement)">sendDisconnect</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#sendDisconnect(net.jxta.impl.rendezvous.PeerConnection)">sendDisconnect</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#sendToEachConnection(net.jxta.endpoint.Message, net.jxta.impl.rendezvous.RendezVousPropagateMessage)">sendToEachConnection</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#startApp(java.lang.String[], net.jxta.impl.rendezvous.StdRendezVousService.StdRdvProtocolListener)">startApp</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.rendezvous.RendezVousServiceProvider"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.rendezvous.<A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#checkPropHeader(net.jxta.endpoint.Message)">checkPropHeader</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#getPeerAdvertisementDoc()">getPeerAdvertisementDoc</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#getPropHeader(net.jxta.endpoint.Message)">getPropHeader</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#mkAddress(net.jxta.id.ID, java.lang.String, java.lang.String)">mkAddress</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#mkAddress(java.lang.String, java.lang.String, java.lang.String)">mkAddress</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#processIncomingMessage(net.jxta.endpoint.Message, net.jxta.endpoint.EndpointAddress, net.jxta.endpoint.EndpointAddress)">processIncomingMessage</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#sendToNetwork(net.jxta.endpoint.Message, net.jxta.impl.rendezvous.RendezVousPropagateMessage)">sendToNetwork</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#setRendezvousServiceMonitor(net.jxta.impl.rendezvous.rendezvousMeter.RendezvousServiceMonitor)">setRendezvousServiceMonitor</A>, <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#updatePropHeader(net.jxta.endpoint.Message, net.jxta.impl.rendezvous.RendezVousPropagateMessage, java.lang.String, java.lang.String, int)">updatePropHeader</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RDV_WALK_SVC_NAME"><!-- --></A><H3>
+RDV_WALK_SVC_NAME</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>RDV_WALK_SVC_NAME</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rdv.RdvPeerRdvService.RDV_WALK_SVC_NAME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="RDV_WALK_SVC_PARAM"><!-- --></A><H3>
+RDV_WALK_SVC_PARAM</H3>
+<PRE>
+public static final <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>RDV_WALK_SVC_PARAM</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rdv.RdvPeerRdvService.RDV_WALK_SVC_PARAM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GC_INTERVAL"><!-- --></A><H3>
+GC_INTERVAL</H3>
+<PRE>
+public static final long <B>GC_INTERVAL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rdv.RdvPeerRdvService.GC_INTERVAL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEFAULT_LEASE_DURATION"><!-- --></A><H3>
+DEFAULT_LEASE_DURATION</H3>
+<PRE>
+public static final long <B>DEFAULT_LEASE_DURATION</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rdv.RdvPeerRdvService.DEFAULT_LEASE_DURATION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEFAULT_MAX_CLIENTS"><!-- --></A><H3>
+DEFAULT_MAX_CLIENTS</H3>
+<PRE>
+public static final int <B>DEFAULT_MAX_CLIENTS</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#net.jxta.impl.rendezvous.rdv.RdvPeerRdvService.DEFAULT_MAX_CLIENTS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="rpv"><!-- --></A><H3>
+rpv</H3>
+<PRE>
+public final <A HREF="../../../../../net/jxta/impl/rendezvous/rpv/PeerView.html" title="class in net.jxta.impl.rendezvous.rpv">PeerView</A> <B>rpv</B></PRE>
+<DL>
+<DD>The peer view for this rendezvous server.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RdvPeerRdvService(net.jxta.peergroup.PeerGroup, net.jxta.impl.rendezvous.RendezVousServiceImpl)"><!-- --></A><H3>
+RdvPeerRdvService</H3>
+<PRE>
+public <B>RdvPeerRdvService</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/peergroup/PeerGroup.html?is-external=true" title="class or interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                         <A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceImpl.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceImpl</A>&nbsp;rdvService)</PRE>
+<DL>
+<DD>Constructor for the RdvPeerRdvService object
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - the peer group<DD><CODE>rdvService</CODE> - the rendezvous service object</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="startApp(java.lang.String[])"><!-- --></A><H3>
+startApp</H3>
+<PRE>
+protected int <B>startApp</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]&nbsp;argv)</PRE>
+<DL>
+<DD>Supply arguments and starts this service if it hadn't started by itself.
+ <p/>
+ Currently this service starts by itself and does not expect arguments.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#startApp(java.lang.String[])">startApp</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>argv</CODE> - argument params
+<DT><B>Returns:</B><DD>0 if successful</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopApp()"><!-- --></A><H3>
+stopApp</H3>
+<PRE>
+public void <B>stopApp</B>()</PRE>
+<DL>
+<DD>Ask this service to stop.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#stopApp()">stopApp</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="connectToRendezVous(net.jxta.endpoint.EndpointAddress, java.lang.Object)"><!-- --></A><H3>
+connectToRendezVous</H3>
+<PRE>
+public void <B>connectToRendezVous</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;addr,
+                                <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;hint)</PRE>
+<DL>
+<DD>Attempt to connect to the specified rendezvous peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#connectToRendezVous(net.jxta.endpoint.EndpointAddress, java.lang.Object)">connectToRendezVous</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The endpoint address of the rendezvous peer.<DD><CODE>hint</CODE> - An optional hint which may be <code>null</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="challengeRendezVous(net.jxta.id.ID, long)"><!-- --></A><H3>
+challengeRendezVous</H3>
+<PRE>
+public void <B>challengeRendezVous</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer,
+                                long&nbsp;delay)</PRE>
+<DL>
+<DD>Resets the local idea of the lease to the specified value.
+ As a result a lease response must be sought and obtained within the
+ new specified delay or the rdv is considered disconnected.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#challengeRendezVous(net.jxta.id.ID, long)">challengeRendezVous</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peer</CODE> - The peer to be challenged<DD><CODE>delay</CODE> - The delay</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disconnectFromRendezVous(net.jxta.id.ID)"><!-- --></A><H3>
+disconnectFromRendezVous</H3>
+<PRE>
+public void <B>disconnectFromRendezVous</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peerId)</PRE>
+<DL>
+<DD>Remove a RendezVousService point.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#disconnectFromRendezVous(net.jxta.id.ID)">disconnectFromRendezVous</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerId</CODE> - the PeerId of the RendezVous to disconnect from.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConnectedToRendezVous()"><!-- --></A><H3>
+isConnectedToRendezVous</H3>
+<PRE>
+public boolean <B>isConnectedToRendezVous</B>()</PRE>
+<DL>
+<DD>Return true if connected to a rendezvous.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#isConnectedToRendezVous()">isConnectedToRendezVous</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if connected to a rendezvous, false otherwise</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getConnectedPeerIDs()"><!-- --></A><H3>
+getConnectedPeerIDs</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt; <B>getConnectedPeerIDs</B>()</PRE>
+<DL>
+<DD>Returns the peers that are currently connected to this peer.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#getConnectedPeerIDs()">getConnectedPeerIDs</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The peers that are currently connected to this peer.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)"><!-- --></A><H3>
+propagate</H3>
+<PRE>
+public void <B>propagate</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                      int&nbsp;initialTTL)
+               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Propagates a message onto as many peers on the local network
+ as possible. Typically the message will go to all the peers to
+ which at least one endpoint transport can address without using
+ the router.
+ <p/>
+ This method sends the message to all peers, rendezvous peers and
+ edge peer. This method of propagation is very expensive and should
+ not be frequently used. When rendezvous peers are used in order to
+ cache index of data, it is more efficient to use the walk() method.
+ <p/>
+ Only a single HOP at a time is performed. Messages are always
+ delivered to the destination handler on arrival. This handler
+ is responsible for repropagating further, if deemed appropriate.
+ <p/>
+ Loop and TTL control are performed automatically.
+ <p/>
+ Messages can be propagated via this method for the first time or
+ can be re-propagated by re-using a message that came in via propagation.
+ In the later case, the TTL and loop detection parameters CANNOT be
+ re-initialized. If one wants to "re-propagate" a message with a new TTL
+ and blank gateways list one must generate a completely new message.
+ This limits the risk of accidental propagation storms, although they
+ can always be engineered deliberately.
+ <p/>
+ Note: The original msg is not modified and may be reused upon return.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#propagate(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagate</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - is the message to propagate.<DD><CODE>serviceName</CODE> - is the name of the service<DD><CODE>serviceParam</CODE> - is the parameter of the service<DD><CODE>initialTTL</CODE> - is the maximum TTL of the message (note that the Rendezvous
+                     Service implementation is free to decrease that value.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="propagateInGroup(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)"><!-- --></A><H3>
+propagateInGroup</H3>
+<PRE>
+public void <B>propagateInGroup</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                             int&nbsp;initialTTL)
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#propagateInGroup(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">propagateInGroup</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerConnection(net.jxta.id.ID)"><!-- --></A><H3>
+getPeerConnection</H3>
+<PRE>
+public <A HREF="../../../../../net/jxta/impl/rendezvous/PeerConnection.html" title="class in net.jxta.impl.rendezvous">PeerConnection</A> <B>getPeerConnection</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&nbsp;peer)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#getPeerConnection(net.jxta.id.ID)">StdRendezVousService</A></CODE></B></DD>
+<DD>Returns the peer connection or null if not present.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#getPeerConnection(net.jxta.id.ID)">getPeerConnection</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peer</CODE> - the node ID
+<DT><B>Returns:</B><DD>PeerConnection the peer connection or null if not present.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerConnections()"><!-- --></A><H3>
+getPeerConnections</H3>
+<PRE>
+protected <A HREF="../../../../../net/jxta/impl/rendezvous/PeerConnection.html" title="class in net.jxta.impl.rendezvous">PeerConnection</A>[] <B>getPeerConnections</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#getPeerConnections()">StdRendezVousService</A></CODE></B></DD>
+<DD>Returns an array of the current peer connections.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html#getPeerConnections()">getPeerConnections</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/StdRendezVousService.html" title="class in net.jxta.impl.rendezvous">StdRendezVousService</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>An array of the current peer connections.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walk(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)"><!-- --></A><H3>
+walk</H3>
+<PRE>
+public void <B>walk</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                 int&nbsp;initialTTL)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.
+ <p/>
+ Only a single HOP at a time is performed. Messages are always
+ delivered to the destination handler on arrival. This handler
+ is responsible for repropagating further, if deemed appropriate.
+ <p/>
+ Loop and TTL control are performed automatically.
+ <p/>
+ Messages can be propagated via this method for the first time or
+ can be re-propagated by re-using a message that came in via propagation.
+ In the later case, the TTL and loop detection parameters CANNOT be
+ re-initialized. If one wants to "re-propagate" a message with a new TTL
+ and blank gateways list one must generate a completely new message.
+ This limits the risk of accidental propagation storms, although they
+ can always be engineered deliberately.
+ <p/>
+ Note: The original msg is not modified and may be reused upon return.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#walk(net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>msg</CODE> - is the message to walk.<DD><CODE>serviceName</CODE> - is the name of the service<DD><CODE>serviceParam</CODE> - is the parameter of the service<DD><CODE>initialTTL</CODE> - is the maximum TTL of the message (note that the Rendezvous
+                     Service implementation is free to decrease that value.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - when walking the message is impossible (network failure)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="walk(java.util.Vector, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)"><!-- --></A><H3>
+walk</H3>
+<PRE>
+public void <B>walk</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Vector.html?is-external=true" title="class or interface in java.util">Vector</A>&lt;? extends <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/id/ID.html?is-external=true" title="class or interface in net.jxta.id">ID</A>&gt;&nbsp;destPeerIDs,
+                 <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;msg,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceName,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                 int&nbsp;initialTTL)
+          throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Walk a message through the rendezvous peers of the network: only
+ rendezvous peers will receive the message.
+ <p/>
+ Only a single HOP at a time is performed. Messages are always
+ delivered to the destination handler on arrival. This handler
+ is responsible for repropagating further, if deemed appropriate.
+ <p/>
+ Loop and TTL control are performed automatically.
+ <p/>
+ Messages can be propagated via this method for the first time or
+ can be re-propagated by re-using a message that came in via propagation.
+ In the later case, the TTL and loop detection parameters CANNOT be
+ re-initialized. If one wants to "re-propagate" a message with a new TTL
+ and blank gateways list one must generate a completely new message.
+ This limits the risk of accidental propagation storms, although they
+ can always be engineered deliberately.
+ <p/>
+ Note: The original msg is not modified and may be reused upon return.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html#walk(java.util.Vector, net.jxta.endpoint.Message, java.lang.String, java.lang.String, int)">walk</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/rendezvous/RendezVousServiceProvider.html" title="class in net.jxta.impl.rendezvous">RendezVousServiceProvider</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>destPeerIDs</CODE> - is a Vector of PeerID of the peers which are receiving
+                     first the walker. Note that each entry in the Vector will create its own
+                     walker.<DD><CODE>msg</CODE> - is the message to walk.<DD><CODE>serviceName</CODE> - is the name of the service<DD><CODE>serviceParam</CODE> - is the parameter of the service<DD><CODE>initialTTL</CODE> - is the maximum TTL of the message (note that the Rendezvous
+                     Service implementation is free to decrease that value.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - when walking the message is impossible (network failure)</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RdvPeerRdvService.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/rendezvous/rdv/ClientConnection.html" title="class in net.jxta.impl.rendezvous.rdv"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/rendezvous/rdv/RdvPeerRdvService.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RdvPeerRdvService.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_classes_inherited_from_class_net.jxta.impl.rendezvous.StdRendezVousService">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,169 @@
+-5
+f s
+n 3
+33 0
+
+32 0
+
+32 0
+
+s 3
+2 Gnd
+3 v
+1 i
+w 2
+3287 3290 3301 3290 3 U
+3287 3298 3301 3298 2 U
+p 0
+l 13
+3279 3316 60 Red Light = V is out of the I(V) definition range.
+3293 3318 52 If V > V_max, the light appears near the (+)
+3293 3320 52 If V < V_min, the light appears near the (-)
+3279 3325 87 Yellow Lights = This instance of the PWL gate cannot find/open/understand
+3298 3327 50 its data file, or "none" has been defined.
+3298 3329 55 The gate acts as an open circuit in this case.
+3277 3334 100 Use the scope to plot i vs. v and notice the effect of the circular blending method.
+3288 3305 60 Change the maximum voltage change per timestep -->
+3288 3307 57 to affect the resolution of fine I(V) structure.
+3305 3293 42 <-- Arbitrary I(V) relation modeled
+3310 3295 40 with circle-blended line segments.
+3279 3281 34 Piecewise-Linear Test Circuit
+3279 3283 34 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+b 0
+g 9
+TIME
+3362 3289 0 1 90 0 0
+
+
+NUMBERS
+3362 3306 0 2 0 0 16
+
+U5
+U0.01
+U7
+U-2
+U1E-4
+U1E-20
+U1E-40
+U1E-6
+U1E-40
+U1E-9
+U2
+I2
+I30
+R2
+U0.1
+U1E-14
+ TRUE
+ TRUE
+
+FROM
+3282 3290 0 6 0 2 0
+3
+
+PWL
+3294 3294 0 3 0 0 2
+3 2
+Cnone
+U1
+-2.84073E-01
+-1.00000E+06
+ 1.00000E-14
+ 0.00000E+00
+-1.00000E+06
+ 1.00000E-14
+
+GND
+3287 3298 0 5 0 1 0
+2
+
+VDIFF
+3287 3294 0 4 0 0 23
+3 2
+B0
+U1
+V1
+U0
+U0.5
+U-0.5
+U6E-4
+U3E-4
+U3E-4
+U6E-4
+U2E-3
+U0
+U2.5
+U1
+U1000
+R0
+U0
+U-0.490228552
+X
+U1E-14
+U0
+X
+U1E-14
+-2.84073E-01
+-1.00000E+06
+ 1.00000E-14
+ 0.00000E+00
+-1.00000E+06
+ 1.00000E-14
+ 1.56459E-03
+FALSE
+FALSE
+-2.84700E-01
+ 0.00000E+00
+ TRUE
+FALSE
+
+FROM
+3311 3286 4 8 0 3 0
+1
+
+ISCOPE
+3303 3288 0 7 0 0 2
+3 1
+U-7.9792218887137E-4
+C-797.922uA
+
+PWL
+3301 3294 0 3 0 0 8
+3 2
+Cpwl-test.iv
+U1
+U-0.536940265
+X
+U1E-14
+U0
+X
+U1E-14
+-2.84073E-01
+-1.00000E+06
+ 1.00000E-14
+ 0.00000E+00
+-1.00000E+06
+ 1.00000E-14
+
+h 2
+153 9 i
+V0
+B1
+I3
+V0
+U0.01
+U0
+U1E-15
+U0
+U8.383E-4
+273 9 v
+V0
+B1
+I3
+V0
+U5
+U0
+U1E-15
+U0
+U0.374
+.

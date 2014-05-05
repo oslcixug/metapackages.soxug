@@ -1,0 +1,951 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+NetworkManager (JXSE API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="NetworkManager (JXSE API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetworkManager.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/NetworkManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetworkManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.platform</FONT>
+<BR>
+Class NetworkManager</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.platform.NetworkManager</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</A>, <A HREF="../../../net/jxta/rendezvous/RendezvousListener.html" title="interface in net.jxta.rendezvous">RendezvousListener</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>NetworkManager</B><DT>extends <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../net/jxta/rendezvous/RendezvousListener.html" title="interface in net.jxta.rendezvous">RendezvousListener</A></DL>
+</PRE>
+
+<P>
+NetworkManager provides a simplified JXTA platform configuration abstraction, and provides a JXTA platform life-cycle
+ management. The node configuration is created during construction of this object and can be obtained for fine tuning
+ or alteration.  Note that all alterations must be done prior to calling #startNetwork(), otherwise the default
+ configuration is used.  Configuration persistence is on by default and maybe overridden by call to #setEnableConfigPersistence
+ <p/>
+ NetworkManager defines six abstractions of a node configurations as follows :
+ ADHOC : A node which typically deployed in an ad-hoc network
+ EDGE : In addition to supporting ADHOC function, an Edge node can attach to a infrastructure (a Rendezvous, Relay, or both)
+ RENDEZVOUS: provides network bootstrapping services, such as discovery, pipe resolution, etc.
+ RELAY: provides message relaying services, enabling cross firewall traversal
+ PROXY: provide JXME JXTA for J2ME proxying services
+ SUPER: provide the functionality of a Rendezvous, Relay, Proxy node.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Define node standard node operating modes</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#publicSeedingRdvURI">publicSeedingRdvURI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#publicSeedingRelayURI">publicSeedingRelayURI</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#NetworkManager(net.jxta.platform.NetworkManager.ConfigMode, java.lang.String)">NetworkManager</A></B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode,
+               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkManger instance with default instance home set to "$CWD"/.jxta"
+ At this point, alternate Infrastructure PeerGroupID maybe specified, as well as a PeerID. if neither are
+ specified, the default NetPeerGroupID will be used, and a new PeerID will be generated.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#NetworkManager(net.jxta.platform.NetworkManager.ConfigMode, java.lang.String, java.net.URI)">NetworkManager</A></B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode,
+               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName,
+               <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;instanceHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates NetworkManger instance.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getConfigurator()">getConfigurator</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform"><CODE>NetworkConfigurator</CODE></A> for additional tuning</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getInfrastructureID()">getInfrastructureID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property 'infrastructureID'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getInstanceHome()">getInstanceHome</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property 'instanceHome'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getInstanceName()">getInstanceName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property 'instanceName'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getMode()">getMode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property node operating 'mode'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getNetPeerGroup()">getNetPeerGroup</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the netPeerGroup object</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getPeerID()">getPeerID</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property 'peerID'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#getUseDefaultSeeds()">getUseDefaultSeeds</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if useDefaultSeeds is set to true</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#isConfigPersistent()">isConfigPersistent</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getter for property 'configPersistent'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#login(net.jxta.peergroup.PeerGroup, char[], char[])">login</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+      char[]&nbsp;keystore_password,
+      char[]&nbsp;principal_password)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Establishes group credential.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#registerShutdownHook()">registerShutdownHook</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers a Runtime shutdown hook to cleanly shutdown the JXTA platform</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)">rendezvousEvent</A></B>(<A HREF="../../../net/jxta/rendezvous/RendezvousEvent.html" title="class in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rendezvousEvent the rendezvous event</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setConfigPersistent(boolean)">setConfigPersistent</A></B>(boolean&nbsp;persisted)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'configPersistent'. if disabled a PlatformConfig is not persisted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setInfrastructureID(net.jxta.peergroup.PeerGroupID)">setInfrastructureID</A></B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;infrastructureID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'infrastructureID'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setInstanceHome(java.net.URI)">setInstanceHome</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;instanceHome)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'instanceHome'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setInstanceName(java.lang.String)">setInstanceName</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'instanceName'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setMode(net.jxta.platform.NetworkManager.ConfigMode)">setMode</A></B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'mode'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setPeerID(net.jxta.peer.PeerID)">setPeerID</A></B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setter for property 'peerID'.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#setUseDefaultSeeds(boolean)">setUseDefaultSeeds</A></B>(boolean&nbsp;useDefaultSeeds)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if true uses the public rendezvous seeding service</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#startNetwork()">startNetwork</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates and starts the JXTA infrastructure peer group (aka NetPeerGroup) based on the specified mode
+ template.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#stopNetwork()">stopNetwork</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stops and unreferences the NetPeerGroup</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#unregisterShutdownHook()">unregisterShutdownHook</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregisters a Runtime shutdown hook to cleanly shutdown the JXTA platform</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../net/jxta/platform/NetworkManager.html#waitForRendezvousConnection(long)">waitForRendezvousConnection</A></B>(long&nbsp;timeout)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blocks only, if not connected to a rendezvous, or until a connection to rendezvous node occurs.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="publicSeedingRdvURI"><!-- --></A><H3>
+publicSeedingRdvURI</H3>
+<PRE>
+protected final transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>publicSeedingRdvURI</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="publicSeedingRelayURI"><!-- --></A><H3>
+publicSeedingRelayURI</H3>
+<PRE>
+protected final transient <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>publicSeedingRelayURI</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="NetworkManager(net.jxta.platform.NetworkManager.ConfigMode, java.lang.String)"><!-- --></A><H3>
+NetworkManager</H3>
+<PRE>
+public <B>NetworkManager</B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName)
+               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates NetworkManger instance with default instance home set to "$CWD"/.jxta"
+ At this point, alternate Infrastructure PeerGroupID maybe specified, as well as a PeerID. if neither are
+ specified, the default NetPeerGroupID will be used, and a new PeerID will be generated. Also note the default
+ seeding URIs are the to development. Alternate values must be specified, if desired, prior to a call to <A HREF="../../../net/jxta/platform/NetworkManager.html#startNetwork()"><CODE>startNetwork()</CODE></A>
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - Operating mode  the node operating <A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform"><CODE>NetworkManager.ConfigMode</CODE></A><DD><CODE>instanceName</CODE> - Node name
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="NetworkManager(net.jxta.platform.NetworkManager.ConfigMode, java.lang.String, java.net.URI)"><!-- --></A><H3>
+NetworkManager</H3>
+<PRE>
+public <B>NetworkManager</B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName,
+                      <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;instanceHome)
+               throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates NetworkManger instance.
+ At this point, alternate Infrastructure PeerGroupID maybe specified, as well as a PeerID. if neither are
+ specified, the default NetPeerGroupID will be used, and a new PeerID will be generated. Also note the default
+ seeding URIs are the to development. Alternate values must be specified, if desired, prior to a call to <A HREF="../../../net/jxta/platform/NetworkManager.html#startNetwork()"><CODE>startNetwork()</CODE></A>
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - Operating mode  the node operating <A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform"><CODE>NetworkManager.ConfigMode</CODE></A><DD><CODE>instanceName</CODE> - Node name<DD><CODE>instanceHome</CODE> - instance home is a uri to the instance persistent store (aka Cache Manager store home)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getConfigurator()"><!-- --></A><H3>
+getConfigurator</H3>
+<PRE>
+public <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform">NetworkConfigurator</A> <B>getConfigurator</B>()
+                                    throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Returns the <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform"><CODE>NetworkConfigurator</CODE></A> for additional tuning
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the <A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform"><CODE>NetworkConfigurator</CODE></A> for additional tuning
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInfrastructureID()"><!-- --></A><H3>
+getInfrastructureID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A> <B>getInfrastructureID</B>()</PRE>
+<DL>
+<DD>Getter for property 'infrastructureID'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'infrastructureID'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInfrastructureID(net.jxta.peergroup.PeerGroupID)"><!-- --></A><H3>
+setInfrastructureID</H3>
+<PRE>
+public void <B>setInfrastructureID</B>(<A HREF="../../../net/jxta/peergroup/PeerGroupID.html" title="class in net.jxta.peergroup">PeerGroupID</A>&nbsp;infrastructureID)</PRE>
+<DL>
+<DD>Setter for property 'infrastructureID'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>infrastructureID</CODE> - Value to set for property 'infrastructureID'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInstanceName()"><!-- --></A><H3>
+getInstanceName</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInstanceName</B>()</PRE>
+<DL>
+<DD>Getter for property 'instanceName'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'instanceName'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInstanceName(java.lang.String)"><!-- --></A><H3>
+setInstanceName</H3>
+<PRE>
+public void <B>setInstanceName</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;instanceName)</PRE>
+<DL>
+<DD>Setter for property 'instanceName'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>instanceName</CODE> - Value to set for property 'instanceName'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInstanceHome()"><!-- --></A><H3>
+getInstanceHome</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A> <B>getInstanceHome</B>()</PRE>
+<DL>
+<DD>Getter for property 'instanceHome'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'instanceHome'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInstanceHome(java.net.URI)"><!-- --></A><H3>
+setInstanceHome</H3>
+<PRE>
+public void <B>setInstanceHome</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</A>&nbsp;instanceHome)</PRE>
+<DL>
+<DD>Setter for property 'instanceHome'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>instanceHome</CODE> - Value to set for property 'instanceHome'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMode()"><!-- --></A><H3>
+getMode</H3>
+<PRE>
+public <A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A> <B>getMode</B>()</PRE>
+<DL>
+<DD>Getter for property node operating 'mode'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'mode'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMode(net.jxta.platform.NetworkManager.ConfigMode)"><!-- --></A><H3>
+setMode</H3>
+<PRE>
+public void <B>setMode</B>(<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform">NetworkManager.ConfigMode</A>&nbsp;mode)
+             throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Setter for property 'mode'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - Value to set for property 'mode'.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPeerID()"><!-- --></A><H3>
+getPeerID</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A> <B>getPeerID</B>()</PRE>
+<DL>
+<DD>Getter for property 'peerID'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'peerID'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setPeerID(net.jxta.peer.PeerID)"><!-- --></A><H3>
+setPeerID</H3>
+<PRE>
+public void <B>setPeerID</B>(<A HREF="../../../net/jxta/peer/PeerID.html" title="class in net.jxta.peer">PeerID</A>&nbsp;peerID)</PRE>
+<DL>
+<DD>Setter for property 'peerID'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>peerID</CODE> - Value to set for property 'peerID'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isConfigPersistent()"><!-- --></A><H3>
+isConfigPersistent</H3>
+<PRE>
+public boolean <B>isConfigPersistent</B>()</PRE>
+<DL>
+<DD>Getter for property 'configPersistent'.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Value for property 'configPersistent'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setConfigPersistent(boolean)"><!-- --></A><H3>
+setConfigPersistent</H3>
+<PRE>
+public void <B>setConfigPersistent</B>(boolean&nbsp;persisted)</PRE>
+<DL>
+<DD>Setter for property 'configPersistent'. if disabled a PlatformConfig is not persisted. It assumed that
+ the PeerID is will be set, or a new PeerID will always be generated.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>persisted</CODE> - Value to set for property 'configPersistent'.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startNetwork()"><!-- --></A><H3>
+startNetwork</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>startNetwork</B>()
+                       throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A>,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Creates and starts the JXTA infrastructure peer group (aka NetPeerGroup) based on the specified mode
+ template. This class also registers a listener for rendezvous events.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The Net Peer Group
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - if the group fails to initialize
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="login(net.jxta.peergroup.PeerGroup, char[], char[])"><!-- --></A><H3>
+login</H3>
+<PRE>
+public static void <B>login</B>(<A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A>&nbsp;group,
+                         char[]&nbsp;keystore_password,
+                         char[]&nbsp;principal_password)
+                  throws <A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A>,
+                         <A HREF="../../../net/jxta/exception/ProtocolNotSupportedException.html" title="class in net.jxta.exception">ProtocolNotSupportedException</A></PRE>
+<DL>
+<DD>Establishes group credential.  This is a required step when planning to
+ to utilize TLS messengers or secure pipes
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>group</CODE> - peer group to establish credentials in<DD><CODE>keystore_password</CODE> - The passphrase for the keystore. This is a
+                           char[] rather than a String so that it can be blanked after use.<DD><CODE>principal_password</CODE> - The passphrase for the identity. This is a
+                           char[] rather than a String so that it can be blanked after use.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../net/jxta/exception/PeerGroupException.html" title="class in net.jxta.exception">PeerGroupException</A></CODE> - if group credentials were rejected
+<DD><CODE><A HREF="../../../net/jxta/exception/ProtocolNotSupportedException.html" title="class in net.jxta.exception">ProtocolNotSupportedException</A></CODE> - if authenticator rejected the credential</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopNetwork()"><!-- --></A><H3>
+stopNetwork</H3>
+<PRE>
+public void <B>stopNetwork</B>()</PRE>
+<DL>
+<DD>Stops and unreferences the NetPeerGroup
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNetPeerGroup()"><!-- --></A><H3>
+getNetPeerGroup</H3>
+<PRE>
+public <A HREF="../../../net/jxta/peergroup/PeerGroup.html" title="interface in net.jxta.peergroup">PeerGroup</A> <B>getNetPeerGroup</B>()</PRE>
+<DL>
+<DD>Gets the netPeerGroup object
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The netPeerGroup value</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="waitForRendezvousConnection(long)"><!-- --></A><H3>
+waitForRendezvousConnection</H3>
+<PRE>
+public boolean <B>waitForRendezvousConnection</B>(long&nbsp;timeout)</PRE>
+<DL>
+<DD>Blocks only, if not connected to a rendezvous, or until a connection to rendezvous node occurs.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>timeout</CODE> - timeout in milliseconds, a zero timeout of waits forever
+<DT><B>Returns:</B><DD>true if connected to a rendezvous, false otherwise</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)"><!-- --></A><H3>
+rendezvousEvent</H3>
+<PRE>
+public void <B>rendezvousEvent</B>(<A HREF="../../../net/jxta/rendezvous/RendezvousEvent.html" title="class in net.jxta.rendezvous">RendezvousEvent</A>&nbsp;event)</PRE>
+<DL>
+<DD>rendezvousEvent the rendezvous event
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../net/jxta/rendezvous/RendezvousListener.html#rendezvousEvent(net.jxta.rendezvous.RendezvousEvent)">rendezvousEvent</A></CODE> in interface <CODE><A HREF="../../../net/jxta/rendezvous/RendezvousListener.html" title="interface in net.jxta.rendezvous">RendezvousListener</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>event</CODE> - rendezvousEvent</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setUseDefaultSeeds(boolean)"><!-- --></A><H3>
+setUseDefaultSeeds</H3>
+<PRE>
+public void <B>setUseDefaultSeeds</B>(boolean&nbsp;useDefaultSeeds)</PRE>
+<DL>
+<DD>if true uses the public rendezvous seeding service
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>useDefaultSeeds</CODE> - if true uses the default development seeding service</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUseDefaultSeeds()"><!-- --></A><H3>
+getUseDefaultSeeds</H3>
+<PRE>
+public boolean <B>getUseDefaultSeeds</B>()</PRE>
+<DL>
+<DD>Returns true if useDefaultSeeds is set to true
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if useDefaultSeeds is set to true</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerShutdownHook()"><!-- --></A><H3>
+registerShutdownHook</H3>
+<PRE>
+public void <B>registerShutdownHook</B>()</PRE>
+<DL>
+<DD>Registers a Runtime shutdown hook to cleanly shutdown the JXTA platform
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unregisterShutdownHook()"><!-- --></A><H3>
+unregisterShutdownHook</H3>
+<PRE>
+public void <B>unregisterShutdownHook</B>()</PRE>
+<DL>
+<DD>Unregisters a Runtime shutdown hook to cleanly shutdown the JXTA platform
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/NetworkManager.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkConfigurator.html" title="class in net.jxta.platform"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../net/jxta/platform/NetworkManager.ConfigMode.html" title="enum in net.jxta.platform"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?net/jxta/platform/NetworkManager.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="NetworkManager.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

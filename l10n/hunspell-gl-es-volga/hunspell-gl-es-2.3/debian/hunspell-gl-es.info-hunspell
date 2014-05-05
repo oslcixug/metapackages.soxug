@@ -1,0 +1,13 @@
+Language: galego (Galician)
+Hash-Name: gl_ES
+Emacsen-Name: galego
+Casechars: [a-zñáéíóúüA-ZÑÁÉÍÓÚÜ]
+Not-Casechars: [^a-zñáéíóúüA-ZÑÁÉÍÓÚÜ]
+Otherchars: [-]
+Many-Otherchars: 
+Additionalchars: áéíñóúüÁÉÍÑÓÚÜ
+Ispell-Args: -B
+Extended-Character-Mode: 
+Hunspell-Locales: gl, gl_ES
+Coding-System: iso-8859-1
+Locale: gl_es

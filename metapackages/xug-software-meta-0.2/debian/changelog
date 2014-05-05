@@ -1,0 +1,20 @@
+xug-software-meta (0.2-1) precise; urgency=low
+
+  * Miscelaneous improvements in bioestatistica, cccomunicacion, 
+    filoloxia, quimica, telecomunicacions packages
+
+ -- CIXUG Developers <osl@cixug.es>  Wed, 07 Nov 2012 15:47:01 +0100
+
+xug-software-meta (0.2) precise; urgency=low
+
+  * Replace Sun Java with OpenJDK in xug-software-informatica 
+    and xug-software-matematicas packages
+  * Drop some packages from xug-software-matematicas package
+
+ -- CIXUG Developers <osl@cixug.es>  Thu, 18 Oct 2012 19:48:12 +0200
+
+xug-software-meta (0.1) precise; urgency=low
+
+  * Initial release
+
+ -- CIXUG Developers <osl@cixug.es>  Thu, 18 Oct 2012 11:30:52 +0100

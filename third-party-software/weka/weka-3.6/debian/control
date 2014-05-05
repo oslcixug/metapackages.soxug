@@ -1,0 +1,17 @@
+Source: weka
+Section: misc
+Priority: extra
+Maintainer: Oficina de Software Libre da USC <osl@usc.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://sourceforge.net/projects/weka/
+
+Package: weka
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, sun-java5-jre | sun-java6-jre
+Description: Collection of machine learning algorithms for solving real-world data mining problems
+ Weka is a collection of machine learning algorithms for
+ solving real-world data mining problems. It is written
+ in Java and runs on almost any platform. The algorithms
+ can either be applied directly to a dataset or called
+ from your own Java code.

@@ -1,0 +1,731 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+TcpMessenger (JXTA Java SE Reference Implementation)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="TcpMessenger (JXTA Java SE Reference Implementation)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TcpMessenger.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://jxta-jxse.dev.java.net' target='_blank'>JXTA</a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/tcp/IncomingUnicastServer.html" title="class in net.jxta.impl.endpoint.tcp"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/tcp/TcpMessenger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TcpMessenger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+net.jxta.impl.endpoint.tcp</FONT>
+<BR>
+Class TcpMessenger</H2>
+<PRE>
+<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">net.jxta.util.AbstractSimpleSelectable</A>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true" title="class or interface in net.jxta.endpoint">net.jxta.endpoint.AbstractMessenger</A>
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">net.jxta.impl.endpoint.BlockingMessenger</A>
+              <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>net.jxta.impl.endpoint.tcp.TcpMessenger</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true" title="class or interface in net.jxta.endpoint">Messenger</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">SimpleSelectable</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>TcpMessenger</B><DT>extends <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A><DT>implements <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</A></DL>
+</PRE>
+
+<P>
+Implements a messenger which sends messages via raw TCP sockets.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_net.jxta.util.SimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface net.jxta.util.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">SimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.IdentityReference.html?is-external=true" title="class or interface in net.jxta.util">SimpleSelectable.IdentityReference</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#receiveBeginTime">receiveBeginTime</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time at which we began receiving the current incoming message.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.endpoint.AbstractMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.endpoint.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true" title="class or interface in net.jxta.endpoint">AbstractMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#DEFAULT_MTU" title="class or interface in net.jxta.endpoint">DEFAULT_MTU</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.util.AbstractSimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class net.jxta.util.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">AbstractSimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#identityReference" title="class or interface in net.jxta.util">identityReference</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_net.jxta.endpoint.Messenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from interface net.jxta.endpoint.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true" title="class or interface in net.jxta.endpoint">Messenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#ANYSTATE" title="class or interface in net.jxta.endpoint">ANYSTATE</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#BREAKING" title="class or interface in net.jxta.endpoint">BREAKING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#BROKEN" title="class or interface in net.jxta.endpoint">BROKEN</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#CLOSED" title="class or interface in net.jxta.endpoint">CLOSED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#CLOSING" title="class or interface in net.jxta.endpoint">CLOSING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#CONNECTED" title="class or interface in net.jxta.endpoint">CONNECTED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#DISCONNECTED" title="class or interface in net.jxta.endpoint">DISCONNECTED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#DISCONNECTING" title="class or interface in net.jxta.endpoint">DISCONNECTING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#IDLE" title="class or interface in net.jxta.endpoint">IDLE</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RECONCLOSING" title="class or interface in net.jxta.endpoint">RECONCLOSING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RECONNECTING" title="class or interface in net.jxta.endpoint">RECONNECTING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RECONSATURATED" title="class or interface in net.jxta.endpoint">RECONSATURATED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RESOLCLOSING" title="class or interface in net.jxta.endpoint">RESOLCLOSING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RESOLPENDING" title="class or interface in net.jxta.endpoint">RESOLPENDING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RESOLSATURATED" title="class or interface in net.jxta.endpoint">RESOLSATURATED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RESOLVED" title="class or interface in net.jxta.endpoint">RESOLVED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#RESOLVING" title="class or interface in net.jxta.endpoint">RESOLVING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#SATURATED" title="class or interface in net.jxta.endpoint">SATURATED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#SENDING" title="class or interface in net.jxta.endpoint">SENDING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#SENDINGSATURATED" title="class or interface in net.jxta.endpoint">SENDINGSATURATED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#TERMINAL" title="class or interface in net.jxta.endpoint">TERMINAL</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#UNRESOLVABLE" title="class or interface in net.jxta.endpoint">UNRESOLVABLE</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#UNRESOLVED" title="class or interface in net.jxta.endpoint">UNRESOLVED</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#UNRESOLVING" title="class or interface in net.jxta.endpoint">UNRESOLVING</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#USABLE" title="class or interface in net.jxta.endpoint">USABLE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#TcpMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.impl.endpoint.tcp.TcpTransport)">TcpMessenger</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;destaddr,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;tcpTransport)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new TcpMessenger for the specified address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#TcpMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.impl.endpoint.tcp.TcpTransport, boolean)">TcpMessenger</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;destaddr,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;tcpTransport,
+             boolean&nbsp;selfDestruct)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new TcpMessenger for the specified address.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#TcpMessenger(java.nio.channels.SocketChannel, net.jxta.impl.endpoint.tcp.TcpTransport)">TcpMessenger</A></B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/nio/channels/SocketChannel.html?is-external=true" title="class or interface in java.nio.channels">SocketChannel</A>&nbsp;socketChannel,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;transport)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new TcpMessenger for the specified address.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#closeImpl()">closeImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close connection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#finalize()">finalize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cost of just having a finalize routine is high.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#getLogicalDestinationImpl()">getLogicalDestinationImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtain the logical destination address from the implementer (a transport for example).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>(package private) &nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/transportMeter/TransportBindingMeter.html" title="class in net.jxta.impl.endpoint.transportMeter">TransportBindingMeter</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#getTransportBindingMeter()">getTransportBindingMeter</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the metering object for this tcpTransport</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#isClosed()">isClosed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <code>true</code> if this messenger is closed and no longer
+ accepting messages to be sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#isIdleImpl()">isIdleImpl</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true if this messenger has not been used for a long time.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#processBuffer()">processBuffer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;processes the input byte buffer</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#run()">run</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <p/>
+ This is what gets run by the Executor.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#sendMessageBImpl(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageBImpl</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                 <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Send a message blocking as needed until the message is sent.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpMessenger.html#sendMessageDirect(net.jxta.endpoint.Message, java.lang.String, java.lang.String, boolean)">sendMessageDirect</A></B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                  <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                  boolean&nbsp;direct)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.impl.endpoint.BlockingMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.impl.endpoint.<A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#close()">close</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#getChannelMessenger(net.jxta.peergroup.PeerGroupID, java.lang.String, java.lang.String)">getChannelMessenger</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#getDestAddressToUse(java.lang.String, java.lang.String)">getDestAddressToUse</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#getLogicalDestinationAddress()">getLogicalDestinationAddress</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#getState()">getState</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#resolve()">resolve</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#sendMessageB(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageB</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#sendMessageN(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageN</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#setOwner(java.lang.Object)">setOwner</A>, <A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#shutdown()">shutdown</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.endpoint.AbstractMessenger"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.endpoint.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true" title="class or interface in net.jxta.endpoint">AbstractMessenger</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#flush()" title="class or interface in net.jxta.endpoint">flush</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#getDestinationAddress()" title="class or interface in net.jxta.endpoint">getDestinationAddress</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#getDestinationAddressObject()" title="class or interface in net.jxta.endpoint">getDestinationAddressObject</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#getMTU()" title="class or interface in net.jxta.endpoint">getMTU</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#isIdle()" title="class or interface in net.jxta.endpoint">isIdle</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#isSynchronous()" title="class or interface in net.jxta.endpoint">isSynchronous</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#itemChanged(net.jxta.util.SimpleSelectable)" title="class or interface in net.jxta.endpoint">itemChanged</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#sendMessage(net.jxta.endpoint.Message)" title="class or interface in net.jxta.endpoint">sendMessage</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String)" title="class or interface in net.jxta.endpoint">sendMessage</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#sendMessage(net.jxta.endpoint.Message, java.lang.String, java.lang.String, net.jxta.endpoint.OutgoingMessageEventListener)" title="class or interface in net.jxta.endpoint">sendMessage</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#setStateLock(java.lang.Object)" title="class or interface in net.jxta.endpoint">setStateLock</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#toString()" title="class or interface in net.jxta.endpoint">toString</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/AbstractMessenger.html?is-external=true#waitState(int, long)" title="class or interface in net.jxta.endpoint">waitState</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.AbstractSimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class net.jxta.util.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">AbstractSimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#getIdentityReference()" title="class or interface in net.jxta.util">getIdentityReference</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#haveListeners()" title="class or interface in net.jxta.util">haveListeners</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#notifyChange()" title="class or interface in net.jxta.util">notifyChange</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#register(net.jxta.util.SimpleSelector)" title="class or interface in net.jxta.util">register</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#registerListener(net.jxta.util.SimpleSelectable)" title="class or interface in net.jxta.util">registerListener</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#unregister(net.jxta.util.SimpleSelector)" title="class or interface in net.jxta.util">unregister</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/AbstractSimpleSelectable.html?is-external=true#unregisterListener(net.jxta.util.SimpleSelectable)" title="class or interface in net.jxta.util">unregisterListener</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_net.jxta.util.SimpleSelectable"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface net.jxta.util.<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true" title="class or interface in net.jxta.util">SimpleSelectable</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true#getIdentityReference()" title="class or interface in net.jxta.util">getIdentityReference</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true#register(net.jxta.util.SimpleSelector)" title="class or interface in net.jxta.util">register</A>, <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/util/SimpleSelectable.html?is-external=true#unregister(net.jxta.util.SimpleSelector)" title="class or interface in net.jxta.util">unregister</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="receiveBeginTime"><!-- --></A><H3>
+receiveBeginTime</H3>
+<PRE>
+long <B>receiveBeginTime</B></PRE>
+<DL>
+<DD>Time at which we began receiving the current incoming message.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="TcpMessenger(java.nio.channels.SocketChannel, net.jxta.impl.endpoint.tcp.TcpTransport)"><!-- --></A><H3>
+TcpMessenger</H3>
+<PRE>
+<B>TcpMessenger</B>(<A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/nio/channels/SocketChannel.html?is-external=true" title="class or interface in java.nio.channels">SocketChannel</A>&nbsp;socketChannel,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;transport)
+       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a new TcpMessenger for the specified address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>socketChannel</CODE> - the SocketChannel for the messenger<DD><CODE>transport</CODE> - the tcp MessageSender we are working for.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="TcpMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.impl.endpoint.tcp.TcpTransport)"><!-- --></A><H3>
+TcpMessenger</H3>
+<PRE>
+<B>TcpMessenger</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;destaddr,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;tcpTransport)
+       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a new TcpMessenger for the specified address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>destaddr</CODE> - the destination of the messenger<DD><CODE>tcpTransport</CODE> - the tcp MessageSender we are working for.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+<HR>
+
+<A NAME="TcpMessenger(net.jxta.endpoint.EndpointAddress, net.jxta.impl.endpoint.tcp.TcpTransport, boolean)"><!-- --></A><H3>
+TcpMessenger</H3>
+<PRE>
+<B>TcpMessenger</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A>&nbsp;destaddr,
+             <A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp">TcpTransport</A>&nbsp;tcpTransport,
+             boolean&nbsp;selfDestruct)
+       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Create a new TcpMessenger for the specified address.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>destaddr</CODE> - the destination of the messenger<DD><CODE>tcpTransport</CODE> - the tcp MessageSender we are working for.<DD><CODE>selfDestruct</CODE> - indicates whether the messenger created will self destruct when idle
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - if an io error occurs</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="finalize()"><!-- --></A><H3>
+finalize</H3>
+<PRE>
+protected void <B>finalize</B>()
+                 throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></PRE>
+<DL>
+<DD>The cost of just having a finalize routine is high. The finalizer is
+ a bottleneck and can delay garbage collection all the way to heap
+ exhaustion. Leave this comment as a reminder to future maintainers.
+ Below is the reason why finalize is not needed here.
+ <p/>
+ These messengers are never given to application layers. Endpoint code
+ always calls close when needed.
+ <p/>
+ There used to be an incoming special case in order to *prevent*
+ closure because the inherited finalize used to call close. This is
+ no-longer the case. For the outgoing case, we do not need to call close
+ for the reason explained above.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</A></CODE> in class <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="closeImpl()"><!-- --></A><H3>
+closeImpl</H3>
+<PRE>
+public void <B>closeImpl</B>()</PRE>
+<DL>
+<DD>Close connection. May fail current send.
+ <p/>
+ Now everyone knows its closed and the connection can no-longer be
+ obtained. So, we can go about our business of closing it.
+ It can happen that a redundant close() is done but it does not matter.
+ close() is idempotent.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#closeImpl()">closeImpl</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isClosed()"><!-- --></A><H3>
+isClosed</H3>
+<PRE>
+public boolean <B>isClosed</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this messenger is closed and no longer
+ accepting messages to be sent. This is a shortcut for 
+ <code>(getState() &amp; USABLE == 0)</code>. Once closed, a messenger should be 
+ discarded.
+ <p/>
+ This is a minimal implementation. It may not detect closure
+ initiated by the other side unless the messenger was actually used
+ since. A more accurate (but not mandatory implementation) would
+ actually go and check the underlying connection, if relevant...unless
+ breakage initiated by the other side is actually reported asynchronously
+ when it happens. Breakage detection from the other side need not
+ be reported atomically with its occurrence. This not very important
+ since we canonicalize transport messengers and so do not need to
+ aggressively collect closed ones. When not used, messengers die by themselves.
+ <p/>
+ We overload isClosed because many messengers still use super.isClosed()
+ as part of their own implementation or don't override it at all. They
+ expect it to be true only when all is shutdown; not while we're closing
+ gently.
+
+ FIXME - jice@jxta.org 20040413: transports should get a deeper retrofit eventually.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true#isClosed()" title="class or interface in net.jxta.endpoint">isClosed</A></CODE> in interface <CODE><A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Messenger.html?is-external=true" title="class or interface in net.jxta.endpoint">Messenger</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#isClosed()">isClosed</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if this messenger is closed, otherwise <code>false</code>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isIdleImpl()"><!-- --></A><H3>
+isIdleImpl</H3>
+<PRE>
+public boolean <B>isIdleImpl</B>()</PRE>
+<DL>
+<DD>return true if this messenger has not been used for a long time. The definition of long time is: "sufficient such that closing it
+ is worth the cost of having to re-open". A messenger should self close if it thinks it meets the definition of
+ idle. BlockingMessenger leaves the evaluation to the transport but does the work automatically. <b>Important:</b> if
+ self destruction is used, this method must work; not just return false. See the constructor. In general, if closeImpl does
+ not need to do anything, then self destruction is not needed.
+ <p/>
+ Since we probe the connection status, we'll keep a messenger as long
+ as the connection is active, even if only on the incoming side.
+ So we're being a bit nice to the other side. Anyway, incoming
+ connections do not go away when the messenger does. There's a receive
+ timeout for that.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#isIdleImpl()">isIdleImpl</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD><code>true</code> if theis messenger is, by it's own definition, idle.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLogicalDestinationImpl()"><!-- --></A><H3>
+getLogicalDestinationImpl</H3>
+<PRE>
+public <A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/EndpointAddress.html?is-external=true" title="class or interface in net.jxta.endpoint">EndpointAddress</A> <B>getLogicalDestinationImpl</B>()</PRE>
+<DL>
+<DD>Obtain the logical destination address from the implementer (a transport for example).
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#getLogicalDestinationImpl()">getLogicalDestinationImpl</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendMessageBImpl(net.jxta.endpoint.Message, java.lang.String, java.lang.String)"><!-- --></A><H3>
+sendMessageBImpl</H3>
+<PRE>
+public void <B>sendMessageBImpl</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                             <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam)
+                      throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD>Send a message blocking as needed until the message is sent.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html#sendMessageBImpl(net.jxta.endpoint.Message, java.lang.String, java.lang.String)">sendMessageBImpl</A></CODE> in class <CODE><A HREF="../../../../../net/jxta/impl/endpoint/BlockingMessenger.html" title="class in net.jxta.impl.endpoint">BlockingMessenger</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - The message to send.<DD><CODE>service</CODE> - The destination service.<DD><CODE>serviceParam</CODE> - The destination serivce param.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE> - Thrown for errors encountered while sending the message.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sendMessageDirect(net.jxta.endpoint.Message, java.lang.String, java.lang.String, boolean)"><!-- --></A><H3>
+sendMessageDirect</H3>
+<PRE>
+public void <B>sendMessageDirect</B>(<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&nbsp;message,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;service,
+                              <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;serviceParam,
+                              boolean&nbsp;direct)
+                       throws <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="run()"><!-- --></A><H3>
+run</H3>
+<PRE>
+public void <B>run</B>()</PRE>
+<DL>
+<DD>
+ <p/>
+ This is what gets run by the Executor. It reads whatever is available,
+ processes it and then goes back to the selector waiting for more IO
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Runnable.html?is-external=true#run()" title="class or interface in java.lang">run</A></CODE> in interface <CODE><A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="processBuffer()"><!-- --></A><H3>
+processBuffer</H3>
+<PRE>
+public <A HREF="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;<A HREF="https://jxta-docs.dev.java.net/nonav/jxse-javadoc/current/api/net/jxta/endpoint/Message.html?is-external=true" title="class or interface in net.jxta.endpoint">Message</A>&gt; <B>processBuffer</B>()</PRE>
+<DL>
+<DD>processes the input byte buffer
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the list of messages present in the buffer</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTransportBindingMeter()"><!-- --></A><H3>
+getTransportBindingMeter</H3>
+<PRE>
+<A HREF="../../../../../net/jxta/impl/endpoint/transportMeter/TransportBindingMeter.html" title="class in net.jxta.impl.endpoint.transportMeter">TransportBindingMeter</A> <B>getTransportBindingMeter</B>()</PRE>
+<DL>
+<DD>Returns the metering object for this tcpTransport
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the metering object for this tcpTransport</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TcpMessenger.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+JXSE</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/tcp/IncomingUnicastServer.html" title="class in net.jxta.impl.endpoint.tcp"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../net/jxta/impl/endpoint/tcp/TcpTransport.html" title="class in net.jxta.impl.endpoint.tcp"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?net/jxta/impl/endpoint/tcp/TcpMessenger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TcpMessenger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

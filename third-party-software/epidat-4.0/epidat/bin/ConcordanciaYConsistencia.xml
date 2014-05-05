@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : plugin.xml
+    Created on : 13 de mayo de 2008, 9:40
+    Author     : BalideaCP
+    Description:
+        Plantilla de creación de descriptores de despliegue para los plugins de 
+        Epidat 4.0. Actualice los textos entre etiquetas para que reflejen su contenido:
+            1.- Etiqueta clase: Contendrá ruta a la clase que extiende la clase PluginEstandar.
+            2.- Etiqueta accion: Contendrá ruta a la clase que implementa la interfaz Accion.
+            3.- Etiqueta menu: La ruta de menus y submenus, ya existentes o a crear, donde ubicaremos
+                nuestro menu.
+            4.- Etiqueta etiqueta: El texto del botón o menú que se creará.     
+-->
+<plugin>
+	<clase>concordanciaYConsistencia.interfaz.ConcordanciaYConsistenciaPlugin</clase>
+	<nombre>ConcordanciaYConsistencia</nombre>
+	<version>1.0</version>
+        <indice>3</indice>
+	<puntosEntrada>
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>2 Observadores</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.Concordancia2ObsAccionPlugin</accion>
+            </puntoEntrada>
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia/3 o más observadores</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>2 categorías</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.Concordancia3_2CatAccionPlugin</accion>
+            </puntoEntrada> 
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia/3 o más observadores</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>3 ó más categorías</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.Concordancia3_3CatAccionPlugin</accion>
+            </puntoEntrada>
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>Comparación de kappas</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.ComparacionKappasAccionPlugin</accion>
+            </puntoEntrada>
+             <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>Coeficiente de correlación intraclase</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.CorrelacionIntraclaseAccionPlugin</accion>
+            </puntoEntrada>
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Concordancia</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>Método de Bland y Altman</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.BlandYAltmanAccionPlugin</accion>
+            </puntoEntrada>
+            <puntoEntrada tipo="itemMenu">
+                <menu>Módulos/Concordancia y consistencia/Consistencia</menu>
+                <icono>editor.jpg</icono>
+                <etiqueta>Alpha de Cronbach</etiqueta>
+                <accion>concordanciaYConsistencia.interfaz.AlphaCronbachAccionPlugin</accion>
+            </puntoEntrada>               
+        </puntosEntrada>        	      
+</plugin>
