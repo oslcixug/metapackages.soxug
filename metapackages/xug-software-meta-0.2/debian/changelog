@@ -1,3 +1,9 @@
+xug-software-meta (0.2-2) precise; urgency=low
+
+  * Drop all packages, except bioestatiica
+
+ -- osl <osl@cixug>  Fri, 09 May 2014 21:19:50 +0200
+
 xug-software-meta (0.2-1) precise; urgency=low
 
   * Miscelaneous improvements in bioestatistica, cccomunicacion, 
